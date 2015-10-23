@@ -1,0 +1,36 @@
+{
+  "name": "react-icons",
+  "version": "0.0.1",
+  "description": "esnext inline react icons",
+  "main": "icons.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gorangajic/react-icons.git"
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "inline",
+    "svg",
+    "font",
+    "awesome",
+    "material",
+    "design"
+  ],
+  "author": "Goran Gajic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gorangajic/react-icons/issues"
+  },
+  "homepage": "https://github.com/gorangajic/react-icons#readme",
+  "devDependencies": {
+    "camelcase": "^1.2.1",
+    "capitalize": "^1.0.0",
+    "cheerio": "^0.19.0",
+    "glob": "^5.0.15",
+    "underscore": "^1.8.3"
+  }
+}

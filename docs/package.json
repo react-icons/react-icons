@@ -1,0 +1,35 @@
+{
+  "name": "react-icons-example",
+  "version": "0.0.1",
+  "description": "Inline react icons example",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gorangajic/react-icons.git"
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "inline",
+    "svg",
+    "font",
+    "awesome"
+  ],
+  "author": "Goran Gajic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gorangajic/react-icons/issues"
+  },
+  "homepage": "https://github.com/gorangajic/react-icons#readme",
+  "dependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "underscore": "^1.8.3",
+    "webpack": "^1.12.2"
+  }
+}

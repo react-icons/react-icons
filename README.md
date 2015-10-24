@@ -1,11 +1,11 @@
 
-## <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="38" alt="React Icons"> React Icons
+## <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="38" alt="React Icons"> [React Icons](http://gorangajic.github.io/react-icons/index.html)
 
 Include popular icons in you react project easly with ```react-icons```. It uses ES6 imports so you can only include icons that your project is using.
 
-### installation 
+### installation
     npm install react-icons --save
-  
+
 ### usage
 ```javascript
 import FaBeer from 'react-icons/fa/FaBeer';
@@ -39,7 +39,7 @@ svg is [supported](http://caniuse.com/#search=svg) by all major browser
 
 Because using ```react-icons``` you can only send icons to the users that are needed not one big font file, and also you can using this method easly figure out which icons are used in you project.
 
-### Licence 
+### Licence
 
 MIT
 

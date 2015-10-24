@@ -1,5 +1,6 @@
 
-## <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="38" alt="React Icons"> [React Icons](http://gorangajic.github.io/react-icons/index.html)
+<img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="60" alt="React Icons">
+## [React Icons](http://gorangajic.github.io/react-icons/index.html)
 
 Include popular icons in you react project easly with ```react-icons```. It uses ES6 imports so you can only include icons that your project is using.
 

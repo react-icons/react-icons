@@ -20,7 +20,7 @@ class Question extends React.Component {
 
 you can include icon directly from ```react-icons``` using ```import FaBeer from 'react-icons'``` but you should wait to webpack 2 [implement](https://twitter.com/dan_abramov/status/656970508005736448) dead code elimination based on es6 imports
 
-also it's possible to include whole icon pack from 
+also it's possible to include whole icon pack from
 
 ```javascript
     import * as FontAwesome from 'react-icons/fa'
@@ -35,6 +35,8 @@ every icon pack is in their own folder
 * Material Design Icons => ./md
 * FontAwesome => ./fa
 * Typicons => ./ti
+
+to view all icons visit [docs](http://gorangajic.github.io/react-icons/)
 
 ### Icons
 

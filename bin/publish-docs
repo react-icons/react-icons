@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+rm -rf dist
+mkdir dist
+npm run docs
+cd dist
+git init
+git add .
+git commit -m "published docs"
+git remote add origin git@github.com:gorangajic/react-icons.git
+git push --force origin master:gh-pages

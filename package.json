@@ -4,7 +4,8 @@
   "description": "esnext inline react icons",
   "main": "icons.js",
   "scripts": {
-    "build": "node build.js"
+    "build": "node ./bin/build.js",
+    "docs": "babel-node --stage 0 ./bin/generate-docs"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,12 @@
     "capitalize": "^1.0.0",
     "cheerio": "^0.19.0",
     "glob": "^5.0.15",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "babel": "^5.8.23",
+    "classnames": "^2.2.0",
+    "marky-markdown": "https://github.com/npm/marky-markdown",
+    "material-design-lite": "^1.0.5",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
   }
 }

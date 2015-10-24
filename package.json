@@ -1,7 +1,7 @@
 {
   "name": "react-icons",
   "version": "0.0.2",
-  "description": "esnext inline react icons",
+  "description": "svg react icons of popular icon packs using ES6 imports",
   "main": "icons.js",
   "scripts": {
     "build": "node ./bin/build.js",

@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "esnext inline react icons",
   "main": "icons.js",
   "scripts": {

@@ -4,10 +4,10 @@
 
 Include popular icons in you react project easly with ```react-icons```. It uses ES6 imports so you can only include icons that your project is using.
 
-### installation
+### Installation
     npm install react-icons --save
 
-### usage
+### Usage
 ```javascript
 import FaBeer from 'react-icons/fa/FaBeer';
 
@@ -36,7 +36,7 @@ just add svg icons in ./icons/:icons-name folder and create pull request agains 
 ### svg ?
 svg is [supported](http://caniuse.com/#search=svg) by all major browser
 
-### why es6 import and not fonts?
+### Why es6 import and not fonts?
 
 Because using ```react-icons``` you can only send icons to the users that are needed not one big font file, and also you can using this method easly figure out which icons are used in you project.
 

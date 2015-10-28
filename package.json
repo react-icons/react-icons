@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "svg react icons of popular icon packs using ES6 imports",
   "main": "icons.js",
   "scripts": {

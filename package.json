@@ -6,7 +6,7 @@
   "scripts": {
     "create": "node ./bin/create.js",
     "docs": "babel-node --stage 0 ./bin/generate-docs",
-    "build": "npm run create | xargs babel --out-dir lib"
+    "build": "node ./bin/create | xargs babel --out-dir lib"
   },
   "repository": {
     "type": "git",

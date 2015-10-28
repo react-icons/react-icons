@@ -4,7 +4,6 @@
   "description": "svg react icons of popular icon packs using ES6 imports",
   "main": "icons.js",
   "scripts": {
-    "create": "node ./bin/create.js",
     "docs": "babel-node --stage 0 ./bin/generate-docs",
     "build": "node ./bin/create | xargs babel --out-dir lib"
   },

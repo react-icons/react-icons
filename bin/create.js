@@ -43,16 +43,18 @@ glob(rootDir + '/icons/*/*.svg', function(err, icons) {
         }
         types[folder][name] = location;
         var component = `
+var React = require('react');
 var IconBase = require('../IconBase');
 
-var ${name} = (props) => {
-    return (
-        <IconBase viewBox="${viewBox}" {...props}>
-            <g>${iconSvg}</g>
-        </IconBase>
-    );
-};
-export default ${name};
+export default class ${name} extends React.Component {
+    render() {
+        return (
+            <IconBase viewBox="${viewBox}" {...this.props}>
+                <g>${iconSvg}</g>
+            </IconBase>
+        );
+    }
+}
 `
 
         fs.writeFileSync(path.join(rootDir, location), component, 'utf-8');

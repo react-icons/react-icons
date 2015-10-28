@@ -1,10 +1,12 @@
 
+var React = require('react');
 var IconBase = require('../IconBase');
 
-var TiSocialYoutubeCircular = (props) => {
-    return (
-        <IconBase viewBox="0 0 24 24" {...props}>
-            <g>
+export default class TiSocialYoutubeCircular extends React.Component {
+    render() {
+        return (
+            <IconBase viewBox="0 0 24 24" {...this.props}>
+                <g>
 <polygon points="8.48,13.14 9.21,13.14 9.21,16.75 9.91,16.75 9.91,13.14 10.64,13.14 10.64,12.53 8.48,12.53 "/>
 <path d="M12.17,16c-0.12,0.14-0.53,0.42-0.53,0.02v-2.39h-0.62v2.61c0,0.79,0.79,0.58,1.16,0.17v0.34h0.62v-3.12h-0.62V16H12.17z"/>
 <path d="M14.48,13.61c-0.36,0-0.59,0.27-0.59,0.27v-1.36h-0.63v4.23h0.63v-0.24c0,0,0.21,0.28,0.59,0.28c0.33,0,0.58-0.29,0.58-0.69
@@ -24,7 +26,7 @@ var TiSocialYoutubeCircular = (props) => {
 <path d="M12.98,9.35c0.17,0,0.25-0.1,0.26-0.26v-1.9c0-0.13-0.13-0.24-0.25-0.24s-0.25,0.1-0.25,0.24v1.9
 	C12.74,9.24,12.81,9.34,12.98,9.35z"/>
 </g>
-        </IconBase>
-    );
-};
-export default TiSocialYoutubeCircular;
+            </IconBase>
+        );
+    }
+}

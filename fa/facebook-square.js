@@ -1,11 +1,13 @@
 
+var React = require('react');
 var IconBase = require('../IconBase');
 
-var FaFacebookSquare = (props) => {
-    return (
-        <IconBase viewBox="0 0 1536 1896.0833" {...props}>
-            <g><path d="m1248 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-188v-595h199l30-232h-229v-148q0-56 23.5-84t91.5-28l122-1v-207q-63-9-178-9-136 0-217.5 80t-81.5 226v171h-200v232h200v595h-532q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960z"/></g>
-        </IconBase>
-    );
-};
-export default FaFacebookSquare;
+export default class FaFacebookSquare extends React.Component {
+    render() {
+        return (
+            <IconBase viewBox="0 0 1536 1896.0833" {...this.props}>
+                <g><path d="m1248 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-188v-595h199l30-232h-229v-148q0-56 23.5-84t91.5-28l122-1v-207q-63-9-178-9-136 0-217.5 80t-81.5 226v171h-200v232h200v595h-532q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960z"/></g>
+            </IconBase>
+        );
+    }
+}

@@ -1,11 +1,13 @@
 
+var React = require('react');
 var IconBase = require('../IconBase');
 
-var MdArrowDropUp = (props) => {
-    return (
-        <IconBase viewBox="0 0 24 24" {...props}>
-            <g><path d="M7 14l5-5 5 5z"/></g>
-        </IconBase>
-    );
-};
-export default MdArrowDropUp;
+export default class MdArrowDropUp extends React.Component {
+    render() {
+        return (
+            <IconBase viewBox="0 0 24 24" {...this.props}>
+                <g><path d="M7 14l5-5 5 5z"/></g>
+            </IconBase>
+        );
+    }
+}

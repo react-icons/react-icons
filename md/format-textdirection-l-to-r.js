@@ -1,11 +1,13 @@
 
+var React = require('react');
 var IconBase = require('../IconBase');
 
-var MdFormatTextdirectionLToR = (props) => {
-    return (
-        <IconBase viewBox="0 0 24 24" {...props}>
-            <g><path d="M9 10v5h2V4h2v11h2V4h2V2H9C6.79 2 5 3.79 5 6s1.79 4 4 4zm12 8l-4-4v3H5v2h12v3l4-4z"/></g>
-        </IconBase>
-    );
-};
-export default MdFormatTextdirectionLToR;
+export default class MdFormatTextdirectionLToR extends React.Component {
+    render() {
+        return (
+            <IconBase viewBox="0 0 24 24" {...this.props}>
+                <g><path d="M9 10v5h2V4h2v11h2V4h2V2H9C6.79 2 5 3.79 5 6s1.79 4 4 4zm12 8l-4-4v3H5v2h12v3l4-4z"/></g>
+            </IconBase>
+        );
+    }
+}

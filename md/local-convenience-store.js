@@ -1,11 +1,13 @@
 
+var React = require('react');
 var IconBase = require('../IconBase');
 
-var MdLocalConvenienceStore = (props) => {
-    return (
-        <IconBase viewBox="0 0 24 24" {...props}>
-            <g><path d="M19 7V4H5v3H2v13h8v-4h4v4h8V7h-3zm-8 3H9v1h2v1H8V9h2V8H8V7h3v3zm5 2h-1v-2h-2V7h1v2h1V7h1v5z"/></g>
-        </IconBase>
-    );
-};
-export default MdLocalConvenienceStore;
+export default class MdLocalConvenienceStore extends React.Component {
+    render() {
+        return (
+            <IconBase viewBox="0 0 24 24" {...this.props}>
+                <g><path d="M19 7V4H5v3H2v13h8v-4h4v4h8V7h-3zm-8 3H9v1h2v1H8V9h2V8H8V7h3v3zm5 2h-1v-2h-2V7h1v2h1V7h1v5z"/></g>
+            </IconBase>
+        );
+    }
+}

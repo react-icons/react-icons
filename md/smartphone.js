@@ -1,11 +1,13 @@
 
+var React = require('react');
 var IconBase = require('../IconBase');
 
-var MdSmartphone = (props) => {
-    return (
-        <IconBase viewBox="0 0 24 24" {...props}>
-            <g><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></g>
-        </IconBase>
-    );
-};
-export default MdSmartphone;
+export default class MdSmartphone extends React.Component {
+    render() {
+        return (
+            <IconBase viewBox="0 0 24 24" {...this.props}>
+                <g><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></g>
+            </IconBase>
+        );
+    }
+}

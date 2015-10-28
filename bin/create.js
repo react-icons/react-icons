@@ -78,6 +78,7 @@ export default class ${name} extends React.Component {
         fs.writeFileSync(path.join(rootDir, folder + '.js'), iconsModule, 'utf-8');
         console.log(path.join('.', folder + '.js'));
     });
+    console.log("IconBase.js");
 });
 
 

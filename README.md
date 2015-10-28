@@ -18,6 +18,21 @@ class Question extends React.Component {
 }
 ````
 
+if you are not using es6 compiler like [babel](https://babeljs.io/) or (rollup)[http://rollupjs.org/] it's possible to include icons from the compiled folder ./lib
+
+```javascript
+var FaBeer = require('react-icons/lib/fa/FaBeer');
+
+var Question = React.createClass({
+    render: function() {
+        return React.createElement('h3', null,
+            ' Lets go for a ', React.createElement(FaBeer, null), '? '
+        );
+    }
+});
+
+```
+
 you can include icon directly from ```react-icons``` using ```import FaBeer from 'react-icons'``` but you should wait to webpack 2 [implement](https://twitter.com/dan_abramov/status/656970508005736448) dead code elimination based on es6 imports
 
 also it's possible to include whole icon pack from

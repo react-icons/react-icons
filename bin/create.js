@@ -56,6 +56,7 @@ export default ${name};
 `
 
         fs.writeFileSync(path.join(rootDir, location), component, 'utf-8');
+        console.log(path.join('.', location));
     });
     var iconsLen = Object.keys(components).length;
     var iconsModule = _.map(components, function(loc, name){
@@ -64,8 +65,8 @@ export default ${name};
         return `export ${name} from '${loc}';`;
     }).join('\n');
 
-    fs.writeFileSync(path.join(rootDir, 'icons.js'), iconsModule, 'utf-8');
-    console.log('%s icons successfully builded', iconsLen);
+    fs.writeFileSync(path.join('.', 'icons.js'), iconsModule, 'utf-8');
+    console.log(path.join('.', 'icons.js'));
     _.each(types, function(components, folder) {
         var iconsModule = _.map(components, function(loc, name){
             loc = loc.replace('.js', '');
@@ -73,6 +74,7 @@ export default ${name};
             return `export ${name} from '${loc}';`;
         }).join('\n');
         fs.writeFileSync(path.join(rootDir, folder + '.js'), iconsModule, 'utf-8');
+        console.log(path.join('.', folder + '.js'));
     });
 });
 

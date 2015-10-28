@@ -21,7 +21,7 @@ var indexHtml = fs.readFileSync(indexFile, 'utf-8');
 
 function writeFile(pageName, content) {
     var page = indexHtml.replace("{{#content}}", content);
-    var destFile = path.join(__dirname, '..', 'dist', pageName + '.html');
+    var destFile = path.join(__dirname, '..', 'publish', pageName + '.html');
     fs.writeFileSync(destFile, page, 'utf-8')
 }
 

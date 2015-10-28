@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-rm -rf dist
-mkdir dist
+rm -rf publish
+mkdir publish
 npm run docs
-cd dist
+cd publish
 git init
 git add .
 git commit -m "published docs"

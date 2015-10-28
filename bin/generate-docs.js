@@ -6,12 +6,6 @@ import App from '../docs/components/App';
 import marky from "marky-markdown";
 import IconPack from '../docs/components/IconPack';
 import icons from '../icons/info';
-import * as FontAwesome from '../fa';
-import * as MaterialIcons from '../md';
-import * as Typicons from '../ti';
-icons.fa.icons = Object.assign({}, FontAwesome);
-icons.md.icons = Object.assign({}, MaterialIcons);
-icons.ti.icons = Object.assign({}, Typicons);
 
 
 // because stateless function components
@@ -27,6 +21,7 @@ function writeFile(pageName, content) {
 }
 
 Object.keys(icons).forEach(function(key, index) {
+    icons[key].icons = require('../'+key);
     delete icons[key].icons.__esModule;
     var content = renderToString(<App active={key} icons={icons}><IconPack pack={icons[key]} /></App>);
     writeFile(key, content);

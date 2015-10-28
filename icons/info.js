@@ -19,5 +19,12 @@ module.exports = {
         attribution: "336 pixel perfect, all-purpose vector icons in a web-font kit http://typicons.com by Stephen Hutchings <http://www.s-ings.com/>",
         licence: "CC BY-SA",
         licenceUrl: "http://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    go: {
+        name: "Github Octicons",
+        url: "https://octicons.github.com/",
+        attribution: "Github Octicons icons by Github https://octicons.github.com/",
+        licence: "SIL OFL 1.1",
+        licenceUrl: "https://github.com/github/octicons/blob/master/LICENSE.txt"
     }
 }

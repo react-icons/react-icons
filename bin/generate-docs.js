@@ -9,9 +9,10 @@ import icons from '../icons/info';
 import * as FontAwesome from '../fa';
 import * as MaterialIcons from '../md';
 import * as Typicons from '../ti';
-icons.fa.icons = FontAwesome;
-icons.md.icons = MaterialIcons;
-icons.ti.icons = Typicons;
+icons.fa.icons = Object.assign({}, FontAwesome);
+icons.md.icons = Object.assign({}, MaterialIcons);
+icons.ti.icons = Object.assign({}, Typicons);
+
 
 // because stateless function components
 global.React = React;
@@ -26,6 +27,7 @@ function writeFile(pageName, content) {
 }
 
 Object.keys(icons).forEach(function(key, index) {
+    delete icons[key].icons.__esModule;
     var content = renderToString(<App active={key} icons={icons}><IconPack pack={icons[key]} /></App>);
     writeFile(key, content);
 });

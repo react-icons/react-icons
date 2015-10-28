@@ -1,6 +1,4 @@
-React
+TODO
 
-
---	create react-icons-material
---	create react-icons-awesome
--- 	...
+--	support for react native
+--  create separate package for every icon pack

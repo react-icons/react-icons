@@ -2,7 +2,8 @@
   "name": "react-icons",
   "version": "0.1.1",
   "description": "svg react icons of popular icon packs using ES6 imports",
-  "main": "icons.js",
+  "main": "lib/icons.js",
+  "jsnext:main": "icons.js",
   "scripts": {
     "docs": "babel-node --stage 0 ./bin/generate-docs",
     "build": "node ./bin/create | xargs babel --out-dir lib"

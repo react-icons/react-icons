@@ -8,6 +8,8 @@ Include popular icons in you react project easly with ```react-icons```. It uses
     npm install react-icons --save
 
 ### Usage
+
+
 ```javascript
 import FaBeer from 'react-icons/fa/FaBeer';
 
@@ -18,7 +20,7 @@ class Question extends React.Component {
 }
 ````
 
-if you are not using es6 compiler like [babel](https://babeljs.io/) or (rollup)[http://rollupjs.org/] it's possible to include icons from the compiled folder ./lib
+if you are not using es6 compiler like [babel](https://babeljs.io/) or (rollup)[http://rollupjs.org/] it's possible to include icons from the compiled folder ```./lib``` btw babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore ```node_modules``` so if you don't want to change that settings you will need to use files from the ```./lib```
 
 ```javascript
 var FaBeer = require('react-icons/lib/fa/FaBeer');

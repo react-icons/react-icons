@@ -41,8 +41,10 @@
     "glob": "^5.0.15",
     "marky-markdown": "https://github.com/npm/marky-markdown",
     "material-design-lite": "^1.0.5",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0",
     "underscore": "^1.8.3"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
   }
 }

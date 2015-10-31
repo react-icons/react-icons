@@ -43,8 +43,8 @@ glob(rootDir + '/icons/*/*.svg', function(err, icons) {
         }
         types[folder][name] = location;
         var component = `
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class ${name} extends React.Component {
     render() {

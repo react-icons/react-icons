@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSignalWifiStatusbarConnectedNoInternet1 extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 26 24" {...this.props}>
-                <g><path d="M24.24 8l1.35-1.68C25.1 5.96 20.26 2 13 2S.9 5.96.42 6.32l12.57 15.66.01.02.01-.01L20 13.28V8h4.24z"/><path d="M7.34 14.95L13 21.99V22v-.01l5.66-7.05C18.44 14.78 16.27 13 13 13s-5.44 1.78-5.66 1.95zM22 22h2v-2h-2v2zm0-12v8h2v-8h-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m37.3 13.8l2.1-2.5c-0.8-0.6-8.2-6.7-19.4-6.7s-18.6 6.1-19.4 6.7l19.4 24.1 0 0 0 0 10.8-13.4v-8.2h6.5z"/><path d="m11.3 24.5l8.7 10.9v0 0l8.7-10.9c-0.3-0.2-3.7-3-8.7-3s-8.4 2.8-8.7 3z m22.5 10.9h3.1v-3.1h-3.1v3.1z m0-18.5v12.3h3.1v-12.3h-3.1z"/></g>
             </IconBase>
         );
     }

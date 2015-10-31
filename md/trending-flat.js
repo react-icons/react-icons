@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdTrendingFlat extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M22 12l-4-4v3H3v2h15v3z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m36.7 20l-6.7-6.7v5h-25v3.4h25v5z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSave extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m28.3 5h-20c-1.8 0-3.3 1.5-3.3 3.3v23.4c0 1.8 1.5 3.3 3.3 3.3h23.4c1.8 0 3.3-1.5 3.3-3.3v-20l-6.7-6.7z m-8.3 26.7c-2.8 0-5-2.3-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z m5-16.7h-16.7v-6.7h16.7v6.7z"/></g>
             </IconBase>
         );
     }

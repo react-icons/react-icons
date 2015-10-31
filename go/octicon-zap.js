@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonZap extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 640 1024.032" {...this.props}>
-                <g><path d="m640 448.001h-256l192-448-576 576h256l-192 448 576-576z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m32.5 17.5h-10l7.5-17.5-22.5 22.5h10l-7.5 17.5 22.5-22.5z"/></g>
             </IconBase>
         );
     }

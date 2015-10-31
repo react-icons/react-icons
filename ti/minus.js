@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiMinus extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 11h-12c-1.104 0-2 .896-2 2s.896 2 2 2h12c1.104 0 2-.896 2-2s-.896-2-2-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 18.3h-20c-1.8 0-3.3 1.5-3.3 3.4s1.5 3.3 3.3 3.3h20c1.8 0 3.3-1.5 3.3-3.3s-1.5-3.4-3.3-3.4z"/></g>
             </IconBase>
         );
     }

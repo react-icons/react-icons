@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdContacts extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M20 0H4v2h16V0zM4 24h16v-2H4v2zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 2.75c1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25S9.75 10.24 9.75 9 10.76 6.75 12 6.75zM17 17H7v-1.5c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m33.3 0h-26.6v3.3h26.6v-3.3z m-26.6 40h26.6v-3.3h-26.6v3.3z m26.6-33.3h-26.6c-1.9 0-3.4 1.5-3.4 3.3v20c0 1.8 1.5 3.3 3.4 3.3h26.6c1.9 0 3.4-1.5 3.4-3.3v-20c0-1.8-1.5-3.3-3.4-3.3z m-13.3 4.6c2.1 0 3.8 1.6 3.8 3.7s-1.7 3.8-3.8 3.8-3.7-1.7-3.7-3.8 1.6-3.7 3.7-3.7z m8.3 17h-16.6v-2.5c0-2.7 5.5-4.1 8.3-4.1s8.3 1.4 8.3 4.1v2.5z"/></g>
             </IconBase>
         );
     }

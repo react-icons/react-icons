@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSortByAlpha extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M14.94 4.66h-4.72l2.36-2.36zm-4.69 14.71h4.66l-2.33 2.33zM6.1 6.27L1.6 17.73h1.84l.92-2.45h5.11l.92 2.45h1.84L7.74 6.27H6.1zm-1.13 7.37l1.94-5.18 1.94 5.18H4.97zm10.76 2.5h6.12v1.59h-8.53v-1.29l5.92-8.56h-5.88v-1.6h8.3v1.26l-5.93 8.6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m24.9 7.8h-7.9l4-4z m-7.8 24.5h7.8l-3.9 3.9z m-6.9-21.9l-7.5 19.2h3l1.6-4.1h8.5l1.5 4.1h3.1l-7.5-19.2h-2.7z m-1.9 12.3l3.2-8.6 3.3 8.6h-6.5z m17.9 4.2h10.2v2.7h-14.2v-2.2l9.9-14.3h-9.8v-2.6h13.8v2.1l-9.9 14.3z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdBrokenImage extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M21 5v6.59l-3-3.01-4 4.01-4-4-4 4-3-3.01V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2zm-3 6.42l3 3.01V19c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2v-6.58l3 2.99 4-4 4 4 4-3.99z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m35 8.3v11l-5-5-6.7 6.7-6.6-6.7-6.7 6.7-5-5v-7.7c0-1.8 1.5-3.3 3.3-3.3h23.4c1.8 0 3.3 1.5 3.3 3.3z m-5 10.7l5 5.1v7.6c0 1.8-1.5 3.3-3.3 3.3h-23.4c-1.8 0-3.3-1.5-3.3-3.3v-11l5 5 6.7-6.7 6.6 6.7 6.7-6.7z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaEraser extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1920 1896.0833" {...this.props}>
-                <g><path d="m896 1408l336-384h-768l-336 384h768z m1013-1077q15 34 9.5 71.5t-30.5 65.5l-896 1024q-38 44-96 44h-768q-38 0-69.5-20.5t-47.5-54.5q-15-34-9.5-71.5t30.5-65.5l896-1024q38-44 96-44h768q38 0 69.5 20.5t47.5 54.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m18.7 29.6l7-8h-16l-7 8h16z m21.1-22.5q0.3 0.8 0.2 1.5t-0.7 1.4l-18.6 21.3q-0.8 0.9-2 0.9h-16q-0.8 0-1.5-0.4t-1-1.1q-0.3-0.7-0.2-1.5t0.7-1.4l18.6-21.3q0.8-0.9 2-0.9h16q0.8 0 1.5 0.4t1 1.1z"/></g>
             </IconBase>
         );
     }

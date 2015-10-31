@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdStarHalf extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M22 9.74l-7.19-.62L12 2.5 9.19 9.13 2 9.74l5.46 4.73-1.64 7.03L12 17.77l6.18 3.73-1.63-7.03L22 9.74zM12 15.9V6.6l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.9z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m36.7 16.2l-12-1-4.7-11-4.7 11-12 1 9.1 7.9-2.7 11.7 10.3-6.2 10.3 6.2-2.7-11.7 9.1-7.9z m-16.7 10.3v-15.5l2.9 6.7 7.3 0.7-5.6 4.8 1.7 7.1-6.3-3.8z"/></g>
             </IconBase>
         );
     }

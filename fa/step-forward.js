@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaStepForward extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1282.1629 1896.0833" {...this.props}>
-                <g><path d="m45 1651q-19 19-32 13t-13-32v-1472q0-26 13-32t32 13l710 710q8 8 13 19v-678q0-26 19-45t45-19h128q26 0 45 19t19 45v1408q0 26-19 45t-45 19h-128q-26 0-45-19t-19-45v-678q-5 10-13 19z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m7.4 34.8q-0.4 0.4-0.7 0.3t-0.2-0.7v-31q0-0.6 0.2-0.7t0.7 0.3l15 15q0.2 0.1 0.3 0.4v-14.3q0-0.6 0.4-1t0.9-0.4h2.7q0.6 0 1 0.4t0.4 1v29.7q0 0.5-0.4 0.9t-1 0.4h-2.7q-0.5 0-0.9-0.4t-0.4-0.9v-14.3q-0.1 0.2-0.3 0.4z"/></g>
             </IconBase>
         );
     }

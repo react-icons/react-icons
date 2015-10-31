@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSpaceBar extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 9v4H6V9H4v6h16V9z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 15v6.7h-20v-6.7h-3.3v10h26.6v-10z"/></g>
             </IconBase>
         );
     }

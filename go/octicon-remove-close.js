@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonRemoveClose extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 768 1024.032" {...this.props}>
-                <g><path d="m479 512.001l240 240-95 95-240-240-240 240-95-95 240-240-240-240 95-95 240 240 240-240 95 95-240 240z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m23.7 20l9.4 9.4-3.7 3.7-9.4-9.4-9.4 9.4-3.7-3.7 9.4-9.4-9.4-9.4 3.7-3.7 9.4 9.4 9.4-9.4 3.7 3.7-9.4 9.4z"/></g>
             </IconBase>
         );
     }

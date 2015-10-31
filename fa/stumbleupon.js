@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaStumbleupon extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1920 1896.0833" {...this.props}>
-                <g><path d="m1062 712v-118q0-42-30-72t-72-30-72 30-30 72v612q0 175-126 299t-303 124q-178 0-303.5-125.5t-125.5-303.5v-266h328v262q0 43 30 72.5t72 29.5 72-29.5 30-72.5v-620q0-171 126.5-292t301.5-121q176 0 302 122t126 294v136l-195 58z m530 222h328v266q0 178-125.5 303.5t-303.5 125.5q-177 0-303-124.5t-126-300.5v-268l131 61 195-58v270q0 42 30 71.5t72 29.5 72-29.5 30-71.5v-275z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m22.1 15.1v-2.5q0-0.9-0.6-1.5t-1.5-0.6-1.5 0.6-0.6 1.5v12.8q0 3.6-2.6 6.2t-6.4 2.6q-3.7 0-6.3-2.6t-2.6-6.4v-5.5h6.8v5.5q0 0.9 0.7 1.5t1.5 0.6 1.5-0.6 0.6-1.5v-13q0-3.5 2.6-6t6.3-2.6q3.7 0 6.3 2.6t2.6 6.1v2.8l-4 1.3z m11.1 4.6h6.8v5.5q0 3.8-2.6 6.4t-6.3 2.6q-3.7 0-6.3-2.6t-2.7-6.3v-5.6l2.8 1.3 4-1.2v5.6q0 0.9 0.6 1.5t1.5 0.6 1.5-0.6 0.7-1.5v-5.7z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSpellcheck extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12.45 16h2.09L9.43 3H7.57L2.46 16h2.09l1.12-3h5.64l1.14 3zm-6.02-5L8.5 5.48 10.57 11H6.43zm15.16.59l-8.09 8.09L9.83 16l-1.41 1.41 5.09 5.09L23 13l-1.41-1.41z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20.8 26.7h3.4l-8.5-21.7h-3.1l-8.5 21.7h3.5l1.9-5h9.4l1.9 5z m-10.1-8.4l3.5-9.2 3.4 9.2h-6.9z m25.3 1l-13.5 13.5-6.1-6.1-2.4 2.3 8.5 8.5 15.8-15.8-2.3-2.4z"/></g>
             </IconBase>
         );
     }

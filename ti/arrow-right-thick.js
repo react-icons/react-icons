@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiArrowRightThick extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M10.586 6.586c-.781.779-.781 2.047 0 2.828l1.586 1.586h-7.244c-1.104 0-2 .895-2 2 0 1.104.896 2 2 2h7.244l-1.586 1.586c-.781.779-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.023-.195 1.414-.586l6.414-6.414-6.414-6.414c-.781-.781-2.047-.781-2.828 0z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m17.6 11c-1.3 1.3-1.3 3.4 0 4.7l2.7 2.6h-12.1c-1.8 0-3.3 1.5-3.3 3.4 0 1.8 1.5 3.3 3.3 3.3h12.1l-2.7 2.6c-1.3 1.3-1.3 3.5 0 4.8 0.7 0.6 1.5 0.9 2.4 0.9s1.7-0.3 2.4-0.9l10.6-10.7-10.6-10.7c-1.3-1.3-3.5-1.3-4.8 0z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonGraph extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1024 1024.032" {...this.props}>
-                <g><path d="m1024 896.001v64h-1024v-960h64v896h960z m-704-64h-128v-320h128v320z m256 0h-128v-640h128v640z m256 0h-128v-448h128v448z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m40 35v2.5h-40v-37.5h2.5v35h37.5z m-27.5-2.5h-5v-12.5h5v12.5z m10 0h-5v-25h5v25z m10 0h-5v-17.5h5v17.5z"/></g>
             </IconBase>
         );
     }

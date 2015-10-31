@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdIso extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5.5 7.5h2v-2H9v2h2V9H9v2H7.5V9h-2V7.5zM19 19H5L19 5v14zm-2-2v-1.5h-5V17h5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m31.7 5h-23.4c-1.8 0-3.3 1.5-3.3 3.3v23.4c0 1.8 1.5 3.3 3.3 3.3h23.4c1.8 0 3.3-1.5 3.3-3.3v-23.4c0-1.8-1.5-3.3-3.3-3.3z m-22.5 7.5h3.3v-3.3h2.5v3.3h3.3v2.5h-3.3v3.3h-2.5v-3.3h-3.3v-2.5z m22.5 19.2h-23.4l23.4-23.4v23.4z m-3.4-3.4v-2.5h-8.3v2.5h8.3z"/></g>
             </IconBase>
         );
     }

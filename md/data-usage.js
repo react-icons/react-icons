@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdDataUsage extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m21.7 3.4v5.1c5.6 0.8 10 5.6 10 11.5 0 1.5-0.3 2.9-0.8 4.2l4.3 2.6c0.9-2.1 1.5-4.4 1.5-6.8 0-8.6-6.6-15.7-15-16.6z m-1.7 28.3c-6.4 0-11.7-5.2-11.7-11.7 0-5.9 4.4-10.7 10-11.5v-5.1c-8.4 0.9-15 7.9-15 16.6 0 9.2 7.5 16.7 16.7 16.7 5.5 0 10.4-2.7 13.4-6.8l-4.3-2.6c-2.1 2.7-5.4 4.4-9.1 4.4z"/></g>
             </IconBase>
         );
     }

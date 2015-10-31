@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiAdjustContrast extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><g><path d="M12 4c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 14c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6zM12 7v10c2.757 0 5-2.243 5-5s-2.243-5-5-5z"/></g></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 6.7c-7.4 0-13.3 5.9-13.3 13.3s5.9 13.3 13.3 13.3 13.3-5.9 13.3-13.3-5.9-13.3-13.3-13.3z m0 23.3c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z m0-18.3v16.6c4.6 0 8.3-3.7 8.3-8.3s-3.7-8.3-8.3-8.3z"/></g>
             </IconBase>
         );
     }

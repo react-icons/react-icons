@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiHeartFullOutline extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3-1-1.4-2.6-2.3-4.4-2.3-2.9 0-5.4 2.4-5.4 5.4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m3.7 15.7c0 2.1 0.3 5.5 3.3 8.5 2.7 2.6 11.5 8.6 11.8 9 0.4 0.1 0.7 0.3 1 0.3s0.7-0.2 1-0.3c0.4-0.4 9.2-6.2 11.9-9 3-3 3.3-6.4 3.3-8.5 0-5-4-9-9-9-2.7 0-5.3 1.5-7 3.8-1.7-2.3-4.3-3.8-7.3-3.8-4.9 0-9 4-9 9z"/></g>
             </IconBase>
         );
     }

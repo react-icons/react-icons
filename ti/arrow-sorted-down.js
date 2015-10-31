@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiArrowSortedDown extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M5.8 9.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.4-.3.7s.1.5.3.7z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m9.7 16.2l10.3 10.5 10.3-10.5c0.4-0.4 0.5-0.9 0.5-1.2s-0.1-0.8-0.5-1.2c-0.3-0.3-0.6-0.5-1.1-0.5h-18.4c-0.5 0-0.8 0.2-1.1 0.5-0.4 0.4-0.5 0.7-0.5 1.2s0.1 0.8 0.5 1.2z"/></g>
             </IconBase>
         );
     }

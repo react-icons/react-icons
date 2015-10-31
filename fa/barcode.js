@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaBarcode extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1792 1896.0833" {...this.props}>
-                <g><path d="m63 1536h-63v-1408h63v1408z m63-1h-32v-1407h32v1407z m94 0h-31v-1407h31v1407z m157 0h-31v-1407h31v1407z m157 0h-62v-1407h62v1407z m126 0h-31v-1407h31v1407z m63 0h-31v-1407h31v1407z m63 0h-31v-1407h31v1407z m157 0h-63v-1407h63v1407z m157 0h-63v-1407h63v1407z m126 0h-63v-1407h63v1407z m126 0h-63v-1407h63v1407z m94 0h-63v-1407h63v1407z m189 0h-94v-1407h94v1407z m63 0h-32v-1407h32v1407z m94 1h-63v-1408h63v1408z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m2.4 32.4h-1.3v-29.7h1.3v29.7z m1.4 0h-0.7v-29.7h0.7v29.7z m1.9 0h-0.6v-29.7h0.6v29.7z m3.4 0h-0.7v-29.7h0.7v29.7z m3.3 0h-1.3v-29.7h1.3v29.7z m2.6 0h-0.6v-29.7h0.6v29.7z m1.4 0h-0.7v-29.7h0.7v29.7z m1.3 0h-0.7v-29.7h0.7v29.7z m3.3 0h-1.3v-29.7h1.3v29.7z m3.3 0h-1.3v-29.7h1.3v29.7z m2.7 0h-1.4v-29.7h1.4v29.7z m2.6 0h-1.3v-29.7h1.3v29.7z m2 0h-1.3v-29.7h1.3v29.7z m4 0h-2v-29.7h2v29.7z m1.3 0h-0.7v-29.7h0.7v29.7z m2 0h-1.3v-29.7h1.3v29.7z"/></g>
             </IconBase>
         );
     }

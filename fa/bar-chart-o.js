@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaBarChartO extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 2048 1896.0833" {...this.props}>
-                <g><path d="m640 896v512h-256v-512h256z m384-512v1024h-256v-1024h256z m1024 1152v128h-2048v-1536h128v1408h1920z m-640-896v768h-256v-768h256z m384-384v1152h-256v-1152h256z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m12.5 19v10h-5v-10h5z m7.5-10v20h-5v-20h5z m20 22.5v2.5h-40v-30h2.5v27.5h37.5z m-12.5-17.5v15h-5v-15h5z m7.5-7.5v22.5h-5v-22.5h5z"/></g>
             </IconBase>
         );
     }

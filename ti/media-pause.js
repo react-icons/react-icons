@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiMediaPause extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M8 6c-1.104 0-2 .896-2 2v8c0 1.104.896 2 2 2s2-.896 2-2v-8c0-1.104-.896-2-2-2zM15 6c-1.104 0-2 .896-2 2v8c0 1.104.896 2 2 2s2-.896 2-2v-8c0-1.104-.896-2-2-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m13.3 10c-1.8 0-3.3 1.5-3.3 3.3v13.4c0 1.8 1.5 3.3 3.3 3.3s3.4-1.5 3.4-3.3v-13.4c0-1.8-1.5-3.3-3.4-3.3z m11.7 0c-1.8 0-3.3 1.5-3.3 3.3v13.4c0 1.8 1.5 3.3 3.3 3.3s3.3-1.5 3.3-3.3v-13.4c0-1.8-1.5-3.3-3.3-3.3z"/></g>
             </IconBase>
         );
     }

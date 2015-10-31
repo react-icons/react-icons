@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdChevronLeft extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25.7 12.4l-2.4-2.4-10 10 10 10 2.4-2.4-7.6-7.6z"/></g>
             </IconBase>
         );
     }

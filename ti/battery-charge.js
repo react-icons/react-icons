@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiBatteryCharge extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M5 10v6h11v-6h-11zm5.83 4.908l-1.21-1.908-2.62.428 3.223-2.324 1.175 1.896 2.602-.43-3.17 2.338zM19 10c0-1.654-1.346-3-3-3h-11c-1.654 0-3 1.346-3 3v6c0 1.654 1.346 3 3 3h11c1.654 0 3-1.346 3-3 1.104 0 2-.896 2-2v-2c0-1.104-.896-2-2-2zm-2 6c0 .552-.449 1-1 1h-11c-.551 0-1-.448-1-1v-6c0-.552.449-1 1-1h11c.551 0 1 .448 1 1v6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m8.3 16.7v10h18.4v-10h-18.4z m9.8 8.1l-2.1-3.1-4.3 0.7 5.3-3.9 2 3.2 4.3-0.7-5.2 3.8z m13.6-8.1c0-2.8-2.3-5-5-5h-18.4c-2.7 0-5 2.2-5 5v10c0 2.7 2.3 5 5 5h18.4c2.7 0 5-2.3 5-5 1.8 0 3.3-1.5 3.3-3.4v-3.3c0-1.8-1.5-3.3-3.3-3.3z m-3.4 10c0 0.9-0.7 1.6-1.6 1.6h-18.4c-0.9 0-1.6-0.7-1.6-1.6v-10c0-1 0.7-1.7 1.6-1.7h18.4c0.9 0 1.6 0.7 1.6 1.7v10z"/></g>
             </IconBase>
         );
     }

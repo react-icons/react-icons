@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdDirections extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.01 0-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m36.2 18.8l-15-15c-0.7-0.6-1.7-0.6-2.4 0l-15 15c-0.6 0.7-0.6 1.7 0 2.4l15 15c0.7 0.6 1.7 0.6 2.4 0l15-15c0.6-0.7 0.6-1.7 0-2.4z m-12.9 5.4v-4.2h-6.6v5h-3.4v-6.7c0-0.9 0.8-1.6 1.7-1.6h8.3v-4.2l5.9 5.8-5.9 5.9z"/></g>
             </IconBase>
         );
     }

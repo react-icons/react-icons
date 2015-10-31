@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLocationSearching extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M20.94 11c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m34.9 18.3c-0.8-6.9-6.3-12.4-13.2-13.2v-3.4h-3.4v3.4c-6.9 0.8-12.4 6.3-13.2 13.2h-3.4v3.4h3.4c0.8 6.9 6.3 12.4 13.2 13.2v3.4h3.4v-3.4c6.9-0.8 12.4-6.3 13.2-13.2h3.4v-3.4h-3.4z m-14.9 13.4c-6.4 0-11.7-5.2-11.7-11.7s5.2-11.7 11.7-11.7 11.7 5.2 11.7 11.7-5.2 11.7-11.7 11.7z"/></g>
             </IconBase>
         );
     }

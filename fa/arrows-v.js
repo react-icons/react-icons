@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaArrowsV extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1047.4748 1896.0833" {...this.props}>
-                <g><path d="m704 320q0 26-19 45t-45 19h-128v1024h128q26 0 45 19t19 45-19 45l-256 256q-19 19-45 19t-45-19l-256-256q-19-19-19-45t19-45 45-19h128v-1024h-128q-26 0-45-19t-19-45 19-45l256-256q19-19 45-19t45 19l256 256q19 19 19 45z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m23.8 6.8q0 0.5-0.4 0.9t-0.9 0.4h-2.7v21.6h2.7q0.5 0 0.9 0.4t0.4 1-0.4 0.9l-5.4 5.4q-0.4 0.4-0.9 0.4t-1-0.4l-5.4-5.4q-0.4-0.4-0.4-0.9t0.4-1 1-0.4h2.7v-21.6h-2.7q-0.6 0-1-0.4t-0.4-0.9 0.4-1l5.4-5.4q0.4-0.4 1-0.4t0.9 0.4l5.4 5.4q0.4 0.4 0.4 1z"/></g>
             </IconBase>
         );
     }

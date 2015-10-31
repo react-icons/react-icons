@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdDoneAll extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 11.7l-2.4-2.4-10.5 10.6 2.3 2.3 10.6-10.5z m7.1-2.4l-17.7 17.7-6.9-7-2.4 2.4 9.3 9.3 20-20-2.3-2.4z m-36.4 13.1l9.3 9.3 2.3-2.4-9.2-9.3-2.4 2.4z"/></g>
             </IconBase>
         );
     }

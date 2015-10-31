@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSearch extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25.8 23.3h-1.3l-0.4-0.4c1.6-1.9 2.6-4.4 2.6-7.1 0-5.9-4.9-10.8-10.9-10.8s-10.8 4.9-10.8 10.8 4.9 10.9 10.8 10.9c2.7 0 5.2-1 7.1-2.6l0.4 0.4v1.3l8.4 8.3 2.4-2.4-8.3-8.4z m-10 0c-4.1 0-7.5-3.3-7.5-7.5s3.4-7.5 7.5-7.5 7.5 3.4 7.5 7.5-3.3 7.5-7.5 7.5z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdPermScanWifi extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 3C6.95 3 3.15 4.85 0 7.23L12 22 24 7.25C20.85 4.87 17.05 3 12 3zm1 13h-2v-6h2v6zm-2-8V6h2v2h-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 5c-8.4 0-14.7 3.1-20 7.1l20 24.6 20-24.6c-5.2-4-11.6-7.1-20-7.1z m1.7 21.7h-3.4v-10h3.4v10z m-3.4-13.4v-3.3h3.4v3.3h-3.4z"/></g>
             </IconBase>
         );
     }

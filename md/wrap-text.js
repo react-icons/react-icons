@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdWrapText extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3 3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m6.7 31.7h10v-3.4h-10v3.4z m26.6-23.4h-26.6v3.4h26.6v-3.4z m-5 10h-21.6v3.4h22.1c1.8 0 3.3 1.5 3.3 3.3s-1.5 3.3-3.3 3.3h-3.8v-3.3l-5 5 5 5v-3.3h3.3c3.7 0 6.7-3 6.7-6.7s-3-6.7-6.7-6.7z"/></g>
             </IconBase>
         );
     }

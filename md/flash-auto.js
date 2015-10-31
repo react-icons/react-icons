@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFlashAuto extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M3 2v12h3v9l7-12H9l4-9H3zm16 0h-2l-3.2 9h1.9l.7-2h3.2l.7 2h1.9L19 2zm-2.15 5.65L18 4l1.15 3.65h-2.3z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m5 3.3v20h5v15l11.7-20h-6.7l6.7-15h-16.7z m26.7 0h-3.4l-5.3 15h3.2l1.1-3.3h5.4l1.1 3.3h3.2l-5.3-15z m-3.6 9.5l1.9-6.1 1.9 6.1h-3.8z"/></g>
             </IconBase>
         );
     }

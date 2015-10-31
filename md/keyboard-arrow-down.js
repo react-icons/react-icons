@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdKeyboardArrowDown extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m12.4 13.1l7.6 7.6 7.6-7.6 2.4 2.3-10 10-10-10z"/></g>
             </IconBase>
         );
     }

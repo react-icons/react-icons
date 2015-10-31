@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdPhonelinkRing extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M20.1 7.7l-1 1c1.8 1.8 1.8 4.6 0 6.5l1 1c2.5-2.3 2.5-6.1 0-8.5zM18 9.8l-1 1c.5.7.5 1.6 0 2.3l1 1c1.2-1.2 1.2-3 0-4.3zM14 1H4c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 19H4V4h10v16z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m33.5 12.8l-1.7 1.7c3 3 3 7.7 0 10.8l1.7 1.7c4.2-3.8 4.2-10.2 0-14.2z m-3.5 3.5l-1.7 1.7c0.9 1.2 0.9 2.7 0 3.8l1.7 1.7c2-2 2-5 0-7.2z m-6.7-14.6h-16.6c-1.9 0-3.4 1.5-3.4 3.3v30c0 1.8 1.5 3.3 3.4 3.3h16.6c1.9 0 3.4-1.5 3.4-3.3v-30c0-1.8-1.5-3.3-3.4-3.3z m0 31.6h-16.6v-26.6h16.6v26.6z"/></g>
             </IconBase>
         );
     }

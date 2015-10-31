@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiMediaPlayReverseOutline extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M14 7v10l-5.1-5 5.1-5m-1.4-1.4c-2.6 2.5-6.6 6.4-6.6 6.4s4 3.9 6.6 6.4c.4.4.9.6 1.4.6 1.1 0 2-.9 2-2v-10c0-1.1-.9-2-2-2-.5 0-1 .2-1.4.6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m23.3 11.7v16.6l-8.5-8.3 8.5-8.3m-2.3-2.4c-4.3 4.2-11 10.7-11 10.7s6.7 6.5 11 10.7c0.7 0.6 1.5 1 2.3 1 1.9 0 3.4-1.5 3.4-3.4v-16.6c0-1.9-1.5-3.4-3.4-3.4-0.8 0-1.6 0.4-2.3 1z"/></g>
             </IconBase>
         );
     }

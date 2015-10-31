@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdThumbUp extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m1.7 35h6.6v-20h-6.6v20z m36.6-18.3c0-1.9-1.5-3.4-3.3-3.4h-10.5l1.6-7.6 0-0.5c0-0.7-0.3-1.3-0.7-1.8l-1.8-1.7-10.9 11c-0.7 0.6-1 1.4-1 2.3v16.7c0 1.8 1.5 3.3 3.3 3.3h15c1.4 0 2.6-0.8 3.1-2l5-11.8c0.2-0.4 0.2-0.8 0.2-1.2v-3.2l0 0 0-0.1z"/></g>
             </IconBase>
         );
     }

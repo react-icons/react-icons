@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLocalCafe extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM2 21h18v-2H2v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m33.3 5h-26.6v16.7c0 3.7 3 6.6 6.6 6.6h10c3.7 0 6.7-2.9 6.7-6.6v-5h3.3c1.9 0 3.4-1.5 3.4-3.4v-5c0-1.8-1.5-3.3-3.4-3.3z m0 8.3h-3.3v-5h3.3v5z m-30 21.7h30v-3.3h-30v3.3z"/></g>
             </IconBase>
         );
     }

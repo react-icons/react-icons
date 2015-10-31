@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiDevicePhone extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><g><path d="M15 3h-7c-1.654 0-3 1.346-3 3v12c0 1.654 1.346 3 3 3h7c1.654 0 3-1.346 3-3v-12c0-1.654-1.346-3-3-3zm1 15c0 .551-.449 1-1 1h-7c-.551 0-1-.449-1-1v-12c0-.551.449-1 1-1h7c.551 0 1 .449 1 1v12zM14 6h-5c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h1.5c0 .553.448 1 1 1s1-.447 1-1h1.5c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1zm0 10h-5v-9h5v9z"/></g></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25 5h-11.7c-2.7 0-5 2.2-5 5v20c0 2.8 2.3 5 5 5h11.7c2.8 0 5-2.2 5-5v-20c0-2.8-2.2-5-5-5z m1.7 25c0 0.9-0.8 1.7-1.7 1.7h-11.7c-0.9 0-1.6-0.8-1.6-1.7v-20c0-0.9 0.7-1.7 1.6-1.7h11.7c0.9 0 1.7 0.8 1.7 1.7v20z m-3.4-20h-8.3c-0.9 0-1.7 0.8-1.7 1.7v15c0 0.9 0.8 1.6 1.7 1.6h2.5c0 1 0.7 1.7 1.7 1.7s1.6-0.7 1.6-1.7h2.5c1 0 1.7-0.7 1.7-1.6v-15c0-0.9-0.7-1.7-1.7-1.7z m0 16.7h-8.3v-15h8.3v15z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFormatColorText extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M0 20h24v4H0z"/><path d="M11 3L5.5 17h2.25l1.12-3h6.25l1.12 3h2.25L13 3h-2zm-1.38 9L12 5.67 14.38 12H9.62z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m0 33.3h40v6.7h-40z"/><path d="m18.3 5l-9.1 23.3h3.7l1.9-5h10.4l1.9 5h3.7l-9.1-23.3h-3.4z m-2.3 15l4-10.5 4 10.5h-8z"/></g>
             </IconBase>
         );
     }

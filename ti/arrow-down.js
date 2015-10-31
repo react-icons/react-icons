@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiArrowDown extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M16.707 13.293c-.391-.391-1.023-.391-1.414 0l-2.293 2.293v-7.586c0-.552-.447-1-1-1s-1 .448-1 1v7.586l-2.293-2.293c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l4.707 4.707 4.707-4.707c.391-.391.391-1.023 0-1.414z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m27.8 22.2c-0.6-0.7-1.7-0.7-2.3 0l-3.8 3.8v-12.7c0-0.9-0.8-1.6-1.7-1.6s-1.7 0.7-1.7 1.6v12.7l-3.8-3.8c-0.6-0.7-1.7-0.7-2.3 0s-0.7 1.7 0 2.3l7.8 7.9 7.8-7.9c0.7-0.6 0.7-1.7 0-2.3z"/></g>
             </IconBase>
         );
     }

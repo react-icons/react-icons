@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdNotificationsOff extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M11.5 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zM18 10.5c0-3.07-2.13-5.64-5-6.32V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5v.68c-.51.12-.99.32-1.45.56L18 14.18V10.5zm-.27 8.5l2 2L21 19.73 4.27 3 3 4.27l2.92 2.92C5.34 8.16 5 9.29 5 10.5V16l-2 2v1h14.73z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m19.2 36.7c1.8 0 3.3-1.5 3.3-3.4h-6.7c0 1.9 1.5 3.4 3.4 3.4z m10.8-19.2c0-5.1-3.6-9.4-8.3-10.5v-1.2c0-1.3-1.2-2.5-2.5-2.5s-2.5 1.2-2.5 2.5v1.2c-0.9 0.2-1.7 0.5-2.4 0.9l15.7 15.7v-6.1z m-0.4 14.2l3.3 3.3 2.1-2.1-27.9-27.9-2.1 2.1 4.9 4.9c-1 1.6-1.6 3.5-1.6 5.5v9.2l-3.3 3.3v1.7h24.6z"/></g>
             </IconBase>
         );
     }

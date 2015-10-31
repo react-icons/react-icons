@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSignalCellularConnectedNoInternet1Bar extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M22 8V2L2 22h16V8z"/><path d="M20 10v8h2v-8h-2zm-8 12V12L2 22h10zm8 0h2v-2h-2v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m36.7 13.3v-10l-33.4 33.4h26.7v-23.4z"/><path d="m33.3 16.7v13.3h3.4v-13.3h-3.4z m-13.3 20v-16.7l-16.7 16.7h16.7z m13.3 0h3.4v-3.4h-3.4v3.4z"/></g>
             </IconBase>
         );
     }

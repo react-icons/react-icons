@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaImage extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1920 1896.0833" {...this.props}>
-                <g><path d="m640 576q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136z m1024 384v448h-1408v-192l320-320 160 160 512-512z m96-704h-1600q-13 0-22.5 9.5t-9.5 22.5v1216q0 13 9.5 22.5t22.5 9.5h1600q13 0 22.5-9.5t9.5-22.5v-1216q0-13-9.5-22.5t-22.5-9.5z m160 32v1216q0 66-47 113t-113 47h-1600q-66 0-113-47t-47-113v-1216q0-66 47-113t113-47h1600q66 0 113 47t47 113z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m13.3 12.2q0 1.7-1.1 2.9t-2.9 1.1-2.8-1.1-1.2-2.9 1.2-2.8 2.8-1.2 2.9 1.2 1.1 2.8z m21.4 8v9.4h-29.4v-4l6.7-6.7 3.3 3.3 10.7-10.6z m2-14.6h-33.4q-0.2 0-0.4 0.2t-0.2 0.4v25.4q0 0.3 0.2 0.5t0.4 0.1h33.4q0.2 0 0.4-0.1t0.2-0.5v-25.4q0-0.2-0.2-0.4t-0.4-0.2z m3.3 0.6v25.4q0 1.4-1 2.3t-2.3 1h-33.4q-1.3 0-2.3-1t-1-2.3v-25.4q0-1.3 1-2.3t2.3-1h33.4q1.3 0 2.3 1t1 2.3z"/></g>
             </IconBase>
         );
     }

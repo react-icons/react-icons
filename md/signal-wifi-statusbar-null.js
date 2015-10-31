@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSignalWifiStatusbarNull extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 26 24" {...this.props}>
-                <g><path d="M13 4c4.25 0 7.62 1.51 9.68 2.75L13 18.8 3.33 6.75C5.38 5.51 8.75 4 13 4m0-2C5.74 2 .9 5.96.42 6.32l12.57 15.66.01.02.01-.01L25.58 6.32C25.1 5.96 20.26 2 13 2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 7.7c6.5 0 11.7 2.3 14.9 4.2l-14.9 18.6-14.9-18.6c3.2-1.9 8.4-4.2 14.9-4.2m0-3.1c-11.2 0-18.6 6.1-19.4 6.7l19.4 24.1 0 0 0 0 19.4-24.1c-0.8-0.6-8.2-6.7-19.4-6.7z"/></g>
             </IconBase>
         );
     }

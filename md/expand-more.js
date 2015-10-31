@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdExpandMore extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m27.7 14.3l-7.7 7.6-7.6-7.6-2.4 2.4 10 10 10-10z"/></g>
             </IconBase>
         );
     }

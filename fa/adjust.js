@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaAdjust extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1536 1896.0833" {...this.props}>
-                <g><path d="m768 1440v-1088q-148 0-273 73t-198 198-73 273 73 273 198 198 273 73z m768-544q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 30.4v-23q-3.1 0-5.8 1.6t-4.1 4.1-1.6 5.8 1.6 5.8 4.1 4.1 5.8 1.6z m16.2-11.5q0 4.4-2.2 8.1t-5.9 5.9-8.1 2.2-8.1-2.2-5.9-5.9-2.2-8.1 2.2-8.1 5.9-5.9 8.1-2.2 8.1 2.2 5.9 5.9 2.2 8.1z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaMapPin extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1125.6776 1896.0833" {...this.props}>
-                <g><path d="m512 1088q66 0 128-15v655q0 26-19 45t-45 19h-128q-26 0-45-19t-19-45v-655q61 15 128 15z m0-1088q212 0 362 150t150 362-150 362-362 150-362-150-150-362 150-362 362-150z m0 224q14 0 23-9t9-23-9-23-23-9q-146 0-249 103t-103 249q0 14 9 23t23 9 23-9 9-23q0-119 84.5-203.5t203.5-84.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m18.9 23q1.4 0 2.7-0.4v13.9q0 0.5-0.4 0.9t-0.9 0.4h-2.7q-0.6 0-1-0.4t-0.4-0.9v-13.9q1.3 0.4 2.7 0.4z m0-23q4.5 0 7.7 3.2t3.1 7.6-3.1 7.6-7.7 3.2-7.6-3.2-3.2-7.6 3.2-7.6 7.6-3.2z m0 4.7q0.3 0 0.5-0.2t0.2-0.4-0.2-0.5-0.5-0.2q-3.1 0-5.2 2.1t-2.2 5.3q0 0.3 0.2 0.5t0.5 0.2 0.5-0.2 0.2-0.5q0-2.5 1.7-4.3t4.3-1.8z"/></g>
             </IconBase>
         );
     }

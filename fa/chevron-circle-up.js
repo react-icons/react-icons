@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaChevronCircleUp extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1536 1896.0833" {...this.props}>
-                <g><path d="m1165 1139l102-102q19-19 19-45t-19-45l-454-454q-19-19-45-19t-45 19l-454 454q-19 19-19 45t19 45l102 102q19 19 45 19t45-19l307-307 307 307q19 19 45 19t45-19z m371-243q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m28.4 24l2.1-2.1q0.4-0.4 0.4-1t-0.4-0.9l-9.6-9.6q-0.4-0.4-0.9-0.4t-0.9 0.4l-9.6 9.6q-0.4 0.4-0.4 0.9t0.4 1l2.1 2.1q0.4 0.4 1 0.4t0.9-0.4l6.5-6.4 6.5 6.4q0.4 0.4 0.9 0.4t1-0.4z m7.8-5.1q0 4.4-2.2 8.1t-5.9 5.9-8.1 2.2-8.1-2.2-5.9-5.9-2.2-8.1 2.2-8.1 5.9-5.9 8.1-2.2 8.1 2.2 5.9 5.9 2.2 8.1z"/></g>
             </IconBase>
         );
     }

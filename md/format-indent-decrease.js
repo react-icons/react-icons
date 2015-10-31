@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFormatIndentDecrease extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M11 17h10v-2H11v2zm-8-5l4 4V8l-4 4zm0 9h18v-2H3v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m18.3 28.3h16.7v-3.3h-16.7v3.3z m-13.3-8.3l6.7 6.7v-13.4l-6.7 6.7z m0 15h30v-3.3h-30v3.3z m0-30v3.3h30v-3.3h-30z m13.3 10h16.7v-3.3h-16.7v3.3z m0 6.7h16.7v-3.4h-16.7v3.4z"/></g>
             </IconBase>
         );
     }

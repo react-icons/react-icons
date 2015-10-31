@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSystemUpdateAlt extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 16.5l4-4h-3v-9h-2v9H8l4 4zm9-13h-6v1.99h6v14.03H3V5.49h6V3.5H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 27.5l6.7-6.7h-5v-15h-3.4v15h-5l6.7 6.7z m15-21.7h-10v3.3h10v23.4h-30v-23.3h10v-3.4h-10c-1.8 0-3.3 1.5-3.3 3.4v23.3c0 1.8 1.5 3.3 3.3 3.3h30c1.8 0 3.3-1.5 3.3-3.3v-23.3c0-1.9-1.5-3.4-3.3-3.4z"/></g>
             </IconBase>
         );
     }

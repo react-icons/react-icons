@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdCallMissed extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M19.59 7L12 14.59 6.41 9H11V7H3v8h2v-4.59l7 7 9-9z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m32.6 11.7l-12.6 12.6-9.3-9.3h7.6v-3.3h-13.3v13.3h3.3v-7.6l11.7 11.6 15-15z"/></g>
             </IconBase>
         );
     }

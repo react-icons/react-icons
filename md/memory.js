@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdMemory extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M15 9H9v6h6V9zm-2 4h-2v-2h2v2zm8-2V9h-2V7c0-1.1-.9-2-2-2h-2V3h-2v2h-2V3H9v2H7c-1.1 0-2 .9-2 2v2H3v2h2v2H3v2h2v2c0 1.1.9 2 2 2h2v2h2v-2h2v2h2v-2h2c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2zm-4 6H7V7h10v10z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25 15h-10v10h10v-10z m-3.3 6.7h-3.4v-3.4h3.4v3.4z m13.3-3.4v-3.3h-3.3v-3.3c0-1.9-1.5-3.4-3.4-3.4h-3.3v-3.3h-3.3v3.3h-3.4v-3.3h-3.3v3.3h-3.3c-1.9 0-3.4 1.5-3.4 3.4v3.3h-3.3v3.3h3.3v3.4h-3.3v3.3h3.3v3.3c0 1.9 1.5 3.4 3.4 3.4h3.3v3.3h3.3v-3.3h3.4v3.3h3.3v-3.3h3.3c1.9 0 3.4-1.5 3.4-3.4v-3.3h3.3v-3.3h-3.3v-3.4h3.3z m-6.7 10h-16.6v-16.6h16.6v16.6z"/></g>
             </IconBase>
         );
     }

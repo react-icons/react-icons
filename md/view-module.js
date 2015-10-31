@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdViewModule extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m6.7 18.3h8.3v-10h-8.3v10z m0 11.7h8.3v-10h-8.3v10z m10 0h8.3v-10h-8.3v10z m10 0h8.3v-10h-8.3v10z m-10-11.7h8.3v-10h-8.3v10z m10-10v10h8.3v-10h-8.3z"/></g>
             </IconBase>
         );
     }

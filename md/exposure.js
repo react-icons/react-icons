@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdExposure extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M15 17v2h2v-2h2v-2h-2v-2h-2v2h-2v2h2zm5-15H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM5 5h6v2H5V5zm15 15H4L20 4v16z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25 28.3v3.4h3.3v-3.4h3.4v-3.3h-3.4v-3.3h-3.3v3.3h-3.3v3.3h3.3z m8.3-25h-26.6c-1.9 0-3.4 1.5-3.4 3.4v26.6c0 1.9 1.5 3.4 3.4 3.4h26.6c1.9 0 3.4-1.5 3.4-3.4v-26.6c0-1.9-1.5-3.4-3.4-3.4z m-25 5h10v3.4h-10v-3.4z m25 25h-26.6l26.6-26.6v26.6z"/></g>
             </IconBase>
         );
     }

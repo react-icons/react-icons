@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdCallMade extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m15 8.3v3.4h11l-19.3 19.3 2.3 2.3 19.3-19.3v11h3.4v-16.7z"/></g>
             </IconBase>
         );
     }

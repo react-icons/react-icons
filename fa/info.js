@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaInfo extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1011.9142 1896.0833" {...this.props}>
-                <g><path d="m640 1344v128q0 26-19 45t-45 19h-512q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h64v-384h-64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h384q26 0 45 19t19 45v576h64q26 0 45 19t19 45z m-128-1152v192q0 26-19 45t-45 19h-256q-26 0-45-19t-19-45v-192q0-26 19-45t45-19h256q26 0 45 19t19 45z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m22.8 28.4v2.7q0 0.5-0.4 0.9t-0.9 0.4h-10.8q-0.6 0-1-0.4t-0.4-0.9v-2.7q0-0.6 0.4-1t1-0.4h1.3v-8.1h-1.3q-0.6 0-1-0.4t-0.4-0.9v-2.7q0-0.6 0.4-1t1-0.4h8.1q0.5 0 0.9 0.4t0.4 1v12.1h1.4q0.5 0 0.9 0.4t0.4 1z m-2.7-24.3v4q0 0.5-0.4 1t-0.9 0.4h-5.4q-0.6 0-1-0.4t-0.4-1v-4q0-0.6 0.4-1t1-0.4h5.4q0.5 0 0.9 0.4t0.4 1z"/></g>
             </IconBase>
         );
     }

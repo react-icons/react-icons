@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaAreaChart extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 2048 1896.0833" {...this.props}>
-                <g><path d="m2048 1536v128h-2048v-1536h128v1408h1920z m-384-1024l256 896h-1664v-576l448-576 576 576z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m40 31.5v2.5h-40v-30h2.5v27.5h37.5z m-7.5-20l5 17.5h-32.5v-11.3l8.8-11.2 11.2 11.2z"/></g>
             </IconBase>
         );
     }

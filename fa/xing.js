@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaXing extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1408 1896.0833" {...this.props}>
-                <g><path d="m597 667q-10 18-257 456-27 46-65 46h-239q-21 0-31-17t0-36l253-448q1 0 0-1l-161-279q-12-22-1-37 9-15 32-15h239q40 0 66 45z m806-642q11 16 0 37l-528 934v1l336 615q11 20 1 37-10 15-32 15h-239q-42 0-66-45l-339-622q18-32 531-942 25-45 64-45h241q22 0 31 15z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m17.7 14.1q-0.2 0.4-5.4 9.6-0.5 1-1.4 1h-5q-0.4 0-0.6-0.4t0-0.8l5.3-9.4q0 0 0 0l-3.4-5.9q-0.3-0.5 0-0.8 0.2-0.3 0.6-0.3h5.1q0.8 0 1.4 0.9z m17-13.6q0.3 0.4 0 0.8l-11.1 19.7v0l7.1 13q0.2 0.4 0 0.8-0.2 0.3-0.7 0.3h-5q-0.9 0-1.4-0.9l-7.1-13.2q0.3-0.6 11.2-19.8 0.5-1 1.3-1h5.1q0.5 0 0.6 0.3z"/></g>
             </IconBase>
         );
     }

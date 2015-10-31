@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdAirlineSeatIndividualSuite extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M7 13c1.65 0 3-1.35 3-3S8.65 7 7 7s-3 1.35-3 3 1.35 3 3 3zm12-6h-8v7H3V7H1v10h22v-6c0-2.21-1.79-4-4-4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m11.7 21.7c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.2-5 5 2.2 5 5 5z m20-10h-13.4v11.6h-13.3v-11.6h-3.3v16.6h36.6v-10c0-3.6-2.9-6.6-6.6-6.6z"/></g>
             </IconBase>
         );
     }

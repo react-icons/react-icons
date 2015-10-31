@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdBatteryCharging50 extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M14.47 13.5L11 20v-5.5H9l.53-1H7v7.17C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V13.5h-2.53z"/><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v8.17h2.53L13 7v5.5h2l-.53 1H17V5.33C17 4.6 16.4 4 15.67 4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m24.1 22.5l-5.8 10.8v-9.1h-3.3l0.9-1.7h-4.2v12c0 1.2 1 2.2 2.2 2.2h12.2c1.2 0 2.2-1 2.2-2.2v-12h-4.2z"/><path d="m26.1 6.7h-2.8v-3.4h-6.6v3.4h-2.8c-1.2 0-2.2 1-2.2 2.2v13.6h4.2l5.8-10.8v9.1h3.3l-0.9 1.7h4.2v-13.6c0-1.2-1-2.2-2.2-2.2z"/></g>
             </IconBase>
         );
     }

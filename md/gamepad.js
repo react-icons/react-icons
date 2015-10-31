@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdGamepad extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M15 7.5V2H9v5.5l3 3 3-3zM7.5 9H2v6h5.5l3-3-3-3zM9 16.5V22h6v-5.5l-3-3-3 3zM16.5 9l-3 3 3 3H22V9h-5.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25 12.5v-9.2h-10v9.2l5 5 5-5z m-12.5 2.5h-9.2v10h9.2l5-5-5-5z m2.5 12.5v9.2h10v-9.2l-5-5-5 5z m12.5-12.5l-5 5 5 5h9.2v-10h-9.2z"/></g>
             </IconBase>
         );
     }

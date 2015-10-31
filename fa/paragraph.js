@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaParagraph extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1341.2812 1896.0833" {...this.props}>
-                <g><path d="m1278 189v73q0 29-18.5 61t-42.5 32q-50 0-54 1-26 6-32 31-3 11-3 64v1152q0 25-18 43t-43 18h-108q-25 0-43-18t-18-43v-1218h-143v1218q0 25-17.5 43t-43.5 18h-108q-26 0-43.5-18t-17.5-43v-496q-147-12-245-59-126-58-192-179-64-117-64-259 0-166 88-286 88-118 209-159 111-37 417-37h479q25 0 43 18t18 43z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m32.8 4v1.5q0 0.6-0.4 1.3t-0.9 0.7q-1 0-1.1 0-0.6 0.1-0.7 0.7-0.1 0.2-0.1 1.3v24.3q0 0.5-0.3 0.9t-0.9 0.4h-2.3q-0.5 0-0.9-0.4t-0.4-0.9v-25.7h-3v25.7q0 0.5-0.4 0.9t-0.9 0.4h-2.3q-0.5 0-0.9-0.4t-0.4-0.9v-10.4q-3.1-0.3-5.1-1.3-2.7-1.2-4.1-3.8-1.3-2.4-1.3-5.4 0-3.5 1.8-6.1 1.9-2.5 4.4-3.3 2.4-0.8 8.8-0.8h10.1q0.6 0 0.9 0.4t0.4 0.9z"/></g>
             </IconBase>
         );
     }

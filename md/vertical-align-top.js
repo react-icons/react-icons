@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdVerticalAlignTop extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M8 11h3v10h2V11h3l-4-4-4 4zM4 3v2h16V3H4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m13.3 18.3h5v16.7h3.4v-16.7h5l-6.7-6.6-6.7 6.6z m-6.6-13.3v3.3h26.6v-3.3h-26.6z"/></g>
             </IconBase>
         );
     }

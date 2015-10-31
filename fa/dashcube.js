@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaDashcube extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1536 1896.0833" {...this.props}>
-                <g><path d="m0 680q0-131 91.5-226.5t222.5-95.5h742l352-358v1470q0 132-91.5 227t-222.5 95h-780q-131 0-222.5-95t-91.5-227v-790z m1232 754l-176-180v-425q0-46-32-79t-78-33h-484q-46 0-78 33t-32 79v492q0 46 32.5 79.5t77.5 33.5h770z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m3.8 14.3q0-2.7 1.9-4.7t4.7-2h15.7l7.4-7.6v31q0 2.8-1.9 4.8t-4.7 2h-16.5q-2.7 0-4.7-2t-1.9-4.8v-16.7z m26 16l-3.7-3.8v-9q0-1-0.7-1.7t-1.6-0.7h-10.3q-0.9 0-1.6 0.7t-0.7 1.7v10.4q0 0.9 0.7 1.6t1.6 0.8h16.3z"/></g>
             </IconBase>
         );
     }

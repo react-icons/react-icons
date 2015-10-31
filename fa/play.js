@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaPlay extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1408 1896.0833" {...this.props}>
-                <g><path d="m1384 927l-1328 738q-23 13-39.5 3t-16.5-36v-1472q0-26 16.5-36t39.5 3l1328 738q23 13 23 31t-23 31z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m34.3 19.6l-28 15.5q-0.5 0.3-0.8 0.1t-0.4-0.8v-31q0-0.6 0.4-0.8t0.8 0.1l28 15.5q0.5 0.3 0.5 0.7t-0.5 0.7z"/></g>
             </IconBase>
         );
     }

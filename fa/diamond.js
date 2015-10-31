@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaDiamond extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 2048.0005 1896.0833" {...this.props}>
-                <g><path d="m212.0005 768l623 665-300-665h-323z m812.0000000000001 772l349-772h-698z m-486.0000000000001-900l204-384h-262l-288 384h346z m675.0000000000001 793l623-665h-323z m-530.0000000000001-793h682l-204-384h-274z m827.0000000000001 0h346l-288-384h-262z m141-486l384 512q14 18 13 41.5t-17 40.5l-960 1024q-18 20-47 20t-47-20l-960-1024q-16-17-17-40.5t13-41.5l384-512q18-26 51-26h1152q33 0 51 26z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m4.1 16.5l12.2 13-5.9-13h-6.3z m15.9 15.1l6.8-15.1h-13.6z m-9.5-17.6l4-7.5h-5.1l-5.7 7.5h6.8z m13.2 15.5l12.2-13h-6.3z m-10.4-15.5h13.4l-4-7.5h-5.4z m16.2 0h6.7l-5.6-7.5h-5.1z m2.7-9.5l7.5 10q0.3 0.3 0.3 0.8t-0.3 0.8l-18.8 20q-0.3 0.4-0.9 0.4t-0.9-0.4l-18.8-20q-0.3-0.3-0.3-0.8t0.3-0.8l7.5-10q0.3-0.5 0.9-0.5h22.5q0.7 0 1 0.5z"/></g>
             </IconBase>
         );
     }

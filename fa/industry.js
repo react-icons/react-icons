@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaIndustry extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1792 1896.0833" {...this.props}>
-                <g><path d="m448 0q26 0 45 19t19 45v891l536-429q17-14 40-14 26 0 45 19t19 45v379l536-429q17-14 40-14 26 0 45 19t19 45v1152q0 26-19 45t-45 19h-1664q-26 0-45-19t-19-45v-1664q0-26 19-45t45-19h384z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m10.5 0q0.6 0 1 0.4t0.4 1v18.7l11.3-9q0.4-0.3 0.9-0.3 0.5 0 0.9 0.4t0.4 1v7.9l11.3-9q0.4-0.3 0.9-0.3 0.5 0 0.9 0.4t0.4 1v24.3q0 0.5-0.4 0.9t-0.9 0.4h-35.2q-0.5 0-0.9-0.4t-0.4-0.9v-35.1q0-0.6 0.4-1t0.9-0.4h8.1z"/></g>
             </IconBase>
         );
     }

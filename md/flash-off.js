@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFlashOff extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M3.27 3L2 4.27l5 5V13h3v9l3.58-6.14L17.73 20 19 18.73 3.27 3zM17 10h-4l4-8H7v2.18l8.46 8.46L17 10z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m5.5 5l-2.2 2.1 8.4 8.3v6.3h5v15l5.9-10.3 7 6.9 2.1-2.1-26.2-26.2z m22.8 11.7h-6.6l6.6-13.4h-16.6v3.7l14.1 14.1 2.5-4.4z"/></g>
             </IconBase>
         );
     }

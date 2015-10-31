@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaFighterJet extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1920 1896.0833" {...this.props}>
-                <g><path d="m1920 960q-1 32-288 96l-352 32-224 64h-64l-293 352h69q26 0 45 4.5t19 11.5-19 11.5-45 4.5h-96-160-64v-32h64v-416h-160l-192 224h-96l-32-32v-192h32v-32h128v-8l-192-24v-128l192-24v-8h-128v-32h-32v-192l32-32h96l192 224h160v-416h-64v-32h64 160 96q26 0 45 4.5t19 11.5-19 11.5-45 4.5h-69l293 352h64l224 64 352 32q261 58 287 93z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m40 20.2q0 0.7-6 2l-7.3 0.7-4.7 1.3h-1.3l-6.1 7.4h1.4q0.5 0 0.9 0.1t0.4 0.2-0.4 0.3-0.9 0h-6.7v-0.6h1.4v-8.7h-3.4l-4 4.7h-2l-0.6-0.7v-4h0.6v-0.7h2.7v-0.1l-4-0.5v-2.7l4-0.5v-0.2h-2.7v-0.6h-0.6v-4l0.6-0.7h2l4 4.7h3.4v-8.7h-1.4v-0.7h6.7q0.5 0 0.9 0.1t0.4 0.3-0.4 0.2-0.9 0.1h-1.4l6.1 7.3h1.3l4.7 1.4 7.3 0.6q5.4 1.3 6 2z"/></g>
             </IconBase>
         );
     }

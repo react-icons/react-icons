@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFindReplace extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M11 6c1.38 0 2.63.56 3.54 1.46L12 10h6V4l-2.05 2.05C14.68 4.78 12.93 4 11 4c-3.53 0-6.43 2.61-6.92 6H6.1c.46-2.28 2.48-4 4.9-4zm5.64 9.14c.66-.9 1.12-1.97 1.28-3.14H15.9c-.46 2.28-2.48 4-4.9 4-1.38 0-2.63-.56-3.54-1.46L10 12H4v6l2.05-2.05C7.32 17.22 9.07 18 11 18c1.55 0 2.98-.51 4.14-1.36L20 21.49 21.49 20l-4.85-4.86z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m18.3 10c2.3 0 4.4 0.9 5.9 2.4l-4.2 4.3h10v-10l-3.4 3.4c-2.1-2.1-5-3.4-8.3-3.4-5.8 0-10.7 4.3-11.5 10h3.4c0.7-3.8 4.1-6.7 8.1-6.7z m9.4 15.2c1.1-1.5 1.9-3.2 2.2-5.2h-3.4c-0.8 3.8-4.1 6.7-8.2 6.7-2.3 0-4.4-1-5.9-2.5l4.3-4.2h-10v10l3.4-3.4c2.1 2.1 5 3.4 8.2 3.4 2.6 0 5-0.9 6.9-2.3l8.1 8.1 2.5-2.5-8.1-8.1z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLeakAdd extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M6 3H3v3c1.66 0 3-1.34 3-3zm8 0h-2c0 4.97-4.03 9-9 9v2c6.08 0 11-4.93 11-11zm-4 0H8c0 2.76-2.24 5-5 5v2c3.87 0 7-3.13 7-7zm0 18h2c0-4.97 4.03-9 9-9v-2c-6.07 0-11 4.93-11 11zm8 0h3v-3c-1.66 0-3 1.34-3 3zm-4 0h2c0-2.76 2.24-5 5-5v-2c-3.87 0-7 3.13-7 7z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m10 5h-5v5c2.8 0 5-2.2 5-5z m13.3 0h-3.3c0 8.3-6.7 15-15 15v3.3c10.1 0 18.3-8.2 18.3-18.3z m-6.6 0h-3.4c0 4.6-3.7 8.3-8.3 8.3v3.4c6.4 0 11.7-5.2 11.7-11.7z m0 30h3.3c0-8.3 6.7-15 15-15v-3.3c-10.1 0-18.3 8.2-18.3 18.3z m13.3 0h5v-5c-2.8 0-5 2.2-5 5z m-6.7 0h3.4c0-4.6 3.7-8.3 8.3-8.3v-3.4c-6.4 0-11.7 5.2-11.7 11.7z"/></g>
             </IconBase>
         );
     }

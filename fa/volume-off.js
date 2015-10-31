@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaVolumeOff extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1068.8174 1896.0833" {...this.props}>
-                <g><path d="m768 352v1088q0 26-19 45t-45 19-45-19l-333-333h-262q-26 0-45-19t-19-45v-384q0-26 19-45t45-19h262l333-333q19-19 45-19t45 19 19 45z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m24.9 7.4v23q0 0.5-0.4 0.9t-0.9 0.4-1-0.4l-7-7h-5.5q-0.6 0-1-0.4t-0.4-0.9v-8.1q0-0.6 0.4-1t1-0.4h5.5l7-7q0.4-0.4 1-0.4t0.9 0.4 0.4 0.9z"/></g>
             </IconBase>
         );
     }

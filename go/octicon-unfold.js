@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonUnfold extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 896 1024.032" {...this.props}>
-                <g><path d="m736 544.001l160 160c0 35-29 64-64 64h-256v-64h224l-128-128h-448l-128 128h224v64h-256c-35 0-64-29-64-64l160-160-160-160c0-35 29-64 64-64h256v64h-224l128 128h448l128-128h-224v-64h256c35 0 64 29 64 64l-160 160z m-352-96h128v-192h128l-192-191.99999999999997-192 191.99999999999997h128v192z m128 192h-128v192h-128l192 192 192-192h-128v-192z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m31.2 21.2l6.3 6.3c0 1.4-1.1 2.5-2.5 2.5h-10v-2.5h8.7l-5-5h-17.4l-5 5h8.7v2.5h-10c-1.4 0-2.5-1.1-2.5-2.5l6.3-6.3-6.3-6.2c0-1.4 1.1-2.5 2.5-2.5h10v2.5h-8.7l5 5h17.4l5-5h-8.7v-2.5h10c1.4 0 2.5 1.1 2.5 2.5l-6.3 6.2z m-13.7-3.7h5v-7.5h5l-7.5-7.5-7.5 7.5h5v7.5z m5 7.5h-5v7.5h-5l7.5 7.5 7.5-7.5h-5v-7.5z"/></g>
             </IconBase>
         );
     }

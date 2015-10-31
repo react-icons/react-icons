@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaPaperPlaneO extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1792.003 1896.0833" {...this.props}>
-                <g><path d="m1764.003 11q33 24 27 64l-256 1536q-5 29-32 45-14 8-31 8-11 0-24-5l-527-215-298 327q-18 21-47 21-14 0-23-4-19-7-30-23.5t-11-36.5v-452l-472-193q-37-14-40-55-3-39 32-59l1664-960q35-21 68 2z m-342 1499l221-1323-1434 827 336 137 863-639-478 797z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m38.3 0.2q0.7 0.5 0.6 1.4l-5.4 32.4q-0.1 0.6-0.7 0.9-0.3 0.2-0.6 0.2-0.3 0-0.6-0.1l-11.1-4.5-6.3 6.9q-0.3 0.4-1 0.4-0.2 0-0.4-0.1-0.4-0.1-0.7-0.5t-0.2-0.7v-9.6l-10-4.1q-0.7-0.2-0.8-1.1-0.1-0.8 0.7-1.3l35.1-20.2q0.7-0.5 1.4 0z m-7.2 31.7l4.7-28-30.3 17.5 7.1 2.9 18.2-13.5-10.1 16.8z"/></g>
             </IconBase>
         );
     }

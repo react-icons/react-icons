@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonLogIn extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 896 1024.032" {...this.props}>
-                <g><path d="m384 432.001v336h256v-256h64v256c0 35-29 64-64 64h-256v192l-349-174c-21-11-35-33-35-58v-728c0-34.99999999999997 29-63.99999999999998 64-63.99999999999998h576c35 0 64 29 64 64v192h-64v-191.99999999999997h-512l256 128v144l192-144v128h256v128h-256v128l-192-144z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m17.5 16.9v13.1h10v-10h2.5v10c0 1.4-1.1 2.5-2.5 2.5h-10v7.5l-13.6-6.8c-0.9-0.4-1.4-1.3-1.4-2.3v-28.4c0-1.4 1.1-2.5 2.5-2.5h22.5c1.4 0 2.5 1.1 2.5 2.5v7.5h-2.5v-7.5h-20l10 5v5.6l7.5-5.6v5h10v5h-10v5l-7.5-5.6z"/></g>
             </IconBase>
         );
     }

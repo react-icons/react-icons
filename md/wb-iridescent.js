@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdWbIridescent extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M5 14.5h14v-6H5v6zM11 .55V3.5h2V.55h-2zm8.04 2.5l-1.79 1.79 1.41 1.41 1.8-1.79-1.42-1.41zM13 22.45V19.5h-2v2.95h2zm7.45-3.91l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zM3.55 4.46l1.79 1.79 1.41-1.41-1.79-1.79-1.41 1.41zm1.41 15.49l1.79-1.8-1.41-1.41-1.79 1.79 1.41 1.42z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m8.3 24.2h23.4v-10h-23.4v10z m10-23.3v4.9h3.4v-4.9h-3.4z m13.4 4.2l-2.9 3 2.3 2.3 3-3-2.4-2.3z m-10 32.3v-4.9h-3.4v4.9h3.4z m12.4-6.5l-3-3-2.4 2.4 3 3 2.4-2.4z m-28.2-23.5l3 3 2.4-2.3-3-3-2.4 2.3z m2.4 25.9l3-3-2.4-2.4-3 3 2.4 2.4z"/></g>
             </IconBase>
         );
     }

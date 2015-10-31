@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonDiffIgnored extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 896 1024.032" {...this.props}>
-                <g><path d="m832 64.001h-768c-35 0-64 29-64 64v768c0 35 29 64 64 64h768c35 0 64-29 64-64v-768c0-35-29-64-64-64z m0 832h-768v-768h768v768z m-544-128h-96v-96l416-416h96v96l-416 416z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m35 2.5h-30c-1.4 0-2.5 1.1-2.5 2.5v30c0 1.4 1.1 2.5 2.5 2.5h30c1.4 0 2.5-1.1 2.5-2.5v-30c0-1.4-1.1-2.5-2.5-2.5z m0 32.5h-30v-30h30v30z m-21.2-5h-3.8v-3.8l16.2-16.2h3.8v3.7l-16.2 16.3z"/></g>
             </IconBase>
         );
     }

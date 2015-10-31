@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLocalHotel extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m11.7 21.7c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.2-5 5 2.2 5 5 5z m20-10h-13.4v11.6h-13.3v-15h-3.3v25h3.3v-5h30v5h3.3v-15c0-3.6-2.9-6.6-6.6-6.6z"/></g>
             </IconBase>
         );
     }

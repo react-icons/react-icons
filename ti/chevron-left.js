@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiChevronLeft extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M14.414 5.586c-.78-.781-2.048-.781-2.828 0l-6.415 6.414 6.415 6.414c.39.391.902.586 1.414.586s1.024-.195 1.414-.586c.781-.781.781-2.047 0-2.828l-3.585-3.586 3.585-3.586c.781-.781.781-2.047 0-2.828z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m24 9.3c-1.3-1.3-3.4-1.3-4.7 0l-10.7 10.7 10.7 10.7c0.7 0.6 1.5 1 2.4 1s1.7-0.4 2.3-1c1.3-1.3 1.3-3.4 0-4.7l-5.9-6 5.9-6c1.3-1.3 1.3-3.4 0-4.7z"/></g>
             </IconBase>
         );
     }

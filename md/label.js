@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLabel extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m29.4 9.7c-0.6-0.8-1.6-1.4-2.7-1.4l-18.4 0c-1.8 0-3.3 1.5-3.3 3.4v16.6c0 1.9 1.5 3.4 3.3 3.4l18.4 0c1.1 0 2.1-0.6 2.7-1.4l7.3-10.3-7.3-10.3z"/></g>
             </IconBase>
         );
     }

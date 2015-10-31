@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonScreenNormal extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 896 1024.032" {...this.props}>
-                <g><path d="m128 256.001h-128v-64h128v-127.99999999999997h64v128c0 35-29 64-64 64z m0 512h-128v64h128v128h64v-128c0-35-29-64-64-64z m576-128c0 35-29 64-64 64h-384c-35 0-64-29-64-64v-256c0-35 29-64 64-64h384c35 0 64 29 64 64v256z m-128-192h-256v128h256v-128z m128 384v128h64v-128h128v-64h-128c-35 0-64 29-64 64z m64-640v-127.99999999999997h-64v128c0 35 29 64 64 64h128v-64h-128z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m7.5 10h-5v-2.5h5v-5h2.5v5c0 1.4-1.1 2.5-2.5 2.5z m0 20h-5v2.5h5v5h2.5v-5c0-1.4-1.1-2.5-2.5-2.5z m22.5-5c0 1.4-1.1 2.5-2.5 2.5h-15c-1.4 0-2.5-1.1-2.5-2.5v-10c0-1.4 1.1-2.5 2.5-2.5h15c1.4 0 2.5 1.1 2.5 2.5v10z m-5-7.5h-10v5h10v-5z m5 15v5h2.5v-5h5v-2.5h-5c-1.4 0-2.5 1.1-2.5 2.5z m2.5-25v-5h-2.5v5c0 1.4 1.1 2.5 2.5 2.5h5v-2.5h-5z"/></g>
             </IconBase>
         );
     }

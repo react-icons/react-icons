@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdInvertColors extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m29.4 13.2l-9.4-9.4-9.4 9.4c-5.2 5.2-5.2 13.7 0 18.9 2.6 2.6 6 3.9 9.4 3.9 3.4 0 6.8-1.3 9.4-3.9 5.2-5.2 5.2-13.7 0-18.9z m-9.4 19.4c-2.7 0-5.2-1-7.1-2.9-1.9-1.9-2.9-4.4-2.9-7s1-5.2 2.9-7.1l7.1-7.1v24.2z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonThreeBars extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 768 1024.032" {...this.props}>
-                <g><path d="m0 192.001v128h768v-128h-768z m0 384h768v-128h-768v128z m0 256h768v-128h-768v128z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m5 7.5v5h30v-5h-30z m0 15h30v-5h-30v5z m0 10h30v-5h-30v5z"/></g>
             </IconBase>
         );
     }

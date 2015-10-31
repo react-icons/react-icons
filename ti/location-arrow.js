@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiLocationArrow extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M10.368 19.102c.349 1.049 1.011 1.086 1.478.086l5.309-11.375c.467-1.002.034-1.434-.967-.967l-11.376 5.308c-1.001.467-.963 1.129.085 1.479l4.103 1.367 1.368 4.102z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m17.3 31.8c0.6 1.8 1.7 1.8 2.4 0.2l8.9-19c0.8-1.6 0-2.4-1.6-1.6l-19 8.9c-1.6 0.7-1.6 1.8 0.2 2.4l6.8 2.3 2.3 6.8z"/></g>
             </IconBase>
         );
     }

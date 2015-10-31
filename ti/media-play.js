@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiMediaPlay extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M10.396 18.433c2.641-2.574 6.604-6.433 6.604-6.433s-3.963-3.859-6.604-6.433c-.363-.349-.853-.567-1.396-.567-1.104 0-2 .896-2 2v10c0 1.104.896 2 2 2 .543 0 1.033-.218 1.396-.567z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m17.3 30.7c4.4-4.3 11-10.7 11-10.7l-11-10.7c-0.6-0.6-1.4-1-2.3-1-1.8 0-3.3 1.5-3.3 3.4v16.6c0 1.9 1.5 3.4 3.3 3.4 0.9 0 1.7-0.4 2.3-1z"/></g>
             </IconBase>
         );
     }

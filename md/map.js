@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdMap extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m34.2 5l-0.3 0-8.9 3.5-10-3.5-9.4 3.2c-0.3 0.1-0.6 0.4-0.6 0.8v25.2c0 0.4 0.4 0.8 0.8 0.8l0.3 0 8.9-3.5 10 3.5 9.4-3.2c0.4-0.1 0.6-0.4 0.6-0.8v-25.2c0-0.4-0.4-0.8-0.8-0.8z m-9.2 26.7l-10-3.5v-19.9l10 3.6v19.8z"/></g>
             </IconBase>
         );
     }

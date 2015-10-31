@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaVideoCamera extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1792 1896.0833" {...this.props}>
-                <g><path d="m1792 352v1088q0 42-39 59-13 5-25 5-27 0-45-19l-403-403v166q0 119-84.5 203.5t-203.5 84.5h-704q-119 0-203.5-84.5t-84.5-203.5v-704q0-119 84.5-203.5t203.5-84.5h704q119 0 203.5 84.5t84.5 203.5v165l403-402q18-19 45-19 12 0 25 5 39 17 39 59z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m38.9 7.4v23q0 0.9-0.8 1.2-0.3 0.1-0.5 0.1-0.6 0-1-0.4l-8.5-8.5v3.5q0 2.5-1.8 4.3t-4.3 1.8h-14.8q-2.5 0-4.3-1.8t-1.8-4.3v-14.8q0-2.5 1.8-4.3t4.3-1.8h14.8q2.5 0 4.3 1.8t1.8 4.3v3.5l8.5-8.5q0.4-0.4 1-0.4 0.2 0 0.5 0.1 0.8 0.3 0.8 1.2z"/></g>
             </IconBase>
         );
     }

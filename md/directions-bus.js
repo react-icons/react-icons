@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdDirectionsBus extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m6.7 26.7c0 1.4 0.6 2.8 1.6 3.7v2.9c0 1 0.8 1.7 1.7 1.7h1.7c0.9 0 1.6-0.7 1.6-1.7v-1.6h13.4v1.6c0 1 0.7 1.7 1.6 1.7h1.7c0.9 0 1.7-0.7 1.7-1.7v-2.9c1-1 1.6-2.3 1.6-3.7v-16.7c0-5.8-5.9-6.7-13.3-6.7s-13.3 0.9-13.3 6.7v16.7z m5.8 1.6c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.2 2.5 2.5-1.1 2.5-2.5 2.5z m15 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.2 2.5 2.5-1.1 2.5-2.5 2.5z m2.5-10h-20v-8.3h20v8.3z"/></g>
             </IconBase>
         );
     }

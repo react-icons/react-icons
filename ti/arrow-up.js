@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiArrowUp extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M13 5.586l-4.707 4.707c-.391.391-.391 1.023 0 1.414s1.023.391 1.414 0l2.293-2.293v7.586c0 .552.447 1 1 1s1-.448 1-1v-7.586l2.293 2.293c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-4.707-4.707z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m21.7 9.3l-7.9 7.9c-0.6 0.6-0.6 1.7 0 2.3s1.7 0.7 2.4 0l3.8-3.8v12.6c0 1 0.7 1.7 1.7 1.7s1.6-0.7 1.6-1.7v-12.6l3.9 3.8c0.3 0.3 0.7 0.5 1.1 0.5s0.9-0.2 1.2-0.5c0.7-0.6 0.7-1.7 0-2.3l-7.8-7.9z"/></g>
             </IconBase>
         );
     }

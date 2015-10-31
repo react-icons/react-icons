@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonCreditCard extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1024 1024.032" {...this.props}>
-                <g><path d="m768 576.001h-640v-64h640v64z m256-384v576c0 35-29 64-64 64h-896c-35 0-64-29-64-64v-576c0-35 29-64 64-64h896c35 0 64 29 64 64z m-64 192h-896v384h896v-384z m0-192h-896v64h896v-64z m-576 448h-256v64h256v-64z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 22.5h-25v-2.5h25v2.5z m10-15v22.5c0 1.4-1.1 2.5-2.5 2.5h-35c-1.4 0-2.5-1.1-2.5-2.5v-22.5c0-1.4 1.1-2.5 2.5-2.5h35c1.4 0 2.5 1.1 2.5 2.5z m-2.5 7.5h-35v15h35v-15z m0-7.5h-35v2.5h35v-2.5z m-22.5 17.5h-10v2.5h10v-2.5z"/></g>
             </IconBase>
         );
     }

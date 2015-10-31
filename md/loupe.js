@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLoupe extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.49 2 2 6.49 2 12s4.49 10 10 10h8c1.1 0 2-.9 2-2v-8c0-5.51-4.49-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m21.7 11.7h-3.4v6.6h-6.6v3.4h6.6v6.6h3.4v-6.6h6.6v-3.4h-6.6v-6.6z m-1.7-8.4c-9.2 0-16.7 7.5-16.7 16.7s7.5 16.7 16.7 16.7h13.3c1.9 0 3.4-1.5 3.4-3.4v-13.3c0-9.2-7.5-16.7-16.7-16.7z m0 30c-7.4 0-13.3-5.9-13.3-13.3s5.9-13.3 13.3-13.3 13.3 5.9 13.3 13.3-5.9 13.3-13.3 13.3z"/></g>
             </IconBase>
         );
     }

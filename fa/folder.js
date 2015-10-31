@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaFolder extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1664 1896.0833" {...this.props}>
-                <g><path d="m1664 608v704q0 92-66 158t-158 66h-1216q-92 0-158-66t-66-158v-960q0-92 66-158t158-66h320q92 0 158 66t66 158v32h672q92 0 158 66t66 158z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m37.6 12.8v14.9q0 1.9-1.4 3.3t-3.4 1.4h-25.6q-2 0-3.4-1.4t-1.4-3.3v-20.3q0-1.9 1.4-3.3t3.4-1.4h6.7q2 0 3.4 1.4t1.3 3.3v0.7h14.2q2 0 3.4 1.4t1.4 3.3z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaAngleDoubleLeft extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1174.1503 1896.0833" {...this.props}>
-                <g><path d="m627 1376q0 13-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23z m384 0q0 13-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20.8 29q0 0.3-0.2 0.5l-1 1.1q-0.2 0.2-0.5 0.2t-0.5-0.2l-9.8-9.9q-0.2-0.2-0.2-0.4t0.2-0.5l9.8-9.9q0.2-0.2 0.5-0.2t0.5 0.2l1 1.1q0.2 0.2 0.2 0.5t-0.2 0.5l-8.3 8.3 8.3 8.2q0.2 0.3 0.2 0.5z m8.1 0q0 0.3-0.2 0.5l-1 1.1q-0.2 0.2-0.5 0.2t-0.5-0.2l-9.8-9.9q-0.2-0.2-0.2-0.4t0.2-0.5l9.8-9.9q0.2-0.2 0.5-0.2t0.5 0.2l1 1.1q0.2 0.2 0.2 0.5t-0.2 0.5l-8.3 8.3 8.3 8.2q0.2 0.3 0.2 0.5z"/></g>
             </IconBase>
         );
     }

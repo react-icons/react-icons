@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiMessage extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 7c.542 0 1 .458 1 1v7c0 .542-.458 1-1 1h-8.829l-.171.171v-.171h-3c-.542 0-1-.458-1-1v-7c0-.542.458-1 1-1h12m0-2h-12c-1.65 0-3 1.35-3 3v7c0 1.65 1.35 3 3 3h1v3l3-3h8c1.65 0 3-1.35 3-3v-7c0-1.65-1.35-3-3-3z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 11.7c0.9 0 1.7 0.7 1.7 1.6v11.7c0 0.9-0.8 1.7-1.7 1.7h-14.7l-0.3 0.3v-0.3h-5c-0.9 0-1.7-0.8-1.7-1.7v-11.7c0-0.9 0.8-1.6 1.7-1.6h20m0-3.4h-20c-2.7 0-5 2.3-5 5v11.7c0 2.8 2.3 5 5 5h1.7v5l5-5h13.3c2.8 0 5-2.2 5-5v-11.7c0-2.7-2.2-5-5-5z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdPayment extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m33.3 6.7h-26.6c-1.9 0-3.3 1.5-3.3 3.3l-0.1 20c0 1.9 1.5 3.3 3.4 3.3h26.6c1.9 0 3.4-1.4 3.4-3.3v-20c0-1.8-1.5-3.3-3.4-3.3z m0 23.3h-26.6v-10h26.6v10z m0-16.7h-26.6v-3.3h26.6v3.3z"/></g>
             </IconBase>
         );
     }

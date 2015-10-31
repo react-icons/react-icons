@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiMediaPauseOutline extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M8 20c-1.654 0-3-1.346-3-3v-9c0-1.654 1.346-3 3-3s3 1.346 3 3v9c0 1.654-1.346 3-3 3zm0-13c-.552 0-1 .449-1 1v9c0 .551.448 1 1 1s1-.449 1-1v-9c0-.551-.448-1-1-1zM15 20c-1.654 0-3-1.346-3-3v-9c0-1.654 1.346-3 3-3s3 1.346 3 3v9c0 1.654-1.346 3-3 3zm0-13c-.552 0-1 .449-1 1v9c0 .551.448 1 1 1s1-.449 1-1v-9c0-.551-.448-1-1-1z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m13.3 33.3c-2.7 0-5-2.2-5-5v-15c0-2.7 2.3-5 5-5s5 2.3 5 5v15c0 2.8-2.2 5-5 5z m0-21.6c-0.9 0-1.6 0.7-1.6 1.6v15c0 1 0.7 1.7 1.6 1.7s1.7-0.7 1.7-1.7v-15c0-0.9-0.7-1.6-1.7-1.6z m11.7 21.6c-2.8 0-5-2.2-5-5v-15c0-2.7 2.2-5 5-5s5 2.3 5 5v15c0 2.8-2.2 5-5 5z m0-21.6c-0.9 0-1.7 0.7-1.7 1.6v15c0 1 0.8 1.7 1.7 1.7s1.7-0.7 1.7-1.7v-15c0-0.9-0.8-1.6-1.7-1.6z"/></g>
             </IconBase>
         );
     }

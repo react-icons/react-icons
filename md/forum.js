@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdForum extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m35 10h-3.3v15h-21.7v3.3c0 1 0.8 1.7 1.7 1.7h18.3l6.7 6.7v-25c0-0.9-0.8-1.7-1.7-1.7z m-6.7 10v-15c0-0.9-0.7-1.7-1.6-1.7h-21.7c-0.9 0-1.7 0.8-1.7 1.7v23.3l6.7-6.6h16.7c0.9 0 1.6-0.8 1.6-1.7z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFlare extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M7 11H1v2h6v-2zm2.17-3.24L7.05 5.64 5.64 7.05l2.12 2.12 1.41-1.41zM13 1h-2v6h2V1zm5.36 6.05l-1.41-1.41-2.12 2.12 1.41 1.41 2.12-2.12zM17 11v2h6v-2h-6zm-5-2c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm2.83 7.24l2.12 2.12 1.41-1.41-2.12-2.12-1.41 1.41zm-9.19.71l1.41 1.41 2.12-2.12-1.41-1.41-2.12 2.12zM11 23h2v-6h-2v6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m11.7 18.3h-10v3.4h10v-3.4z m3.6-5.4l-3.5-3.5-2.4 2.4 3.5 3.5 2.4-2.4z m6.4-11.2h-3.4v10h3.4v-10z m8.9 10.1l-2.3-2.4-3.6 3.5 2.4 2.4 3.5-3.5z m-2.3 6.5v3.4h10v-3.4h-10z m-8.3-3.3c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5z m4.7 12.1l3.6 3.5 2.3-2.3-3.5-3.6-2.4 2.4z m-15.3 1.2l2.4 2.3 3.5-3.5-2.4-2.4-3.5 3.6z m8.9 10h3.4v-10h-3.4v10z"/></g>
             </IconBase>
         );
     }

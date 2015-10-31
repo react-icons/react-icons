@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLayers extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 30.9l-12.3-9.6-2.7 2.2 15 11.6 15-11.6-2.7-2.2-12.3 9.6z m0-4.2l12.3-9.6 2.7-2.1-15-11.7-15 11.7 2.7 2.1 12.3 9.6z"/></g>
             </IconBase>
         );
     }

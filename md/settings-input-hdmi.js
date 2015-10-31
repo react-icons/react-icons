@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSettingsInputHdmi extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 7V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v3H5v6l3 6v3h8v-3l3-6V7h-1zM8 4h8v3h-2V5h-1v2h-2V5h-1v2H8V4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 11.7v-5c0-1.9-1.5-3.4-3.3-3.4h-13.4c-1.8 0-3.3 1.5-3.3 3.4v5h-1.7v10l5 10v5h13.4v-5l5-10v-10h-1.7z m-16.7-5h13.4v5h-3.4v-3.4h-1.6v3.4h-3.4v-3.4h-1.6v3.4h-3.4v-5z"/></g>
             </IconBase>
         );
     }

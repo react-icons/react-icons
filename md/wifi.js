@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdWifi extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m1.7 15l3.3 3.3c8.3-8.3 21.7-8.3 30 0l3.3-3.3c-10.1-10.1-26.5-10.1-36.6 0z m13.3 13.3l5 5 5-5c-2.7-2.7-7.2-2.7-10 0z m-6.7-6.6l3.4 3.3c4.6-4.6 12-4.6 16.6 0l3.4-3.3c-6.5-6.5-16.9-6.5-23.4 0z"/></g>
             </IconBase>
         );
     }

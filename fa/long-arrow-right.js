@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaLongArrowRight extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1792 1896.0833" {...this.props}>
-                <g><path d="m1728 893q0 14-10 24l-384 354q-16 14-35 6-19-9-19-29v-224h-1248q-14 0-23-9t-9-23v-192q0-14 9-23t23-9h1248v-224q0-21 19-29t35 5l384 350q10 10 10 23z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m37.6 18.8q0 0.3-0.3 0.5l-8.1 7.5q-0.3 0.3-0.7 0.1-0.4-0.2-0.4-0.6v-4.7h-26.3q-0.3 0-0.5-0.2t-0.2-0.5v-4q0-0.3 0.2-0.5t0.5-0.2h26.3v-4.7q0-0.5 0.4-0.6t0.7 0.1l8.1 7.4q0.3 0.2 0.3 0.4z"/></g>
             </IconBase>
         );
     }

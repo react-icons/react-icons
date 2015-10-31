@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdRadio extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M3.24 6.15C2.51 6.43 2 7.17 2 8v12c0 1.1.89 2 2 2h16c1.11 0 2-.9 2-2V8c0-1.11-.89-2-2-2H8.3l8.26-3.34L15.88 1 3.24 6.15zM7 20c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm13-8h-2v-2h-2v2H4V8h16v4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m5.4 10.3c-1.2 0.4-2.1 1.7-2.1 3v20c0 1.9 1.5 3.4 3.4 3.4h26.6c1.9 0 3.4-1.5 3.4-3.4v-20c0-1.8-1.5-3.3-3.4-3.3h-19.5l13.8-5.6-1.1-2.7-21.1 8.6z m6.3 23c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.3 5 5-2.3 5-5 5z m21.6-13.3h-3.3v-3.3h-3.3v3.3h-20v-6.7h26.6v6.7z"/></g>
             </IconBase>
         );
     }

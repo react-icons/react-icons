@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdQueueMusic extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25 10h-20v3.3h20v-3.3z m0 6.7h-20v3.3h20v-3.3z m-20 10h13.3v-3.4h-13.3v3.4z m23.3-16.7v13.6c-0.5-0.2-1-0.3-1.6-0.3-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.2 5-5v-15h5v-3.3h-8.4z"/></g>
             </IconBase>
         );
     }

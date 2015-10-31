@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSimCard extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M19.99 4c0-1.1-.89-2-1.99-2h-8L4 8v12c0 1.1.9 2 2 2h12.01c1.1 0 1.99-.9 1.99-2l-.01-16zM9 19H7v-2h2v2zm8 0h-2v-2h2v2zm-8-4H7v-4h2v4zm4 4h-2v-4h2v4zm0-6h-2v-2h2v2zm4 2h-2v-4h2v4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m33.3 6.7c0-1.9-1.5-3.4-3.3-3.4h-13.3l-10 10v20c0 1.9 1.5 3.4 3.3 3.4h20c1.8 0 3.3-1.5 3.3-3.4l0-26.6z m-18.3 25h-3.3v-3.4h3.3v3.4z m13.3 0h-3.3v-3.4h3.3v3.4z m-13.3-6.7h-3.3v-6.7h3.3v6.7z m6.7 6.7h-3.4v-6.7h3.4v6.7z m0-10h-3.4v-3.4h3.4v3.4z m6.6 3.3h-3.3v-6.7h3.3v6.7z"/></g>
             </IconBase>
         );
     }

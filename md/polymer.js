@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdPolymer extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M19 4h-4L7.11 16.63 4.5 12 9 4H5L.5 12 5 20h4l7.89-12.63L19.5 12 15 20h4l4.5-8z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m31.7 6.7h-6.7l-13.1 21-4.4-7.7 7.5-13.3h-6.7l-7.5 13.3 7.5 13.3h6.7l13.1-21 4.4 7.7-7.5 13.3h6.7l7.5-13.3z"/></g>
             </IconBase>
         );
     }

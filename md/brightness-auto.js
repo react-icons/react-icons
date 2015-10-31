@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdBrightnessAuto extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M10.85 12.65h2.3L12 9l-1.15 3.65zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM14.3 16l-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m18.1 21.1h3.8l-1.9-6.1-1.9 6.1z m15.2-6.6v-7.8h-7.8l-5.5-5.6-5.5 5.6h-7.8v7.8l-5.6 5.5 5.6 5.5v7.8h7.8l5.5 5.6 5.5-5.6h7.8v-7.8l5.6-5.5-5.6-5.5z m-9.5 12.2l-1.1-3.4h-5.4l-1.1 3.4h-3.2l5.3-15h3.4l5.3 15h-3.2z"/></g>
             </IconBase>
         );
     }

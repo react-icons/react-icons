@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdBorderColor extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M17.75 7L14 3.25l-10 10V17h3.75l10-10zm2.96-2.96c.39-.39.39-1.02 0-1.41L18.37.29c-.39-.39-1.02-.39-1.41 0L15 2.25 18.75 6l1.96-1.96z"/><path d="M0 20h24v4H0z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m29.6 11.7l-6.3-6.3-16.6 16.7v6.2h6.2l16.7-16.6z m4.9-5c0.7-0.6 0.7-1.7 0-2.3l-3.9-3.9c-0.6-0.7-1.7-0.7-2.3 0l-3.3 3.3 6.3 6.2 3.2-3.3z"/><path d="m0 33.3h40v6.7h-40z"/></g>
             </IconBase>
         );
     }

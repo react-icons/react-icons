@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonTerminal extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 896 1024.032" {...this.props}>
-                <g><path d="m448 640.001h256v64h-256v-64z m-192 64l192-192-192-192-48 48 144 144-144 144 48 48z m640-512v640c0 35-29 64-64 64h-768c-35 0-64-29-64-64v-640c0-35 29-64 64-64h768c35 0 64 29 64 64z m-64 0h-768v640h768v-640z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 25h10v2.5h-10v-2.5z m-7.5 2.5l7.5-7.5-7.5-7.5-1.9 1.9 5.7 5.6-5.7 5.6 1.9 1.9z m25-20v25c0 1.4-1.1 2.5-2.5 2.5h-30c-1.4 0-2.5-1.1-2.5-2.5v-25c0-1.4 1.1-2.5 2.5-2.5h30c1.4 0 2.5 1.1 2.5 2.5z m-2.5 0h-30v25h30v-25z"/></g>
             </IconBase>
         );
     }

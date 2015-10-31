@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaExclamation extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 940.795 1896.0833" {...this.props}>
-                <g><path d="m512 1248v224q0 26-19 45t-45 19h-256q-26 0-45-19t-19-45v-224q0-26 19-45t45-19h256q26 0 45 19t19 45z m30-1056l-28 768q-1 26-20.5 45t-45.5 19h-256q-26 0-45.5-19t-20.5-45l-28-768q-1-26 17.5-45t44.5-19h320q26 0 44.5 19t17.5 45z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20.9 26.3v4.8q0 0.5-0.4 0.9t-1 0.4h-5.4q-0.5 0-0.9-0.4t-0.4-0.9v-4.8q0-0.5 0.4-0.9t0.9-0.4h5.4q0.6 0 1 0.4t0.4 0.9z m0.6-22.2l-0.6 16.2q0 0.5-0.4 0.9t-1 0.4h-5.4q-0.5 0-0.9-0.4t-0.5-0.9l-0.6-16.2q0-0.6 0.4-1t1-0.4h6.7q0.6 0 0.9 0.4t0.4 1z"/></g>
             </IconBase>
         );
     }

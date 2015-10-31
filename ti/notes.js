@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiNotes extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18.831 4.059c-.107-.095-.243-.139-.394-.121l-11 1.25c-.249.031-.437.244-.437.496v10.316c-1.654 0-3 1.122-3 2.5s1.346 2.5 3 2.5 3-1.122 3-2.5v-7.609l6-.625v3.734c-1.654 0-3 1.122-3 2.5s1.346 2.5 3 2.5 3-1.122 3-2.5v-12.066c0-.144-.062-.28-.169-.375z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m31.4 6.8c-0.2-0.2-0.4-0.3-0.7-0.2l-18.3 2c-0.4 0.1-0.7 0.5-0.7 0.9v17.2c-2.8 0-5 1.8-5 4.1s2.2 4.2 5 4.2 5-1.9 5-4.2v-12.7l10-1v6.2c-2.8 0-5 1.9-5 4.2s2.2 4.2 5 4.2 5-1.9 5-4.2v-20.1c0-0.2-0.1-0.5-0.3-0.6z"/></g>
             </IconBase>
         );
     }

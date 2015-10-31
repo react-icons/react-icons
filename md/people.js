@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdPeople extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m26.7 18.3c2.7 0 5-2.2 5-5s-2.3-5-5-5c-2.8 0-5 2.3-5 5s2.2 5 5 5z m-13.4 0c2.8 0 5-2.2 5-5s-2.2-5-5-5c-2.7 0-5 2.3-5 5s2.3 5 5 5z m0 3.4c-3.9 0-11.6 1.9-11.6 5.8v4.2h23.3v-4.2c0-3.9-7.8-5.8-11.7-5.8z m13.4 0c-0.5 0-1.1 0-1.6 0.1 1.9 1.3 3.2 3.2 3.2 5.7v4.2h10v-4.2c0-3.9-7.7-5.8-11.6-5.8z"/></g>
             </IconBase>
         );
     }

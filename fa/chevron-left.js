@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaChevronLeft extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1289.1823 1896.0833" {...this.props}>
-                <g><path d="m1171 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m31.1 6.3l-11.2 11.3 11.2 11.2q0.4 0.4 0.4 0.9t-0.4 1l-3.5 3.5q-0.4 0.4-0.9 0.4t-1-0.4l-15.6-15.7q-0.4-0.4-0.4-0.9t0.4-1l15.6-15.7q0.4-0.4 1-0.4t0.9 0.4l3.5 3.6q0.4 0.4 0.4 0.9t-0.4 0.9z"/></g>
             </IconBase>
         );
     }

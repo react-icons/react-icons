@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFormatUnderlined extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 17c3.31 0 6-2.69 6-6V3h-2.5v8c0 1.93-1.57 3.5-3.5 3.5S8.5 12.93 8.5 11V3H6v8c0 3.31 2.69 6 6 6zm-7 2v2h14v-2H5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 28.3c5.5 0 10-4.4 10-10v-13.3h-4.2v13.3c0 3.3-2.6 5.9-5.8 5.9s-5.8-2.6-5.8-5.9v-13.3h-4.2v13.3c0 5.6 4.5 10 10 10z m-11.7 3.4v3.3h23.4v-3.3h-23.4z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaICursor extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1112.4844 1896.0833" {...this.props}>
-                <g><path d="m832 128q-320 0-320 224v416h128v128h-128v544q0 224 320 224h64v128h-64q-272 0-384-146-112 146-384 146h-64v-128h64q320 0 320-224v-544h-128v-128h128v-416q0-224-320-224h-64v-128h64q272 0 384 146 112-146 384-146h64v128h-64z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25.8 2.7q-6.7 0-6.7 4.7v8.8h2.7v2.7h-2.7v11.5q0 4.7 6.7 4.7h1.4v2.7h-1.4q-5.7 0-8.1-3.1-2.3 3.1-8.1 3.1h-1.3v-2.7h1.3q6.8 0 6.8-4.7v-11.5h-2.7v-2.7h2.7v-8.8q0-4.7-6.8-4.7h-1.3v-2.7h1.3q5.8 0 8.1 3.1 2.4-3.1 8.1-3.1h1.4v2.7h-1.4z"/></g>
             </IconBase>
         );
     }

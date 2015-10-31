@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdStorage extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m3.3 33.3h33.4v-6.6h-33.4v6.6z m3.4-5h3.3v3.4h-3.3v-3.4z m-3.4-21.6v6.6h33.4v-6.6h-33.4z m6.7 5h-3.3v-3.4h3.3v3.4z m-6.7 11.6h33.4v-6.6h-33.4v6.6z m3.4-5h3.3v3.4h-3.3v-3.4z"/></g>
             </IconBase>
         );
     }

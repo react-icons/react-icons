@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLocalPlay extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69 1.09 4.11z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m33.3 20c0-1.8 1.5-3.3 3.4-3.3v-6.7c0-1.8-1.5-3.3-3.4-3.3h-26.6c-1.9 0-3.3 1.5-3.3 3.3v6.7c1.8 0 3.3 1.5 3.3 3.3s-1.5 3.3-3.4 3.3v6.7c0 1.8 1.5 3.3 3.4 3.3h26.6c1.9 0 3.4-1.5 3.4-3.3v-6.7c-1.9 0-3.4-1.5-3.4-3.3z m-7.3 8l-6-3.8-6 3.8 1.8-6.9-5.4-4.5 7-0.4 2.6-6.5 2.6 6.6 7 0.4-5.5 4.5 1.9 6.8z"/></g>
             </IconBase>
         );
     }

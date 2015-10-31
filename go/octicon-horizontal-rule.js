@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonHorizontalRule extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 639.875 1024.032" {...this.props}>
-                <g><path d="m63.938 448.001h128v128h64v-383.938h-64v191.938h-128v-191.938h-63.93799999999999v383.938h63.938v-128z m575.937 128v-128h-63.938v128h63.93799999999999z m0-192v-127.93799999999999h-63.938v127.93799999999999h63.93799999999999z m-191.937 0v-127.93799999999999h128v-64h-192v383.938h64v-128h128v-64h-128z m-447.938 448h639.875v-128h-639.875v128z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m10 17.5h5v5h2.5v-15h-2.5v7.5h-5v-7.5h-2.5v15h2.5v-5z m22.5 5v-5h-2.5v5h2.5z m0-7.5v-5h-2.5v5h2.5z m-7.5 0v-5h5v-2.5h-7.5v15h2.5v-5h5v-2.5h-5z m-17.5 17.5h25v-5h-25v5z"/></g>
             </IconBase>
         );
     }

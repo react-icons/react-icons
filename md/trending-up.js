@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdTrendingUp extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m26.7 10l3.8 3.8-8.1 8.1-6.7-6.6-12.4 12.4 2.4 2.3 10-10 6.7 6.7 10.5-10.5 3.8 3.8v-10z"/></g>
             </IconBase>
         );
     }

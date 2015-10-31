@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaFlickr extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1536 1896.0833" {...this.props}>
-                <g><path d="m1248 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960z m-550 768q0-88-62-150t-150-62-150 62-62 150 62 150 150 62 150-62 62-150z m564 0q0-88-62-150t-150-62-150 62-62 150 62 150 150 62 150-62 62-150z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30.1 2.7q2.5 0 4.3 1.8t1.8 4.3v20.2q0 2.5-1.8 4.3t-4.3 1.8h-20.2q-2.5 0-4.3-1.8t-1.8-4.3v-20.2q0-2.5 1.8-4.3t4.3-1.8h20.2z m-11.6 16.2q0-1.9-1.3-3.2t-3.1-1.3-3.2 1.3-1.3 3.2 1.3 3.2 3.2 1.3 3.1-1.3 1.3-3.2z m11.9 0q0-1.9-1.3-3.2t-3.2-1.3-3.1 1.3-1.3 3.2 1.3 3.2 3.1 1.3 3.2-1.3 1.3-3.2z"/></g>
             </IconBase>
         );
     }

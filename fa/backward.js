@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaBackward extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1664 1896.0833" {...this.props}>
-                <g><path d="m1619 141q19-19 32-13t13 32v1472q0 26-13 32t-32-13l-710-710q-8-9-13-19v710q0 26-13 32t-32-13l-710-710q-19-19-19-45t19-45l710-710q19-19 32-13t13 32v710q5-11 13-19z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m36.6 3q0.4-0.4 0.7-0.3t0.3 0.7v31q0 0.6-0.3 0.7t-0.7-0.3l-15-14.9q-0.1-0.2-0.2-0.4v14.9q0 0.6-0.3 0.7t-0.7-0.3l-15-14.9q-0.4-0.4-0.4-1t0.4-0.9l15-15q0.4-0.4 0.7-0.3t0.3 0.7v15q0.1-0.3 0.2-0.4z"/></g>
             </IconBase>
         );
     }

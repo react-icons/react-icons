@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonArrowSmallUp extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 384 1024.032" {...this.props}>
-                <g><path d="m192 320.001l-192 256h128v128h128v-128h128l-192-256z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 12.5l-7.5 10h5v5h5v-5h5l-7.5-10z"/></g>
             </IconBase>
         );
     }

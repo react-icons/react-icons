@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdBluetoothConnected extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M7 12l-2-2-2 2 2 2 2-2zm10.71-4.29L12 2h-1v7.59L6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 11 14.41V22h1l5.71-5.71-4.3-4.29 4.3-4.29zM13 5.83l1.88 1.88L13 9.59V5.83zm1.88 10.46L13 18.17v-3.76l1.88 1.88zM19 10l-2 2 2 2 2-2-2-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m11.7 20l-3.4-3.3-3.3 3.3 3.3 3.3 3.4-3.3z m17.8-7.2l-9.5-9.5h-1.7v12.7l-7.6-7.7-2.4 2.4 9.4 9.3-9.4 9.3 2.4 2.4 7.6-7.7v12.7h1.7l9.5-9.5-7.1-7.2 7.1-7.1z m-7.8-3.1l3.1 3.1-3.1 3.2v-6.3z m3.1 17.5l-3.1 3.1v-6.3l3.1 3.2z m6.9-10.5l-3.4 3.3 3.4 3.3 3.3-3.3-3.3-3.3z"/></g>
             </IconBase>
         );
     }

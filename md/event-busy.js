@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdEventBusy extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M9.31 17l2.44-2.44L14.19 17l1.06-1.06-2.44-2.44 2.44-2.44L14.19 10l-2.44 2.44L9.31 10l-1.06 1.06 2.44 2.44-2.44 2.44L9.31 17zM19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m15.5 28.3l4.1-4 4 4 1.8-1.7-4.1-4.1 4.1-4.1-1.8-1.7-4 4-4.1-4-1.7 1.7 4 4.1-4 4.1 1.7 1.7z m16.2-23.3h-1.7v-3.3h-3.3v3.3h-13.4v-3.3h-3.3v3.3h-1.7c-1.8 0-3.3 1.5-3.3 3.3l0 23.4c0 1.8 1.5 3.3 3.3 3.3h23.4c1.8 0 3.3-1.5 3.3-3.3v-23.4c0-1.8-1.5-3.3-3.3-3.3z m0 26.7h-23.4v-18.4h23.4v18.4z"/></g>
             </IconBase>
         );
     }

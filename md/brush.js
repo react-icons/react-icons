@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdBrush extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.02 0-1.41z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m11.7 23.3c-2.8 0-5 2.3-5 5 0 2.2-2 3.4-3.4 3.4 1.6 2 4.2 3.3 6.7 3.3 3.7 0 6.7-3 6.7-6.7 0-2.7-2.3-5-5-5z m22.8-15.6l-2.2-2.2c-0.7-0.7-1.7-0.7-2.4 0l-14.9 14.9 4.6 4.6 14.9-14.9c0.7-0.7 0.7-1.7 0-2.4z"/></g>
             </IconBase>
         );
     }

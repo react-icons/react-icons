@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdStayPrimaryPortrait extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M17 1.01L7 1c-1.1 0-1.99.9-1.99 2v18c0 1.1.89 2 1.99 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m28.3 1.7l-16.6 0c-1.9 0-3.3 1.5-3.3 3.3v30c0 1.8 1.4 3.3 3.3 3.3h16.6c1.9 0 3.4-1.5 3.4-3.3v-30c0-1.8-1.5-3.3-3.4-3.3z m0 30h-16.6v-23.4h16.6v23.4z"/></g>
             </IconBase>
         );
     }

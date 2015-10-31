@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaCircleONotch extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1792 1896.0833" {...this.props}>
-                <g><path d="m1792 896q0 182-71 348t-191 286-286 191-348 71-348-71-286-191-191-286-71-348q0-222 101-414.5t276.5-317 390.5-155.5v260q-221 45-366.5 221t-145.5 406q0 130 51 248.5t136.5 204 204 136.5 248.5 51 248.5-51 204-136.5 136.5-204 51-248.5q0-230-145.5-406t-366.5-221v-260q215 31 390.5 155.5t276.5 317 101 414.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m38.9 18.9q0 3.8-1.5 7.3t-4 6.1-6.1 4-7.3 1.5-7.3-1.5-6.1-4-4-6.1-1.5-7.3q0-4.7 2.1-8.7t5.9-6.7 8.2-3.3v5.5q-4.7 0.9-7.7 4.6t-3.1 8.6q0 2.7 1.1 5.2t2.9 4.3 4.3 2.9 5.2 1.1 5.2-1.1 4.3-2.9 2.9-4.3 1.1-5.2q0-4.8-3.1-8.6t-7.7-4.6v-5.5q4.5 0.6 8.2 3.3t5.9 6.7 2.1 8.7z"/></g>
             </IconBase>
         );
     }

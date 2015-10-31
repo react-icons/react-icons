@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaBolt extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 974.0545 1896.0833" {...this.props}>
-                <g><path d="m885 566q18 20 7 44l-540 1157q-13 25-42 25-4 0-14-2-17-5-25.5-19t-4.5-30l197-808-406 101q-4 1-12 1-18 0-31-11-18-15-13-39l201-825q4-14 16-23t28-9h328q19 0 32 12.5t13 29.5q0 8-5 18l-171 463 396-98q8-2 12-2 19 0 34 15z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m28.4 11.9q0.4 0.5 0.1 1l-11.3 24.4q-0.3 0.5-0.9 0.5-0.1 0-0.3 0-0.4-0.1-0.6-0.4t-0.1-0.7l4.2-17-8.6 2.1q-0.1 0-0.2 0-0.4 0-0.7-0.2-0.4-0.3-0.3-0.8l4.3-17.4q0.1-0.3 0.3-0.5t0.6-0.2h6.9q0.4 0 0.7 0.3t0.3 0.6q0 0.2-0.1 0.4l-3.6 9.7 8.3-2q0.2-0.1 0.3-0.1 0.4 0 0.7 0.3z"/></g>
             </IconBase>
         );
     }

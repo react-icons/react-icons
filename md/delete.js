@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdDelete extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m10 31.7c0 1.8 1.5 3.3 3.3 3.3h13.4c1.8 0 3.3-1.5 3.3-3.3v-20h-20v20z m21.7-25h-5.9l-1.6-1.7h-8.4l-1.6 1.7h-5.9v3.3h23.4v-3.3z"/></g>
             </IconBase>
         );
     }

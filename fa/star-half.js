@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaStarHalf extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 915.5439 1896.0833" {...this.props}>
-                <g><path d="m832 32v1339l-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m27.9 0.7v28.2l-9.5 5q-0.4 0.3-0.8 0.3-0.5 0-0.7-0.4t-0.2-0.7q0-0.1 0-0.4l1.8-10.6-7.6-7.4q-0.6-0.6-0.6-1.1 0-0.7 1.2-0.9l10.6-1.6 4.8-9.6q0.4-0.8 1-0.8z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaExpand extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1536 1896.0833" {...this.props}>
-                <g><path d="m755 1056q0 13-10 23l-332 332 144 144q19 19 19 45t-19 45-45 19h-448q-26 0-45-19t-19-45v-448q0-26 19-45t45-19 45 19l144 144 332-332q10-10 23-10t23 10l114 114q10 10 10 23z m781-864v448q0 26-19 45t-45 19-45-19l-144-144-332 332q-10 10-23 10t-23-10l-114-114q-10-10-10-23t10-23l332-332-144-144q-19-19-19-45t19-45 45-19h448q26 0 45 19t19 45z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m19.7 22.3q0 0.3-0.2 0.5l-7 7 3 3q0.4 0.4 0.4 1t-0.4 0.9-0.9 0.4h-9.5q-0.5 0-0.9-0.4t-0.4-0.9v-9.5q0-0.5 0.4-0.9t0.9-0.4 1 0.4l3 3 7-7q0.3-0.2 0.5-0.2t0.5 0.2l2.4 2.4q0.2 0.2 0.2 0.5z m16.5-18.2v9.4q0 0.6-0.4 1t-0.9 0.4-1-0.4l-3-3.1-7 7q-0.3 0.2-0.5 0.2t-0.5-0.2l-2.4-2.4q-0.2-0.2-0.2-0.5t0.2-0.5l7-7-3-3q-0.4-0.4-0.4-0.9t0.4-1 0.9-0.4h9.5q0.5 0 0.9 0.4t0.4 1z"/></g>
             </IconBase>
         );
     }

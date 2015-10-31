@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonRepo extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 768 1024.032" {...this.props}>
-                <g><path d="m256 576.001h-64v-64h64v64z m0-192h-64v64h64v-64z m0-128h-64v64h64v-64z m0-128h-64v64h64v-64z m512-64v768c0 35-29 64-64 64h-320v128l-96-96-96 96v-128h-128c-35 0-64-29-64-64v-768c0-34.99999999999997 29-63.99999999999998 64-63.99999999999998h640c35 0 64 29 64 64z m-64 640h-640v128h128v-64h192v64h320v-128z m0-640h-576v576h576v-576z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m15 22.5h-2.5v-2.5h2.5v2.5z m0-7.5h-2.5v2.5h2.5v-2.5z m0-5h-2.5v2.5h2.5v-2.5z m0-5h-2.5v2.5h2.5v-2.5z m20-2.5v30c0 1.4-1.1 2.5-2.5 2.5h-12.5v5l-3.7-3.8-3.8 3.8v-5h-5c-1.4 0-2.5-1.1-2.5-2.5v-30c0-1.4 1.1-2.5 2.5-2.5h25c1.4 0 2.5 1.1 2.5 2.5z m-2.5 25h-25v5h5v-2.5h7.5v2.5h12.5v-5z m0-25h-22.5v22.5h22.5v-22.5z"/></g>
             </IconBase>
         );
     }

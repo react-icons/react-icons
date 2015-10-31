@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonTriangleDown extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 767.5 1024.032" {...this.props}>
-                <g><path d="m0 384.001l383.75 383.75 383.75-383.75h-767.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m5 15l15 15 15-15h-30z"/></g>
             </IconBase>
         );
     }

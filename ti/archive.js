@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiArchive extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><g><path d="M13 12h-3c-.276 0-.5.224-.5.5s.224.5.5.5h3c.276 0 .5-.224.5-.5s-.224-.5-.5-.5zM20 5h-17c-.553 0-1 .448-1 1s.447 1 1 1h17c.553 0 1-.448 1-1s-.447-1-1-1zM18 8h-13c-.553 0-1 .448-1 1v8c0 1.654 1.346 3 3 3h9c1.654 0 3-1.346 3-3v-8c0-.552-.447-1-1-1zm-2 10h-9c-.552 0-1-.449-1-1v-7h11v7c0 .551-.448 1-1 1z"/></g></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m21.7 20h-5c-0.5 0-0.9 0.4-0.9 0.8s0.4 0.9 0.9 0.9h5c0.4 0 0.8-0.4 0.8-0.9s-0.4-0.8-0.8-0.8z m11.6-11.7h-28.3c-0.9 0-1.7 0.8-1.7 1.7s0.8 1.7 1.7 1.7h28.3c1 0 1.7-0.8 1.7-1.7s-0.7-1.7-1.7-1.7z m-3.3 5h-21.7c-0.9 0-1.6 0.8-1.6 1.7v13.3c0 2.8 2.2 5 5 5h15c2.7 0 5-2.2 5-5v-13.3c0-0.9-0.8-1.7-1.7-1.7z m-3.3 16.7h-15c-1 0-1.7-0.7-1.7-1.7v-11.6h18.3v11.6c0 1-0.7 1.7-1.6 1.7z"/></g>
             </IconBase>
         );
     }

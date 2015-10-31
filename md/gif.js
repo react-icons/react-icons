@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdGif extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><defs><path id="a" d="M24 24H0V0h24v24z"/></defs><clipPath id="b"><use overflow="visible"/></clipPath><path d="M11.5 9H13v6h-1.5zM9 9H6c-.6 0-1 .5-1 1v4c0 .5.4 1 1 1h3c.6 0 1-.5 1-1v-2H8.5v1.5h-2v-3H10V10c0-.5-.4-1-1-1zm10 1.5V9h-4.5v6H16v-2h2v-1.5h-2v-1z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><defs><path id="a" d="m40 40h-40v-40h40v40z"/></defs><clipPath id="b"><use overflow="visible"/></clipPath><path d="m19.2 15h2.5v10h-2.5z m-4.2 0h-5c-1 0-1.7 0.8-1.7 1.7v6.6c0 0.9 0.7 1.7 1.7 1.7h5c1 0 1.7-0.8 1.7-1.7v-3.3h-2.5v2.5h-3.4v-5h5.9v-0.8c0-0.9-0.7-1.7-1.7-1.7z m16.7 2.5v-2.5h-7.5v10h2.5v-3.3h3.3v-2.5h-3.3v-1.7z"/></g>
             </IconBase>
         );
     }

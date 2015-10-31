@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdPhoneIphone extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25.8 1.7h-13.3c-2.3 0-4.2 1.8-4.2 4.1v28.4c0 2.3 1.9 4.1 4.2 4.1h13.3c2.3 0 4.2-1.8 4.2-4.1v-28.4c0-2.3-1.9-4.1-4.2-4.1z m-6.6 35c-1.4 0-2.5-1.2-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z m7.5-6.7h-15v-23.3h15v23.3z"/></g>
             </IconBase>
         );
     }

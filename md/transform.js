@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdTransform extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M22 18v-2H8V4h2L7 1 4 4h2v2H2v2h4v8c0 1.1.9 2 2 2h8v2h-2l3 3 3-3h-2v-2h4zM10 8h6v6h2V8c0-1.1-.9-2-2-2h-6v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m36.7 30v-3.3h-23.4v-20h3.4l-5-5-5 5h3.3v3.3h-6.7v3.3h6.7v13.4c0 1.8 1.5 3.3 3.3 3.3h13.4v3.3h-3.4l5 5 5-5h-3.3v-3.3h6.7z m-20-16.7h10v10h3.3v-10c0-1.8-1.5-3.3-3.3-3.3h-10v3.3z"/></g>
             </IconBase>
         );
     }

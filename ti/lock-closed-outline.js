@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiLockClosedOutline extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><circle cx="12" cy="17" r="1.3"/><path d="M17 10h-1v-2c0-2.206-1.794-4-4-4s-4 1.794-4 4v2h-1c-1.104 0-2 .896-2 2v7c0 1.104.896 2 2 2h10c1.104 0 2-.896 2-2v-7c0-1.104-.896-2-2-2zm-7-2c0-1.104.896-2 2-2s2 .896 2 2v3h-4v-3zm7 11h-10v-7h10.003l-.003 7z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><circle cx="20" cy="28.333333333333336" r="2.166666666666667"/><path d="m28.3 16.7h-1.6v-3.4c0-3.6-3-6.6-6.7-6.6s-6.7 3-6.7 6.6v3.4h-1.6c-1.9 0-3.4 1.5-3.4 3.3v11.7c0 1.8 1.5 3.3 3.4 3.3h16.6c1.9 0 3.4-1.5 3.4-3.3v-11.7c0-1.8-1.5-3.3-3.4-3.3z m-11.6-3.4c0-1.8 1.5-3.3 3.3-3.3s3.3 1.5 3.3 3.3v5h-6.6v-5z m11.6 18.4h-16.6v-11.7h16.6l0 11.7z"/></g>
             </IconBase>
         );
     }

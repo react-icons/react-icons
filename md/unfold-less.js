@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdUnfoldLess extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m12.4 31l2.3 2.3 5.3-5.3 5.3 5.3 2.3-2.3-7.6-7.7-7.7 7.7z m15.3-22l-2.4-2.3-5.3 5.3-5.3-5.3-2.3 2.3 7.6 7.7 7.6-7.7z"/></g>
             </IconBase>
         );
     }

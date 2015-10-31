@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonMilestone extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 896 1024.032" {...this.props}>
-                <g><path d="m512 128.001h-128v-128h128v128z m256 320h-640c-35 0-64-29-64-64v-128c0-35 29-64 64-64h640l128 128-128 128z m-256-192h-128v128h128v-128z m-128 768h128v-512h-128v512z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m22.5 5h-5v-5h5v5z m10 12.5h-25c-1.4 0-2.5-1.1-2.5-2.5v-5c0-1.4 1.1-2.5 2.5-2.5h25l5 5-5 5z m-10-7.5h-5v5h5v-5z m-5 30h5v-20h-5v20z"/></g>
             </IconBase>
         );
     }

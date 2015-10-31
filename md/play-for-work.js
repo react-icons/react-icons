@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdPlayForWork extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path fill="#010101" d="M11 5v5.59H7.5l4.5 4.5 4.5-4.5H13V5h-2zm-5 9c0 3.31 2.69 6 6 6s6-2.69 6-6h-2c0 2.21-1.79 4-4 4s-4-1.79-4-4H6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path fill="#010101" d="m18.3 8.3v9.3h-5.8l7.5 7.5 7.5-7.5h-5.8v-9.3h-3.4z m-8.3 15c0 5.6 4.5 10 10 10s10-4.4 10-10h-3.3c0 3.7-3 6.7-6.7 6.7s-6.7-3-6.7-6.7h-3.3z"/></g>
             </IconBase>
         );
     }

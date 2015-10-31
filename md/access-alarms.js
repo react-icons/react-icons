@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdAccessAlarms extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M22 5.7l-4.6-3.9-1.3 1.5 4.6 3.9L22 5.7zM7.9 3.4L6.6 1.9 2 5.7l1.3 1.5 4.6-3.8zM12.5 8H11v6l4.7 2.9.8-1.2-4-2.4V8zM12 4c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 16c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m36.7 9.5l-7.7-6.5-2.2 2.5 7.7 6.5 2.2-2.5z m-23.5-3.8l-2.2-2.5-7.7 6.3 2.2 2.5 7.7-6.3z m7.6 7.6h-2.5v10l7.9 4.9 1.3-2-6.7-4v-8.9z m-0.8-6.6c-8.3 0-15 6.6-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z m0 26.6c-6.5 0-11.7-5.1-11.7-11.6s5.2-11.7 11.7-11.7 11.7 5.2 11.7 11.7-5.2 11.6-11.7 11.6z"/></g>
             </IconBase>
         );
     }

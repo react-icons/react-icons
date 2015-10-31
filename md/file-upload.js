@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFileUpload extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m15 26.7h10v-10h6.7l-11.7-11.7-11.7 11.7h6.7z m-6.7 3.3h23.4v3.3h-23.4z"/></g>
             </IconBase>
         );
     }

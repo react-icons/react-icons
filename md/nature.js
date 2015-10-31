@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdNature extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M13 16.12c3.47-.41 6.17-3.36 6.17-6.95 0-3.87-3.13-7-7-7s-7 3.13-7 7c0 3.47 2.52 6.34 5.83 6.89V20H5v2h14v-2h-6v-3.88z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m21.7 26.9c5.8-0.7 10.3-5.6 10.3-11.6 0-6.5-5.3-11.7-11.7-11.7s-11.7 5.2-11.7 11.7c0 5.8 4.2 10.6 9.7 11.5v6.5h-10v3.4h23.4v-3.4h-10v-6.4z"/></g>
             </IconBase>
         );
     }

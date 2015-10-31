@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonPulse extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 896 1024.032" {...this.props}>
-                <g><path d="m736 511.939l-172.812-166.344-140.78199999999998 198.40599999999995-70.406-441.594-199.562 409.53200000000004h-152.438v128.06199999999995h230.406l57.593999999999994-115.18799999999999 57.594 345.562 230.406-326.374 102.375 96h217.625v-128.06199999999995h-160z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m31.2 20l-6.7-6.5-5.5 7.7-2.7-17.2-7.8 16h-6v5h9l2.3-4.5 2.2 13.5 9-12.8 4 3.8h8.5v-5h-6.3z"/></g>
             </IconBase>
         );
     }

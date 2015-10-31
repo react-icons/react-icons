@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiTabsOutline extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 4h-10c-1.104 0-2 .896-2 2v2h-1c-1.104 0-2 .896-2 2v9c0 1.104.896 2 2 2h9c1.104 0 2-.896 2-2v-1h2c1.104 0 2-.896 2-2v-10c0-1.104-.896-2-2-2zm-13 15v-9h8.5c.275 0 .5.225.5.5v8.5h-9zm13-3h-3v-5.5c0-.827-.673-1.5-1.5-1.5h-5.5v-3h10v10z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 6.7h-16.7c-1.8 0-3.3 1.5-3.3 3.3v3.3h-1.7c-1.8 0-3.3 1.5-3.3 3.4v15c0 1.8 1.5 3.3 3.3 3.3h15c1.9 0 3.4-1.5 3.4-3.3v-1.7h3.3c1.8 0 3.3-1.5 3.3-3.3v-16.7c0-1.8-1.5-3.3-3.3-3.3z m-21.7 25v-15h14.2c0.5 0 0.8 0.3 0.8 0.8v14.2h-15z m21.7-5h-5v-9.2c0-1.4-1.1-2.5-2.5-2.5h-9.2v-5h16.7v16.7z"/></g>
             </IconBase>
         );
     }

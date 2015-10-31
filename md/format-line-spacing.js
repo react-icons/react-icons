@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFormatLineSpacing extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M6 7h2.5L5 3.5 1.5 7H4v10H1.5L5 20.5 8.5 17H6V7zm4-2v2h12V5H10zm0 14h12v-2H10v2zm0-6h12v-2H10v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m10 11.7h4.2l-5.9-5.9-5.8 5.9h4.2v16.6h-4.2l5.8 5.9 5.9-5.9h-4.2v-16.6z m6.7-3.4v3.4h20v-3.4h-20z m0 23.4h20v-3.4h-20v3.4z m0-10h20v-3.4h-20v3.4z"/></g>
             </IconBase>
         );
     }

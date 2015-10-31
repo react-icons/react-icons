@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiHome extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 3s-6.186 5.34-9.643 8.232c-.203.184-.357.452-.357.768 0 .553.447 1 1 1h2v7c0 .553.447 1 1 1h3c.553 0 1-.448 1-1v-4h4v4c0 .552.447 1 1 1h3c.553 0 1-.447 1-1v-7h2c.553 0 1-.447 1-1 0-.316-.154-.584-.383-.768-3.433-2.892-9.617-8.232-9.617-8.232z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 5s-10.3 8.9-16.1 13.7c-0.3 0.3-0.6 0.8-0.6 1.3 0 0.9 0.8 1.7 1.7 1.7h3.3v11.6c0 1 0.8 1.7 1.7 1.7h5c0.9 0 1.7-0.7 1.7-1.7v-6.6h6.6v6.6c0 1 0.8 1.7 1.7 1.7h5c0.9 0 1.7-0.7 1.7-1.7v-11.6h3.3c0.9 0 1.7-0.8 1.7-1.7 0-0.5-0.3-1-0.7-1.3-5.7-4.8-16-13.7-16-13.7z"/></g>
             </IconBase>
         );
     }

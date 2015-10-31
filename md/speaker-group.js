@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSpeakerGroup extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18.2 1H9.8C8.81 1 8 1.81 8 2.8v14.4c0 .99.81 1.79 1.8 1.79l8.4.01c.99 0 1.8-.81 1.8-1.8V2.8c0-.99-.81-1.8-1.8-1.8zM14 3c1.1 0 2 .89 2 2s-.9 2-2 2-2-.89-2-2 .9-2 2-2zm0 13.5c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><circle cx="14" cy="12.5" r="2.5"/><path d="M6 5H4v16c0 1.1.89 2 2 2h10v-2H6V5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30.3 1.7h-14c-1.6 0-3 1.3-3 3v24c0 1.6 1.4 3 3 3l14 0c1.7 0 3-1.4 3-3v-24c0-1.7-1.3-3-3-3z m-7 3.3c1.9 0 3.4 1.5 3.4 3.3s-1.5 3.4-3.4 3.4-3.3-1.5-3.3-3.4 1.5-3.3 3.3-3.3z m0 22.5c-3.6 0-6.6-3-6.6-6.7s3-6.6 6.6-6.6 6.7 2.9 6.7 6.6-3 6.7-6.7 6.7z"/><circle cx="23.333333333333336" cy="20.833333333333336" r="4.166666666666667"/><path d="m10 8.3h-3.3v26.7c0 1.8 1.5 3.3 3.3 3.3h16.7v-3.3h-16.7v-26.7z"/></g>
             </IconBase>
         );
     }

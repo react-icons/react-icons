@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonCode extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 896 1024.032" {...this.props}>
-                <g><path d="m608 192.001l-96 96 224 224-224 224 96 96 288-320-288-320z m-320 0l-288 320 288 320 96-96-224-224 224-224-96-95.99999999999997z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m26.2 7.5l-3.7 3.7 8.7 8.8-8.7 8.7 3.7 3.8 11.3-12.5-11.3-12.5z m-12.4 0l-11.3 12.5 11.3 12.5 3.7-3.8-8.7-8.7 8.7-8.8-3.7-3.7z"/></g>
             </IconBase>
         );
     }

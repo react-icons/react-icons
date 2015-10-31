@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdMic extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 23.3c2.8 0 5-2.2 5-5l0-10c0-2.7-2.2-5-5-5s-5 2.3-5 5v10c0 2.8 2.2 5 5 5z m8.8-5c0 5-4.2 8.5-8.8 8.5s-8.8-3.5-8.8-8.5h-2.9c0 5.7 4.6 10.4 10 11.2v5.5h3.4v-5.5c5.4-0.8 10-5.5 10-11.2h-2.9z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLocalParking extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M13 3H6v18h4v-6h3c3.31 0 6-2.69 6-6s-2.69-6-6-6zm.2 8H10V7h3.2c1.1 0 2 .9 2 2s-.9 2-2 2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m21.7 5h-11.7v30h6.7v-10h5c5.5 0 10-4.5 10-10s-4.5-10-10-10z m0.3 13.3h-5.3v-6.6h5.3c1.8 0 3.3 1.5 3.3 3.3s-1.5 3.3-3.3 3.3z"/></g>
             </IconBase>
         );
     }

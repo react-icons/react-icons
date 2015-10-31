@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiLockOpen extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 4c-2.206 0-4 1.795-4 4v3h-4v-1h-3c-1.103 0-2 .896-2 2v7c0 1.104.897 2 2 2h10c1.103 0 2-.896 2-2v-7c0-1.104-.897-2-2-2h-1v-2c0-1.104.897-2 2-2s2 .896 2 2v3c0 .553.448 1 1 1s1-.447 1-1v-3c0-2.205-1.794-4-4-4zm-6 14.299c-.719 0-1.3-.58-1.3-1.299s.581-1.301 1.3-1.301 1.3.582 1.3 1.301-.581 1.299-1.3 1.299z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 6.7c-3.7 0-6.7 3-6.7 6.6v5h-6.6v-1.6h-5c-1.9 0-3.4 1.5-3.4 3.3v11.7c0 1.8 1.5 3.3 3.4 3.3h16.6c1.9 0 3.4-1.5 3.4-3.3v-11.7c0-1.8-1.5-3.3-3.4-3.3h-1.6v-3.4c0-1.8 1.5-3.3 3.3-3.3s3.3 1.5 3.3 3.3v5c0 1 0.8 1.7 1.7 1.7s1.7-0.7 1.7-1.7v-5c0-3.6-3-6.6-6.7-6.6z m-10 23.8c-1.2 0-2.2-1-2.2-2.2s1-2.1 2.2-2.1 2.2 0.9 2.2 2.1-1 2.2-2.2 2.2z"/></g>
             </IconBase>
         );
     }

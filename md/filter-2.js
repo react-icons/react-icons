@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFilter2 extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M3 5H1v16c0 1.1.9 2 2 2h16v-2H3V5zm18-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 16H7V3h14v14zm-4-4h-4v-2h2c1.1 0 2-.89 2-2V7c0-1.11-.9-2-2-2h-4v2h4v2h-2c-1.1 0-2 .89-2 2v4h6v-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m5 8.3h-3.3v26.7c0 1.8 1.5 3.3 3.3 3.3h26.7v-3.3h-26.7v-26.7z m30-6.6h-23.3c-1.9 0-3.4 1.5-3.4 3.3v23.3c0 1.9 1.5 3.4 3.4 3.4h23.3c1.8 0 3.3-1.5 3.3-3.4v-23.3c0-1.8-1.5-3.3-3.3-3.3z m0 26.6h-23.3v-23.3h23.3v23.3z m-6.7-6.6h-6.6v-3.4h3.3c1.8 0 3.3-1.4 3.3-3.3v-3.3c0-1.9-1.5-3.4-3.3-3.4h-6.7v3.4h6.7v3.3h-3.3c-1.9 0-3.4 1.5-3.4 3.3v6.7h10v-3.3z"/></g>
             </IconBase>
         );
     }

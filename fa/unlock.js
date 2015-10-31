@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaUnlock extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1664 1896.0833" {...this.props}>
-                <g><path d="m1664 576v256q0 26-19 45t-45 19h-64q-26 0-45-19t-19-45v-256q0-106-75-181t-181-75-181 75-75 181v192h96q40 0 68 28t28 68v576q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-576q0-40 28-68t68-28h672v-192q0-185 131.5-316.5t316.5-131.5 316.5 131.5 131.5 316.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m37.6 12.2v5.4q0 0.5-0.4 0.9t-1 0.4h-1.3q-0.6 0-1-0.4t-0.4-0.9v-5.4q0-2.3-1.6-3.9t-3.8-1.5-3.8 1.5-1.6 3.9v4h2q0.9 0 1.5 0.6t0.6 1.4v12.2q0 0.8-0.6 1.4t-1.5 0.6h-20.2q-0.9 0-1.5-0.6t-0.6-1.4v-12.2q0-0.8 0.6-1.4t1.5-0.6h14.1v-4q0-4 2.8-6.7t6.7-2.8 6.7 2.8 2.8 6.7z"/></g>
             </IconBase>
         );
     }

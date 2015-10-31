@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLocalOffer extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m35.7 19.3l-15-15c-0.6-0.6-1.4-1-2.4-1h-11.6c-1.9 0-3.4 1.5-3.4 3.4v11.6c0 1 0.4 1.8 1 2.4l15 15c0.6 0.6 1.5 1 2.4 1 0.9 0 1.7-0.4 2.3-1l11.7-11.7c0.6-0.6 1-1.4 1-2.3 0-0.9-0.4-1.8-1-2.4z m-26.5-7.6c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></g>
             </IconBase>
         );
     }

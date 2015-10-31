@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdReplay extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 8.3v-6.6l-8.3 8.3 8.3 8.3v-6.6c5.5 0 10 4.5 10 10s-4.5 10-10 10-10-4.5-10-10h-3.3c0 7.3 5.9 13.3 13.3 13.3s13.3-6 13.3-13.3-5.9-13.4-13.3-13.4z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaForward extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1664 1896.0833" {...this.props}>
-                <g><path d="m45 1651q-19 19-32 13t-13-32v-1472q0-26 13-32t32 13l710 710q8 8 13 19v-710q0-26 13-32t32 13l710 710q19 19 19 45t-19 45l-710 710q-19 19-32 13t-13-32v-710q-5 10-13 19z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m3.4 34.8q-0.4 0.4-0.7 0.3t-0.3-0.7v-31q0-0.6 0.3-0.7t0.7 0.3l15 15q0.1 0.1 0.2 0.4v-15q0-0.6 0.3-0.7t0.7 0.3l15 15q0.4 0.4 0.4 0.9t-0.4 1l-15 14.9q-0.4 0.4-0.7 0.3t-0.3-0.7v-14.9q-0.1 0.2-0.2 0.4z"/></g>
             </IconBase>
         );
     }

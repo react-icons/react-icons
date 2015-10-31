@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSkipNext extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m10 30l14.2-10-14.2-10v20z m16.7-20v20h3.3v-20h-3.3z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdTabUnselected extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M1 9h2V7H1v2zm0 4h2v-2H1v2zm0-8h2V3c-1.1 0-2 .9-2 2zm8 16h2v-2H9v2zm-8-4h2v-2H1v2zm2 4v-2H1c0 1.1.9 2 2 2zM21 3h-8v6h10V5c0-1.1-.9-2-2-2zm0 14h2v-2h-2v2zM9 5h2V3H9v2zM5 21h2v-2H5v2zM5 5h2V3H5v2zm16 16c1.1 0 2-.9 2-2h-2v2zm0-8h2v-2h-2v2zm-8 8h2v-2h-2v2zm4 0h2v-2h-2v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m1.7 15h3.3v-3.3h-3.3v3.3z m0 6.7h3.3v-3.4h-3.3v3.4z m0-13.4h3.3v-3.3c-1.8 0-3.3 1.5-3.3 3.3z m13.3 26.7h3.3v-3.3h-3.3v3.3z m-13.3-6.7h3.3v-3.3h-3.3v3.3z m3.3 6.7v-3.3h-3.3c0 1.8 1.5 3.3 3.3 3.3z m30-30h-13.3v10h16.6v-6.7c0-1.8-1.5-3.3-3.3-3.3z m0 23.3h3.3v-3.3h-3.3v3.3z m-20-20h3.3v-3.3h-3.3v3.3z m-6.7 26.7h3.4v-3.3h-3.4v3.3z m0-26.7h3.4v-3.3h-3.4v3.3z m26.7 26.7c1.8 0 3.3-1.5 3.3-3.3h-3.3v3.3z m0-13.3h3.3v-3.4h-3.3v3.4z m-13.3 13.3h3.3v-3.3h-3.3v3.3z m6.6 0h3.4v-3.3h-3.4v3.3z"/></g>
             </IconBase>
         );
     }

@@ -6,7 +6,8 @@
   "jsnext:main": "icons.js",
   "scripts": {
     "docs": "babel-node --stage 0 ./bin/generate-docs",
-    "build": "node ./bin/create | xargs babel --out-dir lib"
+    "build": "node ./bin/create | xargs babel --out-dir lib",
+    "eslint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -48,5 +49,8 @@
   "peerDependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
+  },
+  "dependencies": {
+    "react-icon-base": "0.0.3"
   }
 }

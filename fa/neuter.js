@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaNeuter extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1280 1896.0833" {...this.props}>
-                <g><path d="m1152 576q0 221-147.5 384.5t-364.5 187.5v612q0 14-9 23t-23 9h-64q-14 0-23-9t-9-23v-612q-217-24-364.5-187.5t-147.5-384.5q0-117 45.5-223.5t123-184 184-123 223.5-45.5 223.5 45.5 184 123 123 184 45.5 223.5z m-576 448q185 0 316.5-131.5t131.5-316.5-131.5-316.5-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30.8 12.2q0 4.6-3.1 8.1t-7.7 3.9v12.9q0 0.3-0.2 0.5t-0.5 0.2h-1.3q-0.3 0-0.5-0.2t-0.2-0.5v-12.9q-4.6-0.5-7.7-3.9t-3.1-8.1q0-2.5 1-4.8t2.6-3.8 3.8-2.6 4.7-1 4.8 1 3.8 2.6 2.6 3.8 1 4.8z m-12.2 9.4q4 0 6.7-2.8t2.8-6.6-2.8-6.7-6.7-2.8-6.6 2.8-2.8 6.7 2.8 6.6 6.6 2.8z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdHourglassEmpty extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zm-4-5l-4-4V4h8v3.5l-4 4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m10 3.3v10h0l0 0 6.7 6.7-6.7 6.7 0 0h0v10h20v-10h0l0 0-6.7-6.7 6.7-6.7 0 0h0v-10h-20z m16.7 24.2v5.8h-13.4v-5.8l6.7-6.7 6.7 6.7z m-6.7-8.3l-6.7-6.7v-5.8h13.4v5.8l-6.7 6.7z"/></g>
             </IconBase>
         );
     }

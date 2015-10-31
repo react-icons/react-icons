@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaDigg extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 2048 1896.0833" {...this.props}>
-                <g><path d="m328 282h204v983h-532v-697h328v-286z m0 819v-369h-123v369h123z m286-533v697h205v-697h-205z m0-286v204h205v-204h-205z m287 286h533v942h-533v-163h328v-82h-328v-697z m328 533v-369h-123v369h123z m287-533h532v942h-532v-163h327v-82h-327v-697z m327 533v-369h-123v369h123z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m6.4 7h4v19.2h-10.4v-13.6h6.4v-5.6z m0 16v-7.2h-2.4v7.2h2.4z m5.6-10.4v13.6h4v-13.6h-4z m0-5.6v4h4v-4h-4z m5.6 5.6h10.4v18.4h-10.4v-3.2h6.4v-1.6h-6.4v-13.6z m6.4 10.4v-7.2h-2.4v7.2h2.4z m5.6-10.4h10.4v18.4h-10.4v-3.2h6.4v-1.6h-6.4v-13.6z m6.4 10.4v-7.2h-2.4v7.2h2.4z"/></g>
             </IconBase>
         );
     }

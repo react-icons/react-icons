@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiCoffee extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><g><path d="M17 19h-12c-.553 0-1-.447-1-1s.447-1 1-1h12c.553 0 1 .447 1 1s-.447 1-1 1zM17.5 5h-12.5v9c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-2h.5c1.93 0 3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5zm-2.5 9h-8v-7h8v7zm2.5-4h-1.5v-3h1.5c.827 0 1.5.673 1.5 1.5s-.673 1.5-1.5 1.5z"/></g></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m28.3 31.7h-20c-0.9 0-1.6-0.8-1.6-1.7s0.7-1.7 1.6-1.7h20c1 0 1.7 0.8 1.7 1.7s-0.7 1.7-1.7 1.7z m0.9-23.4h-20.9v15c0 1.9 1.5 3.4 3.4 3.4h13.3c1.8 0 3.3-1.5 3.3-3.4v-3.3h0.9c3.2 0 5.8-2.6 5.8-5.8s-2.6-5.9-5.8-5.9z m-4.2 15h-13.3v-11.6h13.3v11.6z m4.2-6.6h-2.5v-5h2.5c1.3 0 2.5 1.1 2.5 2.5s-1.2 2.5-2.5 2.5z"/></g>
             </IconBase>
         );
     }

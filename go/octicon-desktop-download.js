@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonDesktopDownload extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1024 1024.032" {...this.props}>
-                <g><path d="m256 384.001h192v-384h128v384h192l-256 256-256-256z m704-256h-256v64h256v512h-896v-512h256v-64h-256c-35 0-64 29-64 64v576c0 35 29 64 64 64h342c-16 39-55 89-150 128h512c-95-39-134-89-150-128h342c35 0 64-29 64-64v-576c0-35-29-64-64-64z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m10 15h7.5v-15h5v15h7.5l-10 10-10-10z m27.5-10h-10v2.5h10v20h-35v-20h10v-2.5h-10c-1.4 0-2.5 1.1-2.5 2.5v22.5c0 1.4 1.1 2.5 2.5 2.5h13.4c-0.7 1.5-2.2 3.5-5.9 5h20c-3.7-1.5-5.2-3.5-5.9-5h13.4c1.4 0 2.5-1.1 2.5-2.5v-22.5c0-1.4-1.1-2.5-2.5-2.5z"/></g>
             </IconBase>
         );
     }

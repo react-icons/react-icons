@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdVolumeUp extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m5 15v10h6.7l8.3 8.3v-26.6l-8.3 8.3h-6.7z m22.5 5c0-2.9-1.7-5.5-4.2-6.7v13.4c2.5-1.2 4.2-3.8 4.2-6.7z m-4.2-14.6v3.4c4.9 1.5 8.4 5.9 8.4 11.2s-3.5 9.8-8.4 11.2v3.4c6.7-1.5 11.7-7.5 11.7-14.6s-5-13.1-11.7-14.6z"/></g>
             </IconBase>
         );
     }

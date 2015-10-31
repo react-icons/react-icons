@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdLayersClear extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M19.81 14.99l1.19-.92-1.43-1.43-1.19.92 1.43 1.43zm-.45-4.72L21 9l-9-7-2.91 2.27 7.87 7.88 2.4-1.88zM3.27 1L2 2.27l4.22 4.22L3 9l1.63 1.27L12 16l2.1-1.63 1.43 1.43L12 18.54l-7.37-5.73L3 14.07l9 7 4.95-3.85L20.73 21 22 19.73 3.27 1z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m33 25l2-1.6-2.4-2.3-2 1.5 2.4 2.4z m-0.7-7.9l2.7-2.1-15-11.7-4.9 3.8 13.2 13.2 4-3.2z m-26.8-15.4l-2.2 2.1 7.1 7-5.4 4.2 2.7 2.1 12.3 9.6 3.5-2.7 2.4 2.3-5.9 4.6-12.3-9.6-2.7 2.2 15 11.6 8.3-6.4 6.3 6.3 2.1-2.1-31.2-31.2z"/></g>
             </IconBase>
         );
     }

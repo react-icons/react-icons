@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdViewQuilt extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M10 18h5v-6h-5v6zm-6 0h5V5H4v13zm12 0h5v-6h-5v6zM10 5v6h11V5H10z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m16.7 30h8.3v-10h-8.3v10z m-10 0h8.3v-21.7h-8.3v21.7z m20 0h8.3v-10h-8.3v10z m-10-21.7v10h18.3v-10h-18.3z"/></g>
             </IconBase>
         );
     }

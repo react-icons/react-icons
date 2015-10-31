@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaRub extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1280 1896.0833" {...this.props}>
-                <g><path d="m1043 565q0-100-65-162t-171-62h-320v448h320q106 0 171-62t65-162z m237 0q0 193-126.5 315t-326.5 122h-340v118h505q14 0 23 9t9 23v128q0 14-9 23t-23 9h-505v192q0 14-9.5 23t-22.5 9h-167q-14 0-23-9t-9-23v-192h-224q-14 0-23-9t-9-23v-128q0-14 9-23t23-9h224v-118h-224q-14 0-23-9t-9-23v-149q0-13 9-22.5t23-9.5h224v-629q0-14 9-23t23-9h539q200 0 326.5 122t126.5 315z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m28.5 11.9q0-2.1-1.4-3.4t-3.6-1.3h-6.7v9.4h6.7q2.3 0 3.6-1.3t1.4-3.4z m5 0q0 4.1-2.7 6.7t-6.9 2.5h-7.1v2.5h10.6q0.3 0 0.5 0.2t0.2 0.5v2.7q0 0.3-0.2 0.5t-0.5 0.2h-10.6v4q0 0.3-0.2 0.5t-0.5 0.2h-3.5q-0.3 0-0.5-0.2t-0.2-0.5v-4h-4.7q-0.3 0-0.5-0.2t-0.2-0.5v-2.7q0-0.3 0.2-0.5t0.5-0.2h4.7v-2.5h-4.7q-0.3 0-0.5-0.2t-0.2-0.4v-3.2q0-0.3 0.2-0.5t0.5-0.2h4.7v-13.2q0-0.3 0.2-0.5t0.5-0.2h11.3q4.3 0 6.9 2.6t2.7 6.6z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdNavigation extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 3.3l-12.5 30.5 1.2 1.2 11.3-5 11.3 5 1.2-1.2z"/></g>
             </IconBase>
         );
     }

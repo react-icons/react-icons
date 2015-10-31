@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class GoOcticonPersonAdd extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 512 1024.032" {...this.props}>
-                <g><path d="m448 384.001h-384c-35 0-64 29-64 64v320h128v192c0 35 29 64 64 64h128c35 0 64-29 64-64v-192h128v-320c0-35-29-64-64-64z m0 320h-64v-128h-64v384h-128v-384h-64v128h-64v-256h384v256z m0-512c0-105.99999999999997-86-191.99999999999997-192-191.99999999999997s-192 86-192 192 86 192 192 192 192-86 192-192z m-192 128c-71 0-128-57-128-128s57-127.99999999999997 128-127.99999999999997 128 57 128 128-57 128-128 128z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m27.5 15h-15c-1.4 0-2.5 1.1-2.5 2.5v12.5h5v7.5c0 1.4 1.1 2.5 2.5 2.5h5c1.4 0 2.5-1.1 2.5-2.5v-7.5h5v-12.5c0-1.4-1.1-2.5-2.5-2.5z m0 12.5h-2.5v-5h-2.5v15h-5v-15h-2.5v5h-2.5v-10h15v10z m0-20c0-4.1-3.4-7.5-7.5-7.5s-7.5 3.4-7.5 7.5 3.4 7.5 7.5 7.5 7.5-3.4 7.5-7.5z m-7.5 5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/></g>
             </IconBase>
         );
     }

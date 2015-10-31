@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdBorderClear extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M7 5h2V3H7v2zm0 8h2v-2H7v2zm0 8h2v-2H7v2zm4-4h2v-2h-2v2zm0 4h2v-2h-2v2zm-8 0h2v-2H3v2zm0-4h2v-2H3v2zm0-4h2v-2H3v2zm0-4h2V7H3v2zm0-4h2V3H3v2zm8 8h2v-2h-2v2zm8 4h2v-2h-2v2zm0-4h2v-2h-2v2zm0 8h2v-2h-2v2zm0-12h2V7h-2v2zm-8 0h2V7h-2v2zm8-6v2h2V3h-2zm-8 2h2V3h-2v2zm4 16h2v-2h-2v2zm0-8h2v-2h-2v2zm0-8h2V3h-2v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m11.7 8.3h3.3v-3.3h-3.3v3.3z m0 13.4h3.3v-3.4h-3.3v3.4z m0 13.3h3.3v-3.3h-3.3v3.3z m6.6-6.7h3.4v-3.3h-3.4v3.3z m0 6.7h3.4v-3.3h-3.4v3.3z m-13.3 0h3.3v-3.3h-3.3v3.3z m0-6.7h3.3v-3.3h-3.3v3.3z m0-6.6h3.3v-3.4h-3.3v3.4z m0-6.7h3.3v-3.3h-3.3v3.3z m0-6.7h3.3v-3.3h-3.3v3.3z m13.3 13.4h3.4v-3.4h-3.4v3.4z m13.4 6.6h3.3v-3.3h-3.3v3.3z m0-6.6h3.3v-3.4h-3.3v3.4z m0 13.3h3.3v-3.3h-3.3v3.3z m0-20h3.3v-3.3h-3.3v3.3z m-13.4 0h3.4v-3.3h-3.4v3.3z m13.4-10v3.3h3.3v-3.3h-3.3z m-13.4 3.3h3.4v-3.3h-3.4v3.3z m6.7 26.7h3.3v-3.3h-3.3v3.3z m0-13.3h3.3v-3.4h-3.3v3.4z m0-13.4h3.3v-3.3h-3.3v3.3z"/></g>
             </IconBase>
         );
     }

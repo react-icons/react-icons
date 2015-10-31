@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaCaretRight extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 720.451 1896.0833" {...this.props}>
-                <g><path d="m576 896q0 26-19 45l-448 448q-19 19-45 19t-45-19-19-45v-896q0-26 19-45t45-19 45 19l448 448q19 19 19 45z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m24.6 18.9q0 0.6-0.4 1l-9.5 9.4q-0.4 0.4-0.9 0.4t-1-0.4-0.4-0.9v-18.9q0-0.6 0.4-1t1-0.4 0.9 0.4l9.5 9.5q0.4 0.4 0.4 0.9z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFlightTakeoff extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><defs><path id="a" d="M0 0h24v24H0V0z"/></defs><clipPath id="b"><use overflow="visible"/></clipPath><path d="M2.5 19h19v2h-19zm19.57-9.36c-.21-.8-1.04-1.28-1.84-1.06L14.92 10l-6.9-6.43-1.93.51 4.14 7.17-4.97 1.33-1.97-1.54-1.45.39 1.82 3.16.77 1.33 1.6-.43 5.31-1.42 4.35-1.16L21 11.49c.81-.23 1.28-1.05 1.07-1.85z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><defs><path id="a" d="m0 0h40v40h-40v-40z"/></defs><clipPath id="b"><use overflow="visible"/></clipPath><path d="m4.2 31.7h31.6v3.3h-31.6z m32.6-15.6c-0.4-1.4-1.8-2.2-3.1-1.8l-8.8 2.4-11.5-10.7-3.3 0.8 6.9 12-8.2 2.2-3.3-2.6-2.4 0.7 3 5.2 1.3 2.2 2.6-0.7 8.9-2.3 7.2-2 8.9-2.3c1.4-0.4 2.1-1.8 1.8-3.1z"/></g>
             </IconBase>
         );
     }

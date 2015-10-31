@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdComment extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m36.6 6.7c0-1.9-1.4-3.4-3.3-3.4h-26.6c-1.9 0-3.4 1.5-3.4 3.4v20c0 1.8 1.5 3.3 3.4 3.3h23.3l6.7 6.7 0-30z m-6.6 16.6h-20v-3.3h20v3.3z m0-5h-20v-3.3h20v3.3z m0-5h-20v-3.3h20v3.3z"/></g>
             </IconBase>
         );
     }

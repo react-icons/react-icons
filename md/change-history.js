@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdChangeHistory extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 7.77L18.39 18H5.61L12 7.77M12 4L2 20h20L12 4z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 12.9l10.7 17.1h-21.3l10.6-17.1m0-6.2l-16.7 26.6h33.4l-16.7-26.6z"/></g>
             </IconBase>
         );
     }

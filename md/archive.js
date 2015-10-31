@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdArchive extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m34.2 8.7l-2.3-2.8c-0.4-0.5-1.1-0.9-1.9-0.9h-20c-0.8 0-1.5 0.3-1.9 0.9l-2.3 2.8c-0.5 0.6-0.8 1.3-0.8 2.1v20.9c0 1.8 1.5 3.3 3.3 3.3h23.4c1.8 0 3.3-1.5 3.3-3.3v-20.9c0-0.8-0.3-1.5-0.8-2.1z m-14.2 20.5l-9.2-9.2h5.9v-3.3h6.6v3.3h5.9l-9.2 9.2z m-11.5-20.9l1.4-1.6h20l1.5 1.6h-22.9z"/></g>
             </IconBase>
         );
     }

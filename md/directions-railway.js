@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdDirectionsRailway extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M4 15.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V5c0-3.5-3.58-4-8-4s-8 .5-8 4v10.5zm8 1.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6-7H6V5h12v5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m6.7 25.8c0 3.3 2.6 5.9 5.8 5.9l-2.5 2.5v0.8h20v-0.8l-2.5-2.5c3.2 0 5.8-2.6 5.8-5.9v-17.5c0-5.8-5.9-6.6-13.3-6.6s-13.3 0.8-13.3 6.6v17.5z m13.3 2.5c-1.8 0-3.3-1.5-3.3-3.3s1.5-3.3 3.3-3.3 3.3 1.5 3.3 3.3-1.5 3.3-3.3 3.3z m10-11.6h-20v-8.4h20v8.4z"/></g>
             </IconBase>
         );
     }

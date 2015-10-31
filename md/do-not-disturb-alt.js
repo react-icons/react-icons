@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdDoNotDisturbAlt extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM4 12c0-4.4 3.6-8 8-8 1.8 0 3.5.6 4.9 1.7L5.7 16.9C4.6 15.5 4 13.8 4 12zm8 8c-1.8 0-3.5-.6-4.9-1.7L18.3 7.1C19.4 8.5 20 10.2 20 12c0 4.4-3.6 8-8 8z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 3.3c-9.2 0-16.7 7.5-16.7 16.7s7.5 16.7 16.7 16.7 16.7-7.5 16.7-16.7-7.5-16.7-16.7-16.7z m-13.3 16.7c0-7.3 6-13.3 13.3-13.3 3 0 5.8 1 8.2 2.8l-18.7 18.7c-1.8-2.4-2.8-5.2-2.8-8.2z m13.3 13.3c-3 0-5.8-1-8.2-2.8l18.7-18.7c1.8 2.4 2.8 5.2 2.8 8.2 0 7.3-6 13.3-13.3 13.3z"/></g>
             </IconBase>
         );
     }

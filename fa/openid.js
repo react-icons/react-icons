@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaOpenid extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1792 1896.0833" {...this.props}>
-                <g><path d="m1086 0v1536l-272 128q-228-20-414-102t-293-208.5-107-272.5q0-140 100.5-263.5t275-205.5 391.5-108v172q-217 38-356.5 150t-139.5 255q0 152 154.5 267t388.5 145v-1360z m669 582l37 390-525-114 147-83q-119-70-280-99v-172q277 33 481 157z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m24 0v32.4l-5.7 2.7q-4.8-0.4-8.8-2.1t-6.1-4.4-2.3-5.8q0-2.9 2.1-5.6t5.8-4.3 8.3-2.3v3.7q-4.6 0.8-7.5 3.1t-3 5.4q0 3.2 3.3 5.6t8.2 3.1v-28.7z m14.1 12.3l0.8 8.2-11.1-2.4 3.1-1.8q-2.5-1.4-5.9-2v-3.7q5.9 0.7 10.2 3.3z"/></g>
             </IconBase>
         );
     }

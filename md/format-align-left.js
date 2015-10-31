@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFormatAlignLeft extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M15 15H3v2h12v-2zm0-8H3v2h12V7zM3 13h18v-2H3v2zm0 8h18v-2H3v2zM3 3v2h18V3H3z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m25 25h-20v3.3h20v-3.3z m0-13.3h-20v3.3h20v-3.3z m-20 10h30v-3.4h-30v3.4z m0 13.3h30v-3.3h-30v3.3z m0-30v3.3h30v-3.3h-30z"/></g>
             </IconBase>
         );
     }

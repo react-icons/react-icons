@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdUndo extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20.8 13.3c-4.4 0-8.4 1.7-11.5 4.4l-6-6v15h15l-6-6.1c2.3-1.9 5.3-3.1 8.5-3.1 5.9 0 10.9 3.9 12.7 9.2l3.9-1.3c-2.3-7-8.8-12.1-16.6-12.1z"/></g>
             </IconBase>
         );
     }

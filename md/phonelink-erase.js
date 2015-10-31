@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdPhonelinkErase extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M13 8.2l-1-1-4 4-4-4-1 1 4 4-4 4 1 1 4-4 4 4 1-1-4-4 4-4zM19 1H9c-1.1 0-2 .9-2 2v3h2V4h10v16H9v-2H7v3c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m21.7 13.7l-1.7-1.7-6.7 6.7-6.6-6.7-1.7 1.7 6.7 6.6-6.7 6.7 1.7 1.7 6.6-6.7 6.7 6.7 1.7-1.7-6.7-6.7 6.7-6.6z m10-12h-16.7c-1.8 0-3.3 1.5-3.3 3.3v5h3.3v-3.3h16.7v26.6h-16.7v-3.3h-3.3v5c0 1.8 1.5 3.3 3.3 3.3h16.7c1.8 0 3.3-1.5 3.3-3.3v-30c0-1.8-1.5-3.3-3.3-3.3z"/></g>
             </IconBase>
         );
     }

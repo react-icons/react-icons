@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdAirlineSeatLegroomNormal extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M5 12V3H3v9c0 2.76 2.24 5 5 5h6v-2H8c-1.66 0-3-1.34-3-3zm15.5 6H19v-7c0-1.1-.9-2-2-2h-5V3H6v8c0 1.65 1.35 3 3 3h7v7h4.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m8.3 20v-15h-3.3v15c0 4.6 3.7 8.3 8.3 8.3h10v-3.3h-10c-2.7 0-5-2.2-5-5z m25.9 10h-2.5v-11.7c0-1.8-1.5-3.3-3.4-3.3h-8.3v-10h-10v13.3c0 2.8 2.3 5 5 5h11.7v11.7h7.5c1.4 0 2.5-1.1 2.5-2.5s-1.1-2.5-2.5-2.5z"/></g>
             </IconBase>
         );
     }

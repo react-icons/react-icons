@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiEqualsOutline extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 12h-12c-1.654 0-3-1.346-3-3s1.346-3 3-3h12c1.654 0 3 1.346 3 3s-1.346 3-3 3zm-12-4c-.552 0-1 .449-1 1s.448 1 1 1h12c.552 0 1-.449 1-1s-.448-1-1-1h-12zM18 19h-12c-1.654 0-3-1.346-3-3s1.346-3 3-3h12c1.654 0 3 1.346 3 3s-1.346 3-3 3zm-12-4c-.552 0-1 .449-1 1s.448 1 1 1h12c.552 0 1-.449 1-1s-.448-1-1-1h-12z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 20h-20c-2.8 0-5-2.2-5-5s2.2-5 5-5h20c2.8 0 5 2.2 5 5s-2.2 5-5 5z m-20-6.7c-0.9 0-1.7 0.8-1.7 1.7s0.8 1.7 1.7 1.7h20c0.9 0 1.7-0.8 1.7-1.7s-0.8-1.7-1.7-1.7h-20z m20 18.4h-20c-2.8 0-5-2.3-5-5s2.2-5 5-5h20c2.8 0 5 2.2 5 5s-2.2 5-5 5z m-20-6.7c-0.9 0-1.7 0.8-1.7 1.7s0.8 1.6 1.7 1.6h20c0.9 0 1.7-0.7 1.7-1.6s-0.8-1.7-1.7-1.7h-20z"/></g>
             </IconBase>
         );
     }

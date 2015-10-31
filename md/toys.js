@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdToys extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 12c0-3 2.5-5.5 5.5-5.5S23 9 23 12H12zm0 0c0 3-2.5 5.5-5.5 5.5S1 15 1 12h11zm0 0c-3 0-5.5-2.5-5.5-5.5S9 1 12 1v11zm0 0c3 0 5.5 2.5 5.5 5.5S15 23 12 23V12z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 20c0-5 4.2-9.2 9.2-9.2s9.1 4.2 9.1 9.2h-18.3z m0 0c0 5-4.2 9.2-9.2 9.2s-9.1-4.2-9.1-9.2h18.3z m0 0c-5 0-9.2-4.2-9.2-9.2s4.2-9.1 9.2-9.1v18.3z m0 0c5 0 9.2 4.2 9.2 9.2s-4.2 9.1-9.2 9.1v-18.3z"/></g>
             </IconBase>
         );
     }

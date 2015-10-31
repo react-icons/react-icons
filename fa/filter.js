@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaFilter extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1408 1896.0833" {...this.props}>
-                <g><path d="m1403 295q17 41-14 70l-493 493v742q0 42-39 59-13 5-25 5-27 0-45-19l-256-256q-19-19-19-45v-486l-493-493q-31-29-14-70 17-39 59-39h1280q42 0 59 39z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m34.7 6.2q0.4 0.9-0.2 1.5l-10.4 10.4v15.7q0 0.8-0.9 1.2-0.2 0.1-0.5 0.1-0.6 0-0.9-0.4l-5.4-5.4q-0.5-0.4-0.5-0.9v-10.3l-10.4-10.4q-0.6-0.6-0.2-1.5 0.3-0.8 1.2-0.8h27q0.9 0 1.2 0.8z"/></g>
             </IconBase>
         );
     }

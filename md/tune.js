@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdTune extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m5 28.3v3.4h10v-3.4h-10z m0-20v3.4h16.7v-3.4h-16.7z m16.7 26.7v-3.3h13.3v-3.4h-13.3v-3.3h-3.4v10h3.4z m-10-20v3.3h-6.7v3.4h6.7v3.3h3.3v-10h-3.3z m23.3 6.7v-3.4h-16.7v3.4h16.7z m-10-6.7h3.3v-3.3h6.7v-3.4h-6.7v-3.3h-3.3v10z"/></g>
             </IconBase>
         );
     }

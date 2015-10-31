@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaMaxcdn extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1792 1896.0833" {...this.props}>
-                <g><path d="m1745 773l-164 763h-334l178-832q13-56-15-88-27-33-83-33h-169l-204 953h-334l204-953h-286l-204 953h-334l204-953-153-327h1276q101 0 189.5 40.5t147.5 113.5q60 73 81 168.5t0 194.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m37.9 16.3l-3.4 16.1h-7.1l3.8-17.5q0.2-1.2-0.4-1.9-0.5-0.7-1.7-0.7h-3.6l-4.3 20.1h-7l4.3-20.1h-6.1l-4.3 20.1h-7l4.3-20.1-3.2-6.9h26.9q2.1 0 4 0.9t3.1 2.3q1.3 1.6 1.7 3.6t0 4.1z"/></g>
             </IconBase>
         );
     }

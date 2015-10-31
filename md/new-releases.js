@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdNewReleases extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m38.3 20l-4-4.6 0.5-6.2-6-1.3-3.1-5.3-5.7 2.4-5.7-2.4-3.1 5.3-6 1.3 0.5 6.2-4 4.6 4 4.6-0.5 6.2 6 1.3 3.1 5.4 5.7-2.5 5.7 2.4 3.1-5.3 6-1.3-0.5-6.2 4-4.6z m-16.6 8.3h-3.4v-3.3h3.4v3.3z m0-6.6h-3.4v-10h3.4v10z"/></g>
             </IconBase>
         );
     }

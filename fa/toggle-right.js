@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaToggleRight extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 1536 1896.0833" {...this.props}>
-                <g><path d="m1088 896q0 33-27 52l-448 320q-31 23-66 5-35-17-35-57v-640q0-40 35-57 35-18 66 5l448 320q27 19 27 52z m192 480v-960q0-14-9-23t-23-9h-960q-14 0-23 9t-9 23v960q0 14 9 23t23 9h960q14 0 23-9t9-23z m256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m26.8 18.9q0 0.7-0.6 1.1l-9.5 6.7q-0.6 0.5-1.4 0.2-0.7-0.4-0.7-1.2v-13.5q0-0.9 0.7-1.3 0.8-0.3 1.4 0.2l9.5 6.7q0.6 0.4 0.6 1.1z m4 10.1v-20.2q0-0.3-0.2-0.5t-0.5-0.2h-20.2q-0.3 0-0.5 0.2t-0.2 0.5v20.2q0 0.3 0.2 0.5t0.5 0.2h20.2q0.3 0 0.5-0.2t0.2-0.5z m5.4-20.2v20.2q0 2.5-1.8 4.3t-4.3 1.8h-20.2q-2.5 0-4.3-1.8t-1.8-4.3v-20.2q0-2.5 1.8-4.3t4.3-1.8h20.2q2.5 0 4.3 1.8t1.8 4.3z"/></g>
             </IconBase>
         );
     }

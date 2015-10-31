@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class TiSocialYoutube extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M22.8 8.6c-.2-1.5-.4-2.6-1-3-.6-.5-5.8-.6-9.8-.6s-9.2.1-9.8.6c-.6.4-.8 1.5-1 3s-.2 2.4-.2 3.4 0 1.9.2 3.4.4 2.6 1 3c.6.5 5.8.6 9.8.6 4 0 9.2-.1 9.8-.6.6-.4.8-1.5 1-3s.2-2.4.2-3.4 0-1.9-.2-3.4zm-12.8 7v-7.2l6 3.6-6 3.6z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m38 14.3c-0.3-2.5-0.7-4.3-1.7-5-1-0.8-9.6-1-16.3-1s-15.3 0.2-16.3 1c-1 0.7-1.4 2.5-1.7 5s-0.3 4-0.3 5.7 0 3.2 0.3 5.7 0.7 4.3 1.7 5c1 0.8 9.6 1 16.3 1 6.7 0 15.3-0.2 16.3-1 1-0.7 1.4-2.5 1.7-5s0.3-4 0.3-5.7 0-3.2-0.3-5.7z m-21.3 11.7v-12l10 6-10 6z"/></g>
             </IconBase>
         );
     }

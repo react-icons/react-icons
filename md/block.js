@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdBlock extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m20 3.3c-9.2 0-16.7 7.5-16.7 16.7s7.5 16.7 16.7 16.7 16.7-7.5 16.7-16.7-7.5-16.7-16.7-16.7z m-13.3 16.7c0-7.4 5.9-13.3 13.3-13.3 3.1 0 5.9 1 8.2 2.8l-18.7 18.7c-1.8-2.3-2.8-5.1-2.8-8.2z m13.3 13.3c-3.1 0-5.9-1-8.2-2.8l18.7-18.7c1.8 2.3 2.8 5.1 2.8 8.2 0 7.4-5.9 13.3-13.3 13.3z"/></g>
             </IconBase>
         );
     }

@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdSwitchVideo extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 9.5V6c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-3.5l4 4v-13l-4 4zm-5 6V13H7v2.5L3.5 12 7 8.5V11h6V8.5l3.5 3.5-3.5 3.5z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 15.8v-5.8c0-0.9-0.7-1.7-1.7-1.7h-23.3c-0.9 0-1.7 0.8-1.7 1.7v20c0 0.9 0.8 1.7 1.7 1.7h23.3c1 0 1.7-0.8 1.7-1.7v-5.8l6.7 6.6v-21.6l-6.7 6.6z m-8.3 10v-4.1h-10v4.1l-5.9-5.8 5.9-5.8v4.1h10v-4.1l5.8 5.8-5.8 5.8z"/></g>
             </IconBase>
         );
     }

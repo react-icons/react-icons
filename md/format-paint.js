@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class MdFormatPaint extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 24 24" {...this.props}>
-                <g><path d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m30 6.7v-1.7c0-0.9-0.7-1.7-1.7-1.7h-20c-0.9 0-1.6 0.8-1.6 1.7v6.7c0 0.9 0.7 1.6 1.6 1.6h20c1 0 1.7-0.7 1.7-1.6v-1.7h1.7v6.7h-16.7v18.3c0 0.9 0.8 1.7 1.7 1.7h3.3c0.9 0 1.7-0.8 1.7-1.7v-15h13.3v-13.3h-5z"/></g>
             </IconBase>
         );
     }

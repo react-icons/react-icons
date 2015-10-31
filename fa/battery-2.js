@@ -1,12 +1,12 @@
 
-var React = require('react');
-var IconBase = require('../IconBase');
+let React = require('react');
+let IconBase = require('react-icon-base');
 
 export default class FaBattery2 extends React.Component {
     render() {
         return (
-            <IconBase viewBox="0 0 2304 1896.0833" {...this.props}>
-                <g><path d="m256 1280v-768h896v768h-896z m1920-704q53 0 90.5 37.5t37.5 90.5v384q0 53-37.5 90.5t-90.5 37.5v160q0 66-47 113t-113 47h-1856q-66 0-113-47t-47-113v-960q0-66 47-113t113-47h1856q66 0 113 47t47 113v160z m0 512v-384h-128v-288q0-14-9-23t-23-9h-1856q-14 0-23 9t-9 23v960q0 14 9 23t23 9h1856q14 0 23-9t9-23v-288h128z"/></g>
+            <IconBase viewBox="0 0 40 40" {...this.props}>
+                <g><path d="m4.4 25.8v-13.4h15.6v13.4h-15.6z m33.4-12.3q0.9 0 1.5 0.7t0.7 1.6v6.6q0 0.9-0.7 1.6t-1.5 0.7v2.7q0 1.2-0.8 2t-2 0.8h-32.2q-1.2 0-2-0.8t-0.8-2v-16.6q0-1.2 0.8-2t2-0.8h32.2q1.1 0 2 0.8t0.8 2v2.7z m0 8.9v-6.6h-2.2v-5q0-0.3-0.2-0.4t-0.4-0.2h-32.2q-0.3 0-0.4 0.2t-0.2 0.4v16.6q0 0.3 0.2 0.4t0.4 0.2h32.2q0.2 0 0.4-0.2t0.2-0.4v-5h2.2z"/></g>
             </IconBase>
         );
     }

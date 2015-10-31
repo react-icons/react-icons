@@ -20,7 +20,7 @@ class Question extends React.Component {
 }
 ````
 
-if you are not using es6 compiler like [babel](https://babeljs.io/) or (rollup)[http://rollupjs.org/] it's possible to include icons from the compiled folder ```./lib``` btw babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore ```node_modules``` so if you don't want to change that settings you will need to use files from the ```./lib```
+if you are not using es6 compiler like [babel](https://babeljs.io/) or (rollup)[http://rollupjs.org/] it's possible to include icons from the compiled folder ```./lib```. Babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore ```node_modules``` so if you don't want to change that settings you will need to use files from the ```./lib```
 
 ```javascript
 var FaBeer = require('react-icons/lib/fa/FaBeer');
@@ -52,6 +52,7 @@ every icon pack is in their own folder
 * Material Design Icons => ./md
 * FontAwesome => ./fa
 * Typicons => ./ti
+* Github Octicons => ./go
 
 to view all icons visit [docs](http://gorangajic.github.io/react-icons/)
 
@@ -61,6 +62,7 @@ Currenlty supported icons are
 * Material Design Icons by Google https://www.google.com/design/icons/ (licence: [CC-BY 4.0](https://github.com/google/material-design-icons/blob/master/LICENSE))
 * Font Awesome by Dave Gandy - http://fontawesome.io (licence: [SIL OFL 1.1](http://scripts.sil.org/OFL))
 * Typicons by Stephen Hutchings - http://typicons.com (licence: [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/))
+* Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt)
 
 you can add more icons by creating pull request or create issue.
 

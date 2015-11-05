@@ -77,6 +77,9 @@ svg is [supported](http://caniuse.com/#search=svg) by all major browser
 ### Why es6 import and not fonts?
 
 Because using ```react-icons``` you can only send icons to the users that are needed not one big font file, and also you can using this method easly figure out which icons are used in you project.
+## Related
+
+- [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)
 
 ### Licence
 

@@ -75,8 +75,8 @@ export default class ${name} extends React.Component {
             loc = "." + loc;
             return `export ${name} from '${loc}';`;
         }).join('\n');
-        fs.writeFileSync(path.join(rootDir, folder + '.js'), iconsModule, 'utf-8');
-        console.log(path.join('.', folder + '.js'));
+        fs.writeFileSync(path.join(rootDir, folder , 'index.js'), iconsModule, 'utf-8');
+        console.log(path.join('.', folder, 'index.js'));
     });
     console.log("IconBase.js");
 });

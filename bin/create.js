@@ -65,16 +65,17 @@ export default class ${name} extends React.Component {
         loc = loc.replace('.js', '');
         loc = "." + loc;
         return `export ${name} from '${loc}';`;
-    }).join('\n');
+    }).join('\n') + '\n';
 
     fs.writeFileSync(path.join('.', 'icons.js'), iconsModule, 'utf-8');
     console.log(path.join('.', 'icons.js'));
     _.each(types, function(components, folder) {
         var iconsModule = _.map(components, function(loc, name){
             loc = loc.replace('.js', '');
+            loc = loc.replace('/'+folder, '');
             loc = "." + loc;
             return `export ${name} from '${loc}';`;
-        }).join('\n');
+        }).join('\n') + '\n';
         fs.writeFileSync(path.join(rootDir, folder , 'index.js'), iconsModule, 'utf-8');
         console.log(path.join('.', folder, 'index.js'));
     });

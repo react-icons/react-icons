@@ -1,12 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import React from 'react';
-import { renderToString } from 'react-dom/server';
+import { renderToStaticMarkup } from 'react-dom/server';
 import App from '../docs/components/App';
 import marky from "marky-markdown";
 import IconPack from '../docs/components/IconPack';
 import icons from '../icons/info';
-
 
 // because stateless function components
 global.React = React;
@@ -23,14 +22,16 @@ function writeFile(pageName, content) {
 Object.keys(icons).forEach(function(key, index) {
     icons[key].icons = require('../'+key);
     delete icons[key].icons.__esModule;
-    var content = renderToString(<App active={key} icons={icons}><IconPack pack={icons[key]} /></App>);
+    var content = renderToStaticMarkup(<App active={key} icons={icons}>
+            <IconPack pack={icons[key]}/>
+    </App>);
     writeFile(key, content);
 });
 
 
 var readme = fs.readFileSync(path.join(__dirname, '..', 'README.md'), 'utf-8');
 readme = marky(readme).html();
-readme = renderToString(<App active="index" icons={icons}>
+readme = renderToStaticMarkup(<App active="index" icons={icons}>
                         <div className="readme-page" dangerouslySetInnerHTML={{__html:readme}}/>
                     </App>);
 

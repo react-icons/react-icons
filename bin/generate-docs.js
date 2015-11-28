@@ -23,7 +23,7 @@ Object.keys(icons).forEach(function(key, index) {
     icons[key].icons = require('../'+key);
     delete icons[key].icons.__esModule;
     var content = renderToStaticMarkup(<App active={key} icons={icons}>
-            <IconPack pack={icons[key]}/>
+            <IconPack pack={icons[key]} prefix={key} />
     </App>);
     writeFile(key, content);
 });

@@ -3,8 +3,8 @@ import cx from 'classnames';
 
 class App extends React.Component {
     render() {
-        var {icons, active} = this.props;
-        var homepageClasses = cx({
+        const {icons, active} = this.props;
+        const homepageClasses = cx({
             "mdl-navigation__link--current": active === 'homepage',
             "mdl-navigation__link": true
         });

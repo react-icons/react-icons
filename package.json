@@ -52,6 +52,6 @@
   },
   "dependencies": {
     "decamelize": "1.1.1",
-    "react-icon-base": "0.0.7"
+    "react-icon-base": "0.1.0"
   }
 }

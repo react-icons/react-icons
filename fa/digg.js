@@ -6,7 +6,7 @@ export default class FaDigg extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m6.4 7h4v19.2h-10.4v-13.6h6.4v-5.6z m0 16v-7.2h-2.4v7.2h2.4z m5.6-10.4v13.6h4v-13.6h-4z m0-5.6v4h4v-4h-4z m5.6 5.6h10.4v18.4h-10.4v-3.2h6.4v-1.6h-6.4v-13.6z m6.4 10.4v-7.2h-2.4v7.2h2.4z m5.6-10.4h10.4v18.4h-10.4v-3.2h6.4v-1.6h-6.4v-13.6z m6.4 10.4v-7.2h-2.4v7.2h2.4z"/></g>
+                <g><path d="m5.7 8.4h3.5v17.1h-9.2v-12.1h5.7v-5z m0 14.3v-6.5h-2.1v6.5h2.1z m5-9.3v12.1h3.5v-12.1h-3.5z m0-5v3.6h3.5v-3.6h-3.5z m4.9 5h9.3v16.4h-9.3v-2.9h5.7v-1.4h-5.7v-12.1z m5.7 9.3v-6.5h-2.1v6.5h2.1z m5-9.3h9.3v16.4h-9.3v-2.9h5.7v-1.4h-5.7v-12.1z m5.7 9.3v-6.5h-2.1v6.5h2.1z"/></g>
             </IconBase>
         );
     }

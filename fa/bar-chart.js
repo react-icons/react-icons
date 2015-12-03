@@ -6,7 +6,7 @@ export default class FaBarChart extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m12.5 19v10h-5v-10h5z m7.5-10v20h-5v-20h5z m20 22.5v2.5h-40v-30h2.5v27.5h37.5z m-12.5-17.5v15h-5v-15h5z m7.5-7.5v22.5h-5v-22.5h5z"/></g>
+                <g><path d="m11.1 19.1v8.9h-4.4v-8.9h4.4z m6.7-8.9v17.8h-4.5v-17.8h4.5z m17.8 20v2.2h-35.6v-26.6h2.2v24.4h33.4z m-11.2-15.5v13.3h-4.4v-13.3h4.4z m6.7-6.7v20h-4.4v-20h4.4z"/></g>
             </IconBase>
         );
     }

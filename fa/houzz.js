@@ -6,7 +6,7 @@ export default class FaHouzz extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m20 25.1l10.8-6.2v12.5l-10.8 6.2v-12.5z m-10.8-6.2v12.5l10.8-6.3z m10.8-18.7v12.5l-10.8 6.2v-12.5z m0 12.5l10.8-6.3v12.5z"/></g>
+                <g><path d="m8.9 24.2l8.9-5.1v10.3l-8.9 5.1v-10.3z m-8.9-5.1v10.3l8.9-5.2-8.9-5.1z m8.9-15.4v10.3l-8.9 5.1v-10.3l8.9-5.1z m0 10.3l8.9-5.2v10.3l-8.9-5.1z"/></g>
             </IconBase>
         );
     }

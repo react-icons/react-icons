@@ -6,7 +6,7 @@ export default class FaStop extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m35.9 4.1v29.7q0 0.5-0.4 0.9t-1 0.4h-29.7q-0.5 0-0.9-0.4t-0.4-0.9v-29.7q0-0.6 0.4-1t0.9-0.4h29.7q0.6 0 1 0.4t0.4 1z"/></g>
+                <g><path d="m26.7 6.9v24.4q0 0.5-0.4 0.8t-0.7 0.3h-24.5q-0.4 0-0.8-0.3t-0.3-0.8v-24.4q0-0.5 0.3-0.8t0.8-0.3h24.5q0.4 0 0.7 0.3t0.4 0.8z"/></g>
             </IconBase>
         );
     }

@@ -6,7 +6,7 @@ export default class FaWindows extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m16.8 21.2v13.8l-14.4-2v-11.8h14.4z m0-15.7v14h-14.4v-12z m20.8 15.7v16.6l-19.2-2.6v-14h19.2z m0-18.5v16.8h-19.2v-14.2z"/></g>
+                <g><path d="m11.8 21v11.3l-11.8-1.6v-9.7h11.8z m0-12.9v11.4h-11.8v-9.8l11.8-1.6z m17.1 12.9v13.7l-15.8-2.2v-11.5h15.8z m0-15.2v13.7h-15.8v-11.6l15.8-2.1z"/></g>
             </IconBase>
         );
     }

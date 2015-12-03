@@ -6,7 +6,7 @@ export default class FaTwitch extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m20 9.2v9.1h-3.1v-9.1h3.1z m8.4 0v9.1h-3.1v-9.1h3.1z m0 16l5.3-5.4v-16.7h-25.2v22.1h6.9v4.6l4.6-4.6h8.4z m8.4-25.2v21.4l-9.2 9.1h-6.8l-4.6 4.6h-4.6v-4.6h-8.4v-24.4l2.3-6.1h31.3z"/></g>
+                <g><path d="m15.6 11.1v7.5h-2.6v-7.5h2.6z m6.9 0v7.5h-2.6v-7.5h2.6z m0 13.2l4.4-4.4v-13.8h-20.8v18.2h5.7v3.7l3.8-3.7h6.9z m6.9-20.8v17.6l-7.6 7.6h-5.6l-3.8 3.7h-3.8v-3.7h-6.9v-20.1l1.9-5.1h25.8z"/></g>
             </IconBase>
         );
     }

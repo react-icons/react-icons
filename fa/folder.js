@@ -6,7 +6,7 @@ export default class FaFolder extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m37.6 12.8v14.9q0 1.9-1.4 3.3t-3.4 1.4h-25.6q-2 0-3.4-1.4t-1.4-3.3v-20.3q0-1.9 1.4-3.3t3.4-1.4h6.7q2 0 3.4 1.4t1.3 3.3v0.7h14.2q2 0 3.4 1.4t1.4 3.3z"/></g>
+                <g><path d="m28.9 14.1v12.2q0 1.6-1.2 2.8t-2.7 1.1h-21.1q-1.6 0-2.8-1.1t-1.1-2.8v-16.6q0-1.6 1.1-2.8t2.8-1.1h5.5q1.6 0 2.8 1.1t1.1 2.8v0.5h11.7q1.6 0 2.7 1.2t1.2 2.7z"/></g>
             </IconBase>
         );
     }

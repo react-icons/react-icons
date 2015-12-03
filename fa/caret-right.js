@@ -6,7 +6,7 @@ export default class FaCaretRight extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m24.6 18.9q0 0.6-0.4 1l-9.5 9.4q-0.4 0.4-0.9 0.4t-1-0.4-0.4-0.9v-18.9q0-0.6 0.4-1t1-0.4 0.9 0.4l9.5 9.5q0.4 0.4 0.4 0.9z"/></g>
+                <g><path d="m9.7 18.3q0.3 0.3 0.3 0.8t-0.3 0.8l-7.8 7.8q-0.3 0.3-0.8 0.3t-0.8-0.3q-0.3-0.4-0.3-0.8v-15.6q0-0.4 0.3-0.8t0.8-0.3q0.5 0 0.8 0.3l7.8 7.8z"/></g>
             </IconBase>
         );
     }

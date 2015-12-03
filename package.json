@@ -51,5 +51,8 @@
   "peerDependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
+  },
+  "dependencies": {
+    "react-icon-base": "1.0.0"
   }
 }

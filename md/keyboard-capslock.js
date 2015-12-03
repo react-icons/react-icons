@@ -6,7 +6,7 @@ export default class MdKeyboardCapslock extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m20 14l7.7 7.7 2.3-2.4-10-10-10 10 2.4 2.4 7.6-7.7z m-10 16h20v-3.3h-20v3.3z"/></g>
+                <g><path fill="#444" d="m10 30v-3.3599999999999994h20v3.3599999999999994h-20z m10-16.016666666666666l-7.656666666666666 7.658333333333331-2.3433333333333337-2.341666666666665 10-10 10 10-2.3433333333333337 2.341666666666665z"/></g>
             </IconBase>
         );
     }

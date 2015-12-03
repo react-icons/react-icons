@@ -6,7 +6,7 @@ export default class MdViewArray extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m6.7 30h5v-21.7h-5v21.7z m23.3-21.7v21.7h5v-21.7h-5z m-16.7 21.7h15v-21.7h-15v21.7z"/></g>
+                <g><path fill="#444" d="m13.360000000000001 30v-21.64h14.999999999999998v21.64h-15z m16.64-21.64h5v21.64h-5v-21.64z m-23.36 21.64v-21.64h5v21.64h-5z"/></g>
             </IconBase>
         );
     }

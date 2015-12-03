@@ -6,7 +6,7 @@ export default class MdFilterHdr extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m23.3 10l-6.2 8.3 4.7 6.4-2.6 2c-2.8-3.8-7.5-10-7.5-10l-10 13.3h36.6l-15-20z"/></g>
+                <g><path fill="#444" d="m23.36 10l15 20h-36.71666666666667l10.000000000000002-13.36 7.499999999999998 10 2.655000000000001-1.9533333333333331-4.690000000000001-6.328333333333333z"/></g>
             </IconBase>
         );
     }

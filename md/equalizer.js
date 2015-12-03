@@ -6,7 +6,7 @@ export default class MdEqualizer extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m16.7 33.3h6.6v-26.6h-6.6v26.6z m-10 0h6.6v-13.3h-6.6v13.3z m20-18.3v18.3h6.6v-18.3h-6.6z"/></g>
+                <g><path fill="#444" d="m26.64 15h6.716666666666669v18.36h-6.716666666666669v-18.36z m-20 18.36v-13.36h6.716666666666669v13.36h-6.716666666666668z m10 0v-26.716666666666665h6.716666666666669v26.716666666666665h-6.716666666666669z"/></g>
             </IconBase>
         );
     }

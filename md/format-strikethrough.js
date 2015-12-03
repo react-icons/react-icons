@@ -6,7 +6,7 @@ export default class MdFormatStrikethrough extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m16.7 31.7h6.6v-5h-6.6v5z m-8.4-25v5h8.4v5h6.6v-5h8.4v-5h-23.4z m-3.3 16.6h30v-3.3h-30v3.3z"/></g>
+                <g><path fill="#444" d="m5 23.36v-3.3599999999999994h30v3.3599999999999994h-30z m3.360000000000001-16.72h23.28333333333334v5h-8.283333333333331v5h-6.716666666666669v-5h-8.283333333333333v-5z m8.28 25v-5h6.716666666666669v5h-6.716666666666669z"/></g>
             </IconBase>
         );
     }

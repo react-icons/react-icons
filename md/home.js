@@ -6,7 +6,7 @@ export default class MdHome extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m16.7 33.3v-10h6.6v10h8.4v-13.3h5l-16.7-15-16.7 15h5v13.3z"/></g>
+                <g><path fill="#444" d="m16.64 33.36h-8.283333333333333v-13.36h-5l16.64333333333333-15 16.638333333333335 15h-5v13.36h-8.283333333333331v-10h-6.716666666666669v10z"/></g>
             </IconBase>
         );
     }

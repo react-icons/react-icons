@@ -6,7 +6,7 @@ export default class MdNetworkCell extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m3.3 36.7h33.4v-33.4z"/><path d="m28.3 11.7l-25 25h25z"/></g>
+                <g><path fill="#444" d="m36.64000000000001 36.64000000000001h-33.28333333333334l33.28333333333333-33.28333333333333v33.28333333333333z"/></g>
             </IconBase>
         );
     }

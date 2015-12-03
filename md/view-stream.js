@@ -6,7 +6,7 @@ export default class MdViewStream extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m6.7 30h28.3v-10h-28.3v10z m0-21.7v10h28.3v-10h-28.3z"/></g>
+                <g><path fill="#444" d="m6.640000000000001 8.360000000000001h28.36v9.999999999999998h-28.36v-10z m0 21.64v-10h28.36v10h-28.36z"/></g>
             </IconBase>
         );
     }

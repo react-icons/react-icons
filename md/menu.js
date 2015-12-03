@@ -6,7 +6,7 @@ export default class MdMenu extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m5 30h30v-3.3h-30v3.3z m0-8.3h30v-3.4h-30v3.4z m0-11.7v3.3h30v-3.3h-30z"/></g>
+                <g><path fill="#444" d="m5 10h30v3.3599999999999994h-30v-3.3599999999999994z m0 11.64v-3.2833333333333314h30v3.2833333333333314h-30z m0 8.36v-3.3599999999999994h30v3.3599999999999994h-30z"/></g>
             </IconBase>
         );
     }

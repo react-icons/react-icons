@@ -6,7 +6,7 @@ export default class MdSkipPrevious extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m10 10h3.3v20h-3.3z m5.8 10l14.2 10v-20z"/></g>
+                <g><path fill="#444" d="m15.860000000000001 20l14.139999999999999-10v20z m-5.860000000000001-10h3.3599999999999994v20h-3.3599999999999994v-20z"/></g>
             </IconBase>
         );
     }

@@ -36,6 +36,7 @@
     "capitalize": "^1.0.0",
     "cheerio": "^0.19.0",
     "classnames": "^2.2.0",
+    "decamelize": "1.1.1",
     "eslint": "^1.7.3",
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.6.3",
@@ -51,7 +52,6 @@
     "react-dom": "^0.14.0"
   },
   "dependencies": {
-    "decamelize": "1.1.1",
     "react-icon-base": "0.1.0"
   }
 }

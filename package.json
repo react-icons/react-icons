@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "svg react icons of popular icon packs using ES6 imports",
   "main": "lib/icons.js",
   "jsnext:main": "icons.js",

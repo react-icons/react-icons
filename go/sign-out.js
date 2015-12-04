@@ -6,7 +6,7 @@ export default class GoSignOut extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path fill="#444" d="m25 30h-10v-22.5l-10-5h20v7.5h2.5v-10h-27.5v32.5l15 7.5v-7.5h12.5v-12.5h-2.5v10z m15-15l-10-7.5v5h-10v5h10v5l10-7.5z"/></g>
+                <g><path d="m25 30h-10v-22.5l-10-5h20v7.5h2.5v-10h-27.5v32.5l15 7.5v-7.5h12.5v-12.5h-2.5v10z m15-15l-10-7.5v5h-10v5h10v5l10-7.5z"/></g>
             </IconBase>
         );
     }

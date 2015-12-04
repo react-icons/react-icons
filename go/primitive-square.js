@@ -6,7 +6,7 @@ export default class GoPrimitiveSquare extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path fill="#444" d="m30 30h-20v-20h20v20z"/></g>
+                <g><path d="m30 30h-20v-20h20v20z"/></g>
             </IconBase>
         );
     }

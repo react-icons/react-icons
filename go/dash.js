@@ -6,7 +6,7 @@ export default class GoDash extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path fill="#444" d="m10 17.5v5h20v-5h-20z"/></g>
+                <g><path d="m10 17.5v5h20v-5h-20z"/></g>
             </IconBase>
         );
     }

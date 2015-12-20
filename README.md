@@ -54,16 +54,18 @@ every icon pack is in their own folder
 * FontAwesome => ./fa
 * Typicons => ./ti
 * Github Octicons => ./go
+* Ionicons => ./ion
 
 to view all icons visit [docs](http://gorangajic.github.io/react-icons/)
 
 ### Icons
 
 Currenlty supported icons are
-* Material Design Icons by Google https://www.google.com/design/icons/ (licence: [CC-BY 4.0](https://github.com/google/material-design-icons/blob/master/LICENSE))
-* Font Awesome by Dave Gandy - http://fontawesome.io (licence: [SIL OFL 1.1](http://scripts.sil.org/OFL))
-* Typicons by Stephen Hutchings - http://typicons.com (licence: [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/))
-* Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt)
+* Material Design Icons by Google - https://www.google.com/design/icons/ (license: [CC-BY 4.0](https://github.com/google/material-design-icons/blob/master/LICENSE))
+* Font Awesome by Dave Gandy - http://fontawesome.io (license: [SIL OFL 1.1](http://scripts.sil.org/OFL))
+* Typicons by Stephen Hutchings - http://typicons.com (license: [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/))
+* Github Octicons icons by Github - https://octicons.github.com/ (license: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt))
+* Ionicons by Ben Sperry - http://ionicons.com/ (license: [MIT](https://github.com/driftyco/ionicons/blob/master/LICENSE))
 
 you can add more icons by creating pull request or create issue.
 

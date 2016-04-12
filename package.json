@@ -5,7 +5,7 @@
   "main": "lib/icons.js",
   "jsnext:main": "icons.js",
   "scripts": {
-    "docs": "babel-node --stage 0 ./bin/generate-docs",
+    "docs": "babel-node ./bin/generate-docs",
     "build": "node ./bin/create | xargs babel --out-dir lib",
     "prepublish": "npm run build",
     "eslint": "eslint ."

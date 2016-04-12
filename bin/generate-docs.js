@@ -20,7 +20,10 @@ function writeFile(pageName, content) {
 }
 
 Object.keys(icons).forEach(function(key, index) {
-    icons[key].icons = require('../'+key);
+    const iconsList = require('../' + key);
+    icons[key].icons = {
+        ...iconsList
+    };
     delete icons[key].icons.__esModule;
     var content = renderToStaticMarkup(<App active={key} icons={icons}>
             <IconPack pack={icons[key]} prefix={key} />

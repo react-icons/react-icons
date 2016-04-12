@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>React Icons</title>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .logo-wrap {
+      width: 45px;
+      height: 45px;
+      display: inline-block;
+      background: #f2f2f2;
+      text-align: center;
+      border-radius: 25px;
+      border:1px solid #ddd;
+      margin-right: 10px;
+    }
+    .icon-pack {
+      text-align: center;
+    }
+    .icon-box {
+      text-align: center;
+      min-height: 130px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    }
+    .icon-name {
+      margin-top: 10px;
+    }
+    .readme-page {
+      padding: 20px;
+    }
+    code {
+      color: #E91E63;
+      background: #F2F2F2;
+      border-radius: 3px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header"><header class="mdl-layout__header" style="background-color:#03A9F4;"><div class="mdl-layout__header-row"><div class="mdl-layout-spacer"><h3><div class="logo-wrap"><img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="40" height="40"/></div>React Icons</h3></div></div></header><div class="mdl-layout__drawer"><nav class="mdl-navigation"><a href="./index.html" class="mdl-navigation__link">Home</a><a href="./fa.html" class="mdl-navigation__link">Font Awesome</a><a href="./md.html" class="mdl-navigation__link">Material</a><a href="./ti.html" class="mdl-navigation__link">Typicons</a><a href="./go.html" class="mdl-navigation__link">Github Octicons</a></nav></div><main class="mdl-layout__content"><div class="page-content"><div class="readme-page"><img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="60">
+<h2><a href="http://gorangajic.github.io/react-icons/index.html">React Icons</a></h2>
+<p>Include popular icons in your React projects easly with <code>react-icons</code>, which utilizes ES6 imports that allows you to include only the icons that your project is using.</p>
+<h3 id="user-content-installation" class="deep-link"><a href="#installation">Installation</a></h3>
+<pre><code>npm install react-icons --save
+</code></pre>
+<h3 id="user-content-usage" class="deep-link"><a href="#usage">Usage</a></h3>
+<div class="highlight javascript"><pre class="editor editor-colors"><div class="line"><span class="source js"><span class="keyword control js"><span>import</span></span><span>&#xA0;FaBeer&#xA0;from&#xA0;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&apos;</span></span><span>react-icons/fa/beer</span><span class="punctuation definition string end js"><span>&apos;</span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;</span></span></div><div class="line"><span class="source js"><span class="storage type js"><span>class</span></span><span>&#xA0;Question&#xA0;</span><span class="storage modifier js"><span>extends</span></span><span>&#xA0;React</span><span class="meta delimiter method period js"><span>.</span></span><span>Component&#xA0;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;render</span><span class="meta brace round js"><span>(</span><span>)</span></span><span>&#xA0;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="keyword control js"><span>return</span></span><span>&#xA0;</span><span class="keyword operator js"><span>&lt;</span></span><span>h3</span><span class="keyword operator js"><span>&gt;</span></span><span>&#xA0;Lets&#xA0;go&#xA0;</span><span class="keyword control js"><span>for</span></span><span>&#xA0;a&#xA0;</span><span class="keyword operator js"><span>&lt;</span></span><span>FaBeer&#xA0;/</span><span class="keyword operator js"><span>&gt;</span><span>?</span></span><span>&#xA0;</span><span class="keyword operator js"><span>&lt;</span></span><span>/h3</span><span class="keyword operator js"><span>&gt;</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span></span></div></pre></div>
+<p>If you are not using es6 compiler like <a href="https://babeljs.io/">babel</a> or <a href="http://rollupjs.org/">rollup.js</a>, it&apos;s possible to include icons from the compiled folder <code>./lib</code>. Babel by <a href="http://babeljs.io/docs/usage/require/#usage">default</a> will ignore <code>node_modules</code> so if you don&apos;t want to change the settings you will need to use files from <code>./lib</code></p>
+<div class="highlight javascript"><pre class="editor editor-colors"><div class="line"><span class="source js"><span class="storage modifier js"><span>var</span></span><span>&#xA0;FaBeer&#xA0;</span><span class="keyword operator js"><span>=</span></span><span>&#xA0;</span><span class="support function js"><span>require</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&apos;</span></span><span>react-icons/lib/fa/beer</span><span class="punctuation definition string end js"><span>&apos;</span></span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;</span></span></div><div class="line"><span class="source js"><span class="storage modifier js"><span>var</span></span><span>&#xA0;Question&#xA0;</span><span class="keyword operator js"><span>=</span></span><span>&#xA0;React</span><span class="meta delimiter method period js"><span>.</span></span><span>createClass</span><span class="meta brace round js"><span>(</span></span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="meta function json js"><span class="entity name function js"><span>render</span></span><span>:&#xA0;</span><span class="storage type function js"><span>function</span></span><span class="punctuation definition begin js"><span>(</span></span><span class="punctuation definition end js"><span>)</span></span></span><span>&#xA0;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="keyword control js"><span>return</span></span><span>&#xA0;React</span><span class="meta delimiter method period js"><span>.</span></span><span class="support function dom js"><span>createElement</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&apos;</span></span><span>h3</span><span class="punctuation definition string end js"><span>&apos;</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&#xA0;</span><span class="constant language null js"><span>null</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&apos;</span></span><span>&#xA0;Lets&#xA0;go&#xA0;for&#xA0;a&#xA0;</span><span class="punctuation definition string end js"><span>&apos;</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&#xA0;React</span><span class="meta delimiter method period js"><span>.</span></span><span class="support function dom js"><span>createElement</span></span><span class="meta brace round js"><span>(</span></span><span>FaBeer</span><span class="meta delimiter object comma js"><span>,</span></span><span>&#xA0;</span><span class="constant language null js"><span>null</span></span><span class="meta brace round js"><span>)</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&#xA0;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&apos;</span></span><span>?&#xA0;</span><span class="punctuation definition string end js"><span>&apos;</span></span></span></span></div><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&#xA0;</span></span></div></pre></div>
+<p>You can include icons directly from <code>react-icons</code> using <code>import FaBeer from &apos;react-icons&apos;</code>, but you should wait to Webpack 2 <a href="https://twitter.com/dan_abramov/status/656970508005736448">implement</a> dead code elimination based on es6 imports.</p>
+<p>Also it&apos;s possible to include the whole icon pack from:</p>
+<div class="highlight javascript"><pre class="editor editor-colors"><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="keyword control js"><span>import</span></span><span>&#xA0;</span><span class="keyword operator js"><span>*</span></span><span>&#xA0;as&#xA0;FontAwesome&#xA0;from&#xA0;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&apos;</span></span><span>react-icons/fa</span><span class="punctuation definition string end js"><span>&apos;</span></span></span></span></div></pre></div>
+<p>or import multiple icons from the same pack</p>
+<div class="highlight javascript"><pre class="editor editor-colors"><div class="line"><span class="source js"><span>&#xA0;&#xA0;&#xA0;&#xA0;</span><span class="keyword control js"><span>import</span></span><span>&#xA0;</span><span class="meta brace curly js"><span>{</span></span><span>MdCancel</span><span class="meta delimiter object comma js"><span>,</span></span><span>&#xA0;MdChat</span><span class="meta delimiter object comma js"><span>,</span></span><span>&#xA0;MdCheck</span><span class="meta brace curly js"><span>}</span></span><span>&#xA0;from&#xA0;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&apos;</span></span><span>react-icons/md</span><span class="punctuation definition string end js"><span>&apos;</span></span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div></pre></div>
+<p>every icon pack is in their own folder</p>
+<ul>
+<li>Material Design Icons =&gt; ./md</li>
+<li>FontAwesome =&gt; ./fa</li>
+<li>Typicons =&gt; ./ti</li>
+<li>Github Octicons =&gt; ./go</li>
+</ul>
+<p>to view all icons visit <a href="http://gorangajic.github.io/react-icons/">docs</a></p>
+<h3 id="user-content-icons" class="deep-link"><a href="#icons">Icons</a></h3>
+<p>Currently supported icons are:</p>
+<ul>
+<li>Material Design Icons by Google <a href="https://www.google.com/design/icons/">https://www.google.com/design/icons/</a> (licence: <a href="https://github.com/google/material-design-icons/blob/master/LICENSE">CC-BY 4.0</a>)</li>
+<li>Font Awesome by Dave Gandy - <a href="http://fontawesome.io">http://fontawesome.io</a> (licence: <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>)</li>
+<li>Typicons by Stephen Hutchings - <a href="http://typicons.com">http://typicons.com</a> (licence: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>)</li>
+<li>Github Octicons icons by Github <a href="https://octicons.github.com/">https://octicons.github.com/</a> (licence: <a href="https://github.com/github/octicons/blob/master/LICENSE.txt">SIL OFL 1.1</a></li>
+</ul>
+<p>You can add more icons by submitting pull requests or creating issues.</p>
+<h3 id="user-content-contribution" class="deep-link"><a href="#contribution">Contribution</a></h3>
+<p>Just add svg icons in <code>./icons/:icons-name</code> folder and create pull request again <code>develop</code> after merge I will generate React components because this process is not fully automated yet.</p>
+<h3 id="user-content-svg-" class="deep-link"><a href="#svg-">svg ?</a></h3>
+<p>Svg is <a href="http://caniuse.com/#search=svg">supported</a> by all major browsers.</p>
+<h3 id="user-content-why-es6-import-and-not-fonts" class="deep-link"><a href="#why-es6-import-and-not-fonts">Why es6 import and not fonts?</a></h3>
+<p>With <code>react-icons</code>, you can send icons that are specified instead of one big font file to the users, helping you to recognize which icons are used in your project.</p>
+<h2 id="user-content-related" class="deep-link"><a href="#related">Related</a></h2>
+<ul>
+<li><a href="https://github.com/gorangajic/react-svg-morph/">react-svg-morph</a></li>
+</ul>
+<h3 id="user-content-licence" class="deep-link"><a href="#licence">Licence</a></h3>
+<p>MIT</p>
+<ul>
+<li>Icons are taken from the other projects so please check each project licences accordingly.</li>
+</ul>
+</div></div></main></div>
+</body>
+</html>

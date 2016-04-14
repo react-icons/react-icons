@@ -6,7 +6,7 @@ export default class MdFormatTextdirectionLToR extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m15 16.7v8.3h3.3v-18.3h3.4v18.3h3.3v-18.3h3.3v-3.4h-13.3c-3.7 0-6.7 3-6.7 6.7s3 6.7 6.7 6.7z m20 13.3l-6.7-6.7v5h-20v3.4h20v5l6.7-6.7z"/></g>
+                <g><path fill="#444" d="m35 30l-6.6 6.6v-5h-20v-3.2h20v-5z m-20-13.4c-3.7 0-6.6-2.9-6.6-6.6s2.9-6.6 6.6-6.6h13.4v3.2h-3.4v18.4h-3.4v-18.4h-3.2v18.4h-3.4v-8.4z"/></g>
             </IconBase>
         );
     }

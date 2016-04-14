@@ -6,7 +6,7 @@ export default class GoMailReply extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m20 6.25l-15 11.25 15 11.25v-7.5c4.337499999999999 0 12.850000000000001 2.3825000000000003 15 10.9375 0-11.3675-7.65625-17.6175-15-18.4375v-7.5z"/></g>
+                <g><path fill="#444" d="m20 6.3l-15 11.2 15 11.3v-7.5c4.3 0 12.9 2.3 15 10.9 0-11.4-7.7-17.6-15-18.4v-7.5z"/></g>
             </IconBase>
         );
     }

@@ -6,7 +6,7 @@ export default class MdArrowDropDownCircle extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m20 3.3c-9.2 0-16.7 7.5-16.7 16.7s7.5 16.7 16.7 16.7 16.7-7.5 16.7-16.7-7.5-16.7-16.7-16.7z m0 20l-6.7-6.6h13.4l-6.7 6.6z"/></g>
+                <g><path fill="#444" d="m20 23.4l6.6-6.8h-13.2z m0-20c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z"/></g>
             </IconBase>
         );
     }

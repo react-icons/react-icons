@@ -6,7 +6,7 @@ export default class GoTriangleUp extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m19.990000000000002 10l-14.990000000000002 14.990000000000002h29.980000000000004l-14.990000000000002-14.990000000000002z"/></g>
+                <g><path fill="#444" d="m20 10l-15 15h30l-15-15z"/></g>
             </IconBase>
         );
     }

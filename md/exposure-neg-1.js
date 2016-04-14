@@ -6,7 +6,7 @@ export default class MdExposureNeg1 extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m6.7 18.3v3.4h13.3v-3.4h-13.3z m25 11.7h-3.4v-17.7l-5 1.7v-2.8l7.9-2.9h0.5v21.7z"/></g>
+                <g><path fill="#444" d="m31.6 30h-3.2v-17.7l-5 1.7v-2.8l7.8-2.8h0.4v21.6z m-25-11.6h13.4v3.2h-13.4v-3.2z"/></g>
             </IconBase>
         );
     }

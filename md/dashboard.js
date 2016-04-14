@@ -6,7 +6,7 @@ export default class MdDashboard extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m21.64 5h13.36v10h-13.36v-10z m0 30v-16.64h13.36v16.64h-13.36z m-16.64 0v-10h13.36v10h-13.36z m0-13.36v-16.64h13.36v16.64h-13.36z"/></g>
+                <g><path fill="#444" d="m21.6 5h13.4v10h-13.4v-10z m0 30v-16.6h13.4v16.6h-13.4z m-16.6 0v-10h13.4v10h-13.4z m0-13.4v-16.6h13.4v16.6h-13.4z"/></g>
             </IconBase>
         );
     }

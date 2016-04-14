@@ -6,7 +6,7 @@ export default class MdStoreMallDirectory extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m33.3 6.7h-26.6v3.3h26.6v-3.3z m1.7 16.6v-3.3l-1.7-8.3h-26.6l-1.7 8.3v3.3h1.7v10h16.6v-10h6.7v10h3.3v-10h1.7z m-15 6.7h-10v-6.7h10v6.7z"/></g>
+                <g><path fill="#444" d="m20 30v-6.6h-10v6.6h10z m15-6.6h-1.6v10h-3.4v-10h-6.6v10h-16.8v-10h-1.6v-3.4l1.6-8.4h26.8l1.6 8.4v3.4z m-1.6-16.8v3.4h-26.8v-3.4h26.8z"/></g>
             </IconBase>
         );
     }

@@ -6,7 +6,7 @@ export default class MdPermDeviceInformation extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m21.7 11.7h-3.4v3.3h3.4v-3.3z m0 6.6h-3.4v10h3.4v-10z m6.6-16.6l-16.6 0c-1.9 0-3.4 1.5-3.4 3.3v30c0 1.8 1.5 3.3 3.4 3.3h16.6c1.9 0 3.4-1.5 3.4-3.3v-30c0-1.8-1.5-3.3-3.4-3.3z m0 30h-16.6v-23.4h16.6v23.4z"/></g>
+                <g><path fill="#444" d="m28.4 31.6v-23.2h-16.8v23.2h16.8z m0-29.9c1.8 0 3.2 1.5 3.2 3.3v30c0 1.8-1.4 3.4-3.2 3.4h-16.8c-1.8 0-3.2-1.6-3.2-3.4v-30c0-1.8 1.4-3.4 3.2-3.4z m-6.8 16.7v10h-3.2v-10h3.2z m0-6.8v3.4h-3.2v-3.4h3.2z"/></g>
             </IconBase>
         );
     }

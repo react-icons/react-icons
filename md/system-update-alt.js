@@ -6,7 +6,7 @@ export default class MdSystemUpdateAlt extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m20 27.5l6.7-6.7h-5v-15h-3.4v15h-5l6.7 6.7z m15-21.7h-10v3.3h10v23.4h-30v-23.3h10v-3.4h-10c-1.8 0-3.3 1.5-3.3 3.4v23.3c0 1.8 1.5 3.3 3.3 3.3h30c1.8 0 3.3-1.5 3.3-3.3v-23.3c0-1.9-1.5-3.4-3.3-3.4z"/></g>
+                <g><path fill="#444" d="m35 5.9c1.8 0 3.4 1.4 3.4 3.2v23.4c0 1.8-1.6 3.4-3.4 3.4h-30c-1.8 0-3.4-1.6-3.4-3.4v-23.4c0-1.8 1.6-3.2 3.4-3.2h10v3.2h-10v23.4h30v-23.4h-10v-3.2h10z m-15 21.6l-6.6-6.6h5v-15h3.2v15h5z"/></g>
             </IconBase>
         );
     }

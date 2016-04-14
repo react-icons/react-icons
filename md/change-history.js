@@ -6,7 +6,7 @@ export default class MdChangeHistory extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m20 6.640000000000001l16.64 26.71666666666667h-33.28333333333333z m0 6.328333333333333l-10.625 17.031666666666666h21.25z"/></g>
+                <g><path fill="#444" d="m20 6.6l16.6 26.8h-33.2z m0 6.4l-10.6 17h21.2z"/></g>
             </IconBase>
         );
     }

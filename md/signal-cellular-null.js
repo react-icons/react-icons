@@ -6,7 +6,7 @@ export default class MdSignalCellularNull extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m33.3 11.4v21.9h-21.9l21.9-21.9m3.4-8.1l-33.4 33.4h33.4v-33.4z"/></g>
+                <g><path fill="#444" d="m36.6 3.4v33.2h-33.2z m-3.2 8l-22 22h22v-22z"/></g>
             </IconBase>
         );
     }

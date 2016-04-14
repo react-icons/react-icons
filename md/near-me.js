@@ -6,7 +6,7 @@ export default class MdNearMe extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m35 5l-12.578333333333333 30h-1.6400000000000006l-4.376666666666665-11.406666666666666-11.405000000000001-4.376666666666669v-1.6383333333333319z"/></g>
+                <g><path fill="#444" d="m35 5l-12.6 30h-1.6l-4.4-11.4-11.4-4.4v-1.6z"/></g>
             </IconBase>
         );
     }

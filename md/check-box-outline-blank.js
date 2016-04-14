@@ -6,7 +6,7 @@ export default class MdCheckBoxOutlineBlank extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m31.7 8.3v23.4h-23.4v-23.4h23.4m0-3.3h-23.4c-1.8 0-3.3 1.5-3.3 3.3v23.4c0 1.8 1.5 3.3 3.3 3.3h23.4c1.8 0 3.3-1.5 3.3-3.3v-23.4c0-1.8-1.5-3.3-3.3-3.3z"/></g>
+                <g><path fill="#444" d="m31.6 5c1.8 0 3.4 1.6 3.4 3.4v23.2c0 1.8-1.6 3.4-3.4 3.4h-23.2c-1.8 0-3.4-1.6-3.4-3.4v-23.2c0-1.8 1.6-3.4 3.4-3.4h23.2z m0 3.4h-23.2v23.2h23.2v-23.2z"/></g>
             </IconBase>
         );
     }

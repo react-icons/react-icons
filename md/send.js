@@ -6,7 +6,7 @@ export default class MdSend extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m3.3600000000000003 35v-11.64l25-3.3599999999999994-25-3.3599999999999994v-11.64l35 15z"/></g>
+                <g><path fill="#444" d="m3.4 35v-11.6l25-3.4-25-3.4v-11.6l35 15z"/></g>
             </IconBase>
         );
     }

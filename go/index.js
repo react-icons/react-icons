@@ -174,3 +174,4 @@ export GoUnfold from './unfold';
 export GoUnmute from './unmute';
 export GoVersions from './versions';
 export GoX from './x';
+export GoZap from './zap';

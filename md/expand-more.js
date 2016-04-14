@@ -6,7 +6,7 @@ export default class MdExpandMore extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m27.65666666666667 14.296666666666667l2.34333333333333 2.3433333333333337-10 10-10-10 2.3433333333333337-2.3433333333333337 7.656666666666666 7.65666666666667z"/></g>
+                <g><path fill="#444" d="m27.7 14.3l2.3 2.3-10 10-10-10 2.3-2.3 7.7 7.7z"/></g>
             </IconBase>
         );
     }

@@ -6,7 +6,7 @@ export default class MdSpaceBar extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m30 15h3.3599999999999994v10h-26.716666666666665v-10h3.3566666666666656v6.640000000000001h20v-6.640000000000001z"/></g>
+                <g><path fill="#444" d="m30 15h3.4v10h-26.8v-10h3.4v6.6h20v-6.6z"/></g>
             </IconBase>
         );
     }

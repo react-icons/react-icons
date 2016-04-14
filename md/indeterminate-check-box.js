@@ -6,7 +6,7 @@ export default class MdIndeterminateCheckBox extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><defs><path id="a" d="m0 0h40v40h-40z"/></defs><clipPath id="b"><use overflow="visible"/></clipPath><path d="m31.7 5h-23.4c-1.8 0-3.3 1.5-3.3 3.3v23.4c0 1.8 1.5 3.3 3.3 3.3h23.4c1.8 0 3.3-1.5 3.3-3.3v-23.4c0-1.8-1.5-3.3-3.3-3.3z m-3.4 16.7h-16.6v-3.4h16.6v3.4z"/></g>
+                <g><path fill="#444" d="m28.4 21.6v-3.2h-16.8v3.2h16.8z m3.2-16.6c1.8 0 3.4 1.6 3.4 3.4v23.2c0 1.8-1.6 3.4-3.4 3.4h-23.2c-1.8 0-3.4-1.6-3.4-3.4v-23.2c0-1.8 1.6-3.4 3.4-3.4h23.2z"/></g>
             </IconBase>
         );
     }

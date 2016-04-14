@@ -6,7 +6,7 @@ export default class MdSignalCellularConnectedNoInternet4Bar extends React.Compo
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m33.3 30h3.4v-13.3h-3.4v13.3z m0 6.7h3.4v-3.4h-3.4v3.4z m-30 0h26.7v-23.4h6.7v-10l-33.4 33.4z"/></g>
+                <g><path fill="#444" d="m3.4 36.6l33.2-33.2v10h-6.6v23.2h-26.6z m30 0v-3.2h3.2v3.2h-3.2z m0-6.6v-13.4h3.2v13.4h-3.2z"/></g>
             </IconBase>
         );
     }

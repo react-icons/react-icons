@@ -6,7 +6,7 @@ export default class MdPlayCircleFilled extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m20 3.3c-9.2 0-16.7 7.5-16.7 16.7s7.5 16.7 16.7 16.7 16.7-7.5 16.7-16.7-7.5-16.7-16.7-16.7z m-3.3 24.2v-15l10 7.5-10 7.5z"/></g>
+                <g><path fill="#444" d="m16.6 27.5l10-7.5-10-7.5v15z m3.4-24.1c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z"/></g>
             </IconBase>
         );
     }

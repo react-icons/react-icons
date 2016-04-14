@@ -6,7 +6,7 @@ export default class MdSimCardAlert extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m30 3.3h-13.3l-10 10 0 20c0 1.9 1.5 3.4 3.3 3.4h20c1.8 0 3.3-1.5 3.3-3.4v-26.6c0-1.9-1.5-3.4-3.3-3.4z m-8.3 25h-3.4v-3.3h3.4v3.3z m0-6.6h-3.4v-8.4h3.4v8.4z"/></g>
+                <g><path fill="#444" d="m21.6 21.6v-8.2h-3.2v8.2h3.2z m0 6.8v-3.4h-3.2v3.4h3.2z m8.4-25c1.8 0 3.4 1.4 3.4 3.2v26.8c0 1.8-1.6 3.2-3.4 3.2h-20c-1.8 0-3.4-1.4-3.4-3.2l0.1-20 9.9-10h13.4z"/></g>
             </IconBase>
         );
     }

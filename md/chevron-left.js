@@ -6,7 +6,7 @@ export default class MdChevronLeft extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m25.703333333333337 12.343333333333334l-7.65666666666667 7.656666666666666 7.656666666666666 7.656666666666666-2.3433333333333337 2.3433333333333337-10-10 10-10z"/></g>
+                <g><path d="m25.7 12.3l-7.7 7.7 7.7 7.7-2.3 2.3-10-10 10-10z"/></g>
             </IconBase>
         );
     }

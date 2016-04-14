@@ -6,7 +6,7 @@ export default class MdLandscape extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m23.36 10l15 20h-36.71666666666667l10.000000000000002-13.36 7.499999999999998 10 2.655000000000001-1.9533333333333331-4.690000000000001-6.328333333333333z"/></g>
+                <g><path d="m23.4 10l15 20h-36.8l10-13.4 7.5 10 2.7-1.9-4.7-6.3z"/></g>
             </IconBase>
         );
     }

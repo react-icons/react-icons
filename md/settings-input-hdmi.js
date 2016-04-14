@@ -6,7 +6,7 @@ export default class MdSettingsInputHdmi extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m30 11.7v-5c0-1.9-1.5-3.4-3.3-3.4h-13.4c-1.8 0-3.3 1.5-3.3 3.4v5h-1.7v10l5 10v5h13.4v-5l5-10v-10h-1.7z m-16.7-5h13.4v5h-3.4v-3.4h-1.6v3.4h-3.4v-3.4h-1.6v3.4h-3.4v-5z"/></g>
+                <g><path fill="#444" d="m13.4 6.6v5h3.2v-3.2h1.8v3.2h3.2v-3.2h1.8v3.2h3.2v-5h-13.2z m16.6 5h1.6v10l-5 10v5h-13.2v-5l-5-10v-10h1.6v-5c0-1.8 1.6-3.2 3.4-3.2h13.2c1.8 0 3.4 1.4 3.4 3.2v5z"/></g>
             </IconBase>
         );
     }

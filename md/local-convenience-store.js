@@ -6,7 +6,7 @@ export default class MdLocalConvenienceStore extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m31.7 11.7v-5h-23.4v5h-5v21.6h13.4v-6.6h6.6v6.6h13.4v-21.6h-5z m-13.4 5h-3.3v1.6h3.3v1.7h-5v-5h3.4v-1.7h-3.4v-1.6h5v5z m8.4 3.3h-1.7v-3.3h-3.3v-5h1.6v3.3h1.7v-3.3h1.7v8.3z"/></g>
+                <g><path fill="#444" d="m26.6 20v-8.4h-1.6v3.4h-1.6v-3.4h-1.8v5h3.4v3.4h1.6z m-8.2-3.4v-5h-5v1.8h3.2v1.6h-3.2v5h5v-1.6h-3.4v-1.8h3.4z m13.2-5h5v21.8h-13.2v-6.8h-6.8v6.8h-13.2v-21.8h5v-5h23.2v5z"/></g>
             </IconBase>
         );
     }

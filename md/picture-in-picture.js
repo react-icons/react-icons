@@ -6,7 +6,7 @@ export default class MdPictureInPicture extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m31.7 11.7h-13.4v10h13.4v-10z m3.3-6.7h-30c-1.8 0-3.3 1.5-3.3 3.3v23.4c0 1.8 1.5 3.3 3.3 3.3h30c1.8 0 3.3-1.5 3.3-3.3v-23.4c0-1.8-1.5-3.3-3.3-3.3z m0 26.7h-30v-23.4h30v23.4z"/></g>
+                <g><path fill="#444" d="m35 31.7v-23.4h-30v23.4h30z m0-26.7c1.8 0 3.4 1.6 3.4 3.4v23.2c0 1.8-1.6 3.4-3.4 3.4h-30c-1.8 0-3.4-1.6-3.4-3.4v-23.2c0-1.8 1.6-3.4 3.4-3.4h30z m-3.4 6.6v10h-13.2v-10h13.2z"/></g>
             </IconBase>
         );
     }

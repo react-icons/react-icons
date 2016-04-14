@@ -6,7 +6,7 @@ export default class MdVerticalAlignTop extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m13.3 18.3h5v16.7h3.4v-16.7h5l-6.7-6.6-6.7 6.6z m-6.6-13.3v3.3h26.6v-3.3h-26.6z"/></g>
+                <g><path fill="#444" d="m6.6 5h26.8v3.4h-26.8v-3.4z m6.8 13.4l6.6-6.8 6.6 6.8h-5v16.6h-3.2v-16.6h-5z"/></g>
             </IconBase>
         );
     }

@@ -6,7 +6,7 @@ export default class MdSignalCellularOff extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m35 1.7l-14.3 14.3 14.3 14.3v-28.6z m-27.1 5.8l-2.1 2.1 10.6 10.6-14.7 14.8h29.5l3.4 3.3 2.1-2.1-28.8-28.7z"/></g>
+                <g><path fill="#444" d="m8 7.5l28.6 28.8-2.1 2.1-3.3-3.4h-29.6l14.8-14.8-10.5-10.6z m27-5.9v28.7l-14.3-14.3z"/></g>
             </IconBase>
         );
     }

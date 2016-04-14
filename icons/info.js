@@ -26,5 +26,12 @@ module.exports = {
         attribution: "Github Octicons icons by Github https://octicons.github.com/",
         licence: "SIL OFL 1.1",
         licenceUrl: "https://github.com/github/octicons/blob/master/LICENSE.txt"
+    },
+    io: {
+        name: "Ionicons",
+        url: "http://ionicons.com/",
+        attribution: "The premium icon font for Ionic Framework.",
+        licence: "MIT",
+        licenceUrl: "https://github.com/driftyco/ionicons/blob/master/LICENSE",
     }
 }

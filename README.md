@@ -54,6 +54,7 @@ every icon pack is in their own folder
 * FontAwesome => ./fa
 * Typicons => ./ti
 * Github Octicons => ./go
+* Ionicons => ./io
 
 to view all icons visit [docs](http://gorangajic.github.io/react-icons/)
 
@@ -64,6 +65,7 @@ Currently supported icons are:
 * Font Awesome by Dave Gandy - http://fontawesome.io (licence: [SIL OFL 1.1](http://scripts.sil.org/OFL))
 * Typicons by Stephen Hutchings - http://typicons.com (licence: [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/))
 * Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt)
+* Ionicons by Ionic Framework - http://ionicons.com (licence: [MIT](https://github.com/driftyco/ionicons/blob/master/LICENSE))
 
 You can add more icons by submitting pull requests or creating issues.
 

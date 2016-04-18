@@ -8,7 +8,7 @@ var _ = require('underscore');
 var glob = require('glob');
 var path = require('path');
 var rootDir = path.join(__dirname, '..');
-var attrs = ['xlink:href', 'clip-path', 'fill-opacity'];
+var attrs = ['xlink:href', 'clip-path', 'fill-opacity', 'fill'];
 var cleanAtrributes = function($el, $) {
     _.each(attrs, function(attr) {
         $el.removeAttr(attr);

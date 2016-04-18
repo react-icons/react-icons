@@ -6,7 +6,7 @@ export default class MdFormatQuote extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path fill="#444" d="m23.4 28.4l3.2-6.8h-5v-10h10v10l-3.2 6.8h-5z m-13.4 0l3.4-6.8h-5v-10h10v10l-3.4 6.8h-5z"/></g>
+                <g><path d="m23.4 28.4l3.2-6.8h-5v-10h10v10l-3.2 6.8h-5z m-13.4 0l3.4-6.8h-5v-10h10v10l-3.4 6.8h-5z"/></g>
             </IconBase>
         );
     }

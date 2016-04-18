@@ -6,7 +6,7 @@ export default class IoIosArrowForward extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path fill="#444" d="m12.5 10l2.5-2.5 12.5 12.5-12.5 12.5-2.5-2.5 9.9-10z"/></g>
+                <g><path d="m12.5 10l2.5-2.5 12.5 12.5-12.5 12.5-2.5-2.5 9.9-10z"/></g>
             </IconBase>
         );
     }

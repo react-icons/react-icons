@@ -6,7 +6,7 @@ export default class IoIosPlay extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path fill="#444" d="m10 7.5l20 12.5-20 12.5v-25z"/></g>
+                <g><path d="m10 7.5l20 12.5-20 12.5v-25z"/></g>
             </IconBase>
         );
     }

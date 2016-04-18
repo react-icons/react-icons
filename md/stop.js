@@ -6,7 +6,7 @@ export default class MdStop extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path fill="#444" d="m10 10h20v20h-20v-20z"/></g>
+                <g><path d="m10 10h20v20h-20v-20z"/></g>
             </IconBase>
         );
     }

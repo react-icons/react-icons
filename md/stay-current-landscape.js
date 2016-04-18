@@ -6,7 +6,7 @@ export default class MdStayCurrentLandscape extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m1.7 11.7l0 16.6c0 1.9 1.5 3.4 3.3 3.4h30c1.8 0 3.3-1.5 3.3-3.4v-16.6c0-1.9-1.5-3.4-3.3-3.4h-30c-1.8 0-3.3 1.5-3.3 3.4z m30 0v16.6h-23.4v-16.6h23.4z"/></g>
+                <g><path d="m31.6 11.6h-23.2v16.8h23.2v-16.8z m-29.9 0q0-1.3 1-2.3t2.3-0.9h30q1.3 0 2.3 0.9t1.1 2.3v16.8q0 1.3-1.1 2.3t-2.3 0.9h-30q-1.3 0-2.3-0.9t-1.1-2.3z"/></g>
             </IconBase>
         );
     }

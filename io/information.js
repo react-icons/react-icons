@@ -6,7 +6,7 @@ export default class IoInformation extends React.Component {
     render() {
         return (
             <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path fill="#444" d="m22.5 35h2.5v1.3h-10v-1.3h2.5v-18.7h-2.5v-1.3h7.5v20z m-2.5-23.7c-2.1 0-3.7-1.7-3.7-3.8s1.6-3.7 3.7-3.7 3.8 1.6 3.8 3.7-1.7 3.8-3.8 3.8z"/></g>
+                <g><path d="m22.5 35h2.5v1.3h-10v-1.3h2.5v-18.7h-2.5v-1.3h7.5v20z m-2.5-23.7c-2.1 0-3.7-1.7-3.7-3.8s1.6-3.7 3.7-3.7 3.8 1.6 3.8 3.7-1.7 3.8-3.8 3.8z"/></g>
             </IconBase>
         );
     }

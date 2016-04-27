@@ -55,6 +55,7 @@ every icon pack is in their own folder
 * Typicons => ./ti
 * Github Octicons => ./go
 * Ionicons => ./io
+* Dripicons => ./di
 
 to view all icons visit [docs](http://gorangajic.github.io/react-icons/)
 
@@ -66,6 +67,7 @@ Currently supported icons are:
 * Typicons by Stephen Hutchings - http://typicons.com (licence: [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/))
 * Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt)
 * Ionicons by Ionic Framework - http://ionicons.com (licence: [MIT](https://github.com/driftyco/ionicons/blob/master/LICENSE))
+* Dripicons by Amit Jakhu - http://demo.amitjakhu.com/dripicons/ (licence: [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/))
 
 You can add more icons by submitting pull requests or creating issues.
 

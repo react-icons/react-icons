@@ -33,5 +33,12 @@ module.exports = {
         attribution: "The premium icon font for Ionic Framework.",
         licence: "MIT",
         licenceUrl: "https://github.com/driftyco/ionicons/blob/master/LICENSE",
+    },
+    di: {
+        name: "Dripicons",
+        url: "http://demo.amitjakhu.com/dripicons/",
+        attribution: "Dripicons by Amit Jakhu",
+        licence: "CC-BY 4.0",
+        licenceUrl: "http://creativecommons.org/licenses/by/4.0/"
     }
 }

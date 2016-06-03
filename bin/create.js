@@ -46,14 +46,12 @@ glob(rootDir + '/icons/*/*.svg', function(err, icons) {
 let React = require('react');
 let IconBase = require('react-icon-base');
 
-export default class ${name} extends React.Component {
-    render() {
-        return (
-            <IconBase viewBox="${viewBox}" {...this.props}>
-                <g>${iconSvg}</g>
-            </IconBase>
-        );
-    }
+export default function ${name}(props) {
+    return (
+        <IconBase viewBox="${viewBox}" {...props}>
+            <g>${iconSvg}</g>
+        </IconBase>
+    );
 }
 `
 

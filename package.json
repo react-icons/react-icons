@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "svg react icons of popular icon packs using ES6 imports",
   "scripts": {
     "docs": "babel-node ./bin/generate-docs",
@@ -40,22 +40,46 @@
     "capitalize": "^1.0.0",
     "cheerio": "^0.19.0",
     "classnames": "^2.2.3",
+    "commitizen": "^2.8.2",
+    "cz-conventional-changelog": "^1.1.6",
     "decamelize": "1.1.2",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^3.1.0",
     "eslint-plugin-react": "^3.15.0",
+    "ghooks": "^1.3.2",
     "glob": "^6.0.4",
     "gulp": "^3.9.0",
     "marky-markdown": "https://github.com/npm/marky-markdown",
     "material-design-lite": "^1.0.6",
     "svg-scaler": "gorangajic/svg-scaler#take-size-viewbox",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "validate-commit-msg": "^2.6.1"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {
-    "react-icon-base": "2.0.2"
+    "react-icon-base": "2.0.3"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "issue",
+        "master",
+        "revert"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "subjectPattern": ".+",
+      "subjectPatternErrorMsg": "subject does not match subject pattern!",
+      "helpMessage": ""
+    }
   }
 }

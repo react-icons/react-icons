@@ -3,6 +3,11 @@
 
 ## [React Icons](http://gorangajic.github.io/react-icons/index.html)
 
+[![npm][npm-image]][npm-url]
+
+[npm-image]: https://img.shields.io/npm/v/react-icons.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/react-icons
+
 Include popular icons in your React projects easly with ```react-icons```, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
 ### Installation
@@ -41,13 +46,13 @@ You can include icons directly from ```react-icons``` using ```import FaBeer fro
 Also it's possible to include the whole icon pack from:
 
 ```javascript
-    import * as FontAwesome from 'react-icons/fa'
+import * as FontAwesome from 'react-icons/fa'
 ```
 
 or import multiple icons from the same pack
 
 ```javascript
-    import {MdCancel, MdChat, MdCheck} from 'react-icons/md';
+import {MdCancel, MdChat, MdCheck} from 'react-icons/md';
 ```
 every icon pack is in their own folder
 * Material Design Icons => ./md
@@ -73,7 +78,7 @@ You can add more icons by submitting pull requests or creating issues.
 You can configure react-icons props in context.
 
 ```javascript
-class Theme extends Component {
+class HigherOrderComponent extends Component {
 
     static childContextTypes = {
         reactIconBase: PropTypes.object
@@ -90,14 +95,17 @@ class Theme extends Component {
             }
         }
     }
+
+    render() {
+        ...
+    }
 }
 ```
 
-And you can override context props at the instance level.
+Context is overriden inline.
 
 ```javascript
-const MyIcon = () =>
-    <Icon size={30} color='aliceblue' style={{ ... }} />
+<Icon size={30} color='aliceblue' style={{ ... }} />
 ```
 
 ### Contribution

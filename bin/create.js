@@ -43,16 +43,13 @@ glob(rootDir + '/icons/*/*.svg', function(err, icons) {
         }
         types[folder][name] = location;
         var component = `
-let React = require('react');
-let IconBase = require('react-icon-base');
+import React from 'react'
+import Icon from 'react-icon-base'
 
-export default function ${name}(props) {
-    return (
-        <IconBase viewBox="${viewBox}" {...props}>
-            <g>${iconSvg}</g>
-        </IconBase>
-    );
-}
+export default props =>
+    <Icon viewBox="${viewBox}" {...props}>
+        <g>${iconSvg}</g>
+    </Icon>
 `
 
         fs.writeFileSync(path.join(rootDir, location), component, 'utf-8');

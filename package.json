@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "svg react icons of popular icon packs using ES6 imports",
   "scripts": {
     "docs": "babel-node ./bin/generate-docs",
@@ -60,7 +60,7 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {
-    "react-icon-base": "2.0.3"
+    "react-icon-base": "2.0.4"
   },
   "config": {
     "ghooks": {

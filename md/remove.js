@@ -1,13 +1,11 @@
 
-let React = require('react');
-let IconBase = require('react-icon-base');
+import React from 'react'
+import Icon from 'react-icon-base'
 
-export default class MdRemove extends React.Component {
-    render() {
-        return (
-            <IconBase viewBox="0 0 40 40" {...this.props}>
-                <g><path d="m31.6 21.6h-23.2v-3.2h23.2v3.2z"/></g>
-            </IconBase>
-        );
-    }
-}
+const MdRemove = props => (
+    <Icon viewBox="0 0 40 40" {...props}>
+        <g><path d="m31.6 21.6h-23.2v-3.2h23.2v3.2z"/></g>
+    </Icon>
+)
+
+export default MdRemove

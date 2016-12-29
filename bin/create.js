@@ -46,10 +46,13 @@ glob(rootDir + '/icons/*/*.svg', function(err, icons) {
 import React from 'react'
 import Icon from 'react-icon-base'
 
-export default props =>
+const ${name} = props => (
     <Icon viewBox="${viewBox}" {...props}>
         <g>${iconSvg}</g>
     </Icon>
+)
+
+export default ${name}
 `
 
         fs.writeFileSync(path.join(rootDir, location), component, 'utf-8');

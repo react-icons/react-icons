@@ -118,6 +118,15 @@ Svg is [supported](http://caniuse.com/#search=svg) by all major browsers.
 ### Why es6 import and not fonts?
 
 With ```react-icons```, you can send icons that are specified instead of one big font file to the users, helping you to recognize which icons are used in your project.
+
+### Using `create-react-app`?
+
+`create-react-app` tries to load the icons as files by default, rather than running through Babel. You may therefore see an erorr message similar to "You may need an appropriate loader...". The recommended workaround is to import from `lib` instead:
+
+```javascript
+import FaBeer from 'react-icons/lib/fa/beer';
+```
+
 ## Related
 
 - [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)

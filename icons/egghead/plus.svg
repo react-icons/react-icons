@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="ico_plus" fill="#4786FF">
             <path d="M11.5,9.5 L11.5,3 L9.5,3 L9.5,9.5 L3,9.5 L3,11.5 L9.5,11.5 L9.5,18 L11.5,18 L11.5,11.5 L18,11.5 L18,9.5 L11.5,9.5 Z"></path>
         </g>

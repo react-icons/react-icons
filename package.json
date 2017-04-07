@@ -6,7 +6,8 @@
     "docs": "babel-node ./bin/generate-docs",
     "build": "node ./bin/create | xargs babel --out-dir lib",
     "prepublish": "npm run build",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "bump": "yarn version && git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -55,17 +56,12 @@
     "underscore": "^1.8.3",
     "validate-commit-msg": "^2.6.1"
   },
-  "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0"
-  },
   "dependencies": {
-    "react-icon-base": "2.0.4"
+    "react-icon-base": "2.0.4",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
   },
   "config": {
-    "ghooks": {
-      "commit-msg": "validate-commit-msg"
-    },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     },

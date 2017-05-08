@@ -591,6 +591,7 @@ export FaUserPlus from './user-plus';
 export FaUserSecret from './user-secret';
 export FaUserTimes from './user-times';
 export FaUser from './user';
+export FaUsers from './users';
 export FaVenusDouble from './venus-double';
 export FaVenusMars from './venus-mars';
 export FaVenus from './venus';

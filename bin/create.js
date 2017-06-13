@@ -63,7 +63,7 @@ export default ${name}
             loc = loc.replace('.js', '');
             loc = loc.replace('/'+folder, '');
             loc = "." + loc;
-            return `export ${name} from '${loc}';`;
+            return `export { default as ${name} } from '${loc}';`;
         }).join('\n') + '\n';
         fs.writeFileSync(path.join(rootDir, folder , 'index.js'), iconsModule, 'utf-8');
         console.log(path.join('.', folder, 'index.js'));

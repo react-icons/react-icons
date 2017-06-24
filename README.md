@@ -46,7 +46,13 @@ You can include icons directly from ```react-icons``` using ```import FaBeer fro
 Also it's possible to include the whole icon pack from:
 
 ```javascript
-import * as FontAwesome from 'react-icons/fa'
+import * as FontAwesome from 'react-icons/lib/fa'
+
+class Question extends React.Component {
+    render() {
+        return <h3> Lets go for a <FontAwesome.FaBeer />? </h3>
+    }
+}
 ```
 
 or import multiple icons from the same pack

@@ -63,13 +63,15 @@ every icon pack is in their own folder
 
 to view all icons visit [docs](http://gorangajic.github.io/react-icons/)
 
+Also, to view and search for the necessary icons you can use the tool [Icon Viewer](https://andy-pro.github.io/icon-viewer).
+
 ### Icons
 
 Currently supported icons are:
 * Material Design Icons by Google https://www.google.com/design/icons/ (licence: [CC-BY 4.0](https://github.com/google/material-design-icons/blob/master/LICENSE))
 * Font Awesome by Dave Gandy - http://fontawesome.io (licence: [SIL OFL 1.1](http://scripts.sil.org/OFL))
 * Typicons by Stephen Hutchings - http://typicons.com (licence: [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/))
-* Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt)
+* Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt))
 * Ionicons by Ionic Framework - http://ionicons.com (licence: [MIT](https://github.com/driftyco/ionicons/blob/master/LICENSE))
 
 You can add more icons by submitting pull requests or creating issues.

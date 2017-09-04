@@ -60,7 +60,7 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {
-    "react-icon-base": "2.0.7"
+    "react-icon-base": "2.1.0"
   },
   "config": {
     "ghooks": {

@@ -56,8 +56,8 @@
     "validate-commit-msg": "^2.6.1"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0"
+    "react": "^0.14.0 || ^16.0.0",
+    "react-dom": "^0.14.0 || ^16.0.0"
   },
   "dependencies": {
     "react-icon-base": "2.0.7"

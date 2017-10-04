@@ -132,7 +132,7 @@ With ```react-icons```, you can send icons that are specified instead of one big
 `create-react-app` tries to load the icons as files by default, rather than running through Babel. You may therefore see an erorr message similar to "You may need an appropriate loader...". The recommended workaround is to import from `lib` instead:
 
 ```javascript
-import FaBeer from 'react-icons/lib/fa/beer';
+import { FaBeer } from 'react-icons/lib/fa';
 ```
 
 ## Related

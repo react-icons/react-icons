@@ -1,4 +1,6 @@
 node_modules
 dist
 publish
-lib
+.DS_Store
+dest
+

@@ -3,4 +3,5 @@ dist
 publish
 .DS_Store
 dest
+lib
 

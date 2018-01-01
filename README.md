@@ -23,11 +23,16 @@ node >= v8.9.1
 ```
 
 ### Build
+Before to import make sure that you have already the ```lib``` folder otherwise please insert these commands in your terminal inside this package
 ```Bash
-npm run build
+~/cd react-icons
+~/npm i
+~/npm run build
+~/rm -rf node_modules
 ```
 
 ### Usage
+When you have the ```lib``` folder you can import this into your project
 ```javascript
 
 import FaBeer from 'react-icons/lib/fa/beer';

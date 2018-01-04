@@ -25,11 +25,16 @@ node >= v8.9.1
 ### Build
 Before to import make sure that you have already the ```lib``` folder otherwise please insert these commands in your terminal inside this package
 ```Bash
-~/cd react-icons
+~/cd node_modules/react-icons/
+
 ~/npm i
+
 ~/npm run build
+
 ~/rm -rf node_modules
+
 ```
+When you can see the lib folder ,this means that the command for build script was successful ..
 
 ### Usage
 When you have the ```lib``` folder you can import this into your project
@@ -77,7 +82,7 @@ class Question extends React.Component {
 or import multiple icons from the same pack
 
 ```javascript
-import {MdCancel, MdChat, MdCheck} from 'react-icons/md';
+import {MdCancel, MdChat, MdCheck} from 'react-icons/lib/md';
 ```
 every icon pack is in their own folder
 * Material Design Icons => ./md

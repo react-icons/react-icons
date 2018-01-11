@@ -14,27 +14,13 @@ Include popular icons in your React projects easly with ```react-icons```, which
 This package require the version of node 8.9.1 or later 
 ```Bash
 npm  >= 5.6.0
-node >= v8.9.1
+node >= v8.9.4
 ```
 
 ### Installation
 ```Bash
     npm install react-icons --save
 ```
-
-### Build
-Before to import make sure that you have already the ```lib``` folder otherwise please insert these commands in your terminal inside this package
-```Bash
-~/cd node_modules/react-icons/
-
-~/npm i
-
-~/npm run build
-
-~/rm -rf node_modules
-
-```
-When you can see the lib folder ,this means that the command for build script was successful ..
 
 ### Usage
 When you have the ```lib``` folder you can import this into your project

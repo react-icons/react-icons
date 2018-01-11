@@ -1,5 +1,10 @@
 node_modules
 dist
 publish
+<<<<<<< HEAD
+=======
+.DS_Store
+dest
+>>>>>>> origin/master
 lib
 

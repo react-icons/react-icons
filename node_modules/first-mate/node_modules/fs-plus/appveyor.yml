@@ -1,0 +1,17 @@
+environment:
+  nodejs_version: "6"
+
+platform:
+  - x64
+  - x86
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+test_script:
+  - node -e "console.log(`${process.version} ${process.arch} ${process.platform}`)"
+  - npm --version
+  - npm test
+
+build: off

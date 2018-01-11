@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Material Design Lite</title>
+
+    <!-- Add to homescreen -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fallback to homescreen for Chrome <39 on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Material Design Lite">
+    <link rel="icon" sizes="192x192" href="../assets/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon" href="../assets/ios-desktop.png">
+
+    <!-- TODO: Tile icon for Win8 (144x144 + tile color) -->
+    <!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png"> -->
+    <!-- <meta name="msapplication-TileColor" content="#3372DF"> -->
+
+    <meta name="theme-color" content="#263238">
+
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="../assets/prism-default.css">
+    <link rel="stylesheet" href="../material.min.css">
+    <link rel="stylesheet" href="../assets/main.css">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body class="showcase">
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    // if (document.location.hostname !== 'localhost' &&
+    //     document.location.hostname !== '127.0.0.1' &&
+    //     document.location.hostname.search('.corp.') === -1) {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-25993200-9', 'auto');
+      // If a specific component page is loaded directly we'll attribute the
+      // page view to the specific component's page
+      if (window.location.pathname.indexOf('/components/') !== -1 &&
+          window.location.hash.indexOf('-section') !== -1) {
+        ga('send', 'pageview', '/components/' +
+            window.location.hash.split('#')[1].split('/')[0]);
+      } else {
+        ga('send', 'pageview');
+      }
+    // }
+
+    // Setup error tracking before anything else runs.
+  window.onerror = function(message, file, lineNumber, columnNumber, error) {
+    try {
+      if (error !== undefined) {
+        message = error.stack;
+      }
+       ga('send', 'event', 'error', file + ':' + lineNumber, String(message));
+    } catch (e) {
+      // no-op
+    }
+  };
+  </script>
+  <div class="image-preloader"></div>
+  <div class="docs-layout mdl-layout mdl-js-layout">
+    <header class="docs-layout-header mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="docs-layout-title mdl-layout-title"><a href="../">Material<br>Design<br>Lite</a></span>
+      </div>
+      <div class="docs-navigation__container">
+        <nav class="docs-navigation mdl-navigation">
+          <a href="../index.html" class="mdl-navigation__link about">About</a>
+          <a href="../started/index.html" class="mdl-navigation__link started">Getting Started</a>
+          <a href="../templates/index.html" class="mdl-navigation__link templates">Templates</a>
+          <a href="../components/index.html" class="mdl-navigation__link components">Components</a>
+          <a href="../styles/index.html" class="mdl-navigation__link styles">Styles</a>
+          <a href="../customize/index.html" class="mdl-navigation__link customize">Customize</a>
+          <a href="../showcase/index.html" class="mdl-navigation__link showcase">Showcase</a>
+          <a href="../faq/index.html" class="mdl-navigation__link faq">FAQ</a>
+          <div class="spacer"></div>
+          <a href="https://github.com/google/material-design-lite" class="mdl-navigation__link mdl-navigation__link--icon github"><i class="material-icons">link</i><span>GitHub</span></a>
+          <a href="../started/index.html#download" class="mdl-navigation__link mdl-navigation__link--icon download">
+            <i class="material-icons">&#xE2C4;</i><span>Download</span>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab mdl-color--lime-A200">
+              <i class="material-icons">&#xE2C4;</i>
+            </button>
+          </a>
+        </nav>
+      </div>
+      <i class="material-icons scrollindicator scrollindicator--right">&#xE315;</i>
+      <i class="material-icons scrollindicator scrollindicator--left">&#xE314;</i>
+    </header>
+    <main class="docs-layout-content mdl-layout__content mdl-color-text--grey-600">
+      <div class="content mdl-grid mdl-grid--no-spacing" id="content">
+        <div class="subpageheader mdl-cell--12-col">Showcase: sites using MDL</div>
+        
+<div class="sites__content">
+<p>Material Design Lite is used on a wide range of sites. Below are just a small selection of the <strong>Google.com</strong> sites that have launched using us. We hope to expand the showcase to cover third-party and community sites built using MDL in the near future. To request your site be added, please file a <a href="https://github.com/Google/material-design-lite/issues/new?title=Site%20Showcase%20Request&body=Please%20include:%0A*%20Description%0A*%20Primary%20Link%0A*%20Screenshot">new issue</a> on our GitHub issue tracker.</p>
+</div>
+
+
+
+<section class="template template--wallet docs-text-styling mdl-grid mdl-cell mdl-cell--12-col">
+  <img src="../assets/showcase/wallet.jpg"
+    srcset="../assets/showcase/wallet.jpg 1x, ../assets/showcase/wallet_2x.jpg 2x"
+    class="template__preview mdl-cell mdl-cell--8-col">
+  <div class="template__meta mdl-cell mdl-cell--4-col mdl-grid mdl-grid--no-spacing">
+    <h3 class="template__header mdl-cell mdl-cell--12-col mdl-typography--body-2">Google Wallet</h3>
+    <p class="mdl-cell mdl-cell--12-col">
+      Google Wallet allows you to send money to anyone in the US with an email address. It&#39;s fast, easy, and free to send directly from your debit card, bank account, or Wallet Balance.
+    </p>
+    <a href="../assets/showcase/wallet_2x.jpg" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">image</i>
+      </button>
+      Screenshot
+    </a>
+    <a href="https://www.google.com/wallet/" target="_blank" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+      Visit
+    </a>
+  </div>
+</section>
+
+<section class="template template--contributor docs-text-styling mdl-grid mdl-cell mdl-cell--12-col">
+  <img src="../assets/showcase/contributor.jpg"
+    srcset="../assets/showcase/contributor.jpg 1x, ../assets/showcase/contributor_2x.jpg 2x"
+    class="template__preview mdl-cell mdl-cell--8-col">
+  <div class="template__meta mdl-cell mdl-cell--4-col mdl-grid mdl-grid--no-spacing">
+    <h3 class="template__header mdl-cell mdl-cell--12-col mdl-typography--body-2">Google Contributor</h3>
+    <p class="mdl-cell mdl-cell--12-col">
+      Contribute a few dollars each month. See fewer ads. It&#39;s that simple. The money you contribute helps fund the sites you visit.
+    </p>
+    <a href="../assets/showcase/contributor_2x.jpg" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">image</i>
+      </button>
+      Screenshot
+    </a>
+    <a href="https://www.google.com/contributor/welcome/" target="_blank" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+      Visit
+    </a>
+  </div>
+</section>
+
+<section class="template template--work_partners docs-text-styling mdl-grid mdl-cell mdl-cell--12-col">
+  <img src="../assets/showcase/work_partners.jpg"
+    srcset="../assets/showcase/work_partners.jpg 1x, ../assets/showcase/work_partners_2x.jpg 2x"
+    class="template__preview mdl-cell mdl-cell--8-col">
+  <div class="template__meta mdl-cell mdl-cell--4-col mdl-grid mdl-grid--no-spacing">
+    <h3 class="template__header mdl-cell mdl-cell--12-col mdl-typography--body-2">Google for Work</h3>
+    <p class="mdl-cell mdl-cell--12-col">
+      The Google for Work Partner Program enables you to sell, service, and innovate by leveraging our products and platforms across the Google for Work suite.
+    </p>
+    <a href="../assets/showcase/work_partners_2x.jpg" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">image</i>
+      </button>
+      Screenshot
+    </a>
+    <a href="https://www.google.com/work/partners/" target="_blank" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+      Visit
+    </a>
+  </div>
+</section>
+
+<section class="template template--rework docs-text-styling mdl-grid mdl-cell mdl-cell--12-col">
+  <img src="../assets/showcase/rework.jpg"
+    srcset="../assets/showcase/rework.jpg 1x, ../assets/showcase/rework_2x.jpg 2x"
+    class="template__preview mdl-cell mdl-cell--8-col">
+  <div class="template__meta mdl-cell mdl-cell--4-col mdl-grid mdl-grid--no-spacing">
+    <h3 class="template__header mdl-cell mdl-cell--12-col mdl-typography--body-2">reWork with Google</h3>
+    <p class="mdl-cell mdl-cell--12-col">
+      Practices, research, and ideas from Google and other organizations to put people first.
+    </p>
+    <a href="../assets/showcase/rework_2x.jpg" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">image</i>
+      </button>
+      Screenshot
+    </a>
+    <a href="https://rework.withgoogle.com/" target="_blank" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+      Visit
+    </a>
+  </div>
+</section>
+
+<section class="template template--developers docs-text-styling mdl-grid mdl-cell mdl-cell--12-col">
+  <img src="../assets/showcase/developers.jpg"
+    srcset="../assets/showcase/developers.jpg 1x, ../assets/showcase/developers_2x.jpg 2x"
+    class="template__preview mdl-cell mdl-cell--8-col">
+  <div class="template__meta mdl-cell mdl-cell--4-col mdl-grid mdl-grid--no-spacing">
+    <h3 class="template__header mdl-cell mdl-cell--12-col mdl-typography--body-2">Google Developers</h3>
+    <p class="mdl-cell mdl-cell--12-col">
+      Web Fundamentals is a comprehensive resource for multi-device web development hosted by Google Developers.
+    </p>
+    <a href="../assets/showcase/developers_2x.jpg" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">image</i>
+      </button>
+      Screenshot
+    </a>
+    <a href="https://developers.google.com/web/fundamentals/" target="_blank" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+      Visit
+    </a>
+  </div>
+</section>
+
+<section class="template template--sunroof docs-text-styling mdl-grid mdl-cell mdl-cell--12-col">
+  <img src="../assets/showcase/sunroof.jpg"
+    srcset="../assets/showcase/sunroof.jpg 1x, ../assets/showcase/sunroof_2x.jpg 2x"
+    class="template__preview mdl-cell mdl-cell--8-col">
+  <div class="template__meta mdl-cell mdl-cell--4-col mdl-grid mdl-grid--no-spacing">
+    <h3 class="template__header mdl-cell mdl-cell--12-col mdl-typography--body-2">Google Project Sunroof</h3>
+    <p class="mdl-cell mdl-cell--12-col">
+      Project Sunroof puts Google&#39;s expansive data in mapping and computing resources to use, helping calculate the best solar plan for you.
+    </p>
+    <a href="../assets/showcase/sunroof_2x.jpg" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">image</i>
+      </button>
+      Screenshot
+    </a>
+    <a href="https://www.google.com/get/sunroof/about/" target="_blank" class="mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+      Visit
+    </a>
+  </div>
+</section>
+
+
+      </div>
+      <section class="docs-text-styling download mdl-color--grey-800">
+        <a href="../started/index.html#download" class="mdl-color-text--grey-50">Download Kit</a>
+      </section>
+      <footer class="docs-text-styling docs-footer mdl-mini-footer mdl-color--grey-900">
+        <ul>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="https://twitter.com/googledesign" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
+          </li>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="https://github.com/google/material-design-lite" class="social-btn social-btn__github" role="button" title="GitHub"></a>
+          </li>
+          <li class="mdl-mini-footer--social-btn">
+            <a href="https://plus.google.com/+googledesign" class="social-btn social-btn__gplus" role="button" title="Google+"></a>
+          </li>
+        </ul>
+        <ul class="docs-link-list">
+          <li><a class="mdl-color-text--grey-600" href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
+          <li><a class="mdl-color-text--grey-600" href="https://github.com/google/material-design-lite/issues">Help</a></li>
+        </ul>
+      </footer>
+    </main>
+  </div>
+
+    <!-- IE Compatibility shims -->
+      <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js""></script>
+      <![endif]-->
+
+      <!--[if IE]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.7/es5-shim.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js"></script>
+        <link href="../assets/ie.css" rel="stylesheet">
+      <![endif]-->
+    <!-- end shims -->
+
+
+    <!-- Material Design Lite -->
+    <script src="../material.min.js"></script>
+    <!-- Add Copy-to-CodePen buttons to code blocks -->
+    <script src="../assets/codepen.js"></script>
+    <!-- Enable Prism syntax highlighting -->
+    <script src="../assets/prism.js"></script>
+    <script src="../assets/prism-markup.min.js"></script>
+    <script src="../assets/prism-javascript.min.js"></script>
+    <script src="../assets/prism-css.min.js"></script>
+    <script src="../assets/prism-bash.min.js"></script>
+    <script src="../assets/main.js"></script>
+    <!-- Built with love using Material Design Lite -->
+  </body>
+</html>

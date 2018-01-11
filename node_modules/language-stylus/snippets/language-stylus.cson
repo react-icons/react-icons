@@ -1,0 +1,1243 @@
+'.source.stylus':
+  '::after':
+    'prefix': ':a'
+    'body': '::after$0'
+  '::before':
+    'prefix': ':b'
+    'body': '::before$0'
+  '::first-letter':
+    'prefix': '::fl'
+    'body': '::first-letter$0'
+  '::first-line':
+    'prefix': ':fl'
+    'body': '::first-line$0'
+  '::selection':
+    'prefix': ':s'
+    'body': '::selection$0'
+  ':active':
+    'prefix': ':a'
+    'body': ':active$0'
+  ':checked':
+    'prefix': ':c'
+    'body': ':checked$0'
+  ':default':
+    'prefix': ':d'
+    'body': ':default$0'
+  ':disabled':
+    'prefix': ':d'
+    'body': ':disabled$0'
+  ':empty':
+    'prefix': ':e'
+    'body': ':empty$0'
+  ':enabled':
+    'prefix': ':e'
+    'body': ':enabled$0'
+  ':first-child':
+    'prefix': ':fc'
+    'body': ':first-child$0'
+  ':first-of-type':
+    'prefix': ':fot'
+    'body': ':first-of-type$0'
+  ':first':
+    'prefix': ':f'
+    'body': ':first$0'
+  ':focus':
+    'prefix': ':f'
+    'body': ':focus$0'
+  ':hover':
+    'prefix': ':h'
+    'body': ':hover$0'
+  ':indeterminate':
+    'prefix': ':i'
+    'body': ':indeterminate$0'
+  ':invalid':
+    'prefix': ':i'
+    'body': ':invalid$0'
+  ':lang':
+    'prefix': ':l'
+    'body': ':lang$0'
+  ':last-child':
+    'prefix': ':lc'
+    'body': ':last-child$0'
+  ':last-of-type':
+    'prefix': ':lot'
+    'body': ':last-of-type$0'
+  ':left':
+    'prefix': ':l'
+    'body': ':left$0'
+  ':link':
+    'prefix': ':l'
+    'body': ':link$0'
+  ':not()':
+    'prefix': ':n'
+    'body': ':not($1)$0'
+  ':nth-child()':
+    'prefix': ':nc'
+    'body': ':nth-child(${1:odd})$0'
+  ':nth-last-child()':
+    'prefix': ':nlc'
+    'body': ':nth-last-child(${1:odd})$0'
+  ':nth-last-of-type()':
+    'prefix': ':nlot'
+    'body': ':nth-last-of-type(${1:odd})$0'
+  ':nth-of-type()':
+    'prefix': ':not'
+    'body': ':nth-of-type(${1:odd})$0'
+  ':only-of-type':
+    'prefix': ':oot'
+    'body': ':only-of-type$0'
+  ':optional':
+    'prefix': ':o'
+    'body': ':optional$0'
+  ':required':
+    'prefix': ':r'
+    'body': ':required$0'
+  ':right':
+    'prefix': ':r'
+    'body': ':right$0'
+  ':root':
+    'prefix': ':r'
+    'body': ':root$0'
+  ':target':
+    'prefix': ':t'
+    'body': ':target$0'
+  ':valid':
+    'prefix': ':v'
+    'body': ':valid$0'
+  ':visited':
+    'prefix': ':v'
+    'body': ':visited$0'
+  '@font-face':
+    'prefix': '@'
+    'body': '@font-face {\n    font-family \'${1:font-name}\'\n    src url(\'${2:font-file}.eot\')\n    src url(\'$2.eot?#iefix\') format(\'embedded-opentype\'),\n         url(\'$2.woff\') format(\'woff\'),\n         url(\'$2.ttf\') format(\'truetype\'),\n         url(\'$2.svg#$1\') format(\'svg\')\n    font-weight normal\n    font-style normal\n}$0'
+  '@keyframes':
+    'prefix': '@'
+    'body': '@keyframes ${1:name} {\n\t0% {\n\t\t$2\n\t}\n\t100% {\n\t\t$0\n\t}\n}'
+  'IE6 clearfix':
+    'prefix': 'clf'
+    'body': '.clearfix:after {\n    content "."\n    display block\n    height 0\n    clear both\n    visibility hidden\n}$0'
+  'IE6 min-height':
+    'prefix': 'mh'
+    'body': 'min-height ${1:100}${2:px}\nheight auto !important\nheight $1$2$0'
+  '[attr$=""]':
+    'prefix': '['
+    'body': '[${1:src}$="${2:.jpg}"]$0'
+  '[attr*=""]':
+    'prefix': '['
+    'body': '[${1:href}*="${2:google}"]$0'
+  '[attr=""]':
+    'prefix': '['
+    'body': '[${1:target}="${2:_blank}"]$0'
+  '[attr]':
+    'prefix': '['
+    'body': '[${1:title}]$0'
+  '[attr^=""]':
+    'prefix': '['
+    'body': '[${1:href}^="${2:http://}"]$0'
+  '[attr|=""]':
+    'prefix': '['
+    'body': '[$1|="$2"]$0'
+  '[attr~=""]':
+    'prefix': '['
+    'body': '[$1~="$2"]$0'
+  'animation expanded':
+    'prefix': 'a'
+    'body': 'animation-name ${1:name}\nanimation-duration ${2:1}s\n${3:animation-delay ${4:1}s\n}${5:animation-direction ${6:alternate}\n}${7:animation-iteration-count ${8:infinite}\n}${9:animation-timing-function ${10:ease}$0}'
+  'animation-delay':
+    'prefix': 'ad'
+    'body': 'animation-delay ${1:1}s$0'
+  'animation-direction alternate':
+    'prefix': 'ad'
+    'body': 'animation-direction alternate$0'
+  'animation-direction normal':
+    'prefix': 'adn'
+    'body': 'animation-direction normal$0'
+  'animation-duration':
+    'prefix': 'ad'
+    'body': 'animation-duration ${1:1}s$0'
+  'animation-iteration-count':
+    'prefix': 'adic'
+    'body': 'animation-iteration-count ${1:1}$0'
+  'animation-iteration-count infinite':
+    'prefix': 'adici'
+    'body': 'animation-iteration-count infinite$0'
+  'animation-name':
+    'prefix': 'an'
+    'body': 'animation-name ${1:name}$0'
+  'animation-name none':
+    'prefix': 'ann'
+    'body': 'animation-name none$0'
+  'animation-play-state paused':
+    'prefix': 'apsp'
+    'body': 'animation-play-state paused$0'
+  'animation-play-state running':
+    'prefix': 'apsr'
+    'body': 'animation-play-state running$0'
+  'animation-timing-function cubic-bezier()':
+    'prefix': 'atf'
+    'body': 'animation-timing-function cubic-bezier(${1:0}, ${1:0}, ${1:1}, ${1:1})$0'
+  'animation-timing-function ease':
+    'prefix': 'atf'
+    'body': 'animation-timing-function ease$0'
+  'animation-timing-function ease-in':
+    'prefix': 'atfei'
+    'body': 'animation-timing-function ease-in$0'
+  'animation-timing-function ease-in-out':
+    'prefix': 'atf'
+    'body': 'animation-timing-function ease-in-out$0'
+  'animation-timing-function ease-out':
+    'prefix': 'atfeo'
+    'body': 'animation-timing-function ease-out$0'
+  'animation-timing-function linear':
+    'prefix': 'atfl'
+    'body': 'animation-timing-function linear$0'
+  'animation':
+    'prefix': 'a'
+    'body': 'animation ${1:name} ${2:1}s${3: ${4:1}s}${5: ${6:1}}${7: alternate} ${8:ease}$0'
+  'background expanded':
+    'prefix': 'bg'
+    'body': 'background-image url("$1")\nbackground-position ${2:${3:0}${4:px}} ${5:${6:0}${7:px}}\nbackground-repeat ${8:no-repeat}$0'
+  'background-attachment fixed':
+    'prefix': 'bga'
+    'body': 'background-attachment fixed$0'
+  'background-attachment scroll':
+    'prefix': 'bga'
+    'body': 'background-attachment fixed$0'
+  'background-clip border-box':
+    'prefix': 'bgcl'
+    'body': 'background-clip border-box$0'
+  'background-clip content-box':
+    'prefix': 'bgcl'
+    'body': 'background-clip content-box$0'
+  'background-clip padding-box':
+    'prefix': 'bgcl'
+    'body': 'background-clip padding-box$0'
+  'background-color hex':
+    'prefix': 'bgc'
+    'body': 'background-color #${1:CCC}$0'
+  'background-color rgb()':
+    'prefix': 'bgcrgb'
+    'body': 'background-color rgb(${1:255}, ${2:255}, ${3:255})$0'
+  'background-color transparent':
+    'prefix': 'bgct'
+    'body': 'background-color transparent$0'
+  'background-image none':
+    'prefix': 'bgin'
+    'body': 'background-image none$0'
+  'background-image url()':
+    'prefix': 'bgi'
+    'body': 'background-image url("$1")$0'
+  'background-origin border-box':
+    'prefix': 'bgo'
+    'body': 'background-origin border-box$0'
+  'background-origin content-box':
+    'prefix': 'bgoc'
+    'body': 'background-origin content-box$0'
+  'background-origin padding-box':
+    'prefix': 'bgop'
+    'body': 'background-origin padding-box$0'
+  'background-position':
+    'prefix': 'bgp'
+    'body': 'background-position ${1:${2:0}${3:px}} ${4:${5:0}${6:px}}$0'
+  'background-repeat no-repeat':
+    'prefix': 'bgrn'
+    'body': 'background-repeat no-repeat$0'
+  'background-repeat repeat':
+    'prefix': 'bgr'
+    'body': 'background-repeat repeat$0'
+  'background-repeat repeat-x':
+    'prefix': 'bgr'
+    'body': 'background-repeat repeat-x$0'
+  'background-repeat repeat-y':
+    'prefix': 'bgr'
+    'body': 'background-repeat repeat-y$0'
+  'background-repeat round':
+    'prefix': 'bgr'
+    'body': 'background-repeat round$0'
+  'background-repeat space':
+    'prefix': 'bgrs'
+    'body': 'background-repeat space$0'
+  'background-size':
+    'prefix': 'bgs'
+    'body': 'background-size ${1:${2:0}${3:px}} ${4:${5:0}${6:px}}$0'
+  'background-size contain':
+    'prefix': 'bgsc'
+    'body': 'background-size contain$0'
+  'background-size cover':
+    'prefix': 'bgsc'
+    'body': 'background-size cover$0'
+  'background':
+    'prefix': 'bg'
+    'body': 'background url("$1")${2: ${3:0${4:px}} ${5:0${6:px}}} ${7:no-repeat}$0'
+  'border-bottom-color':
+    'prefix': 'bbc'
+    'body': 'border-bottom-color ${1:#${2:777}}$0'
+  'border-bottom-left-radius':
+    'prefix': 'bblr'
+    'body': 'border-bottom-right-radius ${1:3}px$0'
+  'border-bottom-left-radius 0':
+    'prefix': 'bblrr'
+    'body': 'border-bottom-right-radius 0$0'
+  'border-bottom-right-radius':
+    'prefix': 'bbrr'
+    'body': 'border-bottom-right-radius ${1:3}px$0'
+  'border-bottom-right-radius 0':
+    'prefix': 'bbrrr'
+    'body': 'border-bottom-right-radius 0$0'
+  'border-bottom-style':
+    'prefix': 'bbs'
+    'body': 'border-bottom-style ${1:solid}$0'
+  'border-bottom-style none':
+    'prefix': 'bbsn'
+    'body': 'border-bottom-style ${1:none}$0'
+  'border-bottom-width':
+    'prefix': 'bbw'
+    'body': 'border-bottom-width ${1:1}${2:px}$0'
+  'border-bottom-width 0':
+    'prefix': 'bbww'
+    'body': 'border-bottom-width 0$0'
+  'border-bottom':
+    'prefix': 'bb'
+    'body': 'border-bottom ${1:1}px ${2:solid} ${3:#${4:777}}$0'
+  'border-collapse collapse':
+    'prefix': 'bcc'
+    'body': 'border-collapse collapse$0'
+  'border-collapse separate':
+    'prefix': 'bc'
+    'body': 'border-collapse separate$0'
+  'border-color':
+    'prefix': 'bc'
+    'body': 'border-color ${1:#${2:777}}$0'
+  'border-image-slice':
+    'prefix': 'bis'
+    'body': 'border-image-slice ${1:3}${2 fill}$0'
+  'border-image-slice T R B L':
+    'prefix': 'bis'
+    'body': 'border-image-slice ${1:3} ${2:3} ${3:3} ${4:3}${5 fill}$0'
+  'border-image-slice V H':
+    'prefix': 'bis'
+    'body': 'border-image-slice ${1:3} ${2:3}${3 fill}$0'
+  'border-image-source':
+    'prefix': 'bis'
+    'body': 'border-image-source url("$1")$0'
+  'border-image':
+    'prefix': 'bi'
+    'body': 'border-image url("${1:border.png}") ${2:3} ${3:3} ${4:3} ${5:3} ${6:repeat}$0'
+  'border-left-color':
+    'prefix': 'blc'
+    'body': 'border-left-color ${1:#${2:777}}$0'
+  'border-left-style':
+    'prefix': 'bls'
+    'body': 'border-left-style ${1:solid}$0'
+  'border-left-style none':
+    'prefix': 'blsn'
+    'body': 'border-left-style ${1:none}$0'
+  'border-left-width':
+    'prefix': 'blw'
+    'body': 'border-left-width ${1:1}${2:px}$0'
+  'border-left-width 0':
+    'prefix': 'blww'
+    'body': 'border-left-width 0$0'
+  'border-left':
+    'prefix': 'bl'
+    'body': 'border-left ${1:1}px ${2:solid} ${3:#${4:777}}$0'
+  'border-radius 0':
+    'prefix': 'brr'
+    'body': 'border-radius 0$0'
+  'border-radius single':
+    'prefix': 'br'
+    'body': 'border-radius ${1:3}${2:px}$0'
+  'border-radius all':
+    'prefix': 'br'
+    'body': 'border-radius ${1:3}px ${2:3}px ${3:3}px ${4:3}px$0'
+  'border-right-color':
+    'prefix': 'brc'
+    'body': 'border-right-color ${1:#${2:777}}$0'
+  'border-right-style':
+    'prefix': 'brs'
+    'body': 'border-right-style ${1:solid}$0'
+  'border-right-style none':
+    'prefix': 'brsn'
+    'body': 'border-right-style ${1:none}$0'
+  'border-right-width':
+    'prefix': 'brw'
+    'body': 'border-right-width ${1:1}${2:px}$0'
+  'border-right-width 0':
+    'prefix': 'brww'
+    'body': 'border-right-width 0$0'
+  'border-right':
+    'prefix': 'br'
+    'body': 'border-right ${1:1}px ${2:solid} ${3:#${4:777}}$0'
+  'border-spacing':
+    'prefix': 'bs'
+    'body': 'border-spacing ${1:10}${2:px} ${3:10}${4:px}$0'
+  'border-style dashed':
+    'prefix': 'bs'
+    'body': 'border-style dashed$0'
+  'border-style dotted':
+    'prefix': 'bs'
+    'body': 'border-style dotted$0'
+  'border-style double':
+    'prefix': 'bsd'
+    'body': 'border-style double$0'
+  'border-style groove':
+    'prefix': 'bs'
+    'body': 'border-style groove$0'
+  'border-style hidden':
+    'prefix': 'bsn'
+    'body': 'border-style hidden$0'
+  'border-style inset':
+    'prefix': 'bsi'
+    'body': 'border-style inset$0'
+  'border-style none':
+    'prefix': 'bsn'
+    'body': 'border-style none$0'
+  'border-style outset':
+    'prefix': 'bso'
+    'body': 'border-style outset$0'
+  'border-style ridge':
+    'prefix': 'bsr'
+    'body': 'border-style ridge$0'
+  'border-style solid':
+    'prefix': 'bss'
+    'body': 'border-style solid$0'
+  'border-top-color':
+    'prefix': 'btc'
+    'body': 'border-top-color ${1:#${2:777}}$0'
+  'border-top-left-radius':
+    'prefix': 'btlr'
+    'body': 'border-top-left-radius ${1:3}px$0'
+  'border-top-left-radius 0':
+    'prefix': 'btlrr'
+    'body': 'border-top-left-radius 0$0'
+  'border-top-right-radius':
+    'prefix': 'btrr'
+    'body': 'border-top-right-radius ${1:3}px$0'
+  'border-top-right-radius 0':
+    'prefix': 'btrrr'
+    'body': 'border-top-right-radius 0$0'
+  'border-top-style':
+    'prefix': 'bts'
+    'body': 'border-top-style ${1:solid}$0'
+  'border-top-style none':
+    'prefix': 'btsn'
+    'body': 'border-top-style ${1:none}$0'
+  'border-top-width':
+    'prefix': 'btw'
+    'body': 'border-top-width ${1:1}${2:px}$0'
+  'border-top-width 0':
+    'prefix': 'btww'
+    'body': 'border-top-width 0$0'
+  'border-top':
+    'prefix': 'bt'
+    'body': 'border-top ${1:1px} ${2:solid} ${3:#${4:777}}$0'
+  'border-width':
+    'prefix': 'bw'
+    'body': 'border-width ${1:1}${2:px}$0'
+  'border-width 0':
+    'prefix': 'bww'
+    'body': 'border-width 0$0'
+  'border-width T R B L':
+    'prefix': 'bw'
+    'body': 'border-width ${1:3}px ${2:3}px ${3:3}px ${4:3}px$0'
+  'border-width V H':
+    'prefix': 'bw'
+    'body': 'border-width ${1:1}${2:px} ${3:1}${4:px}$0'
+  'border':
+    'prefix': 'b'
+    'body': 'border ${1:1}px ${2:solid} ${3:#${4:777}}$0'
+  'border none':
+    'prefix': 'bn'
+    'body': 'border none$0'
+  'bottom 0':
+    'prefix': 'boo'
+    'body': 'bottom 0$0'
+  'bottom':
+    'prefix': 'bo'
+    'body': 'bottom ${1:10}${2:px}$0'
+  'box-decoration-break clone':
+    'prefix': 'bdbc'
+    'body': 'box-decoration-break clone$0'
+  'box-decoration-break slice':
+    'prefix': 'bdb'
+    'body': 'box-decoration-break slice$0'
+  'box-shadow inset spread':
+    'prefix': 'bs'
+    'body': 'box-shadow ${1:0}px ${2:1}px ${3:3}px ${4:-3px} ${5:rgba(${6:0},${7:0},${8:0},${9:.5})} inset$0'
+  'box-shadow inset':
+    'prefix': 'bs'
+    'body': 'box-shadow ${1:0}px ${2:1}px ${3:3}px ${4:rgba(${5:0},${6:0},${7:0},${8:.5})} inset$0'
+  'box-shadow spread':
+    'prefix': 'bs'
+    'body': 'box-shadow ${1:0}px ${2:1}px ${3:3}px ${4:-3px} ${5:rgba(${6:0},${7:0},${8:0},${9:.5})}$0'
+  'box-shadow':
+    'prefix': 'bs'
+    'body': 'box-shadow ${1:0}px ${2:1}px ${3:3}px ${4:rgba(${5:0},${6:0},${7:0},${8:.5})}$0'
+  'box-sizing border-box':
+    'prefix': 'bs'
+    'body': 'box-sizing border-box$0'
+  'box-sizing content-box':
+    'prefix': 'bs'
+    'body': 'box-sizing content-box$0'
+  'caption-side bottom':
+    'prefix': 'cs'
+    'body': 'caption-side bottom$0'
+  'caption-side top':
+    'prefix': 'cst'
+    'body': 'caption-side top$0'
+  'clear both':
+    'prefix': 'clb'
+    'body': 'clear both$0'
+  'clear left':
+    'prefix': 'cll'
+    'body': 'clear left$0'
+  'clear none':
+    'prefix': 'cl'
+    'body': 'clear none$0'
+  'clear right':
+    'prefix': 'cl'
+    'body': 'clear right$0'
+  'clip rect()':
+    'prefix': 'cl'
+    'body': 'clip rect(${1:10}px, ${2:10}px, ${3:10}px, ${4:10}px)'
+  'color':
+    'prefix': 'c'
+    'body': 'color ${1:#${2:fff}}$0'
+  'content':
+    'prefix': 'co'
+    'body': 'content "$1"$0'
+  'content attr()':
+    'prefix': 'coa'
+    'body': 'content attr("${1:title}")$0'
+  'content url()':
+    'prefix': 'cou'
+    'body': 'content url("$1")$0'
+  'cursor alias':
+    'prefix': 'cu'
+    'body': 'cursor alias$0'
+  'cursor all-scroll':
+    'prefix': 'cu'
+    'body': 'cursor all-scroll$0'
+  'cursor auto':
+    'prefix': 'cu'
+    'body': 'cursor auto$0'
+  'cursor cell':
+    'prefix': 'cu'
+    'body': 'cursor cell$0'
+  'cursor col-resize':
+    'prefix': 'cu'
+    'body': 'cursor col-resize$0'
+  'cursor copy':
+    'prefix': 'cu'
+    'body': 'cursor copy$0'
+  'cursor count-down':
+    'prefix': 'cu'
+    'body': 'cursor count-down$0'
+  'cursor count-up-down':
+    'prefix': 'cu'
+    'body': 'cursor count-up-down$0'
+  'cursor count-up':
+    'prefix': 'cu'
+    'body': 'cursor count-up$0'
+  'cursor crosshair':
+    'prefix': 'cu'
+    'body': 'cursor crosshair$0'
+  'cursor default':
+    'prefix': 'cu'
+    'body': 'cursor default$0'
+  'cursor e-resize':
+    'prefix': 'cu'
+    'body': 'cursor e-resize$0'
+  'cursor grab':
+    'prefix': 'cu'
+    'body': 'cursor grab$0'
+  'cursor grabbing':
+    'prefix': 'cu'
+    'body': 'cursor grabbing$0'
+  'cursor hand':
+    'prefix': 'cu'
+    'body': 'cursor hand$0'
+  'cursor help':
+    'prefix': 'cu'
+    'body': 'cursor help$0'
+  'cursor move':
+    'prefix': 'cu'
+    'body': 'cursor move$0'
+  'cursor n-resize':
+    'prefix': 'cu'
+    'body': 'cursor n-resize$0'
+  'cursor ne-resize':
+    'prefix': 'cu'
+    'body': 'cursor ne-resize$0'
+  'cursor no-drop':
+    'prefix': 'cu'
+    'body': 'cursor no-drop$0'
+  'cursor not-allowed':
+    'prefix': 'cu'
+    'body': 'cursor not-allowed$0'
+  'cursor nw-resize':
+    'prefix': 'cu'
+    'body': 'cursor nw-resize$0'
+  'cursor pointer':
+    'prefix': 'cu'
+    'body': 'cursor pointer$0'
+  'cursor progress':
+    'prefix': 'cu'
+    'body': 'cursor progress$0'
+  'cursor row-resize':
+    'prefix': 'cu'
+    'body': 'cursor row-resize$0'
+  'cursor s-resize':
+    'prefix': 'cu'
+    'body': 'cursor s-resize$0'
+  'cursor se-resize':
+    'prefix': 'cu'
+    'body': 'cursor se-resize$0'
+  'cursor spinning':
+    'prefix': 'cu'
+    'body': 'cursor spinning$0'
+  'cursor sw-resize':
+    'prefix': 'cu'
+    'body': 'cursor sw-resize$0'
+  'cursor text':
+    'prefix': 'cu'
+    'body': 'cursor text$0'
+  'cursor vertical-text':
+    'prefix': 'cu'
+    'body': 'cursor vertical-text$0'
+  'cursor w-resize':
+    'prefix': 'cu'
+    'body': 'cursor w-resize$0'
+  'cursor wait':
+    'prefix': 'cu'
+    'body': 'cursor wait$0'
+  'direction ltr':
+    'prefix': 'di'
+    'body': 'direction ltr$0'
+  'direction rtl':
+    'prefix': 'di'
+    'body': 'direction rtl$0'
+  'display block':
+    'prefix': 'db'
+    'body': 'display block$0'
+  'display inline':
+    'prefix': 'di'
+    'body': 'display inline$0'
+  'display inline-block':
+    'prefix': 'dib'
+    'body': 'display inline-block$0'
+  'display inline-table':
+    'prefix': 'd'
+    'body': 'display inline-table$0'
+  'display list-item':
+    'prefix': 'd'
+    'body': 'display list-item$0'
+  'display none':
+    'prefix': 'dn'
+    'body': 'display none$0'
+  'display run-in':
+    'prefix': 'd'
+    'body': 'display run-in$0'
+  'display table-caption':
+    'prefix': 'd'
+    'body': 'display table-caption$0'
+  'display table-cell':
+    'prefix': 'd'
+    'body': 'display table-cell$0'
+  'display table-column-group':
+    'prefix': 'd'
+    'body': 'display table-column-group$0'
+  'display table-column':
+    'prefix': 'd'
+    'body': 'display table-column$0'
+  'display table-footer-group':
+    'prefix': 'd'
+    'body': 'display table-footer-group$0'
+  'display table-header-group':
+    'prefix': 'd'
+    'body': 'display table-header-group$0'
+  'display table-row-group':
+    'prefix': 'd'
+    'body': 'display table-row-group$0'
+  'display table-row':
+    'prefix': 'd'
+    'body': 'display table-row$0'
+  'display table':
+    'prefix': 'd'
+    'body': 'display table$0'
+  'empty-cells hide':
+    'prefix': 'ec'
+    'body': 'empty-cells hide$0'
+  'empty-cells show':
+    'prefix': 'ecs'
+    'body': 'empty-cells show$0'
+  'float left':
+    'prefix': 'fl'
+    'body': 'float left$0'
+  'float none':
+    'prefix': 'fln'
+    'body': 'float none$0'
+  'float right':
+    'prefix': 'fl'
+    'body': 'float right$0'
+  'font-family Lucida Sans':
+    'prefix': 'ffl'
+    'body': 'font-family "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif$0'
+  'font-family Arial':
+    'prefix': 'ff'
+    'body': 'font-family Arial, Helvetica, sans-serif$0'
+  'font-family Monaco':
+    'prefix': 'ffm'
+    'body': 'font-family Monaco, Consolas, "Lucida Console", monospace$0'
+  'font-family Times New Roman':
+    'prefix': 'fft'
+    'body': 'font-family "Times New Roman", Times, serif$0'
+  'font-family Trebuchet MS':
+    'prefix': 'ff'
+    'body': 'font-family "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif$0'
+  'font-family Verdana':
+    'prefix': 'ff'
+    'body': 'font-family Verdana, Geneva, Tahoma, sans-serif$0'
+  'font-size':
+    'prefix': 'fs'
+    'body': 'font-size ${1:12}${2:px}$0'
+  'font-style italic':
+    'prefix': 'fsi'
+    'body': 'font-style italic$0'
+  'font-style normal':
+    'prefix': 'fsn'
+    'body': 'font-style normal$0'
+  'font-style oblique':
+    'prefix': 'fs'
+    'body': 'font-style oblique$0'
+  'font-variant normal':
+    'prefix': 'fvn'
+    'body': 'font-variant normal$0'
+  'font-variant small-caps':
+    'prefix': 'fv'
+    'body': 'font-variant small-caps$0'
+  'font-weight bold':
+    'prefix': 'fw'
+    'body': 'font-weight bold$0'
+  'font-weight normal':
+    'prefix': 'fwn'
+    'body': 'font-weight normal$0'
+  'font':
+    'prefix': 'f'
+    'body': 'font ${1:12}${2:px}/${3:18}${4:px} ${5:Helvetica, Arial, sans-serif}$0'
+  'height':
+    'prefix': 'h'
+    'body': 'height ${1:10}${2:px}$0'
+  'height 0':
+    'prefix': 'hh'
+    'body': 'height 0$0'
+  'left':
+    'prefix': 'l'
+    'body': 'left ${1:10}${2:px}$0'
+  'left 0':
+    'prefix': 'll'
+    'body': 'left 0$0'
+  'letter-spacing':
+    'prefix': 'ls'
+    'body': 'letter-spacing ${1:1}${2:px}$0'
+  'letter-spacing normal':
+    'prefix': 'lsn'
+    'body': 'letter-spacing normal$0'
+  'line-height':
+    'prefix': 'lh'
+    'body': 'line-height ${1:18}${2:px}$0'
+  'line-height normal':
+    'prefix': 'lhn'
+    'body': 'line-height normal$0'
+  'list-style-image url()':
+    'prefix': 'lsi'
+    'body': 'list-style-image url("$1")$0'
+  'list-style-image none':
+    'prefix': 'lsin'
+    'body': 'list-style-image none$0'
+  'list-style-position inside':
+    'prefix': 'lsp'
+    'body': 'list-style-position inside$0'
+  'list-style-position outside':
+    'prefix': 'lsp'
+    'body': 'list-style-position outside$0'
+  'list-style-type circle':
+    'prefix': 'lst'
+    'body': 'list-style-type circle$0'
+  'list-style-type decimal-leading-zero':
+    'prefix': 'lst'
+    'body': 'list-style-type decimal-leading-zero$0'
+  'list-style-type decimal':
+    'prefix': 'lst'
+    'body': 'list-style-type decimal$0'
+  'list-style-type disc':
+    'prefix': 'lst'
+    'body': 'list-style-type disc$0'
+  'list-style-type lower-alpha':
+    'prefix': 'lst'
+    'body': 'list-style-type lower-alpha$0'
+  'list-style-type lower-roman':
+    'prefix': 'lst'
+    'body': 'list-style-type lower-roman$0'
+  'list-style-type none':
+    'prefix': 'lstn'
+    'body': 'list-style-type none$0'
+  'list-style-type square':
+    'prefix': 'lst'
+    'body': 'list-style-type square$0'
+  'list-style-type upper-alpha':
+    'prefix': 'lst'
+    'body': 'list-style-type upper-alpha$0'
+  'list-style-type upper-roman':
+    'prefix': 'lst'
+    'body': 'list-style-type upper-roman$0'
+  'list-style':
+    'prefix': 'ls'
+    'body': 'list-style ${1:disc} ${2:inside} ${3:url("$4")}$0'
+  'list-style none':
+    'prefix': 'lsn'
+    'body': 'list-style none'
+  'margin':
+    'prefix': 'm'
+    'body': 'margin ${1:10}${2:px}$0'
+  'margin 0':
+    'prefix': 'mm'
+    'body': 'margin 0$0'
+  'margin T R B L':
+    'prefix': 'm'
+    'body': 'margin ${1:10}${2:px} ${3:10}${4:px} ${5:10}${6:px} ${7:10}${8:px}$0'
+  'margin V H':
+    'prefix': 'm'
+    'body': 'margin ${1:10}${2:px} ${3:10}${4:px}$0'
+  'margin bottom':
+    'prefix': 'mb'
+    'body': 'margin-bottom ${1:10}${2:px}$0'
+  'margin bottom 0':
+    'prefix': 'mbb'
+    'body': 'margin-bottom 0$0'
+  'margin left':
+    'prefix': 'ml'
+    'body': 'margin-left ${1:10}${2:px}$0'
+  'margin left 0':
+    'prefix': 'mll'
+    'body': 'margin-left 0$0'
+  'margin right':
+    'prefix': 'mr'
+    'body': 'margin-right ${1:10}${2:px}$0'
+  'margin right 0':
+    'prefix': 'mrr'
+    'body': 'margin-right 0$0'
+  'margin top':
+    'prefix': 'mt'
+    'body': 'margin-top ${1:10}${2:px}$0'
+  'margin top 0':
+    'prefix': 'mtt'
+    'body': 'margin-top 0$0'
+  'max-height':
+    'prefix': 'mh'
+    'body': 'max-height ${1:100}${2:px}$0'
+  'max-width':
+    'prefix': 'mw'
+    'body': 'max-width ${1:100}${2:px}$0'
+  'min-height':
+    'prefix': 'mh'
+    'body': 'min-height ${1:100}${2:px}$0'
+  'min-width':
+    'prefix': 'mw'
+    'body': 'min-width ${1:100}${2:px}$0'
+  'opacity':
+    'prefix': 'op'
+    'body': 'opacity ${1:0.5}$0'
+  'orphans':
+    'prefix': 'or'
+    'body': 'orphans ${1:2}$0'
+  'outline-color':
+    'prefix': 'olc'
+    'body': 'outline-color ${1:#${2:777}}$0'
+  'outline-offset':
+    'prefix': 'olo'
+    'body': 'outline-offset ${1:3}${2:px}$0'
+  'outline-style dashed':
+    'prefix': 'ols'
+    'body': 'outline-style dashed$0'
+  'outline-style dotted':
+    'prefix': 'olsd'
+    'body': 'outline-style dotted$0'
+  'outline-style double':
+    'prefix': 'olsd'
+    'body': 'outline-style double$0'
+  'outline-style hidden':
+    'prefix': 'ols'
+    'body': 'outline-style hidden$0'
+  'outline-style none':
+    'prefix': 'ols'
+    'body': 'outline-style none$0'
+  'outline-style solid':
+    'prefix': 'ols'
+    'body': 'outline-style solid$0'
+  'outline-width':
+    'prefix': 'olw'
+    'body': 'outline-width ${1:1}${2:px}$0'
+  'outline':
+    'prefix': 'ol'
+    'body': 'outline ${1:1}${2:px} ${3:dotted} ${4:#${5:777}}$0'
+  'overflow-x auto':
+    'prefix': 'oxa'
+    'body': 'overflow-x auto$0'
+  'overflow-x hidden':
+    'prefix': 'oxh'
+    'body': 'overflow-x hidden$0'
+  'overflow-x scroll':
+    'prefix': 'ox'
+    'body': 'overflow-x scroll$0'
+  'overflow-x visible':
+    'prefix': 'ox'
+    'body': 'overflow-x visible$0'
+  'overflow-y auto':
+    'prefix': 'oy'
+    'body': 'overflow-y auto$0'
+  'overflow-y hidden':
+    'prefix': 'oyh'
+    'body': 'overflow-y hidden$0'
+  'overflow-y scroll':
+    'prefix': 'oys'
+    'body': 'overflow-y scroll$0'
+  'overflow-y visible':
+    'prefix': 'oyv'
+    'body': 'overflow-y visible$0'
+  'overflow auto':
+    'prefix': 'oa'
+    'body': 'overflow auto$0'
+  'overflow hidden':
+    'prefix': 'o'
+    'body': 'overflow hidden$0'
+  'overflow scroll':
+    'prefix': 'os'
+    'body': 'overflow scroll$0'
+  'overflow visible':
+    'prefix': 'ov'
+    'body': 'overflow visible$0'
+  'padding-bottom':
+    'prefix': 'pb'
+    'body': 'padding-bottom ${1:10}${2:px}$0'
+  'padding-bottom 0':
+    'prefix': 'pbb'
+    'body': 'padding-bottom 0$0'
+  'padding-left':
+    'prefix': 'pl'
+    'body': 'padding-left ${1:10}${2:px}$0'
+  'padding-left 0':
+    'prefix': 'pll'
+    'body': 'padding-left 0$0'
+  'padding-right':
+    'prefix': 'pr'
+    'body': 'padding-right ${1:10}${2:px}$0'
+  'padding-right 0':
+    'prefix': 'prr'
+    'body': 'padding-right 0$0'
+  'padding-top':
+    'prefix': 'pt'
+    'body': 'padding-top ${1:10}${2:px}$0'
+  'padding-top 0':
+    'prefix': 'ptt'
+    'body': 'padding-top 0$0'
+  'padding':
+    'prefix': 'p'
+    'body': 'padding ${1:10}${2:px}$0'
+  'padding 0':
+    'prefix': 'pp'
+    'body': 'padding 0$0'
+  'padding T R B L':
+    'prefix': 'p'
+    'body': 'padding ${1:10}${2:px} ${3:10}${4:px} ${5:10}${6:px} ${7:10}${8:px}$0'
+  'padding V H':
+    'prefix': 'p'
+    'body': 'padding ${1:10}${2:px} ${3:10}${4:px}$0'
+  'pointer-events none':
+    'prefix': 'pe'
+    'body': 'pointer-events none$0'
+  'position absolute':
+    'prefix': 'po'
+    'body': 'position absolute$0'
+  'position fixed':
+    'prefix': 'po'
+    'body': 'position fixed$0'
+  'position relative':
+    'prefix': 'por'
+    'body': 'position relative$0'
+  'position static':
+    'prefix': 'po'
+    'body': 'position static$0'
+  'resize both':
+    'prefix': 'reb'
+    'body': 'resize both$0'
+  'resize horizontal':
+    'prefix': 're'
+    'body': 'resize horizontal$0'
+  'resize none':
+    'prefix': 'ren'
+    'body': 'resize none$0'
+  'resize vertical':
+    'prefix': 're'
+    'body': 'resize vertical$0'
+  'rgba(0,0,0,.5)':
+    'prefix': 'rgba'
+    'body': 'rgba(${1:0},${2:0},${3:0},${4:.5})$0'
+  'rgba(255,255,255,.5)':
+    'prefix': 'rgba'
+    'body': 'rgba(${1:255},${2:255},${3:255},${4:.5})$0'
+  'right 0':
+    'prefix': 'rr'
+    'body': 'right 0$0'
+  'right':
+    'prefix': 'r'
+    'body': 'right ${1:10}${2:px}$0'
+  'table-layout auto':
+    'prefix': 'tl'
+    'body': 'table-layout auto$0'
+  'table-layout fixed':
+    'prefix': 'tl'
+    'body': 'table-layout fixed$0'
+  'text-align center':
+    'prefix': 'tac'
+    'body': 'text-align center$0'
+  'text-align justify':
+    'prefix': 'ta'
+    'body': 'text-align justify$0'
+  'text-align left':
+    'prefix': 'tal'
+    'body': 'text-align left$0'
+  'text-align right':
+    'prefix': 'ta'
+    'body': 'text-align right$0'
+  'text-decoration blink':
+    'prefix': 'td'
+    'body': 'text-decoration blink$0'
+  'text-decoration line-through':
+    'prefix': 'tdl'
+    'body': 'text-decoration line-through$0'
+  'text-decoration none':
+    'prefix': 'tdn'
+    'body': 'text-decoration none$0'
+  'text-decoration overline':
+    'prefix': 'tdo'
+    'body': 'text-decoration overline$0'
+  'text-decoration underline':
+    'prefix': 'tdu'
+    'body': 'text-decoration underline$0'
+  'text-indent':
+    'prefix': 'ti'
+    'body': 'text-indent ${1:10}${2:px}$0'
+  'text-overflow clip':
+    'prefix': 'toc'
+    'body': 'text-overflow clip$0'
+  'text-overflow ellipsis':
+    'prefix': 'toe'
+    'body': 'text-overflow ellipsis$0'
+  'text-rendering geometricPrecision':
+    'prefix': 'trgp'
+    'body': 'text-rendering geometricPrecision$0'
+  'text-rendering optimizeLegibility':
+    'prefix': 'trol'
+    'body': 'text-rendering optimizeLegibility$0'
+  'text-rendering optimizeSpeed':
+    'prefix': 'tr'
+    'body': 'text-rendering optimizeSpeed$0'
+  'text-shadow':
+    'prefix': 'ts'
+    'body': 'text-shadow ${1:1}px ${2:1}px ${3:2}px ${4:#000}$0'
+  'text-shadow none':
+    'prefix': 'tsn'
+    'body': 'text-shadow none$0'
+  'text-transform capitalize':
+    'prefix': 'ttc'
+    'body': 'text-transform capitalize$0'
+  'text-transform lowercase':
+    'prefix': 'ttl'
+    'body': 'text-transform lowercase$0'
+  'text-transform none':
+    'prefix': 'ttn'
+    'body': 'text-transform none$0'
+  'text-transform uppercase':
+    'prefix': 'ttu'
+    'body': 'text-transform uppercase$0'
+  'top 0':
+    'prefix': 'tt'
+    'body': 'top 0$0'
+  'top':
+    'prefix': 't'
+    'body': 'top ${1:10}${2:px}$0'
+  'transform-origin':
+    'prefix': 'tfo'
+    'body': 'transform-origin ${1:50}${2:%} ${3:50}${4:%}$0'
+  'transform':
+    'prefix': 'tf'
+    'body': 'transform $1$0'
+  'transform matrix()':
+    'prefix': 'tfm'
+    'body': 'transform matrix(${1:0}, ${2:0}, ${3:0}, ${4:0}, ${5:0}, ${6:0})$0'
+  'transform none':
+    'prefix': 'tf'
+    'body': 'transform none$0'
+  'transform rotate()':
+    'prefix': 'tfr'
+    'body': 'transform rotate(${1:45}${2:deg})$0'
+  'transform scale()':
+    'prefix': 'tfs'
+    'body': 'transform scale(${1:1}${2:, ${3:1}})$0'
+  'transform scaleX()':
+    'prefix': 'tfsx'
+    'body': 'transform scaleX(${1:1})$0'
+  'transform scaleY()':
+    'prefix': 'tfsy'
+    'body': 'transform scaleY(${1:1})$0'
+  'transform skew()':
+    'prefix': 'tfs'
+    'body': 'transform skew(${1:30}deg${2:, ${3:30}deg})$0'
+  'transform skewX()':
+    'prefix': 'tfsx'
+    'body': 'transform skewX(${1:30}deg)$0'
+  'transform skewY()':
+    'prefix': 'tfsy'
+    'body': 'transform skewY(${1:30}deg)$0'
+  'transform translate()':
+    'prefix': 'tft'
+    'body': 'transform translate(${1:10}${2:px}${3:, ${4:10}${5:px}})$0'
+  'transform translateX()':
+    'prefix': 'tftx'
+    'body': 'transform translateX(${1:10}${2:px})$0'
+  'transform translateY()':
+    'prefix': 'tfty'
+    'body': 'transform translateY(${1:10}${2:px})$0'
+  'transition delay':
+    'prefix': 't'
+    'body': 'transition ${1:all} ${2:1}s ${3:1}s ${4:ease}$0'
+  'transition expanded':
+    'prefix': 't'
+    'body': 'transition-property ${1:all}\ntransition-duration ${2:1}s\ntransition-delay ${3:1}s\ntransition-timing-function ${4:ease}$0'
+  'transition-delay':
+    'prefix': 'td'
+    'body': 'transition-delay 1s$0'
+  'transition-duration':
+    'prefix': 'td'
+    'body': 'transition-duration 1s$0'
+  'transition-property':
+    'prefix': 'tp'
+    'body': 'transition-property all$0'
+  'transition-timing-function cubic-bezier()':
+    'prefix': 'ttfcb'
+    'body': 'transition-timing-function cubic-bezier(${1:0.25}, ${2:0.1}, ${3:0.25}, ${4:1.0})$0'
+  'transition-timing-function ease':
+    'prefix': 'ttfe'
+    'body': 'transition-timing-function ease$0'
+  'transition-timing-function ease-in':
+    'prefix': 'ttf'
+    'body': 'transition-timing-function ease-in$0'
+  'transition-timing-function ease-in-out':
+    'prefix': 'ttf'
+    'body': 'transition-timing-function ease-in-out$0'
+  'transition-timing-function ease-out':
+    'prefix': 'ttfeo'
+    'body': 'transition-timing-function ease-out$0'
+  'transition-timing-function linear':
+    'prefix': 'ttfl'
+    'body': 'transition-timing-function linear$0'
+  'transition':
+    'prefix': 't'
+    'body': 'transition ${1:all} ${2:1}s ${3:ease}$0'
+  'transparent':
+    'prefix': 't'
+    'body': 'transparent$0'
+  'user-select none':
+    'prefix': 'usn'
+    'body': 'user-select none$0'
+  'user-select text':
+    'prefix': 'ust'
+    'body': 'user-select none$0'
+  'vertical-align':
+    'prefix': 'va'
+    'body': 'vertical-align ${1:0}$0'
+  'vertical-align baseline':
+    'prefix': 'va'
+    'body': 'vertical-align baseline$0'
+  'vertical-align bottom':
+    'prefix': 'va'
+    'body': 'vertical-align bottom$0'
+  'vertical-align middle':
+    'prefix': 'va'
+    'body': 'vertical-align middle$0'
+  'vertical-align sub':
+    'prefix': 'va'
+    'body': 'vertical-align sub$0'
+  'vertical-align super':
+    'prefix': 'vas'
+    'body': 'vertical-align super$0'
+  'vertical-align text-bottom':
+    'prefix': 'vatb'
+    'body': 'vertical-align text-bottom$0'
+  'vertical-align text-top':
+    'prefix': 'va'
+    'body': 'vertical-align text-top$0'
+  'vertical-align top':
+    'prefix': 'va'
+    'body': 'vertical-align top$0'
+  'visibility collapse':
+    'prefix': 'v'
+    'body': 'visibility collapse$0'
+  'visibility hidden':
+    'prefix': 'v'
+    'body': 'visibility hidden$0'
+  'visibility visible':
+    'prefix': 'vv'
+    'body': 'visibility visible$0'
+  'white-space normal':
+    'prefix': 'ws'
+    'body': 'white-space normal$0'
+  'white-space nowrap':
+    'prefix': 'ws'
+    'body': 'white-space nowrap$0'
+  'white-space pre':
+    'prefix': 'ws'
+    'body': 'white-space pre$0'
+  'white-space pre-line':
+    'prefix': 'ws'
+    'body': 'white-space pre-line$0'
+  'white-space pre-wrap':
+    'prefix': 'wspw'
+    'body': 'white-space pre-wrap$0'
+  'widows':
+    'prefix': 'wi'
+    'body': 'widows ${1:2}$0'
+  'width auto':
+    'prefix': 'wa'
+    'body': 'width auto$0'
+  'width':
+    'prefix': 'w'
+    'body': 'width ${1:10}${2:px}$0'
+  'width 0':
+    'prefix': 'ww'
+    'body': 'width 0$0'
+  'word-break break-all':
+    'prefix': 'wb'
+    'body': 'word-break break-all$0'
+  'word-break keep-all':
+    'prefix': 'wb'
+    'body': 'word-break keep-all$0'
+  'word-break normal':
+    'prefix': 'wbn'
+    'body': 'word-break normal$0'
+  'word-spacing':
+    'prefix': 'ws'
+    'body': 'word-spacing ${1:2}${2:px}$0'
+  'word-spacing normal':
+    'prefix': 'wsn'
+    'body': 'word-spacing normal$0'
+  'word-wrap break-word':
+    'prefix': 'ww'
+    'body': 'word-wrap break-word$0'
+  'word-wrap normal':
+    'prefix': 'ww'
+    'body': 'word-wrap normal$0'
+  'zoom':
+    'prefix': 'z'
+    'body': 'zoom ${1:1}$0'

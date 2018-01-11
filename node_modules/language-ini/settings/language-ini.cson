@@ -1,0 +1,3 @@
+'.source.ini':
+  'editor':
+    'commentStart': '; '

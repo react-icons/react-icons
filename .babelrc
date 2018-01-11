@@ -1,0 +1,10 @@
+{
+    "presets": ["react", "env","stage-0"],
+    "plugins": [
+       "add-module-exports",
+       "transform-runtime",
+       "transform-react-jsx",
+       "syntax-jsx"
+     ],
+     "minified":true
+}

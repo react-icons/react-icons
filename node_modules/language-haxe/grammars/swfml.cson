@@ -1,0 +1,24 @@
+'fileTypes': [
+  'swfml'
+]
+'foldingStartMarker': '/\\*\\*|\\{\\s*$'
+'foldingStopMarker': '\\*\\*/|^\\s*\\}'
+'name': 'swfml'
+'patterns': [
+  {
+    'match': '\\b(if|while|for|return)\\b'
+    'name': 'keyword.control.untitled'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.untitled'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.untitled'
+      }
+    ]
+  }
+]
+'scopeName': 'source.swfml'

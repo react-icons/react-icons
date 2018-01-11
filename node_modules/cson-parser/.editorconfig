@@ -1,0 +1,6 @@
+# See: http://EditorConfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2

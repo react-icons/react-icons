@@ -1,0 +1,102 @@
+
+
+
+<h2 id="introduction">Introduction</h2>
+<p>Lists present multiple line items vertically as a single continuous element. Refer the <a href="https://www.google.com/design/spec/components/lists.html">Material Design
+Spec</a> to know more about the content options.</p>
+<h3 id="to-include-the-mdl-list-component-">To include the MDL <strong>list</strong> component:</h3>
+<h2 id="create-a-list-with-basic-items-">Create a List with basic items.</h2>
+<p>&nbsp;1. Code a <code>&lt;ul&gt;</code> element with the class <code>mdl-list</code>; this is the &quot;outer&quot; container, intended to hold all of the list&#39;s content.</p>
+<pre><code class="lang-html">&lt;ul class=&#39;mdl-list&#39;&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>&nbsp;2. Code as many <code>&lt;li&gt;</code> elements as required with the class <code>mdl-list__item</code>; this is intended to hold all of the <strong>item&#39;s</strong> content.</p>
+<pre><code class="lang-html">&lt;ul class=&#39;mdl-list&#39;&gt;
+  &lt;li class=&quot;mdl-list__item&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;mdl-list__item&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;mdl-list__item&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>&nbsp;3. Add your content as the children of the <code>&lt;li&gt;</code>, with the appropriate content type modification class for example .</p>
+<pre><code class="lang-html">&lt;ul class=&#39;mdl-list&#39;&gt;
+  &lt;li class=&quot;mdl-list__item&quot;&gt;
+    &lt;span class=&quot;mdl-list__item-primary-content&quot;&gt;&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;mdl-list__item&quot;&gt;
+    &lt;span class=&quot;mdl-list__item-primary-content&quot;&gt;&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;mdl-list__item&quot;&gt;
+    &lt;span class=&quot;mdl-list__item-primary-content&quot;&gt;&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h2 id="configuration-options">Configuration options</h2>
+<p>The MDL CSS classes apply various predefined visual enhancements to the list. The table below lists the available classes and their effects.</p>
+<table>
+<thead>
+<tr>
+<th>MDL Class</th>
+<th style="text-align:center">Effect</th>
+<th style="text-align:right">Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.mdl-list</td>
+<td style="text-align:center">Defines list as an MDL component</td>
+<td style="text-align:right">-</td>
+</tr>
+<tr>
+<td>.mdl-list__item</td>
+<td style="text-align:center">Defines the List&#39;s Items</td>
+<td style="text-align:right">required</td>
+</tr>
+<tr>
+<td>.mdl-list__item--two-line</td>
+<td style="text-align:center">Defines the List&#39;s Items as Two Line</td>
+<td style="text-align:right">Optional Two Line List Variant</td>
+</tr>
+<tr>
+<td>.mdl-list__item--three-line</td>
+<td style="text-align:center">Defines the List&#39;s Items  as a Three Line</td>
+<td style="text-align:right">Optional Three Line List Variant</td>
+</tr>
+<tr>
+<td>.mdl-list__item-primary-content</td>
+<td style="text-align:center">Defines the primary content sub-division</td>
+<td style="text-align:right">-</td>
+</tr>
+<tr>
+<td>.mdl-list__item-avatar</td>
+<td style="text-align:center">Defines the avatar sub-division</td>
+<td style="text-align:right">-</td>
+</tr>
+<tr>
+<td>.mdl-list__item-icon</td>
+<td style="text-align:center">Defines the icon sub-division</td>
+<td style="text-align:right">-</td>
+</tr>
+<tr>
+<td>.mdl-list__item-secondary-content</td>
+<td style="text-align:center">Defines the secondary content sub-division</td>
+<td style="text-align:right">requires <code>.mdl-list__item--two-line</code> or <code>.mdl-list__item--three-line</code></td>
+</tr>
+<tr>
+<td>.mdl-list__item-secondary-info</td>
+<td style="text-align:center">Defines the information sub-division</td>
+<td style="text-align:right">requires <code>.mdl-list__item--two-line</code> or <code>.mdl-list__item--three-line</code></td>
+</tr>
+<tr>
+<td>.mdl-list__item-secondary-action</td>
+<td style="text-align:center">Defines the Action sub-division</td>
+<td style="text-align:right">requires <code>.mdl-list__item--two-line</code> or <code>.mdl-list__item--three-line</code></td>
+</tr>
+<tr>
+<td>.mdl-list__item-text-body</td>
+<td style="text-align:center">Defines the Text Body sub-division</td>
+<td style="text-align:right">requires <code>.mdl-list__item--three-line</code></td>
+</tr>
+</tbody>
+</table>
+
+

@@ -1,0 +1,3 @@
+'.source.glsl':
+  'editor':
+    'commentStart': '// '

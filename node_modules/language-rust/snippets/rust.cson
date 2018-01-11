@@ -1,0 +1,149 @@
+'.source.rust':
+  'allow':
+    'prefix': 'allow'
+    'body': '#[allow(${1:lint})]'
+  'allow!':
+    'prefix': 'allow!'
+    'body': '#![allow(${1:lint})]'
+  'deny':
+    'prefix': 'deny'
+    'body': '#[deny(${1:lint})]'
+  'deny!':
+    'prefix': 'deny!'
+    'body': '#![deny(${1:lint})]'
+  'derive':
+    'prefix': 'derive'
+    'body': '#[derive(${1:Trait})]'
+  'enum':
+    'prefix': 'enum'
+    'body': '''
+      enum ${1:TypeName} {
+      \t$2
+      }
+    '''
+  'fn':
+    'prefix': 'fn'
+    'body': '''
+      fn ${1:function_name}($2) {
+      \t${3:unimplemented!()}
+      }
+    '''
+  'fnr':
+    'prefix': 'fnr'
+    'body': '''
+      fn ${1:function_name}($2) -> ${3:TypeName} {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'for':
+    'prefix': 'for'
+    'body': '''
+      for ${1:variable} in ${2:iterator} {
+      \t$3
+      }
+    '''
+  'if':
+    'prefix': 'if'
+    'body': '''
+      if ${1:expression} {
+      \t$2
+      }
+    '''
+  'impl':
+    'prefix': 'impl'
+    'body': '''
+      impl ${1:TypeName} {
+      \t$2
+      }
+    '''
+  'let':
+    'prefix': 'let'
+    'body': 'let ${1:variable} = ${2:value};'
+  'loop':
+    'prefix': 'loop'
+    'body': '''
+      loop {
+      \t$1
+      }
+    '''
+  'macro':
+    'prefix': 'macro'
+    'body': '''
+      macro_rules! ${1:macro_name} {
+      \t($2) => ($3);
+      }
+    '''
+  'main':
+    'prefix': 'main'
+    'body': '''
+      fn main() {
+      \t${1:unimplemented!()}
+      }
+    '''
+  'match':
+    'prefix': 'match'
+    'body': '''
+      match ${1:expression} {
+      \t$2
+      }
+    '''
+  'print':
+    'prefix': 'print'
+    'body': 'print!("${1:{${2::?}\\}}", ${3});'
+  'println':
+    'prefix': 'println'
+    'body': 'println!("${1:{${2::?}\\}}", ${3});'
+  'static':
+    'prefix': 'static'
+    'body': 'static ${1:CONSTANT}: ${2:TypeName} = ${3:value};'
+  'struct':
+    'prefix': 'struct'
+    'body': '''
+      struct ${1:TypeName} {
+      \t$2
+      }
+    '''
+  'test':
+    'prefix': 'test'
+    'body': '''
+      #[test]
+      fn ${1:test_name}() {
+      \t${2:unimplemented!()}
+      }
+    '''
+  'testmod':
+    'prefix': 'testmod'
+    'body': '''
+      #[cfg(test)]
+      mod tests {
+      \tuse super::*;
+
+      \t#[test]
+      \tfn ${1:test_name}() {
+      \t\t${2:unimplemented!()}
+      \t}
+      }
+    '''
+  'trait':
+    'prefix': 'trait'
+    'body': '''
+      trait ${1:TypeName} {
+      \t$2
+      }
+    '''
+  'type':
+    'prefix': 'type'
+    'body': 'type ${1:TypeName} = ${2:TypeName};'
+  'warn':
+    'prefix': 'warn'
+    'body': '#[warn(${1:lint})]'
+  'warn!':
+    'prefix': 'warn!'
+    'body': '#![warn(${1:lint})]'
+  'while':
+    'prefix': 'while'
+    'body': '''
+      while ${1:expression} {
+      \t$2
+      }
+    '''

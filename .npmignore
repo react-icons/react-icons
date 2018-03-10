@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 bin
 docs
 published
 .babelrc
+
+
+=======
+docs
+published
+icons
+>>>>>>> origin/master

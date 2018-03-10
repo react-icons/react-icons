@@ -1,0 +1,49 @@
+'.source.erlang':
+  'Behaviour Directive':
+    'prefix': 'beh'
+    'body': '-behaviour (${1:behaviour}).'
+  'Case Expression':
+    'prefix': 'case'
+    'body': 'case ${1:expression} of\n\t${2:pattern}${3: when ${4:guard}} ->\n\t\t${5:body}\nend'
+  'Define Directive':
+    'prefix': 'def'
+    'body': '-define (${1:macro}${2: (${3:param})}, ${4:body}).'
+  'Export All Directive':
+    'prefix': 'expall'
+    'body': '-compile(export_all).'
+  'Export Directive':
+    'prefix': 'exp'
+    'body': '-export ([${1:function}/${2:arity}]).'
+  'Fun Expression':
+    'prefix': 'fun'
+    'body': 'fun\n\t(${1:pattern})${2: when ${3:guard}} ->\n\t\t${4:body}\nend'
+  'If Expression':
+    'prefix': 'if'
+    'body': 'if\n\t${1:guard} ->\n\t\t${2:body}\nend'
+  'Ifdef Directive':
+    'prefix': 'ifdef'
+    'body': '-ifdef (${1:macro}).'
+  'Ifndef Directive':
+    'prefix': 'ifndef'
+    'body': '-ifndef (${1:macro}).'
+  'Import Directive':
+    'prefix': 'imp'
+    'body': '-import (${1:module}, [${2:function}/${3:arity}]).'
+  'Include Directive':
+    'prefix': 'inc'
+    'body': '-include ("${1:file}").'
+  'Module Directive':
+    'prefix': 'mod'
+    'body': '-module ($1).'
+  'Receive Expression':
+    'prefix': 'rcv'
+    'body': 'receive\n${1:\t${2:pattern}${3: when ${4:guard}} ->\n\t\t${5:body}\n}${6:after\n\t${7:expression} ->\n\t\t${8:body}\n}end'
+  'Record Directive':
+    'prefix': 'rec'
+    'body': '-record (${1:record}, {${2:field}${3: = ${4:value}}}).'
+  'Try Expression':
+    'prefix': 'try'
+    'body': 'try${1: ${2:expression}${3: of\n\t${4:pattern}${5: when ${6:guard}} ->\n\t\t${7:body}}}\n${8:catch\n\t${9:pattern}${10: when ${11:guard}} ->\n\t\t${12:body}}\n${13:after\n\t${14:body}}\nend'
+  'Undef Directive':
+    'prefix': 'undef'
+    'body': '-undef (${1:macro}).'

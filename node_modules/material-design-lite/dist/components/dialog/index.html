@@ -1,0 +1,155 @@
+
+
+
+<h2 id="introduction">Introduction</h2>
+<p>The Material Design Lite (MDL) <strong>dialog</strong> component allows for verification of
+user actions, simple data input, and alerts to provide extra information to users.</p>
+<h2 id="basic-usage">Basic Usage</h2>
+<p>To use the dialog component, you must be using a browser that supports the <a href="http://www.w3.org/TR/2013/CR-html5-20130806/interactive-elements.html#the-dialog-element">dialog element</a>.
+Only Chrome and Opera have native support at the time of writing.
+For other browsers you will need to include the <a href="https://github.com/GoogleChrome/dialog-polyfill">dialog polyfill</a> or create your own.</p>
+<p>Once you have dialog support create a dialog element.
+The element when using the polyfill <strong>must</strong> be a child of the <code>body</code> element.
+Within that container, add a content element with the class <code>mdl-dialog__content</code>.
+Add you content, then create an action container with the class <code>mdl-dialog__actions</code>.
+Finally for the markup, add your buttons within this container for triggering dialog functions.</p>
+<p>Keep in mind, the order is automatically reversed for actions.
+Material Design requires that the primary (confirmation) action be displayed last.
+So, the first action you create will appear last on the action bar.
+This allows for more natural coding and tab ordering while following the specification.</p>
+<p>Remember to add the event handlers for your action items.
+After your dialog markup is created, add the event listeners to the page to trigger the dialog to show.</p>
+<p>For example:</p>
+<pre><code class="lang-javascript">  var button = document.querySelector(&#39;button&#39;);
+  var dialog = document.querySelector(&#39;dialog&#39;);
+  button.addEventListener(&#39;click&#39;, function() {
+    dialog.showModal();
+    /* Or dialog.show(); to show the dialog without a backdrop. */
+  });
+</code></pre>
+<h2 id="examples">Examples</h2>
+<h3 id="simple-dialog">Simple Dialog</h3>
+<p>See this example live in <a href="http://codepen.io/Garbee/full/EPoaMj/">codepen</a>.</p>
+<pre><code class="lang-html">&lt;body&gt;
+  &lt;button id=&quot;show-dialog&quot; type=&quot;button&quot; class=&quot;mdl-button&quot;&gt;Show Dialog&lt;/button&gt;
+  &lt;dialog class=&quot;mdl-dialog&quot;&gt;
+    &lt;h4 class=&quot;mdl-dialog__title&quot;&gt;Allow data collection?&lt;/h4&gt;
+    &lt;div class=&quot;mdl-dialog__content&quot;&gt;
+      &lt;p&gt;
+        Allowing us to collect data will let us get you the information you want faster.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mdl-dialog__actions&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;mdl-button&quot;&gt;Agree&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;mdl-button close&quot;&gt;Disagree&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/dialog&gt;
+  &lt;script&gt;
+    var dialog = document.querySelector(&#39;dialog&#39;);
+    var showDialogButton = document.querySelector(&#39;#show-dialog&#39;);
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener(&#39;click&#39;, function() {
+      dialog.showModal();
+    });
+    dialog.querySelector(&#39;.close&#39;).addEventListener(&#39;click&#39;, function() {
+      dialog.close();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="dialog-with-full-width-actions">Dialog with full width actions</h3>
+<p>See this example live in <a href="http://codepen.io/Garbee/full/JGMowG/">codepen</a>.</p>
+<pre><code class="lang-html">&lt;body&gt;
+  &lt;button type=&quot;button&quot; class=&quot;mdl-button show-modal&quot;&gt;Show Modal&lt;/button&gt;
+  &lt;dialog class=&quot;mdl-dialog&quot;&gt;
+    &lt;div class=&quot;mdl-dialog__content&quot;&gt;
+      &lt;p&gt;
+        Allow this site to collect usage data to improve your experience?
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mdl-dialog__actions mdl-dialog__actions--full-width&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;mdl-button&quot;&gt;Agree&lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;mdl-button close&quot;&gt;Disagree&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/dialog&gt;
+  &lt;script&gt;
+    var dialog = document.querySelector(&#39;dialog&#39;);
+    var showModalButton = document.querySelector(&#39;.show-modal&#39;);
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showModalButton.addEventListener(&#39;click&#39;, function() {
+      dialog.showModal();
+    });
+    dialog.querySelector(&#39;.close&#39;).addEventListener(&#39;click&#39;, function() {
+      dialog.close();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<h2 id="css-classes">CSS Classes</h2>
+<h3 id="blocks">Blocks</h3>
+<table>
+<thead>
+<tr>
+<th>MDL Class</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mdl-dialog</code></td>
+<td>Defines the container of the dialog component.</td>
+<td>Required on dialog container.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="elements">Elements</h3>
+<table>
+<thead>
+<tr>
+<th>MDL Class</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mdl-dialog__title</code></td>
+<td>Defines the title container in the dialog.</td>
+<td>Optional on title container.</td>
+</tr>
+<tr>
+<td><code>mdl-dialog__content</code></td>
+<td>Defines the content container of the dialog.</td>
+<td>Required on content container.</td>
+</tr>
+<tr>
+<td><code>mdl-dialog__actions</code></td>
+<td>Defines the actions container in the dialog.</td>
+<td>Required on action container.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifiers">Modifiers</h3>
+<table>
+<thead>
+<tr>
+<th>MDL Class</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mdl-dialog__actions--full-width</code></td>
+<td>Modifies the actions to each take the full width of the container. This makes each take their own line.</td>
+<td>Optional on action container.</td>
+</tr>
+</tbody>
+</table>
+
+

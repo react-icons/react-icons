@@ -1,0 +1,211 @@
+'fileTypes': [
+  'conf',
+  'nginx'
+]
+'foldingStartMarker': '\\{\\s*$'
+'foldingStopMarker': '^\\s*\\}'
+'name': 'nginx'
+'scopeName': 'source.nginx'
+'patterns': [
+  {
+    'match': '\\#.*$'
+    'name': 'comment.line'
+  }
+  {
+     # this also inludes ip address-like dot separated instant
+     # also optional letter supported, like '7d'
+    'match': '\\b[0-9]+(\\.[0-9]+)*[a-z]?\\b'
+    'name': 'constant.numeric'
+  }
+  {
+    'match': '\\{'
+    'name': 'punctuation.section.scope.begin'
+  }
+  {
+    'match': '\\{'
+    'name': 'punctuation.section.scope.end'
+  }
+  {
+    'match': '\\;'
+    'name': 'punctuation.terminator.end'
+  }
+  {
+    'match': '\\='
+    'name': 'punctuation.operator.assign'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'constant.string.quoted'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escaped'
+      }
+      {
+        'match': '\\$[a-z0-9_]+'
+        'name': 'variable.other.placeholder'
+      }
+    ]
+  }
+  {
+    'begin': '\''
+    'end': '\''
+    'name': 'constant.string.quoted.single'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escaped'
+      }
+      {
+        'match': '\\$[a-z0-9_]+'
+        'name': 'variable.other.placeholder'
+      }
+    ]
+  }
+  {
+    'match': '\\~\\S+'  # regexp syntax shold be expanded/refined further
+    'name': 'constant.string.regexp'
+  }
+  {
+    'match': '\\^'
+    'name': 'punctuation.operator.negate'
+  }
+  {
+    'match': '\\$[a-z0-9_]+'
+    'name': 'variable.other'
+  }
+  {
+    'match': '\\$\\{[^\\}]+\\}'
+    'name': 'variable.other'
+  }
+  {
+    'match': '^\\s*(include)\\b'
+    'name': 'keyword.other.include.module.main'
+  }
+  {
+    'match': '^\\s*(events)\\b'
+    'name': 'keyword.other.special-method.module.events'
+  }
+  {
+    'match': '^\\s*(http)\\b'
+    'name': 'keyword.other.special-method.module.http'
+  }
+  {
+    'match': '^\\s*(server)\\b'
+    'name': 'keyword.other.special-method.module.http'
+  }
+  {
+    'match': '\\b(on|off|yes|no|true|false|auto|default|error|debug|warning)\\b'
+    'name': 'constant.literal'
+  }
+  {
+    'match': '\\b(daemon|env|debug_points|error_log|log_not_found|lock_file|master_process|pid|ssl_engine|timer_resolution|user|worker_cpu_affinity|worker_priority|worker_processes|worker_rlimit_core|worker_rlimit_nofile|worker_rlimit_sigpending|working_directory)\\b'
+    'name': 'support.function.directive.module.main'
+  }
+  {
+    'match': '\\b(accept_mutex|accept_mutex_delay|debug_connection|devpoll_changes|devpoll_events|epoll_events|kqueue_changes|kqueue_events|multi_accept|rtsig_signo|rtsig_overflow_events|rtsig_overflow_test|rtsig_overflow_threshold|use|worker_connections)\\b'
+    'name': 'support.function.directive.module.events'
+  }
+  {
+    'match': '\\b(alias|client_body_in_file_only|client_body_buffer_size|client_body_temp_path|client_body_timeout|client_header_buffer_size|client_header_timeout|client_max_body_size|default_type|error_page|index\\ |internal|keepalive_timeout|large_client_header_buffers|limit_except|limit_rate|listen|location|msie_padding|msie_refresh|optimize_server_names|port_in_redirect|recursive_error_pages|root|satisfy_any|send_timeout|sendfile|server_name|server_names_hash_max_size|server_names_hash_bucket_size|tcp_nodelay|tcp_nopush|types|ssl_protocols|ssl_ciphers|ssl_certificate|ssl_certificate_key|ssl_prefer_server_ciphers|ssl_session_cache|ssl_session_timeout|ssl_dhparam|ssl|ssl_buffer_size|ssl_client_certificate|ssl_crl|ssl_ecdh_curve|ssl_password_file|ssl_session_ticket_key|ssl_session_tickets|ssl_stapling|ssl_stapling_file|ssl_stapling_responder|ssl_stapling_verify|ssl_trusted_certificate|ssl_verify_client|ssl_verify_depth|stub_status\\ )\\b'
+    'name': 'support.function.directive.module.http'
+  }
+  {
+    'match': '\\b(aio|chunked_transfer_encoding|client_body_buffer_size|client_body_in_file_only|client_body_in_single_buffer|client_body_temp_path|client_body_timeout|client_header_buffer_size|client_header_timeout|client_max_body_size|connection_pool_size|default_type|directio|directio_alignment|disable_symlinks|error_page|etag|if_modified_since|ignore_invalid_headers|internal|keepalive_disable|keepalive_requests|keepalive_timeout|large_client_header_buffers|limit_except|limit_rate|limit_rate_after|lingering_close|lingering_time|lingering_timeout|listen|location|log_not_found|log_subrequest|max_ranges|merge_slashes|msie_padding|msie_refresh|open_file_cache|open_file_cache_errors|open_file_cache_min_uses|open_file_cache_valid|optimize_server_names|output_buffers|port_in_redirect|postpone_output|read_ahead|recursive_error_pages|request_pool_size|reset_timedout_connection|resolver|resolver_timeout|root|satisfy|satisfy_any|send_lowat|send_timeout|sendfile|sendfile_max_chunk|server|server_name|server_name_in_redirect|server_names_hash_bucket_size|server_names_hash_max_size|server_tokens|tcp_nodelay|tcp_nopush|try_files|types|types_hash_bucket_size|types_hash_max_size|underscores_in_headers|variables_hash_bucket_size|variables_hash_max_size)\\b'
+    'name': 'support.function.directive.module.http.core'
+  }
+  {
+    'match': '\\b(allow|deny)\\b'
+    'name': 'support.function.directive.module.http.access'
+  }
+  {
+    'match': '\\b(auth_basic|auth_basic_user_file)\\b'
+    'name': 'support.function.directive.module.http.auth_basic'
+  }
+  {
+    'match': '\\b(autoindex|autoindex_exact_size|autoindex_localtime|autoindex_format)\\b'
+    'name': 'support.function.directive.module.http.autoindex'
+  }
+  {
+    'match': '\\b(ancient_browser|ancient_browser_value|modern_browser|modern_browser_value)\\b'
+    'name': 'support.function.directive.module.http.browser'
+  }
+  {
+    'match': '\\b(charset|charset_map|override_charset|source_charset)\\b'
+    'name': 'support.function.directive.module.http.charset'
+  }
+  {
+    'match': '\\b(empty_gif)\\b'
+    'name': 'support.function.directive.module.http.empty_gif'
+  }
+  {
+    'match': '\\b(fastcgi_split_path_info|fastcgi_index|fastcgi_hide_header|fastcgi_ignore_client_abort|fastcgi_intercept_errors|fastcgi_param|fastcgi_pass|fastcgi_pass_header|fastcgi_read_timeout|fastcgi_redirect_errors|fa|stcgi_storefastcgi_store_access|fastcgi_buffers|fastcgi_buffers_size|fastcgi_temp_path)\\b'
+    'name': 'support.function.directive.module.http.fastcgi'
+  }
+  {
+    'match': '\\b(geo)\\b'
+    'name': 'support.function.directive.module.http.geo'
+  }
+  {
+    'match': '\\b(gzip|gzip_buffers|gzip_comp_level|gzip_disable|gzip_http.version|gzip_min_length|gzip_proxied|gzip_types|gzip_vary)\\b'
+    'name': 'support.function.directive.module.http.gzip'
+  }
+  {
+    'match': '\\b(gzip_static)\\b'
+    'name': 'support.function.directive.module.http.gzip_static'
+  }
+  {
+    'match': '\\b(add_header|expires|server_tokens)\\b'
+    'name': 'support.function.directive.module.http.headers'
+  }
+  {
+    'match': '\\b(valid_referers)\\b'
+    'name': 'support.function.directive.module.http.referer'
+  }
+  {
+    'match': '\\b(limit_zone|limit_conn)\\b'
+    'name': 'support.function.directive.module.http.limit_zone'
+  }
+  {
+    'match': '\\b(access_log|log_format)\\b'
+    'name': 'support.function.directive.module.http.log'
+  }
+  {
+    'match': '\\b(map|map_hash_max_size|map_hash_bucket_size)\\b'
+    'name': 'support.function.directive.module.http.map'
+  }
+  {
+    'match': '\\b(memcached_pass|memcached_connect_timeout|memcached_send_timeout|memcached_read_timeout|memcached_buffer_size|memcached_next_upstream)\\b'
+    'name': 'support.function.directive.module.http.memcached'
+  }
+  {
+    'match': '\\b(proxy_bind|proxy_buffer_size|proxy_buffering|proxy_buffers|proxy_busy_buffers_size|proxy_cache|proxy_cache_bypass|proxy_cache_key|proxy_cache_lock|proxy_cache_lock_age|proxy_cache_lock_timeout|proxy_cache_methods|proxy_cache_min_uses|proxy_cache_path|proxy_cache_purge|proxy_cache_revalidate|proxy_cache_use_stale|proxy_cache_valid|proxy_connect_timeout|proxy_cookie_domain|proxy_cookie_path|proxy_force_ranges|proxy_headers_hash_bucket_size|proxy_headers_hash_max_size|proxy_hide_header|proxy_http_version|proxy_ignore_client_abort|proxy_ignore_headers|proxy_intercept_errors|proxy_limit_rate|proxy_max_temp_file_size|proxy_method|proxy_next_upstream|proxy_next_upstream_timeout|proxy_next_upstream_tries|proxy_no_cache|proxy_pass|proxy_pass_header|proxy_read_timeout|proxy_pass_request_body|proxy_pass_request_headers|proxy_redirect|proxy_request_buffering|proxy_send_lowat|proxy_send_timeout|proxy_set_body|proxy_set_header|proxy_ssl_certificate|proxy_ssl_certificate_key|proxy_ssl_ciphers|proxy_ssl_crl|proxy_ssl_name|proxy_ssl_password_file|proxy_ssl_server_name|proxy_ssl_session_reuse|proxy_ssl_protocols|proxy_ssl_trusted_certificate|proxy_ssl_verify|proxy_ssl_verify_depth|proxy_store|proxy_store_access|proxy_temp_file_write_size|proxy_temp_path)\\b'
+    'name': 'support.function.directive.module.http.proxy'
+  }
+  {
+    'match': '\\b(break|if|return|rewrite|set|uninitialized_variable_warn)\\b'
+    'name': 'keyword.control.directive.module.http.rewrite'
+  }
+  {
+    'match': '\\b(ssi|ssi_silent_errors|ssi_types|ssi_value_length)\\b'
+    'name': 'support.function.directive.module.http.ssi'
+  }
+  {
+    'match': '\\b(ip_hash|upstream|server)\\b'
+    'name': 'support.function.directive.module.http.upstream'
+  }
+  {
+    'match': '\\b(set_real_ip_from|real_ip_header|real_ip_recursive)\\b'
+    'name': 'support.function.directive.module.http.realip'
+  }
+  {
+    'match': '\\b(userid|userid_domain|userid_expires|userid_name|userid_p3p|userid_path|userid_service)\\b'
+    'name': 'support.function.directive.module.http.userid'
+  }
+  {
+    'match': '\\b(lua_use_default_type|lua_code_cache|lua_regex_cache_max_entries|lua_regex_match_limit|lua_package_path|lua_package_cpath|init_by_lua|init_by_lua_file|init_worker_by_lua|init_worker_by_lua_file|set_by_lua|set_by_lua_file|content_by_lua|content_by_lua_file|rewrite_by_lua|rewrite_by_lua_file|access_by_lua|access_by_lua_file|header_filter_by_lua|header_filter_by_lua_file|body_filter_by_lua|body_filter_by_lua_file|log_by_lua|log_by_lua_file|lua_need_request_body|lua_shared_dict|lua_socket_connect_timeout|lua_socket_send_timeout|lua_socket_send_lowat|lua_socket_read_timeout|lua_socket_buffer_size|lua_socket_pool_size|lua_socket_keepalive_timeout|lua_socket_log_errors|lua_ssl_ciphers|lua_ssl_crl|lua_ssl_protocols|lua_ssl_trusted_certificate|lua_ssl_verify_depth|lua_http10_buffering|rewrite_by_lua_no_postpone|lua_transform_underscores_in_response_headers|lua_check_client_abort|lua_max_pending_timers|lua_max_running_timers)\\b'
+    'name': 'support.function.directive.module.http.lua'
+  }
+]
+

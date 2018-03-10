@@ -1,0 +1,28 @@
+'.source.glsl':
+  'do ... while':
+    'prefix': 'do'
+    'body': 'do {\n\t${0:/* code */}\n} while(${1:/* condition */});'
+  'for ...':
+    'prefix': 'for'
+    'body': 'for(int ${2:i} = 0; $2 < ${1:count}; $2++)\n{\n\t${0:/* code */}\n}'
+  'if ... else':
+    'prefix': 'ife'
+    'body': 'if(${1:/* condition */})\n{\n\t${2:/* code */}\n}\nelse\n{\n\t${0:/* code */}\n}'
+  'if ...':
+    'prefix': 'if'
+    'body': 'if(${1:/* condition */})\n{\n\t${0:/* code */}\n}'
+  'main ...':
+    'prefix': 'main'
+    'body': 'void main()\n{\n\t${0:/* code */}\n}'
+  'method ...':
+    'prefix': 'me'
+    'body': '${1:void} ${2:method}()\n{\n\t${0:/* code */}\n}'
+  'struct':
+    'prefix': 'struct'
+    'body': 'struct ${1:/* name */} \n{\n\t${0:/* data */}\n};'
+  'switch ...':
+    'prefix': 'switch'
+    'body': 'switch(${1:/* statement */})\n{\n\tcase ${0:/* expression */}:\n\tdefault:\n}'
+  'while ...':
+    'prefix': 'while'
+    'body': 'while (${1:/* condition */})\n{\n\t${0:/* code */}\n}'

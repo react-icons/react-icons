@@ -1,0 +1,53 @@
+'fileTypes': [
+  'yaws'
+]
+'name': 'HTML (Erlang)'
+'patterns': [
+  {
+    'begin': '(^\\s*)?(?=<erl>)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.embedded.leading.html'
+    'contentName': 'meta.embedded.erlang'
+    'end': '(?!\\G)(\\s*\\n)?'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.whitespace.embedded.trailing.html'
+    'patterns': [
+      {
+        'begin': '(<)(erl)(>)'
+        'beginCaptures':
+          '0':
+            'name': 'meta.tag.template.html'
+          '1':
+            'name': 'punctuation.definition.tag.begin.html'
+          '2':
+            'name': 'entity.name.tag.html'
+          '3':
+            'name': 'punctuation.definition.tag.end.html'
+        'contentName': 'source.erlang'
+        'end': '((</))(erl)(>)'
+        'endCaptures':
+          '0':
+            'name': 'meta.tag.template.html'
+          '1':
+            'name': 'punctuation.definition.tag.begin.html'
+          '2':
+            'name': 'source.erlang'
+          '3':
+            'name': 'entity.name.tag.html'
+          '4':
+            'name': 'punctuation.definition.tag.end.html'
+        'patterns': [
+          {
+            'include': 'source.erlang'
+          }
+        ]
+      }
+    ]
+  }
+  {
+    'include': 'text.html.basic'
+  }
+]
+'scopeName': 'text.html.erlang.yaws'

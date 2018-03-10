@@ -1,0 +1,14 @@
+@import "syntax-variables";
+
+atom-text-editor.editor .syntax--meta.syntax--attribute.syntax--rust {
+  color: mix(#ff0, @syntax-text-color, 20%);
+}
+
+atom-text-editor.editor .syntax--storage.syntax--modifier.syntax--lifetime.syntax--rust,
+atom-text-editor.editor .syntax--entity.syntax--name.syntax--lifetime.syntax--rust {
+  color: mix(#0ff, @syntax-text-color, 70%);
+}
+
+atom-text-editor.editor .syntax--keyword.syntax--unsafe.syntax--rust {
+  color: mix(#f00, @syntax-text-color, 40%);
+}

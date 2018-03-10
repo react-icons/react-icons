@@ -1,0 +1,8 @@
+'.source.erlang':
+  'editor':
+    'commentStart': '% '
+    'increaseIndentPattern': '^[^%]*(\\b(if|case|receive|after|fun|try|catch|begin|query)\\b(?!.*\\b(end)\\b.*))|(->(\\s*%.*)?$)'
+    'decreaseIndentPattern': '^\\s*\\b(end)\\b'
+'.text.html.erlang.yaws':
+  'editor':
+    'foldEndPattern': '(?x)\n\t\t(</(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl|erl)>\n\t\t|^\\s*-->\n\t\t|(^|\\s)\\}\n\t\t)'

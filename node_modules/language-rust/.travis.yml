@@ -1,0 +1,28 @@
+language: generic
+
+env:
+  global:
+    - APM_TEST_PACKAGES=""
+    - ATOM_LINT_WITH_BUNDLED_NODE="true"
+
+  matrix:
+    - ATOM_CHANNEL=stable
+    - ATOM_CHANNEL=beta
+
+os:
+  - linux
+  - osx
+
+dist: trusty
+
+sudo: false
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-6
+
+script:
+  - curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh

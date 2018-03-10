@@ -12,13 +12,43 @@
 
 Include popular icons in your React projects easly with ```react-icons```, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
+### Requirements
+This package require the version of node 8.9.1 or later 
+```Bash
+npm  >= 5.6.0
+<<<<<<< HEAD
+node >= v8.9.4
+=======
+node >= v8.9.1
+>>>>>>> origin/master
+```
+
 ### Installation
+```Bash
     npm install react-icons --save
+```
 
+<<<<<<< HEAD
+=======
+### Build
+Before to import make sure that you have already the ```lib``` folder otherwise please insert these commands in your terminal inside this package
+```Bash
+~/cd node_modules/react-icons/
+
+~/npm i
+
+~/npm run build
+
+~/rm -rf node_modules
+
+```
+When you can see the lib folder ,this means that the command for build script was successful ..
+
+>>>>>>> origin/master
 ### Usage
-
-
+When you have the ```lib``` folder you can import this into your project
 ```javascript
+
 import FaBeer from 'react-icons/lib/fa/beer';
 
 class Question extends React.Component {
@@ -26,6 +56,7 @@ class Question extends React.Component {
         return <h3> Lets go for a <FaBeer />? </h3>
     }
 }
+
 ````
 
 If you are not using es6 compiler like [babel](https://babeljs.io/) or [rollup.js](http://rollupjs.org/), it's possible to include icons from the compiled folder ```./lib```. Babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore ```node_modules``` so if you don't want to change the settings you will need to use files from ```./lib```
@@ -60,7 +91,7 @@ class Question extends React.Component {
 or import multiple icons from the same pack
 
 ```javascript
-import {MdCancel, MdChat, MdCheck} from 'react-icons/md';
+import {MdCancel, MdChat, MdCheck} from 'react-icons/lib/md';
 ```
 every icon pack is in their own folder
 * Material Design Icons => ./md

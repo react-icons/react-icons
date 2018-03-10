@@ -1,0 +1,19 @@
+image: Visual Studio 2015
+
+environment:
+  nodejs_version: "6"
+
+platform:
+  - x86
+  - x64
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+test_script:
+  - node -e "console.log(`${process.version} ${process.arch} ${process.platform}`)"
+  - npm --version
+  - npm test
+
+build: off

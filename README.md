@@ -1,7 +1,4 @@
-
-## not maintained anymore
-
-<img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="60" alt="React Icons">
+<img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
 
 ## [React Icons](http://gorangajic.github.io/react-icons/index.html)
 
@@ -13,12 +10,12 @@
 Include popular icons in your React projects easly with ```react-icons```, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
 ### Installation
+
     npm install react-icons --save
 
 ### Usage
 
-
-```javascript
+```jsx
 import FaBeer from 'react-icons/lib/fa/beer';
 
 class Question extends React.Component {
@@ -26,11 +23,12 @@ class Question extends React.Component {
         return <h3> Lets go for a <FaBeer />? </h3>
     }
 }
-````
+```
 
-If you are not using es6 compiler like [babel](https://babeljs.io/) or [rollup.js](http://rollupjs.org/), it's possible to include icons from the compiled folder ```./lib```. Babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore ```node_modules``` so if you don't want to change the settings you will need to use files from ```./lib```
+If you are not using an ES6 compiler like [Babel](https://babeljs.io/) or [Rollup](http://rollupjs.org/), you can include icons from the compiled folder `./lib`.
+Babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore `node_modules` so if you don't want to change the settings you will need to use files from `./lib`.
 
-```javascript
+```jsx
 var FaBeer = require('react-icons/lib/fa/beer');
 
 var Question = React.createClass({
@@ -43,11 +41,11 @@ var Question = React.createClass({
 
 ```
 
-You can include icons directly from ```react-icons``` using ```import FaBeer from 'react-icons'```, but you should wait to Webpack 2 [implement](https://twitter.com/dan_abramov/status/656970508005736448) dead code elimination based on es6 imports.
+You can include icons directly from `react-icons` using `import FaBeer from 'react-icons'`, but you should use a builder that uses dead code elimination like Webpack 2+, based on ES6 imports.
 
-Also it's possible to include the whole icon pack from:
+Also it's possible to import an entire icon pack:
 
-```javascript
+```jsx
 import * as FontAwesome from 'react-icons/lib/fa'
 
 class Question extends React.Component {
@@ -59,19 +57,21 @@ class Question extends React.Component {
 
 or import multiple icons from the same pack
 
-```javascript
+```jsx
 import {MdCancel, MdChat, MdCheck} from 'react-icons/md';
 ```
-every icon pack is in their own folder
-* Material Design Icons => ./md
-* FontAwesome => ./fa
-* Typicons => ./ti
-* Github Octicons => ./go
-* Ionicons => ./io
 
-to view all icons visit [docs](http://gorangajic.github.io/react-icons/)
+Each icon pack is in its own folder:
 
-Also, to view and search for the necessary icons you can use the tool [Icon Viewer](https://andy-pro.github.io/icon-viewer).
+* Material Design Icons => `./md`
+* FontAwesome => `./fa`
+* Typicons => `./ti`
+* Github Octicons => `./go`
+* Ionicons => `./io`
+
+To view them all, visit the [docs](http://gorangajic.github.io/react-icons/)
+
+Also, to view and search for the necessary icons you can use [Icon Viewer](https://andy-pro.github.io/icon-viewer).
 
 ### Icons
 
@@ -85,9 +85,10 @@ Currently supported icons are:
 You can add more icons by submitting pull requests or creating issues.
 
 ### Configuration
-You can configure react-icons props in context.
 
-```javascript
+You can configure react-icons props using context.
+
+```jsx
 class HigherOrderComponent extends Component {
 
     static childContextTypes = {
@@ -114,27 +115,28 @@ class HigherOrderComponent extends Component {
 
 Context is overriden inline.
 
-```javascript
-<Icon size={30} color='aliceblue' style={{ ... }} />
+```jsx
+<Icon size={30} color="aliceblue" style={{ ... }} />
 ```
 
-### Contribution
+### Contribute
 
-Just add svg icons in ```./icons/:icons-name``` folder and create pull request again ```develop``` after merge I will generate React components because this process is not fully automated yet.
+Just add/edit your SVG icons in `./icons/[icons-name]`, run `npm run build`, then create your pull request again `master`.
 
-### svg ?
+### SVG ?
+
 Svg is [supported](http://caniuse.com/#search=svg) by all major browsers.
 
-### Why es6 import and not fonts?
+### Why ES6 import and not fonts?
 
-With ```react-icons```, you can send icons that are specified instead of one big font file to the users, helping you to recognize which icons are used in your project.
+With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
 
 ### Using `create-react-app`?
 
 `create-react-app` tries to load the icons as files by default, rather than running through Babel. You may therefore see an erorr message similar to "You may need an appropriate loader...". The recommended workaround is to import from `lib` instead:
 
-```javascript
-import FaBeer from 'react-icons/lib/fa/beer';
+```jsx
+import {FaBeer} from 'react-icons/lib/fa';
 ```
 
 ## Related

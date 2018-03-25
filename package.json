@@ -50,7 +50,7 @@
     "ghooks": "^1.3.2",
     "glob": "^6.0.4",
     "gulp": "^3.9.0",
-    "marky-markdown": "https://github.com/npm/marky-markdown",
+    "marky-markdown": "^12.0.0",
     "material-design-lite": "^1.0.6",
     "svg-scaler": "gorangajic/svg-scaler#take-size-viewbox",
     "underscore": "^1.8.3",

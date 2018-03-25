@@ -33,7 +33,7 @@ Object.keys(icons).forEach(function(key, index) {
 
 
 var readme = fs.readFileSync(path.join(__dirname, '..', 'README.md'), 'utf-8');
-readme = marky(readme).html();
+readme = marky(readme);
 readme = renderToStaticMarkup(<App active="index" icons={icons}>
                         <div className="readme-page" dangerouslySetInnerHTML={{__html:readme}}/>
                     </App>);

@@ -10,6 +10,9 @@ import icons from '../icons/info';
 // because stateless function components
 global.React = React;
 
+
+// generate documents
+
 var indexFile = path.join(__dirname, '..', 'docs', 'sample.html');
 var indexHtml = fs.readFileSync(indexFile, 'utf-8');
 
@@ -17,6 +20,11 @@ function writeFile(pageName, content) {
     var page = indexHtml.replace("{{#content}}", content);
     var destFile = path.join(__dirname, '..', 'publish', pageName + '.html');
     fs.writeFileSync(destFile, page, 'utf-8')
+}
+
+var publishDir = path.join(__dirname, '..', 'publish');
+if (!fs.existsSync(publishDir)) {
+    fs.mkdirSync(publishDir);
 }
 
 Object.keys(icons).forEach(function(key, index) {
@@ -39,3 +47,19 @@ readme = renderToStaticMarkup(<App active="index" icons={icons}>
                     </App>);
 
 writeFile('index', readme);
+
+
+// generate license file
+
+var licenseHeaerFile = path.join(__dirname, '..', 'docs', 'license-header');
+var licenseOutFile = path.join(__dirname, '..', 'LICENSE');
+var licenseHeader = fs.readFileSync(licenseHeaerFile, 'utf-8');
+
+var licenses = '';
+Object.keys(icons).forEach(function(key, index) {
+    var icon = icons[key];
+    licenses += `${icon.attribution}\n`;
+    licenses += `License: ${icon.license} ${icon.licenseUrl}\n\n`;
+});
+
+fs.writeFileSync(licenseOutFile, licenseHeader + licenses, 'utf-8');

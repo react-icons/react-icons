@@ -1,0 +1,10 @@
+{
+  "name": "react-icons-set",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "kamijin_fanta <kamijin@live.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "octicons": "^7.3.0"
+  }
+}

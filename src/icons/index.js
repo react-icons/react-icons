@@ -15,7 +15,7 @@ module.exports = {
       name: "ionicons",
       files: path.resolve(
         __dirname,
-        "../..//node_modules/ionicons/dist/svg/*.svg"
+        "../../node_modules/ionicons/dist/svg/*.svg"
       )
     },
     {

@@ -10,7 +10,6 @@ const { icons } = require("../src/icons");
 // file path
 const rootDir = path.resolve(__dirname, "../");
 const DIST = path.resolve(rootDir, "dist");
-const MODULE_DIST = path.resolve(rootDir, "module");
 
 // logic
 
@@ -29,13 +28,11 @@ async function convertIconData(svg) {
     path: path // like: [ { d: 'M436 160c6.6 ....
   };
 }
-function generateIconRow(icon, filePath, iconData, module = true) {
-  const name = path.basename(filePath, path.extname(filePath));
-  const pascalName = camelcase(name, { pascalCase: true });
+function generateIconRow(icon, formattedName, iconData, module = true) {
   if (module) {
-    return `export const ${pascalName} = ${JSON.stringify(iconData)}\n`;
+    return `export const ${formattedName} = ${JSON.stringify(iconData)}\n`;
   } else {
-    return `module.exports.${pascalName} = ${JSON.stringify(iconData)}\n`;
+    return `module.exports.${formattedName} = ${JSON.stringify(iconData)}\n`;
   }
 }
 
@@ -49,17 +46,15 @@ async function dirInit() {
   const writeFile = promisify(fs.writeFile);
 
   await mkdir(DIST).catch(ignore);
-  await mkdir(MODULE_DIST).catch(ignore);
   for (const icon of icons) {
     await mkdir(path.resolve(DIST, icon.id)).catch(ignore);
-    await mkdir(path.resolve(MODULE_DIST, icon.id)).catch(ignore);
     await writeFile(
       path.resolve(DIST, icon.id, "data.js"),
       "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\n",
       "utf8"
     ).catch(ignore);
     await writeFile(
-      path.resolve(MODULE_DIST, icon.id, "data.mjs"),
+      path.resolve(DIST, icon.id, "data.mjs"),
       "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\n",
       "utf8"
     ).catch(ignore);
@@ -68,15 +63,24 @@ async function dirInit() {
 async function writeIconModule(icon) {
   const appendFile = promisify(fs.appendFile);
   const files = await getIconFiles(icon);
+  const exists = new Set(); // for remove duplicate
   for (const file of files) {
     const svgStr = await promisify(fs.readFile)(file, "utf8");
     const iconData = await convertIconData(svgStr);
 
+    const name = path.basename(file, path.extname(file));
+    const pascalName = camelcase(name, { pascalCase: true });
+    const formattedName =
+      (icon.formatter && icon.formatter(pascalName)) || pascalName;
+    if (exists.has(formattedName)) continue;
+    exists.add(formattedName);
+
     // write like: module/fa/data.mjs
-    const modRes = generateIconRow(icon, file, iconData);
-    appendFile(path.resolve(MODULE_DIST, icon.id, "data.mjs"), modRes, "utf8");
-    const commonRes = generateIconRow(icon, file, iconData, false);
+    const modRes = generateIconRow(icon, formattedName, iconData);
+    appendFile(path.resolve(DIST, icon.id, "data.mjs"), modRes, "utf8");
+    const commonRes = generateIconRow(icon, formattedName, iconData, false);
     appendFile(path.resolve(DIST, icon.id, "data.js"), commonRes, "utf8");
+    exists.add(file); // todo
   }
 }
 

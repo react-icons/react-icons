@@ -1,7 +1,7 @@
 {
   "name": "react-icons-set",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index",
   "author": "kamijin_fanta <kamijin@live.jp>",
   "license": "MIT",
   "devDependencies": {

@@ -8,7 +8,8 @@ module.exports = {
       files: path.resolve(
         __dirname,
         "fontawesome/advanced-options/raw-svg/regular/*.svg"
-      )
+      ),
+      formatter: name => `Fa${name}`
     },
     {
       id: "io",
@@ -16,7 +17,8 @@ module.exports = {
       files: path.resolve(
         __dirname,
         "../../node_modules/ionicons/dist/svg/*.svg"
-      )
+      ),
+      formatter: name => `Io${name}`
     },
     {
       id: "md",
@@ -24,12 +26,14 @@ module.exports = {
       files: path.resolve(
         __dirname,
         "material-design-icons/*/svg/production/*_24px.svg"
-      )
+      ),
+      formatter: name => name.replace(/Ic(\w+)24px/, "Md$1")
     },
     {
       id: "typicons",
       name: "material-design-icons",
-      files: path.resolve(__dirname, "typicons/src/svg/*.svg")
+      files: path.resolve(__dirname, "typicons/src/svg/*.svg"),
+      formatter: name => `Ti${name}`
     },
     {
       id: "go",
@@ -37,7 +41,8 @@ module.exports = {
       files: path.resolve(
         __dirname,
         "../../node_modules/octicons/build/svg/*.svg"
-      )
+      ),
+      formatter: name => `Go${name}`
     }
   ]
 };

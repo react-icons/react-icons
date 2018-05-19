@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+import * as Icon from "react-icons-set/dist/md/data";
+
 export function GenIcon(data) {
   return props => (
     <IconBase viewBox={data.viewBox} {...props}>
@@ -31,10 +33,10 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
-          <MdAccessibility />
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
+          <MdAccessibility />
         </p>
       </div>
     );

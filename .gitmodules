@@ -1,12 +1,12 @@
 [submodule "src/icons/fontawesome"]
-	path = src/icons/fontawesome
+	path = packages/react-icons-set/src/icons/fontawesome/fontawesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
 [submodule "src/icons/material-design-icons"]
-	path = src/icons/material-design-icons
+	path = packages/react-icons-set/src/icons/material-design-icons
 	url = https://github.com/google/material-design-icons.git
 [submodule "src/icons/typicons"]
-	path = src/icons/typicons
+	path = packages/react-icons-set/src/icons/typicons
 	url = https://github.com/stephenhutchings/typicons.font.git
 [submodule "src/icons/ionicons"]
-	path = src/icons/ionicons
+	path = packages/react-icons-set/src/icons/ionicons
 	url = https://github.com/ionic-team/ionicons.git

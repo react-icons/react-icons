@@ -7,7 +7,7 @@ module.exports = {
       name: "fontawesome",
       files: path.resolve(
         __dirname,
-        "fontawesome/advanced-options/raw-svg/regular/*.svg"
+        "fontawesome/advanced-options/raw-svg/+(brands|regular)/*.svg"
       ),
       formatter: name => `Fa${name}`
     },
@@ -16,7 +16,7 @@ module.exports = {
       name: "ionicons",
       files: path.resolve(
         __dirname,
-        "../../node_modules/ionicons/dist/svg/*.svg"
+        "../../../../node_modules/ionicons/dist/svg/*.svg"
       ),
       formatter: name => `Io${name}`
     },
@@ -40,7 +40,7 @@ module.exports = {
       name: "octicons",
       files: path.resolve(
         __dirname,
-        "../../node_modules/octicons/build/svg/*.svg"
+        "../../../../node_modules/octicons/build/svg/*.svg"
       ),
       formatter: name => `Go${name}`
     }

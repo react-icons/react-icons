@@ -2,28 +2,9 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import * as Icon from "react-icons-set/dist/md/data";
+import * as Icon from "react-icons-set/module/md/data";
+import { GenIcon } from "react-icons-set/module/IconBase";
 
-export function GenIcon(data) {
-  return props => (
-    <IconBase viewBox={data.viewBox} {...props}>
-      {data.path.map((path, index) => <path key={index} {...path} />)}
-    </IconBase>
-  );
-}
-export function IconBase(props) {
-  const computedSize = props.size || "1em";
-  return (
-    <svg
-      style={props.style}
-      viewBox={props.viewBox}
-      height={computedSize}
-      width={computedSize}
-    >
-      {props.children}
-    </svg>
-  );
-}
 const MdAccessibility = GenIcon(Icon.MdAccessibility);
 
 class App extends Component {

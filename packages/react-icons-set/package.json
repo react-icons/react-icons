@@ -1,17 +1,19 @@
 {
   "name": "react-icons-set",
   "version": "1.0.0",
-  "main": "dist/index",
+  "main": "module/index",
   "author": "kamijin_fanta <kamijin@live.jp>",
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "^16.3.14",
     "camelcase": "^5.0.0",
     "cheerio": "^1.0.0-rc.2",
     "glob-promise": "^3.4.0",
     "ionicons": "^4.0.0",
-    "octicons": "^7.3.0"
+    "octicons": "^7.3.0",
+    "typescript": "^2.8.3"
   },
   "scripts": {
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js && node ../../node_modules/typescript/bin/tsc"
   }
 }

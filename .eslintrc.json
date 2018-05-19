@@ -6,6 +6,10 @@
     "prettier/react",
     "prettier/standard"
   ],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
   "plugins": [
     "prettier"
   ],

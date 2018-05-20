@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import * as Icon from "react-icons-set/module/md/data";
-import { GenIcon } from "react-icons-set/module/IconBase";
-
-const MdAccessibility = GenIcon(Icon.MdAccessibility);
+import { MdAccessibility, FaFolder } from "react-icons-set";
 
 class App extends Component {
   render() {
@@ -18,6 +15,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
           <MdAccessibility />
+          <FaFolder />
         </p>
       </div>
     );

@@ -41,9 +41,9 @@ function generateIconDataRow(icon, formattedName, iconData, type = "module") {
 function generateIconIndexRow(icon, formattedName, iconData, type = "module") {
   switch (type) {
     case "module":
-      return `export const ${formattedName} = IconData.${formattedName};\n`;
+      return `export const ${formattedName} = GenIcon(IconData.${formattedName});\n`;
     case "common":
-      return `module.exports.${formattedName} = IconData.${formattedName};\n`;
+      return `module.exports.${formattedName} = GenIcon(IconData.${formattedName});\n`;
     case "dts":
       return `export declare const ${formattedName}: IconType;\n`;
   }
@@ -88,11 +88,11 @@ async function dirInit() {
 
     await write(
       [icon.id, "index.js"],
-      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nconst IconData = require('./data');\n"
+      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nconst IconData = require('./data');\nconst { GenIcon } = require('../IconBase')\n"
     );
     await write(
       [icon.id, "index.mjs"],
-      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nimport * as IconData from './data'\n"
+      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nimport * as IconData from './data';\nimport { GenIcon } from '../IconBase';\n"
     );
     await write(
       [icon.id, "index.d.ts"],

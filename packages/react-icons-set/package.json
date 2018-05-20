@@ -4,6 +4,7 @@
   "main": "module/index",
   "author": "kamijin_fanta <kamijin@live.jp>",
   "license": "MIT",
+  "sideEffects": false,
   "devDependencies": {
     "@types/react": "^16.3.14",
     "camelcase": "^5.0.0",

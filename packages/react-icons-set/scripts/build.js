@@ -28,24 +28,23 @@ async function convertIconData(svg) {
     path: path // like: [ { d: 'M436 160c6.6 ....
   };
 }
-function generateIconDataRow(icon, formattedName, iconData, type = "module") {
+function generateIconRow(icon, formattedName, iconData, type = "module") {
   switch (type) {
     case "module":
-      return `export const ${formattedName} = ${JSON.stringify(iconData)};\n`;
+      return (
+        `export const Data${formattedName} = ${JSON.stringify(iconData)};\n` +
+        `export const ${formattedName} = function (props) { return GenIcon(Data${formattedName})(props); };\n`
+      );
     case "common":
-      return `module.exports.${formattedName} = ${JSON.stringify(iconData)};\n`;
+      return (
+        `module.exports.Data${formattedName} = ${JSON.stringify(iconData)};\n` +
+        `module.exports.${formattedName} = function (props) { return GenIcon(module.exports.Data${formattedName})(props); };\n`
+      );
     case "dts":
-      return `export declare const ${formattedName}: IconData;\n`;
-  }
-}
-function generateIconIndexRow(icon, formattedName, iconData, type = "module") {
-  switch (type) {
-    case "module":
-      return `export const ${formattedName} = GenIcon(IconData.${formattedName});\n`;
-    case "common":
-      return `module.exports.${formattedName} = GenIcon(IconData.${formattedName});\n`;
-    case "dts":
-      return `export declare const ${formattedName}: IconType;\n`;
+      return (
+        `export declare const Data${formattedName}: IconData;\n` +
+        `export declare const ${formattedName}: IconType;\n`
+      );
   }
 }
 function generateIconsEntry(iconId, type = "module") {
@@ -74,29 +73,16 @@ async function dirInit() {
       writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
     await write(
-      [icon.id, "data.js"],
-      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\n"
-    );
-    await write(
-      [icon.id, "data.mjs"],
-      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\n"
-    );
-    await write(
-      [icon.id, "data.d.ts"],
-      "import { IconData } from '../IconBase'\n// THIS FILE IS AUTO GENERATED\n"
-    );
-
-    await write(
       [icon.id, "index.js"],
-      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nconst IconData = require('./data');\nconst { GenIcon } = require('../IconBase')\n"
+      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nconst { GenIcon } = require('../IconBase')\n"
     );
     await write(
       [icon.id, "index.mjs"],
-      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nimport * as IconData from './data';\nimport { GenIcon } from '../IconBase';\n"
+      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../IconBase';\n"
     );
     await write(
       [icon.id, "index.d.ts"],
-      "import { IconType } from '../IconBase'\n// THIS FILE IS AUTO GENERATED\n"
+      "import { IconData, IconType } from '../IconBase'\n// THIS FILE IS AUTO GENERATED\n"
     );
 
     await write(["index.d.ts"], "// THIS FILE IS AUTO GENERATED\n");
@@ -124,19 +110,12 @@ async function writeIconModule(icon) {
     exists.add(name);
 
     // write like: module/fa/data.mjs
-    const modRes = generateIconDataRow(icon, name, iconData, "module");
-    appendFile(path.resolve(DIST, icon.id, "data.mjs"), modRes, "utf8");
-    const commonRes = generateIconDataRow(icon, name, iconData, "common");
-    appendFile(path.resolve(DIST, icon.id, "data.js"), commonRes, "utf8");
-    const dtsRes = generateIconDataRow(icon, name, iconData, "dts");
-    appendFile(path.resolve(DIST, icon.id, "data.d.ts"), dtsRes, "utf8");
-
-    const indMod = generateIconIndexRow(icon, name, iconData, "module");
-    appendFile(path.resolve(DIST, icon.id, "index.mjs"), indMod, "utf8");
-    const indCom = generateIconIndexRow(icon, name, iconData, "common");
-    appendFile(path.resolve(DIST, icon.id, "index.js"), indCom, "utf8");
-    const indDts = generateIconIndexRow(icon, name, iconData, "dts");
-    appendFile(path.resolve(DIST, icon.id, "index.d.ts"), indDts, "utf8");
+    const modRes = generateIconRow(icon, name, iconData, "module");
+    appendFile(path.resolve(DIST, icon.id, "index.mjs"), modRes, "utf8");
+    const commonRes = generateIconRow(icon, name, iconData, "common");
+    appendFile(path.resolve(DIST, icon.id, "index.js"), commonRes, "utf8");
+    const dtsRes = generateIconRow(icon, name, iconData, "dts");
+    appendFile(path.resolve(DIST, icon.id, "index.d.ts"), dtsRes, "utf8");
 
     exists.add(file);
   }

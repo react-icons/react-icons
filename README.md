@@ -58,7 +58,7 @@ class Question extends React.Component {
 or import multiple icons from the same pack
 
 ```jsx
-import {MdCancel, MdChat, MdCheck} from 'react-icons/md';
+import {MdCancel, MdChat, MdCheck} from 'react-icons/lib/md';
 ```
 
 Each icon pack is in its own folder:

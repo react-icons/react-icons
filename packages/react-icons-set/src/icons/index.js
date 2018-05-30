@@ -9,16 +9,22 @@ module.exports = {
         __dirname,
         "fontawesome/advanced-options/raw-svg/+(brands|regular)/*.svg"
       ),
-      formatter: name => `Fa${name}`
+      formatter: name => `Fa${name}`,
+      projectUrl: "https://fontawesome.com/",
+      license: "CC BY 4.0 License",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       id: "io",
       name: "ionicons",
       files: path.resolve(
         __dirname,
-        "../../../../node_modules/ionicons/dist/svg/*.svg"
+        "../../../../node_modules/ionicons/dist/collection/icon/svg/*.svg"
       ),
-      formatter: name => `Io${name}`
+      formatter: name => `Io${name}`,
+      projectUrl: "https://ionicons.com/",
+      license: "MIT",
+      licenseUrl: "https://github.com/ionic-team/ionicons/blob/master/LICENSE"
     },
     {
       id: "md",
@@ -27,13 +33,20 @@ module.exports = {
         __dirname,
         "material-design-icons/*/svg/production/*_24px.svg"
       ),
-      formatter: name => name.replace(/Ic(\w+)24px/, "Md$1")
+      formatter: name => name.replace(/Ic(\w+)24px/, "Md$1"),
+      projectUrl: "http://google.github.io/material-design-icons/",
+      license: "Apache License Version 2.0",
+      licenseUrl:
+        "https://github.com/google/material-design-icons/blob/master/LICENSE"
     },
     {
-      id: "typicons",
-      name: "material-design-icons",
+      id: "ti",
+      name: "typicons",
       files: path.resolve(__dirname, "typicons/src/svg/*.svg"),
-      formatter: name => `Ti${name}`
+      formatter: name => `Ti${name}`,
+      projectUrl: "http://s-ings.com/typicons/",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
     },
     {
       id: "go",
@@ -42,7 +55,10 @@ module.exports = {
         __dirname,
         "../../../../node_modules/octicons/build/svg/*.svg"
       ),
-      formatter: name => `Go${name}`
+      formatter: name => `Go${name}`,
+      projectUrl: "https://octicons.github.com/",
+      license: "MIT",
+      licenseUrl: "https://github.com/primer/octicons/blob/master/LICENSE"
     }
   ]
 };

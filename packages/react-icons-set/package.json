@@ -16,5 +16,6 @@
   },
   "scripts": {
     "build": "node scripts/build.js && node ../../node_modules/typescript/bin/tsc"
-  }
+  },
+  "dependencies": {}
 }

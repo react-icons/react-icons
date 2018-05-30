@@ -20,8 +20,19 @@ async function convertIconData(svg) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");
   const viewBox = $svg.attr("viewBox");
   const path = $svg
-    .children("path")
-    .map((_, d) => d.attribs)
+    .find("path") // todo support circle ex:TiThSmall
+    .map((_, d) =>
+      // filter/convert attributes
+      // 1. remove class attr
+      // 2. convert to camelcase ex: fill-opacity => fillOpacity
+      Object.keys(d.attribs)
+        .filter(name => !["class"].includes(name))
+        .reduce((obj, name) => {
+          const newName = camelcase(name);
+          obj[newName] = d.attribs[name];
+          return obj;
+        }, {})
+    )
     .toArray();
   return {
     viewBox, // like: '0 0 448 512',

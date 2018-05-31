@@ -59,6 +59,18 @@ module.exports = {
       projectUrl: "https://octicons.github.com/",
       license: "MIT",
       licenseUrl: "https://github.com/primer/octicons/blob/master/LICENSE"
-    }
+    },
+    {
+      id: "fi",
+      name: "feather",
+      files: path.resolve(
+        __dirname,
+        "../../../../node_modules/feather-icons/dist/icons/*.svg"
+      ),
+      formatter: name => `Fi${name}`,
+      projectUrl: "https://feathericons.com/",
+      license: "MIT",
+      licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE"
+    },
   ]
 };

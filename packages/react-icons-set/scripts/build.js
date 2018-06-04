@@ -25,7 +25,7 @@ async function convertIconData(svg) {
   const attrConverter = (/** @type {{[key: string]: string}} */ attribs) =>
     attribs &&
     Object.keys(attribs)
-      .filter(name => !["class", 'xmlns', 'width', 'height'].includes(name))
+      .filter(name => !["class", "xmlns", "width", "height"].includes(name))
       .reduce((obj, name) => {
         const newName = camelcase(name);
         obj[newName] = attribs[name];
@@ -35,7 +35,7 @@ async function convertIconData(svg) {
   // convert to [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
   const elementToTree = (/** @type {Cheerio} */ element) =>
     element
-      .filter((_, e) => e.tagName && !['style'].includes(e.tagName))
+      .filter((_, e) => e.tagName && !["style"].includes(e.tagName))
       .map((_, e) => ({
         tag: e.tagName,
         attr: attrConverter(e.attribs),

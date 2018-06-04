@@ -1,6 +1,6 @@
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
 
-## [React Icons](http://gorangajic.github.io/react-icons/index.html)
+## [React Icons](http://react-icons.github.io/react-icons/index.html)
 
 [![npm][npm-image]][npm-url]
 

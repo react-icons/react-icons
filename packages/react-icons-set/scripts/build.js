@@ -18,26 +18,36 @@ async function getIconFiles(icon) {
 }
 async function convertIconData(svg) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");
-  const viewBox = $svg.attr("viewBox");
-  const path = $svg
-    .find("path") // todo support circle ex:TiThSmall
-    .map((_, d) =>
-      // filter/convert attributes
-      // 1. remove class attr
-      // 2. convert to camelcase ex: fill-opacity => fillOpacity
-      Object.keys(d.attribs)
-        .filter(name => !["class"].includes(name))
-        .reduce((obj, name) => {
-          const newName = camelcase(name);
-          obj[newName] = d.attribs[name];
-          return obj;
-        }, {})
-    )
-    .toArray();
-  return {
-    viewBox, // like: '0 0 448 512',
-    path: path // like: [ { d: 'M436 160c6.6 ....
-  };
+
+  // filter/convert attributes
+  // 1. remove class attr
+  // 2. convert to camelcase ex: fill-opacity => fillOpacity
+  const attrConverter = (/** @type {{[key: string]: string}} */ attribs) =>
+    attribs &&
+    Object.keys(attribs)
+      .filter(name => !["class", 'xmlns', 'width', 'height'].includes(name))
+      .reduce((obj, name) => {
+        const newName = camelcase(name);
+        obj[newName] = attribs[name];
+        return obj;
+      }, {});
+
+  // convert to [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
+  const elementToTree = (/** @type {Cheerio} */ element) =>
+    element
+      .filter((_, e) => e.tagName && !['style'].includes(e.tagName))
+      .map((_, e) => ({
+        tag: e.tagName,
+        attr: attrConverter(e.attribs),
+        child:
+          e.children && e.children.length
+            ? elementToTree(cheerio(e.children))
+            : undefined
+      }))
+      .get();
+
+  const tree = elementToTree($svg);
+  return tree[0]; // like: [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
 }
 function generateIconRow(icon, formattedName, iconData, type = "module") {
   switch (type) {

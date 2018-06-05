@@ -1,0 +1,34 @@
+{
+  "name": "react-icons",
+  "version": "3.0.0",
+  "description": "SVG React icons of popular icon packs using ES6 imports",
+  "author": "Goran Gajic",
+  "contributors": [
+    "kamijin_fanta <kamijin@live.jp>"
+  ],
+  "license": "MIT",
+  "main": "module/index",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:react-icons/react-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/react-icons/react-icons/issues"
+  },
+  "homepage": "https://github.com/react-icons/react-icons#readme",
+  "devDependencies": {
+    "@types/react": "^16.3.14",
+    "camelcase": "^5.0.0",
+    "cheerio": "^1.0.0-rc.2",
+    "feather-icons": "^4.7.3",
+    "glob-promise": "^3.4.0",
+    "ionicons": "^4.0.0",
+    "octicons": "^7.3.0",
+    "typescript": "^2.8.3"
+  },
+  "scripts": {
+    "build": "node scripts/build.js && node ../../node_modules/typescript/bin/tsc"
+  },
+  "dependencies": {}
+}

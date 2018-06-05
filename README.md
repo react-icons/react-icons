@@ -121,7 +121,23 @@ Context is overriden inline.
 
 ### Contribute
 
-Just add/edit your SVG icons in `./icons/[icons-name]`, run `npm run build`, then create your pull request again `master`.
+development
+
+```
+yarn
+yarn submodule
+cd packages/react-icons-set
+yarn build
+```
+
+scripts for run demo
+
+```
+cd packages/react-icons-set
+yarn build
+cd ../demo
+yarn start
+```
 
 ### SVG ?
 

@@ -126,14 +126,14 @@ development
 ```
 yarn
 yarn submodule
-cd packages/react-icons-set
+cd packages/react-icons
 yarn build
 ```
 
 scripts for run demo
 
 ```
-cd packages/react-icons-set
+cd packages/react-icons
 yarn build
 cd ../demo
 yarn start

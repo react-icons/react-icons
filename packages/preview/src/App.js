@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import { icons as iconsManifesto } from "react-icons-set/src/icons";
-// import * as Fa from "react-icons-set/module/fa";
-import * as Icons from "react-icons-set";
+import { icons as iconsManifesto } from "react-icons/src/icons";
+// import * as Fa from "react-icons/module/fa";
+import * as Icons from "react-icons";
 
 function IconsView({ icons, id }) {
   return Object.keys(icons)

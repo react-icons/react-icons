@@ -1,0 +1,26 @@
+{
+  "name": "react-icons-set-root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "kamijin_fanta <kamijin@live.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "prettier": "^1.12.1"
+  },
+  "scripts": {
+    "submodule": "git submodule init && git submodule update",
+    "submodule-deinit": "git submodule deinit"
+  }
+}

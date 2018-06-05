@@ -1,0 +1,16 @@
+[submodule "fontawesome"]
+	path = packages/react-icons-set/src/icons/fontawesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+	shallow = true
+[submodule "material-design-icons"]
+	path = packages/react-icons-set/src/icons/material-design-icons
+	url = https://github.com/google/material-design-icons.git
+	shallow = true
+[submodule "typicons"]
+	path = packages/react-icons-set/src/icons/typicons
+	url = https://github.com/stephenhutchings/typicons.font.git
+	shallow = true
+[submodule "ionicons"]
+	path = packages/react-icons-set/src/icons/ionicons
+	url = https://github.com/ionic-team/ionicons.git
+	shallow = true

@@ -1,0 +1,12 @@
+sudo: false
+dist: trusty
+language: node_js
+node_js:
+  - "8"
+cache:
+  yarn: true
+install:
+  - yarn
+  - yarn submodule
+script:
+  - (cd packages/react-icons/ && yarn build)

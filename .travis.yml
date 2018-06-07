@@ -8,10 +8,8 @@ git:
 cache:
   yarn: true
   directories:
-    - $HOME/.git/modules
+    - .git/modules
 
-before_script:
-  - git submodule update --init --recursive
 install:
   - yarn
   - yarn submodule

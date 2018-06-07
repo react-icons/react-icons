@@ -4,7 +4,7 @@ module.exports = {
   icons: [
     {
       id: "fa",
-      name: "fontawesome",
+      name: "Font Awesome",
       files: path.resolve(
         __dirname,
         "fontawesome/advanced-options/raw-svg/+(brands|regular)/*.svg"
@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       id: "io",
-      name: "ionicons",
+      name: "Ionicons",
       files: path.resolve(
         __dirname,
         "../../../../node_modules/ionicons/dist/collection/icon/svg/*.svg"
@@ -28,7 +28,7 @@ module.exports = {
     },
     {
       id: "md",
-      name: "material-design-icons",
+      name: "Material Design icons",
       files: path.resolve(
         __dirname,
         "material-design-icons/*/svg/production/*_24px.svg"
@@ -41,7 +41,7 @@ module.exports = {
     },
     {
       id: "ti",
-      name: "typicons",
+      name: "Typicons",
       files: path.resolve(__dirname, "typicons/src/svg/*.svg"),
       formatter: name => `Ti${name}`,
       projectUrl: "http://s-ings.com/typicons/",
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       id: "go",
-      name: "octicons",
+      name: "Github Octicons icons",
       files: path.resolve(
         __dirname,
         "../../../../node_modules/octicons/build/svg/*.svg"
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       id: "fi",
-      name: "feather",
+      name: "Feather",
       files: path.resolve(
         __dirname,
         "../../../../node_modules/feather-icons/dist/icons/*.svg"
@@ -71,6 +71,6 @@ module.exports = {
       projectUrl: "https://feathericons.com/",
       license: "MIT",
       licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE"
-    },
+    }
   ]
 };

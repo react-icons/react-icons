@@ -175,9 +175,31 @@ async function writeIconsManifest() {
   await appendFile(path.resolve(DIST, "index.d.ts"), manifestExport, "utf8");
 }
 
+async function writeLicense() {
+  const copyFile = promisify(fs.copyFile);
+  const appendFile = promisify(fs.appendFile);
+
+  const iconLicenses =
+    icons
+      .map(icon =>
+        [
+          `${icon.name} - ${icon.projectUrl}`,
+          `License: ${icon.license} ${icon.licenseUrl}`
+        ].join("\n")
+      )
+      .join("\n\n") + "\n";
+
+  await copyFile(
+    path.resolve(rootDir, "LICENSE_HEADER"),
+    path.resolve(rootDir, "LICENSE")
+  );
+  await appendFile(path.resolve(rootDir, "LICENSE"), iconLicenses, "utf8");
+}
+
 async function main() {
   try {
     await dirInit();
+    await writeLicense();
     await writeIconsManifest();
     for (const icon of icons) {
       await writeIconModule(icon);

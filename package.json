@@ -20,7 +20,7 @@
     "prettier": "^1.12.1"
   },
   "scripts": {
-    "submodule": "git submodule init && git submodule update",
+    "submodule": "git submodule update --init --recursive",
     "submodule-deinit": "git submodule deinit",
     "netlify": "netlify"
   }

@@ -16,7 +16,7 @@ Include popular icons in your React projects easly with ```react-icons```, which
 ### Usage
 
 ```jsx
-import FaBeer from 'react-icons/lib/fa/beer';
+import { FaBeer } from 'react-icons';
 
 class Question extends React.Component {
     render() {

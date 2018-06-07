@@ -52,6 +52,8 @@
     "gulp": "^3.9.0",
     "marky-markdown": "^12.0.0",
     "material-design-lite": "^1.0.6",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
     "svg-scaler": "gorangajic/svg-scaler#take-size-viewbox",
     "underscore": "^1.8.3",
     "validate-commit-msg": "^2.6.1"

@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import { icons as iconsManifesto } from "react-icons/src/icons";
-// import * as Fa from "react-icons/module/fa";
 import * as Icons from "react-icons";
 
 function IconsView({ icons, id }) {
@@ -33,7 +31,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        {iconsManifesto.map(icon => (
+        {Icons.IconsManifest.map(icon => (
           <div key={icon.id}>
             <h1>{icon.name}</h1>
             <div className="icons">

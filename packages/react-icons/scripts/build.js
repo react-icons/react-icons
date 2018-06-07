@@ -116,9 +116,9 @@ async function writeIconModule(icon) {
   const exists = new Set(); // for remove duplicate
 
   const entryModule = generateIconsEntry(icon.id, "module");
-  appendFile(path.resolve(DIST, "index.mjs"), entryModule, "utf8");
+  await appendFile(path.resolve(DIST, "index.mjs"), entryModule, "utf8");
   const entryDts = generateIconsEntry(icon.id, "dts");
-  appendFile(path.resolve(DIST, "index.d.ts"), entryDts, "utf8");
+  await appendFile(path.resolve(DIST, "index.d.ts"), entryDts, "utf8");
 
   for (const file of files) {
     const svgStr = await promisify(fs.readFile)(file, "utf8");
@@ -132,19 +132,53 @@ async function writeIconModule(icon) {
 
     // write like: module/fa/data.mjs
     const modRes = generateIconRow(icon, name, iconData, "module");
-    appendFile(path.resolve(DIST, icon.id, "index.mjs"), modRes, "utf8");
-    const commonRes = generateIconRow(icon, name, iconData, "common");
-    appendFile(path.resolve(DIST, icon.id, "index.js"), commonRes, "utf8");
+    await appendFile(path.resolve(DIST, icon.id, "index.mjs"), modRes, "utf8");
+    const comRes = generateIconRow(icon, name, iconData, "common");
+    await appendFile(path.resolve(DIST, icon.id, "index.js"), comRes, "utf8");
     const dtsRes = generateIconRow(icon, name, iconData, "dts");
-    appendFile(path.resolve(DIST, icon.id, "index.d.ts"), dtsRes, "utf8");
+    await appendFile(path.resolve(DIST, icon.id, "index.d.ts"), dtsRes, "utf8");
 
     exists.add(file);
   }
 }
 
+async function writeIconsManifest() {
+  const writeFile = promisify(fs.writeFile);
+  const copyFile = promisify(fs.copyFile);
+  const appendFile = promisify(fs.appendFile);
+
+  const writeObj = icons.map(icon => ({
+    id: icon.id,
+    name: icon.name,
+    projectUrl: icon.projectUrl,
+    license: icon.license,
+    licenseUrl: icon.licenseUrl
+  }));
+  const manifest = JSON.stringify(writeObj, null, 2);
+  await writeFile(
+    path.resolve(DIST, "IconsManifest.mjs"),
+    `export const IconsManifest = ${manifest}`,
+    "utf8"
+  );
+  await writeFile(
+    path.resolve(DIST, "IconsManifest.js"),
+    `module.exports.IconsManifest = ${manifest}`,
+    "utf8"
+  );
+  await copyFile(
+    "src/IconsManifest.d.ts",
+    path.resolve(DIST, "IconsManifest.d.ts")
+  );
+
+  const manifestExport = `export * from './IconsManifest';\n`;
+  await appendFile(path.resolve(DIST, "index.mjs"), manifestExport, "utf8");
+  await appendFile(path.resolve(DIST, "index.d.ts"), manifestExport, "utf8");
+}
+
 async function main() {
   try {
     await dirInit();
+    await writeIconsManifest();
     for (const icon of icons) {
       await writeIconModule(icon);
     }

@@ -16,10 +16,12 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
+    "netlify-cli": "^1.2.2",
     "prettier": "^1.12.1"
   },
   "scripts": {
     "submodule": "git submodule init && git submodule update",
-    "submodule-deinit": "git submodule deinit"
+    "submodule-deinit": "git submodule deinit",
+    "netlify": "netlify"
   }
 }

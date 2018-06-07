@@ -8,5 +8,14 @@ cache:
 install:
   - yarn
   - yarn submodule
-script:
-  - (cd packages/react-icons/ && yarn build)
+jobs:
+  include:
+    - stage: build packages
+      script:
+        - (cd packages/react-icons/ && yarn build)
+    - stage: build preview site
+      script:
+        - (cd packages/preview/ && yarn build)
+    - stage: deploy preview site
+      script:
+        - yarn netlify deploy --draft --access-token $NETLIFY_ACCESS_TOKEN

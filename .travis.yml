@@ -3,8 +3,15 @@ dist: trusty
 language: node_js
 node_js:
   - "8"
+git:
+  submodules: false
 cache:
   yarn: true
+  directories:
+    - $HOME/.git/modules
+
+before_script:
+  - git submodule update --init --recursive
 install:
   - yarn
   - yarn submodule
@@ -13,9 +20,8 @@ jobs:
     - stage: build packages
       script:
         - (cd packages/react-icons/ && yarn build)
-    - stage: build preview site
-      script:
         - (cd packages/preview/ && yarn build)
-    - stage: deploy preview site
-      script:
-        - yarn netlify deploy --draft --access-token $NETLIFY_ACCESS_TOKEN
+        - |
+          if [ -n "$NETLIFY_ACCESS_TOKEN" ]; then
+            yarn netlify deploy --draft --access-token $NETLIFY_ACCESS_TOKEN;
+          fi

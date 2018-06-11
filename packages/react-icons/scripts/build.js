@@ -22,10 +22,19 @@ async function convertIconData(svg) {
   // filter/convert attributes
   // 1. remove class attr
   // 2. convert to camelcase ex: fill-opacity => fillOpacity
-  const attrConverter = (/** @type {{[key: string]: string}} */ attribs) =>
+  const attrConverter = (
+    /** @type {{[key: string]: string}} */ attribs,
+    /** @type string */ tagName
+  ) =>
     attribs &&
     Object.keys(attribs)
-      .filter(name => !["class", "xmlns", "width", "height"].includes(name))
+      .filter(
+        name =>
+          ![
+            "class",
+            ...(tagName === "svg" ? ["xmlns", "width", "height"] : []) // if tagName is svg remove size attributes
+          ].includes(name)
+      )
       .reduce((obj, name) => {
         const newName = camelcase(name);
         obj[newName] = attribs[name];
@@ -38,7 +47,7 @@ async function convertIconData(svg) {
       .filter((_, e) => e.tagName && !["style"].includes(e.tagName))
       .map((_, e) => ({
         tag: e.tagName,
-        attr: attrConverter(e.attribs),
+        attr: attrConverter(e.attribs, e.tagName),
         child:
           e.children && e.children.length
             ? elementToTree(cheerio(e.children))

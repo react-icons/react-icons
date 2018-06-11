@@ -68,7 +68,10 @@ class App extends Component {
                       href="https://travis-ci.com/react-icons/react-icons"
                       rel="nofollow"
                     >
-                      <img src="https://travis-ci.com/react-icons/react-icons.svg?branch=master" />
+                      <img
+                        src="https://travis-ci.com/react-icons/react-icons.svg?branch=master"
+                        alt="travis ci"
+                      />
                     </a>
                   </p>
                   <p>
@@ -105,28 +108,26 @@ class Question extends React.Component {
                 <Route key={icon.id} path={`/icons/${icon.id}`}>
                   <article className="icons-article">
                     <h1>{icon.name}</h1>
-                    <p>
-                      <table>
-                        <tbody>
-                          <tr>
-                            <th>License</th>
-                            <td>
-                              <a href={icon.licenseUrl} target="_blank">
-                                {icon.license}
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>Project</th>
-                            <td>
-                              <a href={icon.projectUrl} target="_blank">
-                                {icon.projectUrl}
-                              </a>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </p>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>License</th>
+                          <td>
+                            <a href={icon.licenseUrl} target="_blank">
+                              {icon.license}
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Project</th>
+                          <td>
+                            <a href={icon.projectUrl} target="_blank">
+                              {icon.projectUrl}
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                     <div className="icons">
                       <IconsView icons={Icons} id={icon.id} />
                     </div>

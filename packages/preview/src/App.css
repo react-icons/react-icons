@@ -1,30 +1,50 @@
 .App {
-  text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App .sidebar {
+  width: 250px;
+  position: fixed;
+  background: #eee;
+  height: 100vh;
+  padding: 2em 0 2em 1em;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App .sidebar header {
+  display: flex;
+  align-items: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+.App .sidebar header img {
+  height: 5em;
+  margin-right: 0.5em;
+}
+.App .sidebar .links {
+  list-style: none;
+  padding: 0;
+  margin-top: 2em;
+}
+.App .sidebar .links li a {
+  display: block;
+  padding: .5em;
+  color: black;
+  text-decoration: none;
+}
+.App .sidebar .links li a.active {
+  background: white;
+  font-weight: bold;
 }
 
-.App-intro {
-  font-size: large;
+
+.App .content {
+  margin-left: 250px;
+  padding: 2em;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.App .content .icons-article table {
+  text-align: left;
+  min-width: 50%;
 }
 
 .icons {
@@ -35,6 +55,7 @@
 }
 .icons .item {
   padding: 0.6rem;
+  text-align: center;
 }
 .icons .body {
   font-size: 1.5em;

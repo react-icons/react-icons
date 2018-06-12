@@ -11,12 +11,14 @@ Include popular icons in your React projects easly with ```react-icons```, which
 
 ### Installation
 
-    npm install react-icons --save
+```js
+npm install react-icons --save
+```
 
 ### Usage
 
 ```jsx
-import FaBeer from 'react-icons/lib/fa/beer';
+import FaBeer from 'react-icons';
 
 class Question extends React.Component {
     render() {
@@ -27,51 +29,6 @@ class Question extends React.Component {
 
 If you are not using an ES6 compiler like [Babel](https://babeljs.io/) or [Rollup](http://rollupjs.org/), you can include icons from the compiled folder `./lib`.
 Babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore `node_modules` so if you don't want to change the settings you will need to use files from `./lib`.
-
-```jsx
-var FaBeer = require('react-icons/lib/fa/beer');
-
-var Question = React.createClass({
-    render: function() {
-        return React.createElement('h3', null,
-            ' Lets go for a ', React.createElement(FaBeer, null), '? '
-        );
-    }
-});
-
-```
-
-You can include icons directly from `react-icons` using `import FaBeer from 'react-icons'`, but you should use a builder that uses dead code elimination like Webpack 2+, based on ES6 imports.
-
-Also it's possible to import an entire icon pack:
-
-```jsx
-import * as FontAwesome from 'react-icons/lib/fa'
-
-class Question extends React.Component {
-    render() {
-        return <h3> Lets go for a <FontAwesome.FaBeer />? </h3>
-    }
-}
-```
-
-or import multiple icons from the same pack
-
-```jsx
-import {MdCancel, MdChat, MdCheck} from 'react-icons/md';
-```
-
-Each icon pack is in its own folder:
-
-* Material Design Icons => `./md`
-* FontAwesome => `./fa`
-* Typicons => `./ti`
-* Github Octicons => `./go`
-* Ionicons => `./io`
-
-To view them all, visit the [docs](http://gorangajic.github.io/react-icons/)
-
-Also, to view and search for the necessary icons you can use [Icon Viewer](https://andy-pro.github.io/icon-viewer).
 
 ### Icons
 
@@ -86,37 +43,42 @@ You can add more icons by submitting pull requests or creating issues.
 
 ### Configuration
 
-You can configure react-icons props using context.
+You can configure react-icons props using [React context API](https://reactjs.org/docs/context.html).
 
 ```jsx
-class HigherOrderComponent extends Component {
+import { IconContext } from "react-icons";
 
-    static childContextTypes = {
-        reactIconBase: PropTypes.object
-    };
+<IconContext.Provider value={{ color: "blue" }}>
+  <div>
+    <FaFolder />
+  </div>
+<IconContext.Provider>
+```
 
-    getChildContext() {
-        return {
-            reactIconBase: {
-                color: 'tomato',
-                size: 24,
-                style: {
-                    ...
-                }
-            }
-        }
-    }
+### Migrate from version 2 -> 3
 
+Import path has changed. You need to rewrite from the old style.
+
+```jsx
+// OLD IMPORT STYLE
+import FaBeer from 'react-icons/lib/fa/beer';
+
+class Question extends React.Component {
     render() {
-        ...
+        return <h3> Lets go for a <FaBeer />? </h3>
     }
 }
 ```
 
-Context is overriden inline.
-
 ```jsx
-<Icon size={30} color="aliceblue" style={{ ... }} />
+// NEW IMPORT STYLE
+import { FaBeer } from 'react-icons';
+
+class Question extends React.Component {
+    render() {
+        return <h3> Lets go for a <FaBeer />? </h3>
+    }
+}
 ```
 
 ### Contribute
@@ -152,7 +114,7 @@ With `react-icons`, you can serve only the needed icons instead of one big font 
 `create-react-app` tries to load the icons as files by default, rather than running through Babel. You may therefore see an erorr message similar to "You may need an appropriate loader...". The recommended workaround is to import from `lib` instead:
 
 ```jsx
-import {FaBeer} from 'react-icons/lib/fa';
+import { FaBeer } from 'react-icons';
 ```
 
 ## Related

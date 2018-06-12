@@ -205,11 +205,18 @@ async function writeLicense() {
   await appendFile(path.resolve(rootDir, "LICENSE"), iconLicenses, "utf8");
 }
 
+async function writeImports() {
+  const appendFile = promisify(fs.appendFile);
+  const imports = `export {IconContext, IconBaseProps, IconType} from './IconBase';\n`;
+  await appendFile(path.resolve(DIST, "index.mjs"), imports, "utf8");
+}
+
 async function main() {
   try {
     await dirInit();
     await writeLicense();
     await writeIconsManifest();
+    await writeImports();
     for (const icon of icons) {
       await writeIconModule(icon);
     }

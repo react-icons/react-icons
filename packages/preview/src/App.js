@@ -31,7 +31,7 @@ const history = createHashHistory({});
 class App extends Component {
   render() {
     return (
-      <IconContext.Provider value={{ color: "blue" }}>
+      <IconContext.Provider value={{ color: "#333" }}>
         <Router history={history}>
           <div className="App">
             <div className="sidebar">

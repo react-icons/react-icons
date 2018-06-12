@@ -7,7 +7,7 @@
     "kamijin_fanta <kamijin@live.jp>"
   ],
   "license": "MIT",
-  "main": "module/index",
+  "main": "lib/index",
   "sideEffects": false,
   "repository": {
     "type": "git",

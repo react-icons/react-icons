@@ -18,7 +18,7 @@ npm install react-icons --save
 ### Usage
 
 ```jsx
-import FaBeer from 'react-icons';
+import { FaBeer } from 'react-icons/lib/fa';
 
 class Question extends React.Component {
     render() {
@@ -72,7 +72,7 @@ class Question extends React.Component {
 
 ```jsx
 // NEW IMPORT STYLE
-import { FaBeer } from 'react-icons';
+import { FaBeer } from 'react-icons/lib/fa';
 
 class Question extends React.Component {
     render() {
@@ -114,7 +114,7 @@ With `react-icons`, you can serve only the needed icons instead of one big font 
 `create-react-app` tries to load the icons as files by default, rather than running through Babel. You may therefore see an erorr message similar to "You may need an appropriate loader...". The recommended workaround is to import from `lib` instead:
 
 ```jsx
-import { FaBeer } from 'react-icons';
+import { FaBeer } from 'react-icons/lib/fa';
 ```
 
 ## Related

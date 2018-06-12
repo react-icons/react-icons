@@ -2,5 +2,5 @@
 **/build/*
 **/docs/*
 **/bin/*
-packages/react-icons/module/*
+packages/react-icons/lib/*
 packages/react-icons/src/icons/*

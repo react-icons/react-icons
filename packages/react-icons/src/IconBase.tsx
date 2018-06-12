@@ -1,15 +1,6 @@
 import * as React from 'react';
 
-export interface IconContext {
-  color?: string;
-  size?: string;
-}
-
-const DefaultContext: IconContext = {
-  color: 'black',
-  size: undefined,
-};
-export const IconContext: React.Context<IconContext> = React.createContext && React.createContext(DefaultContext)
+import { IconContext, DefaultContext } from './iconContext';
 
 export interface IconTree {
   tag: string;
@@ -39,7 +30,10 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
     const computedSize = props.size || conf.size || "1em";
     return (
       <svg
-        style={{ fill: conf.color, stroke: conf.color, ...props.style}}
+        style={{ color: conf.color, ...props.style}}
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
         {...props.attr}
         viewBox={props.viewBox}
         height={computedSize}

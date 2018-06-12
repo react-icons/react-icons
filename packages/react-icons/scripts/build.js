@@ -9,7 +9,7 @@ const { icons } = require("../src/icons");
 
 // file path
 const rootDir = path.resolve(__dirname, "../");
-const DIST = path.resolve(rootDir, "module");
+const DIST = path.resolve(rootDir, "lib");
 
 // logic
 
@@ -96,28 +96,31 @@ async function dirInit() {
   const writeFile = promisify(fs.writeFile);
 
   await mkdir(DIST).catch(ignore);
+
+  const write = (filePath, str) =>
+    writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
+
   for (const icon of icons) {
     await mkdir(path.resolve(DIST, icon.id)).catch(ignore);
 
-    const write = (filePath, str) =>
-      writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
-
     await write(
       [icon.id, "index.js"],
-      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nconst { GenIcon } = require('../IconBase')\n"
+      "// THIS FILE IS AUTO GENERATED\nconst { GenIcon } = require('../iconBase')\n"
     );
     await write(
       [icon.id, "index.mjs"],
-      "/* eslint-disable */\n// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../IconBase';\n"
+      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../iconBase';\n"
     );
     await write(
       [icon.id, "index.d.ts"],
-      "import { IconData, IconType } from '../IconBase'\n// THIS FILE IS AUTO GENERATED\n"
+      "import { IconData, IconType } from '../iconBase'\n// THIS FILE IS AUTO GENERATED\n"
     );
-
-    await write(["index.d.ts"], "// THIS FILE IS AUTO GENERATED\n");
-    await write(["index.mjs"], "// THIS FILE IS AUTO GENERATED\n");
   }
+
+  await write(["index.d.ts"], "// THIS FILE IS AUTO GENERATED\n");
+  await write(["index.mjs"], "// THIS FILE IS AUTO GENERATED\n");
+  await write(["all.mjs"], "// THIS FILE IS AUTO GENERATED\n");
+  await write(["all.d.ts"], "// THIS FILE IS AUTO GENERATED\n");
 }
 async function writeIconModule(icon) {
   const appendFile = promisify(fs.appendFile);
@@ -125,9 +128,9 @@ async function writeIconModule(icon) {
   const exists = new Set(); // for remove duplicate
 
   const entryModule = generateIconsEntry(icon.id, "module");
-  await appendFile(path.resolve(DIST, "index.mjs"), entryModule, "utf8");
+  await appendFile(path.resolve(DIST, "all.mjs"), entryModule, "utf8");
   const entryDts = generateIconsEntry(icon.id, "dts");
-  await appendFile(path.resolve(DIST, "index.d.ts"), entryDts, "utf8");
+  await appendFile(path.resolve(DIST, "all.d.ts"), entryDts, "utf8");
 
   for (const file of files) {
     const svgStr = await promisify(fs.readFile)(file, "utf8");
@@ -165,23 +168,19 @@ async function writeIconsManifest() {
   }));
   const manifest = JSON.stringify(writeObj, null, 2);
   await writeFile(
-    path.resolve(DIST, "IconsManifest.mjs"),
+    path.resolve(DIST, "iconsManifest.mjs"),
     `export const IconsManifest = ${manifest}`,
     "utf8"
   );
   await writeFile(
-    path.resolve(DIST, "IconsManifest.js"),
+    path.resolve(DIST, "iconsManifest.js"),
     `module.exports.IconsManifest = ${manifest}`,
     "utf8"
   );
   await copyFile(
-    "src/IconsManifest.d.ts",
-    path.resolve(DIST, "IconsManifest.d.ts")
+    "src/iconsManifest.d.ts",
+    path.resolve(DIST, "iconsManifest.d.ts")
   );
-
-  const manifestExport = `export * from './IconsManifest';\n`;
-  await appendFile(path.resolve(DIST, "index.mjs"), manifestExport, "utf8");
-  await appendFile(path.resolve(DIST, "index.d.ts"), manifestExport, "utf8");
 }
 
 async function writeLicense() {
@@ -205,10 +204,16 @@ async function writeLicense() {
   await appendFile(path.resolve(rootDir, "LICENSE"), iconLicenses, "utf8");
 }
 
-async function writeImports() {
+async function writeIndexFile() {
   const appendFile = promisify(fs.appendFile);
-  const imports = `export {IconContext, IconBaseProps, IconType} from './IconBase';\n`;
+
+  const manifestExport = `export * from "./iconsManifest";\n`;
+  await appendFile(path.resolve(DIST, "index.mjs"), manifestExport, "utf8");
+  await appendFile(path.resolve(DIST, "index.d.ts"), manifestExport, "utf8");
+
+  const imports = `export { IconBaseProps, IconType } from "./iconBase";\nexport * from "./iconContext"`;
   await appendFile(path.resolve(DIST, "index.mjs"), imports, "utf8");
+  await appendFile(path.resolve(DIST, "index.d.ts"), imports, "utf8");
 }
 
 async function main() {
@@ -216,7 +221,7 @@ async function main() {
     await dirInit();
     await writeLicense();
     await writeIconsManifest();
-    await writeImports();
+    await writeIndexFile();
     for (const icon of icons) {
       await writeIconModule(icon);
     }

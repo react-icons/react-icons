@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import { FaFolder, MdAccessibility, IconContext } from "react-icons";
+import { IconContext } from "react-icons";
+import { MdAccessibility } from "react-icons/lib/md";
+import { FaFolder } from "react-icons/lib/fa";
 
 class App extends Component {
   render() {

@@ -14,14 +14,16 @@ function Tree2Element(tree: IconTree[]): React.ReactElement<{}>[] {
 }
 export function GenIcon(data: IconTree) {
   return (props: IconBaseProps) => (
-    <IconBase viewBox={data.attr['viewBox']} attr={data.attr} {...props}>
+    <IconBase attr={{...data.attr}} {...props}>
       {Tree2Element(data.child)}
     </IconBase>
   );
 }
 
 export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
-  size: string | number;
+  children?: React.ReactNode;
+  size?: string | number;
+  color?: string;
 }
 
 export type IconType = (props: IconBaseProps) => JSX.Element;
@@ -30,12 +32,11 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
     const computedSize = props.size || conf.size || "1em";
     return (
       <svg
-        style={{ color: conf.color, ...props.style}}
+        style={{ color: props.color || conf.color, ...props.style}}
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         {...props.attr}
-        viewBox={props.viewBox}
         height={computedSize}
         width={computedSize}
       >

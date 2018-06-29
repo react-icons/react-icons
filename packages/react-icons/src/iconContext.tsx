@@ -6,7 +6,7 @@ export interface IconContext {
 }
 
 export const DefaultContext: IconContext = {
-  color: 'black',
+  color: undefined,
   size: undefined,
 };
 

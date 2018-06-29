@@ -30,13 +30,15 @@ export type IconType = (props: IconBaseProps) => JSX.Element;
 export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.Element {
   const elem = (conf: IconContext) => {
     const computedSize = props.size || conf.size || "1em";
+    
     return (
       <svg
-        style={{ color: props.color || conf.color, ...props.style}}
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         {...props.attr}
+        {...props}
+        style={{ color: props.color || conf.color, ...props.style}}
         height={computedSize}
         width={computedSize}
       >

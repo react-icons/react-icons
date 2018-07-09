@@ -121,7 +121,7 @@ Context is overriden inline.
 
 ### Contribute
 
-Just add/edit your SVG icons in `./icons/[icons-name]`, run `npm run build`, then create your pull request again `master`.
+Just add/edit your SVG icons in `./icons/[icons-name]`, run `npm run build`, then create your pull request against `master`.
 
 ### SVG ?
 

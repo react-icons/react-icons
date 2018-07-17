@@ -69,7 +69,7 @@ Each icon pack is in its own folder:
 * Github Octicons => `./go`
 * Ionicons => `./io`
 
-To view them all, visit the [docs](http://gorangajic.github.io/react-icons/)
+To view them all, visit the [docs](http://react-icons.github.io/react-icons/)
 
 Also, to view and search for the necessary icons you can use [Icon Viewer](https://andy-pro.github.io/icon-viewer).
 

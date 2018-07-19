@@ -5,7 +5,7 @@ import { Router, Switch } from "react-router";
 import { createHashHistory } from "history";
 
 import { IconsManifest, IconContext } from "react-icons";
-import * as Icons from "react-icons/lib/all";
+import * as Icons from "react-icons/all";
 
 import logo from "./react-icons.svg";
 import "./App.css";
@@ -89,7 +89,7 @@ class App extends Component {
                     <h2>Usage</h2>
                     <code>
                       <pre>
-                        {`import { FaBeer } from 'react-icons/lib/fa';
+                        {`import { FaBeer } from 'react-icons/fa';
 
 class Question extends React.Component {
   render() {
@@ -131,6 +131,15 @@ class Question extends React.Component {
                           </tr>
                         </tbody>
                       </table>
+                      <div className="example-code">
+                        <code>
+                          <pre>
+                            {`import { ICON_NAME } from "react-icons/${
+                              icon.id
+                            }";`}
+                          </pre>
+                        </code>
+                      </div>
                       <div className="icons">
                         <IconsView icons={Icons} id={icon.id} />
                       </div>

@@ -3,8 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { IconContext } from "react-icons";
-import { MdAccessibility } from "react-icons/lib/md";
-import { FaFolder } from "react-icons/lib/fa";
+import { FaFolder, MdAccessibility } from "react-icons/all";
+import { TiArrowDown } from "react-icons/ti";
 
 class App extends Component {
   render() {
@@ -21,6 +21,8 @@ class App extends Component {
             <FaFolder color="red" className="additional-class-name" />
           </IconContext.Provider>
           <MdAccessibility />
+          <FaFolder />
+          <TiArrowDown />
         </p>
       </div>
     );

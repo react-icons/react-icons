@@ -1,6 +1,6 @@
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
 
-## [React Icons](http://react-icons.github.io/react-icons/index.html)
+# [React Icons](https://react-icons.netlify.com)
 
 [![npm][npm-image]][npm-url]
 
@@ -9,13 +9,13 @@
 
 Include popular icons in your React projects easly with ```react-icons```, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
-### Installation
+## Installation
 
 ```js
 npm install react-icons --save
 ```
 
-### Usage
+## Usage
 
 ```jsx
 import { FaBeer } from 'react-icons/lib/fa';
@@ -30,32 +30,48 @@ class Question extends React.Component {
 If you are not using an ES6 compiler like [Babel](https://babeljs.io/) or [Rollup](http://rollupjs.org/), you can include icons from the compiled folder `./lib`.
 Babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore `node_modules` so if you don't want to change the settings you will need to use files from `./lib`.
 
-### Icons
+## Icons
 
-Currently supported icons are:
-* Material Design Icons by Google https://www.google.com/design/icons/ (licence: [CC-BY 4.0](https://github.com/google/material-design-icons/blob/master/LICENSE))
-* Font Awesome by Dave Gandy - http://fontawesome.io (licence: [SIL OFL 1.1](http://scripts.sil.org/OFL))
-* Typicons by Stephen Hutchings - http://typicons.com (licence: [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/))
-* Github Octicons icons by Github https://octicons.github.com/ (licence: [SIL OFL 1.1](https://github.com/github/octicons/blob/master/LICENSE.txt))
-* Ionicons by Ionic Framework - http://ionicons.com (licence: [MIT](https://github.com/driftyco/ionicons/blob/master/LICENSE))
+- Font Awesome - https://fontawesome.com/
+  License: [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)
+- Ionicons - https://ionicons.com/
+  License: [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)
+- Material Design icons - http://google.github.io/material-design-icons/
+  License: [Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)
+- Typicons - http://s-ings.com/typicons/
+  License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+- Github Octicons icons - https://octicons.github.com/
+  License: [MIT](https://github.com/primer/octicons/blob/master/LICENSE)
+- Feather - https://feathericons.com/
+  License: [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
+
 
 You can add more icons by submitting pull requests or creating issues.
 
-### Configuration
+## Configuration
 
 You can configure react-icons props using [React context API](https://reactjs.org/docs/context.html).
 
 ```jsx
 import { IconContext } from "react-icons";
 
-<IconContext.Provider value={{ color: "blue" }}>
+<IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
   <div>
     <FaFolder />
   </div>
 <IconContext.Provider>
 ```
 
-### Migrate from version 2 -> 3
+key|default|memo
+---|---|---
+color|undefined(inherit)|
+size|1em|
+className|undefined|
+style|undefined|can overwrite size and color
+
+## Migrate from version 2 -> 3
+
+### Change import style
 
 Import path has changed. You need to rewrite from the old style.
 
@@ -72,7 +88,7 @@ class Question extends React.Component {
 
 ```jsx
 // NEW IMPORT STYLE
-import { FaBeer } from 'react-icons/lib/fa';
+import { FaBeer } from 'react-icons/fa';
 
 class Question extends React.Component {
     render() {
@@ -81,13 +97,19 @@ class Question extends React.Component {
 }
 ```
 
-### Contribute
+### Adjustment CSS
+
+From version 3, `vertical-align: middle` is not automatically given.
+Please use IconContext to specify className or style.
+
+
+## Contribute
 
 development
 
 ```
 yarn
-yarn submodule
+yarn submodule  # fetch icon sources
 cd packages/react-icons
 yarn build
 ```
@@ -101,6 +123,17 @@ cd ../demo
 yarn start
 ```
 
+run preview site
+
+```
+cd packages/react-icons
+yarn build
+cd ../preview
+yarn start
+```
+
+## Tips
+
 ### SVG ?
 
 Svg is [supported](http://caniuse.com/#search=svg) by all major browsers.
@@ -109,19 +142,12 @@ Svg is [supported](http://caniuse.com/#search=svg) by all major browsers.
 
 With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
 
-### Using `create-react-app`?
 
-`create-react-app` tries to load the icons as files by default, rather than running through Babel. You may therefore see an erorr message similar to "You may need an appropriate loader...". The recommended workaround is to import from `lib` instead:
-
-```jsx
-import { FaBeer } from 'react-icons/lib/fa';
-```
-
-## Related
+### Related
 
 - [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)
 
-### Licence
+## Licence
 
 MIT
 

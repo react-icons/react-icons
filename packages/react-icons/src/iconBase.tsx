@@ -30,7 +30,10 @@ export type IconType = (props: IconBaseProps) => JSX.Element;
 export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.Element {
   const elem = (conf: IconContext) => {
     const computedSize = props.size || conf.size || "1em";
-    
+    let className;
+    if (conf.className) className = conf.className;
+    if (props.className) className = (className + ' ' || '') + props.className;
+
     return (
       <svg
         stroke="currentColor"
@@ -38,7 +41,8 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
         strokeWidth="0"
         {...props.attr}
         {...props}
-        style={{ color: props.color || conf.color, ...props.style}}
+        className={className}
+        style={{ color: props.color || conf.color, ...conf.style, ...props.style}}
         height={computedSize}
         width={computedSize}
       >

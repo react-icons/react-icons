@@ -21,7 +21,7 @@
   },
   "scripts": {
     "submodule": "git submodule update --init --recursive",
-    "submodule-deinit": "git submodule deinit",
+    "submodule-deinit": "git submodule deinit --all",
     "netlify": "netlify",
     "lint": "node ./node_modules/eslint/bin/eslint.js ."
   }

@@ -6,7 +6,7 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
-    "react-icons": "*"
+    "react-icons": "3.0.0-beta.1"
   },
   "scripts": {
     "start": "react-scripts start",

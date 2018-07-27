@@ -30,7 +30,7 @@
     "typescript": "^2.8.3"
   },
   "scripts": {
-    "build": "node ../../node_modules/rimraf/bin.js ./lib && node ../../node_modules/typescript/bin/tsc && renamer --find js --replace mjs ./lib/* && node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json && node scripts/build.js"
+    "build": "node ../../node_modules/rimraf/bin.js ./lib && node ../../node_modules/typescript/bin/tsc && node ../../node_modules/renamer/bin/cli.js --find js --replace mjs ./lib/* && node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json && node scripts/build.js"
   },
   "dependencies": {}
 }

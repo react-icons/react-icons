@@ -63,19 +63,18 @@ function generateIconRow(icon, formattedName, iconData, type = "module") {
   switch (type) {
     case "module":
       return (
-        `export const Data${formattedName} = ${JSON.stringify(iconData)};\n` +
-        `export const ${formattedName} = function (props) { return GenIcon(Data${formattedName})(props); };\n`
+        `export var ${formattedName} = function (props) {\n` +
+        `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
+        `};\n`
       );
     case "common":
       return (
-        `module.exports.Data${formattedName} = ${JSON.stringify(iconData)};\n` +
-        `module.exports.${formattedName} = function (props) { return GenIcon(module.exports.Data${formattedName})(props); };\n`
+        `module.exports.${formattedName} = function (props) {\n` +
+        `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
+        `};\n`
       );
     case "dts":
-      return (
-        `export declare const Data${formattedName}: IconTree;\n` +
-        `export declare const ${formattedName}: IconType;\n`
-      );
+      return `export declare const ${formattedName}: IconType;\n`;
   }
 }
 function generateIconsEntry(iconId, type = "module") {

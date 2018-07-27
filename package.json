@@ -24,5 +24,8 @@
     "submodule-deinit": "git submodule deinit --all",
     "netlify": "netlify",
     "lint": "node ./node_modules/eslint/bin/eslint.js ."
+  },
+  "dependencies": {
+    "camelcase": "^5.0.0"
   }
 }

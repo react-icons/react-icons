@@ -103,6 +103,14 @@ From version 3, `vertical-align: middle` is not automatically given.
 Please use IconContext to specify className or style.
 
 
+### TypeScript native support
+
+Dependencies on `@types/react-icons` can be deleted.
+
+```
+$ npm remove @types/react-icons
+```
+
 ## Contribute
 
 development

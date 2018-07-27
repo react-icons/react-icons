@@ -7,7 +7,7 @@ module.exports = {
       name: "Font Awesome",
       files: path.resolve(
         __dirname,
-        "fontawesome/advanced-options/raw-svg/+(brands|regular)/*.svg"
+        "fontawesome/advanced-options/raw-svg/+(brands|solid)/*.svg"
       ),
       formatter: name => `Fa${name}`,
       projectUrl: "https://fontawesome.com/",

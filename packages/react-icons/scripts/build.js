@@ -73,7 +73,7 @@ function generateIconRow(icon, formattedName, iconData, type = "module") {
       );
     case "dts":
       return (
-        `export declare const Data${formattedName}: IconData;\n` +
+        `export declare const Data${formattedName}: IconTree;\n` +
         `export declare const ${formattedName}: IconType;\n`
       );
   }
@@ -123,7 +123,7 @@ async function dirInit() {
     );
     await write(
       [icon.id, "index.d.ts"],
-      "import { IconData, IconType } from '../lib/iconBase'\n// THIS FILE IS AUTO GENERATED\n"
+      "import { IconTree, IconType } from '../lib/iconBase'\n// THIS FILE IS AUTO GENERATED\n"
     );
   }
 

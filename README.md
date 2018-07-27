@@ -52,6 +52,8 @@ You can add more icons by submitting pull requests or creating issues.
 
 You can configure react-icons props using [React context API](https://reactjs.org/docs/context.html).
 
+requirement React 16.3 or higher.
+
 ```jsx
 import { IconContext } from "react-icons";
 
@@ -102,6 +104,23 @@ class Question extends React.Component {
 From version 3, `vertical-align: middle` is not automatically given.
 Please use IconContext to specify className or style.
 
+example for global styling
+
+```tsx
+<IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+```
+
+example for give global className
+
+```tsx
+// app.tsx
+<IconContext.Provider value={{ className: 'react-icons' }}>
+
+// app.css
+.react-icons {
+  vertical-align: middle;
+}
+```
 
 ### TypeScript native support
 

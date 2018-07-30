@@ -61,7 +61,7 @@ import { IconContext } from "react-icons";
   <div>
     <FaFolder />
   </div>
-<IconContext.Provider>
+</IconContext.Provider>
 ```
 
 key|default|memo

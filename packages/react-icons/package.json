@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
@@ -21,6 +21,7 @@
     "@types/react": "^16.3.14",
     "camelcase": "^5.0.0",
     "cheerio": "^1.0.0-rc.2",
+    "copy": "^0.3.2",
     "feather-icons": "^4.7.3",
     "glob-promise": "^3.4.0",
     "ionicons": "^4.0.0",
@@ -30,7 +31,7 @@
     "typescript": "^2.8.3"
   },
   "scripts": {
-    "build": "node ../../node_modules/rimraf/bin.js ./lib && node ../../node_modules/typescript/bin/tsc && node ../../node_modules/renamer/bin/cli.js --find js --replace mjs ./lib/* && node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json && node scripts/build.js"
+    "build": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && node ../../node_modules/rimraf/bin.js ./lib && node ../../node_modules/typescript/bin/tsc && node ../../node_modules/renamer/bin/cli.js --find js --replace mjs ./lib/* && node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json && node scripts/build.js"
   },
   "dependencies": {}
 }

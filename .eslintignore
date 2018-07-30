@@ -1,0 +1,6 @@
+**/node_modules/*
+**/build/*
+**/docs/*
+**/bin/*
+packages/react-icons/lib/*
+packages/react-icons/src/icons/*

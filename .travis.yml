@@ -1,0 +1,24 @@
+sudo: false
+dist: trusty
+language: node_js
+node_js:
+  - "8"
+git:
+  submodules: false
+cache:
+  yarn: true
+
+install:
+  - git submodule init
+  - yarn submodule
+  - yarn
+jobs:
+  include:
+    - stage: build packages
+      script:
+        - (cd packages/react-icons/ && yarn build)
+        - (cd packages/preview/ && yarn build)
+        - |
+          if [ -n "$NETLIFY_ACCESS_TOKEN" ]; then
+            yarn netlify deploy --draft --access-token $NETLIFY_ACCESS_TOKEN;
+          fi

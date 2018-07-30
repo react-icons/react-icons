@@ -18,7 +18,7 @@ npm install react-icons --save
 ## Usage
 
 ```jsx
-import { FaBeer } from 'react-icons/lib/fa';
+import { FaBeer } from 'react-icons/fa';
 
 class Question extends React.Component {
     render() {

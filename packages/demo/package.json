@@ -5,8 +5,8 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
-    "react-icons": "3.0.1"
+    "react-icons": "*",
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

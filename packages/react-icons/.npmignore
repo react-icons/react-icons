@@ -4,3 +4,4 @@ scripts/
 *.tgz
 *.log
 LICENSE_HEADER
+.babelrc

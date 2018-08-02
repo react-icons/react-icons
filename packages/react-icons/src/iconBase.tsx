@@ -41,6 +41,7 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
         strokeWidth="0"
         {...props.attr}
         {...props}
+        focusable="false"
         className={className}
         style={{ color: props.color || conf.color, ...conf.style, ...props.style}}
         height={computedSize}

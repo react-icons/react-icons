@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
@@ -33,7 +33,10 @@
     "typescript": "^2.8.3"
   },
   "scripts": {
-    "build": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && node ../../node_modules/rimraf/bin.js ./lib && node ../../node_modules/typescript/bin/tsc && node ../../node_modules/renamer/bin/cli.js --find js --replace mjs ./lib/* && node ../../node_modules/@babel/cli/bin/babel.js ./lib -x .mjs --keep-file-extension -d ./lib && node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json && node scripts/build.js"
+    "build": "yarn build-mjs && yarn build-cjs && node scripts/build.js",
+    "prebuild": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && node ../../node_modules/rimraf/bin.js ./lib",
+    "build-mjs": "node ../../node_modules/typescript/bin/tsc && node ../../node_modules/renamer/bin/cli.js --find js --replace mjs ./lib/* && node ../../node_modules/@babel/cli/bin/babel.js ./lib -x .mjs --keep-file-extension -d ./lib",
+    "build-cjs": "node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json"
   },
   "dependencies": {}
 }

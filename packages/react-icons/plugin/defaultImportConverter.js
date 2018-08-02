@@ -3,9 +3,12 @@ module.exports = (babel, options) => {
     name: "default-import-converter",
     visitor: {
       ImportDeclaration(path) {
-        var spec = path.node.specifiers
-          .filter(spec => options.keys.includes(spec.local.name))
-          .map(spec => babel.types.ImportDefaultSpecifier(spec.local));
+        var spec = path.node.specifiers.map(
+          spec =>
+            options.keys.includes(spec.local.name)
+              ? babel.types.ImportDefaultSpecifier(spec.local)
+              : spec
+        );
         path.node.specifiers = spec;
       }
     }

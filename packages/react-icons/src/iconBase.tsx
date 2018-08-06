@@ -39,6 +39,7 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
+        {...conf.attr}
         {...props.attr}
         {...props}
         className={className}

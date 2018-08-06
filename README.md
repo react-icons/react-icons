@@ -70,6 +70,7 @@ color|undefined(inherit)|
 size|1em|
 className|undefined|
 style|undefined|can overwrite size and color
+attr|undefined|overwritten by other attributes
 
 ## Migrate from version 2 -> 3
 

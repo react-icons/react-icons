@@ -42,6 +42,7 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
         {...conf.attr}
         {...props.attr}
         {...props}
+        focusable="false"
         className={className}
         style={{ color: props.color || conf.color, ...conf.style, ...props.style}}
         height={computedSize}

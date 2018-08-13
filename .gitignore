@@ -4,3 +4,4 @@ lib
 module
 *.log
 *.tgz
+.idea

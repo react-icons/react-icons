@@ -64,4 +64,5 @@
   font-size: 0.7em;
   overflow: hidden;
   background: #eee;
+  user-select: all;
 }

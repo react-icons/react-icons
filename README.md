@@ -100,6 +100,8 @@ class Question extends React.Component {
 }
 ```
 
+Ending up with a large JS bundle? Check out [this issue](https://github.com/react-icons/react-icons/issues/154).
+
 ### Adjustment CSS
 
 From version 3, `vertical-align: middle` is not automatically given.

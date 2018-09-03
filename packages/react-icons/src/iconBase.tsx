@@ -33,6 +33,7 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
     let className;
     if (conf.className) className = conf.className;
     if (props.className) className = (className + ' ' || '') + props.className;
+    const {attr, ...svgProps} = props;
 
     return (
       <svg
@@ -40,8 +41,8 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
         fill="currentColor"
         strokeWidth="0"
         {...conf.attr}
-        {...props.attr}
-        {...props}
+        {...attr}
+        {...svgProps}
         className={className}
         style={{ color: props.color || conf.color, ...conf.style, ...props.style}}
         height={computedSize}

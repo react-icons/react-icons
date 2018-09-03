@@ -27,9 +27,6 @@ class Question extends React.Component {
 }
 ```
 
-If you are not using an ES6 compiler like [Babel](https://babeljs.io/) or [Rollup](http://rollupjs.org/), you can include icons from the compiled folder `./lib`.
-Babel by [default](http://babeljs.io/docs/usage/require/#usage) will ignore `node_modules` so if you don't want to change the settings you will need to use files from `./lib`.
-
 ## Icons
 
 - Font Awesome - https://fontawesome.com/

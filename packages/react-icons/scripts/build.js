@@ -14,8 +14,8 @@ const LIB = path.resolve(rootDir, "./lib");
 
 // logic
 
-async function getIconFiles(icon) {
-  return glob(icon.files);
+async function getIconFiles(content) {
+  return glob(content.files);
 }
 async function convertIconData(svg) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");
@@ -132,33 +132,44 @@ async function dirInit() {
 }
 async function writeIconModule(icon) {
   const appendFile = promisify(fs.appendFile);
-  const files = await getIconFiles(icon);
   const exists = new Set(); // for remove duplicate
+  for (const content of icon.contents) {
+    const files = await getIconFiles(content);
 
-  const entryModule = generateIconsEntry(icon.id, "module");
-  await appendFile(path.resolve(DIST, "all.mjs"), entryModule, "utf8");
-  const entryDts = generateIconsEntry(icon.id, "dts");
-  await appendFile(path.resolve(DIST, "all.d.ts"), entryDts, "utf8");
+    const entryModule = generateIconsEntry(icon.id, "module");
+    await appendFile(path.resolve(DIST, "all.mjs"), entryModule, "utf8");
+    const entryDts = generateIconsEntry(icon.id, "dts");
+    await appendFile(path.resolve(DIST, "all.d.ts"), entryDts, "utf8");
 
-  for (const file of files) {
-    const svgStr = await promisify(fs.readFile)(file, "utf8");
-    const iconData = await convertIconData(svgStr);
+    for (const file of files) {
+      const svgStr = await promisify(fs.readFile)(file, "utf8");
+      const iconData = await convertIconData(svgStr);
 
-    const rawName = path.basename(file, path.extname(file));
-    const pascalName = camelcase(rawName, { pascalCase: true });
-    const name = (icon.formatter && icon.formatter(pascalName)) || pascalName;
-    if (exists.has(name)) continue;
-    exists.add(name);
+      const rawName = path.basename(file, path.extname(file));
+      const pascalName = camelcase(rawName, { pascalCase: true });
+      const name =
+        (content.formatter && content.formatter(pascalName)) || pascalName;
+      if (exists.has(name)) continue;
+      exists.add(name);
 
-    // write like: module/fa/data.mjs
-    const modRes = generateIconRow(icon, name, iconData, "module");
-    await appendFile(path.resolve(DIST, icon.id, "index.mjs"), modRes, "utf8");
-    const comRes = generateIconRow(icon, name, iconData, "common");
-    await appendFile(path.resolve(DIST, icon.id, "index.js"), comRes, "utf8");
-    const dtsRes = generateIconRow(icon, name, iconData, "dts");
-    await appendFile(path.resolve(DIST, icon.id, "index.d.ts"), dtsRes, "utf8");
+      // write like: module/fa/data.mjs
+      const modRes = generateIconRow(icon, name, iconData, "module");
+      await appendFile(
+        path.resolve(DIST, icon.id, "index.mjs"),
+        modRes,
+        "utf8"
+      );
+      const comRes = generateIconRow(icon, name, iconData, "common");
+      await appendFile(path.resolve(DIST, icon.id, "index.js"), comRes, "utf8");
+      const dtsRes = generateIconRow(icon, name, iconData, "dts");
+      await appendFile(
+        path.resolve(DIST, icon.id, "index.d.ts"),
+        dtsRes,
+        "utf8"
+      );
 
-    exists.add(file);
+      exists.add(file);
+    }
   }
 }
 

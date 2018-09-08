@@ -114,7 +114,7 @@ async function dirInit() {
 
     await write(
       [icon.id, "index.js"],
-      "// THIS FILE IS AUTO GENERATED\nconst { GenIcon } = require('../lib/iconBase')\n"
+      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib/iconBase').GenIcon\n"
     );
     await write(
       [icon.id, "index.mjs"],

@@ -116,7 +116,7 @@ class Question extends React.Component {
                           <tr>
                             <th>License</th>
                             <td>
-                              <a href={icon.licenseUrl} target="_blank">
+                              <a href={icon.licenseUrl} target="_blank" rel="noopener noreferrer">
                                 {icon.license}
                               </a>
                             </td>
@@ -124,7 +124,7 @@ class Question extends React.Component {
                           <tr>
                             <th>Project</th>
                             <td>
-                              <a href={icon.projectUrl} target="_blank">
+                              <a href={icon.projectUrl} target="_blank" rel="noopener noreferrer">
                                 {icon.projectUrl}
                               </a>
                             </td>

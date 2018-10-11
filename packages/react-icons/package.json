@@ -26,8 +26,8 @@
     "copy": "^0.3.2",
     "feather-icons": "^4.7.3",
     "glob-promise": "^3.4.0",
-    "ionicons": "^4.0.0",
-    "octicons": "^7.3.0",
+    "ionicons": "^4.4.4",
+    "octicons": "^8.1.0",
     "renamer": "^1.0.0",
     "rimraf": "^2.6.2",
     "typescript": "^2.8.3"

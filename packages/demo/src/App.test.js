@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { shallow } from 'enzyme';
+import { shallow } from "enzyme";
 
 import App from "./App";
 
@@ -11,5 +11,5 @@ it("renders without crashing", () => {
 });
 
 it("snapshot test", () => {
-  expect(shallow(App)).toMatchSnapshot();
+  expect(shallow(<App />)).toMatchSnapshot();
 });

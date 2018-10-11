@@ -16,10 +16,10 @@ jobs:
   include:
     - stage: build packages
       script:
-        - (cd packages/react-icons/ && yarn build)
+        - (cd packages/react-icons/ && yarn build && npm pack)
         - (cd packages/preview/ && yarn build)
         - (cd packages/demo/ && yarn test && yarn build)
         - |
           if [ -n "$NETLIFY_ACCESS_TOKEN" ]; then
-            yarn netlify deploy --draft --access-token $NETLIFY_ACCESS_TOKEN;
+            NETLIFY_AUTH_TOKEN=$NETLIFY_ACCESS_TOKEN yarn netlify deploy;
           fi

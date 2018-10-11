@@ -11,7 +11,7 @@ Include popular icons in your React projects easly with ```react-icons```, which
 
 ## Installation
 
-```js
+```bash
 npm install react-icons --save
 ```
 
@@ -27,21 +27,24 @@ class Question extends React.Component {
 }
 ```
 
+[View the documentation](https://react-icons.netlify.com) for further usage examples and how to use icons from other packages. *NOTE*: each Icon package has it's own subfolder under `react-icons` you import from.
+
+For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
+
 ## Icons
 
-- Font Awesome - https://fontawesome.com/
+- [Font Awesome](https://fontawesome.com/)
   License: [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)
-- Ionicons - https://ionicons.com/
+- [Ionicons](https://ionicons.com/)
   License: [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)
-- Material Design icons - http://google.github.io/material-design-icons/
+- [Material Design icons](http://google.github.io/material-design-icons/)
   License: [Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)
-- Typicons - http://s-ings.com/typicons/
+- [Typicons](http://s-ings.com/typicons/)
   License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
-- Github Octicons icons - https://octicons.github.com/
+- [Github Octicons icons](https://octicons.github.com/)
   License: [MIT](https://github.com/primer/octicons/blob/master/LICENSE)
-- Feather - https://feathericons.com/
+- [Feather](https://feathericons.com/)
   License: [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
-
 
 You can add more icons by submitting pull requests or creating issues.
 
@@ -126,15 +129,15 @@ example for give global className
 
 Dependencies on `@types/react-icons` can be deleted.
 
-```
-$ npm remove @types/react-icons
+```bash
+npm remove @types/react-icons
 ```
 
 ## Contribute
 
 development
 
-```
+```bash
 yarn
 yarn submodule  # fetch icon sources
 cd packages/react-icons
@@ -143,7 +146,7 @@ yarn build
 
 scripts for run demo
 
-```
+```bash
 cd packages/react-icons
 yarn build
 cd ../demo
@@ -152,7 +155,7 @@ yarn start
 
 run preview site
 
-```
+```bash
 cd packages/react-icons
 yarn build
 cd ../preview
@@ -161,14 +164,13 @@ yarn start
 
 ## Tips
 
-### SVG ?
+### SVG
 
 Svg is [supported](http://caniuse.com/#search=svg) by all major browsers.
 
-### Why ES6 import and not fonts?
+### Why ES6 import and not fonts
 
 With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
-
 
 ### Related
 
@@ -178,4 +180,4 @@ With `react-icons`, you can serve only the needed icons instead of one big font 
 
 MIT
 
-* Icons are taken from the other projects so please check each project licences accordingly.
+- Icons are taken from the other projects so please check each project licences accordingly.

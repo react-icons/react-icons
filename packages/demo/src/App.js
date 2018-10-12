@@ -3,7 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { IconContext } from "react-icons";
-import { FaFolder, MdAccessibility } from "react-icons/all";
+import { FaFolder } from "react-icons/fa";
+import { MdAccessibility } from "react-icons/md";
 import { TiArrowDown } from "react-icons/ti";
 
 class App extends Component {

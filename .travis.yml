@@ -16,9 +16,20 @@ jobs:
   include:
     - stage: build packages
       script:
-        - (cd packages/react-icons/ && yarn build)
+        - (cd packages/react-icons/ && yarn build && npm pack)
         - (cd packages/preview/ && yarn build)
+        - (cd packages/demo/ && yarn test && yarn build)
         - |
           if [ -n "$NETLIFY_ACCESS_TOKEN" ]; then
-            yarn netlify deploy --draft --access-token $NETLIFY_ACCESS_TOKEN;
+            NETLIFY_AUTH_TOKEN=$NETLIFY_ACCESS_TOKEN yarn netlify deploy --dir ./packages/preview/build --message "$TRAVIS_BRANCH $TRAVIS_COMMIT_MESSAGE";
           fi
+deploy:
+  provider: releases
+  api_key:
+    # [hint] travis encrypt --com -r sakuraio/sakuraio-cli "********"
+    secure: "SxjwYTcffTX+Ez270IQATr5thsa5SIRbC+BXejvvSezeQRRUuC2siZEw8c8vfa/2nZ6i2YlxtG9GFZaPUS8LrhjnkyPCSypIecoIUDSmfp+EnzKQDn0fbs1XM9JysN0ZF3Y4DM03CTXsMV/x0JCEfczRr54OPu6a1sx7Lnft+/DmVf2KDnXYraNlUc+5BiKx1CfQWwF5H6GBKfFb/wVXdk/jCjdOMOz1U+B6wo5tpM7kbL4YQjkNzs8EsDrbl0iituUTbcQw25znSrfPwZoDhv/nlcW15AspUJKB/13z2d9ZAUjrIcu6d5QeftSitrHf95DSYReiJM3b5zhjJfU1D3SobVanL2DFFWXrl4uqnZbmGk63X8ZaLwvfQiVNzwmkJy3EjX9ZKS4V+Wr89M9tF77hadWthFu4k2LyeDS5y+HJpuGxS3DRXzZRQfkoiOVgzbwlO4Es2+XUW52yzj+i4t/rCHDQ8TQBG/DEbteSvdOA7nPO2lxHH602NDe+iX+Prx8bA7GCJiRmYo4G+RvUc/12b3RSuYxtLgHdXSTEsNVLcjxM0s6yB/GtJ1zTNvijGuvVtlNsRwKIsi2D6Bt0nmqd487R2O0w7kjxwr6rNyhm0A1dBEIKb42mSFDt5GzHDV8MK3afsyisfBS+yhfMrHoPRgEIZf0meZKY7eCVP/k="
+  file_glob: true
+  file: "packages/react-icons/react-icons-*.tgz"
+  skip_cleanup: true
+  on:
+    tags: true

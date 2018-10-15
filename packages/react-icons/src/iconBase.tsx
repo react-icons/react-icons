@@ -32,7 +32,7 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
     const computedSize = props.size || conf.size || "1em";
     let className;
     if (conf.className) className = conf.className;
-    if (props.className) className = (className + ' ' || '') + props.className;
+    if (props.className) className = (className ? className + ' ' : '') + props.className;
     const {attr, ...svgProps} = props;
 
     return (

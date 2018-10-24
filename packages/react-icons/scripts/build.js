@@ -33,13 +33,21 @@ async function convertIconData(svg) {
         name =>
           ![
             "class",
-            "fill",
             ...(tagName === "svg" ? ["xmlns", "width", "height"] : []) // if tagName is svg remove size attributes
           ].includes(name)
       )
       .reduce((obj, name) => {
         const newName = camelcase(name);
-        obj[newName] = attribs[name];
+        switch (newName) {
+          case "fill":
+            if (attribs[name] === "none") {
+              obj[newName] = attribs[name];
+            }
+            break;
+          default:
+            obj[newName] = attribs[name];
+            break;
+        }
         return obj;
       }, {});
 

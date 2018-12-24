@@ -115,7 +115,7 @@ module.exports = {
           formatter: name => `Gi${name}`
         }
       ],
-      projectUrl: "https://game-icons.com/",
+      projectUrl: "https://game-icons.net/",
       license: "CC-BY-3.0",
       licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
     }

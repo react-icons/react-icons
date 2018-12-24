@@ -110,7 +110,7 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "game-icons/+(andymeneely|aussiesim|carl-olsen)/originals/svg/*.svg"
+            "game-icons/+(andymeneely|aussiesim|carl-olsen|cathelineau|darkzaitzev|delapouite|faithtoken|felbrigg|generalace135|guard13007|heavenly-dog|irongamer|john-colburn|john-redman|kier-heyl|lorc|lord-berandas|lucasms|priorblue|quoting|rihlsul|sbed|skoll|sparker|spencerdub|various-artists|viscious-speed|willdabeast|zajkonur|zeromancer)/originals/svg/000000/transparent/*.svg"
           ),
           formatter: name => `Gi${name}`
         }

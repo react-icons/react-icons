@@ -102,6 +102,22 @@ module.exports = {
       projectUrl: "https://feathericons.com/",
       license: "MIT",
       licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE"
+    },
+    {
+      id: "gi",
+      name: "Game Icons",
+      contents: [
+        {
+          files: path.resolve(
+            __dirname,
+            "game-icons/+(andymeneely|aussiesim|carl-olsen)/originals/svg/*.svg"
+          ),
+          formatter: name => `Gi${name}`
+        }
+      ],
+      projectUrl: "https://game-icons.com/",
+      license: "CC-BY-3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
     }
   ]
 };

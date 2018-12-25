@@ -7,6 +7,6 @@
 [submodule "typicons"]
 	path = packages/react-icons/src/icons/typicons
 	url = https://github.com/stephenhutchings/typicons.font.git
-[submodule "game-icons-inverted"]
+[submodule "game-icons"]
 	path = packages/react-icons/src/icons/game-icons
 	url = https://github.com/delacannon/game-icons-inverted.git

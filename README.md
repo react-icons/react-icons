@@ -45,6 +45,8 @@ For example, to use an icon from **Material Design**, your import would be: `imp
   License: [MIT](https://github.com/primer/octicons/blob/master/LICENSE)
 - [Feather](https://feathericons.com/)
   License: [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
+- [Game Icons](https://game-icons.net/)
+  License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
 
 You can add more icons by submitting pull requests or creating issues.
 

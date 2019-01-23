@@ -47,6 +47,8 @@ For example, to use an icon from **Material Design**, your import would be: `imp
   License: [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
 - [Game Icons](https://game-icons.net/)
   License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+- [Weather Icons](https://erikflowers.github.io/weather-icons/)
+  License: [SIL OFL 1.1](http://scripts.sil.org/OFL)
 
 You can add more icons by submitting pull requests or creating issues.
 

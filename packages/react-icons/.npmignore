@@ -1,0 +1,7 @@
+node_modules/
+src/icons/*/
+scripts/
+*.tgz
+*.log
+LICENSE_HEADER
+.babelrc

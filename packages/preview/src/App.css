@@ -1,0 +1,68 @@
+.App {
+}
+
+.App .sidebar {
+  width: 250px;
+  position: fixed;
+  background: #eee;
+  height: 100vh;
+  padding: 2em 0 2em 1em;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.App .sidebar header {
+  display: flex;
+  align-items: center;
+}
+
+.App .sidebar header img {
+  height: 5em;
+  margin-right: 0.5em;
+}
+.App .sidebar .links {
+  list-style: none;
+  padding: 0;
+  margin-top: 2em;
+}
+.App .sidebar .links li a {
+  display: block;
+  padding: .5em;
+  color: black;
+  text-decoration: none;
+}
+.App .sidebar .links li a.active {
+  background: white;
+  font-weight: bold;
+}
+
+
+.App .content {
+  margin-left: 250px;
+  padding: 2em;
+}
+
+.App .content .icons-article table {
+  text-align: left;
+  min-width: 50%;
+}
+
+.icons {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: max-content;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.icons .item {
+  padding: 0.6rem;
+  text-align: center;
+}
+.icons .body {
+  font-size: 1.5em;
+}
+.icons .name {
+  font-size: 0.7em;
+  overflow: hidden;
+  background: #eee;
+  user-select: all;
+}

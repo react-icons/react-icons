@@ -1,4 +1,6 @@
 node_modules
 dist
-publish
 lib
+module
+*.log
+*.tgz

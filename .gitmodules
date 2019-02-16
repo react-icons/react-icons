@@ -1,0 +1,18 @@
+[submodule "fontawesome"]
+	path = packages/react-icons/src/icons/fontawesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "material-design-icons"]
+	path = packages/react-icons/src/icons/material-design-icons
+	url = https://github.com/google/material-design-icons.git
+[submodule "typicons"]
+	path = packages/react-icons/src/icons/typicons
+	url = https://github.com/stephenhutchings/typicons.font.git
+[submodule "game-icons-inverted"]
+	path = packages/react-icons/src/icons/game-icons-inverted
+	url = https://github.com/delacannon/game-icons-inverted.git
+[submodule "weather-icons"]
+	path = packages/react-icons/src/icons/weather-icons
+	url = https://github.com/erikflowers/weather-icons.git
+[submodule "devicons"]
+	path = packages/react-icons/src/icons/devicons
+	url = https://github.com/vorillaz/devicons.git

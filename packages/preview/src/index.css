@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Yu Gothic;
+}
+
+a {
+  color: #4331c7;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 2em;
+}
+
+code {
+  display: block;
+  background: #f7f7f7;
+  padding: .5rem;
+}
+code pre {
+  margin: 0;
+  font-family: Consolas, Courier New, Courier, Monaco, monospace;
+  color: #333;
+  font-size: 0.8em;
+}

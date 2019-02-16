@@ -171,8 +171,8 @@ module.exports = {
       projectUrl: "https://game-icons.net/",
       license: "CC BY 3.0",
       licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
-	},
-	{
+    },
+    {
       id: "wi",
       name: "Weather Icons",
       contents: [
@@ -185,5 +185,18 @@ module.exports = {
       license: "SIL OFL 1.1",
       licenseUrl: "http://scripts.sil.org/OFL"
     },
+    {
+      id: "di",
+      name: "Devicons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "devicons/!SVG/*.svg"),
+          formatter: name => name
+        },
+      ],
+      projectUrl: "https://vorillaz.github.io/devicons/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    }
   ]
 };

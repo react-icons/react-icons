@@ -179,7 +179,7 @@ module.exports = {
         {
           files: path.resolve(__dirname, "weather-icons/svg/*.svg"),
           formatter: name => name
-        },
+        }
       ],
       projectUrl: "https://erikflowers.github.io/weather-icons/",
       license: "SIL OFL 1.1",
@@ -191,8 +191,8 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "devicons/!SVG/*.svg"),
-          formatter: name => name
-        },
+          formatter: name => `Di${name}`
+        }
       ],
       projectUrl: "https://vorillaz.github.io/devicons/",
       license: "MIT",

@@ -47,6 +47,7 @@ export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.El
         style={{ color: props.color || conf.color, ...conf.style, ...props.style}}
         height={computedSize}
         width={computedSize}
+        xmlns="http://www.w3.org/2000/svg"
       >
       {props.children}
     </svg>

@@ -45,9 +45,9 @@
     "typescript": "^3.1.2"
   },
   "scripts": {
-    "build": "yarn build-mjs && yarn build-cjs && node scripts/build.js",
+    "build": "node scripts/build.js && yarn build-mjs && yarn build-cjs",
     "prebuild": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && node ../../node_modules/rimraf/bin.js ./lib",
-    "build-mjs": "node ../../node_modules/typescript/bin/tsc && node ../../node_modules/renamer/bin/cli.js --find js --replace mjs ./lib/* && node ../../node_modules/@babel/cli/bin/babel.js ./lib -x .mjs --keep-file-extension -d ./lib",
+    "build-mjs": "node ../../node_modules/typescript/bin/tsc && node ../../node_modules/@babel/cli/bin/babel.js ./lib/esm -d ./lib/esm",
     "build-cjs": "node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json"
   },
   "dependencies": {}

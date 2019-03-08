@@ -108,11 +108,13 @@ async function dirInit() {
 
   await mkdir(DIST).catch(ignore);
   await mkdir(LIB).catch(ignore);
+  await mkdir(path.resolve(LIB, "esm")).catch(ignore);
+  await mkdir(path.resolve(LIB, "cjs")).catch(ignore);
 
   const write = (filePath, str) =>
     writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = ["index.d.ts", "index.mjs", "all.mjs", "all.d.ts"];
+  const initFiles = ["index.d.ts", "all.js", "all.d.ts"];
 
   const gitignore =
     [
@@ -127,22 +129,22 @@ async function dirInit() {
 
     await write(
       [icon.id, "index.js"],
-      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib/iconBase').GenIcon\n"
+      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n"
     );
     await write(
-      [icon.id, "index.mjs"],
-      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib/iconBase';\n"
+      [icon.id, "index.esm.js"],
+      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n"
     );
     await write(
       [icon.id, "index.d.ts"],
-      "import { IconTree, IconType } from '../lib/iconBase'\n// THIS FILE IS AUTO GENERATED\n"
+      "import { IconTree, IconType } from '../lib'\n// THIS FILE IS AUTO GENERATED\n"
     );
     await write(
       [icon.id, "package.json"],
       JSON.stringify(
         {
           sideEffects: false,
-          module: "./index.mjs"
+          module: "./index.esm.js"
         },
         null,
         2
@@ -161,7 +163,7 @@ async function writeIconModule(icon) {
     const files = await getIconFiles(content);
 
     const entryModule = generateIconsEntry(icon.id, "module");
-    await appendFile(path.resolve(DIST, "all.mjs"), entryModule, "utf8");
+    await appendFile(path.resolve(DIST, "all.js"), entryModule, "utf8");
     const entryDts = generateIconsEntry(icon.id, "dts");
     await appendFile(path.resolve(DIST, "all.d.ts"), entryDts, "utf8");
 
@@ -176,10 +178,10 @@ async function writeIconModule(icon) {
       if (exists.has(name)) continue;
       exists.add(name);
 
-      // write like: module/fa/data.mjs
+      // write like: module/fa/index.esm.js
       const modRes = generateIconRow(icon, name, iconData, "module");
       await appendFile(
-        path.resolve(DIST, icon.id, "index.mjs"),
+        path.resolve(DIST, icon.id, "index.esm.js"),
         modRes,
         "utf8"
       );
@@ -210,19 +212,24 @@ async function writeIconsManifest() {
   }));
   const manifest = JSON.stringify(writeObj, null, 2);
   await writeFile(
-    path.resolve(LIB, "iconsManifest.mjs"),
+    path.resolve(LIB, "esm", "iconsManifest.js"),
     `export const IconsManifest = ${manifest}`,
     "utf8"
   );
   await writeFile(
-    path.resolve(LIB, "iconsManifest.js"),
+    path.resolve(LIB, "cjs", "iconsManifest.js"),
     `module.exports.IconsManifest = ${manifest}`,
     "utf8"
   );
   await copyFile(
     "src/iconsManifest.d.ts",
-    path.resolve(LIB, "iconsManifest.d.ts")
+    path.resolve(LIB, "esm", "iconsManifest.d.ts")
   );
+  await copyFile(
+    "src/iconsManifest.d.ts",
+    path.resolve(LIB, "cjs", "iconsManifest.d.ts")
+  );
+  await copyFile("src/package.json", path.resolve(LIB, "package.json"));
 }
 
 async function writeLicense() {

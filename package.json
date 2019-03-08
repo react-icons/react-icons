@@ -1,9 +1,9 @@
 {
   "name": "react-icons-root",
   "private": true,
-  "workspaces": {
-    "packages": ["packages/*"]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^9.0.0",

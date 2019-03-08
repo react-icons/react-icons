@@ -1,11 +1,11 @@
 {
   "name": "demo",
-  "version": "0.1.0",
+  "version": "3.6.0-beta1",
   "private": true,
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-icons": "*",
+    "react-icons": "^3.6.0-beta1",
     "react-scripts": "2.0.4"
   },
   "scripts": {

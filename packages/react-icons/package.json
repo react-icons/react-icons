@@ -1,13 +1,13 @@
 {
   "name": "react-icons",
-  "version": "3.6.0-beta1",
+  "version": "3.6.0-beta2",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
     "kamijin_fanta <kamijin@live.jp>"
   ],
   "license": "MIT",
-  "main": "lib/index",
+  "main": "lib",
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -49,6 +49,5 @@
     "prebuild": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && node ../../node_modules/rimraf/bin.js ./lib",
     "build-mjs": "node ../../node_modules/typescript/bin/tsc && node ../../node_modules/@babel/cli/bin/babel.js ./lib/esm -d ./lib/esm",
     "build-cjs": "node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json"
-  },
-  "dependencies": {}
+  }
 }

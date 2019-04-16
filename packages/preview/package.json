@@ -1,12 +1,12 @@
 {
   "name": "preview",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "private": true,
   "dependencies": {
     "history": "^4.7.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-icons": "^3.6.0",
+    "react-icons": "^3.6.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4"

@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "3.6.0-beta2",
+  "command": {
+    "version": {
+      "push": true
+    }
+  }
+}

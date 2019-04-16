@@ -37,6 +37,7 @@
     "feather-icons": "^4.7.3",
     "glob-promise": "^3.4.0",
     "ionicons": "^4.4.4",
+    "lerna": "^3.13.1",
     "netlify-cli": "^2.0.0",
     "octicons": "^8.1.0",
     "prettier": "^1.14.3",
@@ -46,8 +47,11 @@
   },
   "scripts": {
     "build": "node scripts/build.js && yarn build-mjs && yarn build-cjs",
-    "prebuild": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && node ../../node_modules/rimraf/bin.js ./lib",
-    "build-mjs": "node ../../node_modules/typescript/bin/tsc && node ../../node_modules/@babel/cli/bin/babel.js ./lib/esm -d ./lib/esm",
-    "build-cjs": "node ../../node_modules/typescript/bin/tsc -p ./tsconfig.commonjs.json"
+    "prebuild": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && rimraf ./lib",
+    "build-mjs": "tsc && babel ./lib/esm -d ./lib/esm",
+    "build-cjs": "tsc -p ./tsconfig.commonjs.json"
+  },
+  "dependencies": {
+    "camelcase": "^5.0.0"
   }
 }

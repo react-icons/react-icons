@@ -33,7 +33,7 @@ async function convertIconData(svg) {
         name =>
           ![
             "class",
-            ...(tagName === "svg" ? ["xmlns", "width", "height"] : []) // if tagName is svg remove size attributes
+            ...(tagName === "svg" ? ["xmlns", "xmlns:xlink", "xml:space", "width", "height"] : []) // if tagName is svg remove size attributes
           ].includes(name)
       )
       .reduce((obj, name) => {

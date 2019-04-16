@@ -9,15 +9,12 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "fontawesome/advanced-options/raw-svg/+(brands|solid)/*.svg"
+            "fontawesome/svgs/+(brands|solid)/*.svg"
           ),
           formatter: name => `Fa${name}`
         },
         {
-          files: path.resolve(
-            __dirname,
-            "fontawesome/advanced-options/raw-svg/regular/*.svg"
-          ),
+          files: path.resolve(__dirname, "fontawesome/svgs/regular/*.svg"),
           formatter: name => `FaReg${name}`
         }
       ],
@@ -50,7 +47,7 @@ module.exports = {
             __dirname,
             "material-design-icons/*/svg/production/*_24px.svg"
           ),
-          formatter: name => name.replace(/Ic(\w+)24px/, "Md$1")
+          formatter: name => name.replace(/Ic(\w+)24px/i, "Md$1")
         }
       ],
       projectUrl: "http://google.github.io/material-design-icons/",

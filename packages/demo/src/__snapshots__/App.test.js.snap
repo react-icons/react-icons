@@ -41,11 +41,14 @@ exports[`snapshot test 1`] = `
       <FaFolder
         className="additional-class-name"
         color="red"
+        title="folder icon"
       />
     </ContextProvider>
     <MdAccessibility />
     <FaFolder />
-    <TiArrowDown />
+    <TiArrowDown
+      title="arrow down icon"
+    />
   </p>
 </div>
 `;

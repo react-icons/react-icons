@@ -8,6 +8,7 @@
   ],
   "license": "MIT",
   "main": "lib",
+  "types": "./lib/esm/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",

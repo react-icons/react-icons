@@ -7,9 +7,9 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-icons": "^3.6.1",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4"
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

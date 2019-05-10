@@ -25,7 +25,11 @@ class App extends Component {
             }}
           >
             <MdAccessibility />
-            <FaFolder color="red" title="folder icon" className="additional-class-name" />
+            <FaFolder
+              color="red"
+              title="folder icon"
+              className="additional-class-name"
+            />
           </IconContext.Provider>
           <MdAccessibility />
           <FaFolder />

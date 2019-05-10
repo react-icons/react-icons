@@ -25,11 +25,15 @@ class App extends Component {
             }}
           >
             <MdAccessibility />
-            <FaFolder color="red" className="additional-class-name" />
+            <FaFolder
+              color="red"
+              title="folder icon"
+              className="additional-class-name"
+            />
           </IconContext.Provider>
           <MdAccessibility />
           <FaFolder />
-          <TiArrowDown />
+          <TiArrowDown title="arrow down icon" />
         </p>
       </div>
     );

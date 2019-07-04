@@ -49,6 +49,8 @@ For example, to use an icon from **Material Design**, your import would be: `imp
   License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
 - [Weather Icons](https://erikflowers.github.io/weather-icons/)
   License: [SIL OFL 1.1](http://scripts.sil.org/OFL)
+- [Webfont Medical Icons](https://github.com/samcome/webfont-medical-icons/)
+License: [MIT](https://github.com/samcome/webfont-medical-icons/blob/master/LICENSE)
 
 You can add more icons by submitting pull requests or creating issues.
 

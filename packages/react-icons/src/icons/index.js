@@ -194,6 +194,19 @@ module.exports = {
       projectUrl: "https://vorillaz.github.io/devicons/",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
+      id: "mi",
+      name: "Webfont Medical Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "webfont-medical-icons/!SVG/*.svg"),
+          formatter: name => `Mi${name}`
+        }
+      ],
+      projectUrl: "https://github.com/samcome/webfont-medical-icons/",
+      license: "MIT",
+      licenseUrl: "https://github.com/samcome/webfont-medical-icons/blob/master/LICENSE"
     }
   ]
 };

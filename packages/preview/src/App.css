@@ -66,3 +66,9 @@
   background: #eee;
   user-select: all;
 }
+
+.search > input {
+  width: 90%;
+  height: 2rem;
+  font-size: 1.2rem;
+}

@@ -13,22 +13,35 @@ import "./App.css";
 function IconsView({ icons, id }) {
   return Object.keys(icons)
     .filter(name => name.toLocaleLowerCase().startsWith(id))
-    .map(name => {
-      const Icon = icons[name];
-      return (
-        <div className="item" key={name}>
-          <div className="body">
-            <Icon />
-          </div>
-          <div className="name">{name}</div>
-        </div>
-      );
-    });
+    .map(name => renderIcon(icons[name], name));
+}
+
+function FilterView({ icons, query }) {
+  return Object.keys(icons)
+      .filter(name => name.toLocaleLowerCase().includes(query.toLocaleLowerCase()))
+      .map(name => renderIcon(icons[name], name));
+}
+
+function renderIcon(icon, name) {
+  return (
+      <div className="item" key={name}>
+        <div className="body">{icon()}</div>
+        <div className="name">{name}</div>
+      </div>
+);
 }
 
 const history = createHashHistory({});
 
 class App extends Component {
+  state = {
+    query: ""
+  };
+
+  handleSearch = query => {
+    this.setState({query});
+  };
+
   render() {
     return (
       <IconContext.Provider value={{ color: "#333" }}>
@@ -50,6 +63,16 @@ class App extends Component {
                     <NavLink to={`/icons/${icon.id}`}>{icon.name}</NavLink>
                   </li>
                 ))}
+                <li>
+                  <NavLink to="/search" className="search">
+                    <input
+                        type="text"
+                        value={this.state.query || ""}
+                        onChange={event => this.handleSearch(event.target.value)}
+                        placeholder="Search"
+                    />
+                  </NavLink>
+                </li>
               </ul>
             </div>
             <div className="content">
@@ -146,6 +169,18 @@ class Question extends React.Component {
                     </article>
                   </Route>
                 ))}
+                <Route path="/search" exact={true}>
+                  <article>
+                    {this.state.query.length && this.state.query.length >= 3 ? (
+                        <div className="icons">
+                          <FilterView icons={Icons} query={this.state.query} />
+                        </div>
+                    ) : (
+                        <div>Enter at least 3 characters to search...</div>
+                    )}
+                  </article>
+                </Route>
+
               </Switch>
             </div>
           </div>

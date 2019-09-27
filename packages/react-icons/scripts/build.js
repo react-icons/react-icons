@@ -213,7 +213,7 @@ async function writeIconsManifest() {
   const manifest = JSON.stringify(writeObj, null, 2);
   await writeFile(
     path.resolve(LIB, "esm", "iconsManifest.js"),
-    `export const IconsManifest = ${manifest}`,
+    `export var IconsManifest = ${manifest}`,
     "utf8"
   );
   await writeFile(

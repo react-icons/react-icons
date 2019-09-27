@@ -194,6 +194,27 @@ module.exports = {
       projectUrl: "https://vorillaz.github.io/devicons/",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
+      id: "ai",
+      name: "Ant Design Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "ant-design-icons/packages/icons/svg/fill/*.svg"),
+          formatter: name => `AntFill${name}`
+        },
+        {
+          files: path.resolve(__dirname, "ant-design-icons/packages/icons/svg/outline/*.svg"),
+          formatter: name => `AntOutline${name}`
+        },
+        {
+          files: path.resolve(__dirname, "ant-design-icons/packages/icons/svg/twotone/*.svg"),
+          formatter: name => `AntTwotone${name}`
+        }
+      ],
+      projectUrl: "https://github.com/ant-design/ant-design-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     }
   ]
 };

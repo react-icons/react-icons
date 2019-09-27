@@ -18,6 +18,9 @@
     "url": "https://github.com/react-icons/react-icons/issues"
   },
   "homepage": "https://github.com/react-icons/react-icons#readme",
+  "peerDependencies": {
+    "react": "*"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",

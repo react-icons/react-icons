@@ -4,15 +4,13 @@ import React from "react";
 import { IconsManifest } from "react-icons";
 import { NavLink, useHistory } from "react-router-dom";
 
-import Search from "../../store/search";
 import Header from "./header";
 
-function Sidebar() {
-  const SearchStore = Search.useContainer();
+function Sidebar({ searchText, setSearchText }) {
   const history = useHistory();
 
   const onSearch = event => {
-    SearchStore.setText(event.target.value);
+    setSearchText(event.target.value);
   };
 
   const onBlur = event => {
@@ -27,7 +25,7 @@ function Sidebar() {
       <NavLink to="/search" className="search">
         <input
           type="text"
-          value={SearchStore.text}
+          value={searchText}
           onChange={onSearch}
           onBlur={onBlur}
           placeholder="Search Icons"

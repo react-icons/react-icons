@@ -8,7 +8,7 @@ function IconsetView({ icons, id }) {
       {Object.keys(icons)
         .filter(name => name.toLocaleLowerCase().startsWith(id))
         .map(name => (
-          <Icon icon={icons[name]} name={name} />
+          <Icon key={name} icon={icons[name]} name={name} />
         ))}
     </div>
   );

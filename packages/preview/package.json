@@ -3,7 +3,6 @@
   "version": "3.6.1",
   "private": true,
   "dependencies": {
-    "@loadable/component": "^5.10.3",
     "history": "^4.10.1",
     "node-sass": "^4.12.0",
     "react": "^16.11.0",
@@ -12,8 +11,7 @@
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
-    "tiny-skeleton-loader-react": "^1.1.0",
-    "unstated-next": "^1.1.0"
+    "tiny-skeleton-loader-react": "^1.1.0"
   },
   "eslintConfig": {
     "extends": "react-app"

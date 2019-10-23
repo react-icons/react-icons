@@ -1216,7 +1216,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.4.0", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.0":
+"@babel/runtime@^7.4.0", "@babel/runtime@^7.4.5":
   version "7.6.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
   integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
@@ -2507,14 +2507,6 @@
   dependencies:
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
-
-"@loadable/component@^5.10.3":
-  version "5.10.3"
-  resolved "https://registry.yarnpkg.com/@loadable/component/-/component-5.10.3.tgz#e1ad811ac4834a6ed187605d8464351d0c52896f"
-  integrity sha512-/aSO+tXw4vFMwZ6fgLaNQgLuEa7bgTpoBE4PxNzf08/ewAjymrCS3J7v3SbGE7IjGmmKL6vVwkpb7S3cYrk+ag==
-  dependencies:
-    "@babel/runtime" "^7.6.0"
-    hoist-non-react-statics "^3.3.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -8219,7 +8211,7 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.1.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   dependencies:
@@ -15651,11 +15643,6 @@ unset-value@^1.0.0:
   dependencies:
     has-value "^0.3.1"
     isobject "^3.0.0"
-
-unstated-next@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/unstated-next/-/unstated-next-1.1.0.tgz#7bb4911a12fdf3cc8ad3eb11a0b315e4a8685ea8"
-  integrity sha512-AAn47ZncPvgBGOvMcn8tSRxsrqwf2VdAPxLASTuLJvZt4rhKfDvUkmYZLGfclImSfTVMv7tF4ynaVxin0JjDCA==
 
 unzip-response@^2.0.1:
   version "2.0.1"

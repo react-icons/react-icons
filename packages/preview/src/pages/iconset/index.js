@@ -1,11 +1,17 @@
-import React from "react";
-import * as icons from "react-icons/all";
+import React, { useEffect, useState } from "react";
 
 import IconetInfo from "./iconset-info";
 import IconsetView from "./iconset-view";
+import IconsetPageLoading from "./loading";
 
 function IconSetPage({ icon }) {
-  return (
+  const [icons, setIcons] = useState({});
+
+  useEffect(() => {
+    import(`react-icons/${icon.id}/index`).then(setIcons);
+  }, [icon]);
+
+  return Object.keys(icons).length ? (
     <article className="icons-article">
       <h1>{icon.name}</h1>
       <IconetInfo icon={icon} />
@@ -18,6 +24,8 @@ function IconSetPage({ icon }) {
       <h2>Icons</h2>
       <IconsetView icons={icons} id={icon.id} />
     </article>
+  ) : (
+    <IconsetPageLoading />
   );
 }
 

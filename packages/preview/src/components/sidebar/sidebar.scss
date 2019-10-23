@@ -1,0 +1,39 @@
+.sidebar {
+  width: var(--sidebar-width);
+  position: fixed;
+  background: var(--color-gray-1);
+  height: 100vh;
+  padding: 2rem 0 1rem 1rem;
+  box-sizing: border-box;
+  overflow: auto;
+
+  header {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .links {
+    list-style: none;
+    padding: 0;
+
+    li a {
+      display: block;
+      padding: 0.8rem 1rem;
+      color: var(--color-text);
+      text-decoration: none;
+      transition: all 0.25s ease;
+
+      &.active {
+        border-top-left-radius: var(--radius-md);
+        border-bottom-left-radius: var(--radius-md);
+        background: var(--color-gray-2);
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -200,16 +200,25 @@ module.exports = {
       name: "Ant Design Icons",
       contents: [
         {
-          files: path.resolve(__dirname, "ant-design-icons/packages/icons/svg/fill/*.svg"),
-          formatter: name => `AntFill${name}`
+          files: path.resolve(
+            __dirname,
+            "ant-design-icons/packages/icons/svg/fill/*.svg"
+          ),
+          formatter: name => `AiFill${name}`
         },
         {
-          files: path.resolve(__dirname, "ant-design-icons/packages/icons/svg/outline/*.svg"),
-          formatter: name => `AntOutline${name}`
+          files: path.resolve(
+            __dirname,
+            "ant-design-icons/packages/icons/svg/outline/*.svg"
+          ),
+          formatter: name => `AiOutline${name}`
         },
         {
-          files: path.resolve(__dirname, "ant-design-icons/packages/icons/svg/twotone/*.svg"),
-          formatter: name => `AntTwotone${name}`
+          files: path.resolve(
+            __dirname,
+            "ant-design-icons/packages/icons/svg/twotone/*.svg"
+          ),
+          formatter: name => `AiTwotone${name}`
         }
       ],
       projectUrl: "https://github.com/ant-design/ant-design-icons",

@@ -21,7 +21,7 @@
     "prettier": "^1.14.3"
   },
   "scripts": {
-    "submodule": "git submodule update --init --recursive",
+    "submodule": "git submodule update --init",
     "submodule-deinit": "git submodule deinit --all",
     "netlify": "netlify",
     "lint": "node ./node_modules/eslint/bin/eslint.js .",

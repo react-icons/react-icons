@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 import Icon from "../../components/icon";
+import { getIcons } from "../../utils";
 
 function SearchResults({ iconsId, query }) {
   const [icons, setIcons] = useState({});
 
   useEffect(() => {
-    import(`react-icons/${iconsId}/index`).then(setIcons);
+    getIcons(iconsId).then(setIcons)
   }, [iconsId]);
 
   return (
@@ -16,7 +17,7 @@ function SearchResults({ iconsId, query }) {
           name.toLocaleLowerCase().includes(query.toLocaleLowerCase())
         )
         .map(name => (
-          <Icon key={icons[name]} icon={icons[name]} name={name} />
+          <Icon key={name} icon={icons[name]} name={name} />
         ))}
     </>
   );

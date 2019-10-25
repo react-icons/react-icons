@@ -29,7 +29,7 @@ function App() {
                 <IconSetPage icon={icon} />
               </Route>
             ))}
-
+ 
             <Route path="/search" exact={true}>
               <SearchPage searchText={searchText} />
             </Route>

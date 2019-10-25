@@ -3,6 +3,7 @@
   "version": "3.6.1",
   "private": true,
   "dependencies": {
+    "babel-plugin-codegen": "^3.0.0",
     "history": "^4.10.1",
     "node-sass": "^4.12.0",
     "react": "^16.11.0",

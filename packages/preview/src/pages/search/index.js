@@ -30,9 +30,9 @@ function SearchPage({ searchText }) {
             </span>
             Search: <i>{searchText}</i>
           </h1>
-          <div class="icons">
+          <div className="icons">
             {IconsManifest.map(icon => (
-              <SearchResults iconsId={icon.id} query={searchText} />
+              <SearchResults key={icon.id} iconsId={icon.id} query={searchText} />
             ))}
           </div>
         </>

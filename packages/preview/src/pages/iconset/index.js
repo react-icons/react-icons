@@ -3,12 +3,13 @@ import React, { useEffect, useState } from "react";
 import IconetInfo from "./iconset-info";
 import IconsetView from "./iconset-view";
 import IconsetPageLoading from "./loading";
+import { getIcons } from "../../utils";
 
 function IconSetPage({ icon }) {
   const [icons, setIcons] = useState({});
 
   useEffect(() => {
-    import(`react-icons/${icon.id}/index`).then(setIcons);
+    getIcons(icon.id).then(setIcons)
   }, [icon]);
 
   return Object.keys(icons).length ? (

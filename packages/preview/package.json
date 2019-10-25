@@ -1,6 +1,6 @@
 {
   "name": "preview",
-  "version": "3.6.1",
+  "version": "3.8.0",
   "private": true,
   "dependencies": {
     "babel-plugin-codegen": "^3.0.0",

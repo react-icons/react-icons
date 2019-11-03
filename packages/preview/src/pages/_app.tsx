@@ -13,10 +13,6 @@ interface Props {
 }
 
 class App extends NextApp<Props> {
-  handleOnSearch = query => {
-    console.info(query);
-  };
-
   render() {
     const { pageProps, Component } = this.props;
     return (
@@ -32,13 +28,6 @@ class App extends NextApp<Props> {
         </>
       </Provider>
     );
-  }
-
-  static async getInitialProps({ Component, ctx }: AppContext) {
-    const pageProps = Component.getInitialProps
-      ? await Component.getInitialProps(ctx)
-      : {};
-    return { pageProps };
   }
 }
 

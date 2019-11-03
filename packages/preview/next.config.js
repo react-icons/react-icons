@@ -9,7 +9,6 @@ module.exports = withCSS(
     withPWA({
       pwa: {
         dest: "public",
-        disable: false,
         register: true,
         scope: "/"
       },

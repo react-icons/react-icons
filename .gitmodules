@@ -19,3 +19,6 @@
 [submodule "ant-design-icons"]
 	path = packages/react-icons/src/icons/ant-design-icons
 	url = https://github.com/ant-design/ant-design-icons.git
+[submodule "RemixIcon"]
+	path = packages/react-icons/src/icons/RemixIcon
+	url = https://github.com/Remix-Design/RemixIcon.git

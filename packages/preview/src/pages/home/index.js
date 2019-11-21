@@ -7,7 +7,7 @@ function HomePage() {
       <h1>React Icons</h1>
       <Badges />
       <p>
-        Include popular icons in your React projects easly with react-icons,
+        Include popular icons in your React projects easily with react-icons,
         which utilizes ES6 imports that allows you to include only the icons
         that your project is using.
       </p>

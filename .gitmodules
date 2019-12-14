@@ -19,3 +19,6 @@
 [submodule "ant-design-icons"]
 	path = packages/react-icons/src/icons/ant-design-icons
 	url = https://github.com/ant-design/ant-design-icons.git
+[submodule "packages/react-icons/src/icons/bootstrap"]
+	path = packages/react-icons/src/icons/bootstrap
+	url = https://github.com/twbs/icons.git

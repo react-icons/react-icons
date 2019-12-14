@@ -224,6 +224,36 @@ module.exports = {
       projectUrl: "https://github.com/ant-design/ant-design-icons",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
+      id: "bs",
+      name: "Bootstrap Icons",
+      contents: [
+        {
+          files: path.resolve(
+            __dirname,
+            "bootstrap/icons/*!(-reverse)-fill.svg"
+          ),
+          formatter: name => `BsFill${name}`
+        },
+        {
+          files: path.resolve(
+            __dirname,
+            "bootstrap/icons/*-reverse!(-fill).svg"
+          ),
+          formatter: name => `BsReverse${name}`
+        },
+        {
+          files: path.resolve(
+            __dirname,
+            "bootstrap/icons/*!(-fill|-reverse|reverse-).svg"
+          ),
+          formatter: name => `Bs${name}`
+        }
+      ],
+      projectUrl: "https://github.com/twbs/icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     }
   ]
 };

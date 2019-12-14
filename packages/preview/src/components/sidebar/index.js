@@ -37,7 +37,7 @@ function Sidebar({ searchText, setSearchText }) {
             Home
           </NavLink>
         </li>
-        {IconsManifest.map(icon => (
+        {IconsManifest.sort((a, b) => (a.name > b.name) ? 1 : -1).map(icon => (
           <li key={icon.id}>
             <NavLink to={`/icons/${icon.id}`}>{icon.name}</NavLink>
           </li>

@@ -15,7 +15,11 @@ module.exports = withCSS(
       experimental: {
         publicDirectory: true
       },
-      webpack: config => {
+      webpack: (config, { isServer }) => {
+        // Fixes npm packages that depend on fs module, see github.com/zeit/next.js/issues/7755
+        if (!isServer) {
+          config.node = { fs: "empty", module: "empty" };
+        }
         config.resolve.alias["@components"] = path.join(
           __dirname,
           `src/components`

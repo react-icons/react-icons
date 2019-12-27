@@ -254,6 +254,19 @@ module.exports = {
       projectUrl: "https://github.com/twbs/icons",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
+      id: "ri",
+      name: "Remix Icon",
+      contents: [
+        {
+          files: path.resolve(__dirname, "RemixIcon/icons/*/*-line.svg"),
+          formatter: name => `Ri${name}`
+        }
+      ],
+      projectUrl: "https://github.com/Remix-Design/RemixIcon",
+      license: "Apache License Version 2.0",
+      licenseUrl: "http://www.apache.org/licenses/"
     }
   ]
 };

@@ -7,7 +7,7 @@ import ActiveLink from "../active-link";
 import Heading from "../heading";
 
 export default function Sidebar() {
-  const iconsList = ALL_ICONS;
+  const iconsList = ALL_ICONS.sort((a, b) => (a.name > b.name ? 1 : -1));
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 

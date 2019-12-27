@@ -51,7 +51,7 @@ export default function Sidebar() {
         </li>
         {iconsList.map(icon => (
           <li key={icon.id}>
-            <ActiveLink href={`/icons?name=${icon.id}`}>
+            <ActiveLink href={{ pathname: "icons", query: { name: icon.id } }}>
               <a className="rounded px2 py1">{icon.name}</a>
             </ActiveLink>
           </li>

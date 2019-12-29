@@ -22,3 +22,6 @@
 [submodule "RemixIcon"]
 	path = packages/react-icons/src/icons/RemixIcon
 	url = https://github.com/Remix-Design/RemixIcon.git
+[submodule "packages/react-icons/src/icons/flat-color-icons"]
+	path = packages/react-icons/src/icons/flat-color-icons
+	url = git@github.com:icons8/flat-color-icons.git

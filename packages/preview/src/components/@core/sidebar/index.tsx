@@ -11,10 +11,13 @@ export default function Sidebar() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
-  const { setQuery } = React.useContext(Context);
+  const { setQuery, setResults } = React.useContext(Context);
 
   const onSearch = e => {
     setQuery(e.target.value.toLowerCase());
+    setResults(prevResult => {
+      return {}
+    });
   };
 
   const goToSearch = e => {

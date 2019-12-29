@@ -227,7 +227,7 @@ module.exports = {
     },
     {
       id: "ri",
-      name: "Remix Icons",
+      name: "Remix Icon",
       contents: [
         {
           files: path.resolve(

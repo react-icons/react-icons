@@ -227,7 +227,7 @@ module.exports = {
     },
     {
       id: "ri",
-      name: "Remix Icon",
+      name: "Remix Icons",
       contents: [
         {
           files: path.resolve(
@@ -240,6 +240,23 @@ module.exports = {
       projectUrl: "https://github.com/Remix-Design/RemixIcon",
       license: "Apache License Version 2.0",
       licenseUrl: "http://www.apache.org/licenses/"
+    },
+    {
+      id: "fc",
+      name: "Flat Color Icons",
+      contents: [
+        {
+          files: path.resolve(
+            __dirname,
+            "flat-color-icons/svg/*.svg"
+          ),
+          formatter: name => `Fc${name}`,
+          multiColor: true
+        }
+      ],
+      projectUrl: "https://github.com/icons8/flat-color-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     }
   ]
 };

@@ -4,17 +4,24 @@
     "standard",
     "prettier",
     "prettier/react",
-    "prettier/standard"
+    "prettier/standard",
+    "plugin:react/recommended"
   ],
   "env": {
     "jest": true,
     "browser": true
   },
   "plugins": [
-    "prettier"
+    "prettier",
+    "react"
   ],
   "rules": {
     "prettier/prettier": "error",
-    "no-unused-vars":"warn"
+    "no-unused-vars": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

@@ -5,3 +5,7 @@
 packages/react-icons/lib/*
 packages/react-icons/src/icons/*
 !packages/react-icons/src/icons/index.js
+
+# Ignore generated files
+packages/react-icons/??
+packages/react-icons/*.js

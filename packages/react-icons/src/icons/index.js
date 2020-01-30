@@ -267,6 +267,21 @@ module.exports = {
       projectUrl: "https://github.com/Remix-Design/RemixIcon",
       license: "Apache License Version 2.0",
       licenseUrl: "http://www.apache.org/licenses/"
+    },
+    {
+      id: "px",
+      name: "Predix Design System Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "px-icon-set/icons/src-*/*.svg"),
+          formatter: name => `Px${name}`
+        }
+      ],
+      // use this repo for the time being, the official one doesn't seem to be
+      // maintaned anymore
+      projectUrl: "https://github.com/tromgy/px-icon-set",
+      license: "Apache License Version 2.0",
+      licenseUrl: "http://www.apache.org/licenses/"
     }
   ]
 };

@@ -15,6 +15,7 @@
     "@loadable/component": "^5.10.3",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "babel-plugin-codegen": "^3.1.0",
     "basscss": "^8.1.0",
     "cogo-toast": "^4.1.1",
     "copy-to-clipboard": "^3.2.0",

@@ -1,4 +1,4 @@
-import codegen from 'babel-plugin-codegen/macro'
+import codegen from "babel-plugin-codegen/macro";
 
 const fn = codegen`
 const { IconsManifest } = require("react-icons/lib/cjs");
@@ -13,9 +13,9 @@ codes += '}})';
 
 module.exports = codes;
 // module.exports = "import('react-icons/fa/index')"
-`
+`;
 
-export function getIcons (iconsId) {
+export function getIcons(iconsId) {
   /*
   Dynamic Import with improved performance.
   Macros are used to avoid bundling unnecessary modules.
@@ -26,5 +26,5 @@ export function getIcons (iconsId) {
   ```
   */
 
-  return fn(iconsId)
+  return fn(iconsId);
 }

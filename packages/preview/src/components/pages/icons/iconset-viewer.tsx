@@ -1,11 +1,12 @@
 import Icon from "@components/@core/icon";
 import loadable from "@loadable/component";
+import { getIcons } from "@utils/getIcons";
 import React from "react";
 
 import IconsPageLoading from "./loading";
 
 export default function IconSetViewer({ icon }) {
-  const IconSet = loadable.lib(() => import(`react-icons/${icon.id}/index.js`));
+  const IconSet = loadable.lib(() => getIcons(icon.id));
 
   return (
     <>

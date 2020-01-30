@@ -1,6 +1,5 @@
 {
   "name": "preview",
-  "version": "3.6.1",
   "description": "",
   "scripts": {
     "start": "next",
@@ -10,6 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "version": "3.8.0",
+  "private": true,
   "dependencies": {
     "@loadable/component": "^5.10.3",
     "@zeit/next-css": "^1.0.1",

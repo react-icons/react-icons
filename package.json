@@ -25,7 +25,9 @@
     "submodule-deinit": "git submodule deinit --all",
     "netlify": "netlify",
     "lint": "node ./node_modules/eslint/bin/eslint.js .",
-    "version-up": "lerna version"
+    "version-up": "lerna version",
+    "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch",
+    "lerna": "lerna"
   },
   "dependencies": {
     "camelcase": "^5.0.0"

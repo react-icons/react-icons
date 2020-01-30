@@ -1,6 +1,6 @@
 {
   "name": "react-ts-test",
-  "version": "3.8.0",
+  "version": "3.8.1-snapshot.0",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.12",
@@ -9,7 +9,7 @@
     "@types/react-dom": "16.8.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-icons": "^3.8.0",
+    "react-icons": "^3.8.1-snapshot.0",
     "react-scripts": "3.0.1",
     "typescript": "3.4.5"
   },

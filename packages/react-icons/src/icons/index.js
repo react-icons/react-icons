@@ -267,6 +267,19 @@ module.exports = {
       projectUrl: "https://github.com/Remix-Design/RemixIcon",
       license: "Apache License Version 2.0",
       licenseUrl: "http://www.apache.org/licenses/"
+    },
+    {
+      id: "gr",
+      name: "Grommet-Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "grommet-icons/public/img/*.svg"),
+          formatter: name => `Gr${name}`
+        }
+      ],
+      projectUrl: "https://github.com/grommet/grommet-icons",
+      license: "Apache License Version 2.0",
+      licenseUrl: "http://www.apache.org/licenses/"
     }
   ]
 };

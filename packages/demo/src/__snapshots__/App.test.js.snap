@@ -49,6 +49,7 @@ exports[`snapshot test 1`] = `
     <TiArrowDown
       title="arrow down icon"
     />
+    <GrGrommet />
   </p>
 </div>
 `;

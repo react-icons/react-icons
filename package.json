@@ -26,7 +26,7 @@
     "netlify": "netlify",
     "lint": "node ./node_modules/eslint/bin/eslint.js .",
     "version-up": "lerna version",
-    "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch",
+    "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",
     "lerna": "lerna"
   },
   "dependencies": {

@@ -17,7 +17,7 @@ const LIB = path.resolve(rootDir, "./lib");
 async function getIconFiles(content) {
   return glob(content.files);
 }
-async function convertIconData(svg) {
+async function convertIconData(svg, multiColor) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");
 
   // filter/convert attributes
@@ -40,7 +40,7 @@ async function convertIconData(svg) {
         const newName = camelcase(name);
         switch (newName) {
           case "fill":
-            if (attribs[name] === "none") {
+            if (attribs[name] === "none" || multiColor) {
               obj[newName] = attribs[name];
             }
             break;
@@ -169,7 +169,7 @@ async function writeIconModule(icon) {
 
     for (const file of files) {
       const svgStr = await promisify(fs.readFile)(file, "utf8");
-      const iconData = await convertIconData(svgStr);
+      const iconData = await convertIconData(svgStr, content.multiColor);
 
       const rawName = path.basename(file, path.extname(file));
       const pascalName = camelcase(rawName, { pascalCase: true });

@@ -53,6 +53,7 @@ For example, to use an icon from **Material Design**, your import would be: `imp
 | [Remix Icon](https://remixicon.com/)                          | [Apache License 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License)       |
 | [Typicons](http://s-ings.com/typicons/)                       | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)                           |
 | [Weather Icons](https://erikflowers.github.io/weather-icons/) | [SIL OFL 1.1](http://scripts.sil.org/OFL)                                                 |
+| [Grommet Icons](https://icons.grommet.io/)                    | [Apache License 2.0](https://github.com/grommet/grommet-icons/blob/master/LICENSE)        |
 
 You can add more icons by submitting pull requests or creating issues.
 

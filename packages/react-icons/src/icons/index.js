@@ -273,10 +273,7 @@ module.exports = {
       name: "Flat Color Icons",
       contents: [
         {
-          files: path.resolve(
-            __dirname,
-            "flat-color-icons/svg/*.svg"
-          ),
+          files: path.resolve(__dirname, "flat-color-icons/svg/*.svg"),
           formatter: name => `Fc${name}`,
           multiColor: true
         }
@@ -284,6 +281,19 @@ module.exports = {
       projectUrl: "https://github.com/icons8/flat-color-icons",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
+      id: "gr",
+      name: "Grommet-Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "grommet-icons/public/img/*.svg"),
+          formatter: name => `Gr${name}`
+        }
+      ],
+      projectUrl: "https://github.com/grommet/grommet-icons",
+      license: "Apache License Version 2.0",
+      licenseUrl: "http://www.apache.org/licenses/"
     }
   ]
 };

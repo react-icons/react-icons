@@ -80,6 +80,7 @@ import { IconContext } from "react-icons";
 | `className` | `undefined`           |                                 |
 | `style`     | `undefined`           | Can overwrite size and color    |
 | `attr`      | `undefined`           | Overwritten by other attributes |
+| `title`     | `undefined`           | Icon description for accessibility |
 
 ## Migrating from version 2 -> 3
 

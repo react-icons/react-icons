@@ -7,10 +7,16 @@
 [npm-image]: https://img.shields.io/npm/v/react-icons.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/react-icons
 
-Include popular icons in your React projects easly with ```react-icons```, which utilizes ES6 imports that allows you to include only the icons that your project is using.
+Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
 ## Installation
 
+### Yarn
+```bash
+yarn add react-icons
+```
+
+### NPM
 ```bash
 npm install react-icons --save
 ```
@@ -33,30 +39,28 @@ For example, to use an icon from **Material Design**, your import would be: `imp
 
 ## Icons
 
-- [Font Awesome](https://fontawesome.com/)
-  License: [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)
-- [Ionicons](https://ionicons.com/)
-  License: [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)
-- [Material Design icons](http://google.github.io/material-design-icons/)
-  License: [Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)
-- [Typicons](http://s-ings.com/typicons/)
-  License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
-- [Github Octicons icons](https://octicons.github.com/)
-  License: [MIT](https://github.com/primer/octicons/blob/master/LICENSE)
-- [Feather](https://feathericons.com/)
-  License: [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)
-- [Game Icons](https://game-icons.net/)
-  License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
-- [Weather Icons](https://erikflowers.github.io/weather-icons/)
-  License: [SIL OFL 1.1](http://scripts.sil.org/OFL)
+| Icon Library                                                  | License                                                                                   |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [Ant Design Icons](https://ant.design/components/icon/)       | [MIT](https://github.com/ant-design/ant-design-icons/blob/master/LICENSE)                 |
+| [Bootstrap Icons](https://icons.getbootstrap.com/)            | [MIT](https://github.com/twbs/icons/blob/master/LICENSE.md)                               |
+| [Devicon](https://konpa.github.io/devicon/)                   | [MIT](https://github.com/konpa/devicon/blob/master/LICENSE)                               |
+| [Feather](https://feathericons.com/)                          | [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)                        |
+| [Font Awesome](https://fontawesome.com/)                      | [CC BY 4.0 License](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt)  |
+| [Game Icons](https://game-icons.net/)                         | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt)                  |
+| [Github Octicons](https://octicons.github.com/)               | [MIT](https://github.com/primer/octicons/blob/master/LICENSE)                             |
+| [Ionicons](https://ionicons.com/)                             | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)                         |
+| [Material Design](https://material.io/resources/icons/)       | [Apache License 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) |
+| [Remix Icon](https://remixicon.com/)                          | [Apache License 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License)       |
+| [Typicons](http://s-ings.com/typicons/)                       | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)                           |
+| [Weather Icons](https://erikflowers.github.io/weather-icons/) | [SIL OFL 1.1](http://scripts.sil.org/OFL)                                                 |
 
 You can add more icons by submitting pull requests or creating issues.
 
 ## Configuration
 
-You can configure react-icons props using [React context API](https://reactjs.org/docs/context.html).
+You can configure react-icons props using [React Context API](https://reactjs.org/docs/context.html).
 
-requirement React 16.3 or higher.
+_Requires **React 16.3** or higher._
 
 ```jsx
 import { IconContext } from "react-icons";
@@ -68,15 +72,15 @@ import { IconContext } from "react-icons";
 </IconContext.Provider>
 ```
 
-key|default|memo
----|---|---
-color|undefined(inherit)|
-size|1em|
-className|undefined|
-style|undefined|can overwrite size and color
-attr|undefined|overwritten by other attributes
+| Key         | Default               | Notes                           |
+| ----------- | --------------------- | ------------------------------- |
+| `color`     | `undefined` (inherit) |                                 |
+| `size`      | `1em`                 |                                 |
+| `className` | `undefined`           |                                 |
+| `style`     | `undefined`           | Can overwrite size and color    |
+| `attr`      | `undefined`           | Overwritten by other attributes |
 
-## Migrate from version 2 -> 3
+## Migrating from version 2 -> 3
 
 ### Change import style
 
@@ -108,22 +112,25 @@ Ending up with a large JS bundle? Check out [this issue](https://github.com/reac
 
 ### Adjustment CSS
 
-From version 3, `vertical-align: middle` is not automatically given.
-Please use IconContext to specify className or style.
+From version 3, `vertical-align: middle` is not automatically given. Please use IconContext to specify className or specify an inline style.
 
-example for global styling
+#### Global Inline Styling
 
 ```tsx
 <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
 ```
 
-example for give global className
+#### Global `className` Styling
+
+Component
 
 ```tsx
-// app.tsx
 <IconContext.Provider value={{ className: 'react-icons' }}>
+```
 
-// app.css
+CSS
+
+```css
 .react-icons {
   vertical-align: middle;
 }
@@ -133,13 +140,19 @@ example for give global className
 
 Dependencies on `@types/react-icons` can be deleted.
 
+#### Yarn
+```bash
+yarn remove @types/react-icons
+```
+
+#### NPM
 ```bash
 npm remove @types/react-icons
 ```
 
-## Contribute
+## Contributing
 
-development
+### Development
 
 ```bash
 yarn
@@ -148,35 +161,33 @@ cd packages/react-icons
 yarn build
 ```
 
-scripts for run demo
+### Preview
+The preview site is the [`react-icons`](https://react-icons.netlify.com/) website, built in [NextJS](https://nextjs.org/).
 
 ```bash
 cd packages/react-icons
 yarn build
-cd ../demo
-yarn start
-```
 
-run preview site
-
-```bash
-cd packages/react-icons
-yarn build
 cd ../preview
 yarn start
 ```
 
-## Tips
+### Demo
+The demo is a [Create React App](https://create-react-app.dev/) boilerplate with `react-icons` added as a dependency for easy testing.
 
-### SVG
+```bash
+cd packages/react-icons
+yarn build
 
-Svg is [supported](http://caniuse.com/#search=svg) by all major browsers.
+cd ../demo
+yarn start
+```
 
-### Why ES6 import and not fonts
+## Why React SVG components instead of fonts?
 
-With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
+SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
 
-### Related
+## Related Projects
 
 - [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)
 

@@ -114,7 +114,7 @@ async function dirInit() {
   const write = (filePath, str) =>
     writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = ["index.d.ts", "all.js", "all.d.ts"];
+  const initFiles = ["index.d.ts", "index.esm.js", "index.js", "all.js", "all.d.ts"];
 
   const gitignore =
     [
@@ -253,9 +253,25 @@ async function writeLicense() {
   await appendFile(path.resolve(rootDir, "LICENSE"), iconLicenses, "utf8");
 }
 
+async function writeEntryPoints(){
+  const appendFile = promisify(fs.appendFile);
+  const generateEntryCjs = function() {
+    return `module.exports = require('./lib/cjs/index.js');`
+  }
+  const generateEntryMjs = function(filename = 'index.js'){
+    return `import * as m from './lib/esm/${filename}'
+export default m
+    `
+  }
+  await appendFile(path.resolve(DIST, "index.js"), generateEntryCjs(), "utf8");
+  await appendFile(path.resolve(DIST, "index.esm.js"), generateEntryMjs(), "utf8");
+  await appendFile(path.resolve(DIST, "index.d.ts"), generateEntryMjs('index.d.ts'), "utf8");
+}
+
 async function main() {
   try {
     await dirInit();
+    await writeEntryPoints();
     await writeLicense();
     await writeIconsManifest();
     for (const icon of icons) {

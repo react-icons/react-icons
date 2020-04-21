@@ -4,6 +4,9 @@ const path = require("path");
 const fs = require("fs");
 const { promisify } = require("util");
 const camelcase = require("camelcase");
+const findPackage = require("find-package");
+const util = require("util");
+const exec = util.promisify(require("child_process").exec);
 
 const { icons } = require("../src/icons");
 
@@ -33,7 +36,9 @@ async function convertIconData(svg, multiColor) {
         name =>
           ![
             "class",
-            ...(tagName === "svg" ? ["xmlns", "xmlns:xlink", "xml:space", "width", "height"] : []) // if tagName is svg remove size attributes
+            ...(tagName === "svg"
+              ? ["xmlns", "xmlns:xlink", "xml:space", "width", "height"]
+              : []) // if tagName is svg remove size attributes
           ].includes(name)
       )
       .reduce((obj, name) => {
@@ -114,7 +119,13 @@ async function dirInit() {
   const write = (filePath, str) =>
     writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = ["index.d.ts", "index.esm.js", "index.js", "all.js", "all.d.ts"];
+  const initFiles = [
+    "index.d.ts",
+    "index.esm.js",
+    "index.js",
+    "all.js",
+    "all.d.ts"
+  ];
 
   const gitignore =
     [
@@ -253,24 +264,80 @@ async function writeLicense() {
   await appendFile(path.resolve(rootDir, "LICENSE"), iconLicenses, "utf8");
 }
 
-async function writeEntryPoints(){
+async function writeEntryPoints() {
   const appendFile = promisify(fs.appendFile);
   const generateEntryCjs = function() {
-    return `module.exports = require('./lib/cjs/index.js');`
-  }
-  const generateEntryMjs = function(filename = 'index.js'){
+    return `module.exports = require('./lib/cjs/index.js');`;
+  };
+  const generateEntryMjs = function(filename = "index.js") {
     return `import * as m from './lib/esm/${filename}'
 export default m
-    `
-  }
+    `;
+  };
   await appendFile(path.resolve(DIST, "index.js"), generateEntryCjs(), "utf8");
-  await appendFile(path.resolve(DIST, "index.esm.js"), generateEntryMjs(), "utf8");
-  await appendFile(path.resolve(DIST, "index.d.ts"), generateEntryMjs('index.d.ts'), "utf8");
+  await appendFile(
+    path.resolve(DIST, "index.esm.js"),
+    generateEntryMjs(),
+    "utf8"
+  );
+  await appendFile(
+    path.resolve(DIST, "index.d.ts"),
+    generateEntryMjs("index.d.ts"),
+    "utf8"
+  );
+}
+
+async function writeIconVersions() {
+  const versions = [];
+
+  // searching for icon versions from package.json and git describe command
+  for (const icon of icons) {
+    const files = (
+      await Promise.all(icon.contents.map(content => getIconFiles(content)))
+    ).flat();
+
+    const firstDir = path.dirname(files[0]);
+    const packageJson = findPackage(firstDir, true);
+
+    let gitVersion;
+    if (!packageJson.version) {
+      const { stdout } = await exec(
+        `cd ${firstDir}; git describe --tags || git rev-parse HEAD`
+      );
+      gitVersion = stdout.trim();
+    }
+
+    versions.push({
+      icon,
+      version: packageJson.version || gitVersion
+    });
+  }
+
+  const versionsStr =
+    "Icon Library|License|Version\n" +
+    "---|---|---\n" +
+    versions
+      .map(v =>
+        [
+          `[${v.icon.name}](${v.icon.projectUrl})`,
+          `[${v.icon.license}](${v.icon.licenseUrl})`,
+          v.version
+        ].join("|")
+      )
+      .join("\n") +
+    "\n";
+
+  await fs.promises.writeFile(
+    path.resolve(rootDir, "VERSIONS"),
+    versionsStr,
+    "utf8"
+  );
 }
 
 async function main() {
   try {
     await dirInit();
+    await writeIconVersions();
     await writeEntryPoints();
     await writeLicense();
     await writeIconsManifest();

@@ -39,6 +39,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "feather-icons": "^4.7.3",
+    "find-package": "^1.0.0",
     "glob-promise": "^3.4.0",
     "ionicons": "^4.4.4",
     "lerna": "^3.20.2",

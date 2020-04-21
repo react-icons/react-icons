@@ -202,21 +202,21 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "ant-design-icons/packages/icons/svg/fill/*.svg"
+            "ant-design-icons/packages/icons-svg/svg/filled/*.svg"
           ),
           formatter: name => `AiFill${name}`
         },
         {
           files: path.resolve(
             __dirname,
-            "ant-design-icons/packages/icons/svg/outline/*.svg"
+            "ant-design-icons/packages/icons-svg/svg/outlined/*.svg"
           ),
           formatter: name => `AiOutline${name}`
         },
         {
           files: path.resolve(
             __dirname,
-            "ant-design-icons/packages/icons/svg/twotone/*.svg"
+            "ant-design-icons/packages/icons-svg/svg/twotone/*.svg"
           ),
           formatter: name => `AiTwotone${name}`
         }

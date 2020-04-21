@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "version": "3.9.1-snapshot.0",
+  "version": "3.10.0",
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.10.3",
@@ -25,7 +25,7 @@
     "prism-react-renderer": "^1.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-icons": "^3.9.1-snapshot.0",
+    "react-icons": "^3.10.0",
     "tiny-skeleton-loader-react": "^1.1.0"
   },
   "devDependencies": {

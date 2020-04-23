@@ -28,6 +28,10 @@ module.exports = withCSS(
         config.resolve.alias["@styles"] = path.join(__dirname, `src/styles`);
         config.resolve.alias["@utils"] = path.join(__dirname, `src/utils`);
         return config;
+      },
+      assetPrefix: process.env.BASE_PATH || "",
+      publicRuntimeConfig: {
+        basePath: process.env.BASE_PATH || ""
       }
     })
   )

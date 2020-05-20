@@ -55,7 +55,7 @@ Icon Library|License|Version
 [Remix Icon](https://github.com/Remix-Design/RemixIcon)|[Apache License Version 2.0](http://www.apache.org/licenses/)|2.3.0
 [Flat Color Icons](https://github.com/icons8/flat-color-icons)|[MIT](https://opensource.org/licenses/MIT)|1.0.2
 [Grommet-Icons](https://github.com/grommet/grommet-icons)|[Apache License Version 2.0](http://www.apache.org/licenses/)|4.4.0
-[VS Code Icons](https://github.com/microsoft/vscode-icons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|93000b833bf9e7bb881251d8b0b175e0c9a8f9d5
+[VS Code Icons](https://github.com/microsoft/vscode-codicons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|0.0.1
 
 You can add more icons by submitting pull requests or creating issues.
 

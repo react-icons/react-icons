@@ -31,3 +31,6 @@
 [submodule "flat-color-icons"]
 	path = packages/react-icons/src/icons/flat-color-icons
 	url = https://github.com/icons8/flat-color-icons.git
+[submodule "vscode-icons"]
+	path = packages/react-icons/src/icons/vscode-icons
+	url = https://github.com/microsoft/vscode-codicons.git

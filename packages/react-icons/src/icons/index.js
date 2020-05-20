@@ -300,12 +300,11 @@ module.exports = {
       name: "VS Code Icons",
       contents: [
         {
-          files: path.resolve(__dirname, "vscode-icons/icons/dark/*.svg"),
-          formatter: name => `Vsc${name}`,
-          transformer: svg => svg.replace('fill="none"', 'fill="currentColor"')
+          files: path.resolve(__dirname, "vscode-icons/src/icons/*.svg"),
+          formatter: name => `Vsc${name}`
         }
       ],
-      projectUrl: "https://github.com/microsoft/vscode-icons",
+      projectUrl: "https://github.com/microsoft/vscode-codicons",
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     }

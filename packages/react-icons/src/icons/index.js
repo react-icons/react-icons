@@ -294,6 +294,20 @@ module.exports = {
       projectUrl: "https://github.com/grommet/grommet-icons",
       license: "Apache License Version 2.0",
       licenseUrl: "http://www.apache.org/licenses/"
+    },
+    {
+      id: "vsc",
+      name: "VS Code Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "vscode-icons/icons/dark/*.svg"),
+          formatter: name => `Vsc${name}`,
+          transformer: svg => svg.replace('fill="none"', 'fill="currentColor"')
+        }
+      ],
+      projectUrl: "https://github.com/microsoft/vscode-icons",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 };

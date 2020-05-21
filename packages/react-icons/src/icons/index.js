@@ -29,7 +29,7 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "../../../../node_modules/ionicons/dist/collection/icon/svg/*.svg"
+            "../../../../node_modules/ionicons/dist/svg/*.svg"
           ),
           formatter: name => `Io${name}`
         }

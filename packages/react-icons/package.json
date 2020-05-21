@@ -41,7 +41,7 @@
     "feather-icons": "^4.7.3",
     "find-package": "^1.0.0",
     "glob-promise": "^3.4.0",
-    "ionicons": "^4.4.4",
+    "ionicons": "^5.0.1",
     "lerna": "^3.20.2",
     "netlify-cli": "^2.30.0",
     "octicons": "^8.1.0",

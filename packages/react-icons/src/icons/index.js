@@ -294,6 +294,19 @@ module.exports = {
       projectUrl: "https://github.com/grommet/grommet-icons",
       license: "Apache License Version 2.0",
       licenseUrl: "http://www.apache.org/licenses/"
+    },
+    {
+      id: "im",
+      name: "IcoMoon Free",
+      contents: [
+        {
+          files: path.resolve(__dirname, "icomoon-free/SVG/*.svg"),
+          formatter: name => `Im${name.slice(3)}`
+        }
+      ],
+      projectUrl: "https://github.com/Keyamoon/IcoMoon-Free",
+      license: "CC BY 4.0 License",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 };

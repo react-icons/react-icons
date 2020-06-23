@@ -294,6 +294,19 @@ module.exports = {
       projectUrl: "https://github.com/grommet/grommet-icons",
       license: "Apache License Version 2.0",
       licenseUrl: "http://www.apache.org/licenses/"
+    },
+    {
+      id: "cg",
+      name: "css.gg",
+      contents: [
+        {
+          files: path.resolve(__dirname, "css.gg/icons/svg/*.svg"),
+          formatter: name => `Cg${name}`
+        }
+      ],
+      projectUrl: "https://github.com/astrit/css.gg",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     }
   ]
 };

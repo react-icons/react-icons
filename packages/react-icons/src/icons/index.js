@@ -294,6 +294,23 @@ module.exports = {
       projectUrl: "https://github.com/grommet/grommet-icons",
       license: "Apache License Version 2.0",
       licenseUrl: "http://www.apache.org/licenses/"
+    },
+    {
+      id: "hi",
+      name: "Heroicons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "heroicons/solid/*.svg"),
+          formatter: name => `Hi${name}`
+        },
+        {
+          files: path.resolve(__dirname, "heroicons/outline/*.svg"),
+          formatter: name => `HiOutline${name}`
+        }
+      ],
+      projectUrl: "https://github.com/refactoringui/heroicons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     }
   ]
 };

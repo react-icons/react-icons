@@ -77,17 +77,17 @@ function generateIconRow(icon, formattedName, iconData, type = "module") {
   switch (type) {
     case "module":
       return (
-        `export var ${formattedName} = function (props) {\n` +
-        `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
-        `};\n` +
-        `${formattedName}.displayName = "${formattedName}";\n`
+        `import ${formattedName} from './${formattedName}';\n`+
+        `${formattedName}.displayName = "${formattedName}";\n`+
+          `${formattedName}.iconSet = "${icon.id}";\n` +
+        `export { ${formattedName} };\n\n`
       );
     case "common":
       return (
-        `module.exports.${formattedName} = function (props) {\n` +
-        `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
-        `};\n` +
-        `module.exports.${formattedName}.displayName = "${formattedName}";\n`
+        `var ${formattedName} = require('./${formattedName}');\n`+
+        `module.exports.${formattedName}.displayName = "${formattedName}";\n` +
+        `module.exports.${formattedName}.iconSet = "${icon.id}";\n` +
+        `module.exports.${formattedName} = ${formattedName};\n\n`
       );
     case "dts":
       return `export declare const ${formattedName}: IconType;\n`;
@@ -140,11 +140,11 @@ async function dirInit() {
 
     await write(
       [icon.id, "index.js"],
-      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n"
+      "// THIS FILE IS AUTO GENERATED\n"
     );
     await write(
       [icon.id, "index.esm.js"],
-      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n"
+      "// THIS FILE IS AUTO GENERATED\n"
     );
     await write(
       [icon.id, "index.d.ts"],
@@ -167,6 +167,26 @@ async function dirInit() {
     await write([file], "// THIS FILE IS AUTO GENERATED\n");
   }
 }
+
+async function generateIconFile(icon, name, iconData) {
+  const ignore = err => {
+    if (err.code === "EEXIST") return;
+    throw err;
+  };
+  const writeFile = promisify(fs.writeFile);
+
+  const write = (filePath, str) =>
+    writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
+
+  const getFileContent = ()=> {
+      return (
+          `var GenIcon = require('../lib').GenIcon\n\nmodule.exports = function (props) {\n` +
+          `   return GenIcon(${JSON.stringify(iconData)})(props);\n` +
+          `};\n`
+      );
+  }
+  await write([icon.id, `${name}.js`], getFileContent());
+}
 async function writeIconModule(icon) {
   const appendFile = promisify(fs.appendFile);
   const exists = new Set(); // for remove duplicate
@@ -188,6 +208,8 @@ async function writeIconModule(icon) {
         (content.formatter && content.formatter(pascalName)) || pascalName;
       if (exists.has(name)) continue;
       exists.add(name);
+
+      await generateIconFile(icon, name, iconData);
 
       // write like: module/fa/index.esm.js
       const modRes = generateIconRow(icon, name, iconData, "module");

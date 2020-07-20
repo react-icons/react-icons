@@ -85,8 +85,8 @@ function generateIconRow(icon, formattedName, iconData, type = "module") {
     case "common":
       return (
         `var ${formattedName} = require('./${formattedName}');\n`+
-        `module.exports.${formattedName}.displayName = "${formattedName}";\n` +
-        `module.exports.${formattedName}.iconSet = "${icon.id}";\n` +
+        `${formattedName}.displayName = "${formattedName}";\n` +
+        `${formattedName}.iconSet = "${icon.id}";\n` +
         `module.exports.${formattedName} = ${formattedName};\n\n`
       );
     case "dts":

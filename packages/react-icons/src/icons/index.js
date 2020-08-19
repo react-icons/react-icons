@@ -262,6 +262,10 @@ module.exports = {
         {
           files: path.resolve(__dirname, "RemixIcon/icons/*/*-line.svg"),
           formatter: name => `Ri${name}`
+        },
+        {
+          files: path.resolve(__dirname, "RemixIcon/icons/*/*-fill.svg"),
+          formatter: name => `Ri${name}`
         }
       ],
       projectUrl: "https://github.com/Remix-Design/RemixIcon",
@@ -311,6 +315,56 @@ module.exports = {
       projectUrl: "https://github.com/refactoringui/heroicons",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
+      id: "im",
+      name: "IcoMoon Free",
+      contents: [
+        {
+          files: path.resolve(__dirname, "icomoon-free/SVG/*.svg"),
+          formatter: name => `Im${name.slice(3)}`
+        }
+      ],
+      projectUrl: "https://github.com/Keyamoon/IcoMoon-Free",
+      license: "CC BY 4.0 License",
+    },
+    {
+      id: "bi",
+      name: "BoxIcons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "boxicons/svg/regular/*.svg"),
+          formatter: name => `Bi${name.replace("Bx", "")}`
+        }
+      ],
+      projectUrl: "https://github.com/atisawd/boxicons",
+      license: "CC BY 4.0 License",
+    },
+    {
+      id: "cg",
+      name: "css.gg",
+      contents: [
+        {
+          files: path.resolve(__dirname, "css.gg/icons/svg/*.svg"),
+          formatter: name => `Cg${name}`
+        }
+      ],
+      projectUrl: "https://github.com/astrit/css.gg",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
+      id: "vsc",
+      name: "VS Code Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "vscode-icons/src/icons/*.svg"),
+          formatter: name => `Vsc${name}`
+        }
+      ],
+      projectUrl: "https://github.com/microsoft/vscode-codicons",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 };

@@ -34,6 +34,9 @@
 [submodule "packages/react-icons/src/icons/heroicons"]
 	path = packages/react-icons/src/icons/heroicons
 	url = https://github.com/refactoringui/heroicons
+[submodule "simple-icons"]
+	path = packages/react-icons/src/icons/simple-icons
+	url = https://github.com/simple-icons/simple-icons
 [submodule "packages/react-icons/src/icons/icomoon-free"]
 	path = packages/react-icons/src/icons/icomoon-free
 	url = https://github.com/Keyamoon/IcoMoon-Free

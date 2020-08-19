@@ -317,6 +317,19 @@ module.exports = {
       licenseUrl: "https://opensource.org/licenses/MIT"
     },
     {
+      id: "si",
+      name: "Simple Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "simple-icons/icons/*.svg"),
+          formatter: name => `Si${name}`
+        }
+      ],
+      projectUrl: "https://simpleicons.org/",
+      license: "CC0 1.0 Universal",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
       id: "im",
       name: "IcoMoon Free",
       contents: [

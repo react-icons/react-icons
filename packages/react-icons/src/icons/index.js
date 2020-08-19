@@ -300,6 +300,18 @@ module.exports = {
       licenseUrl: "http://www.apache.org/licenses/"
     },
     {
+      id: "im",
+      name: "IcoMoon Free",
+      contents: [
+        {
+          files: path.resolve(__dirname, "icomoon-free/SVG/*.svg"),
+          formatter: name => `Im${name.slice(3)}`
+        }
+      ],
+      projectUrl: "https://github.com/Keyamoon/IcoMoon-Free",
+      license: "CC BY 4.0 License",
+    },
+    {
       id: "bi",
       name: "BoxIcons",
       contents: [

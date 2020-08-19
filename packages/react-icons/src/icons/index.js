@@ -300,6 +300,19 @@ module.exports = {
       licenseUrl: "http://www.apache.org/licenses/"
     },
     {
+      id: "cg",
+      name: "css.gg",
+      contents: [
+        {
+          files: path.resolve(__dirname, "css.gg/icons/svg/*.svg"),
+          formatter: name => `Cg${name}`
+        }
+      ],
+      projectUrl: "https://github.com/astrit/css.gg",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
       id: "vsc",
       name: "VS Code Icons",
       contents: [

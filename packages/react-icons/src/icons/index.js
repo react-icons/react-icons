@@ -262,6 +262,10 @@ module.exports = {
         {
           files: path.resolve(__dirname, "RemixIcon/icons/*/*-line.svg"),
           formatter: name => `Ri${name}`
+        },
+        {
+          files: path.resolve(__dirname, "RemixIcon/icons/*/*-fill.svg"),
+          formatter: name => `Ri${name}`
         }
       ],
       projectUrl: "https://github.com/Remix-Design/RemixIcon",

@@ -300,6 +300,18 @@ module.exports = {
       licenseUrl: "http://www.apache.org/licenses/"
     },
     {
+      id: "bi",
+      name: "BoxIcons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "boxicons/svg/regular/*.svg"),
+          formatter: name => `Bi${name.replace("Bx", "")}`
+        }
+      ],
+      projectUrl: "https://github.com/atisawd/boxicons",
+      license: "CC BY 4.0 License",
+    },
+    {
       id: "cg",
       name: "css.gg",
       contents: [

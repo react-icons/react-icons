@@ -31,6 +31,9 @@
 [submodule "flat-color-icons"]
 	path = packages/react-icons/src/icons/flat-color-icons
 	url = https://github.com/icons8/flat-color-icons.git
+[submodule "packages/react-icons/src/icons/boxicons"]
+	path = packages/react-icons/src/icons/boxicons
+	url = https://github.com/atisawd/boxicons
 [submodule "packages/react-icons/src/icons/css.gg"]
 	path = packages/react-icons/src/icons/css.gg
 	url = https://github.com/astrit/css.gg

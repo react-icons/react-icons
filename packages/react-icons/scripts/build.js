@@ -81,17 +81,15 @@ function generateIconRow(icon, formattedName, iconData, type = "module") {
   switch (type) {
     case "module":
       return (
-        `export var ${formattedName} = function (props) {\n` +
+        `export function ${formattedName} (props) {\n` +
         `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
-        `};\n` +
-        `${formattedName}.displayName = "${formattedName}";\n`
+        `};\n`
       );
     case "common":
       return (
-        `module.exports.${formattedName} = function (props) {\n` +
+        `module.exports.${formattedName} = function ${formattedName} (props) {\n` +
         `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
-        `};\n` +
-        `module.exports.${formattedName}.displayName = "${formattedName}";\n`
+        `};\n`
       );
     case "dts":
       return `export declare const ${formattedName}: IconType;\n`;

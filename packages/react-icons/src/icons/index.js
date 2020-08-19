@@ -262,6 +262,10 @@ module.exports = {
         {
           files: path.resolve(__dirname, "RemixIcon/icons/*/*-line.svg"),
           formatter: name => `Ri${name}`
+        },
+        {
+          files: path.resolve(__dirname, "RemixIcon/icons/*/*-fill.svg"),
+          formatter: name => `Ri${name}`
         }
       ],
       projectUrl: "https://github.com/Remix-Design/RemixIcon",
@@ -307,6 +311,19 @@ module.exports = {
       projectUrl: "https://github.com/astrit/css.gg",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
+      id: "vsc",
+      name: "VS Code Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "vscode-icons/src/icons/*.svg"),
+          formatter: name => `Vsc${name}`
+        }
+      ],
+      projectUrl: "https://github.com/microsoft/vscode-codicons",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 };

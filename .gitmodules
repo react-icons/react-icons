@@ -31,6 +31,9 @@
 [submodule "flat-color-icons"]
 	path = packages/react-icons/src/icons/flat-color-icons
 	url = https://github.com/icons8/flat-color-icons.git
+[submodule "simple-icons"]
+	path = packages/react-icons/src/icons/simple-icons
+	url = https://github.com/simple-icons/simple-icons
 [submodule "packages/react-icons/src/icons/icomoon-free"]
 	path = packages/react-icons/src/icons/icomoon-free
 	url = https://github.com/Keyamoon/IcoMoon-Free

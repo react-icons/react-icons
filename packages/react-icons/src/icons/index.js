@@ -300,6 +300,23 @@ module.exports = {
       licenseUrl: "http://www.apache.org/licenses/"
     },
     {
+      id: "hi",
+      name: "Heroicons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "heroicons/solid/*.svg"),
+          formatter: name => `Hi${name}`
+        },
+        {
+          files: path.resolve(__dirname, "heroicons/outline/*.svg"),
+          formatter: name => `HiOutline${name}`
+        }
+      ],
+      projectUrl: "https://github.com/refactoringui/heroicons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
+    {
       id: "si",
       name: "Simple Icons",
       contents: [

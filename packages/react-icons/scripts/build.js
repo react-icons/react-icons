@@ -45,7 +45,11 @@ async function convertIconData(svg, multiColor) {
         const newName = camelcase(name);
         switch (newName) {
           case "fill":
-            if (attribs[name] === "none" || multiColor) {
+            if (
+              attribs[name] === "none" ||
+              attribs[name] === "currentColor" ||
+              multiColor
+            ) {
               obj[newName] = attribs[name];
             }
             break;

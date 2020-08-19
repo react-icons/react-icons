@@ -34,3 +34,9 @@
 [submodule "packages/react-icons/src/icons/boxicons"]
 	path = packages/react-icons/src/icons/boxicons
 	url = https://github.com/atisawd/boxicons
+[submodule "packages/react-icons/src/icons/css.gg"]
+	path = packages/react-icons/src/icons/css.gg
+	url = https://github.com/astrit/css.gg
+[submodule "vscode-icons"]
+	path = packages/react-icons/src/icons/vscode-icons
+	url = https://github.com/microsoft/vscode-codicons.git

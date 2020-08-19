@@ -1,6 +1,6 @@
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
 
-# [React Icons](https://react-icons.netlify.com)
+# [React Icons](https://react-icons.github.io/react-icons)
 
 [![npm][npm-image]][npm-url]
 
@@ -33,7 +33,7 @@ class Question extends React.Component {
 }
 ```
 
-[View the documentation](https://react-icons.netlify.com) for further usage examples and how to use icons from other packages. *NOTE*: each Icon package has it's own subfolder under `react-icons` you import from.
+[View the documentation](https://react-icons.github.io/react-icons) for further usage examples and how to use icons from other packages. *NOTE*: each Icon package has it's own subfolder under `react-icons` you import from.
 
 For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
 
@@ -166,7 +166,7 @@ yarn build
 ```
 
 ### Preview
-The preview site is the [`react-icons`](https://react-icons.netlify.com/) website, built in [NextJS](https://nextjs.org/).
+The preview site is the [`react-icons`](https://react-icons.github.io/react-icons) website, built in [NextJS](https://nextjs.org/).
 
 ```bash
 cd packages/react-icons

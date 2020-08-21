@@ -378,6 +378,19 @@ module.exports = {
       projectUrl: "https://github.com/microsoft/vscode-codicons",
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      id: "fs",
+      name: "Fluent System Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "fluent-system-icons/assets/*/SVG/*.svg"),
+          formatter: name => `Fs${name}`
+        }
+      ],
+      projectUrl: "https://github.com/microsoft/fluentui-system-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
     }
   ]
 };

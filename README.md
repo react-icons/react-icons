@@ -60,6 +60,7 @@ Icon Library|License|Version
 [BoxIcons](https://github.com/atisawd/boxicons)|[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)|2.0.5
 [css.gg](https://github.com/astrit/css.gg)|[MIT](https://opensource.org/licenses/MIT)|2.0.0
 [VS Code Icons](https://github.com/microsoft/vscode-codicons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|0.0.1
+[Fluent System Icons](https://github.com/microsoft/fluentui-system-icons)|[MIT](https://opensource.org/licenses/MIT)|1.1.46
 
 You can add more icons by submitting pull requests or creating issues.
 

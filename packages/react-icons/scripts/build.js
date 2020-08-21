@@ -298,7 +298,7 @@ async function writeIconVersions() {
       await Promise.all(icon.contents.map(content => getIconFiles(content)))
     ).flat();
 
-    const firstDir = path.dirname(files[0]);
+    const firstDir = path.dirname(files[0]).replace(/\s/g, "\\ ");
     const packageJson = findPackage(firstDir, true);
 
     let gitVersion;

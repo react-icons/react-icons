@@ -380,12 +380,16 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
     },
     {
-      id: "fs",
+      id: "fsi",
       name: "Fluent System Icons",
       contents: [
         {
-          files: path.resolve(__dirname, "fluent-system-icons/assets/*/SVG/*.svg"),
-          formatter: name => `Fs${name}`
+          files: path.resolve(__dirname, "fluent-system-icons/assets/*/SVG/*_24_regular.svg"),
+          formatter: name => `Fsi${name.replace(/^IcFluent/, "").replace(/24Regular$/, "")}`
+        },
+        {
+          files: path.resolve(__dirname, "fluent-system-icons/assets/*/SVG/*_24_filled.svg"),
+          formatter: name => `FsiFilled${name.replace(/^IcFluent/, "").replace(/24Filled$/, "")}`
         }
       ],
       projectUrl: "https://github.com/microsoft/fluentui-system-icons",

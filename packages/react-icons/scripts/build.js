@@ -304,7 +304,7 @@ async function writeIconVersions() {
     let gitVersion;
     if (!packageJson.version) {
       const { stdout } = await exec(
-        `cd ${firstDir} && git describe --tags || cd ${firstDir} && git rev-parse HEAD`
+        `(cd ${firstDir} && git describe --tags) || (cd ${firstDir} && git rev-parse HEAD)`
       );
       gitVersion = stdout.trim();
       console.log("stdout", icon.id, stdout);

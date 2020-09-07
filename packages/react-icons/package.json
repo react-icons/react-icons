@@ -1,5 +1,6 @@
 {
-  "name": "react-icons",
+  "name": "react-icons_builders",
+  "private": true,
   "version": "3.11.0",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
@@ -52,8 +53,8 @@
   },
   "scripts": {
     "build": "node scripts/build.js && yarn build-mjs && yarn build-cjs",
-    "prebuild": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && rimraf ./lib",
-    "build-mjs": "tsc && babel ./lib/esm -d ./lib/esm",
+    "prebuild": "yarn run copy ../../README.md ./packages/react-icons && rimraf ../_react-icons_all/lib",
+    "build-mjs": "tsc && babel ../_react-icons_all/lib/esm -d ../_react-icons_all/lib/esm",
     "build-cjs": "tsc -p ./tsconfig.commonjs.json"
   },
   "dependencies": {

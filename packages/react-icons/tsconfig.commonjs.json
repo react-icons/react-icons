@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./lib/cjs",
+    "outDir": "../_react-icons_all/lib/cjs",
     "module": "commonjs"
   }
 }

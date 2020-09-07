@@ -12,7 +12,7 @@ const { iconRowTemplate, iconsEntryTemplate } = require("./templates");
 const { getIconFiles, convertIconData } = require("./logics");
 
 async function dirInit({ DIST, LIB, rootDir }) {
-  const ignore = err => {
+  const ignore = (err) => {
     if (err.code === "EEXIST") return;
     throw err;
   };
@@ -33,7 +33,7 @@ async function dirInit({ DIST, LIB, rootDir }) {
     "index.esm.js",
     "index.js",
     "all.js",
-    "all.d.ts"
+    "all.d.ts",
   ];
 
   for (const icon of icons) {
@@ -56,7 +56,7 @@ async function dirInit({ DIST, LIB, rootDir }) {
       JSON.stringify(
         {
           sideEffects: false,
-          module: "./index.esm.js"
+          module: "./index.esm.js",
         },
         null,
         2
@@ -116,12 +116,12 @@ async function writeIconsManifest({ DIST, LIB, rootDir }) {
   const writeFile = promisify(fs.writeFile);
   const copyFile = promisify(fs.copyFile);
 
-  const writeObj = icons.map(icon => ({
+  const writeObj = icons.map((icon) => ({
     id: icon.id,
     name: icon.name,
     projectUrl: icon.projectUrl,
     license: icon.license,
-    licenseUrl: icon.licenseUrl
+    licenseUrl: icon.licenseUrl,
   }));
   const manifest = JSON.stringify(writeObj, null, 2);
   await writeFile(
@@ -151,10 +151,10 @@ async function writeLicense({ DIST, LIB, rootDir }) {
 
   const iconLicenses =
     icons
-      .map(icon =>
+      .map((icon) =>
         [
           `${icon.name} - ${icon.projectUrl}`,
-          `License: ${icon.license} ${icon.licenseUrl}`
+          `License: ${icon.license} ${icon.licenseUrl}`,
         ].join("\n")
       )
       .join("\n\n") + "\n";
@@ -168,10 +168,10 @@ async function writeLicense({ DIST, LIB, rootDir }) {
 
 async function writeEntryPoints({ DIST, LIB, rootDir }) {
   const appendFile = promisify(fs.appendFile);
-  const generateEntryCjs = function() {
+  const generateEntryCjs = function () {
     return `module.exports = require('./lib/cjs/index.js');`;
   };
-  const generateEntryMjs = function(filename = "index.js") {
+  const generateEntryMjs = function (filename = "index.js") {
     return `import * as m from './lib/esm/${filename}'
 default m
     `;
@@ -195,7 +195,7 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
   // searching for icon versions from package.json and git describe command
   for (const icon of icons) {
     const files = (
-      await Promise.all(icon.contents.map(content => getIconFiles(content)))
+      await Promise.all(icon.contents.map((content) => getIconFiles(content)))
     ).flat();
 
     const firstDir = path.dirname(files[0]);
@@ -213,7 +213,7 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
     versions.push({
       icon,
       version: packageJson.version || gitVersion,
-      count: icon._count // set by writeIconModule
+      count: icon._count, // set by writeIconModule
     });
   }
 
@@ -221,12 +221,12 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
     "Icon Library|License|Version|Count\n" +
     "---|---|---|---\n" +
     versions
-      .map(v =>
+      .map((v) =>
         [
           `[${v.icon.name}](${v.icon.projectUrl})`,
           `[${v.icon.license}](${v.icon.licenseUrl})`,
           v.version,
-          v.count
+          v.count,
         ].join("|")
       )
       .join("\n") +
@@ -267,5 +267,5 @@ module.exports = {
   writeLicense,
   writeEntryPoints,
   writeIconVersions,
-  writePackageJson
+  writePackageJson,
 };

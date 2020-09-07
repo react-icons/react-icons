@@ -10,10 +10,10 @@ module.exports = withCSS(
       pwa: {
         dest: "public",
         register: true,
-        scope: "/"
+        scope: "/",
       },
       experimental: {
-        publicDirectory: true
+        publicDirectory: true,
       },
       webpack: (config, { isServer }) => {
         // Fixes npm packages that depend on fs module, see github.com/zeit/next.js/issues/7755
@@ -31,8 +31,8 @@ module.exports = withCSS(
       },
       assetPrefix: process.env.BASE_PATH || "",
       publicRuntimeConfig: {
-        basePath: process.env.BASE_PATH || ""
-      }
+        basePath: process.env.BASE_PATH || "",
+      },
     })
   )
 );

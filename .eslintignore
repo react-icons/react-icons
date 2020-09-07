@@ -2,6 +2,12 @@
 **/build/*
 **/docs/*
 **/bin/*
-packages/react-icons/lib/*
-packages/react-icons/src/icons/*
+**/.next/*
+**/out/*
+**/dist/*
+**/public/*
+packages/react-icons/lib/
+packages/react-icons/src/icons/
 !packages/react-icons/src/icons/index.js
+packages/_react-icons_all/
+packages/_react-icons_all-files/

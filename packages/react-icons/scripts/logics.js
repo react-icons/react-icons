@@ -18,12 +18,12 @@ async function convertIconData(svg, multiColor) {
     attribs &&
     Object.keys(attribs)
       .filter(
-        name =>
+        (name) =>
           ![
             "class",
             ...(tagName === "svg"
               ? ["xmlns", "xmlns:xlink", "xml:space", "width", "height"]
-              : []) // if tagName is svg remove size attributes
+              : []), // if tagName is svg remove size attributes
           ].includes(name)
       )
       .reduce((obj, name) => {
@@ -55,7 +55,7 @@ async function convertIconData(svg, multiColor) {
         child:
           e.children && e.children.length
             ? elementToTree(cheerio(e.children))
-            : undefined
+            : undefined,
       }))
       .get();
 
@@ -65,5 +65,5 @@ async function convertIconData(svg, multiColor) {
 
 module.exports = {
   getIconFiles,
-  convertIconData
+  convertIconData,
 };

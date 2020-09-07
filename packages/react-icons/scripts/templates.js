@@ -27,5 +27,5 @@ function iconsEntryTemplate(iconId, type = "module") {
 
 module.exports = {
   iconRowTemplate,
-  iconsEntryTemplate
+  iconsEntryTemplate,
 };

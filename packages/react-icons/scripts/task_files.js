@@ -12,7 +12,7 @@ const { iconRowTemplate, iconsEntryTemplate } = require("./templates");
 const { getIconFiles, convertIconData } = require("./logics");
 
 async function dirInit({ DIST, LIB, rootDir }) {
-  const ignore = err => {
+  const ignore = (err) => {
     if (err.code === "EEXIST") return;
     throw err;
   };
@@ -33,35 +33,35 @@ async function dirInit({ DIST, LIB, rootDir }) {
     "index.esm.js",
     "index.js",
     "all.js",
-    "all.d.ts"
+    "all.d.ts",
   ];
 
   for (const icon of icons) {
     await mkdir(path.resolve(DIST, icon.id)).catch(ignore);
 
-  //   await write(
-  //     [icon.id, "index.js"],
-  //     "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n"
-  //   );
-  //   await write(
-  //     [icon.id, "index.esm.js"],
-  //     "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n"
-  //   );
-  //   await write(
-  //     [icon.id, "index.d.ts"],
-  //     "import { IconTree, IconType } from '../lib'\n// THIS FILE IS AUTO GENERATED\n"
-  //   );
-  //   await write(
-  //     [icon.id, "package.json"],
-  //     JSON.stringify(
-  //       {
-  //         sideEffects: false,
-  //         module: "./index.esm.js"
-  //       },
-  //       null,
-  //       2
-  //     ) + "\n"
-  //   );
+    //   await write(
+    //     [icon.id, "index.js"],
+    //     "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n"
+    //   );
+    //   await write(
+    //     [icon.id, "index.esm.js"],
+    //     "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n"
+    //   );
+    //   await write(
+    //     [icon.id, "index.d.ts"],
+    //     "import { IconTree, IconType } from '../lib'\n// THIS FILE IS AUTO GENERATED\n"
+    //   );
+    //   await write(
+    //     [icon.id, "package.json"],
+    //     JSON.stringify(
+    //       {
+    //         sideEffects: false,
+    //         module: "./index.esm.js"
+    //       },
+    //       null,
+    //       2
+    //     ) + "\n"
+    //   );
   }
 
   for (const file of initFiles) {
@@ -94,21 +94,24 @@ async function writeIconModuleFiles(icon, { DIST, LIB, rootDir }) {
 
       // write like: module/fa/FaBeer.esm.js
       const modRes = iconRowTemplate(icon, name, iconData, "module");
-      const modHeader = "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n";
+      const modHeader =
+        "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n";
       await writeFile(
         path.resolve(DIST, icon.id, `${name}.esm.js`),
         modHeader + modRes,
         "utf8"
       );
       const comRes = iconRowTemplate(icon, name, iconData, "common");
-      const comHeader = "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n"
+      const comHeader =
+        "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n";
       await writeFile(
         path.resolve(DIST, icon.id, `${name}.js`),
-        comHeader+  comRes,
+        comHeader + comRes,
         "utf8"
       );
       const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
-      const dtsHeader = "import { IconTree, IconType } from '../lib'\n// THIS FILE IS AUTO GENERATED\n"
+      const dtsHeader =
+        "import { IconTree, IconType } from '../lib'\n// THIS FILE IS AUTO GENERATED\n";
       await writeFile(
         path.resolve(DIST, icon.id, `${name}.d.ts`),
         dtsHeader + dtsRes,
@@ -270,7 +273,7 @@ async function writeIconModuleFiles(icon, { DIST, LIB, rootDir }) {
 
 module.exports = {
   dirInit,
-  writeIconModuleFiles
+  writeIconModuleFiles,
   // writeIconModule,
   // writeIconsManifest,
   // writeLicense,

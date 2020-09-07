@@ -11,7 +11,7 @@ const { icons } = require("../src/icons");
 const { iconRowTemplate, iconsEntryTemplate } = require("./templates");
 const { getIconFiles, convertIconData } = require("./logics");
 
-export async function dirInit({ DIST, LIB, rootDir }) {
+async function dirInit({ DIST, LIB, rootDir }) {
   const ignore = err => {
     if (err.code === "EEXIST") return;
     throw err;
@@ -68,7 +68,7 @@ export async function dirInit({ DIST, LIB, rootDir }) {
     await write([file], "// THIS FILE IS AUTO GENERATED\n");
   }
 }
-export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
+async function writeIconModule(icon, { DIST, LIB, rootDir }) {
   const appendFile = promisify(fs.appendFile);
   const exists = new Set(); // for remove duplicate
   for (const content of icon.contents) {
@@ -112,7 +112,7 @@ export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
   }
 }
 
-export async function writeIconsManifest({ DIST, LIB, rootDir }) {
+async function writeIconsManifest({ DIST, LIB, rootDir }) {
   const writeFile = promisify(fs.writeFile);
   const copyFile = promisify(fs.copyFile);
 
@@ -145,7 +145,7 @@ export async function writeIconsManifest({ DIST, LIB, rootDir }) {
   await copyFile("src/package.json", path.resolve(LIB, "package.json"));
 }
 
-export async function writeLicense({ DIST, LIB, rootDir }) {
+async function writeLicense({ DIST, LIB, rootDir }) {
   const copyFile = promisify(fs.copyFile);
   const appendFile = promisify(fs.appendFile);
 
@@ -166,14 +166,14 @@ export async function writeLicense({ DIST, LIB, rootDir }) {
   await appendFile(path.resolve(DIST, "LICENSE"), iconLicenses, "utf8");
 }
 
-export async function writeEntryPoints({ DIST, LIB, rootDir }) {
+async function writeEntryPoints({ DIST, LIB, rootDir }) {
   const appendFile = promisify(fs.appendFile);
   const generateEntryCjs = function() {
     return `module.exports = require('./lib/cjs/index.js');`;
   };
   const generateEntryMjs = function(filename = "index.js") {
     return `import * as m from './lib/esm/${filename}'
-export default m
+default m
     `;
   };
   await appendFile(path.resolve(DIST, "index.js"), generateEntryCjs(), "utf8");
@@ -189,7 +189,7 @@ export default m
   );
 }
 
-export async function writeIconVersions({ DIST, LIB, rootDir }) {
+async function writeIconVersions({ DIST, LIB, rootDir }) {
   const versions = [];
 
   // searching for icon versions from package.json and git describe command
@@ -239,7 +239,7 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
   );
 }
 
-export async function writePackageJson({ DIST, LIB, rootDir }) {
+async function writePackageJson({ DIST, LIB, rootDir }) {
   const writeFile = promisify(fs.writeFile);
   const readFile = promisify(fs.readFile);
 
@@ -259,3 +259,13 @@ export async function writePackageJson({ DIST, LIB, rootDir }) {
   const editedPackageJsonStr = JSON.stringify(packageJson, null, 2);
   writeFile(path.resolve(DIST, "package.json"), editedPackageJsonStr);
 }
+
+module.exports = {
+  dirInit,
+  writeIconModule,
+  writeIconsManifest,
+  writeLicense,
+  writeEntryPoints,
+  writeIconVersions,
+  writePackageJson
+};

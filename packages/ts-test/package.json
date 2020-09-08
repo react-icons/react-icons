@@ -20,7 +20,9 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "plugins": ["react"]
+    "plugins": [
+      "react"
+    ]
   },
   "browserslist": {
     "production": [

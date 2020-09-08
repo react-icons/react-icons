@@ -1,16 +1,20 @@
 const withSass = require("@zeit/next-sass");
 const withCSS = require("@zeit/next-css");
 const withPWA = require("next-pwa");
-
+const runtimeCaching = require("next-pwa/cache");
 const path = require("path");
+
+const prod = process.env.NODE_ENV === "production";
 
 module.exports = withCSS(
   withSass(
     withPWA({
       pwa: {
+        disable: !prod,
         dest: "public",
         register: true,
         scope: "/",
+        runtimeCaching,
       },
       experimental: {
         publicDirectory: true,

@@ -42,12 +42,6 @@
     "typescript": "^3.4.5"
   },
   "scripts": {
-    "build": "node scripts/build.js && yarn build-mjs && yarn build-cjs",
-    "prebuild": "yarn run copy ../../README.md ./packages/react-icons && rimraf ../_react-icons_all/lib",
-    "build-mjs": "tsc && babel ../_react-icons_all/lib/esm -d ../_react-icons_all/lib/esm",
-    "build-cjs": "tsc -p ./tsconfig.commonjs.json"
-  },
-  "dependencies": {
-    "camelcase": "^5.0.0"
+    "build": "node scripts/build.js"
   }
 }

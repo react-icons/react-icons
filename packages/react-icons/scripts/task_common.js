@@ -6,7 +6,7 @@ const exec = util.promisify(require("child_process").exec);
 
 const { icons } = require("../src/icons");
 
-const { getIconFiles } = require("./logics");
+const { getIconFiles, copyRecursive } = require("./logics");
 
 async function writeIconsManifest({ DIST, LIB, rootDir }) {
   const writeObj = icons.map((icon) => ({
@@ -145,7 +145,31 @@ async function writePackageJson(override, { DIST, LIB, rootDir }) {
   };
 
   const editedPackageJsonStr = JSON.stringify(packageJson, null, 2);
-  fs.writeFile(path.resolve(DIST, "package.json"), editedPackageJsonStr);
+  await fs.writeFile(path.resolve(DIST, "package.json"), editedPackageJsonStr);
+}
+
+async function copyReadme({ DIST, LIB, rootDir }) {
+  await fs.copyFile(
+    path.resolve(rootDir, "../../README.md"),
+    path.resolve(DIST, "README.md")
+  );
+}
+
+async function buildLib({ DIST, LIB, rootDir }) {
+  await fs.rmdir(path.resolve(rootDir, "build/lib"), { recursive: true });
+
+  const execOpt = {
+    cwd: rootDir,
+  };
+  await Promise.all([
+    exec("yarn tsc && yarn babel ./build/lib/esm -d ./build/lib/esm", execOpt),
+    exec("yarn tsc -p ./tsconfig.commonjs.json", execOpt),
+  ]);
+}
+
+async function copyLib({ DIST, LIB, rootDir }) {
+  // await exec(`cp -r ${path.resolve(rootDir, "build/lib")} ${LIB}`);
+  await copyRecursive(path.resolve(rootDir, "build/lib"), LIB);
 }
 
 module.exports = {
@@ -154,4 +178,7 @@ module.exports = {
   writeEntryPoints,
   writeIconVersions,
   writePackageJson,
+  copyReadme,
+  buildLib,
+  copyLib,
 };

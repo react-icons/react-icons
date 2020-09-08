@@ -1,6 +1,8 @@
 const cheerio = require("cheerio");
 const glob = require("glob-promise");
 const camelcase = require("camelcase");
+const fs = require("fs").promises;
+const path = require("path");
 
 async function getIconFiles(content) {
   return glob(content.files);
@@ -63,7 +65,21 @@ async function convertIconData(svg, multiColor) {
   return tree[0]; // like: [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
 }
 
+async function copyRecursive(src, dest) {
+  await fs.mkdir(dest, { recursive: true });
+  for (const entry of await fs.readdir(src, { withFileTypes: true })) {
+    const sPath = path.join(src, entry.name);
+    const dPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      await copyRecursive(sPath, dPath);
+    } else {
+      await fs.copyFile(sPath, dPath);
+    }
+  }
+}
+
 module.exports = {
   getIconFiles,
   convertIconData,
+  copyRecursive,
 };

@@ -4,7 +4,7 @@ const camelcase = require("camelcase");
 
 const { icons } = require("../src/icons");
 
-const { iconRowTemplate, iconsEntryTemplate } = require("./templates");
+const { iconRowTemplate } = require("./templates");
 const { getIconFiles, convertIconData } = require("./logics");
 
 async function dirInit({ DIST, LIB, rootDir }) {
@@ -22,13 +22,7 @@ async function dirInit({ DIST, LIB, rootDir }) {
   const write = (filePath, str) =>
     fs.writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = [
-    "index.d.ts",
-    "index.esm.js",
-    "index.js",
-    "all.js",
-    "all.d.ts",
-  ];
+  const initFiles = ["index.d.ts", "index.esm.js", "index.js"];
 
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
@@ -39,11 +33,6 @@ async function dirInit({ DIST, LIB, rootDir }) {
   }
 }
 async function writeIconModuleFiles(icon, { DIST, LIB, rootDir }) {
-  const entryModule = iconsEntryTemplate(icon.id, "module");
-  await fs.appendFile(path.resolve(DIST, "all.js"), entryModule, "utf8");
-  const entryDts = iconsEntryTemplate(icon.id, "dts");
-  await fs.appendFile(path.resolve(DIST, "all.d.ts"), entryDts, "utf8");
-
   const exists = new Set(); // for remove duplicate
 
   for (const content of icon.contents) {

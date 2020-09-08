@@ -32,6 +32,7 @@ async function main() {
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
       await taskCommon.writePackageJson({ name: "react-icons" }, allOpt);
+      await taskCommon.copyReadme(allOpt);
     });
     await task("@react-icons/all write icons", async () => {
       for (const icon of icons) {
@@ -40,31 +41,40 @@ async function main() {
     });
 
     // @react-icons/all-files
-    const opt = {
+    const filesOpt = {
       rootDir: _rootDir,
       DIST: path.resolve(_rootDir, "../_react-icons_all-files"),
       LIB: path.resolve(_rootDir, "../_react-icons_all-files/lib"),
     };
     await task("@react-icons/all-files initialize", async () => {
-      await taskFiles.dirInit(opt);
-      await taskCommon.writeEntryPoints(opt);
-      await taskCommon.writeIconsManifest(opt);
-      await taskCommon.writeLicense(opt);
+      await taskFiles.dirInit(filesOpt);
+      await taskCommon.writeEntryPoints(filesOpt);
+      await taskCommon.writeIconsManifest(filesOpt);
+      await taskCommon.writeLicense(filesOpt);
       await taskCommon.writePackageJson(
         { name: "@react-icons/all-files" },
-        opt
+        filesOpt
       );
+      await taskCommon.copyReadme(filesOpt);
     });
     await task("@react-icons/all-files write icons", async () => {
       for (const icon of icons) {
-        await taskFiles.writeIconModuleFiles(icon, opt);
+        await taskFiles.writeIconModuleFiles(icon, filesOpt);
       }
     });
 
     // write to VERSIONS file
     await task("react-icons_builders write icon versions", async () => {
-      await taskCommon.writeIconVersions(opt);
+      await taskCommon.writeIconVersions(filesOpt);
     });
+
+    // write to VERSIONS file
+    await task("react-icons_builders build common library", async () => {
+      await taskCommon.buildLib(filesOpt);
+      await taskCommon.copyLib(allOpt);
+      await taskCommon.copyLib(filesOpt);
+    });
+
     console.log("done");
   } catch (e) {
     console.error(e);

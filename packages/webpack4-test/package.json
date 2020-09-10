@@ -1,6 +1,6 @@
 {
   "name": "webpack4-test",
-  "version": "3.11.0",
+  "version": "3.11.1-snapshot.0",
   "main": "index.js",
   "private": true,
   "license": "MIT",
@@ -14,6 +14,6 @@
     "webpack-cli": "^3.3.2"
   },
   "dependencies": {
-    "react-icons": "^3.11.0"
+    "react-icons": "^3.11.1-snapshot.0"
   }
 }

@@ -7424,6 +7424,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"demo-all-files@workspace:packages/demo-all-files":
+  version: 0.0.0-use.local
+  resolution: "demo-all-files@workspace:packages/demo-all-files"
+  dependencies:
+    enzyme: ^3.11.0
+    enzyme-adapter-react-16: ^1.15.2
+    enzyme-to-json: ^3.4.3
+    react: ^16.12.0
+    react-dom: ^16.12.0
+    react-icons: ^3.11.0
+    react-scripts: ^3.4.3
+  languageName: unknown
+  linkType: soft
+
 "demo@workspace:packages/demo":
   version: 0.0.0-use.local
   resolution: "demo@workspace:packages/demo"

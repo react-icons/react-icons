@@ -6,7 +6,7 @@ const exec = util.promisify(require("child_process").exec);
 
 const { icons } = require("../src/icons");
 
-const { getIconFiles, copyRecursive } = require("./logics");
+const { getIconFiles, copyRecursive, rmDirRecursive } = require("./logics");
 
 async function writeIconsManifest({ DIST, LIB, rootDir }) {
   const writeObj = icons.map((icon) => ({
@@ -156,7 +156,7 @@ async function copyReadme({ DIST, LIB, rootDir }) {
 }
 
 async function buildLib({ DIST, LIB, rootDir }) {
-  await fs.rmdir(path.resolve(rootDir, "build/lib"), { recursive: true });
+  await rmDirRecursive(path.resolve(rootDir, "build/lib"));
 
   const execOpt = {
     cwd: rootDir,
@@ -168,7 +168,6 @@ async function buildLib({ DIST, LIB, rootDir }) {
 }
 
 async function copyLib({ DIST, LIB, rootDir }) {
-  // await exec(`cp -r ${path.resolve(rootDir, "build/lib")} ${LIB}`);
   await copyRecursive(path.resolve(rootDir, "build/lib"), LIB);
 }
 

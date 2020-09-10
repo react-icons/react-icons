@@ -27,7 +27,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - name: Install dependencies
-      run: yarn --frozen-lockfile
+      run: yarn --immutable
       if: steps.restore-cache.outputs.cache-hit != 'true'
     - name: Build Packages
       run: BASE_PATH=/react-icons ./build-script.sh

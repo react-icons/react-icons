@@ -5,7 +5,7 @@ const camelcase = require("camelcase");
 const { icons } = require("../src/icons");
 
 const { iconRowTemplate, iconsEntryTemplate } = require("./templates");
-const { getIconFiles, convertIconData } = require("./logics");
+const { getIconFiles, convertIconData, rmDirRecursive } = require("./logics");
 
 async function dirInit({ DIST, LIB, rootDir }) {
   const ignore = (err) => {
@@ -13,7 +13,10 @@ async function dirInit({ DIST, LIB, rootDir }) {
     throw err;
   };
 
-  await fs.rmdir(DIST, { recursive: true });
+  await rmDirRecursive(DIST).catch((err) => {
+    if (err.code === "ENOENT") return;
+    throw err;
+  });
   await fs.mkdir(DIST, { recursive: true }).catch(ignore);
   await fs.mkdir(LIB).catch(ignore);
   await fs.mkdir(path.resolve(LIB, "esm")).catch(ignore);

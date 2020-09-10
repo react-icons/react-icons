@@ -78,8 +78,21 @@ async function copyRecursive(src, dest) {
   }
 }
 
+async function rmDirRecursive(dest) {
+  for (const entry of await fs.readdir(dest, { withFileTypes: true })) {
+    const dPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      await rmDirRecursive(dPath);
+    } else {
+      await fs.unlink(dPath);
+    }
+  }
+  await fs.rmdir(dest);
+}
+
 module.exports = {
   getIconFiles,
   convertIconData,
   copyRecursive,
+  rmDirRecursive,
 };

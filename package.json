@@ -23,7 +23,6 @@
   "scripts": {
     "submodule": "git submodule update --init",
     "submodule-deinit": "git submodule deinit --all",
-    "netlify": "netlify",
     "lint": "yarn eslint .",
     "version-up": "lerna version",
     "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",

@@ -109,6 +109,13 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
     });
   }
 
+  const emptyVersions = versions.filter((v) => v.count === 0);
+  if (emptyVersions.length !== 0) {
+    throw Error(
+      `empty icon sets: ${emptyVersions.map((v) => v.icon).join(", ")}`
+    );
+  }
+
   const versionsStr =
     "Icon Library|License|Version|Count\n" +
     "---|---|---|---\n" +

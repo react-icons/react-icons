@@ -13,10 +13,7 @@ async function dirInit({ DIST, LIB, rootDir }) {
     throw err;
   };
 
-  await rmDirRecursive(DIST).catch((err) => {
-    if (err.code === "ENOENT") return;
-    throw err;
-  });
+  await rmDirRecursive(DIST);
   await fs.mkdir(DIST, { recursive: true }).catch(ignore);
   await fs.mkdir(LIB).catch(ignore);
   await fs.mkdir(path.resolve(LIB, "esm")).catch(ignore);

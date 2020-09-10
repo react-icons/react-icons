@@ -78,6 +78,7 @@ async function main() {
     console.log("done");
   } catch (e) {
     console.error(e);
+    process.exit(1);
   }
 }
 main();

@@ -7,6 +7,7 @@ const camelcase = require("camelcase");
 const findPackage = require("find-package");
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
+const SVGO = require("svgo");
 
 const { icons } = require("../src/icons");
 
@@ -16,6 +17,118 @@ const DIST = path.resolve(rootDir, ".");
 const LIB = path.resolve(rootDir, "./lib");
 
 // logic
+
+const svgo = new SVGO({
+  plugins: [
+    {
+      cleanupAttrs: true
+    },
+    {
+      removeDoctype: true
+    },
+    {
+      removeXMLProcInst: true
+    },
+    {
+      removeComments: true
+    },
+    {
+      removeMetadata: true
+    },
+    {
+      removeTitle: true
+    },
+    {
+      removeDesc: true
+    },
+    {
+      removeUselessDefs: true
+    },
+    {
+      removeEditorsNSData: true
+    },
+    {
+      removeEmptyAttrs: true
+    },
+    {
+      removeHiddenElems: true
+    },
+    {
+      removeEmptyText: true
+    },
+    {
+      removeEmptyContainers: true
+    },
+    {
+      removeViewBox: false
+    },
+    {
+      cleanupEnableBackground: true
+    },
+    {
+      convertStyleToAttrs: true
+    },
+    {
+      convertColors: {
+        currentColor: true
+      }
+    },
+    {
+      convertPathData: true
+    },
+    {
+      convertTransform: true
+    },
+    {
+      removeUnknownsAndDefaults: true
+    },
+    {
+      removeNonInheritableGroupAttrs: true
+    },
+    {
+      removeUselessStrokeAndFill: true
+    },
+    {
+      removeUnusedNS: true
+    },
+    {
+      cleanupIDs: true
+    },
+    {
+      cleanupNumericValues: true
+    },
+    {
+      moveElemsAttrsToGroup: true
+    },
+    {
+      moveGroupAttrsToElems: true
+    },
+    {
+      collapseGroups: true
+    },
+    {
+      removeRasterImages: false
+    },
+    {
+      mergePaths: true
+    },
+    {
+      convertShapeToPath: true
+    },
+    {
+      sortAttrs: true
+    },
+    {
+      removeDimensions: true
+    },
+    {
+      removeAttributesBySelector: {
+        selector: "*:not(svg)",
+        attributes: ["stroke"]
+      }
+    }
+  ]
+});
 
 async function getIconFiles(content) {
   return glob(content.files);
@@ -180,8 +293,27 @@ async function writeIconModule(icon) {
     const entryDts = generateIconsEntry(icon.id, "dts");
     await appendFile(path.resolve(DIST, "all.d.ts"), entryDts, "utf8");
 
+    let count = 0;
+
     for (const file of files) {
-      const svgStr = await promisify(fs.readFile)(file, "utf8");
+      if (count > 3) {
+        // break;
+      }
+
+      count += 1;
+
+      const svgStrRaw = await promisify(fs.readFile)(file, "utf8");
+
+      let svgStr;
+
+      if (content.processWithSVGO) {
+        // console.log('RAW', svgStrRaw);
+        svgStr = await svgo.optimize(svgStrRaw).then(result => result.data);
+        // console.log('OPTIMIZED', svgStr);
+      } else {
+        svgStr = svgStrRaw;
+      }
+
       const iconData = await convertIconData(svgStr, content.multiColor);
 
       const rawName = path.basename(file, path.extname(file));

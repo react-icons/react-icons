@@ -39,6 +39,23 @@ module.exports = {
       licenseUrl: "https://github.com/ionic-team/ionicons/blob/master/LICENSE"
     },
     {
+      id: "io-5",
+      name: "Ionicons 5",
+      contents: [
+        {
+          files: path.resolve(
+            __dirname,
+            "../../../../node_modules/ionicons-5/dist/svg/*.svg"
+          ),
+          formatter: name => `Io${name}`,
+          processWithSVGO: true
+        }
+      ],
+      projectUrl: "https://ionicons.com/",
+      license: "MIT",
+      licenseUrl: "https://github.com/ionic-team/ionicons/blob/master/LICENSE"
+    },
+    {
       id: "md",
       name: "Material Design icons",
       contents: [

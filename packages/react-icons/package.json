@@ -42,6 +42,7 @@
     "find-package": "^1.0.0",
     "glob-promise": "^3.4.0",
     "ionicons": "^4.4.4",
+    "ionicons-5": "npm:ionicons@5",
     "lerna": "^3.20.2",
     "netlify-cli": "^2.30.0",
     "octicons": "^8.1.0",

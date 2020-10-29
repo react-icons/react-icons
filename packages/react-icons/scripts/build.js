@@ -293,26 +293,12 @@ async function writeIconModule(icon) {
     const entryDts = generateIconsEntry(icon.id, "dts");
     await appendFile(path.resolve(DIST, "all.d.ts"), entryDts, "utf8");
 
-    let count = 0;
-
     for (const file of files) {
-      if (count > 3) {
-        // break;
-      }
-
-      count += 1;
-
       const svgStrRaw = await promisify(fs.readFile)(file, "utf8");
 
-      let svgStr;
-
-      if (content.processWithSVGO) {
-        // console.log('RAW', svgStrRaw);
-        svgStr = await svgo.optimize(svgStrRaw).then(result => result.data);
-        // console.log('OPTIMIZED', svgStr);
-      } else {
-        svgStr = svgStrRaw;
-      }
+      const svgStr = content.processWithSVGO
+        ? await svgo.optimize(svgStrRaw).then(result => result.data)
+        : svgStrRaw;
 
       const iconData = await convertIconData(svgStr, content.multiColor);
 

@@ -105,63 +105,7 @@ module.exports = {
       name: "Game Icons",
       contents: [
         {
-          files: path.resolve(
-            __dirname,
-            "game-icons-inverted/+(carl-olsen|andymeneely|cathelineau|darkzaitzev|delapouite|faithtoken|generalace135|guard13007|heavenly-dog|irongamer|john-colburn|kier-heyl|lorc|lord-berandas|quoting|rihlsul|sbed|skoll|sparker|spencerdub|zajkonur)/originals/svg/000000/transparent/*.svg"
-          ),
-          formatter: (name) => `Gi${name}`,
-        },
-        {
-          files: path.resolve(
-            __dirname,
-            "game-icons-inverted/+(zeromancer|willdabeast|)/deviations/svg/000000/transparent/*.svg"
-          ),
-          formatter: (name) => `Gi${name}`,
-        },
-        {
-          files: path.resolve(
-            __dirname,
-            "game-icons-inverted/+(john-redman)/hands/svg/000000/transparent/*.svg"
-          ),
-          formatter: (name) => `Gi${name}`,
-        },
-        {
-          files: path.resolve(
-            __dirname,
-            "game-icons-inverted/+(lucasms)/equipment/svg/000000/transparent/*.svg"
-          ),
-          formatter: (name) => `Gi${name}`,
-        },
-        {
-          files: path.resolve(
-            __dirname,
-            "game-icons-inverted/+(priorblue)/batteries/svg/000000/transparent/*.svg"
-          ),
-          formatter: (name) => `Gi${name}`,
-        },
-        {
-          files: path.resolve(
-            __dirname,
-            "game-icons-inverted/+(viscious-speed)/abstract/svg/000000/transparent/*.svg"
-          ),
-          formatter: (name) => `Gi${name}`,
-        },
-        {
-          files: path.resolve(
-            __dirname,
-            "game-icons-inverted/+(various-artists)/public-domain/svg/000000/transparent/*.svg"
-          ),
-          formatter: (name) => `Gi${name}`,
-        },
-        {
-          files: path.resolve(
-            __dirname,
-            "game-icons-inverted/+(felbrigg)/arrows/svg/000000/transparent/*.svg"
-          ),
-          formatter: (name) => `Gi${name}`,
-        },
-        {
-          files: path.resolve(__dirname, "game-icons-inverted/aussiesim/*.svg"),
+          files: path.resolve(__dirname, "game-icons-inverted/all-icons/*.svg"),
           formatter: (name) => `Gi${name}`,
         },
       ],

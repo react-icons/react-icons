@@ -22,7 +22,7 @@ class App extends Component {
             value={{
               color: "blue",
               className: "global-class-name",
-              attr: { focusable: "false" }
+              attr: { focusable: "false" },
             }}
           >
             <MdAccessibility />

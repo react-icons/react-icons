@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import { IconContext } from "react-icons";
-import { FaFolder } from "react-icons/fa";
-import { MdAccessibility } from "react-icons/md";
-import { TiArrowDown } from "react-icons/ti";
-import { GrGrommet } from "react-icons/gr";
+import { IconContext } from "@react-icons/all-files";
+import { FaFolder } from "@react-icons/all-files/fa/FaFolder";
+import { MdAccessibility } from "@react-icons/all-files/md/MdAccessibility";
+import { TiArrowDown } from "@react-icons/all-files/ti/TiArrowDown";
+import { GrGrommet } from "@react-icons/all-files/gr/GrGrommet";
 
 class App extends Component {
   render() {

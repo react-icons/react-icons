@@ -11,16 +11,16 @@ module.exports = {
             __dirname,
             "fontawesome/svgs/+(brands|solid)/*.svg"
           ),
-          formatter: name => `Fa${name}`
+          formatter: (name) => `Fa${name}`,
         },
         {
           files: path.resolve(__dirname, "fontawesome/svgs/regular/*.svg"),
-          formatter: name => `FaReg${name}`
-        }
+          formatter: (name) => `FaReg${name}`,
+        },
       ],
       projectUrl: "https://fontawesome.com/",
       license: "CC BY 4.0 License",
-      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     },
     {
       id: "io",
@@ -28,15 +28,15 @@ module.exports = {
       contents: [
         {
           files: path.resolve(
-            __dirname,
-            "../../../../node_modules/ionicons/dist/collection/icon/svg/*.svg"
+            path.dirname(require.resolve("ionicons")),
+            "collection/icon/svg/*.svg"
           ),
-          formatter: name => `Io${name}`
-        }
+          formatter: (name) => `Io${name}`,
+        },
       ],
       projectUrl: "https://ionicons.com/",
       license: "MIT",
-      licenseUrl: "https://github.com/ionic-team/ionicons/blob/master/LICENSE"
+      licenseUrl: "https://github.com/ionic-team/ionicons/blob/master/LICENSE",
     },
     {
       id: "md",
@@ -47,13 +47,13 @@ module.exports = {
             __dirname,
             "material-design-icons/*/svg/production/*_24px.svg"
           ),
-          formatter: name => name.replace(/Ic(\w+)24px/i, "Md$1")
-        }
+          formatter: (name) => name.replace(/Ic(\w+)24px/i, "Md$1"),
+        },
       ],
       projectUrl: "http://google.github.io/material-design-icons/",
       license: "Apache License Version 2.0",
       licenseUrl:
-        "https://github.com/google/material-design-icons/blob/master/LICENSE"
+        "https://github.com/google/material-design-icons/blob/master/LICENSE",
     },
     {
       id: "ti",
@@ -61,12 +61,12 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "typicons/src/svg/*.svg"),
-          formatter: name => `Ti${name}`
-        }
+          formatter: (name) => `Ti${name}`,
+        },
       ],
       projectUrl: "http://s-ings.com/typicons/",
       license: "CC BY-SA 3.0",
-      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
     },
     {
       id: "go",
@@ -74,15 +74,15 @@ module.exports = {
       contents: [
         {
           files: path.resolve(
-            __dirname,
-            "../../../../node_modules/octicons/build/svg/*.svg"
+            path.dirname(require.resolve("octicons")),
+            "build/svg/*.svg"
           ),
-          formatter: name => `Go${name}`
-        }
+          formatter: (name) => `Go${name}`,
+        },
       ],
       projectUrl: "https://octicons.github.com/",
       license: "MIT",
-      licenseUrl: "https://github.com/primer/octicons/blob/master/LICENSE"
+      licenseUrl: "https://github.com/primer/octicons/blob/master/LICENSE",
     },
     {
       id: "fi",
@@ -90,15 +90,15 @@ module.exports = {
       contents: [
         {
           files: path.resolve(
-            __dirname,
-            "../../../../node_modules/feather-icons/dist/icons/*.svg"
+            path.dirname(require.resolve("feather-icons")),
+            "icons/*.svg"
           ),
-          formatter: name => `Fi${name}`
-        }
+          formatter: (name) => `Fi${name}`,
+        },
       ],
       projectUrl: "https://feathericons.com/",
       license: "MIT",
-      licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE"
+      licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE",
     },
     {
       id: "gi",
@@ -109,65 +109,65 @@ module.exports = {
             __dirname,
             "game-icons-inverted/+(carl-olsen|andymeneely|cathelineau|darkzaitzev|delapouite|faithtoken|generalace135|guard13007|heavenly-dog|irongamer|john-colburn|kier-heyl|lorc|lord-berandas|quoting|rihlsul|sbed|skoll|sparker|spencerdub|zajkonur)/originals/svg/000000/transparent/*.svg"
           ),
-          formatter: name => `Gi${name}`
+          formatter: (name) => `Gi${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "game-icons-inverted/+(zeromancer|willdabeast|)/deviations/svg/000000/transparent/*.svg"
           ),
-          formatter: name => `Gi${name}`
+          formatter: (name) => `Gi${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "game-icons-inverted/+(john-redman)/hands/svg/000000/transparent/*.svg"
           ),
-          formatter: name => `Gi${name}`
+          formatter: (name) => `Gi${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "game-icons-inverted/+(lucasms)/equipment/svg/000000/transparent/*.svg"
           ),
-          formatter: name => `Gi${name}`
+          formatter: (name) => `Gi${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "game-icons-inverted/+(priorblue)/batteries/svg/000000/transparent/*.svg"
           ),
-          formatter: name => `Gi${name}`
+          formatter: (name) => `Gi${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "game-icons-inverted/+(viscious-speed)/abstract/svg/000000/transparent/*.svg"
           ),
-          formatter: name => `Gi${name}`
+          formatter: (name) => `Gi${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "game-icons-inverted/+(various-artists)/public-domain/svg/000000/transparent/*.svg"
           ),
-          formatter: name => `Gi${name}`
+          formatter: (name) => `Gi${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "game-icons-inverted/+(felbrigg)/arrows/svg/000000/transparent/*.svg"
           ),
-          formatter: name => `Gi${name}`
+          formatter: (name) => `Gi${name}`,
         },
         {
           files: path.resolve(__dirname, "game-icons-inverted/aussiesim/*.svg"),
-          formatter: name => `Gi${name}`
-        }
+          formatter: (name) => `Gi${name}`,
+        },
       ],
       projectUrl: "https://game-icons.net/",
       license: "CC BY 3.0",
-      licenseUrl: "https://creativecommons.org/licenses/by/3.0/"
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
     },
     {
       id: "wi",
@@ -175,12 +175,12 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "weather-icons/svg/*.svg"),
-          formatter: name => name
-        }
+          formatter: (name) => name,
+        },
       ],
       projectUrl: "https://erikflowers.github.io/weather-icons/",
       license: "SIL OFL 1.1",
-      licenseUrl: "http://scripts.sil.org/OFL"
+      licenseUrl: "http://scripts.sil.org/OFL",
     },
     {
       id: "di",
@@ -188,12 +188,12 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "devicons/!SVG/*.svg"),
-          formatter: name => `Di${name}`
-        }
+          formatter: (name) => `Di${name}`,
+        },
       ],
       projectUrl: "https://vorillaz.github.io/devicons/",
       license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT"
+      licenseUrl: "https://opensource.org/licenses/MIT",
     },
     {
       id: "ai",
@@ -204,26 +204,26 @@ module.exports = {
             __dirname,
             "ant-design-icons/packages/icons-svg/svg/filled/*.svg"
           ),
-          formatter: name => `AiFill${name}`
+          formatter: (name) => `AiFill${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "ant-design-icons/packages/icons-svg/svg/outlined/*.svg"
           ),
-          formatter: name => `AiOutline${name}`
+          formatter: (name) => `AiOutline${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "ant-design-icons/packages/icons-svg/svg/twotone/*.svg"
           ),
-          formatter: name => `AiTwotone${name}`
-        }
+          formatter: (name) => `AiTwotone${name}`,
+        },
       ],
       projectUrl: "https://github.com/ant-design/ant-design-icons",
       license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT"
+      licenseUrl: "https://opensource.org/licenses/MIT",
     },
     {
       id: "bs",
@@ -234,26 +234,26 @@ module.exports = {
             __dirname,
             "bootstrap/icons/*!(-reverse)-fill.svg"
           ),
-          formatter: name => `BsFill${name}`
+          formatter: (name) => `BsFill${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "bootstrap/icons/*-reverse!(-fill).svg"
           ),
-          formatter: name => `BsReverse${name}`
+          formatter: (name) => `BsReverse${name}`,
         },
         {
           files: path.resolve(
             __dirname,
             "bootstrap/icons/*!(-fill|-reverse|reverse-).svg"
           ),
-          formatter: name => `Bs${name}`
-        }
+          formatter: (name) => `Bs${name}`,
+        },
       ],
       projectUrl: "https://github.com/twbs/icons",
       license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT"
+      licenseUrl: "https://opensource.org/licenses/MIT",
     },
     {
       id: "ri",
@@ -261,16 +261,16 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "RemixIcon/icons/*/*-line.svg"),
-          formatter: name => `Ri${name}`
+          formatter: (name) => `Ri${name}`,
         },
         {
           files: path.resolve(__dirname, "RemixIcon/icons/*/*-fill.svg"),
-          formatter: name => `Ri${name}`
-        }
+          formatter: (name) => `Ri${name}`,
+        },
       ],
       projectUrl: "https://github.com/Remix-Design/RemixIcon",
       license: "Apache License Version 2.0",
-      licenseUrl: "http://www.apache.org/licenses/"
+      licenseUrl: "http://www.apache.org/licenses/",
     },
     {
       id: "fc",
@@ -278,13 +278,13 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "flat-color-icons/svg/*.svg"),
-          formatter: name => `Fc${name}`,
-          multiColor: true
-        }
+          formatter: (name) => `Fc${name}`,
+          multiColor: true,
+        },
       ],
       projectUrl: "https://github.com/icons8/flat-color-icons",
       license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT"
+      licenseUrl: "https://opensource.org/licenses/MIT",
     },
     {
       id: "gr",
@@ -292,12 +292,12 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "grommet-icons/public/img/*.svg"),
-          formatter: name => `Gr${name}`
-        }
+          formatter: (name) => `Gr${name}`,
+        },
       ],
       projectUrl: "https://github.com/grommet/grommet-icons",
       license: "Apache License Version 2.0",
-      licenseUrl: "http://www.apache.org/licenses/"
+      licenseUrl: "http://www.apache.org/licenses/",
     },
     {
       id: "hi",
@@ -305,16 +305,16 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "heroicons/solid/*.svg"),
-          formatter: name => `Hi${name}`
+          formatter: (name) => `Hi${name}`,
         },
         {
           files: path.resolve(__dirname, "heroicons/outline/*.svg"),
-          formatter: name => `HiOutline${name}`
-        }
+          formatter: (name) => `HiOutline${name}`,
+        },
       ],
       projectUrl: "https://github.com/refactoringui/heroicons",
       license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT"
+      licenseUrl: "https://opensource.org/licenses/MIT",
     },
     {
       id: "si",
@@ -322,12 +322,12 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "simple-icons/icons/*.svg"),
-          formatter: name => `Si${name}`
-        }
+          formatter: (name) => `Si${name}`,
+        },
       ],
       projectUrl: "https://simpleicons.org/",
       license: "CC0 1.0 Universal",
-      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/"
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
     },
     {
       id: "im",
@@ -335,8 +335,8 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "icomoon-free/SVG/*.svg"),
-          formatter: name => `Im${name.slice(3)}`
-        }
+          formatter: (name) => `Im${name.slice(3)}`,
+        },
       ],
       projectUrl: "https://github.com/Keyamoon/IcoMoon-Free",
       license: "CC BY 4.0 License",
@@ -347,8 +347,8 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "boxicons/svg/regular/*.svg"),
-          formatter: name => `Bi${name.replace("Bx", "")}`
-        }
+          formatter: (name) => `Bi${name.replace("Bx", "")}`,
+        },
       ],
       projectUrl: "https://github.com/atisawd/boxicons",
       license: "CC BY 4.0 License",
@@ -359,12 +359,12 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "css.gg/icons/svg/*.svg"),
-          formatter: name => `Cg${name}`
-        }
+          formatter: (name) => `Cg${name}`,
+        },
       ],
       projectUrl: "https://github.com/astrit/css.gg",
       license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT"
+      licenseUrl: "https://opensource.org/licenses/MIT",
     },
     {
       id: "vsc",
@@ -372,12 +372,12 @@ module.exports = {
       contents: [
         {
           files: path.resolve(__dirname, "vscode-icons/src/icons/*.svg"),
-          formatter: name => `Vsc${name}`
-        }
+          formatter: (name) => `Vsc${name}`,
+        },
       ],
       projectUrl: "https://github.com/microsoft/vscode-codicons",
       license: "CC BY 4.0",
-      licenseUrl: "https://creativecommons.org/licenses/by/4.0/"
-    }
-  ]
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    },
+  ],
 };

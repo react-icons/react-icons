@@ -9,19 +9,15 @@
 
 Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
-## Installation
+## Installation (for standard modern project)
 
-### Yarn
 ```bash
 yarn add react-icons
-```
-
-### NPM
-```bash
+# or
 npm install react-icons --save
 ```
 
-## Usage
+example usage
 
 ```jsx
 import { FaBeer } from 'react-icons/fa';
@@ -36,6 +32,28 @@ class Question extends React.Component {
 [View the documentation](https://react-icons.github.io/react-icons) for further usage examples and how to use icons from other packages. *NOTE*: each Icon package has it's own subfolder under `react-icons` you import from.
 
 For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
+
+## Installation (for meteorjs, gatsbyjs, etc)
+
+If your project grows in size, this option is available.
+This method has the trade-off that it takes a long time to install the package.
+
+```bash
+yarn add @react-icons/all-files
+# or
+npm install @react-icons/all-files --save
+```
+
+example usage
+
+```jsx
+import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+class Question extends React.Component {
+  render() {
+    return <h3> Lets go for a <FaBeer />? </h3>
+  }
+}
+```
 
 ## Icons
 

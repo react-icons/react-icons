@@ -4,3 +4,5 @@ lib
 module
 *.log
 *.tgz
+
+.yarn/cache

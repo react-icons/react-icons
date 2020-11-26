@@ -28,8 +28,8 @@ module.exports = {
       contents: [
         {
           files: path.resolve(
-            __dirname,
-            "../../../../node_modules/ionicons/dist/collection/icon/svg/*.svg"
+            path.dirname(require.resolve("ionicons")),
+            "collection/icon/svg/*.svg"
           ),
           formatter: (name) => `Io${name}`,
         },
@@ -74,8 +74,8 @@ module.exports = {
       contents: [
         {
           files: path.resolve(
-            __dirname,
-            "../../../../node_modules/octicons/build/svg/*.svg"
+            path.dirname(require.resolve("octicons")),
+            "build/svg/*.svg"
           ),
           formatter: (name) => `Go${name}`,
         },
@@ -90,8 +90,8 @@ module.exports = {
       contents: [
         {
           files: path.resolve(
-            __dirname,
-            "../../../../node_modules/feather-icons/dist/icons/*.svg"
+            path.dirname(require.resolve("feather-icons")),
+            "icons/*.svg"
           ),
           formatter: (name) => `Fi${name}`,
         },

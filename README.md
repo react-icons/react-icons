@@ -9,19 +9,15 @@
 
 Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
-## Installation
+## Installation (for standard modern project)
 
-### Yarn
 ```bash
 yarn add react-icons
-```
-
-### NPM
-```bash
+# or
 npm install react-icons --save
 ```
 
-## Usage
+example usage
 
 ```jsx
 import { FaBeer } from 'react-icons/fa';
@@ -37,29 +33,54 @@ class Question extends React.Component {
 
 For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
 
+## Installation (for meteorjs, gatsbyjs, etc)
+
+If your project grows in size, this option is available.
+This method has the trade-off that it takes a long time to install the package.
+
+```bash
+yarn add @react-icons/all-files
+# or
+npm install @react-icons/all-files --save
+```
+
+example usage
+
+```jsx
+import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+class Question extends React.Component {
+  render() {
+    return <h3> Lets go for a <FaBeer />? </h3>
+  }
+}
+```
+
 ## Icons
 
-Icon Library|License|Version
----|---|---
+Icon Library|License|Version|Count
+---|---|---|---
 [Font Awesome](https://fontawesome.com/)|[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)|5.12.1
-[Ionicons](https://ionicons.com/)|[MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)|4.5.6
-[Material Design icons](http://google.github.io/material-design-icons/)|[Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)|3.0.1
-[Typicons](http://s-ings.com/typicons/)|[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)|2.0.9
-[Github Octicons icons](https://octicons.github.com/)|[MIT](https://github.com/primer/octicons/blob/master/LICENSE)|8.5.0
-[Feather](https://feathericons.com/)|[MIT](https://github.com/feathericons/feather/blob/master/LICENSE)|4.21.0
-[Game Icons](https://game-icons.net/)|[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)|a53463d41d4f055fa71097ae74da4c508c9bb09d
-[Weather Icons](https://erikflowers.github.io/weather-icons/)|[SIL OFL 1.1](http://scripts.sil.org/OFL)|2.0.10
-[Devicons](https://vorillaz.github.io/devicons/)|[MIT](https://opensource.org/licenses/MIT)|1.8.0
-[Ant Design Icons](https://github.com/ant-design/ant-design-icons)|[MIT](https://opensource.org/licenses/MIT)|4.0.0
-[Bootstrap Icons](https://github.com/twbs/icons)|[MIT](https://opensource.org/licenses/MIT)|1.0.0-alpha3
-[Remix Icon](https://github.com/Remix-Design/RemixIcon)|[Apache License Version 2.0](http://www.apache.org/licenses/)|2.3.0
-[Flat Color Icons](https://github.com/icons8/flat-color-icons)|[MIT](https://opensource.org/licenses/MIT)|1.0.2
-[Grommet-Icons](https://github.com/grommet/grommet-icons)|[Apache License Version 2.0](http://www.apache.org/licenses/)|4.4.0
-[Simple Icons](https://simpleicons.org/)|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|2.13.0
-[IcoMoon Free](https://github.com/Keyamoon/IcoMoon-Free)|[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)|1.0.0
-[BoxIcons](https://github.com/atisawd/boxicons)|[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)|2.0.5
-[css.gg](https://github.com/astrit/css.gg)|[MIT](https://opensource.org/licenses/MIT)|2.0.0
-[VS Code Icons](https://github.com/microsoft/vscode-codicons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|0.0.1
+0d1f27efb836eb2ab994ba37221849ed64a73e5c|1560
+[Ionicons](https://ionicons.com/)|[MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)|4.6.3|696
+[Material Design icons](http://google.github.io/material-design-icons/)|[Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)|3.0.1|960
+[Typicons](http://s-ings.com/typicons/)|[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)|2.0.9|336
+[Github Octicons icons](https://octicons.github.com/)|[MIT](https://github.com/primer/octicons/blob/master/LICENSE)|8.5.0|184
+[Feather](https://feathericons.com/)|[MIT](https://github.com/feathericons/feather/blob/master/LICENSE)|4.28.0|286
+[Game Icons](https://game-icons.net/)|[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)|a53463d41d4f055fa71097ae74da4c508c9bb09d|3391
+[Weather Icons](https://erikflowers.github.io/weather-icons/)|[SIL OFL 1.1](http://scripts.sil.org/OFL)|2.0.10|219
+[Devicons](https://vorillaz.github.io/devicons/)|[MIT](https://opensource.org/licenses/MIT)|1.8.0|192
+[Ant Design Icons](https://github.com/ant-design/ant-design-icons)|[MIT](https://opensource.org/licenses/MIT)|4.0.0|788
+[Bootstrap Icons](https://github.com/twbs/icons)|[MIT](https://opensource.org/licenses/MIT)|1.0.0-alpha3|668
+[Remix Icon](https://github.com/Remix-Design/RemixIcon)|[Apache License Version 2.0](http://www.apache.org/licenses/)|2.5.0|2172
+[Flat Color Icons](https://github.com/icons8/flat-color-icons)|[MIT](https://opensource.org/licenses/MIT)|1.0.2|329
+[Grommet-Icons](https://github.com/grommet/grommet-icons)|[Apache License Version 2.0](http://www.apache.org/licenses/)|4.4.0|562
+[Heroicons](https://github.com/refactoringui/heroicons)|[MIT](https://opensource.org/licenses/MIT)|0.3.5|352
+[Simple Icons](https://simpleicons.org/)|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|2.13.0|1316
+[IcoMoon Free](https://github.com/Keyamoon/IcoMoon-Free)|[CC BY 4.0 License](undefined)|d006795ede82361e1bac1ee76f215cf1dc51e4ca|491
+[BoxIcons](https://github.com/atisawd/boxicons)|[CC BY 4.0 License](undefined)|2.0.5|738
+[css.gg](https://github.com/astrit/css.gg)|[MIT](https://opensource.org/licenses/MIT)|2.0.0|704
+[VS Code Icons](https://github.com/microsoft/vscode-codicons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|0.0.1|319
+
 
 You can add more icons by submitting pull requests or creating issues.
 

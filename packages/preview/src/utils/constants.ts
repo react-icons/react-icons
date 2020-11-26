@@ -12,3 +12,12 @@ class Question extends React.Component {
     return <h3> Lets go for a <FaBeer />? </h3>
   }
 }`;
+
+export const HOME_USAGE_ALL = `
+import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+
+class Question extends React.Component {
+  render() {
+    return <h3> Lets go for a <FaBeer />? </h3>
+  }
+}`;

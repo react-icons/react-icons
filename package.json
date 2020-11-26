@@ -24,8 +24,9 @@
     "submodule": "git submodule update --init",
     "submodule-deinit": "git submodule deinit --all",
     "lint": "yarn eslint .",
-    "version-up": "lerna version && yarn install",
-    "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish && yarn install",
+    "version-up": "lerna version",
+    "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",
+    "version": "yarn install && git add .",
     "lerna": "lerna"
   }
 }

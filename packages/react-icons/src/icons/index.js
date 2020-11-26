@@ -24,7 +24,7 @@ module.exports = {
     },
     {
       id: "io",
-      name: "Ionicons",
+      name: "Ionicons 4",
       contents: [
         {
           files: path.resolve(
@@ -32,6 +32,23 @@ module.exports = {
             "collection/icon/svg/*.svg"
           ),
           formatter: (name) => `Io${name}`,
+        },
+      ],
+      projectUrl: "https://ionicons.com/",
+      license: "MIT",
+      licenseUrl: "https://github.com/ionic-team/ionicons/blob/master/LICENSE",
+    },
+    {
+      id: "io5",
+      name: "Ionicons 5",
+      contents: [
+        {
+          files: path.resolve(
+            __dirname,
+            "../../../../node_modules/ionicons-5/dist/svg/*.svg"
+          ),
+          formatter: (name) => `Io${name}`,
+          processWithSVGO: true,
         },
       ],
       projectUrl: "https://ionicons.com/",

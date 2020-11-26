@@ -6,6 +6,7 @@ const { icons } = require("../src/icons");
 
 const { iconRowTemplate, iconsEntryTemplate } = require("./templates");
 const { getIconFiles, convertIconData, rmDirRecursive } = require("./logics");
+const { svgo } = require("./svgo");
 
 async function dirInit({ DIST, LIB, rootDir }) {
   const ignore = (err) => {
@@ -73,7 +74,11 @@ async function writeIconModule(icon, { DIST, LIB, rootDir }) {
     const files = await getIconFiles(content);
 
     for (const file of files) {
-      const svgStr = await fs.readFile(file, "utf8");
+      const svgStrRaw = await fs.readFile(file, "utf8");
+      const svgStr = content.processWithSVGO
+        ? await svgo.optimize(svgStrRaw).then((result) => result.data)
+        : svgStrRaw;
+
       const iconData = await convertIconData(svgStr, content.multiColor);
 
       const rawName = path.basename(file, path.extname(file));

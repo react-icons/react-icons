@@ -6,22 +6,26 @@ import React, { useState } from "react";
 import ActiveLink from "../active-link";
 import Heading from "../heading";
 
+const searchPath = "/search";
+
 export default function Sidebar() {
   const iconsList = ALL_ICONS.sort((a, b) => (a.name > b.name ? 1 : -1));
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
-  const { setQuery, setResults } = React.useContext(Context);
+  const { query, setQuery, setResults } = React.useContext(Context);
 
   const onSearch = e => {
-    setQuery(e.target.value.toLowerCase());
+    const query = e.target.value.toLowerCase();
+    router.push({ pathname: searchPath, query: { q: query } });
+    setQuery(query);
     setResults(prevResult => {
       return {}
     });
   };
 
   const goToSearch = e => {
-    router.push("/search");
+    if (!router.asPath.includes(searchPath)) router.push(searchPath);
   };
 
   const onBlur = event => {
@@ -43,6 +47,7 @@ export default function Sidebar() {
           onFocus={goToSearch}
           onBlur={onBlur}
           onChange={onSearch}
+          value={query}
         />
       </div>
 

@@ -30,7 +30,5 @@ module.exports = withPWA({
     return config;
   },
   assetPrefix: process.env.BASE_PATH || "",
-  publicRuntimeConfig: {
-    basePath: process.env.BASE_PATH || "",
-  },
+  basePath: process.env.BASE_PATH || "",
 });

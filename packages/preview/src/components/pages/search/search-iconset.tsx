@@ -5,7 +5,7 @@ import { getIcons } from "@utils/getIcons";
 
 import SearchPageIconLoading from "./loading";
 
-export default function SearchIconSet({ icon, query, setResults, highlightPattern }) {
+export default function SearchIconSet({ icon, query, highlightPattern }) {
   const IconSet = loadable.lib(() => getIcons(icon.id));
 
   return (
@@ -23,14 +23,6 @@ export default function SearchIconSet({ icon, query, setResults, highlightPatter
                 highlightPattern={highlightPattern}
               />
             ))}
-            {setResults(prevResults => {
-              return prevResults.hasOwnProperty(icon.id) ?
-                prevResults :
-                {
-                    ...prevResults,
-                  [icon.id]: found.length
-                }
-            })}
           </>
         )
       }}

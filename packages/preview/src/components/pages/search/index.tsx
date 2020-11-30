@@ -7,13 +7,7 @@ import SearchIconSet from "./search-iconset";
 export default function SearchPageComponent() {
   const allIcons = ALL_ICONS;
 
-  const { query, results, setResults } = React.useContext(Context);
-
-  const getTotal = (results: object) => {
-    return results ? 
-      Object.values(results).reduce((p: number, c: number) => p + c, 0) :
-      0
-  }
+  const { query } = React.useContext(Context);
 
   if (query.length > 2) {
     const hightlightPattern = new RegExp(`(${query})`, "i");
@@ -28,12 +22,11 @@ export default function SearchPageComponent() {
               key={icon.id}
               icon={icon}
               query={query}
-              setResults={setResults}
               highlightPattern={hightlightPattern}
             />
           ))}
         </div>
-        {getTotal(results) === 0 && <h3>No icons found</h3>}
+         <h3 className="no-results"/>
       </>
     );
   }

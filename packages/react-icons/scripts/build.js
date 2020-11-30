@@ -17,6 +17,7 @@ const LIB = path.resolve(rootDir, "./lib");
 async function getIconFiles(content) {
   return glob(content.files);
 }
+
 async function convertIconData(svg) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");
 
@@ -33,7 +34,9 @@ async function convertIconData(svg) {
         name =>
           ![
             "class",
-            ...(tagName === "svg" ? ["xmlns", "xmlns:xlink", "xml:space", "width", "height"] : []) // if tagName is svg remove size attributes
+            ...(tagName === "svg"
+              ? ["xmlns", "xmlns:xlink", "xml:space", "width", "height"]
+              : []) // if tagName is svg remove size attributes
           ].includes(name)
       )
       .reduce((obj, name) => {
@@ -68,6 +71,7 @@ async function convertIconData(svg) {
   const tree = elementToTree($svg);
   return tree[0]; // like: [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
 }
+
 function generateIconRow(icon, formattedName, iconData, type = "module") {
   switch (type) {
     case "module":
@@ -114,7 +118,13 @@ async function dirInit() {
   const write = (filePath, str) =>
     writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = ["index.d.ts", "index.esm.js", "index.js", "all.js", "all.d.ts"];
+  const initFiles = [
+    "index.d.ts",
+    "index.esm.js",
+    "index.js",
+    "all.js",
+    "all.d.ts"
+  ];
 
   const gitignore =
     [
@@ -253,19 +263,43 @@ async function writeLicense() {
   await appendFile(path.resolve(rootDir, "LICENSE"), iconLicenses, "utf8");
 }
 
-async function writeEntryPoints(){
+async function writeEntryPoints() {
   const appendFile = promisify(fs.appendFile);
   const generateEntryCjs = function() {
-    return `module.exports = require('./lib/cjs/index.js');`
-  }
-  const generateEntryMjs = function(filename = 'index.js'){
+    return `module.exports = require('./lib/cjs/index.js');`;
+  };
+  const generateEntryMjs = function(filename = "index.js") {
     return `import * as m from './lib/esm/${filename}'
 export default m
-    `
-  }
+    `;
+  };
   await appendFile(path.resolve(DIST, "index.js"), generateEntryCjs(), "utf8");
-  await appendFile(path.resolve(DIST, "index.esm.js"), generateEntryMjs(), "utf8");
-  await appendFile(path.resolve(DIST, "index.d.ts"), generateEntryMjs('index.d.ts'), "utf8");
+  await appendFile(
+    path.resolve(DIST, "index.esm.js"),
+    generateEntryMjs(),
+    "utf8"
+  );
+  await appendFile(
+    path.resolve(DIST, "index.d.ts"),
+    generateEntryMjs("index.d.ts"),
+    "utf8"
+  );
+}
+
+async function pushToPreview() {
+  const ncp = require("ncp").ncp;
+
+  for (const icon of icons) {
+    const sourceDir = path.join(__dirname, "..", icon.id);
+    const targetDir = path.join(
+      "../preview/node_modules/react-icons/",
+      icon.id
+    );
+
+    await ncp(sourceDir, targetDir);
+
+    console.log(`pushed ${sourceDir} to ${targetDir}`);
+  }
 }
 
 async function main() {
@@ -277,6 +311,7 @@ async function main() {
     for (const icon of icons) {
       await writeIconModule(icon);
     }
+    await pushToPreview();
     console.log("done");
   } catch (e) {
     console.error(e);

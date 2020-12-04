@@ -237,3 +237,7 @@ a {
     display: none;
   }
 }
+
+.icons:empty + .no-results:after {
+  content: "No icons found";
+}

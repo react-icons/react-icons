@@ -6,22 +6,32 @@ import React, { useState } from "react";
 import ActiveLink from "../active-link";
 import Heading from "../heading";
 
+const searchPath = "/search";
+
 export default function Sidebar() {
   const iconsList = ALL_ICONS.sort((a, b) => (a.name > b.name ? 1 : -1));
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [inputQuery, setInputQuery] = useState(null);
 
-  const { setQuery, setResults } = React.useContext(Context);
+  const { query, setQuery, setResults } = React.useContext(Context);
+
+  const setQueryEveywhere = (query) => {
+    setQuery(query); // Context
+    setInputQuery(query); // State for this component
+  };
 
   const onSearch = e => {
-    setQuery(e.target.value.toLowerCase());
+    const query = e.target.value.toLowerCase();
+    router.push({ pathname: searchPath, query: query ? { q: query } : null });
+    setQueryEveywhere(query);
     setResults(prevResult => {
       return {}
     });
   };
 
   const goToSearch = e => {
-    router.push("/search");
+    if (!router.asPath.includes(searchPath)) router.push(searchPath);
   };
 
   const onBlur = event => {
@@ -43,6 +53,7 @@ export default function Sidebar() {
           onFocus={goToSearch}
           onBlur={onBlur}
           onChange={onSearch}
+          value={inputQuery !== null ? inputQuery : query}
         />
       </div>
 
@@ -55,7 +66,12 @@ export default function Sidebar() {
         {iconsList.map(icon => (
           <li key={icon.id}>
             <ActiveLink href={{ pathname: "icons", query: { name: icon.id } }}>
-              <a className="rounded px2 py1">{icon.name}</a>
+              <a
+                className="rounded px2 py1"
+                onClick={(e) => setQueryEveywhere("")}
+              >
+                {icon.name}
+              </a>
             </ActiveLink>
           </li>
         ))}

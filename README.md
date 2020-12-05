@@ -39,20 +39,21 @@ For example, to use an icon from **Material Design**, your import would be: `imp
 
 ## Icons
 
-| Icon Library                                                  | License                                                                                   |
-| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [Ant Design Icons](https://ant.design/components/icon/)       | [MIT](https://github.com/ant-design/ant-design-icons/blob/master/LICENSE)                 |
-| [Bootstrap Icons](https://icons.getbootstrap.com/)            | [MIT](https://github.com/twbs/icons/blob/master/LICENSE.md)                               |
-| [Devicon](https://konpa.github.io/devicon/)                   | [MIT](https://github.com/konpa/devicon/blob/master/LICENSE)                               |
-| [Feather](https://feathericons.com/)                          | [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)                        |
-| [Font Awesome](https://fontawesome.com/)                      | [CC BY 4.0 License](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt)  |
-| [Game Icons](https://game-icons.net/)                         | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt)                  |
-| [Github Octicons](https://octicons.github.com/)               | [MIT](https://github.com/primer/octicons/blob/master/LICENSE)                             |
-| [Ionicons](https://ionicons.com/)                             | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)                         |
-| [Material Design](https://material.io/resources/icons/)       | [Apache License 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) |
-| [Remix Icon](https://remixicon.com/)                          | [Apache License 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License)       |
-| [Typicons](http://s-ings.com/typicons/)                       | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)                           |
-| [Weather Icons](https://erikflowers.github.io/weather-icons/) | [SIL OFL 1.1](http://scripts.sil.org/OFL)                                                 |
+| Icon Library                                                                   | License                                                                                   |
+| -------------------------------------------------------------------------------| ----------------------------------------------------------------------------------------- |
+| [Ant Design Icons](https://ant.design/components/icon/)                        | [MIT](https://github.com/ant-design/ant-design-icons/blob/master/LICENSE)                 |
+| [Bootstrap Icons](https://icons.getbootstrap.com/)                             | [MIT](https://github.com/twbs/icons/blob/master/LICENSE.md)                               |
+| [Devicon](https://konpa.github.io/devicon/)                                    | [MIT](https://github.com/konpa/devicon/blob/master/LICENSE)                               |
+| [Feather](https://feathericons.com/)                                           | [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)                        |
+| [Font Awesome](https://fontawesome.com/)                                       | [CC BY 4.0 License](https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt)  |
+| [Game Icons](https://game-icons.net/)                                          | [CC BY 3.0](https://github.com/game-icons/icons/blob/master/license.txt)                  |
+| [Github Octicons](https://octicons.github.com/)                                | [MIT](https://github.com/primer/octicons/blob/master/LICENSE)                             |
+| [Ionicons](https://ionicons.com/)                                              | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)                         |
+| [Material Design](https://material.io/resources/icons/)                        | [Apache License 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) |
+| [Remix Icon](https://remixicon.com/)                                           | [Apache License 2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License)       |
+| [Predix Design System Icons](https://www.predix-ui.com/#/elements/px-icon-set) | [Apache License 2.0](https://github.com/predixdesignsystem/px-icon-set/blob/master/LICENSE)
+| [Typicons](http://s-ings.com/typicons/)                                        | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)                           |
+| [Weather Icons](https://erikflowers.github.io/weather-icons/)                  | [SIL OFL 1.1](http://scripts.sil.org/OFL)                                                 |
 
 You can add more icons by submitting pull requests or creating issues.
 
@@ -162,6 +163,7 @@ yarn build
 ```
 
 ### Preview
+
 The preview site is the [`react-icons`](https://react-icons.netlify.com/) website, built in [NextJS](https://nextjs.org/).
 
 ```bash
@@ -173,16 +175,74 @@ yarn start
 ```
 
 ### Demo
+
 The demo is a [Create React App](https://create-react-app.dev/) boilerplate with `react-icons` added as a dependency for easy testing.
 
-```bash
-cd packages/react-icons
-yarn build
+### How to add an icon set
 
-cd ../demo
-yarn start
+#### 1. Add new git submodule
+
+From the main directory (where this file is located) run the following command:
+
+```bash
+git submodule add --name <name> <git-repo-url-for-the-new-icon-set> packages/react-icons/src/icons/<name>
 ```
 
+#### 2. Modify **README.md** (this document)
+
+Add the name, URL, and the license link to the table in the `##Icons` section of this file.
+Keep the list in alphabetical order.
+
+#### 3. Modify **packages/react-icons/.gitignore**
+
+Add the two-letter folder name for the new icon set, e.g.:
+
+```text
+...
+/xy/
+...
+```
+
+#### 4. Modify **packages/react-icons/LICENSE**
+
+Add license details about the new icon set.
+
+#### 5. Modify **packages/react-icons/src/icons/index.js**
+
+Add the object with the following structure:
+
+```JavaScript
+{
+      id: "xy",                                    // Two-letter id
+      name: "e.g. Xenon Yellow Icons",             // The full icon set name
+      contents: [
+        {
+          files: path.resolve(__dirname, "<relative-path-to-git-submodule>/<path-to-svg-icons>/<filter>"),
+          formatter: name => `Xy${name}`            // So that all icon names from this set will start with "Xy"
+        }
+      ],
+      // URL of the github repo
+      projectUrl: "https://github.com/xy/xy-icons",
+      license: "Apache License Version 2.0",        // License type
+      licenseUrl: "http://www.apache.org/licenses/" // URL of the license definition
+}
+```
+
+to the `icons` array.
+
+#### 6. Once everything builds and looks right in the preview, create a pull request
+
+## Tips
+
+### SVG
+
+Svg is [supported](http://caniuse.com/#search=svg) by all major browsers.
+
+### Why ES6 import and not fonts
+
+With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
+
+### Related
 ## Why React SVG components instead of fonts?
 
 SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.

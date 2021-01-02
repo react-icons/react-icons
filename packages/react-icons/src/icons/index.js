@@ -340,5 +340,29 @@ module.exports = {
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     },
+    {
+      id: "bis",
+      name: "BoxIcons Solid",
+      contents: [
+        {
+          files: path.resolve(__dirname, "boxicons/svg/solid/*.svg"),
+          formatter: (name) => `Bis${name.replace("Bxs", "")}`,
+        },
+      ],
+      projectUrl: "https://github.com/atisawd/boxicons",
+      license: "CC BY 4.0 License",
+    },
+    {
+      id: "bil",
+      name: "BoxIcons Logos",
+      contents: [
+        {
+          files: path.resolve(__dirname, "boxicons/svg/logos/*.svg"),
+          formatter: (name) => `Bil${name.replace("Bxl", "")}`,
+        },
+      ],
+      projectUrl: "https://github.com/atisawd/boxicons",
+      license: "CC BY 4.0 License",
+    },
   ],
 };

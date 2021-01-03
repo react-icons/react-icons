@@ -49,3 +49,6 @@
 [submodule "vscode-icons"]
 	path = packages/react-icons/src/icons/vscode-icons
 	url = https://github.com/microsoft/vscode-codicons.git
+[submodule "packages/react-icons/src/icons/themify-icons"]
+	path = packages/react-icons/src/icons/themify-icons
+	url = https://github.com/lykmapipo/themify-icons.git

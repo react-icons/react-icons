@@ -340,5 +340,19 @@ module.exports = {
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     },
+    {
+      id: "tfi",
+      name: "Themify Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "themify-icons/SVG/*.svg"),
+          formatter: (name) => `Tfi${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/lykmapipo/themify-icons",
+      license: "MIT",
+      licenseUrl:
+        "https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE",
+    },
   ],
 };

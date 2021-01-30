@@ -1,4 +1,5 @@
 const path = require("path");
+const camelcase = require("camelcase");
 
 module.exports = {
   icons: [
@@ -62,9 +63,14 @@ module.exports = {
         {
           files: path.resolve(
             __dirname,
-            "material-design-icons/*/svg/production/*_24px.svg"
+            "material-design-icons/src/*/*/materialicons/24px.svg"
           ),
-          formatter: (name) => name.replace(/Ic(\w+)24px/i, "Md$1"),
+          formatter: (name, file) =>
+            `Md${camelcase(
+              file.replace(/^.*\/([^/]+)\/materialicons\/24px.svg$/i, "$1"),
+              { pascalCase: true }
+            )}`,
+          processWithSVGO: true,
         },
       ],
       projectUrl: "http://google.github.io/material-design-icons/",

@@ -1,5 +1,6 @@
 const path = require("path");
 const camelcase = require("camelcase");
+const glob = require("glob-promise");
 
 module.exports = {
   icons: [
@@ -61,13 +62,32 @@ module.exports = {
       name: "Material Design icons",
       contents: [
         {
-          files: path.resolve(
-            __dirname,
-            "material-design-icons/src/*/*/materialicons/24px.svg"
-          ),
+          files: async () => {
+            const normal = await glob(
+              path.resolve(
+                __dirname,
+                "material-design-icons/src/*/*/materialicons/24px.svg"
+              )
+            );
+            const twotone = await glob(
+              path.resolve(
+                __dirname,
+                "material-design-icons/src/*/*/materialiconstwotone/24px.svg"
+              )
+            );
+            return [
+              ...normal,
+              ...twotone.filter(
+                (file) => !normal.includes(file.replace("twotone/", "/"))
+              ),
+            ];
+          },
           formatter: (name, file) =>
             `Md${camelcase(
-              file.replace(/^.*\/([^/]+)\/materialicons\/24px.svg$/i, "$1"),
+              file.replace(
+                /^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i,
+                "$1"
+              ),
               { pascalCase: true }
             )}`,
           processWithSVGO: true,

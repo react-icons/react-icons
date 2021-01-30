@@ -5,7 +5,9 @@ const fs = require("fs").promises;
 const path = require("path");
 
 async function getIconFiles(content) {
-  return glob(content.files);
+  return typeof content.files === "function"
+    ? await content.files()
+    : glob(content.files);
 }
 async function convertIconData(svg, multiColor) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");

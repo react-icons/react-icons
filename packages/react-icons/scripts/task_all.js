@@ -84,7 +84,8 @@ async function writeIconModule(icon, { DIST, LIB, rootDir }) {
       const rawName = path.basename(file, path.extname(file));
       const pascalName = camelcase(rawName, { pascalCase: true });
       const name =
-        (content.formatter && content.formatter(pascalName)) || pascalName;
+        (content.formatter && content.formatter(pascalName, file)) ||
+        pascalName;
       if (exists.has(name)) continue;
       exists.add(name);
 

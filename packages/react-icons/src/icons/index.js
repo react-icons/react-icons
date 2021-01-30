@@ -92,6 +92,21 @@ module.exports = {
             )}`,
           processWithSVGO: true,
         },
+        {
+          files: path.resolve(
+            __dirname,
+            "material-design-icons/src/*/*/materialiconsoutlined/24px.svg"
+          ),
+          formatter: (name, file) =>
+            `Md${camelcase(
+              file.replace(
+                /^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i,
+                "$1"
+              ),
+              { pascalCase: true }
+            )}Outline`,
+          processWithSVGO: true,
+        },
       ],
       projectUrl: "http://google.github.io/material-design-icons/",
       license: "Apache License Version 2.0",

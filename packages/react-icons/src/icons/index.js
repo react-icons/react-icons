@@ -265,15 +265,15 @@ module.exports = {
       name: "Heroicons",
       contents: [
         {
-          files: path.resolve(__dirname, "heroicons/solid/*.svg"),
+          files: path.resolve(__dirname, "heroicons/optimized/solid/*.svg"),
           formatter: (name) => `Hi${name}`,
         },
         {
-          files: path.resolve(__dirname, "heroicons/outline/*.svg"),
+          files: path.resolve(__dirname, "heroicons/optimized/outline/*.svg"),
           formatter: (name) => `HiOutline${name}`,
         },
       ],
-      projectUrl: "https://github.com/refactoringui/heroicons",
+      projectUrl: "https://github.com/tailwindlabs/heroicons",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT",
     },

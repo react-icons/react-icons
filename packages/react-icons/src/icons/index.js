@@ -340,5 +340,22 @@ module.exports = {
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     },
+    {
+      id: "Mi",
+      name: "Map Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "map-icons/src/icons/*.svg"),
+          formatter: (name) => `Mi${name}`,
+        },
+        {
+          files: path.resolve(__dirname, "map-icons/src/icons/*.svg"),
+          formatter: (name) => `MiMar${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/scottdejonge/Map-Icons",
+      license: "MIT",
+      licenseUrl: "https://github.com/scottdejonge/map-icons/blob/master/LICENSE",
+    },
   ],
 };

@@ -347,11 +347,7 @@ module.exports = {
         {
           files: path.resolve(__dirname, "map-icons/src/icons/*.svg"),
           formatter: (name) => `Mi${name}`,
-        },
-        {
-          files: path.resolve(__dirname, "map-icons/src/icons/*.svg"),
-          formatter: (name) => `MiMar${name}`,
-        },
+        }
       ],
       projectUrl: "https://github.com/scottdejonge/Map-Icons",
       license: "MIT",

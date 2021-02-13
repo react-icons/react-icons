@@ -4,9 +4,15 @@ import React from "react";
 
 function Icon({ icon, name, highlightPattern = null }) {
   const copyToClipboard = () => {
-    copy(name);
+    const pattern = /[A-Z][a-z]{1,3}/g;
+    const iconType = name.match(pattern);
+
+    const copyToClipboardValue = `import { ${name} } from "react-icons/${iconType[0].toLowerCase()}"`;
+    console.log(copyToClipboardValue);
+    copy(copyToClipboardValue);
+
     toast.success(`Copied '${name}' to clipboard`, {
-      position: "bottom-center"
+      position: "bottom-center",
     });
   };
 

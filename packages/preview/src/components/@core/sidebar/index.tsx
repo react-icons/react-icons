@@ -1,7 +1,7 @@
 import { ALL_ICONS } from "@utils/icon";
 import { Context } from "@utils/search-context";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import ActiveLink from "../active-link";
 import Heading from "../heading";
@@ -15,6 +15,19 @@ export default function Sidebar() {
   const [inputQuery, setInputQuery] = useState(null);
 
   const { query, setQuery, setResults } = React.useContext(Context);
+
+  const searchInputRef = useRef(null);
+  const focusSearchInput = ({ key }) => {
+    if (searchInputRef.current && key === "/") {
+      searchInputRef.current.focus();
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("keydown", focusSearchInput);
+    return () => {
+      document.removeEventListener("keydown", focusSearchInput, true);
+    };
+  }, []);
 
   const setQueryEveywhere = (query) => {
     setQuery(query); // Context
@@ -46,10 +59,11 @@ export default function Sidebar() {
 
       <div className="search p2">
         <input
+          ref={searchInputRef}
           type="text"
           aria-label="search"
           className="px2 py1"
-          placeholder="🔍 Search Icons"
+          placeholder="🔍 Search Icons (/)"
           onFocus={goToSearch}
           onBlur={onBlur}
           onChange={onSearch}

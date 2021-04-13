@@ -336,5 +336,18 @@ module.exports = {
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     },
+    {
+      id: "mi",
+      name: "Webfont Medical Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "webfont-medical-icons/packages/svg/*.svg"),
+          formatter: (name) => `Mi${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/samcome/webfont-medical-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
   ],
 };

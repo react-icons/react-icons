@@ -52,4 +52,3 @@
 [submodule "webfont-medical-icons"]
 	path = packages/react-icons/src/icons/webfont-medical-icons
 	url = https://github.com/samcome/webfont-medical-icons.git
-

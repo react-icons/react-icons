@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./lib/esm",
+    "outDir": "./build/lib/esm",
     "module": "es2015",
     "target": "es5",
     "lib": [

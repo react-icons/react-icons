@@ -1,6 +1,7 @@
 {
-  "name": "react-icons",
-  "version": "3.6.1",
+  "name": "react-icons_builders",
+  "private": true,
+  "version": "4.2.0",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
@@ -18,41 +19,30 @@
     "url": "https://github.com/react-icons/react-icons/issues"
   },
   "homepage": "https://github.com/react-icons/react-icons#readme",
+  "peerDependencies": {
+    "react": "*"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@types/react": "^16.8.17",
-    "babel-eslint": "^10.0.1",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@types/react": "^16.9.19",
     "camelcase": "^5.0.0",
     "cheerio": "^1.0.0-rc.2",
-    "copy": "^0.3.2",
-    "eslint": "^5.6.1",
-    "eslint-config-google": "^0.12.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-node": "^9.0.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
     "feather-icons": "^4.7.3",
+    "find-package": "^1.0.0",
+    "glob": "^7.1.6",
     "glob-promise": "^3.4.0",
     "ionicons": "^4.4.4",
-    "lerna": "^3.13.4",
-    "netlify-cli": "^2.11.18",
+    "ionicons-5": "npm:ionicons@5",
+    "lerna": "^3.20.2",
     "octicons": "^8.1.0",
-    "prettier": "^1.14.3",
+    "prettier": "^1.19.1",
     "renamer": "^1.0.0",
     "rimraf": "^2.6.2",
+    "svgo": "^1.3.2",
     "typescript": "^3.4.5"
   },
   "scripts": {
-    "build": "node scripts/build.js && yarn build-mjs && yarn build-cjs",
-    "prebuild": "node ../../node_modules/copy/bin/cli.js ../../README.md ./packages/react-icons && rimraf ./lib",
-    "build-mjs": "tsc && babel ./lib/esm -d ./lib/esm",
-    "build-cjs": "tsc -p ./tsconfig.commonjs.json"
-  },
-  "dependencies": {
-    "camelcase": "^5.0.0"
+    "build": "node scripts/build.js"
   }
 }

@@ -16,3 +16,36 @@
 [submodule "devicons"]
 	path = packages/react-icons/src/icons/devicons
 	url = https://github.com/vorillaz/devicons.git
+[submodule "ant-design-icons"]
+	path = packages/react-icons/src/icons/ant-design-icons
+	url = https://github.com/ant-design/ant-design-icons.git
+[submodule "packages/react-icons/src/icons/bootstrap"]
+	path = packages/react-icons/src/icons/bootstrap
+	url = https://github.com/twbs/icons.git
+[submodule "RemixIcon"]
+	path = packages/react-icons/src/icons/RemixIcon
+	url = https://github.com/Remix-Design/RemixIcon.git
+[submodule "packages/react-icons/src/icons/grommet-icons"]
+	path = packages/react-icons/src/icons/grommet-icons
+	url = https://github.com/grommet/grommet-icons.git
+[submodule "flat-color-icons"]
+	path = packages/react-icons/src/icons/flat-color-icons
+	url = https://github.com/icons8/flat-color-icons.git
+[submodule "packages/react-icons/src/icons/heroicons"]
+	path = packages/react-icons/src/icons/heroicons
+	url = https://github.com/tailwindlabs/heroicons
+[submodule "simple-icons"]
+	path = packages/react-icons/src/icons/simple-icons
+	url = https://github.com/simple-icons/simple-icons
+[submodule "packages/react-icons/src/icons/icomoon-free"]
+	path = packages/react-icons/src/icons/icomoon-free
+	url = https://github.com/Keyamoon/IcoMoon-Free
+[submodule "packages/react-icons/src/icons/boxicons"]
+	path = packages/react-icons/src/icons/boxicons
+	url = https://github.com/atisawd/boxicons
+[submodule "packages/react-icons/src/icons/css.gg"]
+	path = packages/react-icons/src/icons/css.gg
+	url = https://github.com/astrit/css.gg
+[submodule "vscode-icons"]
+	path = packages/react-icons/src/icons/vscode-icons
+	url = https://github.com/microsoft/vscode-codicons.git

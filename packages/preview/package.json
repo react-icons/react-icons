@@ -1,21 +1,40 @@
 {
   "name": "preview",
-  "version": "3.6.1",
+  "description": "",
+  "scripts": {
+    "start": "next",
+    "build": "next build && next export",
+    "serve": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "version": "4.1.1-snapshot.0",
   "private": true,
   "dependencies": {
-    "history": "^4.7.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-icons": "^3.6.1",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1"
+    "@loadable/component": "^5.10.3",
+    "babel-plugin-codegen": "^3.1.0",
+    "babel-plugin-macros": "^2.8.0",
+    "basscss": "^8.1.0",
+    "cogo-toast": "^4.1.1",
+    "copy-to-clipboard": "^3.2.0",
+    "css-loader": "3.5.3",
+    "ignore-loader": "^0.1.2",
+    "next": "^9.5.3",
+    "next-pwa": "^2.0.2",
+    "node-sass": "^4.14.1",
+    "prism-react-renderer": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^4.1.1-snapshot.0",
+    "tiny-skeleton-loader-react": "^1.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@types/node": "^13.5.2",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "typescript": "^3.7.0-beta"
   },
   "browserslist": [
     ">0.2%",

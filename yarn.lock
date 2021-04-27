@@ -3176,6 +3176,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stencil/core@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "@stencil/core@npm:2.4.0"
+  bin:
+    stencil: bin/stencil
+  checksum: e8f30fcadbff5c71ef5c254f08311ed9d49baf23c8fb1b0908489f0ec9586fc3416ca9060cb26a6ee50777e27c75b2dce185fe8d2c31e7fb4728319c57394df1
+  languageName: node
+  linkType: hard
+
 "@surma/rollup-plugin-off-main-thread@npm:^1.1.1":
   version: 1.4.1
   resolution: "@surma/rollup-plugin-off-main-thread@npm:1.4.1"
@@ -10991,9 +11000,11 @@ fsevents@~2.1.2:
   linkType: hard
 
 "ionicons-5@npm:ionicons@5":
-  version: 5.2.3
-  resolution: "ionicons@npm:5.2.3"
-  checksum: 412f0824ad5ac62f484fad251f189d93d541c0cc15520a5547b0cef0bea98cc2733c4950c344b6214cae57c4f1eccdb8e9c02eb5ffa53d89be7e9415d9d725f8
+  version: 5.5.0
+  resolution: "ionicons@npm:5.5.0"
+  dependencies:
+    "@stencil/core": ^2.4.0
+  checksum: bd9a3b41eac91b1c08f8288971a9ff732719ba7e9845c38ee69ba7f79b84d865826b77241f3acbb410dcb7eb6722c55ce37badfc1b2daf0be3b20f02a50564ad
   languageName: node
   linkType: hard
 

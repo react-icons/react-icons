@@ -9,14 +9,14 @@ export default function SearchPageComponent() {
 
   const { query } = React.useContext(Context);
 
-  if (query.length > 2) {
+  if (query.length > 1) {
     const hightlightPattern = new RegExp(`(${query})`, "i");
     return (
       <>
         <h2>
           Results for: <i>{query}</i>
         </h2>
-        <div className="icons">
+        <div className={`icons`}>
           {allIcons.map((icon) => (
             <SearchIconSet
               key={icon.id}
@@ -30,5 +30,5 @@ export default function SearchPageComponent() {
       </>
     );
   }
-  return <h2>Please enter at least 3 characters to search...</h2>;
+  return <h2>Please enter at least 2 characters to search...</h2>;
 }

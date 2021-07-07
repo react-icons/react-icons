@@ -152,16 +152,17 @@ a {
   display: grid;
   grid-auto-rows: auto;
   grid-auto-columns: max-content;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-column-gap: var(--space-2);
   grid-row-gap: var(--space-2);
   text-align: center;
 
   .item {
     outline: none;
+    position: relative;
 
     .icon {
-      min-height: 64px;
+      min-height: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -170,7 +171,7 @@ a {
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
         0 1px 2px 0 rgba(0, 0, 0, 0.06);
       border: 2px solid transparent;
-      font-size: 1.6em;
+      font-size: 2.6em;
     }
 
     &:hover {
@@ -186,6 +187,33 @@ a {
       }
       .name {
         color: var(--color-brand);
+      }
+    }
+    .tooltip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-width: 150px;
+      height: 120px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      button {
+        width: calc(100% - 8px);
+        margin-bottom: 3px;
+        padding: 10px 30px;
+        background: var(--color-brand-light);
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: val(--color-black);
+        &:first-child {
+          margin-top: 2px;
+        }
       }
     }
   }

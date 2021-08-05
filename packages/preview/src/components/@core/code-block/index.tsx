@@ -5,7 +5,7 @@ import PrismTheme from "prism-react-renderer/themes/nightOwl";
 import React from "react";
 import { IoMdClipboard } from "react-icons/io";
 
-export default function CodeBlock({ code }) {
+export default function CodeBlock({ code, language }) {
   const copyToClipboard = () => {
     copy(code);
     toast.success(`Copied to clipboard`, {
@@ -18,7 +18,7 @@ export default function CodeBlock({ code }) {
       {...defaultProps}
       theme={PrismTheme}
       code={code.trim()}
-      language="jsx"
+      language={language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={`${className} code`} style={style}>

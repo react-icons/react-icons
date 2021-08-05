@@ -7,7 +7,7 @@ export default function IconSetImport({ iconId }) {
   return (
     <>
       <h2>Import</h2>
-      <CodeBlock code={importCode} />
+      <CodeBlock language="jsx" code={importCode} />
     </>
   );
 }

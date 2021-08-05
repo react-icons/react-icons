@@ -15,10 +15,10 @@ export default function HomePage() {
       </p>
 
       <h2>Installation (for standard modern project)</h2>
-      <CodeBlock code={`npm install react-icons --save`} />
+      <CodeBlock language="bash" code={`npm install react-icons --save`} />
 
       <h3>Usage</h3>
-      <CodeBlock code={HOME_USAGE} />
+      <CodeBlock language="jsx" code={HOME_USAGE} />
 
       <h2>Installation (for meteorjs, gatsbyjs, etc)</h2>
       <p>
@@ -26,10 +26,10 @@ export default function HomePage() {
         This method has the trade-off that it takes a long time to install the package.
         Suitable for MeteorJS, Gatsbyjs etc.
       </p>
-      <CodeBlock code={`npm install @react-icons/all-files --save`} />
+      <CodeBlock language="bash" code={`npm install @react-icons/all-files --save`} />
       
       <h3>Usage</h3>
-      <CodeBlock code={HOME_USAGE_ALL} />
+      <CodeBlock language="jsx" code={HOME_USAGE_ALL} />
 
       <h2>More info</h2>
       <p>

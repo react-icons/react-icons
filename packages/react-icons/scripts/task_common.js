@@ -90,23 +90,25 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
     const files = (
       await Promise.all(icon.contents.map((content) => getIconFiles(content)))
     ).flat();
+    console.log(files[0]);
+    if (files[0]) {
+      const firstDir = path.dirname(files[0]);
+      const packageJson = findPackage(firstDir, true);
 
-    const firstDir = path.dirname(files[0]);
-    const packageJson = findPackage(firstDir, true);
+      let gitVersion;
+      if (!packageJson.version) {
+        const { stdout } = await exec(
+          `cd ${firstDir} && git describe --tags || cd ${firstDir} && git rev-parse HEAD`
+        );
+        gitVersion = stdout.trim();
+      }
 
-    let gitVersion;
-    if (!packageJson.version) {
-      const { stdout } = await exec(
-        `cd ${firstDir} && git describe --tags || cd ${firstDir} && git rev-parse HEAD`
-      );
-      gitVersion = stdout.trim();
+      versions.push({
+        icon,
+        version: packageJson.version || gitVersion,
+        count: files.length,
+      });
     }
-
-    versions.push({
-      icon,
-      version: packageJson.version || gitVersion,
-      count: files.length,
-    });
   }
 
   const emptyVersions = versions.filter((v) => v.count === 0);

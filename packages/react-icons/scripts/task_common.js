@@ -90,7 +90,6 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
     const files = (
       await Promise.all(icon.contents.map((content) => getIconFiles(content)))
     ).flat();
-    console.log(files[0]);
     if (files[0]) {
       const firstDir = path.dirname(files[0]);
       const packageJson = findPackage(firstDir, true);

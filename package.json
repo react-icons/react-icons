@@ -1,6 +1,7 @@
 {
-  "name": "react-icons-root",
-  "private": true,
+  "name": "react-icons",
+  "private": false,
+  "version": "4.2.1",
   "workspaces": [
     "packages/*"
   ],

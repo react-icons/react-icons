@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useContext} from 'react';
 
 import { IconContext, DefaultContext } from './iconContext';
 
@@ -29,9 +30,12 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
 
 export type IconType = (props: IconBaseProps) => JSX.Element;
 export function IconBase(props:IconBaseProps & { attr?: {} }): JSX.Element {
+  
+  const iconContext = useContext(IconContext);
+  
   const elem = (conf: IconContext) => {
     const {attr, size, title, ...svgProps} = props;
-    const computedSize = size || conf.size || "1em";
+    const computedSize = size || conf.size;
     let className;
     if (conf.className) className = conf.className;
     if (props.className) className = (className ? className + ' ' : '') + props.className;
@@ -56,7 +60,5 @@ export function IconBase(props:IconBaseProps & { attr?: {} }): JSX.Element {
     )
   };
 
-  return IconContext !== undefined
-    ? <IconContext.Consumer>{(conf: IconContext) => elem(conf)}</IconContext.Consumer>
-    : elem(DefaultContext);
+  return elem(iconContext);
 }

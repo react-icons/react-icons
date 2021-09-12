@@ -349,5 +349,26 @@ module.exports = {
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT",
     },
+    {
+      id: "hi",
+      name: "Health icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "healthicons/public/icons/svg/filled/*/*.svg"),
+          formatter: (name) => `Hi${name}`,
+        },
+        {
+          files: path.resolve(__dirname, "healthicons/public/icons/svg/negative/*/*.svg"),
+          formatter: (name) => `HiNegative${name}`,
+        },
+        {
+          files: path.resolve(__dirname, "healthicons/public/icons/svg/outline/*/*.svg"),
+          formatter: (name) => `HiOutline${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/resolvetosavelives/healthicons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
   ],
 };

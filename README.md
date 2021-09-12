@@ -81,6 +81,7 @@ Icon Library|License|Version|Count
 [BoxIcons](https://github.com/atisawd/boxicons)|[CC BY 4.0 License](undefined)|2.0.5|738
 [css.gg](https://github.com/astrit/css.gg)|[MIT](https://opensource.org/licenses/MIT)|2.0.0|704
 [VS Code Icons](https://github.com/microsoft/vscode-codicons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|0.0.1|319
+[Health Icons](https://github.com/resolvetosavelives/healthicons)|[MIT](https://opensource.org/licenses/MIT)|0.1.0|2120
 
 
 You can add more icons by submitting pull requests or creating issues.

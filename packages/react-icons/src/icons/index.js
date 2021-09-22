@@ -349,5 +349,22 @@ module.exports = {
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT",
     },
+    {
+      id: "mc",
+      name: "Meteocons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "meteocons/production/fill/all/*.svg"),
+          formatter: (name) => `Mc${name}`
+        },
+        {
+          files: path.resolve(__dirname, "meteocons/production/line/all/*.svg"),
+          formatter: (name) => `McLine${name}`
+        },
+      ],
+      projectUrl: "https://github.com/basmilius/weather-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT"
+    },
   ],
 };

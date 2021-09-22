@@ -51,4 +51,7 @@
 	url = https://github.com/microsoft/vscode-codicons.git
 [submodule "webfont-medical-icons"]
 	path = packages/react-icons/src/icons/webfont-medical-icons
-	url = https://github.com/samcome/webfont-medical-icons.git
+  url = https://github.com/samcome/webfont-medical-icons.git
+[submodule "meteocons"]
+  path = packages/react-icons/src/icons/meteocons
+  url = https://github.com/basmilius/weather-icons.git

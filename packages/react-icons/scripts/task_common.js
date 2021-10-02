@@ -57,10 +57,10 @@ async function writeLicense({ DIST, LIB, rootDir }) {
 }
 
 async function writeEntryPoints({ DIST, LIB, rootDir }) {
-  const generateEntryCjs = function () {
+  const generateEntryCjs = function() {
     return `module.exports = require('./lib/cjs/index.js');`;
   };
-  const generateEntryMjs = function (filename = "index.js") {
+  const generateEntryMjs = function(filename = "index.js") {
     return `import * as m from './lib/esm/${filename}'
 export default m
     `;
@@ -90,6 +90,10 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
     const files = (
       await Promise.all(icon.contents.map((content) => getIconFiles(content)))
     ).flat();
+
+    if (!files[0]) {
+      throw new Error(`Missing path for: ${icon.name}`);
+    }
 
     const firstDir = path.dirname(files[0]);
     const packageJson = findPackage(firstDir, true);

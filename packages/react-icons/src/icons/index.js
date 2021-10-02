@@ -1,4 +1,6 @@
 const path = require("path");
+const camelcase = require("camelcase");
+const glob = require("glob-promise");
 
 module.exports = {
   icons: [
@@ -60,11 +62,51 @@ module.exports = {
       name: "Material Design icons",
       contents: [
         {
+          files: async () => {
+            const normal = await glob(
+              path.resolve(
+                __dirname,
+                "material-design-icons/src/*/*/materialicons/24px.svg"
+              )
+            );
+
+            const twotone = await glob(
+              path.resolve(
+                __dirname,
+                "material-design-icons/src/*/*/materialiconstwotone/24px.svg"
+              )
+            );
+            return [
+              ...normal,
+              ...twotone.filter(
+                (file) => !normal.includes(file.replace("twotone/", "/"))
+              ),
+            ];
+          },
+          formatter: (name, file) =>
+            `Md${camelcase(
+              file.replace(
+                /^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i,
+                "$1"
+              ),
+              { pascalCase: true }
+            )}`,
+          processWithSVGO: true,
+        },
+        {
           files: path.resolve(
             __dirname,
-            "material-design-icons/*/svg/production/*_24px.svg"
+            "material-design-icons/src/*/*/materialiconsoutlined/24px.svg"
           ),
-          formatter: (name) => name.replace(/Ic(\w+)24px/i, "Md$1"),
+          formatter: (name, file) =>
+            `MdOutline${camelcase(
+              file.replace(
+                /^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i,
+                "$1"
+              ),
+              { pascalCase: true }
+            )}`,
+          processWithSVGO: true,
         },
       ],
       projectUrl: "http://google.github.io/material-design-icons/",

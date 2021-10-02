@@ -7498,7 +7498,7 @@ __metadata:
     enzyme-to-json: ^3.4.3
     react: ^16.12.0
     react-dom: ^16.12.0
-    react-icons: ^4.1.1-snapshot.0
+    react-icons: ^4.3.0
     react-scripts: ^3.4.3
   languageName: unknown
   linkType: soft
@@ -7512,7 +7512,7 @@ __metadata:
     enzyme-to-json: ^3.4.3
     react: ^16.12.0
     react-dom: ^16.12.0
-    react-icons: ^4.1.1-snapshot.0
+    react-icons: ^4.3.0
     react-scripts: ^3.4.3
   languageName: unknown
   linkType: soft
@@ -16061,7 +16061,7 @@ fsevents@~2.1.2:
     prop-types: ^15.7.2
     react: ^16.12.0
     react-dom: ^16.12.0
-    react-icons: ^4.1.1-snapshot.0
+    react-icons: ^4.3.0
     tiny-skeleton-loader-react: ^1.1.0
     typescript: ^3.7.0-beta
   languageName: unknown
@@ -16510,7 +16510,7 @@ fsevents@~2.1.2:
   languageName: unknown
   linkType: soft
 
-"react-icons@^4.1.1-snapshot.0, react-icons@workspace:packages/_react-icons_all":
+"react-icons@^4.3.0, react-icons@workspace:packages/_react-icons_all":
   version: 0.0.0-use.local
   resolution: "react-icons@workspace:packages/_react-icons_all"
   peerDependencies:
@@ -16725,7 +16725,7 @@ fsevents@~2.1.2:
     "@types/react-dom": ^16.9.5
     react: ^16.12.0
     react-dom: ^16.12.0
-    react-icons: ^4.1.1-snapshot.0
+    react-icons: ^4.3.0
     react-scripts: 3.3.0
     typescript: 3.7.5
   languageName: unknown
@@ -20303,7 +20303,7 @@ typescript@3.7.5:
   version: 0.0.0-use.local
   resolution: "webpack4-test@workspace:packages/webpack4-test"
   dependencies:
-    react-icons: ^4.1.1-snapshot.0
+    react-icons: ^4.3.0
     webpack: ^4.31.0
     webpack-cli: ^3.3.2
   languageName: unknown

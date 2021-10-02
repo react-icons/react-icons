@@ -1,4 +1,6 @@
 const path = require("path");
+const camelcase = require("camelcase");
+const glob = require("glob-promise");
 
 module.exports = {
   icons: [
@@ -60,11 +62,51 @@ module.exports = {
       name: "Material Design icons",
       contents: [
         {
+          files: async () => {
+            const normal = await glob(
+              path.resolve(
+                __dirname,
+                "material-design-icons/src/*/*/materialicons/24px.svg"
+              )
+            );
+
+            const twotone = await glob(
+              path.resolve(
+                __dirname,
+                "material-design-icons/src/*/*/materialiconstwotone/24px.svg"
+              )
+            );
+            return [
+              ...normal,
+              ...twotone.filter(
+                (file) => !normal.includes(file.replace("twotone/", "/"))
+              ),
+            ];
+          },
+          formatter: (name, file) =>
+            `Md${camelcase(
+              file.replace(
+                /^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i,
+                "$1"
+              ),
+              { pascalCase: true }
+            )}`,
+          processWithSVGO: true,
+        },
+        {
           files: path.resolve(
             __dirname,
-            "material-design-icons/*/svg/production/*_24px.svg"
+            "material-design-icons/src/*/*/materialiconsoutlined/24px.svg"
           ),
-          formatter: (name) => name.replace(/Ic(\w+)24px/i, "Md$1"),
+          formatter: (name, file) =>
+            `MdOutline${camelcase(
+              file.replace(
+                /^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i,
+                "$1"
+              ),
+              { pascalCase: true }
+            )}`,
+          processWithSVGO: true,
         },
       ],
       projectUrl: "http://google.github.io/material-design-icons/",
@@ -335,19 +377,6 @@ module.exports = {
       projectUrl: "https://github.com/microsoft/vscode-codicons",
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
-    },
-    {
-      id: "mi",
-      name: "Webfont Medical Icons",
-      contents: [
-        {
-          files: path.resolve(__dirname, "webfont-medical-icons/packages/svg/*.svg"),
-          formatter: (name) => `Mi${name}`,
-        },
-      ],
-      projectUrl: "https://github.com/samcome/webfont-medical-icons",
-      license: "MIT",
-      licenseUrl: "https://opensource.org/licenses/MIT",
     },
   ],
 };

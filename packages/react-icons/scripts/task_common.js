@@ -91,6 +91,10 @@ async function writeIconVersions({ DIST, LIB, rootDir }) {
       await Promise.all(icon.contents.map((content) => getIconFiles(content)))
     ).flat();
 
+    if (!files[0]) {
+      throw new Error(`Missing file path for icon: ${icon.name}`);
+    }
+
     const firstDir = path.dirname(files[0]);
     const packageJson = findPackage(firstDir, true);
 

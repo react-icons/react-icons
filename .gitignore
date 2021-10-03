@@ -6,3 +6,4 @@ module
 *.tgz
 
 .yarn/cache
+.yarn/install-state.gz

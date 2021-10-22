@@ -17,7 +17,7 @@ yarn add react-icons
 npm install react-icons --save
 ```
 
-example usage
+Example usage
 
 ```jsx
 import { FaBeer } from 'react-icons/fa';

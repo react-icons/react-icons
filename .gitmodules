@@ -49,3 +49,12 @@
 [submodule "vscode-icons"]
 	path = packages/react-icons/src/icons/vscode-icons
 	url = https://github.com/microsoft/vscode-codicons.git
+[submodule "packages/react-icons/src/icons/academicons"]
+	path = packages/react-icons/src/icons/academicons
+	url = https://github.com/jpswalsh/academicons
+[submodule "packages/react-icons/src/icons/akar-icons"]
+	path = packages/react-icons/src/icons/akar-icons
+	url = https://github.com/artcoholic/akar-icons
+[submodule "packages/react-icons/src/icons/phosphor-icons"]
+	path = packages/react-icons/src/icons/phosphor-icons
+	url = https://github.com/phosphor-icons/phosphor-icons

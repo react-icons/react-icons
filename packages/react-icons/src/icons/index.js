@@ -378,5 +378,44 @@ module.exports = {
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     },
+    {
+      id: "akaricons",
+      name: "Akar Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "akar-icons/src/svg/*.svg"),
+          formatter: (name) => `Akaricon${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/artcoholic/akar-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
+    {
+      id: "academicons",
+      name: "Akademicons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "academicons/svg/*.svg"),
+          formatter: (name) => `Akademicon${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/jpswalsh/academicons",
+      license: "SIL OFL 1.1",
+      licenseUrl: "http://scripts.sil.org/OFL",
+    },
+    {
+      id: "phosphor-icons",
+      name: "Phosphor Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "phosphor-icons/assets/*/*.svg"),
+          formatter: (name) => `PhosphorIcon${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/phosphor-icons/phosphor-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
   ],
 };

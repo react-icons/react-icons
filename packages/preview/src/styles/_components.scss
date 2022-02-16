@@ -189,7 +189,11 @@ a {
       }
     }
   }
-
+  .highlight-icon {
+    border-color: rgba(var(--color-brand-rgb), 0.5);
+    background: rgba(var(--color-brand-rgb), 0.005);
+    color: var(--color-brand);
+  }
   .name {
     margin-top: 0.5rem;
     font-size: 0.7em;

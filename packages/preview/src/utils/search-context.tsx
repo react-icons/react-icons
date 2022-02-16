@@ -1,11 +1,16 @@
-import React from "react";
-
-export const Context = React.createContext({
+import React, { useEffect } from "react";
+interface SearchContext {
+  setQuery: React.Dispatch<React.SetStateAction<string>>,
+  query: string,
+  results: any,
+  setResults: React.Dispatch<React.SetStateAction<any>>
+}
+export const Context = React.createContext<SearchContext>({
   query: "",
-  setQuery: () => {},
+  setQuery: () => { },
   results: {},
-  setResults: () => {}
-} as any);
+  setResults: () => { }
+});
 
 export const Provider = ({ children }) => {
   const [query, setQuery] = React.useState("");

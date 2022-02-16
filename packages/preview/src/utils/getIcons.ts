@@ -2,11 +2,16 @@ import codegen from "babel-plugin-codegen/macro";
 
 const fn = codegen`
 const { IconsManifest } = require("react-icons/lib/cjs");
+const l = IconsManifest.length
 
 let codes = "(function (id) { switch (id) {";
-IconsManifest.forEach(icon => {
+for(let i = 0; i<l;i++){
+  const icon = IconsManifest[i]
+
   codes += 'case "' + icon.id + '":\\nreturn import("react-icons/' + icon.id +'/index");\\n'
-})
+
+}
+
 codes += '}})';
 
 module.exports = codes;

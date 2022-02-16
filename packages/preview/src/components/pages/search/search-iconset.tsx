@@ -36,7 +36,6 @@ const Icons = ({ found, state, onClick, icons, highlightPattern }: { icons: any,
 const MemoizedIcons = React.memo(Icons)
 function SearchIconSet({ state, icon, query, highlightPattern, onIconClick }: SearchIconSetProps) {
   const IconSet = React.memo(loadable.lib(() => getIcons(icon.id)));
-
   return (
     <IconSet fallback={<SearchPageIconLoading />}>
       {({ default: icons }) => {

@@ -13,8 +13,8 @@
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.10.3",
-    "babel-plugin-codegen": "^3.1.0",
-    "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-codegen": "latest",
+    "babel-plugin-macros": "latest",
     "basscss": "^8.1.0",
     "cogo-toast": "^4.1.1",
     "copy-to-clipboard": "^3.2.0",

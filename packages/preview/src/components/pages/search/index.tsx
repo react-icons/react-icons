@@ -33,6 +33,7 @@ const IconSet = ({ state, allIcons, highlightPattern, onIconClick, query }: { st
 const MemoizedIconSet = React.memo(IconSet)
 
 export default function SearchPageComponent() {
+
   const allIcons = ALL_ICONS;
   const [state, setState] = useState({ code: '', name: '', icon: () => '' })
   const onIconClick = (name, importName, icon) => {

@@ -348,6 +348,10 @@ module.exports = {
           files: path.resolve(__dirname, "boxicons/svg/regular/*.svg"),
           formatter: (name) => `Bi${name.replace("Bx", "")}`,
         },
+        {
+          files: path.resolve(__dirname, "boxicons/svg/solid/*.svg"),
+          formatter: (name) => `BiSolid${name.replace("Bxs", "")}`,
+        },
       ],
       projectUrl: "https://github.com/atisawd/boxicons",
       license: "CC BY 4.0 License",

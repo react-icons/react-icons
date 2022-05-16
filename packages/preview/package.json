@@ -20,7 +20,7 @@
     "copy-to-clipboard": "^3.2.0",
     "css-loader": "3.5.3",
     "ignore-loader": "^0.1.2",
-    "next": "^9.5.3",
+    "next": "^12.1.0",
     "next-pwa": "^2.0.2",
     "node-sass": "^4.14.1",
     "prism-react-renderer": "^1.0.2",

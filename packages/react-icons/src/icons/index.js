@@ -378,5 +378,18 @@ module.exports = {
       license: "CC BY 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
     },
+    {
+      id: "tb",
+      name: "Tabler Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "tabler-icons/icons/*.svg"),
+          formatter: (name) => `Tb${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/tabler/tabler-icons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
   ],
 };

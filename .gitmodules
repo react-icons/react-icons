@@ -49,3 +49,6 @@
 [submodule "vscode-icons"]
 	path = packages/react-icons/src/icons/vscode-icons
 	url = https://github.com/microsoft/vscode-codicons.git
+[submodule "packages/react-icons/src/icons/tabler-icons"]
+	path = packages/react-icons/src/icons/tabler-icons
+	url = https://github.com/tabler/tabler-icons

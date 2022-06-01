@@ -22,10 +22,12 @@ example usage
 ```jsx
 import { FaBeer } from 'react-icons/fa';
 
-class Question extends React.Component {
-    render() {
-        return <h3> Lets go for a <FaBeer />? </h3>
-    }
+const Question = () => {
+  return (
+    <h3>
+      Lets go for a <FaBeer />
+    </h3>
+  );
 }
 ```
 
@@ -48,10 +50,13 @@ example usage
 
 ```jsx
 import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
-class Question extends React.Component {
-  render() {
-    return <h3> Lets go for a <FaBeer />? </h3>
-  }
+
+const Question = () => {
+  return (
+    <h3>
+      Lets go for a <FaBeer />
+    </h3>
+  );
 }
 ```
 
@@ -122,10 +127,12 @@ Import path has changed. You need to rewrite from the old style.
 // OLD IMPORT STYLE
 import FaBeer from 'react-icons/lib/fa/beer';
 
-class Question extends React.Component {
-    render() {
-        return <h3> Lets go for a <FaBeer />? </h3>
-    }
+const Question = () => {
+  return (
+    <h3>
+      Lets go for a <FaBeer />
+    </h3>
+  );
 }
 ```
 
@@ -133,10 +140,12 @@ class Question extends React.Component {
 // NEW IMPORT STYLE
 import { FaBeer } from 'react-icons/fa';
 
-class Question extends React.Component {
-    render() {
-        return <h3> Lets go for a <FaBeer />? </h3>
-    }
+const Question = () => {
+  return (
+    <h3>
+      Lets go for a <FaBeer />
+    </h3>
+  );
 }
 ```
 

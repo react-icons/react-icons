@@ -52,3 +52,6 @@
 [submodule "packages/react-icons/src/icons/tabler-icons"]
 	path = packages/react-icons/src/icons/tabler-icons
 	url = https://github.com/tabler/tabler-icons
+[submodule "packages/react-icons/src/icons/heroicons-2"]
+	path = packages/react-icons/src/icons/heroicons-2
+	url = https://github.com/tailwindlabs/heroicons

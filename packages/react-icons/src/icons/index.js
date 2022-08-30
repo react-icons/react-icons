@@ -316,6 +316,29 @@ module.exports = {
       licenseUrl: "https://opensource.org/licenses/MIT",
     },
     {
+      id: "hi2",
+      name: "Heroicons 2",
+      contents: [
+        {
+          files: path.resolve(
+            __dirname,
+            "heroicons-2/optimized/24/solid/*.svg"
+          ),
+          formatter: (name) => `Hi${name}`,
+        },
+        {
+          files: path.resolve(
+            __dirname,
+            "heroicons-2/optimized/24/outline/*.svg"
+          ),
+          formatter: (name) => `HiOutline${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/tailwindlabs/heroicons",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
+    {
       id: "si",
       name: "Simple Icons",
       contents: [

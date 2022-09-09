@@ -6,8 +6,7 @@ export interface IconContext {
   className?: string;
   style?: React.CSSProperties;
   attr?: React.SVGAttributes<SVGElement>;
-  title?: string
-
+  title?: string;
 }
 
 export const DefaultContext: IconContext = {

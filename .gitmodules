@@ -55,3 +55,6 @@
 [submodule "packages/react-icons/src/icons/heroicons-2"]
 	path = packages/react-icons/src/icons/heroicons-2
 	url = https://github.com/tailwindlabs/heroicons
+[submodule "packages/react-icons/src/icons/Circum-Icons"]
+	path = packages/react-icons/src/icons/Circum-Icons
+	url = https://github.com/Klarr-Agency/Circum-Icons

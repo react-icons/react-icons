@@ -35,6 +35,7 @@
     "ionicons": "^4.4.4",
     "ionicons-5": "npm:ionicons@5",
     "lerna": "^3.20.2",
+    "lucide-static": "^0.88.0",
     "octicons": "^8.1.0",
     "prettier": "^1.19.1",
     "renamer": "^1.0.0",

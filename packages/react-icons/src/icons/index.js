@@ -160,6 +160,22 @@ module.exports = {
       licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE",
     },
     {
+      id: "lu",
+      name: "Lucide",
+      contents: [
+        {
+          files: path.resolve(
+            path.dirname(require.resolve("lucide-static")),
+            "../icons/*.svg"
+          ),
+          formatter: (name) => `Lu${name}`,
+        },
+      ],
+      projectUrl: "https://lucide.dev/",
+      license: "ISC",
+      licenseUrl: "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
+    },
+    {
       id: "gi",
       name: "Game Icons",
       contents: [

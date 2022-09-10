@@ -12841,6 +12841,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"lucide-static@npm:^0.88.0":
+  version: 0.88.0
+  resolution: "lucide-static@npm:0.88.0"
+  checksum: 22e78b6122fd04cd599b7d5a0b9c8b6c82cf820578d21e32a1dc3d3efbf0dfaa38ba8863910eb79fe405f832823059732a60c381910f2200ea59e4320b6db7d6
+  languageName: node
+  linkType: hard
+
 "macos-release@npm:^2.2.0":
   version: 2.4.1
   resolution: "macos-release@npm:2.4.1"
@@ -16534,6 +16541,7 @@ fsevents@~2.1.2:
     ionicons: ^4.4.4
     ionicons-5: "npm:ionicons@5"
     lerna: ^3.20.2
+    lucide-static: ^0.88.0
     octicons: ^8.1.0
     prettier: ^1.19.1
     renamer: ^1.0.0

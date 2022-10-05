@@ -4,7 +4,7 @@ export const Context = React.createContext({
   query: "",
   setQuery: () => {},
   results: {},
-  setResults: () => {}
+  setResults: () => {},
 } as any);
 
 export const Provider = ({ children }) => {
@@ -17,7 +17,7 @@ export const Provider = ({ children }) => {
         query,
         setQuery,
         results,
-        setResults
+        setResults,
       }}
     >
       {children}

@@ -1,10 +1,8 @@
 import Container from "@components/@core/container";
-import { getIconById } from "@utils/icon";
-import React from "react";
-
 import IconSetImport from "./iconset-import";
 import IconSetInfo from "./iconset-info";
 import IconSetViewer from "./iconset-viewer";
+import { getIconById } from "@utils/icon";
 
 export default function IconsPageComponent({ iconId }) {
   const icon = getIconById(iconId);

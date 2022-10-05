@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function IconSetInfo({ icon }) {
   const { licenseUrl, license, projectUrl } = icon;
   return (

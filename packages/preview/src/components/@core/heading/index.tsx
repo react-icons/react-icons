@@ -1,6 +1,6 @@
 import { BRAND_TITLE_MONO } from "@utils/constants";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import ActiveLink from "../active-link";
 import BrandIcon from "./icon";

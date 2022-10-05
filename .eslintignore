@@ -8,6 +8,7 @@
 **/public/*
 packages/react-icons/lib/
 packages/react-icons/build/
+packages/react-icons/scripts/
 packages/react-icons/src/icons/*
 !packages/react-icons/src/icons/index.js
 packages/_react-icons_all/

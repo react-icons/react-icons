@@ -2,14 +2,13 @@ import toast from "cogo-toast";
 import copy from "copy-to-clipboard";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import PrismTheme from "prism-react-renderer/themes/nightOwl";
-import React from "react";
 import { IoMdClipboard } from "react-icons/io";
 
 export default function CodeBlock({ code, language }) {
   const copyToClipboard = () => {
     copy(code);
     toast.success(`Copied to clipboard`, {
-      position: "bottom-center"
+      position: "bottom-center",
     });
   };
 
@@ -26,9 +25,9 @@ export default function CodeBlock({ code, language }) {
             <IoMdClipboard />
           </a>
           {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
+            <div key={i} {...getLineProps({ line })}>
               {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
+                <span key={key} {...getTokenProps({ token })} />
               ))}
             </div>
           ))}

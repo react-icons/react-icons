@@ -1,4 +1,3 @@
-import React from "react";
 import Skeleton from "tiny-skeleton-loader-react";
 
 export default function IconsPageLoading() {

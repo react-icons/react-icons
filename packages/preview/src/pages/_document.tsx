@@ -1,7 +1,7 @@
 import {
   BRAND_DESCRIPTION,
   BRAND_KEYWORDS,
-  BRAND_TITLE
+  BRAND_TITLE,
 } from "@utils/constants";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 

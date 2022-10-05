@@ -1,9 +1,7 @@
 import Icon from "@components/@core/icon";
-import loadable from "@loadable/component";
-import React from "react";
-import { getIcons } from "@utils/getIcons";
-
 import SearchPageIconLoading from "./loading";
+import loadable from "@loadable/component";
+import { getIcons } from "@utils/getIcons";
 
 export default function SearchIconSet({ icon, query, highlightPattern }) {
   const IconSet = loadable.lib(() => getIcons(icon.id));
@@ -11,11 +9,13 @@ export default function SearchIconSet({ icon, query, highlightPattern }) {
   return (
     <IconSet fallback={<SearchPageIconLoading />}>
       {({ default: icons }) => {
-        const found = Object.keys(icons)
-          .filter(name => name.toLowerCase().includes(query))
+        const found = Object.keys(icons).filter((name) =>
+          name.toLowerCase().includes(query)
+        );
+
         return (
           <>
-            {found.map(name => (
+            {found.map((name) => (
               <Icon
                 key={name}
                 icon={icons[name]}
@@ -24,7 +24,7 @@ export default function SearchIconSet({ icon, query, highlightPattern }) {
               />
             ))}
           </>
-        )
+        );
       }}
     </IconSet>
   );

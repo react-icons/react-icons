@@ -1,12 +1,11 @@
 import toast from "cogo-toast";
 import copy from "copy-to-clipboard";
-import React from "react";
 
 function Icon({ icon, name, highlightPattern = null }) {
   const copyToClipboard = () => {
     copy(name);
     toast.success(`Copied '${name}' to clipboard`, {
-      position: "bottom-center"
+      position: "bottom-center",
     });
   };
 

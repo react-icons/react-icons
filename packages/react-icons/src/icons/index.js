@@ -9,16 +9,15 @@ module.exports = {
       name: "Circum Icons",
       contents: [
         {
-          files: path.resolve(
-            __dirname,
-            "Circum-Icons/svg/*.svg"
-          ),
-          formatter: (name) => `Ci${name}`,
-        }
+          files: path.resolve(__dirname, "Circum-Icons/svg/*.svg"),
+          formatter: (name) =>
+            `Ci${name}`.replace(/_/g, "").replace(/&/g, "And"),
+        },
       ],
       projectUrl: "https://circumicons.com/",
       license: "MPL-2.0 license",
-      licenseUrl: "https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE",
+      licenseUrl:
+        "https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE",
     },
     {
       id: "fa",

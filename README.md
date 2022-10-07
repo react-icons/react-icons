@@ -79,6 +79,7 @@ Icon Library|License|Version|Count
 [Heroicons](https://github.com/tailwindlabs/heroicons)|[MIT](https://opensource.org/licenses/MIT)|1.0.4|460
 [Heroicons 2](https://github.com/tailwindlabs/heroicons)|[MIT](https://opensource.org/licenses/MIT)|2.0.8|530
 [Simple Icons](https://simpleicons.org/)|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|5.16.0|2024
+[Simple Line Icons](https://thesabbir.github.io/simple-line-icons/)|[MIT](https://github.com/primer/octicons/blob/master/LICENSE)|2.5.4|189
 [IcoMoon Free](https://github.com/Keyamoon/IcoMoon-Free)|[CC BY 4.0 License](undefined)|d006795ede82361e1bac1ee76f215cf1dc51e4ca|491
 [BoxIcons](https://github.com/atisawd/boxicons)|[CC BY 4.0 License](undefined)|2.0.9|757
 [css.gg](https://github.com/astrit/css.gg)|[MIT](https://opensource.org/licenses/MIT)|2.0.0|704

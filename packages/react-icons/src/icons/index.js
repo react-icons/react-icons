@@ -368,6 +368,19 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
     },
     {
+      id: "sl",
+      name: "Simple Line Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "simple-line-icons/src/svgs/*.svg"),
+          formatter: (name) => `Sl${name}`,
+        },
+      ],
+      projectUrl: "https://thesabbir.github.io/simple-line-icons/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
+    {
       id: "im",
       name: "IcoMoon Free",
       contents: [

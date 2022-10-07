@@ -21,20 +21,20 @@ export default function Sidebar() {
     setInputQuery(query); // State for this component
   };
 
-  const onSearch = e => {
+  const onSearch = (e) => {
     const query = e.target.value.toLowerCase();
     router.push({ pathname: searchPath, query: query ? { q: query } : null });
     setQueryEveywhere(query);
-    setResults(prevResult => {
-      return {}
+    setResults((prevResult) => {
+      return {};
     });
   };
 
-  const goToSearch = e => {
+  const goToSearch = (e) => {
     if (!router.asPath.includes(searchPath)) router.push(searchPath);
   };
 
-  const onBlur = event => {
+  const onBlur = (event) => {
     if (event.target.value.length === 0) {
       window && window.history.back();
     }
@@ -54,7 +54,10 @@ export default function Sidebar() {
           onBlur={onBlur}
           onChange={onSearch}
           value={inputQuery !== null ? inputQuery : query}
-          autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
         />
       </div>
 
@@ -64,7 +67,7 @@ export default function Sidebar() {
             <a className="rounded px2 py1">Home</a>
           </ActiveLink>
         </li>
-        {iconsList.map(icon => (
+        {iconsList.map((icon) => (
           <li key={icon.id}>
             <ActiveLink href={{ pathname: "icons", query: { name: icon.id } }}>
               <a

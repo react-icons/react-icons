@@ -54,6 +54,10 @@ export default function Sidebar() {
           onBlur={onBlur}
           onChange={onSearch}
           value={inputQuery !== null ? inputQuery : query}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
         />
       </div>
 

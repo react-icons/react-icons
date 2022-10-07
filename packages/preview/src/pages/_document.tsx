@@ -15,7 +15,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href="/favicon.png" />
+          <link rel="shortcut icon" href="favicon.png" />
           <meta name="theme-color" content="#e91e63" />
           <meta name="title" content={BRAND_TITLE} />
           <meta name="description" content={BRAND_DESCRIPTION} />

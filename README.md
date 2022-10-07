@@ -22,10 +22,10 @@ example usage
 ```jsx
 import { FaBeer } from 'react-icons/fa';
 
-class Question extends React.Component {
-    render() {
-        return <h3> Lets go for a <FaBeer />? </h3>
-    }
+function Question(){
+  return (
+    <h3> Lets go for a <FaBeer />? </h3>
+  )
 }
 ```
 
@@ -48,10 +48,11 @@ example usage
 
 ```jsx
 import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
-class Question extends React.Component {
-  render() {
-    return <h3> Lets go for a <FaBeer />? </h3>
-  }
+
+function Question(){
+  return (
+    <h3> Lets go for a <FaBeer />? </h3>
+  )
 }
 ```
 
@@ -59,6 +60,7 @@ class Question extends React.Component {
 
 Icon Library|License|Version|Count
 ---|---|---|---
+[Circum Icons](https://circumicons.com/)|[MPL-2.0 license](https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE)|1.1|285
 [Font Awesome](https://fontawesome.com/)|[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)|5.15.4 7d3d774145ac38663f6d1effc6def0334b68ab7e|1612
 [Ionicons 4](https://ionicons.com/)|[MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)|4.6.3|696
 [Ionicons 5](https://ionicons.com/)|[MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)|5.5.0|1332
@@ -77,11 +79,13 @@ Icon Library|License|Version|Count
 [Heroicons](https://github.com/tailwindlabs/heroicons)|[MIT](https://opensource.org/licenses/MIT)|1.0.4|460
 [Heroicons 2](https://github.com/tailwindlabs/heroicons)|[MIT](https://opensource.org/licenses/MIT)|2.0.8|530
 [Simple Icons](https://simpleicons.org/)|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|5.16.0|2024
+[Simple Line Icons](https://thesabbir.github.io/simple-line-icons/)|[MIT](https://github.com/primer/octicons/blob/master/LICENSE)|2.5.4|189
 [IcoMoon Free](https://github.com/Keyamoon/IcoMoon-Free)|[CC BY 4.0 License](undefined)|d006795ede82361e1bac1ee76f215cf1dc51e4ca|491
 [BoxIcons](https://github.com/atisawd/boxicons)|[CC BY 4.0 License](undefined)|2.0.9|757
 [css.gg](https://github.com/astrit/css.gg)|[MIT](https://opensource.org/licenses/MIT)|2.0.0|704
 [VS Code Icons](https://github.com/microsoft/vscode-codicons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|0.0.23|383
 [Tabler Icons](https://github.com/tabler/tabler-icons)|[MIT](https://opensource.org/licenses/MIT)|1.68.0|1978
+[Themify Icons](https://github.com/lykmapipo/themify-icons)|[MIT](https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE)|1.0.1|352
 
 
 You can add more icons by submitting pull requests or creating issues.
@@ -121,10 +125,10 @@ Import path has changed. You need to rewrite from the old style.
 // OLD IMPORT STYLE
 import FaBeer from 'react-icons/lib/fa/beer';
 
-class Question extends React.Component {
-    render() {
-        return <h3> Lets go for a <FaBeer />? </h3>
-    }
+function Question(){
+  return (
+    <h3> Lets go for a <FaBeer />? </h3>
+  )
 }
 ```
 
@@ -132,10 +136,10 @@ class Question extends React.Component {
 // NEW IMPORT STYLE
 import { FaBeer } from 'react-icons/fa';
 
-class Question extends React.Component {
-    render() {
-        return <h3> Lets go for a <FaBeer />? </h3>
-    }
+function Question(){
+ return (
+   <h3> Lets go for a <FaBeer />? </h3>
+ )
 }
 ```
 

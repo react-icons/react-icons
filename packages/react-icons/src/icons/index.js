@@ -5,6 +5,21 @@ const glob = require("glob-promise");
 module.exports = {
   icons: [
     {
+      id: "ci",
+      name: "Circum Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "Circum-Icons/svg/*.svg"),
+          formatter: (name) =>
+            `Ci${name}`.replace(/_/g, "").replace(/&/g, "And"),
+        },
+      ],
+      projectUrl: "https://circumicons.com/",
+      license: "MPL-2.0 license",
+      licenseUrl:
+        "https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE",
+    },
+    {
       id: "fa",
       name: "Font Awesome",
       contents: [
@@ -352,6 +367,19 @@ module.exports = {
       licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
     },
     {
+      id: "sl",
+      name: "Simple Line Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "simple-line-icons/src/svgs/*.svg"),
+          formatter: (name) => `Sl${name}`,
+        },
+      ],
+      projectUrl: "https://thesabbir.github.io/simple-line-icons/",
+      license: "MIT",
+      licenseUrl: "https://opensource.org/licenses/MIT",
+    },
+    {
       id: "im",
       name: "IcoMoon Free",
       contents: [
@@ -413,6 +441,20 @@ module.exports = {
       projectUrl: "https://github.com/tabler/tabler-icons",
       license: "MIT",
       licenseUrl: "https://opensource.org/licenses/MIT",
+    },
+    {
+      id: "tfi",
+      name: "Themify Icons",
+      contents: [
+        {
+          files: path.resolve(__dirname, "themify-icons/SVG/*.svg"),
+          formatter: (name) => `Tfi${name}`,
+        },
+      ],
+      projectUrl: "https://github.com/lykmapipo/themify-icons",
+      license: "MIT",
+      licenseUrl:
+        "https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE",
     },
   ],
 };

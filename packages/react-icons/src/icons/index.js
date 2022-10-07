@@ -5,6 +5,22 @@ const glob = require("glob-promise");
 module.exports = {
   icons: [
     {
+      id: "ci",
+      name: "Circum Icons",
+      contents: [
+        {
+          files: path.resolve(
+            __dirname,
+            "Circum-Icons/svg/*.svg"
+          ),
+          formatter: (name) => `Ci${name}`,
+        }
+      ],
+      projectUrl: "https://circumicons.com/",
+      license: "MPL-2.0 license",
+      licenseUrl: "https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE",
+    },
+    {
       id: "fa",
       name: "Font Awesome",
       contents: [

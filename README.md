@@ -83,6 +83,7 @@ Icon Library|License|Version|Count
 [css.gg](https://github.com/astrit/css.gg)|[MIT](https://opensource.org/licenses/MIT)|2.0.0|704
 [VS Code Icons](https://github.com/microsoft/vscode-codicons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|0.0.23|383
 [Tabler Icons](https://github.com/tabler/tabler-icons)|[MIT](https://opensource.org/licenses/MIT)|1.68.0|1978
+[Themify Icons](https://github.com/lykmapipo/themify-icons)|[MIT](https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE)|1.0.1|352
 
 
 You can add more icons by submitting pull requests or creating issues.

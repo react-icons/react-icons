@@ -11,8 +11,11 @@ export default function SearchIconSet({ icon, query, highlightPattern }) {
   return (
     <IconSet fallback={<SearchPageIconLoading />}>
       {({ default: icons }) => {
-        const found = Object.keys(icons)
-          .filter(name => name.toLowerCase().includes(query))
+        const found = Object.keys(icons).filter(name => {
+          return query
+            .split(" ")
+            .every(word => name.toLowerCase().includes(word.toLowerCase()));
+        });
         return (
           <>
             {found.map(name => (

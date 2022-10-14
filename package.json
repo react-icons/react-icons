@@ -28,5 +28,6 @@
     "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",
     "version": "yarn install && git add .",
     "lerna": "lerna"
-  }
+  },
+  "packageManager": "yarn@3.2.4"
 }

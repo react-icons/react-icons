@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 const path = require("path");
 const fs = require("fs").promises;
 const findPackage = require("find-package");

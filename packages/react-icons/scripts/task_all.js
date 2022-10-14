@@ -8,6 +8,7 @@ const { iconRowTemplate, iconsEntryTemplate } = require("./templates");
 const { getIconFiles, convertIconData, rmDirRecursive } = require("./logics");
 const { svgo } = require("./svgo");
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function dirInit({ DIST, LIB, rootDir }) {
   const ignore = (err) => {
     if (err.code === "EEXIST") return;
@@ -63,6 +64,7 @@ async function dirInit({ DIST, LIB, rootDir }) {
     await write([file], "// THIS FILE IS AUTO GENERATED\n");
   }
 }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function writeIconModule(icon, { DIST, LIB, rootDir }) {
   const entryModule = iconsEntryTemplate(icon.id, "module");
   await fs.appendFile(path.resolve(DIST, "all.js"), entryModule, "utf8");

@@ -6,7 +6,7 @@ function Icon({ icon, name, highlightPattern = null }) {
   const copyToClipboard = () => {
     copy(name);
     toast.success(`Copied '${name}' to clipboard`, {
-      position: "bottom-center"
+      position: "bottom-center",
     });
   };
 

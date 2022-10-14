@@ -59,10 +59,10 @@ async function writeLicense({ DIST, LIB, rootDir }) {
 }
 
 async function writeEntryPoints({ DIST, LIB, rootDir }) {
-  const generateEntryCjs = function() {
+  const generateEntryCjs = function () {
     return `module.exports = require('./lib/cjs/index.js');`;
   };
-  const generateEntryMjs = function(filename = "index.js") {
+  const generateEntryMjs = function (filename = "index.js") {
     return `import * as m from './lib/esm/${filename}'
 export default m
     `;

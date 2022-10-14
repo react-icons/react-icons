@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 export interface IconContext {
   color?: string;
@@ -16,4 +16,5 @@ export const DefaultContext: IconContext = {
   attr: undefined,
 };
 
-export const IconContext: React.Context<IconContext> = React.createContext && React.createContext(DefaultContext);
+export const IconContext: React.Context<IconContext> =
+  React.createContext && React.createContext(DefaultContext);

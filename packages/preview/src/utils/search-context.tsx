@@ -15,7 +15,7 @@ export const Context: React.Context<ContextType> = React.createContext({
   results: {},
   setResults: () => {
     //nop
-  }
+  },
 });
 
 export const Provider = ({ children }) => {
@@ -28,7 +28,7 @@ export const Provider = ({ children }) => {
         query,
         setQuery,
         results,
-        setResults
+        setResults,
       }}
     >
       {children}

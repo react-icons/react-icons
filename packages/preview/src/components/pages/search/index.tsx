@@ -26,7 +26,7 @@ export default function SearchPageComponent() {
             />
           ))}
         </div>
-         <h3 className="no-results"/>
+        <h3 className="no-results" />
       </>
     );
   }

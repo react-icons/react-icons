@@ -9,7 +9,7 @@ export default function CodeBlock({ code, language }) {
   const copyToClipboard = () => {
     copy(code);
     toast.success(`Copied to clipboard`, {
-      position: "bottom-center"
+      position: "bottom-center",
     });
   };
 

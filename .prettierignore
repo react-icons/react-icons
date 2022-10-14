@@ -1,0 +1,12 @@
+.yarn
+node_modules
+/dist/
+
+/packages/_react-icons_all
+/packages/_react-icons_all-files
+
+/packages/react-icons/build
+/packages/react-icons/src/icons/*
+!/packages/react-icons/src/icons/index.js
+
+/packages/preview/.next

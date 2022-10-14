@@ -1,12 +1,22 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import React from "react";
 
-export const Context = React.createContext({
+interface ContextType {
+  query: string;
+  setQuery: (query: string) => void;
+  results: any;
+  setResults: (results: any) => void;
+}
+
+export const Context: React.Context<ContextType> = React.createContext({
   query: "",
-  setQuery: () => {},
+  setQuery: () => {
+    // nop
+  },
   results: {},
-  setResults: () => {}
-} as any);
+  setResults: () => {
+    //nop
+  }
+});
 
 export const Provider = ({ children }) => {
   const [query, setQuery] = React.useState("");

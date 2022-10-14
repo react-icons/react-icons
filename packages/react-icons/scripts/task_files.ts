@@ -1,15 +1,13 @@
-const path = require("path");
-const fs = require("fs").promises;
-const camelcase = require("camelcase");
-
-const { icons } = require("../src/icons");
-
-const { iconRowTemplate } = require("./templates");
-const { getIconFiles, convertIconData, rmDirRecursive } = require("./logics");
-const { svgo } = require("./svgo");
+import path from "path";
+import { promises as fs } from "fs";
+import camelcase from "camelcase";
+import { icons } from "../src/icons";
+import { iconRowTemplate } from "./templates";
+import { getIconFiles, convertIconData, rmDirRecursive } from "./logics";
+import { svgo } from "./svgo";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function dirInit({ DIST, LIB, rootDir }) {
+export async function dirInit({ DIST, LIB, rootDir }) {
   const ignore = (err) => {
     if (err.code === "EEXIST") return;
     throw err;
@@ -38,7 +36,7 @@ async function dirInit({ DIST, LIB, rootDir }) {
   }
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function writeIconModuleFiles(icon, { DIST, LIB, rootDir }) {
+export async function writeIconModuleFiles(icon, { DIST, LIB, rootDir }) {
   const exists = new Set(); // for remove duplicate
 
   for (const content of icon.contents) {
@@ -90,8 +88,3 @@ async function writeIconModuleFiles(icon, { DIST, LIB, rootDir }) {
     }
   }
 }
-
-module.exports = {
-  dirInit,
-  writeIconModuleFiles,
-};

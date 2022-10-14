@@ -1,11 +1,9 @@
-const path = require("path");
-const performance = require("perf_hooks").performance;
-
-const { icons } = require("../src/icons");
-
-const taskCommon = require("./task_common");
-const taskAll = require("./task_all");
-const taskFiles = require("./task_files");
+import path from "path";
+import { performance } from "perf_hooks";
+import { icons } from "../src/icons";
+import * as taskCommon from "./task_common";
+import * as taskAll from "./task_all";
+import * as taskFiles from "./task_files";
 
 // file path
 const _rootDir = path.resolve(__dirname, "../");
@@ -82,3 +80,5 @@ async function main() {
   }
 }
 main();
+
+export {};

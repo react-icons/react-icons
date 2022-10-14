@@ -28,6 +28,8 @@
     "@types/react": "^18.0.21",
     "camelcase": "^7.0.0",
     "cheerio": "^1.0.0-rc.12",
+    "esbuild": "^0.15.11",
+    "esbuild-register": "^3.3.3",
     "feather-icons": "^4.7.3",
     "find-package": "^1.0.0",
     "glob": "^8.0.3",

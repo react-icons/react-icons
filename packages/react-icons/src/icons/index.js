@@ -390,6 +390,8 @@ module.exports = {
       ],
       projectUrl: "https://github.com/Keyamoon/IcoMoon-Free",
       license: "CC BY 4.0 License",
+      licenseUrl:
+        "https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt",
     },
     {
       id: "bi",
@@ -402,6 +404,7 @@ module.exports = {
       ],
       projectUrl: "https://github.com/atisawd/boxicons",
       license: "CC BY 4.0 License",
+      licenseUrl: "https://github.com/atisawd/boxicons/blob/master/LICENSE",
     },
     {
       id: "cg",

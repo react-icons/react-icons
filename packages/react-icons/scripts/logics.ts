@@ -1,9 +1,9 @@
 import cheerio from "cheerio";
-import glob from "glob-promise";
 import camelcase from "camelcase";
 import { promises as fs } from "fs";
 import path from "path";
 import { type IconDefinitionContent } from "./_types";
+import { glob } from "./glob";
 
 export async function getIconFiles(content: IconDefinitionContent) {
   if (typeof content.files === "string") {
@@ -12,6 +12,7 @@ export async function getIconFiles(content: IconDefinitionContent) {
   }
   return content.files();
 }
+
 export async function convertIconData(svg, multiColor) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");
 

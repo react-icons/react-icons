@@ -9,5 +9,7 @@ export interface IconDefinition {
 
 export interface IconDefinitionContent {
   files: string | (() => Promise<string[]>);
-  formatter(input: string): string;
+  formatter(camelName: string, filePath: string): string;
+  multiColor?: boolean;
+  processWithSVGO?: boolean;
 }

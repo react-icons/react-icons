@@ -66,7 +66,7 @@ async function main() {
       await taskCommon.writeIconVersions(filesOpt);
     });
 
-    // write to VERSIONS file
+    // write to d.ts files
     await task("react-icons_builders build common library", async () => {
       await taskCommon.buildLib(filesOpt);
       await taskCommon.copyLib(allOpt);

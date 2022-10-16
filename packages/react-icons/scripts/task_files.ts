@@ -5,6 +5,7 @@ import { icons } from "../src/icons";
 import { iconRowTemplate } from "./templates";
 import { getIconFiles, convertIconData, rmDirRecursive } from "./logics";
 import { svgo } from "./svgo";
+import { IconDefinition } from "./_types";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function dirInit({ DIST, LIB, rootDir }) {
@@ -36,7 +37,10 @@ export async function dirInit({ DIST, LIB, rootDir }) {
   }
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function writeIconModuleFiles(icon, { DIST, LIB, rootDir }) {
+export async function writeIconModuleFiles(
+  icon: IconDefinition,
+  { DIST, LIB, rootDir }
+) {
   const exists = new Set(); // for remove duplicate
 
   for (const content of icon.contents) {

@@ -98,7 +98,7 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
       await Promise.all(icon.contents.map((content) => getIconFiles(content)))
     ).flat();
 
-    if (!files[0]) {
+    if (files.length === 0) {
       throw new Error(`Missing path for: ${icon.name}`);
     }
 

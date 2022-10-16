@@ -3,11 +3,14 @@ import glob from "glob-promise";
 import camelcase from "camelcase";
 import { promises as fs } from "fs";
 import path from "path";
+import { type IconDefinitionContent } from "./_types";
 
-export async function getIconFiles(content) {
-  return typeof content.files === "string"
-    ? glob(content.files)
-    : content.files();
+export async function getIconFiles(content: IconDefinitionContent) {
+  if (typeof content.files === "string") {
+    const pattern = content.files.replace(/\\/g, "/"); // convert windows path
+    return glob(pattern);
+  }
+  return content.files();
 }
 export async function convertIconData(svg, multiColor) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");

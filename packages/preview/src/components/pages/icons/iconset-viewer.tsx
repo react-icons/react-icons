@@ -14,7 +14,7 @@ export default function IconSetViewer({ icon }) {
       <IconSet fallback={<IconsPageLoading />}>
         {({ default: icons }) => (
           <div className="icons">
-            {Object.keys(icons).map(name => (
+            {Object.keys(icons).map((name) => (
               <Icon key={name} icon={icons[name]} name={name} />
             ))}
           </div>

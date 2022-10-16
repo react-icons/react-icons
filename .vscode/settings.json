@@ -1,5 +1,11 @@
 {
   "search.exclude": {
-    "**/packages/react-icons/src/icons/*/**": true,
+    "**/packages/react-icons/src/icons/*/**": true
   },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.insertFinalNewline": true
 }

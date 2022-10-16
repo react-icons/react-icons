@@ -9,7 +9,7 @@ export default function CodeBlock({ code, language }) {
   const copyToClipboard = () => {
     copy(code);
     toast.success(`Copied to clipboard`, {
-      position: "bottom-center"
+      position: "bottom-center",
     });
   };
 
@@ -26,9 +26,9 @@ export default function CodeBlock({ code, language }) {
             <IoMdClipboard />
           </a>
           {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
+            <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
+                <span key={key} {...getTokenProps({ token, key })} />
               ))}
             </div>
           ))}

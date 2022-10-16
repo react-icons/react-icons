@@ -5,20 +5,23 @@ const path = require("path");
 const prod = process.env.NODE_ENV === "production";
 
 module.exports = withPWA({
-  pwa: {
-    disable: !prod,
-    dest: "public",
-    register: true,
-    scope: "/",
-    runtimeCaching,
-  },
+  disable: !prod,
+  dest: "public",
+  register: true,
+  scope: "/",
+  runtimeCaching,
+})({
   experimental: {
     publicDirectory: true,
   },
   webpack: (config, { isServer }) => {
     // Fixes npm packages that depend on fs module, see github.com/zeit/next.js/issues/7755
     if (!isServer) {
-      config.node = { fs: "empty", module: "empty" };
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: "empty",
+        module: "empty",
+      };
     }
     config.resolve.alias["@components"] = path.join(
       __dirname,

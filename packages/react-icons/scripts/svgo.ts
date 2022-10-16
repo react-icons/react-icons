@@ -1,6 +1,6 @@
-const SVGO = require("svgo");
+import SVGO from "svgo";
 
-const svgo = new SVGO({
+export const svgo = new SVGO({
   plugins: [
     {
       cleanupAttrs: true,
@@ -114,7 +114,3 @@ const svgo = new SVGO({
     },
   ],
 });
-
-module.exports = {
-  svgo,
-};

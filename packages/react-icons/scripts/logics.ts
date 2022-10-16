@@ -1,15 +1,19 @@
-const cheerio = require("cheerio");
-const glob = require("glob-promise");
-const camelcase = require("camelcase");
-const fs = require("fs").promises;
-const path = require("path");
+import cheerio from "cheerio";
+import camelcase from "camelcase";
+import { promises as fs } from "fs";
+import path from "path";
+import { type IconDefinitionContent } from "./_types";
+import { glob } from "./glob";
 
-async function getIconFiles(content) {
-  return typeof content.files === "string"
-    ? glob(content.files)
-    : content.files();
+export async function getIconFiles(content: IconDefinitionContent) {
+  if (typeof content.files === "string") {
+    const pattern = content.files.replace(/\\/g, "/"); // convert windows path
+    return glob(pattern);
+  }
+  return content.files();
 }
-async function convertIconData(svg, multiColor) {
+
+export async function convertIconData(svg, multiColor) {
   const $svg = cheerio.load(svg, { xmlMode: true })("svg");
 
   // filter/convert attributes
@@ -69,7 +73,7 @@ async function convertIconData(svg, multiColor) {
   return tree[0]; // like: [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
 }
 
-async function copyRecursive(src, dest) {
+export async function copyRecursive(src, dest) {
   await fs.mkdir(dest, { recursive: true });
   for (const entry of await fs.readdir(src, { withFileTypes: true })) {
     const sPath = path.join(src, entry.name);
@@ -82,7 +86,7 @@ async function copyRecursive(src, dest) {
   }
 }
 
-async function rmDirRecursive(dest) {
+export async function rmDirRecursive(dest) {
   try {
     for (const entry of await fs.readdir(dest, { withFileTypes: true })) {
       const dPath = path.join(dest, entry.name);
@@ -98,10 +102,3 @@ async function rmDirRecursive(dest) {
     throw err;
   }
 }
-
-module.exports = {
-  getIconFiles,
-  convertIconData,
-  copyRecursive,
-  rmDirRecursive,
-};

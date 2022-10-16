@@ -9,7 +9,7 @@ export default function SearchPage() {
   const { q } = router.query;
   const { query, setQuery } = React.useContext(Context);
 
-  if (!query && q) setQuery(q);
+  if (!query && q) setQuery(q as any);
 
   return (
     <Container title="🔍 Search">

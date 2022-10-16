@@ -5,13 +5,12 @@ const path = require("path");
 const prod = process.env.NODE_ENV === "production";
 
 module.exports = withPWA({
-  pwa: {
-    disable: !prod,
-    dest: "public",
-    register: true,
-    scope: "/",
-    runtimeCaching,
-  },
+  disable: !prod,
+  dest: "public",
+  register: true,
+  scope: "/",
+  runtimeCaching,
+})({
   experimental: {
     publicDirectory: true,
   },

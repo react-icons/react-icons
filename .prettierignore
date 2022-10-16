@@ -7,6 +7,6 @@ node_modules
 
 /packages/react-icons/build
 /packages/react-icons/src/icons/*
-!/packages/react-icons/src/icons/index.js
+!/packages/react-icons/src/icons/index.ts
 
 /packages/preview/.next

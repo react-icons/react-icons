@@ -1,9 +1,9 @@
-import cheerio from "cheerio";
 import camelcase from "camelcase";
-import { promises as fs } from "fs";
+import cheerio from "cheerio";
 import path from "path";
-import { type IconDefinitionContent } from "./_types";
+import { IconDefinitionContent } from "./_types";
 import { glob } from "./glob";
+import { promises as fs } from "fs";
 
 export async function getIconFiles(content: IconDefinitionContent) {
   if (typeof content.files === "string") {

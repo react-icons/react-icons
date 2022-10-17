@@ -20,16 +20,19 @@ npm install react-icons --save
 example usage
 
 ```jsx
-import { FaBeer } from 'react-icons/fa';
+import { FaBeer } from "react-icons/fa";
 
-function Question(){
+function Question() {
   return (
-    <h3> Lets go for a <FaBeer />? </h3>
-  )
+    <h3>
+      {" "}
+      Lets go for a <FaBeer />?{" "}
+    </h3>
+  );
 }
 ```
 
-[View the documentation](https://react-icons.github.io/react-icons) for further usage examples and how to use icons from other packages. *NOTE*: each Icon package has it's own subfolder under `react-icons` you import from.
+[View the documentation](https://react-icons.github.io/react-icons) for further usage examples and how to use icons from other packages. _NOTE_: each Icon package has it's own subfolder under `react-icons` you import from.
 
 For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
 
@@ -49,44 +52,46 @@ example usage
 ```jsx
 import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
 
-function Question(){
+function Question() {
   return (
-    <h3> Lets go for a <FaBeer />? </h3>
-  )
+    <h3>
+      {" "}
+      Lets go for a <FaBeer />?{" "}
+    </h3>
+  );
 }
 ```
 
 ## Icons
 
-Icon Library|License|Version|Count
----|---|---|---
-[Circum Icons](https://circumicons.com/)|[MPL-2.0 license](https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE)|1.1|285
-[Font Awesome](https://fontawesome.com/)|[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)|5.15.4 7d3d774145ac38663f6d1effc6def0334b68ab7e|1612
-[Ionicons 4](https://ionicons.com/)|[MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)|4.6.3|696
-[Ionicons 5](https://ionicons.com/)|[MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)|5.5.0|1332
-[Material Design icons](http://google.github.io/material-design-icons/)|[Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)|4.0.0-12-g63c5cb3060 63c5cb306073a9ecdfd3579f0f696746ab6305f6|3650
-[Typicons](http://s-ings.com/typicons/)|[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)|2.1.2|336
-[Github Octicons icons](https://octicons.github.com/)|[MIT](https://github.com/primer/octicons/blob/master/LICENSE)|8.5.0|184
-[Feather](https://feathericons.com/)|[MIT](https://github.com/feathericons/feather/blob/master/LICENSE)|4.28.0|286
-[Game Icons](https://game-icons.net/)|[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)|12920d6565588f0512542a3cb0cdfd36a497f910|4040
-[Weather Icons](https://erikflowers.github.io/weather-icons/)|[SIL OFL 1.1](http://scripts.sil.org/OFL)|2.0.12|219
-[Devicons](https://vorillaz.github.io/devicons/)|[MIT](https://opensource.org/licenses/MIT)|1.8.0|192
-[Ant Design Icons](https://github.com/ant-design/ant-design-icons)|[MIT](https://opensource.org/licenses/MIT)|4.2.1|789
-[Bootstrap Icons](https://github.com/twbs/icons)|[MIT](https://opensource.org/licenses/MIT)|1.5.0|1846
-[Remix Icon](https://github.com/Remix-Design/RemixIcon)|[Apache License Version 2.0](http://www.apache.org/licenses/)|2.5.0|2271
-[Flat Color Icons](https://github.com/icons8/flat-color-icons)|[MIT](https://opensource.org/licenses/MIT)|1.0.2|329
-[Grommet-Icons](https://github.com/grommet/grommet-icons)|[Apache License Version 2.0](http://www.apache.org/licenses/)|4.6.2|615
-[Heroicons](https://github.com/tailwindlabs/heroicons)|[MIT](https://opensource.org/licenses/MIT)|1.0.4|460
-[Heroicons 2](https://github.com/tailwindlabs/heroicons)|[MIT](https://opensource.org/licenses/MIT)|2.0.8|530
-[Simple Icons](https://simpleicons.org/)|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)|5.16.0|2024
-[Simple Line Icons](https://thesabbir.github.io/simple-line-icons/)|[MIT](https://github.com/primer/octicons/blob/master/LICENSE)|2.5.4|189
-[IcoMoon Free](https://github.com/Keyamoon/IcoMoon-Free)|[CC BY 4.0 License](undefined)|d006795ede82361e1bac1ee76f215cf1dc51e4ca|491
-[BoxIcons](https://github.com/atisawd/boxicons)|[CC BY 4.0 License](undefined)|2.0.9|757
-[css.gg](https://github.com/astrit/css.gg)|[MIT](https://opensource.org/licenses/MIT)|2.0.0|704
-[VS Code Icons](https://github.com/microsoft/vscode-codicons)|[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)|0.0.23|383
-[Tabler Icons](https://github.com/tabler/tabler-icons)|[MIT](https://opensource.org/licenses/MIT)|1.68.0|1978
-[Themify Icons](https://github.com/lykmapipo/themify-icons)|[MIT](https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE)|1.0.1|352
-
+| Icon Library                                                            | License                                                                                           | Version                                                       | Count |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ----- |
+| [Circum Icons](https://circumicons.com/)                                | [MPL-2.0 license](https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE)                 | 1.1                                                           | 285   |
+| [Font Awesome](https://fontawesome.com/)                                | [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)                                 | 5.15.4 7d3d774145ac38663f6d1effc6def0334b68ab7e               | 1612  |
+| [Ionicons 4](https://ionicons.com/)                                     | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)                                 | 4.6.3                                                         | 696   |
+| [Ionicons 5](https://ionicons.com/)                                     | [MIT](https://github.com/ionic-team/ionicons/blob/master/LICENSE)                                 | 5.5.0                                                         | 1332  |
+| [Material Design icons](http://google.github.io/material-design-icons/) | [Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE) | 4.0.0-12-g63c5cb3060 63c5cb306073a9ecdfd3579f0f696746ab6305f6 | 3650  |
+| [Typicons](http://s-ings.com/typicons/)                                 | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)                                   | 2.1.2                                                         | 336   |
+| [Github Octicons icons](https://octicons.github.com/)                   | [MIT](https://github.com/primer/octicons/blob/master/LICENSE)                                     | 8.5.0                                                         | 184   |
+| [Feather](https://feathericons.com/)                                    | [MIT](https://github.com/feathericons/feather/blob/master/LICENSE)                                | 4.28.0                                                        | 286   |
+| [Game Icons](https://game-icons.net/)                                   | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)                                         | 12920d6565588f0512542a3cb0cdfd36a497f910                      | 4040  |
+| [Weather Icons](https://erikflowers.github.io/weather-icons/)           | [SIL OFL 1.1](http://scripts.sil.org/OFL)                                                         | 2.0.12                                                        | 219   |
+| [Devicons](https://vorillaz.github.io/devicons/)                        | [MIT](https://opensource.org/licenses/MIT)                                                        | 1.8.0                                                         | 192   |
+| [Ant Design Icons](https://github.com/ant-design/ant-design-icons)      | [MIT](https://opensource.org/licenses/MIT)                                                        | 4.2.1                                                         | 789   |
+| [Bootstrap Icons](https://github.com/twbs/icons)                        | [MIT](https://opensource.org/licenses/MIT)                                                        | 1.5.0                                                         | 1846  |
+| [Remix Icon](https://github.com/Remix-Design/RemixIcon)                 | [Apache License Version 2.0](http://www.apache.org/licenses/)                                     | 2.5.0                                                         | 2271  |
+| [Flat Color Icons](https://github.com/icons8/flat-color-icons)          | [MIT](https://opensource.org/licenses/MIT)                                                        | 1.0.2                                                         | 329   |
+| [Grommet-Icons](https://github.com/grommet/grommet-icons)               | [Apache License Version 2.0](http://www.apache.org/licenses/)                                     | 4.6.2                                                         | 615   |
+| [Heroicons](https://github.com/tailwindlabs/heroicons)                  | [MIT](https://opensource.org/licenses/MIT)                                                        | 1.0.4                                                         | 460   |
+| [Heroicons 2](https://github.com/tailwindlabs/heroicons)                | [MIT](https://opensource.org/licenses/MIT)                                                        | 2.0.8                                                         | 530   |
+| [Simple Icons](https://simpleicons.org/)                                | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)                           | 5.16.0                                                        | 2024  |
+| [Simple Line Icons](https://thesabbir.github.io/simple-line-icons/)     | [MIT](https://github.com/primer/octicons/blob/master/LICENSE)                                     | 2.5.4                                                         | 189   |
+| [IcoMoon Free](https://github.com/Keyamoon/IcoMoon-Free)                | [CC BY 4.0 License](undefined)                                                                    | d006795ede82361e1bac1ee76f215cf1dc51e4ca                      | 491   |
+| [BoxIcons](https://github.com/atisawd/boxicons)                         | [CC BY 4.0 License](undefined)                                                                    | 2.0.9                                                         | 757   |
+| [css.gg](https://github.com/astrit/css.gg)                              | [MIT](https://opensource.org/licenses/MIT)                                                        | 2.0.0                                                         | 704   |
+| [VS Code Icons](https://github.com/microsoft/vscode-codicons)           | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                                         | 0.0.23                                                        | 383   |
+| [Tabler Icons](https://github.com/tabler/tabler-icons)                  | [MIT](https://opensource.org/licenses/MIT)                                                        | 1.68.0                                                        | 1978  |
+| [Themify Icons](https://github.com/lykmapipo/themify-icons)             | [MIT](https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE)    | 1.0.1                                                         | 352   |
 
 You can add more icons by submitting pull requests or creating issues.
 
@@ -103,16 +108,16 @@ import { IconContext } from "react-icons";
   <div>
     <FaFolder />
   </div>
-</IconContext.Provider>
+</IconContext.Provider>;
 ```
 
-| Key         | Default               | Notes                           |
-| ----------- | --------------------- | ------------------------------- |
-| `color`     | `undefined` (inherit) |                                 |
-| `size`      | `1em`                 |                                 |
-| `className` | `undefined`           |                                 |
-| `style`     | `undefined`           | Can overwrite size and color    |
-| `attr`      | `undefined`           | Overwritten by other attributes |
+| Key         | Default               | Notes                              |
+| ----------- | --------------------- | ---------------------------------- |
+| `color`     | `undefined` (inherit) |                                    |
+| `size`      | `1em`                 |                                    |
+| `className` | `undefined`           |                                    |
+| `style`     | `undefined`           | Can overwrite size and color       |
+| `attr`      | `undefined`           | Overwritten by other attributes    |
 | `title`     | `undefined`           | Icon description for accessibility |
 
 ## Migrating from version 2 -> 3
@@ -123,23 +128,29 @@ Import path has changed. You need to rewrite from the old style.
 
 ```jsx
 // OLD IMPORT STYLE
-import FaBeer from 'react-icons/lib/fa/beer';
+import FaBeer from "react-icons/lib/fa/beer";
 
-function Question(){
+function Question() {
   return (
-    <h3> Lets go for a <FaBeer />? </h3>
-  )
+    <h3>
+      {" "}
+      Lets go for a <FaBeer />?{" "}
+    </h3>
+  );
 }
 ```
 
 ```jsx
 // NEW IMPORT STYLE
-import { FaBeer } from 'react-icons/fa';
+import { FaBeer } from "react-icons/fa";
 
-function Question(){
- return (
-   <h3> Lets go for a <FaBeer />? </h3>
- )
+function Question() {
+  return (
+    <h3>
+      {" "}
+      Lets go for a <FaBeer />?{" "}
+    </h3>
+  );
 }
 ```
 
@@ -176,11 +187,13 @@ CSS
 Dependencies on `@types/react-icons` can be deleted.
 
 #### Yarn
+
 ```bash
 yarn remove @types/react-icons
 ```
 
 #### NPM
+
 ```bash
 npm remove @types/react-icons
 ```
@@ -197,6 +210,7 @@ yarn build
 ```
 
 ### Preview
+
 The preview site is the [`react-icons`](https://react-icons.github.io/react-icons) website, built in [NextJS](https://nextjs.org/).
 
 ```bash
@@ -208,6 +222,7 @@ yarn start
 ```
 
 ### Demo
+
 The demo is a [Create React App](https://create-react-app.dev/) boilerplate with `react-icons` added as a dependency for easy testing.
 
 ```bash

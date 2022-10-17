@@ -12,7 +12,6 @@ export default function SearchIconSet({ icon, query, highlightPattern }) {
         const found = Object.keys(icons).filter((name) =>
           name.toLowerCase().includes(query)
         );
-
         return (
           <>
             {found.map((name) => (

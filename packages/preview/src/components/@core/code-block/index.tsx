@@ -25,9 +25,9 @@ export default function CodeBlock({ code, language }) {
             <IoMdClipboard />
           </a>
           {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line })}>
+            <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
+                <span key={key} {...getTokenProps({ token, key })} />
               ))}
             </div>
           ))}

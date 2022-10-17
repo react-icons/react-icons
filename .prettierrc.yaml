@@ -1,0 +1,6 @@
+overrides:
+  - files:
+      - "*.tsx"
+      - "*.ts"
+    options:
+      parser: typescript

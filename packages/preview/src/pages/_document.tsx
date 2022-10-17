@@ -1,3 +1,4 @@
+import React from "react";
 import {
   BRAND_DESCRIPTION,
   BRAND_KEYWORDS,

@@ -39,6 +39,7 @@ export function SearchIconSet({
     );
   return (
     <>
+      {found.length > 0 && <h3 className="icon-name">{icon.name}</h3>}
       {found ? (
         found.map((name) => {
           const Component = icons[name];

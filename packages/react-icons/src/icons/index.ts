@@ -432,6 +432,13 @@ export const icons: IconDefinition[] = [
         ),
         formatter: (name) => `HiOutline${name}`,
       },
+      {
+        files: path.resolve(
+          __dirname,
+          "heroicons-2/optimized/20/solid/*.svg"
+        ),
+        formatter: (name) => `HiMini${name}`,
+      },
     ],
     projectUrl: "https://github.com/tailwindlabs/heroicons",
     license: "MIT",

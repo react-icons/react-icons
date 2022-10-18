@@ -741,4 +741,28 @@ export const icons: IconDefinition[] = [
       hash: "4b9cdf66bc2a020113614bffa3dc9e61cf2738f1",
     },
   },
+  {
+    id: "pi",
+    name: "Phosphor Icons",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/phosphor-icons/assets/*/*.svg"
+        ),
+        formatter: (name) => `Pi${name}`,
+      },
+    ],
+    projectUrl: "https://github.com/phosphor-icons/core",
+    license: "MIT",
+    licenseUrl: "https://github.com/phosphor-icons/core/blob/main/LICENSE",
+    source: {
+      type: "git",
+      localName: "phosphor-icons",
+      remoteDir: "assets/",
+      url: "https://github.com/phosphor-icons/core.git",
+      branch: "master",
+      hash: "ab1d712ad1278f3b159a0f24f127e66de6da17d7",
+    },
+  },
 ];

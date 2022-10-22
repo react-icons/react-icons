@@ -33,7 +33,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "fontawesome/svgs/+(brands|solid)/*.svg"
+          "../../icons/fontawesome/svgs/+(brands|solid)/*.svg"
         ),
         formatter: (name) => `Fa${name}`,
       },
@@ -439,7 +439,7 @@ export const icons: IconDefinition[] = [
     source: {
       type: "git",
       localName: "heroicons",
-      remoteDir: "optimized/outline/",
+      remoteDir: "optimized/",
       url: "https://github.com/tailwindlabs/heroicons.git",
       branch: "v1",
       hash: "1d512146c15354804be4658df5c64b02d770d243",

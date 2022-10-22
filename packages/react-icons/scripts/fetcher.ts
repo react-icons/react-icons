@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { type IconSetGitSource } from "./_types";
 import { icons } from "../src/icons";
+import PQueue from "p-queue";
 const execFile = util.promisify(rawExecFile);
 
 interface Context {
@@ -29,16 +30,22 @@ async function main() {
     recursive: true,
   });
 
+  const queue = new PQueue({ concurrency: 10 });
   for (const icon of icons) {
     if (!icon.source) {
       continue;
     }
-    console.log(`start clone icon: ${icon.id}`);
-    await gitCloneIcon(icon.source, ctx);
+    const { source } = icon;
+    queue.add(() => gitCloneIcon(source, ctx));
   }
+
+  await queue.onIdle();
 }
 
 async function gitCloneIcon(source: IconSetGitSource, ctx: Context) {
+  console.log(
+    `start clone icon: ${source.url}/${source.remoteDir}@${source.branch}`
+  );
   await execFile(
     "git",
     ["clone", "--filter=tree:0", "--no-checkout", source.url, source.localName],
@@ -49,7 +56,7 @@ async function gitCloneIcon(source: IconSetGitSource, ctx: Context) {
 
   await execFile(
     "git",
-    ["sparse-checkout", "set", "--cone", source.remoteDir],
+    ["sparse-checkout", "set", "--cone", "--skip-checks", source.remoteDir],
     {
       cwd: ctx.iconDir(source.localName),
     }

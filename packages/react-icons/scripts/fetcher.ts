@@ -2,48 +2,62 @@ import util from "node:util";
 import { execFile as rawExecFile } from "node:child_process";
 import fs from "fs";
 import path from "path";
+import { type IconSetGitSource } from "./_types";
+import { icons } from "../src/icons";
 const execFile = util.promisify(rawExecFile);
 
-async function main() {
-  const iconsBaseDir = path.join(__dirname, "../icons");
-  await fs.promises.mkdir(iconsBaseDir, {
-    recursive: true,
-  });
+interface Context {
+  distBaseDir: string;
+  iconDir(name: string): string;
+}
 
-  const iconDir = path.join(iconsBaseDir, "weather");
-  await fs.promises.rm(iconDir, {
+async function main() {
+  const distBaseDir = path.join(__dirname, "../icons");
+  const ctx: Context = {
+    distBaseDir,
+    iconDir(name: string) {
+      return path.join(distBaseDir, name);
+    },
+  };
+
+  // rm all icons and mkdir dist
+  await fs.promises.rm(distBaseDir, {
     recursive: true,
     force: true,
   });
-
-  const res = await execFile(
-    "git",
-    [
-      "clone",
-      "--filter=tree:0",
-      "--no-checkout",
-      "https://github.com/erikflowers/weather-icons.git",
-      "weather",
-    ],
-    {
-      cwd: iconsBaseDir,
-    }
-  );
-  console.log(res);
-
-  const res2 = await execFile(
-    "git",
-    ["sparse-checkout", "set", "--cone", "svg/"],
-    {
-      cwd: iconDir,
-    }
-  );
-  console.log(res2);
-
-  const res3 = await execFile("git", ["checkout", "master"], {
-    cwd: iconDir,
+  await fs.promises.mkdir(distBaseDir, {
+    recursive: true,
   });
-  console.log(res3);
+
+  for (const icon of icons) {
+    if (!icon.source) {
+      continue;
+    }
+    console.log(`start clone icon: ${icon.id}`);
+    await gitCloneIcon(icon.source, ctx);
+  }
+}
+
+async function gitCloneIcon(source: IconSetGitSource, ctx: Context) {
+  await execFile(
+    "git",
+    ["clone", "--filter=tree:0", "--no-checkout", source.url, source.localName],
+    {
+      cwd: ctx.distBaseDir,
+    }
+  );
+
+  await execFile(
+    "git",
+    ["sparse-checkout", "set", "--cone", source.remoteDir],
+    {
+      cwd: ctx.iconDir(source.localName),
+    }
+  );
+
+  await execFile("git", ["checkout", source.hash], {
+    cwd: ctx.iconDir(source.localName),
+  });
 }
 
 main().catch((err) => {

@@ -5,6 +5,7 @@ export interface IconDefinition {
   projectUrl: string;
   license: string;
   licenseUrl: string;
+  source?: IconSetSource;
 }
 
 export interface IconDefinitionContent {
@@ -12,4 +13,14 @@ export interface IconDefinitionContent {
   formatter(camelName: string, filePath: string): string;
   multiColor?: boolean;
   processWithSVGO?: boolean;
+}
+
+export type IconSetSource = IconSetGitSource;
+export interface IconSetGitSource {
+  type: "git";
+  localName: string;
+  remoteDir: string;
+  url: string;
+  branch: string;
+  hash: string;
 }

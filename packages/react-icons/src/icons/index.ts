@@ -192,6 +192,14 @@ export const icons: IconDefinition[] = [
     projectUrl: "https://erikflowers.github.io/weather-icons/",
     license: "SIL OFL 1.1",
     licenseUrl: "http://scripts.sil.org/OFL",
+    source: {
+      type: "git",
+      localName: "weather-icons",
+      remoteDir: "svg/",
+      url: "https://github.com/erikflowers/weather-icons.git",
+      branch: "master",
+      hash: "2eec50d931bdafbe6c927a2c6097a7390bf6b08e",
+    },
   },
   {
     id: "di",
@@ -205,6 +213,14 @@ export const icons: IconDefinition[] = [
     projectUrl: "https://vorillaz.github.io/devicons/",
     license: "MIT",
     licenseUrl: "https://opensource.org/licenses/MIT",
+    source: {
+      type: "git",
+      localName: "devicons",
+      remoteDir: "!SVG/",
+      url: "https://github.com/vorillaz/devicons.git",
+      branch: "master",
+      hash: "ba75593fdf8d66496676a90cbf127d721f73e961",
+    },
   },
   {
     id: "ai",

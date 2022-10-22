@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: corepack
+        run: corepack enable
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -28,7 +30,6 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn --immutable
-        if: steps.restore-cache.outputs.cache-hit != 'true'
       - name: Build Packages
         run: BASE_PATH=/react-icons ./build-script.sh
       - uses: actions/upload-artifact@v3

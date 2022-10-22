@@ -185,7 +185,7 @@ export const icons: IconDefinition[] = [
     name: "Weather Icons",
     contents: [
       {
-        files: path.resolve(__dirname, "weather-icons/svg/*.svg"),
+        files: path.resolve(__dirname, "../../icons/weather-icons/svg/*.svg"),
         formatter: (name) => name,
       },
     ],
@@ -206,7 +206,7 @@ export const icons: IconDefinition[] = [
     name: "Devicons",
     contents: [
       {
-        files: path.resolve(__dirname, "devicons/!SVG/*.svg"),
+        files: path.resolve(__dirname, "../../icons/devicons/!SVG/*.svg"),
         formatter: (name) => `Di${name}`,
       },
     ],

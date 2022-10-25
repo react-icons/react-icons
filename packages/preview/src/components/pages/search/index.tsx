@@ -10,7 +10,8 @@ export default function SearchPageComponent() {
   const { query } = React.useContext(Context);
 
   if (query.length > 2) {
-    const hightlightPattern = new RegExp(`(${query})`, "i");
+    const queryText = query.replace(/\W+/g, "");
+    const hightlightPattern = new RegExp(`(${queryText})`, "i");
     return (
       <>
         <h2>

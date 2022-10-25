@@ -105,17 +105,19 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
     const firstDir = path.dirname(files[0]);
     const packageJson = findPackage(firstDir, true);
 
-    let gitVersion;
-    if (!packageJson.version) {
+    let version: string;
+    if (packageJson.version && !packageJson.name.includes("react-icons")) {
+      version = packageJson.version;
+    } else {
       const { stdout } = await exec(
         `cd ${firstDir} && git describe --tags || cd ${firstDir} && git rev-parse HEAD`
       );
-      gitVersion = stdout.trim();
+      version = stdout.trim();
     }
 
     versions.push({
       icon,
-      version: packageJson.version || gitVersion,
+      version,
       count: files.length,
     });
   }

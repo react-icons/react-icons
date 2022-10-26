@@ -146,7 +146,61 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/",
       url: "https://github.com/google/material-design-icons.git",
       branch: "master",
-      hash: "63c5cb306073a9ecdfd3579f0f696746ab6305f6",
+      hash: "71430effe6d2cc0ed6bfd44359bf9f5ce5bd4e07",
+    },
+  },
+  {
+    id: "mds",
+    name: "Material Design symbols",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/material-design-symbols/symbols/web/*/materialsymbolssharp/!(*_fill*|*_grad*|*_wght*)_24px.svg"
+        ),
+        formatter: (name, file) =>
+          `MdsSharp${camelcase(
+            file.replace(/^.*\/([^/]+)\/(.*)[^/]*\/*_24px.svg$/i, "$2"),
+            { pascalCase: true }
+          )}`,
+        processWithSVGO: true,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/material-design-symbols/symbols/web/*/materialsymbolsrounded/!(*_fill*|*_grad*|*_wght*)_24px.svg"
+        ),
+        formatter: (name, file) =>
+          `MdsRounded${camelcase(
+            file.replace(/^.*\/([^/]+)\/(.*)[^/]*\/*_24px.svg$/i, "$2"),
+            { pascalCase: true }
+          )}`,
+        processWithSVGO: true,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/material-design-symbols/symbols/web/*/materialsymbolsoutlined/!(*_fill*|*_grad*|*_wght*)_24px.svg"
+        ),
+        formatter: (name, file) =>
+          `MdsOutlined${camelcase(
+            file.replace(/^.*\/([^/]+)\/(.*)[^/]*\/*_24px.svg$/i, "$2"),
+            { pascalCase: true }
+          )}`,
+        processWithSVGO: true,
+      },
+    ],
+    projectUrl: "http://google.github.io/material-design-icons/",
+    license: "Apache License Version 2.0",
+    licenseUrl:
+      "https://github.com/google/material-design-icons/blob/master/LICENSE",
+    source: {
+      type: "git",
+      localName: "material-design-symbols",
+      remoteDir: "symbols/web/",
+      url: "https://github.com/google/material-design-icons.git",
+      branch: "master",
+      hash: "71430effe6d2cc0ed6bfd44359bf9f5ce5bd4e07",
     },
   },
   {

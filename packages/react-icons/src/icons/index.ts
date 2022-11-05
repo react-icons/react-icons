@@ -655,4 +655,47 @@ export const icons: IconDefinition[] = [
       hash: "ad5ed84802fea2b865ce07220435a3a16b266837",
     },
   },
+  {
+    id: "ji",
+    name: "Jam Icons",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/jam-icons/icons/*.svg"),
+        formatter: (name) => `Ji${name}`,
+      },
+    ],
+    projectUrl: "https://github.com/michaelampr/jam",
+    license: "MIT",
+    licenseUrl: "https://github.com/michaelampr/jam/blob/master/LICENSE",
+    source: {
+      type: "git",
+      localName: "jam-icons",
+      remoteDir: "icons/",
+      url: "https://github.com/michaelampr/jam.git",
+      branch: "master",
+      hash: "c8501b14e0480c8becac58a626e72502bca90084",
+    },
+  },
+  {
+    id: " ik",
+    name: "Ikonate",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/ikonate/icons/*.svg"),
+        formatter: (name) => `Ik${name}`,
+      },
+    ],
+    projectUrl: "https://github.com/mikolajdobrucki/ikonate",
+    license: "MIT",
+    licenseUrl:
+      "https://github.com/mikolajdobrucki/ikonate/blob/master/LICENSE",
+    source: {
+      type: "git",
+      localName: "ikonate",
+      remoteDir: "icons/",
+      url: "https://github.com/mikolajdobrucki/ikonate.git",
+      branch: "master",
+      hash: "de3e91e75b81f0687ce9bf570355ab7ed873e992",
+    },
+  },
 ];

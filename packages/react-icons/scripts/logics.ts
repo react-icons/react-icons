@@ -35,7 +35,17 @@ export async function convertIconData(svg, multiColor) {
           ].includes(name)
       )
       .reduce((obj, name) => {
-        const newName = camelcase(name);
+        let newName: string;
+        if (new RegExp("aria-.*").test(name)) {
+          // https://reactjs.org/docs/accessibility.html#wai-aria
+          // Note that all aria-* HTML attributes are fully supported in JSX.
+          // Whereas most DOM properties and attributes in React are camelCased,
+          // these attributes should be hyphen-cased (also known as kebab-case, lisp-case, etc)
+          // as they are in plain HTML:
+          newName = name;
+        } else {
+          newName = camelcase(name);
+        }
         switch (newName) {
           case "fill":
             if (

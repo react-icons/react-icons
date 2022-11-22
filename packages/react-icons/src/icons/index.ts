@@ -655,4 +655,28 @@ export const icons: IconDefinition[] = [
       hash: "ad5ed84802fea2b865ce07220435a3a16b266837",
     },
   },
+  {
+    id: "rx",
+    name: "Radix Icons",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/radix-icons/packages/radix-icons/icons/*.svg"
+        ),
+        formatter: (name) => `Rx${camelcase(name, { pascalCase: true })}`,
+      },
+    ],
+    projectUrl: "https://icons.radix-ui.com",
+    license: "MIT",
+    licenseUrl: "https://github.com/radix-ui/icons/blob/master/LICENSE",
+    source: {
+      type: "git",
+      localName: "radix-icons",
+      remoteDir: "packages/radix-icons/icons/",
+      url: "https://github.com/radix-ui/icons.git",
+      branch: "master",
+      hash: "237cd76c007a573c2a6f6caabe9ea3de81393f50",
+    },
+  },
 ];

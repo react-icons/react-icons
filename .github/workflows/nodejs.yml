@@ -1,6 +1,8 @@
 name: Node.js CI
 
-on: [push]
+"on":
+  - push
+  - pull_request
 
 jobs:
   build:
@@ -30,6 +32,10 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn --immutable
+      - name: Formatter
+        run: yarn format:ci
+      - name: Lint
+        run: yarn lint
       - name: Build Packages
         run: BASE_PATH=/react-icons ./build-script.sh
       - uses: actions/upload-artifact@v3

@@ -1,6 +1,8 @@
 {
-  "packages": ["packages/*"],
-  "version": "4.6.1-snapshot.0",
+  "packages": [
+    "packages/*"
+  ],
+  "version": "4.7.0",
   "command": {
     "version": {
       "push": true

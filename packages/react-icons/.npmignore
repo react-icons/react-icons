@@ -1,5 +1,5 @@
 node_modules/
-src/icons/*/
+icons/*/
 scripts/
 *.tgz
 *.log

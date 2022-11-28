@@ -35,7 +35,7 @@ export async function convertIconData(svg, multiColor) {
           ].includes(name)
       )
       .reduce((obj, name) => {
-        const newName = camelcase(name);
+        const newName = name.startsWith("aria-") ? name : camelcase(name);
         switch (newName) {
           case "fill":
             if (

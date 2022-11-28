@@ -110,7 +110,10 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
       version = packageJson.version;
     } else {
       const { stdout } = await exec(
-        `cd ${firstDir} && git describe --tags || cd ${firstDir} && git rev-parse HEAD`
+        `git describe --tags || git rev-parse HEAD`,
+        {
+          cwd: firstDir,
+        }
       );
       version = stdout.trim();
     }
@@ -130,16 +133,17 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
   }
 
   const versionsStr =
-    "Icon Library|License|Version|Count\n" +
-    "---|---|---|---\n" +
+    "| Icon Library | License | Version | Count |\n" +
+    "| --- | --- | --- | ---: |\n" +
     versions
-      .map((v) =>
-        [
-          `[${v.icon.name}](${v.icon.projectUrl})`,
-          `[${v.icon.license}](${v.icon.licenseUrl})`,
-          v.version,
-          v.count,
-        ].join("|")
+      .map(
+        (v) =>
+          `| ${[
+            `[${v.icon.name}](${v.icon.projectUrl})`,
+            `[${v.icon.license}](${v.icon.licenseUrl})`,
+            v.version,
+            v.count,
+          ].join(" | ")} |`
       )
       .join("\n") +
     "\n";
@@ -164,7 +168,7 @@ export async function writePackageJson(override, { DIST, LIB, rootDir }) {
     ...override,
   };
 
-  const editedPackageJsonStr = JSON.stringify(packageJson, null, 2);
+  const editedPackageJsonStr = JSON.stringify(packageJson, null, 2) + "\n";
   await fs.writeFile(path.resolve(DIST, "package.json"), editedPackageJsonStr);
 }
 

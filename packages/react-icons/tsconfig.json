@@ -3,10 +3,7 @@
     "outDir": "./build/lib/esm",
     "module": "es2015",
     "target": "es5",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "jsx": "react",
     "moduleResolution": "node",
     "baseUrl": ".",
@@ -14,10 +11,6 @@
     "strict": true,
     "noImplicitAny": true
   },
-  "include": [
-    "src/**/*.tsx"
-  ],
-  "exclude": [
-    "icons"
-  ]
+  "include": ["src/**/*.tsx"],
+  "exclude": ["icons"]
 }

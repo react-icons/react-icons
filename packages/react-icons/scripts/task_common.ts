@@ -133,16 +133,17 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
   }
 
   const versionsStr =
-    "Icon Library|License|Version|Count\n" +
-    "---|---|---|---\n" +
+    "| Icon Library | License | Version | Count |\n" +
+    "| --- | --- | --- | ---: |\n" +
     versions
-      .map((v) =>
-        [
-          `[${v.icon.name}](${v.icon.projectUrl})`,
-          `[${v.icon.license}](${v.icon.licenseUrl})`,
-          v.version,
-          v.count,
-        ].join("|")
+      .map(
+        (v) =>
+          `| ${[
+            `[${v.icon.name}](${v.icon.projectUrl})`,
+            `[${v.icon.license}](${v.icon.licenseUrl})`,
+            v.version,
+            v.count,
+          ].join(" | ")} |`
       )
       .join("\n") +
     "\n";

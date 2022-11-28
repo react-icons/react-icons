@@ -1,6 +1,8 @@
 {
   "search.exclude": {
-    "**/packages/react-icons/src/icons/*/**": true
+    "**/packages/react-icons/src/icons/*/**": true,
+    "**/packages/_react-icons_all/*/**": true,
+    "**/packages/_react-icons_all-files/*/**": true
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": true

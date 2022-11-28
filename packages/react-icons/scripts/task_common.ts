@@ -110,7 +110,10 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
       version = packageJson.version;
     } else {
       const { stdout } = await exec(
-        `cd ${firstDir} && git describe --tags || cd ${firstDir} && git rev-parse HEAD`
+        `git describe --tags || git rev-parse HEAD`,
+        {
+          cwd: firstDir,
+        }
       );
       version = stdout.trim();
     }
@@ -164,7 +167,7 @@ export async function writePackageJson(override, { DIST, LIB, rootDir }) {
     ...override,
   };
 
-  const editedPackageJsonStr = JSON.stringify(packageJson, null, 2);
+  const editedPackageJsonStr = JSON.stringify(packageJson, null, 2) + "\n";
   await fs.writeFile(path.resolve(DIST, "package.json"), editedPackageJsonStr);
 }
 

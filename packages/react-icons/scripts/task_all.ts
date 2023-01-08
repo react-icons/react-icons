@@ -49,6 +49,7 @@ export async function dirInit({ DIST, LIB, rootDir }) {
       [icon.id, "package.json"],
       JSON.stringify(
         {
+          name: icon.id,
           sideEffects: false,
           module: "./index.esm.js",
         },

@@ -262,7 +262,7 @@ export const icons: IconDefinition[] = [
     source: {
       type: "git",
       localName: "devicons",
-      remoteDir: "!SVG/",
+      remoteDir: "\\!SVG/",
       url: "https://github.com/vorillaz/devicons.git",
       branch: "master",
       hash: "ba75593fdf8d66496676a90cbf127d721f73e961",

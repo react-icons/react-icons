@@ -2,14 +2,14 @@ import { ALL_ICONS } from "@utils/icon";
 import { Context } from "@utils/search-context";
 import { useRouter } from "next/router";
 import React, { useEffect, useMemo, useState } from "react";
-import debounce from "lodash/debounce";
+import debounce from "lodash.debounce";
 
 import ActiveLink from "../active-link";
 import Heading from "../heading";
 
 const searchPath = "/search";
 
-const DEBOUNCE_WAIT_TIME = 300 as const;
+const DEBOUNCE_WAIT_TIME = 300;
 
 export default function Sidebar() {
   const iconsList = ALL_ICONS.sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -33,10 +33,7 @@ export default function Sidebar() {
     });
   };
 
-  const debouncedSearchHandler = useMemo(
-    () => debounce(onSearch, DEBOUNCE_WAIT_TIME),
-    []
-  );
+  const debouncedSearchHandler = debounce(onSearch, DEBOUNCE_WAIT_TIME);
 
   const goToSearch = (e) => {
     if (!router.asPath.includes(searchPath)) router.push(searchPath);

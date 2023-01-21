@@ -133,7 +133,7 @@ const FeatureTile = ({
 import FeatureTile from './FeatureTile.js';
 import { GoCircuitBoard,  } from "react-icons/go";
 
- <FeatureTile text="Digital and modern Planing"  imageLink={<GoCircuitBoard/>}/>
+ <FeatureTile text="Digital and modern Planing"  icon={<GoCircuitBoard/>}/>
 ```
 
 # Icons Overview

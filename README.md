@@ -138,6 +138,8 @@ import { GoCircuitBoard,  } from "react-icons/go";
 
 # Icons Overview
 
+You can search icons at offical site https://react-icons.github.io/react-icons/
+
 | Icon Library                                                            | License                                                                                           | Version                                  | Count |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----: |
 | [Circum Icons](https://circumicons.com/)                                | [MPL-2.0 license](https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE)                 | a2924cb1ee37b9fa39ef023a36f1c884b3492e9b |   285 |
@@ -199,7 +201,7 @@ import { IconContext } from "react-icons";
 | `attr`      | `undefined`           | Overwritten by other attributes    |
 | `title`     | `undefined`           | Icon description for accessibility |
 
-### Migrating from version 2 -> 3
+## Migrating from version 2 -> 3
 
 #### Change import style
 

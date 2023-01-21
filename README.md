@@ -1,4 +1,6 @@
+<div align="center">
 <img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
+
 
 # [React Icons](https://react-icons.github.io/react-icons)
 
@@ -8,6 +10,37 @@
 [npm-url]: https://www.npmjs.com/package/react-icons
 
 Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
+</div>
+
+# Table of content
+
+<details>
+<summary>
+Overview
+</summary>
+
+1. [Installation](#installation)
+   * [Modern](#installation-for-standard-modern-project)
+   * [MeterJS / Gatsby / Etc](#installation-for-meteorjs-gatsbyjs-etc)
+2. [Examples](#examples)
+3. [Icons overview](#icons-overview)
+4. [Features](#features)
+    * [Icon context](#icon-context)
+    * [Global Inline Styling](#global-inline-styling)
+    * [Global classname Styling](#global-classname-styling)
+    * [Typescript native support](#typescript-native-support)
+        * [Uninstall typescript dependencies](#uninstall-typescript-dependencies)
+5. [Contributing](#contributing)
+6. [Preview](#preview)
+7. [Demo](#demo)
+8. [FAQ](#faq)
+9. [Related projects](#related-projects)
+10. [Licence](#licence)
+</details>
+
+<br/>
+
+# Installation
 
 ## Installation (for standard modern project)
 
@@ -62,7 +95,48 @@ function Question() {
 }
 ```
 
-## Icons
+# Examples
+There you can check some examples
+
+## Using icon in function as hardway
+
+```jsx
+import { FaBeer } from "react-icons/fa";
+
+function Question() {
+  return (
+    <h3>
+      {" "}
+      Lets go for a <FaBeer />?{" "}
+    </h3>
+  );
+}
+```
+
+## Using icon in function with custom icon
+
+```jsx
+`FeatureTile.js`
+const FeatureTile = ({
+  text,
+  icon,
+  ...props
+}) =>  {
+  return (
+    <h3>
+      {icon} {text} 
+    </h3>
+  );
+}
+
+`Another file`
+import FeatureTile from './FeatureTile.js';
+import { GoCircuitBoard,  } from "react-icons/go";
+
+ <FeatureTile text="Digital and modern Planing"  imageLink={<GoCircuitBoard/>}/>
+```
+
+# Icons Overview
 
 | Icon Library                                                            | License                                                                                           | Version                                  | Count |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----: |
@@ -96,7 +170,11 @@ function Question() {
 
 You can add more icons by submitting pull requests or creating issues.
 
-## Configuration
+# Features
+
+## Icon context
+
+### Configuration
 
 You can configure react-icons props using [React Context API](https://reactjs.org/docs/context.html).
 
@@ -121,9 +199,9 @@ import { IconContext } from "react-icons";
 | `attr`      | `undefined`           | Overwritten by other attributes    |
 | `title`     | `undefined`           | Icon description for accessibility |
 
-## Migrating from version 2 -> 3
+### Migrating from version 2 -> 3
 
-### Change import style
+#### Change import style
 
 Import path has changed. You need to rewrite from the old style.
 
@@ -157,17 +235,17 @@ function Question() {
 
 Ending up with a large JS bundle? Check out [this issue](https://github.com/react-icons/react-icons/issues/154).
 
-### Adjustment CSS
+#### Adjustment CSS
 
 From version 3, `vertical-align: middle` is not automatically given. Please use IconContext to specify className or specify an inline style.
 
-#### Global Inline Styling
+## Global Inline Styling
 
 ```tsx
 <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
 ```
 
-#### Global `className` Styling
+## Global `className` Styling
 
 Component
 
@@ -183,9 +261,13 @@ CSS
 }
 ```
 
-### TypeScript native support
+## TypeScript native support
 
-Dependencies on `@types/react-icons` can be deleted.
+This project native supports TypeScript.
+
+If you don't require it - dependencies on `@types/react-icons` can be deleted.
+
+### Uninstall TypeScript dependencies
 
 #### Yarn
 
@@ -199,9 +281,9 @@ yarn remove @types/react-icons
 npm remove @types/react-icons
 ```
 
-## Contributing
+# Contributing
 
-### Development
+## Development
 
 ```bash
 yarn
@@ -210,7 +292,7 @@ cd packages/react-icons
 yarn build
 ```
 
-### Preview
+# Preview
 
 The preview site is the [`react-icons`](https://react-icons.github.io/react-icons) website, built in [NextJS](https://nextjs.org/).
 
@@ -222,7 +304,7 @@ cd ../preview
 yarn start
 ```
 
-### Demo
+# Demo
 
 The demo is a [Create React App](https://create-react-app.dev/) boilerplate with `react-icons` added as a dependency for easy testing.
 
@@ -234,15 +316,17 @@ cd ../demo
 yarn start
 ```
 
+# FAQ
+
 ## Why React SVG components instead of fonts?
 
 SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
 
-## Related Projects
+# Related Projects
 
 - [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)
 
-## Licence
+# Licence
 
 MIT
 

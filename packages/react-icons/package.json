@@ -8,7 +8,6 @@
     "kamijin_fanta <kamijin@live.jp>"
   ],
   "license": "MIT",
-  "main": "lib",
   "types": "./lib/esm/index.d.ts",
   "sideEffects": false,
   "repository": {

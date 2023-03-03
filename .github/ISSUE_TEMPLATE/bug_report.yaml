@@ -13,7 +13,6 @@ body:
     attributes:
       label: Describe the bug
       description: A clear and concise description of what the bug is.
-      placeholder: ""
     validations:
       required: true
   - type: textarea
@@ -21,7 +20,6 @@ body:
     attributes:
       label: Expected behavior
       description: A clear and concise description of what you expected to happen.
-      placeholder: ""
     validations:
       required: true
   - type: input
@@ -29,7 +27,19 @@ body:
     attributes:
       label: Minimal sample repository URL
       description: Gist/GitHub URL. If it's happening on the demo site, its URL.
-      placeholder: ""
+      placeholder: "https://github.com/..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. In this environment...
+        2. With this config...
+        3. Run '...'
+        4. See error...
     validations:
       required: true
   - type: input
@@ -37,7 +47,7 @@ body:
     attributes:
       label: Package version
       description: The version of react-icons used in the project
-      placeholder: ""
+      placeholder: "vX.Y.Z"
     validations:
       required: true
   - type: textarea
@@ -53,6 +63,5 @@ body:
     attributes:
       label: Additional context
       description: Add any other context about the problem here.
-      placeholder: ""
     validations:
       required: false

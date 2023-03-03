@@ -10998,7 +10998,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ionicons@npm:^4.4.4":
+"ionicons@npm:^4.6.3":
   version: 4.6.3
   resolution: "ionicons@npm:4.6.3"
   checksum: 8c74493ebbd8bb45841536aa6748c83bfe17e3b480895a82072948dc528202bbe37138b695fbe445770d5aa5b70e5999e06fee9c4a7b1a3cd7d16d2a52ae0369
@@ -14200,7 +14200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"octicons@npm:^8.1.0":
+"octicons@npm:^8.5.0":
   version: 8.5.0
   resolution: "octicons@npm:8.5.0"
   dependencies:
@@ -16259,10 +16259,10 @@ __metadata:
     find-package: ^1.0.0
     glob: ^8.0.3
     glob-promise: ^5.0.0
-    ionicons: ^4.4.4
+    ionicons: ^4.6.3
     ionicons-5: "npm:ionicons@5"
     lerna: ^3.20.2
-    octicons: ^8.1.0
+    octicons: ^8.5.0
     p-queue: ^7.3.0
     prettier: ^2.7.1
     svgo: ^1.3.2

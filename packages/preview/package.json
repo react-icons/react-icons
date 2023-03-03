@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "version": "4.7.1",
+  "version": "4.7.2-snapshot.0",
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.15.2",
@@ -26,7 +26,7 @@
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
+    "react-icons": "^4.7.2-snapshot.0",
     "sass": "^1.55.0",
     "tiny-skeleton-loader-react": "^1.1.0"
   },

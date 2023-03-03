@@ -14,8 +14,6 @@
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "submodule": "git submodule update --init",
-    "submodule-deinit": "git submodule deinit --all",
     "lint": "yarn eslint .",
     "format": "prettier --write --ignore-unknown .",
     "format:ci": "prettier --check --ignore-unknown .",

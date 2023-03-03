@@ -48,6 +48,8 @@ export async function convertIconData(svg, multiColor) {
             break;
           case "pId":
             break;
+          case "dataName":
+            break;
           default:
             obj[newName] = attribs[name];
             break;

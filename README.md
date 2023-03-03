@@ -205,8 +205,8 @@ npm remove @types/react-icons
 
 ```bash
 yarn
-yarn submodule  # fetch icon sources
 cd packages/react-icons
+yarn fetch  # fetch icon sources
 yarn build
 ```
 

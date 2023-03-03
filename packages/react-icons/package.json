@@ -1,14 +1,15 @@
 {
   "name": "react-icons_builders",
   "private": true,
-  "version": "4.7.1",
+  "version": "4.8.1-snapshot.0",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
     "kamijin_fanta <kamijin@live.jp>"
   ],
   "license": "MIT",
-  "main": "lib",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "sideEffects": false,
   "repository": {
@@ -34,10 +35,10 @@
     "find-package": "^1.0.0",
     "glob": "^8.0.3",
     "glob-promise": "^5.0.0",
-    "ionicons": "^4.4.4",
+    "ionicons": "^4.6.3",
     "ionicons-5": "npm:ionicons@5",
     "lerna": "^3.20.2",
-    "octicons": "^8.1.0",
+    "octicons": "^8.5.0",
     "p-queue": "^7.3.0",
     "prettier": "^2.7.1",
     "svgo": "^1.3.2",
@@ -46,6 +47,7 @@
   "scripts": {
     "ts": "node -r esbuild-register",
     "build": "yarn ts ./scripts/build.ts",
-    "fetch": "yarn ts ./scripts/fetcher.ts"
+    "fetch": "yarn ts ./scripts/fetcher.ts",
+    "check": "yarn ts ./scripts/check.ts"
   }
 }

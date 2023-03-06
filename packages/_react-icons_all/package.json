@@ -7,9 +7,9 @@
     "kamijin_fanta <kamijin@live.jp>"
   ],
   "license": "MIT",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",

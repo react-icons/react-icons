@@ -38,6 +38,7 @@ export async function convertIconData(svg, multiColor) {
         const newName = name.startsWith("aria-") ? name : camelcase(name);
         switch (newName) {
           case "fill":
+          case "stroke":
             if (
               attribs[name] === "none" ||
               attribs[name] === "currentColor" ||

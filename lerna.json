@@ -2,7 +2,7 @@
   "packages": [
     "packages/*"
   ],
-  "version": "4.8.1-snapshot.1",
+  "version": "4.8.1-snapshot.2",
   "command": {
     "version": {
       "push": true

@@ -2,7 +2,7 @@ import path from "path";
 import { promises as fs } from "fs";
 import camelcase from "camelcase";
 import { icons } from "../src/icons";
-import { iconRowTemplate, iconsEntryTemplate } from "./templates";
+import { iconRowTemplate } from "./templates";
 import { getIconFiles, convertIconData, rmDirRecursive } from "./logics";
 import { svgo } from "./svgo";
 
@@ -22,13 +22,7 @@ export async function dirInit({ DIST, LIB, rootDir }) {
   const write = (filePath, str) =>
     fs.writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = [
-    "index.d.ts",
-    "index.esm.js",
-    "index.js",
-    "all.js",
-    "all.d.ts",
-  ];
+  const initFiles = ["index.d.ts", "index.esm.js", "index.js"];
 
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
@@ -64,11 +58,6 @@ export async function dirInit({ DIST, LIB, rootDir }) {
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
-  const entryModule = iconsEntryTemplate(icon.id, "module");
-  await fs.appendFile(path.resolve(DIST, "all.js"), entryModule, "utf8");
-  const entryDts = iconsEntryTemplate(icon.id, "dts");
-  await fs.appendFile(path.resolve(DIST, "all.d.ts"), entryDts, "utf8");
-
   const exists = new Set(); // for remove duplicate
   for (const content of icon.contents) {
     const files = await getIconFiles(content);

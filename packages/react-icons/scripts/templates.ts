@@ -23,13 +23,3 @@ export function iconRowTemplate(
       throw new Error(`Unknown type: ${type}`);
   }
 }
-export function iconsEntryTemplate(iconId, type = "module"): string {
-  switch (type) {
-    case "module":
-      return `export * from './${iconId}';\n`;
-    case "dts":
-      return `export * from './${iconId}';\n`;
-    default:
-      throw Error(`Unknown type: ${type} iconId: ${iconId}`);
-  }
-}

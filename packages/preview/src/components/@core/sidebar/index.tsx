@@ -41,13 +41,22 @@ export default function Sidebar() {
     }
   };
 
-  const onKeyPress = (e: KeyboardEvent) => {
-    if (e.key === "/") {
-      searchRef.current.focus();
-    }
-  };
-
   useEffect(() => {
+    const searchNode = searchRef.current;
+
+    const onKeyPress = (e: KeyboardEvent) => {
+      const activeElement = document.activeElement;
+
+      // To avoid switching focus when the user is typing in input fields
+      const isInputElement =
+        activeElement instanceof HTMLInputElement ||
+        activeElement instanceof HTMLTextAreaElement;
+
+      if (!isInputElement && e.key === "/") {
+        searchNode?.focus();
+      }
+    };
+
     document.addEventListener("keyup", onKeyPress);
 
     return () => {

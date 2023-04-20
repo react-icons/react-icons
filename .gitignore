@@ -5,6 +5,8 @@ module
 *.log
 *.tgz
 
+.idea
+
 .pnp.*
 .yarn/*
 !.yarn/patches

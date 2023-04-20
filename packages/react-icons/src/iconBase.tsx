@@ -34,7 +34,7 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   size?: string | number;
   color?: string;
   title?: string;
-  parent?: JSX.Element;
+  parent?: boolean;
   parentClassName?: string;
 }
 
@@ -50,9 +50,9 @@ export function IconBase(
     if (props.className)
       className = (className ? className + " " : "") + props.className;
 
-    // if parent is null, explicitly skip wrapping component.
-    // else, use the parent or the the context wrapping component.
-    const ParentComponent = parent === null ?  undefined : parent || conf.parent;
+    // if parent is null, explicitly skip parent component.
+    // else, use the flag value from props or the context.
+    const _parent = parent === null ? undefined : parent || conf.parent;
     // can pass '' to parentClassName to override context value.
     const _parentClassName = parentClassName ?? conf.parentClassName;
 
@@ -79,11 +79,9 @@ export function IconBase(
       </svg>
     );
 
-    // wrap component if parent component is set.
-    if (ParentComponent)
-      return <ParentComponent className={_parentClassName}>{icon}</ParentComponent>
+    // wrap component if parent is set.
+    if (_parent) return <span className={_parentClassName}>{icon}</span>;
     return icon;
-      
   };
 
   return IconContext !== undefined ? (

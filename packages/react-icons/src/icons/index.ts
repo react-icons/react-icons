@@ -527,7 +527,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "optimized/",
       url: "https://github.com/tailwindlabs/heroicons.git",
       branch: "master",
-      hash: "1ef549d0b7eaba7224b3db9654894fad12364f7f",
+      hash: "857ba1b04f8017a36c7c0fd6e2738fef37492f18",
     },
   },
   {

@@ -3668,6 +3668,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@primer/octicons@npm:^18.3.0":
+  version: 18.3.0
+  resolution: "@primer/octicons@npm:18.3.0"
+  dependencies:
+    object-assign: ^4.1.1
+  checksum: 00e0612f810a73e737bc25b5da2089a7ff281beaa79ccdf0595320040fada95651bb98fae0c36622b85f34bdc7871acb802bf584e3333340e49687977db4cd6d
+  languageName: node
+  linkType: hard
+
 "@react-icons/all-files@workspace:packages/_react-icons_all-files":
   version: 0.0.0-use.local
   resolution: "@react-icons/all-files@workspace:packages/_react-icons_all-files"
@@ -14182,15 +14191,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"octicons@npm:^8.5.0":
-  version: 8.5.0
-  resolution: "octicons@npm:8.5.0"
-  dependencies:
-    object-assign: ^4.1.1
-  checksum: 8c5caefd8c2002891c44c0cd39cb14c9246b338f0ca10eca092c2fd8b9ed931465925196a4120fb8889b26c532a2616dff3b60a5dcd6aab93a2056954f757228
-  languageName: node
-  linkType: hard
-
 "octokit-pagination-methods@npm:^1.1.0":
   version: 1.1.0
   resolution: "octokit-pagination-methods@npm:1.1.0"
@@ -16232,6 +16232,7 @@ __metadata:
   dependencies:
     "@babel/cli": ^7.19.3
     "@babel/core": ^7.19.3
+    "@primer/octicons": ^18.3.0
     "@types/react": ^18.0.21
     camelcase: ^7.0.0
     cheerio: ^1.0.0-rc.12
@@ -16244,7 +16245,6 @@ __metadata:
     ionicons: ^4.6.3
     ionicons-5: "npm:ionicons@5"
     lerna: ^3.20.2
-    octicons: ^8.5.0
     p-queue: ^7.3.0
     prettier: ^2.7.1
     svgo: ^1.3.2

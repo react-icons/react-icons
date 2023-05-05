@@ -3,8 +3,7 @@ import "@styles/global.scss";
 import Container from "@components/@core/content";
 import Sidebar from "@components/@core/sidebar";
 import { BRAND_TITLE } from "@utils/constants";
-import { Provider } from "@utils/search-context";
-import NextApp, { AppContext } from "next/app";
+import NextApp from "next/app";
 import Head from "next/head";
 import React from "react";
 
@@ -16,7 +15,6 @@ class App extends NextApp<Props> {
   render() {
     const { pageProps, Component } = this.props;
     return (
-      <Provider>
         <>
           <Sidebar />
           <Head>
@@ -26,7 +24,6 @@ class App extends NextApp<Props> {
             <Component {...pageProps} />
           </Container>
         </>
-      </Provider>
     );
   }
 }

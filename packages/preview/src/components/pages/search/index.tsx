@@ -1,15 +1,15 @@
 import { ALL_ICONS } from "@utils/icon";
-import { Context } from "@utils/search-context";
 import React from "react";
 
 import SearchIconSet from "./search-iconset";
+import { useRouter } from "next/router";
 
 export default function SearchPageComponent() {
   const allIcons = ALL_ICONS;
+  const router = useRouter();
+  const { q: query } = router.query;
 
-  const { query } = React.useContext(Context);
-
-  if (query.length > 2) {
+  if (query?.length > 2) {
     const hightlightPattern = new RegExp(`(${query})`, "i");
     return (
       <>

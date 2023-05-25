@@ -66,7 +66,7 @@ export function IconBase(
         width={computedSize}
         xmlns="http://www.w3.org/2000/svg"
       >
-        {title && <title>{title}</title>}
+        {<title>{title || "Icon"}</title>}
         {props.children}
       </svg>
     );

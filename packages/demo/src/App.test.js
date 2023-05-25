@@ -13,3 +13,11 @@ it("renders without crashing", () => {
 it("snapshot test", () => {
   expect(shallow(<App />)).toMatchSnapshot();
 });
+
+it("always includes a title", () => {
+  shallow(<App />);
+  const icons = document.getElementsByTagName("svg");
+  for (let i = 0; i < icons.length; i++) {
+    expect(icons[i].getElementsByTagName("title").length).toBe(1);
+  }
+});

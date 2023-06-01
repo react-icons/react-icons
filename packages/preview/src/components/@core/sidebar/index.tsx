@@ -16,12 +16,11 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [inputQuery, setInputQuery] = useState("");
 
-
   // search input stays synced with URL
   useEffect(() => {
-    const { q } = router.query;
-    setInputQuery(q as string || "");
-  }, [router]);
+    const { q } = router.query as { q: string | string[] | undefined };
+    setInputQuery(typeof q === "string" ? q : "");
+  }, [router.query]);
 
   const debouncedOnSearch = useCallback(
     debounce((query: string) => {
@@ -31,7 +30,7 @@ export default function Sidebar() {
   );
 
   const onSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const query = e.target.value.toLowerCase();
+    const query = e.target.value;
     setInputQuery(query);
     debouncedOnSearch(query);
   };

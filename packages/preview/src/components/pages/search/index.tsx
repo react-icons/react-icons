@@ -7,7 +7,8 @@ import { useRouter } from "next/router";
 export default function SearchPageComponent() {
   const allIcons = ALL_ICONS;
   const router = useRouter();
-  const { q: query } = router.query;
+  const { q } = router.query as { q: string | string[] | undefined };
+  const query = typeof q === "string" ? q.toLowerCase() : "";
 
   if (query?.length > 2) {
     const hightlightPattern = new RegExp(`(${query})`, "i");

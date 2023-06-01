@@ -39,6 +39,7 @@
     "ionicons": "^4.6.3",
     "ionicons-5": "npm:ionicons@5",
     "lerna": "^3.20.2",
+    "lucide-static": "^0.192.0",
     "p-queue": "^7.3.0",
     "prettier": "^2.7.1",
     "svgo": "^1.3.2",

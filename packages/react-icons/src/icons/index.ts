@@ -150,6 +150,60 @@ export const icons: IconDefinition[] = [
     },
   },
   {
+    id: "mds",
+    name: "Material Design symbols",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/material-design-symbols/symbols/web/*/materialsymbolssharp/!(*_fill*|*_grad*|*_wght*)_24px.svg"
+        ),
+        formatter: (name, file) =>
+          `MdsSharp${camelcase(
+            file.replace(/^.*\/([^/]+)\/(.*)[^/]*\/*_24px.svg$/i, "$2"),
+            { pascalCase: true }
+          )}`,
+        processWithSVGO: true,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/material-design-symbols/symbols/web/*/materialsymbolsrounded/!(*_fill*|*_grad*|*_wght*)_24px.svg"
+        ),
+        formatter: (name, file) =>
+          `MdsRounded${camelcase(
+            file.replace(/^.*\/([^/]+)\/(.*)[^/]*\/*_24px.svg$/i, "$2"),
+            { pascalCase: true }
+          )}`,
+        processWithSVGO: true,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/material-design-symbols/symbols/web/*/materialsymbolsoutlined/!(*_fill*|*_grad*|*_wght*)_24px.svg"
+        ),
+        formatter: (name, file) =>
+          `MdsOutlined${camelcase(
+            file.replace(/^.*\/([^/]+)\/(.*)[^/]*\/*_24px.svg$/i, "$2"),
+            { pascalCase: true }
+          )}`,
+        processWithSVGO: true,
+      },
+    ],
+    projectUrl: "http://google.github.io/material-design-icons/",
+    license: "Apache License Version 2.0",
+    licenseUrl:
+      "https://github.com/google/material-design-icons/blob/master/LICENSE",
+    source: {
+      type: "git",
+      localName: "material-design-symbols",
+      remoteDir: "symbols/web/",
+      url: "https://github.com/google/material-design-icons.git",
+      branch: "master",
+      hash: "511eea577b20d2b02ad77477750da1e44c66a52c",
+    },
+  },
+  {
     id: "ti",
     name: "Typicons",
     contents: [
@@ -201,6 +255,22 @@ export const icons: IconDefinition[] = [
     projectUrl: "https://feathericons.com/",
     license: "MIT",
     licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE",
+  },
+  {
+    id: "lu",
+    name: "Lucide",
+    contents: [
+      {
+        files: path.resolve(
+          path.dirname(require.resolve("lucide-static")),
+          "../icons/*.svg"
+        ),
+        formatter: (name) => `Lu${name}`,
+      },
+    ],
+    projectUrl: "https://lucide.dev/",
+    license: "ISC",
+    licenseUrl: "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
   },
   {
     id: "gi",

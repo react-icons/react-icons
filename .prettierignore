@@ -10,5 +10,6 @@ node_modules
 !/packages/react-icons/icons/index.ts
 
 /packages/preview/.next
+/packages/preview/out/
 
 /lerna.json

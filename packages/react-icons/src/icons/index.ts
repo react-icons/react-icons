@@ -66,14 +66,14 @@ export const icons: IconDefinition[] = [
           __dirname,
           "../../icons/fontawesome-6/svgs/+(brands|solid)/*.svg"
         ),
-        formatter: (name) => `Fa6${name}`,
+        formatter: (name) => `Fa${name}`,
       },
       {
         files: path.resolve(
           __dirname,
           "../../icons/fontawesome-6/svgs/regular/*.svg"
         ),
-        formatter: (name) => `Fa6Reg${name}`,
+        formatter: (name) => `FaReg${name}`,
       },
     ],
     projectUrl: "https://fontawesome.com/",

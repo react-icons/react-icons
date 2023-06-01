@@ -1,7 +1,7 @@
 import { ALL_ICONS } from "@utils/icon";
 import { Context } from "@utils/search-context";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import ActiveLink from "../active-link";
 import Heading from "../heading";
@@ -13,6 +13,7 @@ export default function Sidebar() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [inputQuery, setInputQuery] = useState(null);
+  const searchRef = useRef<HTMLInputElement>(null);
 
   const { query, setQuery, setResults } = React.useContext(Context);
 
@@ -40,6 +41,29 @@ export default function Sidebar() {
     }
   };
 
+  useEffect(() => {
+    const searchNode = searchRef.current;
+
+    const onKeyPress = (e: KeyboardEvent) => {
+      const activeElement = document.activeElement;
+
+      // To avoid switching focus when the user is typing in input fields
+      const isInputElement =
+        activeElement instanceof HTMLInputElement ||
+        activeElement instanceof HTMLTextAreaElement;
+
+      if (!isInputElement && e.key === "/") {
+        searchNode?.focus();
+      }
+    };
+
+    document.addEventListener("keyup", onKeyPress);
+
+    return () => {
+      document.removeEventListener("keyup", onKeyPress);
+    };
+  }, []);
+
   return (
     <div className="sidebar pt3">
       <Heading isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -53,6 +77,7 @@ export default function Sidebar() {
           onFocus={goToSearch}
           onBlur={onBlur}
           onChange={onSearch}
+          ref={searchRef}
           value={inputQuery !== null ? inputQuery : query}
           autoComplete="off"
           autoCorrect="off"

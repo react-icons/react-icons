@@ -15,15 +15,15 @@ class App extends NextApp<Props> {
   render() {
     const { pageProps, Component } = this.props;
     return (
-        <>
-          <Sidebar />
-          <Head>
-            <title>{BRAND_TITLE}</title>
-          </Head>
-          <Container>
-            <Component {...pageProps} />
-          </Container>
-        </>
+      <>
+        <Sidebar />
+        <Head>
+          <title>{BRAND_TITLE}</title>
+        </Head>
+        <Container>
+          <Component {...pageProps} />
+        </Container>
+      </>
     );
   }
 }

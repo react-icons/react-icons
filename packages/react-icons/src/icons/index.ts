@@ -233,7 +233,7 @@ export const icons: IconDefinition[] = [
           path.dirname(require.resolve("@primer/octicons")),
           "build/svg/*-24.svg"
         ),
-        formatter: (name) => `Go${name}`.replace('24', ''),
+        formatter: (name) => `Go${name}`.replace("24", ""),
       },
     ],
     projectUrl: "https://octicons.github.com/",

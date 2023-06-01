@@ -555,17 +555,11 @@ export const icons: IconDefinition[] = [
         formatter: (name) => `Bi${name.replace("Bx", "")}`,
       },
       {
-        files: path.resolve(
-          __dirname,
-          "../../icons/boxicons/svg/solid/*.svg"
-        ),
+        files: path.resolve(__dirname, "../../icons/boxicons/svg/solid/*.svg"),
         formatter: (name) => `BiSolid${name.replace("Bxs", "")}`,
       },
       {
-        files: path.resolve(
-          __dirname,
-          "../../icons/boxicons/svg/logos/*.svg"
-        ),
+        files: path.resolve(__dirname, "../../icons/boxicons/svg/logos/*.svg"),
         formatter: (name) => `BiLogo${name.replace("Bxl", "")}`,
       },
     ],

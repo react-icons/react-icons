@@ -50,9 +50,9 @@ export async function dirInit({ DIST, LIB, rootDir }) {
             ".": {
               types: "./index.d.ts",
               import: "./index.esm.js",
-              require: "./index.js"
+              require: "./index.js",
             },
-            "./package.json": "./package.json"
+            "./package.json": "./package.json",
           },
         },
         null,

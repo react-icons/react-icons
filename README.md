@@ -9,6 +9,10 @@
 
 Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
+This repository is an accessibility focused version of the original [react-icons](https://github.com/react-icons/react-icons) library. It is a fork of the original react-icons library with the following changes:
+
+- All icons are exported as `<svg>` elements with a `<title>` tag which defaults to "Icon" if no title is provided by the developer.
+
 ## Installation (for standard modern project)
 
 ```bash
@@ -39,7 +43,7 @@ For example, to use an icon from **Material Design**, your import would be: `imp
 
 > **Note**
 > This option has not had a new release for some time.
-> More info https://github.com/react-icons/react-icons/issues/593
+> More info <https://github.com/react-icons/react-icons/issues/593>
 
 If your project grows in size, this option is available.
 This method has the trade-off that it takes a long time to install the package.

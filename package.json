@@ -1,5 +1,5 @@
 {
-  "name": "react-icons-root",
+  "name": "@accessitech/react-icons-root",
   "private": true,
   "workspaces": [
     "packages/*"

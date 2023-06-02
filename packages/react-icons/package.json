@@ -1,10 +1,11 @@
 {
-  "name": "react-icons_builders",
+  "name": "@accessitech/react-icons_builders",
   "private": true,
   "version": "4.8.1-snapshot.2",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
+    "AccessiTech LLC <accessit3ch@gmail.com>",
     "kamijin_fanta <kamijin@live.jp>"
   ],
   "license": "MIT",

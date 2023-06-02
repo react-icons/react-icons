@@ -1,6 +1,6 @@
 {
   "name": "demo",
-  "version": "4.8.1-snapshot.2",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",

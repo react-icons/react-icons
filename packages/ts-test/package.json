@@ -1,6 +1,6 @@
 {
   "name": "react-ts-test",
-  "version": "4.8.1-snapshot.2",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@types/jest": "29.1.2",

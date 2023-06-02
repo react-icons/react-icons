@@ -1,6 +1,6 @@
 {
   "name": "webpack4-test",
-  "version": "4.8.1-snapshot.2",
+  "version": "0.1.0",
   "main": "index.js",
   "private": true,
   "license": "MIT",

@@ -26,6 +26,7 @@
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.3",
+    "@material-symbols/svg-400": "^0.5.5",
     "@primer/octicons": "^18.3.0",
     "@types/react": "^18.0.21",
     "camelcase": "^7.0.0",

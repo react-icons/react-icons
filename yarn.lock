@@ -3338,6 +3338,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-symbols/svg-400@npm:^0.5.5":
+  version: 0.5.5
+  resolution: "@material-symbols/svg-400@npm:0.5.5"
+  checksum: 0e22147c225dc7918bdca9ea3580d883fc9d61eec7b9b81da5f692c4efe13235bf8b9b6b94ee6b3791fa6ba3010035ad834f703abcd5945be567403cb678af84
+  languageName: node
+  linkType: hard
+
 "@mrmlnc/readdir-enhanced@npm:^2.2.1":
   version: 2.2.1
   resolution: "@mrmlnc/readdir-enhanced@npm:2.2.1"
@@ -16239,6 +16246,7 @@ __metadata:
   dependencies:
     "@babel/cli": ^7.19.3
     "@babel/core": ^7.19.3
+    "@material-symbols/svg-400": ^0.5.5
     "@primer/octicons": ^18.3.0
     "@types/react": ^18.0.21
     camelcase: ^7.0.0

@@ -15896,7 +15896,7 @@ __metadata:
     prop-types: ^15.7.2
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-icons: ^4.8.1-snapshot.2
+    react-icons: "file:../react-icons"
     sass: ^1.55.0
     tiny-skeleton-loader-react: ^1.1.0
     typescript: ^4.8.4
@@ -16263,20 +16263,38 @@ __metadata:
   linkType: hard
 
 "react-icons@file:../react-icons::locator=demo%40workspace%3Apackages%2Fdemo":
-  version: 4.8.1-snapshot.2
-  resolution: "react-icons@file:../react-icons#../react-icons::hash=0a0473&locator=demo%40workspace%3Apackages%2Fdemo"
+  version: 0.1.0
+  resolution: "react-icons@file:../react-icons#../react-icons::hash=20a5f1&locator=demo%40workspace%3Apackages%2Fdemo"
   peerDependencies:
     react: "*"
-  checksum: b2ff4daae2c692b3866654f872b758062f73b449bc0f12e25e21870180daff94028012284114caa2171c72368041a5d1b746bc6e6d71a6ddc24f493f9df97e22
+  checksum: d17da7af2d1551a31d10fe4c8160fd4cdc64a2734e1cfcc58bcb93ae2541683e47fb3e2df066212ea719028dbe58fb6f740fdb43f6bf54b18d9cf7051a76bedd
   languageName: node
   linkType: hard
 
 "react-icons@file:../react-icons::locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files":
-  version: 4.8.1-snapshot.2
-  resolution: "react-icons@file:../react-icons#../react-icons::hash=0a0473&locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files"
+  version: 0.1.0
+  resolution: "react-icons@file:../react-icons#../react-icons::hash=20a5f1&locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files"
   peerDependencies:
     react: "*"
-  checksum: b2ff4daae2c692b3866654f872b758062f73b449bc0f12e25e21870180daff94028012284114caa2171c72368041a5d1b746bc6e6d71a6ddc24f493f9df97e22
+  checksum: d17da7af2d1551a31d10fe4c8160fd4cdc64a2734e1cfcc58bcb93ae2541683e47fb3e2df066212ea719028dbe58fb6f740fdb43f6bf54b18d9cf7051a76bedd
+  languageName: node
+  linkType: hard
+
+"react-icons@file:../react-icons::locator=preview%40workspace%3Apackages%2Fpreview":
+  version: 0.1.0
+  resolution: "react-icons@file:../react-icons#../react-icons::hash=20a5f1&locator=preview%40workspace%3Apackages%2Fpreview"
+  peerDependencies:
+    react: "*"
+  checksum: d17da7af2d1551a31d10fe4c8160fd4cdc64a2734e1cfcc58bcb93ae2541683e47fb3e2df066212ea719028dbe58fb6f740fdb43f6bf54b18d9cf7051a76bedd
+  languageName: node
+  linkType: hard
+
+"react-icons@file:../react-icons::locator=webpack4-test%40workspace%3Apackages%2Fwebpack4-test":
+  version: 0.1.0
+  resolution: "react-icons@file:../react-icons#../react-icons::hash=20a5f1&locator=webpack4-test%40workspace%3Apackages%2Fwebpack4-test"
+  peerDependencies:
+    react: "*"
+  checksum: d17da7af2d1551a31d10fe4c8160fd4cdc64a2734e1cfcc58bcb93ae2541683e47fb3e2df066212ea719028dbe58fb6f740fdb43f6bf54b18d9cf7051a76bedd
   languageName: node
   linkType: hard
 
@@ -19612,7 +19630,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "webpack4-test@workspace:packages/webpack4-test"
   dependencies:
-    react-icons: ^4.8.1-snapshot.2
+    react-icons: "file:../react-icons"
     webpack: ^5.74.0
     webpack-cli: ^4.10.0
   languageName: unknown

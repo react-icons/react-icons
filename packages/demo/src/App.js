@@ -7,7 +7,7 @@ import { FaFolder } from "react-icons/fa";
 import { MdAccessibility } from "react-icons/md";
 import { TiArrowDown } from "react-icons/ti";
 import { GrGrommet } from "react-icons/gr";
-import { LiaNode } from 'react-icons/lia';
+import { LiaNode } from "react-icons/lia";
 
 class App extends Component {
   render() {

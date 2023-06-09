@@ -34,8 +34,8 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   size?: string | number;
   color?: string;
   title?: string;
-  parent?: boolean;
-  parentClassName?: string;
+  wrapper?: React.ComponentType<any>;
+  wrapperClassName?: string;
 }
 
 export type IconType = (props: IconBaseProps) => JSX.Element;
@@ -43,18 +43,23 @@ export function IconBase(
   props: IconBaseProps & { attr?: Record<string, string> }
 ): JSX.Element {
   const elem = (conf: IconContext) => {
-    const { attr, size, title, parent, parentClassName, ...svgProps } = props;
+    const { attr, size, title, ...svgProps } = props;
     const computedSize = size || conf.size || "1em";
     let className;
     if (conf.className) className = conf.className;
     if (props.className)
       className = (className ? className + " " : "") + props.className;
 
-    // if parent is null, explicitly skip parent component.
-    // else, use the flag value from props or the context.
-    const _parent = parent === null ? undefined : parent || conf.parent;
-    // can pass '' to parentClassName to override context value.
-    const _parentClassName = parentClassName ?? conf.parentClassName;
+    // if props.wrapper is null, explicitly skip Wrapper component.
+    // else, prioritize the wrapper component from props, then the context.
+    const Wrapper =
+      props.wrapper === null ? undefined : props.wrapper || conf.wrapper;
+    let wrapperClassName;
+    if (conf.wrapperClassName) wrapperClassName = conf.wrapperClassName;
+    if (props.wrapperClassName)
+      wrapperClassName =
+        (wrapperClassName ? wrapperClassName + " " : "") +
+        props.wrapperClassName;
 
     const icon = (
       <svg
@@ -79,8 +84,8 @@ export function IconBase(
       </svg>
     );
 
-    // wrap component if parent is set.
-    if (_parent) return <span className={_parentClassName}>{icon}</span>;
+    // wrap component if wrapper is set.
+    if (Wrapper) return <Wrapper className={wrapperClassName}>{icon}</Wrapper>;
     return icon;
   };
 

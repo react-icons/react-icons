@@ -58,6 +58,37 @@ export const icons: IconDefinition[] = [
     },
   },
   {
+    id: "fa6",
+    name: "Font Awesome 6",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/fontawesome-6/svgs/+(brands|solid)/*.svg"
+        ),
+        formatter: (name) => `Fa${name}`,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/fontawesome-6/svgs/regular/*.svg"
+        ),
+        formatter: (name) => `FaReg${name}`,
+      },
+    ],
+    projectUrl: "https://fontawesome.com/",
+    license: "CC BY 4.0 License",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    source: {
+      type: "git",
+      localName: "fontawesome-6",
+      remoteDir: "svgs/",
+      url: "https://github.com/FortAwesome/Font-Awesome.git",
+      branch: "6.x",
+      hash: "0698449d50f2b95517562295a59d414afc68b369",
+    },
+  },
+  {
     id: "io",
     name: "Ionicons 4",
     contents: [
@@ -176,10 +207,10 @@ export const icons: IconDefinition[] = [
     contents: [
       {
         files: path.resolve(
-          path.dirname(require.resolve("octicons")),
-          "build/svg/*.svg"
+          path.dirname(require.resolve("@primer/octicons")),
+          "build/svg/*-24.svg"
         ),
-        formatter: (name) => `Go${name}`,
+        formatter: (name) => `Go${name}`.replace("24", ""),
       },
     ],
     projectUrl: "https://octicons.github.com/",
@@ -201,6 +232,22 @@ export const icons: IconDefinition[] = [
     projectUrl: "https://feathericons.com/",
     license: "MIT",
     licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE",
+  },
+  {
+    id: "lu",
+    name: "Lucide",
+    contents: [
+      {
+        files: path.resolve(
+          path.dirname(require.resolve("lucide-static")),
+          "../icons/*.svg"
+        ),
+        formatter: (name) => `Lu${name}`,
+      },
+    ],
+    projectUrl: "https://lucide.dev/",
+    license: "ISC",
+    licenseUrl: "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
   },
   {
     id: "gi",
@@ -554,6 +601,14 @@ export const icons: IconDefinition[] = [
         ),
         formatter: (name) => `Bi${name.replace("Bx", "")}`,
       },
+      {
+        files: path.resolve(__dirname, "../../icons/boxicons/svg/solid/*.svg"),
+        formatter: (name) => `BiSolid${name.replace("Bxs", "")}`,
+      },
+      {
+        files: path.resolve(__dirname, "../../icons/boxicons/svg/logos/*.svg"),
+        formatter: (name) => `BiLogo${name.replace("Bxl", "")}`,
+      },
     ],
     projectUrl: "https://github.com/atisawd/boxicons",
     license: "CC BY 4.0 License",
@@ -561,7 +616,7 @@ export const icons: IconDefinition[] = [
     source: {
       type: "git",
       localName: "boxicons",
-      remoteDir: "svg/regular/",
+      remoteDir: "svg/",
       url: "https://github.com/atisawd/boxicons.git",
       branch: "master",
       hash: "9ffa9136e8681886bb7bd2145cd4098717ce1c11",

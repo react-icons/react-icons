@@ -50,17 +50,6 @@ export function IconBase(
     if (props.className)
       className = (className ? className + " " : "") + props.className;
 
-    // if props.wrapper is null, explicitly skip Wrapper component.
-    // else, prioritize the wrapper component from props, then the context.
-    const Wrapper =
-      props.wrapper === null ? undefined : props.wrapper || conf.wrapper;
-    let wrapperClassName;
-    if (conf.wrapperClassName) wrapperClassName = conf.wrapperClassName;
-    if (props.wrapperClassName)
-      wrapperClassName =
-        (wrapperClassName ? wrapperClassName + " " : "") +
-        props.wrapperClassName;
-
     const icon = (
       <svg
         stroke="currentColor"
@@ -84,8 +73,21 @@ export function IconBase(
       </svg>
     );
 
+    // if props.wrapper is null, explicitly skip Wrapper component.
+    // else, prioritize the wrapper component from props, then the context.
+    const Wrapper =
+      props.wrapper === null ? undefined : props.wrapper || conf.wrapper;
+
     // wrap component if wrapper is set.
-    if (Wrapper) return <Wrapper className={wrapperClassName}>{icon}</Wrapper>;
+    if (Wrapper) {
+      let wrapperClassName;
+      if (conf.wrapperClassName) wrapperClassName = conf.wrapperClassName;
+      if (props.wrapperClassName)
+        wrapperClassName =
+          (wrapperClassName ? wrapperClassName + " " : "") +
+          props.wrapperClassName;
+      return <Wrapper className={wrapperClassName}>{icon}</Wrapper>;
+    }
     return icon;
   };
 

@@ -34,7 +34,11 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   size?: string | number;
   color?: string;
   title?: string;
-  wrapper?: React.ComponentType<any>;
+  wrapper?:
+    | React.FunctionComponent<any>
+    | React.ComponentClass<any>
+    | string
+    | null;
   wrapperClassName?: string;
 }
 
@@ -75,18 +79,22 @@ export function IconBase(
 
     // if props.wrapper is null, explicitly skip Wrapper component.
     // else, prioritize the wrapper component from props, then the context.
-    const Wrapper =
+    const wrapper =
       props.wrapper === null ? undefined : props.wrapper || conf.wrapper;
 
     // wrap component if wrapper is set.
-    if (Wrapper) {
+    if (wrapper) {
       let wrapperClassName;
       if (conf.wrapperClassName) wrapperClassName = conf.wrapperClassName;
       if (props.wrapperClassName)
         wrapperClassName =
           (wrapperClassName ? wrapperClassName + " " : "") +
           props.wrapperClassName;
-      return <Wrapper className={wrapperClassName}>{icon}</Wrapper>;
+      return React.createElement(
+        wrapper,
+        { className: wrapperClassName },
+        icon
+      );
     }
     return icon;
   };

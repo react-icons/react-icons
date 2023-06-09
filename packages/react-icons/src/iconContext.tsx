@@ -6,7 +6,7 @@ export interface IconContext {
   className?: string;
   style?: React.CSSProperties;
   attr?: React.SVGAttributes<SVGElement>;
-  wrapper?: React.ComponentType<any>;
+  wrapper?: React.FunctionComponent<any> | React.ComponentClass<any> | string;
   wrapperClassName?: string;
 }
 

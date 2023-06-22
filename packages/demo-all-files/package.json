@@ -1,11 +1,11 @@
 {
   "name": "demo-all-files",
-  "version": "4.10.1-snapshot.0",
+  "version": "4.10.1",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.10.1-snapshot.0",
+    "react-icons": "^4.10.1",
     "react-scripts": "^5.0.1"
   },
   "scripts": {

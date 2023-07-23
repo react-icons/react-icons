@@ -786,4 +786,25 @@ export const icons: IconDefinition[] = [
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
+  {
+    id: "ip",
+    name: "IconPark",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/icon-park/source/*/*.svg"),
+        formatter: (name) => `Ip${camelcase(name, { pascalCase: true })}`,
+      },
+    ],
+    projectUrl: "https://iconpark.oceanengine.com/",
+    license: "Apache License Version 2.0",
+    licenseUrl: "https://github.com/bytedance/IconPark/blob/master/LICENSE",
+    source: {
+      type: "git",
+      localName: "icon-park",
+      remoteDir: "source/",
+      url: "https://github.com/bytedance/IconPark.git",
+      branch: "master",
+      hash: "8dc132da4c85671ba6a5962c87aa2bdafbf158e9",
+    },
+  },
 ];

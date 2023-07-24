@@ -72,7 +72,7 @@ export default m
     "utf8"
   );
   await fs.appendFile(
-    path.resolve(DIST, "index.esm.js"),
+    path.resolve(DIST, "index.mjs"),
     generateEntryMjs(),
     "utf8"
   );

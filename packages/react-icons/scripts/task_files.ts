@@ -26,7 +26,7 @@ export async function dirInit({ DIST, LIB, rootDir }) {
   const write = (filePath, str) =>
     fs.writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = ["index.d.ts", "index.esm.js", "index.js"];
+  const initFiles = ["index.d.ts", "index.mjs", "index.js"];
 
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
@@ -62,12 +62,12 @@ export async function writeIconModuleFiles(
       if (exists.has(name)) continue;
       exists.add(name);
 
-      // write like: module/fa/FaBeer.esm.js
+      // write like: module/fa/FaBeer.mjs
       const modRes = iconRowTemplate(icon, name, iconData, "module");
       const modHeader =
         "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n";
       await fs.writeFile(
-        path.resolve(DIST, icon.id, `${name}.esm.js`),
+        path.resolve(DIST, icon.id, `${name}.mjs`),
         modHeader + modRes,
         "utf8"
       );

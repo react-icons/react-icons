@@ -3775,12 +3775,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stencil/core@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "@stencil/core@npm:2.4.0"
+"@stencil/core@npm:~2.10.0":
+  version: 2.10.0
+  resolution: "@stencil/core@npm:2.10.0"
   bin:
     stencil: bin/stencil
-  checksum: 20f00ef48b2a8a13de6be69863f719848d422587c2c2421260259ddfd850a54635af74a7b73720c81a2450a42a9dd5f49c98c683a1822fc3a3b7220cd5974e86
+  checksum: 035f74e71c2428a69f15df2a3e234845e3105f3481a352a7aed65f64714fc8b4b3b135a6bb90dfd90aca559d7f80b488cf7b5b2247e96e94fccb5e1bee676634
   languageName: node
   linkType: hard
 
@@ -7688,7 +7688,7 @@ __metadata:
     enzyme-to-json: ^3.4.3
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-icons: ^4.8.1-snapshot.2
+    react-icons: ^4.10.2-snapshot.0
     react-scripts: ^5.0.1
   languageName: unknown
   linkType: soft
@@ -7702,7 +7702,7 @@ __metadata:
     enzyme-to-json: ^3.4.3
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-icons: ^4.8.1-snapshot.2
+    react-icons: ^4.10.2-snapshot.0
     react-scripts: ^5.0.1
   languageName: unknown
   linkType: soft
@@ -10999,11 +10999,11 @@ __metadata:
   linkType: hard
 
 "ionicons-5@npm:ionicons@5":
-  version: 5.5.0
-  resolution: "ionicons@npm:5.5.0"
+  version: 5.5.4
+  resolution: "ionicons@npm:5.5.4"
   dependencies:
-    "@stencil/core": ^2.4.0
-  checksum: 559cf3f91aadc73be157d26def43214f16a533aa806067322135205e676fd779a096cd0f01756457c12956c20f61c3e88c3dce21f73f2c58a28e19dd19023c0b
+    "@stencil/core": ~2.10.0
+  checksum: 02d59b7d3a380a52b6c65ebf1ef56c8ba62f1db70fad474b1171c1ec0988b80d6a6cc4ca2a37a26768a4afaa38fa08f4af3499d222dd60e235a89fe7f37fae37
   languageName: node
   linkType: hard
 
@@ -15846,7 +15846,7 @@ __metadata:
     prop-types: ^15.7.2
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-icons: ^4.8.1-snapshot.2
+    react-icons: ^4.10.2-snapshot.0
     sass: ^1.55.0
     tiny-skeleton-loader-react: ^1.1.0
     typescript: ^4.8.4
@@ -16225,7 +16225,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-icons@^4.8.1-snapshot.2, react-icons@workspace:packages/_react-icons_all":
+"react-icons@^4.10.2-snapshot.0, react-icons@workspace:packages/_react-icons_all":
   version: 0.0.0-use.local
   resolution: "react-icons@workspace:packages/_react-icons_all"
   peerDependencies:
@@ -16381,7 +16381,7 @@ __metadata:
     "@types/react-dom": ^18.0.6
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-icons: ^4.8.1-snapshot.2
+    react-icons: ^4.10.2-snapshot.0
     react-scripts: 5.0.1
     typescript: 4.8.4
   languageName: unknown
@@ -19585,7 +19585,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "webpack4-test@workspace:packages/webpack4-test"
   dependencies:
-    react-icons: ^4.8.1-snapshot.2
+    react-icons: ^4.10.2-snapshot.0
     webpack: ^5.74.0
     webpack-cli: ^4.10.0
   languageName: unknown

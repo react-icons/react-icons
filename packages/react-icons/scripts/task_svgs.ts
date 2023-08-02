@@ -59,7 +59,10 @@ export async function writeIconSvgFiles(
       if (exists.has(name)) continue;
       exists.add(name);
 
-      const drawableData = await svg2vectordrawable(svgStr);
+      const options = {
+        fillBlack: true,
+      };
+      const drawableData = await svg2vectordrawable(svgStr, options);
 
       // write like: fa/FaBeer.svg
       await fs.writeFile(

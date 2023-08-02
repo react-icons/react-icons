@@ -12,3 +12,6 @@ module
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+.DS_Store
+react-icons-svgs.tar.gz

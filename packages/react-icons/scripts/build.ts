@@ -4,6 +4,7 @@ import { icons } from "../src/icons";
 import * as taskCommon from "./task_common";
 import * as taskAll from "./task_all";
 import * as taskFiles from "./task_files";
+import * as taskSvgs from "./task_svgs";
 
 // file path
 const _rootDir = path.resolve(__dirname, "../");
@@ -58,6 +59,21 @@ async function main() {
     await task("@react-icons/all-files write icons", async () => {
       for (const icon of icons) {
         await taskFiles.writeIconModuleFiles(icon, filesOpt);
+      }
+    });
+
+    // @react-icons/all-svgs
+    const svgOpt = {
+      rootDir: _rootDir,
+      DIST: path.resolve(_rootDir, "../_react-icons_all-svgs"),
+      LIB: null
+    };
+    await task("@react-icons/all-svgs initialize", async () => {
+      await taskSvgs.dirInit(svgOpt);
+    });
+    await task("@react-icons/all-svgs write icons", async () => {
+      for (const icon of icons) {
+        await taskSvgs.writeIconSvgFiles(icon, svgOpt);
       }
     });
 

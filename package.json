@@ -11,7 +11,9 @@
     "eslint": "^8.25.0",
     "eslint-plugin-react": "latest",
     "lerna": "^3.22.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "snakecase": "^1.0.0",
+    "svg2vectordrawable": "^2.9.1"
   },
   "scripts": {
     "lint": "yarn eslint .",

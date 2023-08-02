@@ -23,9 +23,15 @@ jobs:
         run: cd packages/react-icons && yarn fetch
       - name: Build icons
         run: cd packages/react-icons && yarn build-svgs
-      - name: create icon tarball
+      - name: create svgs icon tarball
         run: tar cvzf react-icons-svgs.tar.gz -C packages/_react-icons_all-svgs .
+      - name: create xmls icon tarball
+        run: tar cvzf react-icons-xmls.tar.gz -C packages/_react-icons_all-xmls .
       - uses: actions/upload-artifact@v3
         with:
           name: react-icons-svgs
           path: react-icons-svgs.tar.gz
+      - uses: actions/upload-artifact@v3
+        with:
+          name: react-icons-xmls
+          path: react-icons-xmls.tar.gz

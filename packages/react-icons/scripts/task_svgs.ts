@@ -1,33 +1,42 @@
 import path from "path";
 import { promises as fs } from "fs";
 import camelcase from "camelcase";
+import snakecase from "snakecase";
+import svg2vectordrawable from "svg2vectordrawable";
 import { icons } from "../src/icons";
 import { getIconFiles, rmDirRecursive } from "./logics";
 import { svgo } from "./svgo";
 import { IconDefinition } from "./_types";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function dirInit({ DIST, LIB, rootDir }) {
+export async function dirInit({ SVG_DIR, XML_DIR, rootDir }) {
   const ignore = (err) => {
     if (err.code === "EEXIST") return;
     throw err;
   };
 
-  await rmDirRecursive(DIST).catch((err) => {
+  await rmDirRecursive(SVG_DIR).catch((err) => {
     if (err.code === "ENOENT") return;
     throw err;
   });
-  await fs.mkdir(DIST, { recursive: true }).catch(ignore);
+  await rmDirRecursive(XML_DIR).catch((err) => {
+    if (err.code === "ENOENT") return;
+    throw err;
+  });
+
+  await fs.mkdir(XML_DIR, { recursive: true }).catch(ignore);
+  await fs.mkdir(SVG_DIR, { recursive: true }).catch(ignore);
 
   for (const icon of icons) {
-    await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
+    await fs.mkdir(path.resolve(XML_DIR, icon.id)).catch(ignore);
+    await fs.mkdir(path.resolve(SVG_DIR, icon.id)).catch(ignore);
   }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function writeIconSvgFiles(
   icon: IconDefinition,
-  { DIST, LIB, rootDir }
+  { SVG_DIR, XML_DIR, rootDir }
 ) {
   const exists = new Set(); // for remove duplicate
 
@@ -45,13 +54,24 @@ export async function writeIconSvgFiles(
       const name =
         (content.formatter && content.formatter(pascalName, file)) ||
         pascalName;
+
+      const snakeName = snakecase(name);
       if (exists.has(name)) continue;
       exists.add(name);
 
-      // write like: module/fa/FaBeer.esm.js
+      const drawableData = await svg2vectordrawable(svgStr);
+
+      // write like: fa/FaBeer.svg
       await fs.writeFile(
-        path.resolve(DIST, icon.id, `${name}.svg`),
+        path.resolve(SVG_DIR, icon.id, `${name}.svg`),
         svgStr,
+        "utf8"
+      );
+
+      // write like: fa/fa_beer.xml
+      await fs.writeFile(
+        path.resolve(XML_DIR, icon.id, `${snakeName}.xml`),
+        drawableData,
         "utf8"
       );
 

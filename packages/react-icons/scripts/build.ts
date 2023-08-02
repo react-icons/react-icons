@@ -66,7 +66,7 @@ async function main() {
     const svgOpt = {
       rootDir: _rootDir,
       DIST: path.resolve(_rootDir, "../_react-icons_all-svgs"),
-      LIB: null
+      LIB: null,
     };
     await task("@react-icons/all-svgs initialize", async () => {
       await taskSvgs.dirInit(svgOpt);

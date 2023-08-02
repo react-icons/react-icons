@@ -48,6 +48,7 @@
   "scripts": {
     "ts": "node -r esbuild-register",
     "build": "yarn ts ./scripts/build.ts",
+    "build-svgs": "yarn ts ./scripts/build_svgs.ts",
     "fetch": "yarn ts ./scripts/fetcher.ts",
     "check": "yarn ts ./scripts/check.ts"
   }

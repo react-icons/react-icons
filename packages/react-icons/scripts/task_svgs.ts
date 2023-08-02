@@ -2,8 +2,7 @@ import path from "path";
 import { promises as fs } from "fs";
 import camelcase from "camelcase";
 import { icons } from "../src/icons";
-import { iconRowTemplate } from "./templates";
-import { getIconFiles, convertIconData, rmDirRecursive } from "./logics";
+import { getIconFiles, rmDirRecursive } from "./logics";
 import { svgo } from "./svgo";
 import { IconDefinition } from "./_types";
 
@@ -20,17 +19,8 @@ export async function dirInit({ DIST, LIB, rootDir }) {
   });
   await fs.mkdir(DIST, { recursive: true }).catch(ignore);
 
-  const write = (filePath, str) =>
-    fs.writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
-
-  const initFiles = ["index.d.ts", "index.esm.js", "index.js"];
-
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
-  }
-
-  for (const file of initFiles) {
-    await write([file], "// THIS FILE IS AUTO GENERATED\n");
   }
 }
 

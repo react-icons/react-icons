@@ -17,17 +17,17 @@ async function task(name, fn) {
 async function main() {
   try {
     // @react-icons/all-svgs
-    const svgOpt = {
+    const fileOpt = {
       rootDir: _rootDir,
-      DIST: path.resolve(_rootDir, "../_react-icons_all-svgs"),
-      LIB: null,
+      SVG_DIR: path.resolve(_rootDir, "../_react-icons_all-svgs"),
+      XML_DIR: path.resolve(_rootDir, "../_react-icons_all-xmls"),
     };
     await task("@react-icons/all-svgs initialize", async () => {
-      await taskSvgs.dirInit(svgOpt);
+      await taskSvgs.dirInit(fileOpt);
     });
     await task("@react-icons/all-svgs write icons", async () => {
       for (const icon of icons) {
-        await taskSvgs.writeIconSvgFiles(icon, svgOpt);
+        await taskSvgs.writeIconSvgFiles(icon, fileOpt);
       }
     });
 

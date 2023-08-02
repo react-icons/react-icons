@@ -4784,6 +4784,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"abs-svg-path@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "abs-svg-path@npm:0.1.1"
+  checksum: af1a167c09e8bdb76c80adca7333f3d828e5b50e37b9702aa03675e271919e7b1eeaa35cce939970ecba14769953b7465ea34c2129ab683ddff9d973a07f164f
+  languageName: node
+  linkType: hard
+
 "accepts@npm:~1.3.4, accepts@npm:~1.3.5":
   version: 1.3.7
   resolution: "accepts@npm:1.3.7"
@@ -11496,6 +11503,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-svg-path@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "is-svg-path@npm:1.0.2"
+  checksum: ed35f610d117f3bd2b6a1a637e9c03136f408976221c2396acfa811636ac71853b7509338245853154e2da69f9b5223a65ecf8d1d6192bd8b337a32b46b589e3
+  languageName: node
+  linkType: hard
+
 "is-symbol@npm:^1.0.2":
   version: 1.0.3
   resolution: "is-symbol@npm:1.0.3"
@@ -13437,7 +13451,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:*, mkdirp@npm:^1.0.3":
+"mkdirp@npm:*, mkdirp@npm:^1.0.3, mkdirp@npm:^1.0.4":
   version: 1.0.4
   resolution: "mkdirp@npm:1.0.4"
   bin:
@@ -13853,6 +13867,15 @@ __metadata:
   version: 0.1.2
   resolution: "normalize-range@npm:0.1.2"
   checksum: 9b2f14f093593f367a7a0834267c24f3cb3e887a2d9809c77d8a7e5fd08738bcd15af46f0ab01cc3a3d660386f015816b5c922cea8bf2ee79777f40874063184
+  languageName: node
+  linkType: hard
+
+"normalize-svg-path@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "normalize-svg-path@npm:1.1.0"
+  dependencies:
+    svg-arc-to-cubic-bezier: ^3.0.0
+  checksum: 106e108b2f99e9e222a1c6edfc859523c6c3c2b0a6ba64743ed08af120b23b9bc2c16682bc2ae043a24c011c34c8252376c68525cf11735c6f110b571740eb2e
   languageName: node
   linkType: hard
 
@@ -14576,6 +14599,13 @@ __metadata:
     is-ssh: ^1.3.0
     protocols: ^1.4.0
   checksum: 30396fd703b6cdd03c38a6b06c7e337dee5332c40d6c2a2ab42339bc01eb469a0d080e0139578337db5a6aa5b078ee28c7a31e36af4da2d2e122288e94ba603c
+  languageName: node
+  linkType: hard
+
+"parse-svg-path@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "parse-svg-path@npm:0.1.2"
+  checksum: bba7d4b4207fcc9eaf553b0d34db96ea8a1173635bc94528b5b66e1581902d4792d8d6229103764f01af4d839274234e97a4fa1c6f0fe7dcce195383848cec56
   languageName: node
   linkType: hard
 
@@ -16222,6 +16252,8 @@ __metadata:
     eslint-plugin-react: latest
     lerna: ^3.22.1
     prettier: ^2.7.1
+    snakecase: ^1.0.0
+    svg2vectordrawable: ^2.9.1
   languageName: unknown
   linkType: soft
 
@@ -17573,6 +17605,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"snakecase@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "snakecase@npm:1.0.0"
+  checksum: 0635163a6f8b5a8031c18b83ceb9e13c0c01bde385a729c437ceff0b030576176e943fa3e1f843c920b96d157e6d6f6526486abeffe1aa0c1eb0a6cb896c231d
+  languageName: node
+  linkType: hard
+
 "snapdragon-node@npm:^2.0.1":
   version: 2.1.1
   resolution: "snapdragon-node@npm:2.1.1"
@@ -18345,10 +18384,49 @@ __metadata:
   languageName: node
   linkType: hard
 
+"svg-arc-to-cubic-bezier@npm:^3.0.0":
+  version: 3.2.0
+  resolution: "svg-arc-to-cubic-bezier@npm:3.2.0"
+  checksum: 55bf17756d558b9c0daddf636a6c9f2fe01fd5ac412229dfa2d4b29740226a82c980bcd3b5eb09ce311cbea282106c7549d97f8c8dba3a5a7b75f786bcb5e155
+  languageName: node
+  linkType: hard
+
 "svg-parser@npm:^2.0.2":
   version: 2.0.4
   resolution: "svg-parser@npm:2.0.4"
   checksum: b3de6653048212f2ae7afe4a423e04a76ec6d2d06e1bf7eacc618a7c5f7df7faa5105561c57b94579ec831fbbdbf5f190ba56a9205ff39ed13eabdf8ab086ddf
+  languageName: node
+  linkType: hard
+
+"svg-path-bounds@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "svg-path-bounds@npm:1.0.2"
+  dependencies:
+    abs-svg-path: ^0.1.1
+    is-svg-path: ^1.0.1
+    normalize-svg-path: ^1.0.0
+    parse-svg-path: ^0.1.2
+  checksum: 8590a4e14942a34f595df64d804a3533cb83a29498b34f61723cf3172958a5a3c3b211805c6c4b2f93fb90ff4eab74b08a2dc1daa489d6ba429534aca5f5184d
+  languageName: node
+  linkType: hard
+
+"svg2vectordrawable@npm:^2.9.1":
+  version: 2.9.1
+  resolution: "svg2vectordrawable@npm:2.9.1"
+  dependencies:
+    coa: ^2.0.2
+    mkdirp: ^1.0.4
+    svg-path-bounds: ^1.0.1
+    svgo: ^2.8.0
+    svgpath: ^2.5.0
+  bin:
+    s2v: bin/svg2vectordrawable
+    svg2android: bin/svg2vectordrawable
+    svg2avd: bin/svg2vectordrawable
+    svg2drawable: bin/svg2vectordrawable
+    svg2vector: bin/svg2vectordrawable
+    svg2vectordrawable: bin/svg2vectordrawable
+  checksum: 37f83e21f6dd81a09afcbe2b01f09c9cde3f9c1614045a66e5ae82d550f2629b0bad6335913fd13e8dc1d885bcfcb184f410100419ec3ba53380ae0a2034c939
   languageName: node
   linkType: hard
 
@@ -18375,7 +18453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^2.7.0":
+"svgo@npm:^2.7.0, svgo@npm:^2.8.0":
   version: 2.8.0
   resolution: "svgo@npm:2.8.0"
   dependencies:
@@ -18389,6 +18467,13 @@ __metadata:
   bin:
     svgo: bin/svgo
   checksum: b92f71a8541468ffd0b81b8cdb36b1e242eea320bf3c1a9b2c8809945853e9d8c80c19744267eb91cabf06ae9d5fff3592d677df85a31be4ed59ff78534fa420
+  languageName: node
+  linkType: hard
+
+"svgpath@npm:^2.5.0":
+  version: 2.6.0
+  resolution: "svgpath@npm:2.6.0"
+  checksum: 57bd2512b41a03a729c2880a6c771bb8ad449a9cea47c1fc43ac5cec70bf81a607591bb916ba16c21c9d87122537bcdf2ac4082dae13559c84c964b8fe868204
   languageName: node
   linkType: hard
 

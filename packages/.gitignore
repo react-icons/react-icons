@@ -4,3 +4,5 @@ _react-icons_all-files/*
 !_react-icons_all-files/package.json
 _react-icons_all-svgs/*
 !_react-icons_all-svgs/package.json
+_react-icons_all-xmls/*
+!_react-icons_all-xmls/package.json

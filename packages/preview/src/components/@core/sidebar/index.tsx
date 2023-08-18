@@ -1,11 +1,27 @@
 import { ALL_ICONS } from "@utils/icon";
 import { useRouter } from "next/router";
-import React, { useState, useCallback, useMemo, useEffect } from "react";
+import React, {
+  useState,
+  useCallback,
+  useMemo,
+  useEffect,
+  useRef,
+} from "react";
 
 import ActiveLink from "../active-link";
 import Heading from "../heading";
 import { debounce } from "@utils/debounce";
 const searchPath = "/search";
+
+function isAppleDevice() {
+  if (
+    typeof navigator === undefined ||
+    typeof navigator.userAgent === undefined
+  ) {
+    return;
+  }
+  return /(iPod|iPad|iPhone|Mac)/i.test(navigator.userAgent);
+}
 
 export default function Sidebar() {
   const iconsList = useMemo(
@@ -15,12 +31,39 @@ export default function Sidebar() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [inputQuery, setInputQuery] = useState("");
+  const [deviceType, setDeviceType] = useState("unknown");
+  const inputRef = useRef<HTMLInputElement>();
 
   // search input stays synced with URL
   useEffect(() => {
     const { q } = router.query as { q: string | string[] | undefined };
     setInputQuery(typeof q === "string" ? q : "");
   }, [router.query]);
+
+  useEffect(() => {
+    if (isAppleDevice()) {
+      setDeviceType("apple");
+    } else {
+      setDeviceType("other");
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleCk = (event: KeyboardEvent) => {
+      if (event.ctrlKey || event.metaKey) {
+        if (event.key?.toLowerCase() === "k") {
+          event.preventDefault();
+          inputRef.current.focus();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleCk);
+
+    return () => {
+      window.removeEventListener("keydown", handleCk);
+    };
+  }, []);
 
   const debouncedOnSearch = useCallback(
     debounce((query: string) => {
@@ -41,10 +84,15 @@ export default function Sidebar() {
 
       <div className="search p2">
         <input
+          ref={inputRef}
           type="text"
           aria-label="search"
           className="px2 py1"
-          placeholder="🔍 Search Icons"
+          placeholder={
+            deviceType === "apple"
+              ? "🔍 Search Icons (⌘ K)"
+              : "🔍 Search Icons (Ctrl K)"
+          }
           onChange={onSearch}
           value={inputQuery}
           autoComplete="off"

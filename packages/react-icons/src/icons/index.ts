@@ -493,44 +493,6 @@ export const icons: IconDefinition[] = [
     },
   },
   {
-    id: "hi2",
-    name: "Heroicons 2",
-    contents: [
-      {
-        files: path.resolve(
-          __dirname,
-          "../../icons/heroicons-2/optimized/24/solid/*.svg"
-        ),
-        formatter: (name) => `Hi${name}`,
-      },
-      {
-        files: path.resolve(
-          __dirname,
-          "../../icons/heroicons-2/optimized/24/outline/*.svg"
-        ),
-        formatter: (name) => `HiOutline${name}`,
-      },
-      {
-        files: path.resolve(
-          __dirname,
-          "../../icons/heroicons-2/optimized/20/solid/*.svg"
-        ),
-        formatter: (name) => `HiMini${name}`,
-      },
-    ],
-    projectUrl: "https://github.com/tailwindlabs/heroicons",
-    license: "MIT",
-    licenseUrl: "https://opensource.org/licenses/MIT",
-    source: {
-      type: "git",
-      localName: "heroicons-2",
-      remoteDir: "optimized/",
-      url: "https://github.com/tailwindlabs/heroicons.git",
-      branch: "master",
-      hash: "f64c10b59dcd6417732a984ce4376bed13799485",
-    },
-  },
-  {
     id: "si",
     name: "Simple Icons",
     contents: [

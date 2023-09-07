@@ -65,7 +65,7 @@ export default function Sidebar() {
             <ActiveLink href={{ pathname: "icons", query: { name: icon.id } }}>
               <a
                 className="rounded px2 py1"
-                onClick={(e) => {
+                onClick={() => {
                   setInputQuery("");
                 }}
               >

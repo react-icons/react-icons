@@ -85,7 +85,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "svgs/",
       url: "https://github.com/FortAwesome/Font-Awesome.git",
       branch: "6.x",
-      hash: "0698449d50f2b95517562295a59d414afc68b369",
+      hash: "f0c25837a3fe0e03783b939559e088abcbfb3c4b",
     },
   },
   {

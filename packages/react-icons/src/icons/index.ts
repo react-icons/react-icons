@@ -23,12 +23,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/Klarr-Agency/Circum-Icons.git",
       branch: "main",
-      hash: "a2924cb1ee37b9fa39ef023a36f1c884b3492e9b",
+      hash: "eeef6206df834e6957a45e36d2bfb7459ce6e799",
     },
   },
   {
     id: "fa",
-    name: "Font Awesome",
+    name: "Font Awesome 5",
     contents: [
       {
         files: path.resolve(
@@ -54,7 +54,38 @@ export const icons: IconDefinition[] = [
       remoteDir: "svgs/",
       url: "https://github.com/FortAwesome/Font-Awesome.git",
       branch: "5.x",
-      hash: "7d3d774145ac38663f6d1effc6def0334b68ab7e",
+      hash: "afecf2af5d897b763e5e8e28d46aad2f710ccad6",
+    },
+  },
+  {
+    id: "fa6",
+    name: "Font Awesome 6",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/fontawesome-6/svgs/+(brands|solid)/*.svg"
+        ),
+        formatter: (name) => `Fa${name}`,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/fontawesome-6/svgs/regular/*.svg"
+        ),
+        formatter: (name) => `FaReg${name}`,
+      },
+    ],
+    projectUrl: "https://fontawesome.com/",
+    license: "CC BY 4.0 License",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    source: {
+      type: "git",
+      localName: "fontawesome-6",
+      remoteDir: "svgs/",
+      url: "https://github.com/FortAwesome/Font-Awesome.git",
+      branch: "6.x",
+      hash: "f0c25837a3fe0e03783b939559e088abcbfb3c4b",
     },
   },
   {
@@ -146,7 +177,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/",
       url: "https://github.com/google/material-design-icons.git",
       branch: "master",
-      hash: "63c5cb306073a9ecdfd3579f0f696746ab6305f6",
+      hash: "589092d9a7177a4b9e641f7e790d9cc60ce187a4",
     },
   },
   {
@@ -176,10 +207,10 @@ export const icons: IconDefinition[] = [
     contents: [
       {
         files: path.resolve(
-          path.dirname(require.resolve("octicons")),
-          "build/svg/*.svg"
+          path.dirname(require.resolve("@primer/octicons")),
+          "build/svg/*-24.svg"
         ),
-        formatter: (name) => `Go${name}`,
+        formatter: (name) => `Go${name}`.replace("24", ""),
       },
     ],
     projectUrl: "https://octicons.github.com/",
@@ -201,6 +232,22 @@ export const icons: IconDefinition[] = [
     projectUrl: "https://feathericons.com/",
     license: "MIT",
     licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE",
+  },
+  {
+    id: "lu",
+    name: "Lucide",
+    contents: [
+      {
+        files: path.resolve(
+          path.dirname(require.resolve("lucide-static")),
+          "../icons/*.svg"
+        ),
+        formatter: (name) => `Lu${name}`,
+      },
+    ],
+    projectUrl: "https://lucide.dev/",
+    license: "ISC",
+    licenseUrl: "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
   },
   {
     id: "gi",
@@ -244,7 +291,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/erikflowers/weather-icons.git",
       branch: "master",
-      hash: "2eec50d931bdafbe6c927a2c6097a7390bf6b08e",
+      hash: "bb80982bf1f43f2d57f9dd753e7413bf88beb9ed",
     },
   },
   {
@@ -303,7 +350,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "packages/icons-svg/svg/",
       url: "https://github.com/ant-design/ant-design-icons.git",
       branch: "master",
-      hash: "4666e7f0c881c3732af5196d0e0f6f881e8c9e17",
+      hash: "4ec2740272706da3f9d91c07d01fa5bdd2e5c2f6",
     },
   },
   {
@@ -341,7 +388,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/twbs/icons.git",
       branch: "main",
-      hash: "496d6a6bac99790e1a8432e3c54b9e4b400561af",
+      hash: "24e7f7d14967dff3d716575f8a5edeb572b5e10f",
     },
   },
   {
@@ -362,7 +409,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/Remix-Design/RemixIcon.git",
       branch: "master",
-      hash: "943f2e7c45ad81ff95bf444ed4c4ada90a46de5a",
+      hash: "3c4f3ff316c8ebe1b8838c211ecaf8348d203049",
     },
   },
   {
@@ -411,7 +458,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "public/img/",
       url: "https://github.com/grommet/grommet-icons.git",
       branch: "master",
-      hash: "29f37a87a38a4f912953b5f4f622ef35e23b72d2",
+      hash: "3de62049fa7d06f355751a7335c9f7d3a1aea55e",
     },
   },
   {
@@ -442,7 +489,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "optimized/",
       url: "https://github.com/tailwindlabs/heroicons.git",
       branch: "v1",
-      hash: "1d512146c15354804be4658df5c64b02d770d243",
+      hash: "b6de5792d3d53ff81c71b1b8283463aad622e0e3",
     },
   },
   {
@@ -463,6 +510,13 @@ export const icons: IconDefinition[] = [
         ),
         formatter: (name) => `HiOutline${name}`,
       },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/heroicons-2/optimized/20/solid/*.svg"
+        ),
+        formatter: (name) => `HiMini${name}`,
+      },
     ],
     projectUrl: "https://github.com/tailwindlabs/heroicons",
     license: "MIT",
@@ -473,7 +527,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "optimized/",
       url: "https://github.com/tailwindlabs/heroicons.git",
       branch: "master",
-      hash: "a73b45d95d9ebd479155732fe1b70ba5016ff223",
+      hash: "eee05eb77af6cdedfb97f128d1998773fc984b28",
     },
   },
   {
@@ -494,7 +548,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/simple-icons/simple-icons.git",
       branch: "develop",
-      hash: "f726999af2714f9ed69d4f60ad36aec9e089af40",
+      hash: "ceca705b0a95917e7178cd4d4a34fda46b6cfd78",
     },
   },
   {
@@ -554,6 +608,14 @@ export const icons: IconDefinition[] = [
         ),
         formatter: (name) => `Bi${name.replace("Bx", "")}`,
       },
+      {
+        files: path.resolve(__dirname, "../../icons/boxicons/svg/solid/*.svg"),
+        formatter: (name) => `BiSolid${name.replace("Bxs", "")}`,
+      },
+      {
+        files: path.resolve(__dirname, "../../icons/boxicons/svg/logos/*.svg"),
+        formatter: (name) => `BiLogo${name.replace("Bxl", "")}`,
+      },
     ],
     projectUrl: "https://github.com/atisawd/boxicons",
     license: "CC BY 4.0 License",
@@ -561,10 +623,10 @@ export const icons: IconDefinition[] = [
     source: {
       type: "git",
       localName: "boxicons",
-      remoteDir: "svg/regular/",
+      remoteDir: "svg/",
       url: "https://github.com/atisawd/boxicons.git",
       branch: "master",
-      hash: "dc81e4561f1ff53ebed4678c32ef08dc2415d636",
+      hash: "9ffa9136e8681886bb7bd2145cd4098717ce1c11",
     },
   },
   {
@@ -585,7 +647,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/svg/",
       url: "https://github.com/astrit/css.gg.git",
       branch: "master",
-      hash: "8a6913598e4e2b10aaf69b9cb7e10e7213828965",
+      hash: "fd750c9df1b1caa060b6321da9b28dfd32028d83",
     },
   },
   {
@@ -609,7 +671,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/icons/",
       url: "https://github.com/microsoft/vscode-codicons.git",
       branch: "main",
-      hash: "e91b8e1b8c29c21b06e5cc78757766915ff4f2d4",
+      hash: "e0565f0728c0b7f9e495e82d7338fd1e86f009c8",
     },
   },
   {
@@ -630,7 +692,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/tabler/tabler-icons.git",
       branch: "master",
-      hash: "c89f08df19897b545e4fd7ecc507b1cd5ffcf2c4",
+      hash: "91b9997fd03fc2685280815fdf74efd243292c17",
     },
   },
   {
@@ -652,7 +714,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "SVG/",
       url: "https://github.com/lykmapipo/themify-icons.git",
       branch: "master",
-      hash: "ad5ed84802fea2b865ce07220435a3a16b266837",
+      hash: "9600186b24a7242f0e1e0a186983e6253301bb5d",
     },
   },
   {
@@ -676,7 +738,52 @@ export const icons: IconDefinition[] = [
       remoteDir: "packages/radix-icons/icons/",
       url: "https://github.com/radix-ui/icons.git",
       branch: "master",
-      hash: "237cd76c007a573c2a6f6caabe9ea3de81393f50",
+      hash: "94b3fcf4e972566b34cb3b3a36296f70a2558dfa",
+    },
+  },
+  {
+    id: "pi",
+    name: "Phosphor Icons",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/phosphor-icons/assets/*/*.svg"
+        ),
+        formatter: (name) => `Pi${name}`,
+      },
+    ],
+    projectUrl: "https://github.com/phosphor-icons/core",
+    license: "MIT",
+    licenseUrl: "https://github.com/phosphor-icons/core/blob/main/LICENSE",
+    source: {
+      type: "git",
+      localName: "phosphor-icons",
+      remoteDir: "assets/",
+      url: "https://github.com/phosphor-icons/core.git",
+      branch: "main",
+      hash: "c67d7a849f450be1bfe64fd5820471e4019e5ff0",
+    },
+  },
+  {
+    id: "lia",
+    name: "Icons8 Line Awesome",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/line-awesome/svg/*.svg"),
+        formatter: (name) => `Lia${name}`,
+      },
+    ],
+    projectUrl: "https://icons8.com/line-awesome",
+    license: "MIT",
+    licenseUrl: "https://github.com/icons8/line-awesome/blob/master/LICENSE.md",
+    source: {
+      type: "git",
+      localName: "line-awesome",
+      remoteDir: "svg/",
+      url: "https://github.com/icons8/line-awesome.git",
+      branch: "master",
+      hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
   {

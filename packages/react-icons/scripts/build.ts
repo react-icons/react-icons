@@ -33,9 +33,9 @@ async function main() {
       await taskCommon.copyReadme(allOpt);
     });
     await task("@react-icons/all write icons", async () => {
-      for (const icon of icons) {
-        await taskAll.writeIconModule(icon, allOpt);
-      }
+      await Promise.all(
+        icons.map((icon) => taskAll.writeIconModule(icon, allOpt))
+      );
     });
 
     // @react-icons/all-files
@@ -56,9 +56,9 @@ async function main() {
       await taskCommon.copyReadme(filesOpt);
     });
     await task("@react-icons/all-files write icons", async () => {
-      for (const icon of icons) {
-        await taskFiles.writeIconModuleFiles(icon, filesOpt);
-      }
+      await Promise.all(
+        icons.map((icon) => taskFiles.writeIconModuleFiles(icon, filesOpt))
+      );
     });
 
     // write to VERSIONS file

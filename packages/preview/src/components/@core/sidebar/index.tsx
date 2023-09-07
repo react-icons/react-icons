@@ -1,43 +1,38 @@
 import { ALL_ICONS } from "@utils/icon";
-import { Context } from "@utils/search-context";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo, useEffect } from "react";
 
 import ActiveLink from "../active-link";
 import Heading from "../heading";
-
+import { debounce } from "@utils/debounce";
 const searchPath = "/search";
 
 export default function Sidebar() {
-  const iconsList = ALL_ICONS.sort((a, b) => (a.name > b.name ? 1 : -1));
+  const iconsList = useMemo(
+    () => ALL_ICONS.sort((a, b) => (a.name > b.name ? 1 : -1)),
+    []
+  );
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [inputQuery, setInputQuery] = useState(null);
+  const [inputQuery, setInputQuery] = useState("");
 
-  const { query, setQuery, setResults } = React.useContext(Context);
+  // search input stays synced with URL
+  useEffect(() => {
+    const { q } = router.query as { q: string | string[] | undefined };
+    setInputQuery(typeof q === "string" ? q : "");
+  }, [router.query]);
 
-  const setQueryEveywhere = (query) => {
-    setQuery(query); // Context
-    setInputQuery(query); // State for this component
-  };
+  const debouncedOnSearch = useCallback(
+    debounce((query: string) => {
+      router.push({ pathname: searchPath, query: query ? { q: query } : null });
+    }, 500),
+    []
+  );
 
-  const onSearch = (e) => {
-    const query = e.target.value.toLowerCase();
-    router.push({ pathname: searchPath, query: query ? { q: query } : null });
-    setQueryEveywhere(query);
-    setResults((prevResult) => {
-      return {};
-    });
-  };
-
-  const goToSearch = (e) => {
-    if (!router.asPath.includes(searchPath)) router.push(searchPath);
-  };
-
-  const onBlur = (event) => {
-    if (event.target.value.length === 0) {
-      window && window.history.back();
-    }
+  const onSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setInputQuery(query);
+    debouncedOnSearch(query);
   };
 
   return (
@@ -50,10 +45,8 @@ export default function Sidebar() {
           aria-label="search"
           className="px2 py1"
           placeholder="🔍 Search Icons"
-          onFocus={goToSearch}
-          onBlur={onBlur}
           onChange={onSearch}
-          value={inputQuery !== null ? inputQuery : query}
+          value={inputQuery}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"
@@ -72,7 +65,9 @@ export default function Sidebar() {
             <ActiveLink href={{ pathname: "icons", query: { name: icon.id } }}>
               <a
                 className="rounded px2 py1"
-                onClick={(e) => setQueryEveywhere("")}
+                onClick={() => {
+                  setInputQuery("");
+                }}
               >
                 {icon.name}
               </a>

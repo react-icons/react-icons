@@ -38,6 +38,7 @@ export async function convertIconData(svg, multiColor) {
         const newName = name.startsWith("aria-") ? name : camelcase(name);
         switch (newName) {
           case "fill":
+          case "stroke":
             if (
               attribs[name] === "none" ||
               attribs[name] === "currentColor" ||
@@ -47,6 +48,8 @@ export async function convertIconData(svg, multiColor) {
             }
             break;
           case "pId":
+            break;
+          case "dataName":
             break;
           default:
             obj[newName] = attribs[name];
@@ -87,18 +90,5 @@ export async function copyRecursive(src, dest) {
 }
 
 export async function rmDirRecursive(dest) {
-  try {
-    for (const entry of await fs.readdir(dest, { withFileTypes: true })) {
-      const dPath = path.join(dest, entry.name);
-      if (entry.isDirectory()) {
-        await rmDirRecursive(dPath);
-      } else {
-        await fs.unlink(dPath);
-      }
-    }
-    await fs.rmdir(dest);
-  } catch (err) {
-    if (err.code === "ENOENT") return;
-    throw err;
-  }
+  await fs.rm(dest, { recursive: true, force: true });
 }

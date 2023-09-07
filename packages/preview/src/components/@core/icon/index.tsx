@@ -2,7 +2,17 @@ import toast from "cogo-toast";
 import copy from "copy-to-clipboard";
 import React from "react";
 
-function Icon({ icon, name, highlightPattern = null }) {
+function Icon({
+  icon: Icon,
+  iconSet,
+  name,
+  highlightPattern = null,
+}: {
+  icon: React.ComponentType;
+  iconSet?: string;
+  name: string;
+  highlightPattern?: RegExp | null;
+}) {
   const copyToClipboard = () => {
     copy(name);
     toast.success(`Copied '${name}' to clipboard`, {
@@ -20,8 +30,13 @@ function Icon({ icon, name, highlightPattern = null }) {
 
   return (
     <div className="item" tabIndex={0} onClick={copyToClipboard} key={name}>
-      <div className="icon h2">{typeof icon === "function" && icon()}</div>
-      <div className="name">{highlightedName()}</div>
+      <div className="icon h2">
+        <Icon />
+      </div>
+      <div className="name">
+        {iconSet && `${iconSet} `}
+        {highlightedName()}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest an idea for this project
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        - For ideas, post in [Discussions Ideas Category](https://github.com/react-icons/react-icons/discussions/categories/ideas)
+        - Want new Icon sets, post in [Discussions New Icon Set Category](https://github.com/react-icons/react-icons/discussions/categories/new-icon-set)
+        - Please check if there is already a similar issue. [Issues](https://github.com/react-icons/react-icons/issues)
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe
+      description: Is your feature request related to a problem? A clear and concise description of what the problem is.
+      placeholder: I'm always frustrated when [...]
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution
+      description: Describe the solution you'd like. A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: input
+    id: repo-url
+    attributes:
+      label: Minimal sample repository URL
+      description: Gist/GitHub URL. If it's happening on the demo site, its URL.
+      placeholder: "https://github.com/..."
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false

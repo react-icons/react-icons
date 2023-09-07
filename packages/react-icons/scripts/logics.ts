@@ -89,18 +89,5 @@ export async function copyRecursive(src, dest) {
 }
 
 export async function rmDirRecursive(dest) {
-  try {
-    for (const entry of await fs.readdir(dest, { withFileTypes: true })) {
-      const dPath = path.join(dest, entry.name);
-      if (entry.isDirectory()) {
-        await rmDirRecursive(dPath);
-      } else {
-        await fs.unlink(dPath);
-      }
-    }
-    await fs.rmdir(dest);
-  } catch (err) {
-    if (err.code === "ENOENT") return;
-    throw err;
-  }
+  await fs.rm(dest, { recursive: true, force: true });
 }

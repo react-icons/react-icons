@@ -28,9 +28,10 @@ function Tree2Element(tree: IconTree[]): React.ReactElement[] {
   );
 }
 export function GenIcon(license: IconLicense, data: IconTree) {
+  const license_attr = {"aria-details": `Icon by ${license.name} (${license.projectUrl}) under the ${license.license} license. url: ${license.licenseUrl}`};
   // eslint-disable-next-line react/display-name
   return (props: IconBaseProps) => (
-    <IconBase attr={{ ...data.attr }} {...props} aria-details={`Icon by ${license.name} (${license.projectUrl}) under the ${license.license} license. url: ${license.licenseUrl}`}>
+    <IconBase attr={{ ...license_attr, ...data.attr }} {...props} >
       {Tree2Element(data.child)}
     </IconBase>
   );

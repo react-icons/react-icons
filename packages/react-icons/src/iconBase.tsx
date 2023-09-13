@@ -8,6 +8,12 @@ export interface IconTree {
   child: IconTree[];
 }
 
+export interface IconLicense {
+  name: string;
+  license: string;
+  licenseUrl: string;
+}
+
 function Tree2Element(tree: IconTree[]): React.ReactElement[] {
   return (
     tree &&
@@ -20,10 +26,10 @@ function Tree2Element(tree: IconTree[]): React.ReactElement[] {
     )
   );
 }
-export function GenIcon(data: IconTree) {
+export function GenIcon(license: IconLicense, data: IconTree) {
   // eslint-disable-next-line react/display-name
   return (props: IconBaseProps) => (
-    <IconBase attr={{ ...data.attr }} {...props}>
+    <IconBase attr={{ ...data.attr }} {...props} aria-details={`Icon by ${license.name} under the ${license.license} license. url: ${license.licenseUrl}`}>
       {Tree2Element(data.child)}
     </IconBase>
   );

@@ -12,6 +12,7 @@ export interface IconLicense {
   name: string;
   license: string;
   licenseUrl: string;
+  projectUrl: string;
 }
 
 function Tree2Element(tree: IconTree[]): React.ReactElement[] {
@@ -29,7 +30,7 @@ function Tree2Element(tree: IconTree[]): React.ReactElement[] {
 export function GenIcon(license: IconLicense, data: IconTree) {
   // eslint-disable-next-line react/display-name
   return (props: IconBaseProps) => (
-    <IconBase attr={{ ...data.attr }} {...props} aria-details={`Icon by ${license.name} under the ${license.license} license. url: ${license.licenseUrl}`}>
+    <IconBase attr={{ ...data.attr }} {...props} aria-details={`Icon by ${license.name} (${license.projectUrl}) under the ${license.license} license. url: ${license.licenseUrl}`}>
       {Tree2Element(data.child)}
     </IconBase>
   );

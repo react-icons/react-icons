@@ -8,6 +8,7 @@ import { MdAccessibility } from "react-icons/md";
 import { TiArrowDown } from "react-icons/ti";
 import { GrGrommet } from "react-icons/gr";
 import { LiaNode } from "react-icons/lia";
+import { TbPentagonNumber0 } from "react-icons/tb";
 
 class App extends Component {
   render() {
@@ -38,6 +39,7 @@ class App extends Component {
           <TiArrowDown title="arrow down icon" />
           <GrGrommet />
           <LiaNode />
+          <TbPentagonNumber0 />
         </p>
       </div>
     );

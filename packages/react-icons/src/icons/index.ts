@@ -339,6 +339,7 @@ export const icons: IconDefinition[] = [
           "../../icons/ant-design-icons/packages/icons-svg/svg/twotone/*.svg"
         ),
         formatter: (name) => `AiTwotone${name}`,
+        multiColor: true,
       },
     ],
     projectUrl: "https://github.com/ant-design/ant-design-icons",
@@ -447,6 +448,7 @@ export const icons: IconDefinition[] = [
           "../../icons/grommet-icons/public/img/*.svg"
         ),
         formatter: (name) => `Gr${name}`,
+        multiColor: true,
       },
     ],
     projectUrl: "https://github.com/grommet/grommet-icons",

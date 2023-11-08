@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { IconsManifest } from "react-icons";
+import BrandIcon from "./icon.astro";
 ---
 
 <!doctype html>
@@ -22,6 +24,54 @@ const { title } = Astro.props;
     <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
+    <div class="sidebar pt3">
+      <!-- <Heading isOpen={isOpen} setIsOpen={setIsOpen} /> -->
+      <div class="brand">
+        <a href="/">
+          <BrandIcon />
+          <span>react-icons</span>
+        </a>
+        <div class="brand--navmenu">
+          <!-- <button class={`menu ${isOpen && "active"}`} onClick={toggleMenu}> -->
+          <button class={`menu`}>
+            <div>Menu</div>
+          </button>
+        </div>
+      </div>
+
+      <div class="search p2">
+        <input
+          type="text"
+          aria-label="search"
+          class="px2 py1"
+          placeholder="🔍 Search Icons"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+        <!-- TODO onChange={onSearch} value={inputQuery} -->
+      </div>
+
+      <!-- <ul class={`sidebar--links ${isOpen && "active"}`}> -->
+      <ul class={`sidebar--links`}>
+        <li>
+          <!-- <ActiveLink href="/"> -->
+          <a class="rounded px2 py1" href="/">Home</a>
+          <!-- </ActiveLink> -->
+        </li>
+        {
+          IconsManifest.map((icon) => (
+            <li>
+              <a href={`/icons/${icon.id}`} class="rounded px2 py1">
+                {icon.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
     <slot />
   </body>
 </html>

@@ -19358,9 +19358,11 @@ __metadata:
   dependencies:
     "@astrojs/check": ^0.3.1
     astro: ^3.4.3
+    basscss: ^8.1.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-icons: ^4.11.1-snapshot.0
+    sass: ^1.69.5
     typescript: ^5.2.2
   languageName: unknown
   linkType: soft
@@ -21046,7 +21048,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.55.0":
+"sass@npm:^1.55.0, sass@npm:^1.69.5":
   version: 1.69.5
   resolution: "sass@npm:1.69.5"
   dependencies:

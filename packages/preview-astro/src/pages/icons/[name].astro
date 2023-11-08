@@ -1,4 +1,6 @@
 ---
+import Layout from "../../layouts/Layout.astro";
+
 import { IconsManifest } from "react-icons";
 export async function getStaticPaths() {
   return Promise.all(
@@ -19,7 +21,9 @@ const { manifest, lib } = Astro.props;
 // console.log("IconsManifest", "", IconsManifest, lib["Fa500Px"]);
 ---
 
-<div>hello {name}</div>
+<Layout title={`React icons preview for ${manifest.name}`}>
+  <div>hello {name}</div>
 
-<h1>JSON Result</h1>
-<pre><code>{Object.keys(lib).join("\n")}</code></pre>
+  <h1>JSON Result</h1>
+  <pre><code>{Object.keys(lib).join("\n")}</code></pre>
+</Layout>

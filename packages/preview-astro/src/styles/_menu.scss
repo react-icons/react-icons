@@ -1,0 +1,49 @@
+.menu {
+  height: 28px;
+  width: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  text-align: center;
+  outline: none;
+  color: transparent;
+
+  &:before,
+  &:after,
+  div {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: var(--color-black);
+    transition: all ease 0.3s;
+    border-radius: 4px;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &.active {
+    div {
+      opacity: 0;
+    }
+
+    &:before {
+      transform: rotate(-45deg) translate3d(0, -50%, 0);
+      top: 50%;
+    }
+
+    &:after {
+      transform: rotate(45deg) translate3d(0, 50%, 0);
+      bottom: 50%;
+    }
+  }
+}

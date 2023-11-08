@@ -6,6 +6,10 @@ interface Props {
 const { title } = Astro.props;
 import { IconsManifest } from "react-icons";
 import BrandIcon from "./icon.astro";
+
+const sortedManifest = IconsManifest.sort((a, b) =>
+  a.name.localeCompare(b.name),
+);
 ---
 
 <!doctype html>
@@ -61,7 +65,7 @@ import BrandIcon from "./icon.astro";
           <!-- </ActiveLink> -->
         </li>
         {
-          IconsManifest.map((icon) => (
+          sortedManifest.map((icon) => (
             <li>
               <a href={`/icons/${icon.id}`} class="rounded px2 py1">
                 {icon.name}
@@ -71,8 +75,9 @@ import BrandIcon from "./icon.astro";
         }
       </ul>
     </div>
-
-    <slot />
+    <main class="container">
+      <slot />
+    </main>
   </body>
 </html>
 <style is:global>

@@ -2,7 +2,7 @@ export function iconRowTemplate(
   icon,
   formattedName,
   iconData,
-  type = "module"
+  type = "module",
 ) {
   switch (type) {
     case "module":

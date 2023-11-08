@@ -11,12 +11,13 @@
     "eslint": "^8.25.0",
     "eslint-plugin-react": "latest",
     "lerna": "^3.22.1",
-    "prettier": "^2.7.1"
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1"
   },
   "scripts": {
     "lint": "yarn eslint .",
-    "format": "prettier --write --ignore-unknown .",
-    "format:ci": "prettier --check --ignore-unknown .",
+    "format": "prettier --write --ignore-unknown '**/*.{js,ts,mjs,cjs,json,astro}'",
+    "format:ci": "prettier --check --ignore-unknown '**/*.{js,ts,mjs,cjs,json,astro}'",
     "version-up": "lerna version",
     "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",
     "version": "yarn install && git add .",

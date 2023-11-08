@@ -25,7 +25,7 @@ module.exports = withPWA({
     }
     config.resolve.alias["@components"] = path.join(
       __dirname,
-      `src/components`
+      `src/components`,
     );
     config.resolve.alias["@pages"] = path.join(__dirname, `src/pages`);
     config.resolve.alias["@styles"] = path.join(__dirname, `src/styles`);

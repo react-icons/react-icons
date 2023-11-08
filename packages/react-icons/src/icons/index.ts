@@ -33,14 +33,14 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/fontawesome/svgs/+(brands|solid)/*.svg"
+          "../../icons/fontawesome/svgs/+(brands|solid)/*.svg",
         ),
         formatter: (name) => `Fa${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/fontawesome/svgs/regular/*.svg"
+          "../../icons/fontawesome/svgs/regular/*.svg",
         ),
         formatter: (name) => `FaReg${name}`,
       },
@@ -64,14 +64,14 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/fontawesome-6/svgs/+(brands|solid)/*.svg"
+          "../../icons/fontawesome-6/svgs/+(brands|solid)/*.svg",
         ),
         formatter: (name) => `Fa${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/fontawesome-6/svgs/regular/*.svg"
+          "../../icons/fontawesome-6/svgs/regular/*.svg",
         ),
         formatter: (name) => `FaReg${name}`,
       },
@@ -95,7 +95,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("ionicons")),
-          "collection/icon/svg/*.svg"
+          "collection/icon/svg/*.svg",
         ),
         formatter: (name) => `Io${name}`,
       },
@@ -111,7 +111,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../../../node_modules/ionicons-5/dist/svg/*.svg"
+          "../../../../node_modules/ionicons-5/dist/svg/*.svg",
         ),
         formatter: (name) => `Io${name}`,
         processWithSVGO: true,
@@ -130,39 +130,39 @@ export const icons: IconDefinition[] = [
           const normal = await glob(
             path.resolve(
               __dirname,
-              "../../icons/material-design-icons/src/*/*/materialicons/24px.svg"
-            )
+              "../../icons/material-design-icons/src/*/*/materialicons/24px.svg",
+            ),
           );
 
           const twotone = await glob(
             path.resolve(
               __dirname,
-              "../../icons/material-design-icons/src/*/*/materialiconstwotone/24px.svg"
-            )
+              "../../icons/material-design-icons/src/*/*/materialiconstwotone/24px.svg",
+            ),
           );
           return [
             ...normal,
             ...twotone.filter(
-              (file) => !normal.includes(file.replace("twotone/", "/"))
+              (file) => !normal.includes(file.replace("twotone/", "/")),
             ),
           ];
         },
         formatter: (name, file) =>
           `Md${camelcase(
             file.replace(/^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i, "$1"),
-            { pascalCase: true }
+            { pascalCase: true },
           )}`,
         processWithSVGO: true,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/material-design-icons/src/*/*/materialiconsoutlined/24px.svg"
+          "../../icons/material-design-icons/src/*/*/materialiconsoutlined/24px.svg",
         ),
         formatter: (name, file) =>
           `MdOutline${camelcase(
             file.replace(/^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i, "$1"),
-            { pascalCase: true }
+            { pascalCase: true },
           )}`,
         processWithSVGO: true,
       },
@@ -208,7 +208,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("@primer/octicons")),
-          "build/svg/*-24.svg"
+          "build/svg/*-24.svg",
         ),
         formatter: (name) => `Go${name}`.replace("24", ""),
       },
@@ -224,7 +224,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("feather-icons")),
-          "icons/*.svg"
+          "icons/*.svg",
         ),
         formatter: (name) => `Fi${name}`,
       },
@@ -240,7 +240,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("lucide-static")),
-          "../icons/*.svg"
+          "../icons/*.svg",
         ),
         formatter: (name) => `Lu${name}`,
       },
@@ -256,7 +256,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/game-icons-inverted/all-icons/*.svg"
+          "../../icons/game-icons-inverted/all-icons/*.svg",
         ),
         formatter: (name) => `Gi${name}`,
       },
@@ -322,21 +322,21 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/ant-design-icons/packages/icons-svg/svg/filled/*.svg"
+          "../../icons/ant-design-icons/packages/icons-svg/svg/filled/*.svg",
         ),
         formatter: (name) => `AiFill${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/ant-design-icons/packages/icons-svg/svg/outlined/*.svg"
+          "../../icons/ant-design-icons/packages/icons-svg/svg/outlined/*.svg",
         ),
         formatter: (name) => `AiOutline${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/ant-design-icons/packages/icons-svg/svg/twotone/*.svg"
+          "../../icons/ant-design-icons/packages/icons-svg/svg/twotone/*.svg",
         ),
         formatter: (name) => `AiTwotone${name}`,
       },
@@ -360,21 +360,21 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/bootstrap/icons/*!(-reverse)-fill.svg"
+          "../../icons/bootstrap/icons/*!(-reverse)-fill.svg",
         ),
         formatter: (name) => `BsFill${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/bootstrap/icons/*-reverse!(-fill).svg"
+          "../../icons/bootstrap/icons/*-reverse!(-fill).svg",
         ),
         formatter: (name) => `BsReverse${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/bootstrap/icons/*!(-fill|-reverse|reverse-).svg"
+          "../../icons/bootstrap/icons/*!(-fill|-reverse|reverse-).svg",
         ),
         formatter: (name) => `Bs${name}`,
       },
@@ -419,7 +419,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/flat-color-icons/svg/*.svg"
+          "../../icons/flat-color-icons/svg/*.svg",
         ),
         formatter: (name) => `Fc${name}`,
         multiColor: true,
@@ -444,7 +444,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/grommet-icons/public/img/*.svg"
+          "../../icons/grommet-icons/public/img/*.svg",
         ),
         formatter: (name) => `Gr${name}`,
       },
@@ -468,14 +468,14 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons/optimized/solid/*.svg"
+          "../../icons/heroicons/optimized/solid/*.svg",
         ),
         formatter: (name) => `Hi${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons/optimized/outline/*.svg"
+          "../../icons/heroicons/optimized/outline/*.svg",
         ),
         formatter: (name) => `HiOutline${name}`,
       },
@@ -499,21 +499,21 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons-2/optimized/24/solid/*.svg"
+          "../../icons/heroicons-2/optimized/24/solid/*.svg",
         ),
         formatter: (name) => `Hi${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons-2/optimized/24/outline/*.svg"
+          "../../icons/heroicons-2/optimized/24/outline/*.svg",
         ),
         formatter: (name) => `HiOutline${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons-2/optimized/20/solid/*.svg"
+          "../../icons/heroicons-2/optimized/20/solid/*.svg",
         ),
         formatter: (name) => `HiMini${name}`,
       },
@@ -558,7 +558,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/simple-line-icons/src/svgs/*.svg"
+          "../../icons/simple-line-icons/src/svgs/*.svg",
         ),
         formatter: (name) => `Sl${name}`,
       },
@@ -604,7 +604,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/boxicons/svg/regular/*.svg"
+          "../../icons/boxicons/svg/regular/*.svg",
         ),
         formatter: (name) => `Bi${name.replace("Bx", "")}`,
       },
@@ -657,7 +657,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/vscode-icons/src/icons/*.svg"
+          "../../icons/vscode-icons/src/icons/*.svg",
         ),
         formatter: (name) => `Vsc${name}`,
       },
@@ -724,7 +724,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/radix-icons/packages/radix-icons/icons/*.svg"
+          "../../icons/radix-icons/packages/radix-icons/icons/*.svg",
         ),
         formatter: (name) => `Rx${camelcase(name, { pascalCase: true })}`,
       },
@@ -748,7 +748,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/phosphor-icons/assets/*/*.svg"
+          "../../icons/phosphor-icons/assets/*/*.svg",
         ),
         formatter: (name) => `Pi${name}`,
       },

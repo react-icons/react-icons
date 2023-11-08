@@ -34,7 +34,7 @@ async function main() {
     });
     await task("@react-icons/all write icons", async () => {
       await Promise.all(
-        icons.map((icon) => taskAll.writeIconModule(icon, allOpt))
+        icons.map((icon) => taskAll.writeIconModule(icon, allOpt)),
       );
     });
 
@@ -51,13 +51,13 @@ async function main() {
       await taskCommon.writeLicense(filesOpt);
       await taskCommon.writePackageJson(
         { name: "@react-icons/all-files" },
-        filesOpt
+        filesOpt,
       );
       await taskCommon.copyReadme(filesOpt);
     });
     await task("@react-icons/all-files write icons", async () => {
       await Promise.all(
-        icons.map((icon) => taskFiles.writeIconModuleFiles(icon, filesOpt))
+        icons.map((icon) => taskFiles.writeIconModuleFiles(icon, filesOpt)),
       );
     });
 

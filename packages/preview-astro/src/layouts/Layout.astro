@@ -17,8 +17,9 @@ const sortedManifest = IconsManifest.sort((a, b) =>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="/react-icons/favicon.png" />
     <meta name="theme-color" content="#e91e63" />
     <meta name="title" content="React Icons" />
     <meta
@@ -26,7 +27,7 @@ const sortedManifest = IconsManifest.sort((a, b) =>
       content="Include popular icons in your React projects easly with react-icons."
     />
     <meta name="keywords" content="React, Icons, Tree Shaking, SVG" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/react-icons/manifest.json" />
   </head>
   <body>
     <div class="sidebar pt3">
@@ -38,7 +39,7 @@ const sortedManifest = IconsManifest.sort((a, b) =>
         </a>
         <div class="brand--navmenu">
           <!-- <button class={`menu ${isOpen && "active"}`} onClick={toggleMenu}> -->
-          <button class={`menu`}>
+          <button class="menu">
             <div>Menu</div>
           </button>
         </div>
@@ -58,8 +59,8 @@ const sortedManifest = IconsManifest.sort((a, b) =>
         /> -->
       </div>
 
-      <!-- <ul class={`sidebar--links ${isOpen && "active"}`}> -->
-      <ul class={`sidebar--links`}>
+      <!-- if sidebar open apply 'active' class -->
+      <ul class="sidebar--links">
         <li>
           <!-- <ActiveLink href="/"> -->
           <a class="rounded px2 py1" href="/">Home</a>
@@ -84,3 +85,15 @@ const sortedManifest = IconsManifest.sort((a, b) =>
 <style is:global>
   @import "../styles/global.scss";
 </style>
+<script is:inline>
+  function onButtonClick() {
+    const sidebar = document.querySelector("ul.sidebar--links");
+    sidebar.classList.toggle("active");
+
+    const button = document.querySelector("button.menu");
+    button.classList.toggle("active");
+  }
+  document
+    .querySelector("button.menu")
+    .addEventListener("click", onButtonClick);
+</script>

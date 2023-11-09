@@ -11,7 +11,7 @@ export function SearchInput() {
 
   const debouncedOnSearch = React.useCallback(
     debounce((query: string) => {
-      window.location.href = `/search#q=${query}`;
+      window.location.href = `/react-icons/search#q=${query}`;
     }, 500),
     [],
   );

@@ -5,6 +5,7 @@ import { IconsManifest } from "react-icons/lib";
 
 // https://astro.build/config
 export default defineConfig({
+  base: "/react-icons",
   integrations: [react()],
   vite: {
     plugins: [reactIconsGetIconsPlugin()],

@@ -8,7 +8,7 @@ export interface IconSetViewerProps {
 
 export function IconSetViewer(props: IconSetViewerProps) {
   const [icons, setIcons] = React.useState<{
-    [name: string]: React.ComponentType<any>;
+    [name: string]: React.ComponentType;
   }>();
   React.useEffect(() => {
     getIcons(props.iconSet).then((icons) => {

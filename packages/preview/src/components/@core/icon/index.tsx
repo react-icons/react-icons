@@ -24,7 +24,9 @@ function Icon({
     if (highlightPattern)
       return name
         .split(highlightPattern)
-        .map((part) => (part.match(highlightPattern) ? <b>{part}</b> : part));
+        .map((part, i) =>
+          part.match(highlightPattern) ? <b key={i}>{part}</b> : part,
+        );
     return name;
   };
 

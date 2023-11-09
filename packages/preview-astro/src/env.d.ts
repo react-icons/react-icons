@@ -3,5 +3,5 @@
 declare module "virtual:react-icons-get-icons" {
   function getIcons(
     id: string,
-  ): Promise<{ [name: string]: React.ComponentType<any> }>;
+  ): Promise<{ [name: string]: React.ComponentType }>;
 }

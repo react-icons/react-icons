@@ -3,7 +3,7 @@ import toast from "cogo-toast";
 import copy from "copy-to-clipboard";
 
 export interface IconProps {
-  component: React.ComponentType<unknown>;
+  component: React.ComponentType;
   iconName: string;
   iconSet?: string;
   highlightPattern?: RegExp | null;

@@ -244,3 +244,43 @@ a {
 .icons:empty + .no-results:after {
   content: "No icons found";
 }
+
+.include-icon-sets {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    gap: 15px;
+    .icon-set {
+      color: var(--color-black);
+      background: var(--color-white);
+      padding: 5px 8px 8px;
+      border-radius: var(--border-radius-md);
+      box-shadow:
+        0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      transition: background-color 150ms ease;
+      &:hover {
+        background: #f3f3f3;
+      }
+
+      .name {
+        font-size: 1.2rem;
+      }
+      .describe {
+        font-size: 0.8rem;
+        color: var(--color-gray-4);
+      }
+      .samples {
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(90deg, #fff 50%, transparent);
+        font-size: 1.5rem;
+        .box {
+          margin-top: 7px;
+          display: grid;
+          grid: 1fr / repeat(20, 1em);
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

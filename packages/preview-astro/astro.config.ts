@@ -27,9 +27,9 @@ function reactIconsGetIconsPlugin(): PluginOption {
     load(id) {
       if (id === resolvedVirtualModuleId) {
         let codes = "export function getIcons (id) { switch (id) {";
-        IconsManifest.forEach((icon) => {
+        for (const icon of IconsManifest) {
           codes += `case "${icon.id}":\nreturn import("react-icons/${icon.id}");\n`;
-        });
+        }
         codes += "}};";
 
         return codes;

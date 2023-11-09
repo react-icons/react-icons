@@ -15,6 +15,8 @@
     "@astrojs/react": "^3.0.4",
     "astro": "^3.4.3",
     "basscss": "^8.1.0",
+    "cogo-toast": "^4.2.3",
+    "copy-to-clipboard": "^3.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.1-snapshot.0",

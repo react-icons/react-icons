@@ -7591,7 +7591,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cogo-toast@npm:^4.1.1":
+"cogo-toast@npm:^4.1.1, cogo-toast@npm:^4.2.3":
   version: 4.2.3
   resolution: "cogo-toast@npm:4.2.3"
   peerDependencies:
@@ -8068,7 +8068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-to-clipboard@npm:^3.2.0":
+"copy-to-clipboard@npm:^3.2.0, copy-to-clipboard@npm:^3.3.3":
   version: 3.3.3
   resolution: "copy-to-clipboard@npm:3.3.3"
   dependencies:
@@ -19412,6 +19412,8 @@ __metadata:
     "@astrojs/react": ^3.0.4
     astro: ^3.4.3
     basscss: ^8.1.0
+    cogo-toast: ^4.2.3
+    copy-to-clipboard: ^3.3.3
     react: ^18.2.0
     react-dom: ^18.2.0
     react-icons: ^4.11.1-snapshot.0

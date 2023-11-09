@@ -1,29 +1,63 @@
 ---
+import { Code } from "astro:components";
+import Container from "../../components/container.astro";
 import Layout from "../../layouts/Layout.astro";
-
+import { IconSetViewer } from "../../components/iconset-viewer.tsx";
 import { IconsManifest } from "react-icons";
+
 export async function getStaticPaths() {
   return Promise.all(
     IconsManifest.map(async (manifest) => ({
       params: { name: manifest.id },
       props: {
         manifest,
-        // There is no need to give hints to Vite as it will be imported during SSG.
-        lib: await import(/* @vite-ignore */ `react-icons/${manifest.id}`),
       },
     })),
   );
 }
 
-const { name } = Astro.params;
-const { manifest, lib } = Astro.props;
+const { manifest } = Astro.props;
 
 // console.log("IconsManifest", "", IconsManifest, lib["Fa500Px"]);
 ---
 
 <Layout title={`React icons preview for ${manifest.name}`}>
-  <div>hello {name}</div>
+  <Container title={manifest.name}>
+    <table class="iconset--info">
+      <tbody>
+        <tr>
+          <th>License</th>
+          <td>
+            <a
+              href={manifest.licenseUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {manifest.license}
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th>Project</th>
+          <td>
+            <a
+              href={manifest.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {manifest.projectUrl}
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-  <h1>JSON Result</h1>
-  <pre><code>{Object.keys(lib).join("\n")}</code></pre>
+    <h2>Import</h2>
+    <Code
+      lang="jsx"
+      code={`import { IconName } from "react-icons/${manifest.id}";`}
+    />
+
+    <IconSetViewer client:load iconSet={manifest.id} />
+  </Container>
 </Layout>

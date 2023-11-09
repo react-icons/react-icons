@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 import { IconsManifest } from "react-icons";
 import BrandIcon from "./icon.astro";
+import { SearchInput } from "../components/searchinput";
 
 const sortedManifest = IconsManifest.sort((a, b) =>
   a.name.localeCompare(b.name),
@@ -44,7 +45,8 @@ const sortedManifest = IconsManifest.sort((a, b) =>
       </div>
 
       <div class="search p2">
-        <input
+        <SearchInput client:load />
+        <!-- <input
           type="text"
           aria-label="search"
           class="px2 py1"
@@ -53,8 +55,7 @@ const sortedManifest = IconsManifest.sort((a, b) =>
           autocorrect="off"
           autocapitalize="off"
           spellcheck="false"
-        />
-        <!-- TODO onChange={onSearch} value={inputQuery} -->
+        /> -->
       </div>
 
       <!-- <ul class={`sidebar--links ${isOpen && "active"}`}> -->

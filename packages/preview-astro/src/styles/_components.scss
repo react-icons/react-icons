@@ -284,3 +284,115 @@ a {
     }
   }
 }
+
+html:has(.modal-root.active) {
+  overflow: hidden;
+}
+.modal-root {
+  & {
+    display: none;
+  }
+  &.active {
+    display: block;
+  }
+
+  & > .overray {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  & > .modal-body {
+    // show content in right side
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    width: 50%;
+    max-width: 600px;
+    height: 100%;
+    background: var(--color-gray-0);
+    padding: var(--space-3);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    & > .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-2);
+      .title {
+        font-size: 1.5rem;
+      }
+      .close {
+        cursor: pointer;
+        font-size: 1.5rem;
+        border: none;
+        background: initial;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.icon-detail-modal-content {
+  .icon {
+    text-align: center;
+    min-height: 250px;
+    padding: 25px;
+  }
+  pre {
+    background-color: #24292e;
+    color: #e1e4e8;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  ul.copy {
+    list-style: none;
+    padding: 0;
+    li {
+      margin-bottom: 0.5rem;
+      button {
+        border: none;
+        background: var(--color-gray-2);
+        padding: 5px 7px;
+        border-radius: 5px;
+        cursor: pointer;
+        .text {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .colors {
+    margin: 1rem 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    button.item {
+      flex: 0 0 30px;
+      background: #000;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      display: block;
+      font-size: 0;
+      border: var(--color-gray-2) 1px solid;
+      border-radius: 100%;
+      background-image: linear-gradient(
+        to left top,
+        transparent 50%,
+        currentColor 50%
+      );
+      &.active {
+        border-width: 2px;
+        border-color: var(--color-gray-4);
+      }
+    }
+  }
+}

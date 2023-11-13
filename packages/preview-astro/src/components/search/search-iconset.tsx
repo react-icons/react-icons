@@ -9,11 +9,17 @@ export interface SearchIconsProps {
   icon: IconManifestType;
   query: string;
   highlightPattern: RegExp;
+  onSelect?(
+    iconSet: string,
+    icon: string,
+    component: React.ComponentType,
+  ): void;
 }
 export function SearchIconSet({
   icon,
   query,
   highlightPattern,
+  onSelect,
 }: SearchIconsProps) {
   const [icons, setIcons] = React.useState<{
     [name: string]: React.ComponentType;
@@ -38,6 +44,7 @@ export function SearchIconSet({
               iconSet={icon.id}
               iconName={name}
               highlightPattern={highlightPattern}
+              onSelect={(name) => onSelect?.(icon.id, name, Component)}
             />
           );
         })

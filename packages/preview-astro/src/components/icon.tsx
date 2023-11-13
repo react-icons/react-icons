@@ -7,6 +7,7 @@ export interface IconProps {
   iconName: string;
   iconSet?: string;
   highlightPattern?: RegExp | null;
+  onSelect?(icon: string): void;
 }
 export default function Icon(props: IconProps) {
   if (!props) {
@@ -18,10 +19,14 @@ export default function Icon(props: IconProps) {
   }
 
   const copyToClipboard = () => {
-    copy(props.iconName);
-    toast.success(`Copied '${props.iconName}' to clipboard`, {
-      position: "bottom-center",
-    });
+    if (props.onSelect) {
+      props.onSelect(props.iconName);
+    } else {
+      copy(props.iconName);
+      toast.success(`Copied '${props.iconName}' to clipboard`, {
+        position: "bottom-center",
+      });
+    }
   };
 
   const highlightedName = () => {

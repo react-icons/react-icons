@@ -1,9 +1,10 @@
 ---
 interface Props {
   title: string;
+  noindex?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, noindex } = Astro.props;
 import { IconsManifest } from "react-icons";
 import BrandIcon from "./icon.astro";
 import { SearchInput } from "../components/searchinput";
@@ -28,6 +29,7 @@ const sortedManifest = IconsManifest.sort((a, b) =>
     />
     <meta name="keywords" content="React, Icons, Tree Shaking, SVG" />
     <link rel="manifest" href="/react-icons/manifest.json" />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
   </head>
   <body>
     <div class="sidebar pt3">

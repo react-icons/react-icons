@@ -5,6 +5,7 @@ interface Props {
 }
 
 const { title, noindex } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
 import { IconsManifest } from "react-icons";
 import BrandIcon from "./icon.astro";
 import { SearchInput } from "../components/searchinput";
@@ -30,6 +31,7 @@ const sortedManifest = IconsManifest.sort((a, b) =>
     <meta name="keywords" content="React, Icons, Tree Shaking, SVG" />
     <link rel="manifest" href="/react-icons/manifest.json" />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <ViewTransitions />
   </head>
   <body>
     <div class="sidebar pt3">
@@ -82,20 +84,20 @@ const sortedManifest = IconsManifest.sort((a, b) =>
     <main class="container">
       <slot />
     </main>
+    <style is:global>
+      @import "../styles/global.scss";
+    </style>
+    <script is:inline>
+      function onButtonClick() {
+        const sidebar = document.querySelector("ul.sidebar--links");
+        sidebar.classList.toggle("active");
+
+        const button = document.querySelector("button.menu");
+        button.classList.toggle("active");
+      }
+      document
+        .querySelector("button.menu")
+        .addEventListener("click", onButtonClick);
+    </script>
   </body>
 </html>
-<style is:global>
-  @import "../styles/global.scss";
-</style>
-<script is:inline>
-  function onButtonClick() {
-    const sidebar = document.querySelector("ul.sidebar--links");
-    sidebar.classList.toggle("active");
-
-    const button = document.querySelector("button.menu");
-    button.classList.toggle("active");
-  }
-  document
-    .querySelector("button.menu")
-    .addEventListener("click", onButtonClick);
-</script>

@@ -2,15 +2,17 @@ import React from "react";
 import { IconsManifest } from "react-icons";
 import { getIcons } from "virtual:react-icons-get-icons";
 
+const icons = [...IconsManifest].sort((a, b) => a.name.localeCompare(b.name));
+
 const counts = await Promise.all(
-  IconsManifest.map(async (icons) => {
+  icons.map(async (icons) => {
     const components = await getIcons(icons.id);
     return Object.keys(components).length;
   }),
 );
 
 const samples = await Promise.all(
-  IconsManifest.map(async (icons) => {
+  icons.map(async (icons) => {
     const components = await getIcons(icons.id);
     const names = Object.keys(components);
     return names
@@ -24,7 +26,7 @@ export function IconList(): React.ReactElement {
   return (
     <div className="include-icon-sets">
       <div className="content">
-        {IconsManifest.map((icons, index) => (
+        {icons.map((icons, index) => (
           <a
             key={icons.id}
             className="icon-set"

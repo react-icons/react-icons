@@ -15,6 +15,7 @@ const samples = await Promise.all(
   icons.map(async (icons) => {
     const components = await getIcons(icons.id);
     const names = Object.keys(components);
+    names.sort((a, b) => a.localeCompare(b));
     return names
       .slice(0, 15)
       .map((name) => components[name])

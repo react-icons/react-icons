@@ -35,7 +35,7 @@ const sortedManifest = IconsManifest.sort((a, b) =>
     <div class="sidebar pt3">
       <!-- <Heading isOpen={isOpen} setIsOpen={setIsOpen} /> -->
       <div class="brand">
-        <a href="/">
+        <a href="/react-icons">
           <BrandIcon />
           <span>react-icons</span>
         </a>
@@ -65,13 +65,13 @@ const sortedManifest = IconsManifest.sort((a, b) =>
       <ul class="sidebar--links">
         <li>
           <!-- <ActiveLink href="/"> -->
-          <a class="rounded px2 py1" href="/">Home</a>
+          <a class="rounded px2 py1" href="/react-icons">Home</a>
           <!-- </ActiveLink> -->
         </li>
         {
           sortedManifest.map((icon) => (
             <li>
-              <a href={`/icons/${icon.id}`} class="rounded px2 py1">
+              <a href={`/react-icons/icons/${icon.id}`} class="rounded px2 py1">
                 {icon.name}
               </a>
             </li>

@@ -39,7 +39,7 @@
     "glob-promise": "^5.0.0",
     "ionicons": "^4.6.3",
     "ionicons-5": "npm:ionicons@5",
-    "lerna": "^3.20.2",
+    "lerna": "^7.4.2",
     "lucide-static": "^0.263.0",
     "p-queue": "^7.3.0",
     "prettier": "^2.7.1",

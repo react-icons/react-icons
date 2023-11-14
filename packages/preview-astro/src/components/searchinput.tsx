@@ -1,27 +1,35 @@
-import React from "react";
+import React, { useEffect, useCallback, useState, useRef } from "react";
+import type { ChangeEvent } from "react";
 import { debounce } from "../utils/debounce";
 import { useHashParams } from "../utils/usehashparams";
-
 export function SearchInput() {
+  const [inputQuery, setInputQuery] = useState<string>("");
   const [params] = useHashParams();
   const q = params.get("q");
-  React.useEffect(() => {
-    setInputQuery(typeof q === "string" ? q : "");
+
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    const currentQuery = q || "";
+    setInputQuery(currentQuery);
+
+    // To handle focus on refresh
+    currentQuery && searchInputRef.current?.focus();
   }, [q]);
 
-  const debouncedOnSearch = React.useCallback(
+  const debouncedOnSearch = useCallback(
     debounce((query: string) => {
       window.location.href = `/react-icons/search#q=${query}`;
     }, 500),
     [],
   );
 
-  const [inputQuery, setInputQuery] = React.useState("");
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
     setInputQuery(query);
     debouncedOnSearch(query);
   };
+
   return (
     <input
       type="text"
@@ -31,9 +39,10 @@ export function SearchInput() {
       autoComplete="off"
       autoCorrect="off"
       autoCapitalize="off"
-      spellCheck="false"
+      spellCheck={false}
       value={inputQuery}
       onChange={onChange}
+      ref={searchInputRef}
     />
   );
 }

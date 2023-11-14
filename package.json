@@ -10,7 +10,7 @@
     "@typescript-eslint/parser": "^5.40.0",
     "eslint": "^8.25.0",
     "eslint-plugin-react": "latest",
-    "lerna": "^3.22.1",
+    "lerna": "^7.4.2",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.1"
   },

@@ -177,7 +177,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/",
       url: "https://github.com/google/material-design-icons.git",
       branch: "master",
-      hash: "589092d9a7177a4b9e641f7e790d9cc60ce187a4",
+      hash: "1ea21d5429750938f4a8e694e75a54fc0f02dae1",
     },
   },
   {
@@ -350,7 +350,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "packages/icons-svg/svg/",
       url: "https://github.com/ant-design/ant-design-icons.git",
       branch: "master",
-      hash: "4ec2740272706da3f9d91c07d01fa5bdd2e5c2f6",
+      hash: "d7c5ad5015a0cbb67c4c1faa639edc1c4d16c23a",
     },
   },
   {
@@ -388,7 +388,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/twbs/icons.git",
       branch: "main",
-      hash: "24e7f7d14967dff3d716575f8a5edeb572b5e10f",
+      hash: "7c2454522e5ce8bbfc4edb8c7b2e42b8c3d7f197",
     },
   },
   {
@@ -458,7 +458,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "public/img/",
       url: "https://github.com/grommet/grommet-icons.git",
       branch: "master",
-      hash: "3de62049fa7d06f355751a7335c9f7d3a1aea55e",
+      hash: "2c16c9d1ed028b6cb58f0411c4e71c6cd70387fa",
     },
   },
   {
@@ -548,7 +548,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/simple-icons/simple-icons.git",
       branch: "develop",
-      hash: "ceca705b0a95917e7178cd4d4a34fda46b6cfd78",
+      hash: "f74f0e6b995aa099458455eebe2e2e89fe1a9f89",
     },
   },
   {
@@ -647,7 +647,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/svg/",
       url: "https://github.com/astrit/css.gg.git",
       branch: "master",
-      hash: "fd750c9df1b1caa060b6321da9b28dfd32028d83",
+      hash: "deea4fa5f39a2980d7586aed18d65cdba6fd85e3",
     },
   },
   {
@@ -671,7 +671,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/icons/",
       url: "https://github.com/microsoft/vscode-codicons.git",
       branch: "main",
-      hash: "e0565f0728c0b7f9e495e82d7338fd1e86f009c8",
+      hash: "19a8819666fed0658f30722bce3781e7fcdc0675",
     },
   },
   {
@@ -692,7 +692,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/tabler/tabler-icons.git",
       branch: "master",
-      hash: "25775027862f48f160dce354c5bea5c005c6d4d3",
+      hash: "93e971c34c184c76b43413004a237a1e2902c58f",
     },
   },
   {
@@ -762,7 +762,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "assets/",
       url: "https://github.com/phosphor-icons/core.git",
       branch: "main",
-      hash: "c67d7a849f450be1bfe64fd5820471e4019e5ff0",
+      hash: "f0d270195c812c0d859290fb3af84e863b86b480",
     },
   },
   {

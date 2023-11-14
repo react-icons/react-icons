@@ -692,7 +692,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/tabler/tabler-icons.git",
       branch: "master",
-      hash: "91b9997fd03fc2685280815fdf74efd243292c17",
+      hash: "25775027862f48f160dce354c5bea5c005c6d4d3",
     },
   },
   {

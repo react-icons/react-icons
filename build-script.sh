@@ -1,5 +1,11 @@
 #!/bin/bash -eux
 
+
+if [[ -f package-lock.json ]]; then
+  echo "[ERROR] package-lock.json exists!"
+  exit 1
+fi
+
 time (cd packages/react-icons/ && yarn fetch)
 time (cd packages/react-icons/ && yarn build)
 echo VERSIONS; cat packages/react-icons/VERSIONS

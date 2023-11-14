@@ -1,0 +1,11 @@
+---
+import Container from "../components/container.astro";
+import { SearchPageComponent } from "../components/search";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title={`React icons search results`} noindex>
+  <Container title="🔍 Search">
+    <SearchPageComponent client:load />
+  </Container>
+</Layout>

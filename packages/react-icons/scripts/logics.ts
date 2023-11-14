@@ -21,7 +21,7 @@ export async function convertIconData(svg, multiColor) {
   // 2. convert to camelcase ex: fill-opacity => fillOpacity
   const attrConverter = (
     /** @type {{[key: string]: string}} */ attribs,
-    /** @type string */ tagName
+    /** @type string */ tagName,
   ) =>
     attribs &&
     Object.keys(attribs)
@@ -32,7 +32,7 @@ export async function convertIconData(svg, multiColor) {
             ...(tagName === "svg"
               ? ["xmlns", "xmlns:xlink", "xml:space", "width", "height"]
               : []), // if tagName is svg remove size attributes
-          ].includes(name)
+          ].includes(name),
       )
       .reduce((obj, name) => {
         const newName = name.startsWith("aria-") ? name : camelcase(name);

@@ -21,20 +21,20 @@ export async function writeIconsManifest({ DIST, LIB, rootDir }) {
   await fs.writeFile(
     path.resolve(LIB, "esm", "iconsManifest.js"),
     `export var IconsManifest = ${manifest}`,
-    "utf8"
+    "utf8",
   );
   await fs.writeFile(
     path.resolve(LIB, "cjs", "iconsManifest.js"),
     `module.exports.IconsManifest = ${manifest}`,
-    "utf8"
+    "utf8",
   );
   await fs.copyFile(
     "src/iconsManifest.d.ts",
-    path.resolve(LIB, "esm", "iconsManifest.d.ts")
+    path.resolve(LIB, "esm", "iconsManifest.d.ts"),
   );
   await fs.copyFile(
     "src/iconsManifest.d.ts",
-    path.resolve(LIB, "cjs", "iconsManifest.d.ts")
+    path.resolve(LIB, "cjs", "iconsManifest.d.ts"),
   );
   await fs.copyFile("src/package.json", path.resolve(LIB, "package.json"));
 }
@@ -46,13 +46,13 @@ export async function writeLicense({ DIST, LIB, rootDir }) {
         [
           `${icon.name} - ${icon.projectUrl}`,
           `License: ${icon.license} ${icon.licenseUrl}`,
-        ].join("\n")
+        ].join("\n"),
       )
       .join("\n\n") + "\n";
 
   await fs.copyFile(
     path.resolve(rootDir, "LICENSE_HEADER"),
-    path.resolve(DIST, "LICENSE")
+    path.resolve(DIST, "LICENSE"),
   );
   await fs.appendFile(path.resolve(DIST, "LICENSE"), iconLicenses, "utf8");
 }
@@ -69,17 +69,17 @@ export default m
   await fs.appendFile(
     path.resolve(DIST, "index.js"),
     generateEntryCjs(),
-    "utf8"
+    "utf8",
   );
   await fs.appendFile(
     path.resolve(DIST, "index.esm.js"),
     generateEntryMjs(),
-    "utf8"
+    "utf8",
   );
   await fs.appendFile(
     path.resolve(DIST, "index.d.ts"),
     generateEntryMjs("index.d.ts"),
-    "utf8"
+    "utf8",
   );
 }
 
@@ -113,7 +113,7 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
         `git describe --tags || git rev-parse HEAD`,
         {
           cwd: firstDir,
-        }
+        },
       );
       version = stdout.trim();
     }
@@ -128,7 +128,7 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
   const emptyVersions = versions.filter((v) => v.count === 0);
   if (emptyVersions.length !== 0) {
     throw Error(
-      `empty icon sets: ${emptyVersions.map((v) => v.icon).join(", ")}`
+      `empty icon sets: ${emptyVersions.map((v) => v.icon).join(", ")}`,
     );
   }
 
@@ -143,7 +143,7 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
             `[${v.icon.license}](${v.icon.licenseUrl})`,
             v.version,
             v.count,
-          ].join(" | ")} |`
+          ].join(" | ")} |`,
       )
       .join("\n") +
     "\n";
@@ -154,7 +154,7 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
 export async function writePackageJson(override, { DIST, LIB, rootDir }) {
   const packageJsonStr = await fs.readFile(
     path.resolve(rootDir, "package.json"),
-    "utf-8"
+    "utf-8",
   );
   let packageJson = JSON.parse(packageJsonStr);
 
@@ -175,7 +175,7 @@ export async function writePackageJson(override, { DIST, LIB, rootDir }) {
 export async function copyReadme({ DIST, LIB, rootDir }) {
   await fs.copyFile(
     path.resolve(rootDir, "../../README.md"),
-    path.resolve(DIST, "README.md")
+    path.resolve(DIST, "README.md"),
   );
 }
 

@@ -339,6 +339,7 @@ export const icons: IconDefinition[] = [
           "../../icons/ant-design-icons/packages/icons-svg/svg/twotone/*.svg",
         ),
         formatter: (name) => `AiTwotone${name}`,
+        multiColor: true,
       },
     ],
     projectUrl: "https://github.com/ant-design/ant-design-icons",

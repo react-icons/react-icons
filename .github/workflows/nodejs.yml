@@ -33,7 +33,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/preview/out
+          publish_dir: ./packages/preview-astro/dist
         if: github.ref == 'refs/heads/master'
       - name: Release
         uses: ncipollo/release-action@v1

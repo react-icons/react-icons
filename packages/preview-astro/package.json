@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.1-snapshot.0",
     "sass": "^1.69.5",
+    "tiny-skeleton-loader-react": "^1.2.1",
     "typescript": "^5.2.2"
   }
 }

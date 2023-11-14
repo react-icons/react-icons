@@ -4585,7 +4585,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>= 8":
+"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^20.9.0":
   version: 20.9.0
   resolution: "@types/node@npm:20.9.0"
   dependencies:
@@ -19561,6 +19561,7 @@ __metadata:
     "@babel/cli": ^7.19.3
     "@babel/core": ^7.19.3
     "@primer/octicons": ^18.3.0
+    "@types/node": ^20.9.0
     "@types/react": ^18.0.21
     camelcase: ^7.0.0
     cheerio: ^1.0.0-rc.12

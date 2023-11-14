@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   noindex?: boolean;
+  activeIconSet?: string;
 }
 
-const { title, noindex } = Astro.props;
+const { title, noindex, activeIconSet } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
 import { IconsManifest } from "react-icons";
 import BrandIcon from "./icon.astro";
@@ -51,16 +52,6 @@ const sortedManifest = IconsManifest.sort((a, b) =>
 
       <div class="search p2">
         <SearchInput client:load />
-        <!-- <input
-          type="text"
-          aria-label="search"
-          class="px2 py1"
-          placeholder="🔍 Search Icons"
-          autocomplete="off"
-          autocorrect="off"
-          autocapitalize="off"
-          spellcheck="false"
-        /> -->
       </div>
 
       <!-- if sidebar open apply 'active' class -->
@@ -73,7 +64,12 @@ const sortedManifest = IconsManifest.sort((a, b) =>
         {
           sortedManifest.map((icon) => (
             <li>
-              <a href={`/react-icons/icons/${icon.id}`} class="rounded px2 py1">
+              <a
+                href={`/react-icons/icons/${icon.id}`}
+                class={`rounded px2 py1${
+                  activeIconSet === icon.id ? " active" : ""
+                }`}
+              >
                 {icon.name}
               </a>
             </li>

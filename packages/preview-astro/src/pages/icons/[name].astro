@@ -21,7 +21,10 @@ const { manifest } = Astro.props;
 // console.log("IconsManifest", "", IconsManifest, lib["Fa500Px"]);
 ---
 
-<Layout title={`React icons preview for ${manifest.name}`}>
+<Layout
+  title={`React icons preview for ${manifest.id}`}
+  activeIconSet={manifest.id}
+>
   <Container title={manifest.name}>
     <table class="iconset--info">
       <tbody>

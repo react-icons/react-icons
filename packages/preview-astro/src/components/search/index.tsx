@@ -1,22 +1,23 @@
 import React from "react";
 import { SearchIconSet } from "./search-iconset";
 import { IconsManifest } from "react-icons/lib";
-import { useHashParams } from "../../utils/usehashparams";
 import { IconDetailModal } from "../icondetailmodal";
+import { useSearch } from "../../utils/usesearch";
 
 export function SearchPageComponent() {
-  const [params] = useHashParams();
-  const q = params.get("q");
-  const [query, setQuery] = React.useState("");
-  React.useEffect(() => {
-    setQuery(typeof q === "string" ? q.toLowerCase() : "");
-  }, [q]);
+  const { query } = useSearch();
 
   const [selected, setSelected] = React.useState<
     [string, string, React.ComponentType] | null
   >(null);
 
-  if (query?.length > 2) {
+  // Work around. hydration error occurs when changing nanostores value before first component mount.
+  const [isFirstRender, setIsFirstRender] = React.useState(true);
+  React.useEffect(() => {
+    setIsFirstRender(false);
+  }, []);
+
+  if (!isFirstRender && query?.length > 2) {
     const hightlightPattern = new RegExp(`(${query})`, "i");
     return (
       <>

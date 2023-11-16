@@ -31,7 +31,7 @@ export function IconList(): React.ReactElement {
           <a
             key={icons.id}
             className="icon-set"
-            href={`/react-icons/icons/${icons.id}`}
+            href={`/react-icons/icons/${icons.id}/`}
           >
             <div className="name">{icons.name}</div>
             <div className="describe">

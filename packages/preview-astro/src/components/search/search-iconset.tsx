@@ -31,7 +31,6 @@ export function SearchIconSet({
   const found =
     icons &&
     Object.keys(icons).filter((name) => name.toLowerCase().includes(query));
-  
   return (
     <>
       {found ? (

@@ -268,7 +268,8 @@ a {
       }
       .describe {
         font-size: 0.8rem;
-        color: var(--color-gray-4);
+        color: var(--color-black);
+        opacity: 0.5;
       }
       .samples {
         overflow: hidden;

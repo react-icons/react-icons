@@ -50,6 +50,7 @@
     "ts": "node -r esbuild-register",
     "build": "yarn ts ./scripts/build.ts",
     "fetch": "yarn ts ./scripts/fetcher.ts",
-    "check": "yarn ts ./scripts/check.ts"
+    "check": "yarn ts ./scripts/check.ts",
+    "type-check": "yarn tsc -p ./scripts/tsconfig.json"
   }
 }

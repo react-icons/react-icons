@@ -1,34 +1,34 @@
-import {Config} from "svgo";
+import { Config } from "svgo";
 
 export const svgoConfig: Config = {
   plugins: [
     {
-      name: 'preset-default',
+      name: "preset-default",
       params: {
         overrides: {
           removeViewBox: false,
           convertColors: {
             currentColor: true,
-          }
+          },
         },
       },
     },
     {
-      name: 'convertStyleToAttrs'
+      name: "convertStyleToAttrs",
     },
     {
-      name: 'removeDimensions'
+      name: "removeDimensions",
     },
-      {
-        name: 'removeAttributesBySelector',
-        params: {
-          selector: "*:not(svg)",
-          attributes: ["stroke"],
-        },
+    {
+      name: "removeAttributesBySelector",
+      params: {
+        selector: "*:not(svg)",
+        attributes: ["stroke"],
       },
-      {
-        name: 'removeAttrs',
-        params: { attrs: "data.*" },
-      },
-  ]
-}
+    },
+    {
+      name: "removeAttrs",
+      params: { attrs: "data.*" },
+    },
+  ],
+};

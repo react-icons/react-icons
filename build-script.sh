@@ -6,6 +6,7 @@ if [[ -f package-lock.json ]]; then
   exit 1
 fi
 
+(cd packages/react-icons/ && yarn type-check)
 time (cd packages/react-icons/ && yarn fetch)
 time (cd packages/react-icons/ && yarn build)
 echo VERSIONS; cat packages/react-icons/VERSIONS

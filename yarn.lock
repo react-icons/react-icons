@@ -4333,15 +4333,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cheerio@npm:^0.22.22":
-  version: 0.22.34
-  resolution: "@types/cheerio@npm:0.22.34"
-  dependencies:
-    "@types/node": "*"
-  checksum: 8795f4ddc68f394d140513817a996dbe148872a7e30218f32cea90e7fb36802726450c7174c0b7cd27bd8bf179f20d2c0a43a9064547df3c51b8960711582a13
-  languageName: node
-  linkType: hard
-
 "@types/connect-history-api-fallback@npm:^1.3.5":
   version: 1.5.3
   resolution: "@types/connect-history-api-fallback@npm:1.5.3"
@@ -9344,7 +9335,6 @@ __metadata:
   version: 3.6.2
   resolution: "enzyme-to-json@npm:3.6.2"
   dependencies:
-    "@types/cheerio": ^0.22.22
     lodash: ^4.17.21
     react-is: ^16.12.0
   peerDependencies:

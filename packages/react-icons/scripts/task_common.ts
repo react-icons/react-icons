@@ -7,10 +7,11 @@ import { promisify } from "util";
 const exec = promisify(require("child_process").exec);
 import { icons } from "../src/icons";
 import { getIconFiles, copyRecursive, rmDirRecursive } from "./logics";
-import { IconDefinition } from "./_types";
+import { IconDefinition, TaskContext } from "./_types";
+import type { IconManifestType } from "../src";
 
-export async function writeIconsManifest({ DIST, LIB, rootDir }) {
-  const writeObj = icons.map((icon) => ({
+export async function writeIconsManifest({ DIST, LIB, rootDir }: TaskContext) {
+  const writeObj: IconManifestType[] = icons.map((icon) => ({
     id: icon.id,
     name: icon.name,
     projectUrl: icon.projectUrl,
@@ -39,7 +40,7 @@ export async function writeIconsManifest({ DIST, LIB, rootDir }) {
   await fs.copyFile("src/package.json", path.resolve(LIB, "package.json"));
 }
 
-export async function writeLicense({ DIST, LIB, rootDir }) {
+export async function writeLicense({ DIST, LIB, rootDir }: TaskContext) {
   const iconLicenses =
     icons
       .map((icon) =>
@@ -57,7 +58,7 @@ export async function writeLicense({ DIST, LIB, rootDir }) {
   await fs.appendFile(path.resolve(DIST, "LICENSE"), iconLicenses, "utf8");
 }
 
-export async function writeEntryPoints({ DIST, LIB, rootDir }) {
+export async function writeEntryPoints({ DIST, LIB, rootDir }: TaskContext) {
   const generateEntryCjs = function () {
     return `module.exports = require('./lib/cjs/index.js');`;
   };
@@ -89,7 +90,7 @@ interface IconsetVersion {
   count: number;
 }
 
-export async function writeIconVersions({ DIST, LIB, rootDir }) {
+export async function writeIconVersions({ DIST, LIB, rootDir }: TaskContext) {
   const versions: IconsetVersion[] = [];
 
   // searching for icon versions from package.json and git describe command
@@ -151,7 +152,11 @@ export async function writeIconVersions({ DIST, LIB, rootDir }) {
   await fs.writeFile(path.resolve(rootDir, "VERSIONS"), versionsStr, "utf8");
 }
 
-export async function writePackageJson(override, { DIST, LIB, rootDir }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function writePackageJson(
+  override: any,
+  { DIST, LIB, rootDir }: TaskContext,
+) {
   const packageJsonStr = await fs.readFile(
     path.resolve(rootDir, "package.json"),
     "utf-8",
@@ -172,14 +177,14 @@ export async function writePackageJson(override, { DIST, LIB, rootDir }) {
   await fs.writeFile(path.resolve(DIST, "package.json"), editedPackageJsonStr);
 }
 
-export async function copyReadme({ DIST, LIB, rootDir }) {
+export async function copyReadme({ DIST, LIB, rootDir }: TaskContext) {
   await fs.copyFile(
     path.resolve(rootDir, "../../README.md"),
     path.resolve(DIST, "README.md"),
   );
 }
 
-export async function buildLib({ DIST, LIB, rootDir }) {
+export async function buildLib({ DIST, LIB, rootDir }: TaskContext) {
   await rmDirRecursive(path.resolve(rootDir, "build/lib"));
 
   const execOpt = {
@@ -191,6 +196,6 @@ export async function buildLib({ DIST, LIB, rootDir }) {
   ]);
 }
 
-export async function copyLib({ DIST, LIB, rootDir }) {
+export async function copyLib({ DIST, LIB, rootDir }: TaskContext) {
   await copyRecursive(path.resolve(rootDir, "build/lib"), LIB);
 }

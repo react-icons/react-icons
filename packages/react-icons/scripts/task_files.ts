@@ -4,7 +4,8 @@ import camelcase from "camelcase";
 import { icons } from "../src/icons";
 import { iconRowTemplate } from "./templates";
 import { getIconFiles, convertIconData, rmDirRecursive } from "./logics";
-import { svgo } from "./svgo";
+import { svgoConfig } from "./svgo";
+import { optimize as svgoOptimize } from "svgo";
 import { IconDefinition } from "./_types";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -49,7 +50,7 @@ export async function writeIconModuleFiles(
     for (const file of files) {
       const svgStrRaw = await fs.readFile(file, "utf8");
       const svgStr = content.processWithSVGO
-        ? await svgo.optimize(svgStrRaw).then((result) => result.data)
+        ? await svgoOptimize(svgStrRaw, svgoConfig).data
         : svgStrRaw;
 
       const iconData = await convertIconData(svgStr, content.multiColor);

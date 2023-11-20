@@ -101,6 +101,7 @@ function Question() {
 | [Icons8 Line Awesome](https://icons8.com/line-awesome)                  | [MIT](https://github.com/icons8/line-awesome/blob/master/LICENSE.md)                              | 1544  |
 
 You can find the icon set versions in packages/react-icons/VERSIOMS.
+
 You can add more icons by submitting pull requests or creating issues.
 
 ## Configuration

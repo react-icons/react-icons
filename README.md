@@ -66,8 +66,8 @@ function Question() {
 
 ## Icons
 
-| Icon Library                                                            | License                                                                                           |  Count |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | -----: |
+| Icon Library                                                            | License                                                                                           | Count |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----: |
 | [Circum Icons](https://circumicons.com/)                                | [MPL-2.0 license](https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE)                 |   288 |
 | [Font Awesome 5](https://fontawesome.com/)                              | [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)                                 |  1612 |
 | [Font Awesome 6](https://fontawesome.com/)                              | [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)                                 |  2020 |
@@ -98,7 +98,7 @@ function Question() {
 | [Themify Icons](https://github.com/lykmapipo/themify-icons)             | [MIT](https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE)    |   352 |
 | [Radix Icons](https://icons.radix-ui.com)                               | [MIT](https://github.com/radix-ui/icons/blob/master/LICENSE)                                      |   318 |
 | [Phosphor Icons](https://github.com/phosphor-icons/core)                | [MIT](https://github.com/phosphor-icons/core/blob/main/LICENSE)                                   |  7488 |
-| [Icons8 Line Awesome](https://icons8.com/line-awesome)                  | [MIT](https://github.com/icons8/line-awesome/blob/master/LICENSE.md)                              | 1544  |
+| [Icons8 Line Awesome](https://icons8.com/line-awesome)                  | [MIT](https://github.com/icons8/line-awesome/blob/master/LICENSE.md)                              |  1544 |
 
 You can find the icon set versions in packages/react-icons/VERSIOMS.
 

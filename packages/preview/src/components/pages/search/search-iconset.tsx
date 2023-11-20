@@ -12,7 +12,7 @@ export default function SearchIconSet({ icon, query, highlightPattern }) {
     <IconSet fallback={<SearchPageIconLoading />}>
       {({ default: icons }) => {
         const found = Object.keys(icons).filter((name) =>
-          name.toLowerCase().includes(query)
+          name.toLowerCase().includes(query),
         );
         return (
           <>

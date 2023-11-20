@@ -29,15 +29,15 @@ export async function dirInit({ DIST, LIB, rootDir }) {
 
     await write(
       [icon.id, "index.js"],
-      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n"
+      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n",
     );
     await write(
       [icon.id, "index.esm.js"],
-      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n"
+      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n",
     );
     await write(
       [icon.id, "index.d.ts"],
-      "// THIS FILE IS AUTO GENERATED\nimport { IconTree, IconType } from '../lib'\n"
+      "// THIS FILE IS AUTO GENERATED\nimport { IconTree, IconType } from '../lib'\n",
     );
     await write(
       [icon.id, "package.json"],
@@ -47,8 +47,8 @@ export async function dirInit({ DIST, LIB, rootDir }) {
           module: "./index.esm.js",
         },
         null,
-        2
-      ) + "\n"
+        2,
+      ) + "\n",
     );
   }
 
@@ -83,19 +83,19 @@ export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
       await fs.appendFile(
         path.resolve(DIST, icon.id, "index.esm.js"),
         modRes,
-        "utf8"
+        "utf8",
       );
       const comRes = iconRowTemplate(icon, name, iconData, "common");
       await fs.appendFile(
         path.resolve(DIST, icon.id, "index.js"),
         comRes,
-        "utf8"
+        "utf8",
       );
       const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
       await fs.appendFile(
         path.resolve(DIST, icon.id, "index.d.ts"),
         dtsRes,
-        "utf8"
+        "utf8",
       );
 
       exists.add(file);

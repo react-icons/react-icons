@@ -10,7 +10,7 @@ const searchPath = "/search";
 export default function Sidebar() {
   const iconsList = useMemo(
     () => ALL_ICONS.sort((a, b) => (a.name > b.name ? 1 : -1)),
-    []
+    [],
   );
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ export default function Sidebar() {
     debounce((query: string) => {
       router.push({ pathname: searchPath, query: query ? { q: query } : null });
     }, 500),
-    []
+    [],
   );
 
   const onSearch = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -39,7 +39,7 @@ export async function dirInit({ DIST, LIB, rootDir }) {
 export async function writeIconModuleFiles(
   icon: IconDefinition,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  { DIST, LIB, rootDir }
+  { DIST, LIB, rootDir },
 ) {
   const exists = new Set(); // for remove duplicate
 
@@ -69,7 +69,7 @@ export async function writeIconModuleFiles(
       await fs.writeFile(
         path.resolve(DIST, icon.id, `${name}.esm.js`),
         modHeader + modRes,
-        "utf8"
+        "utf8",
       );
       const comRes = iconRowTemplate(icon, name, iconData, "common");
       const comHeader =
@@ -77,7 +77,7 @@ export async function writeIconModuleFiles(
       await fs.writeFile(
         path.resolve(DIST, icon.id, `${name}.js`),
         comHeader + comRes,
-        "utf8"
+        "utf8",
       );
       const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
       const dtsHeader =
@@ -85,7 +85,7 @@ export async function writeIconModuleFiles(
       await fs.writeFile(
         path.resolve(DIST, icon.id, `${name}.d.ts`),
         dtsHeader + dtsRes,
-        "utf8"
+        "utf8",
       );
 
       exists.add(file);

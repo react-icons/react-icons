@@ -6,7 +6,7 @@ module.exports = (babel, options) => {
         var spec = path.node.specifiers.map((spec) =>
           options.keys.includes(spec.local.name)
             ? babel.types.ImportDefaultSpecifier(spec.local)
-            : spec
+            : spec,
         );
         path.node.specifiers = spec;
       },

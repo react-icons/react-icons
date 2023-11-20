@@ -15,8 +15,8 @@ function Tree2Element(tree: IconTree[]): React.ReactElement[] {
       React.createElement(
         node.tag,
         { key: i, ...node.attr },
-        Tree2Element(node.child)
-      )
+        Tree2Element(node.child),
+      ),
     )
   );
 }
@@ -38,7 +38,7 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
 
 export type IconType = (props: IconBaseProps) => JSX.Element;
 export function IconBase(
-  props: IconBaseProps & { attr?: Record<string, string> }
+  props: IconBaseProps & { attr?: Record<string, string> },
 ): JSX.Element {
   const elem = (conf: IconContext) => {
     const { attr, size, title, ...svgProps } = props;

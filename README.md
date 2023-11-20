@@ -67,7 +67,7 @@ function Question() {
 ## Icons
 
 | Icon Library                                                            | License                                                                                           |  Count |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | -----: |
 | [Circum Icons](https://circumicons.com/)                                | [MPL-2.0 license](https://github.com/Klarr-Agency/Circum-Icons/blob/main/LICENSE)                 |   288 |
 | [Font Awesome 5](https://fontawesome.com/)                              | [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)                                 |  1612 |
 | [Font Awesome 6](https://fontawesome.com/)                              | [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)                                 |  2020 |

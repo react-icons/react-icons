@@ -787,4 +787,42 @@ export const icons: IconDefinition[] = [
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
+  {
+    id: "hti",
+    name: "Health Icons",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/healthicons/public/icons/svg/filled/*/*.svg",
+        ),
+        formatter: (name) => `HtiFilled${camelcase(name, { pascalCase: true })}`.replace("!", "ExclamationMark"),
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/healthicons/public/icons/svg/negative/*/*.svg",
+        ),
+        formatter: (name) => `HtiNegative${camelcase(name, { pascalCase: true })}`.replace("!", "ExclamationMark"),
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/healthicons/public/icons/svg/outline/*/*.svg",
+        ),
+        formatter: (name) => `HtiOutline${camelcase(name, { pascalCase: true })}`.replace("!", "ExclamationMark"),
+      },
+    ],
+    projectUrl: "https://healthicons.org/",
+    license: "MIT",
+    licenseUrl: "https://github.com/resolvetosavelives/healthicons/blob/main/LICENSE",
+    source: {
+      type: "git",
+      localName: "healthicons",
+      remoteDir: "public/icons/svg/",
+      url: "https://github.com/resolvetosavelives/healthicons.git",
+      branch: "main",
+      hash: "57df21dda664a633479e4fc2fe50227dba963734",
+    },
+  },
 ];

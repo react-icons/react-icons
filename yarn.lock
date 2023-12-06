@@ -3725,6 +3725,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nanostores/react@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "@nanostores/react@npm:0.7.1"
+  peerDependencies:
+    nanostores: ^0.9.0
+    react: ">=18.0.0"
+  checksum: 74437e518952cc17651046a056b84cd966cd880b2eb6720dee0957c31257a6946a5f14938a4beb723b01a12be919b5fdb9d0cb195d46d0ab6ef6606c1ceeb9e2
+  languageName: node
+  linkType: hard
+
 "@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.3":
   version: 2.1.8-no-fsevents.3
   resolution: "@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.3"
@@ -16562,6 +16572,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanostores@npm:^0.9.5":
+  version: 0.9.5
+  resolution: "nanostores@npm:0.9.5"
+  checksum: 22b44014535279f258976f2d15070ef48736254a370e43b8f1a6e613938c0c4bf0edbf584ca016a37bc7663a488d6f8a912ae9dc2333f88ae566dcf0af725f79
+  languageName: node
+  linkType: hard
+
 "napi-build-utils@npm:^1.0.1":
   version: 1.0.2
   resolution: "napi-build-utils@npm:1.0.2"
@@ -19108,10 +19125,12 @@ __metadata:
   dependencies:
     "@astrojs/check": ^0.3.1
     "@astrojs/react": ^3.0.4
+    "@nanostores/react": ^0.7.1
     astro: ^3.4.3
     basscss: ^8.1.0
     cogo-toast: ^4.2.3
     copy-to-clipboard: ^3.3.3
+    nanostores: ^0.9.5
     react: ^18.2.0
     react-dom: ^18.2.0
     react-icons: ^4.12.0

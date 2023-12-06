@@ -35,7 +35,7 @@ const sortedManifest = IconsManifest.sort((a, b) =>
     <ViewTransitions />
   </head>
   <body>
-    <div class="sidebar pt3">
+    <div transition:name="sidebar" transition:persist class="sidebar pt3">
       <!-- <Heading isOpen={isOpen} setIsOpen={setIsOpen} /> -->
       <div class="brand">
         <a href="/react-icons/">
@@ -65,7 +65,7 @@ const sortedManifest = IconsManifest.sort((a, b) =>
           sortedManifest.map((icon) => (
             <li>
               <a
-                href={`/react-icons/icons/${icon.id}`}
+                href={`/react-icons/icons/${icon.id}/`}
                 class={`rounded px2 py1${
                   activeIconSet === icon.id ? " active" : ""
                 }`}

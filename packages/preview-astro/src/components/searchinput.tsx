@@ -1,20 +1,19 @@
 import React from "react";
 import { debounce } from "../utils/debounce";
-import { useHashParams } from "../utils/usehashparams";
+import { useSearch } from "../utils/usesearch";
 
 export function SearchInput() {
-  const [params] = useHashParams();
-  const q = params.get("q");
-  React.useEffect(() => {
-    setInputQuery(typeof q === "string" ? q : "");
-  }, [q]);
+  const search = useSearch();
 
   const debouncedOnSearch = React.useCallback(
     debounce((query: string) => {
-      window.location.href = `/react-icons/search#q=${query}`;
+      search.setQuery(query);
     }, 500),
     [],
   );
+  React.useEffect(() => {
+    setInputQuery(search.query);
+  }, []);
 
   const [inputQuery, setInputQuery] = React.useState("");
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

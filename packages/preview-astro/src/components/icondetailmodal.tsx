@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaRegClipboard } from "react-icons/fa6";
 import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
@@ -73,7 +73,7 @@ export function IconDetailModal(
     <Modal
       isOpen={open}
       title={`${props.iconSet}/${props.iconName}`}
-      onClose={() => props.onClose?.()}
+      onClose={props.onClose}
     >
       <div className="icon-detail-modal-content">
         <div
@@ -133,6 +133,51 @@ export function IconDetailModal(
   );
 }
 
+const TIME_IN_MS_TO_FINISH_CLOSE_ANIMATION = 250;
+const TIME_IN_MS_TO_INIT_OPEN_ANIMATION = 10;
+
+type useAnimationModalProps = {
+  onClose?(): void;
+  isOpen?: boolean;
+};
+
+const useAnimationModal = ({ onClose, isOpen }: useAnimationModalProps) => {
+  const [animationIsOpen, setAnimationIsOpen] = useState(isOpen);
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+
+    const handleInitOpenAnimation = () => {
+      if (!isOpen) {
+        return;
+      }
+
+      timeout = setTimeout(() => {
+        setAnimationIsOpen(true);
+      }, TIME_IN_MS_TO_INIT_OPEN_ANIMATION);
+    };
+
+    handleInitOpenAnimation();
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [isOpen]);
+
+  const handleCloseModal = () => {
+    setAnimationIsOpen(false);
+
+    setTimeout(() => {
+      onClose?.();
+    }, TIME_IN_MS_TO_FINISH_CLOSE_ANIMATION);
+  };
+
+  return {
+    animationIsOpen,
+    handleCloseModal,
+  };
+};
+
 interface ModalProps {
   title: React.ReactNode;
   children: React.ReactNode;
@@ -146,13 +191,21 @@ function Modal({
   isOpen,
   onClose,
 }: ModalProps): React.ReactElement {
+  const { animationIsOpen, handleCloseModal } = useAnimationModal({
+    onClose,
+    isOpen,
+  });
+
   return (
-    <div className={`modal-root${isOpen ? " active" : ""}`}>
-      <div className="overlay" onClick={() => onClose?.()}></div>
-      <div className="modal-body">
+    <div className={`modal-root ${isOpen ? "" : "hidden"}`}>
+      <div
+        className={`overlay ${animationIsOpen ? "" : "appearing"}`}
+        onClick={() => handleCloseModal()}
+      ></div>
+      <div className={`modal-body ${animationIsOpen ? "open" : "close"}`}>
         <div className="header">
           <h3 className="title">{title}</h3>
-          <button className="close" onClick={() => onClose?.()}>
+          <button className="close" onClick={() => handleCloseModal()}>
             x
           </button>
         </div>

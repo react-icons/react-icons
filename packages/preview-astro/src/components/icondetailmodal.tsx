@@ -148,7 +148,7 @@ function Modal({
 }: ModalProps): React.ReactElement {
   return (
     <div className={`modal-root${isOpen ? " active" : ""}`}>
-      <div className="overray" onClick={() => onClose?.()}></div>
+      <div className="overlay" onClick={() => onClose?.()}></div>
       <div className="modal-body">
         <div className="header">
           <h3 className="title">{title}</h3>

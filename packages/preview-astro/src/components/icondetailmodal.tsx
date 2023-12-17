@@ -134,43 +134,40 @@ export function IconDetailModal(
 }
 
 const TIME_IN_MS_TO_FINISH_CLOSE_ANIMATION = 250;
-const TIME_IN_MS_TO_INIT_OPEN_ANIMATION = 10;
 
-type useAnimationModalProps = {
+type useModalAnimationProps = {
   onClose?(): void;
   isOpen?: boolean;
 };
 
-const useAnimationModal = ({ onClose, isOpen }: useAnimationModalProps) => {
+const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
   const [animationIsOpen, setAnimationIsOpen] = useState(isOpen);
+  const timeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
-    let timeout: ReturnType<typeof setTimeout>;
-
     const handleInitOpenAnimation = () => {
-      if (!isOpen) {
-        return;
-      }
-
-      timeout = setTimeout(() => {
+      if (isOpen) {
         setAnimationIsOpen(true);
-      }, TIME_IN_MS_TO_INIT_OPEN_ANIMATION);
+      }
     };
 
     handleInitOpenAnimation();
-
-    return () => {
-      clearTimeout(timeout);
-    };
   }, [isOpen]);
 
   const handleCloseModal = () => {
     setAnimationIsOpen(false);
 
-    setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       onClose?.();
     }, TIME_IN_MS_TO_FINISH_CLOSE_ANIMATION);
   };
+
+  useEffect(() => {
+    return () => {
+      onClose?.();
+      clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return {
     animationIsOpen,
@@ -191,7 +188,7 @@ function Modal({
   isOpen,
   onClose,
 }: ModalProps): React.ReactElement {
-  const { animationIsOpen, handleCloseModal } = useAnimationModal({
+  const { animationIsOpen, handleCloseModal } = useModalAnimation({
     onClose,
     isOpen,
   });
@@ -205,11 +202,16 @@ function Modal({
       <div className={`modal-body ${animationIsOpen ? "open" : "close"}`}>
         <div className="header">
           <h3 className="title">{title}</h3>
-          <button className="close" onClick={() => handleCloseModal()}>
+          <button
+            type="button"
+            aria-label="Close modal"
+            className="close"
+            onClick={() => handleCloseModal()}
+          >
             x
           </button>
         </div>
-        <div className="content">{children}</div>
+        {isOpen ? <div className="content">{children}</div> : undefined}
       </div>
     </div>
   );

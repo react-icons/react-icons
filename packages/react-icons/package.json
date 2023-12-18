@@ -8,9 +8,9 @@
     "kamijin_fanta <kamijin@live.jp>"
   ],
   "license": "MIT",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "types": "lib/esm/index.d.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "types": "lib/index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -26,9 +26,13 @@
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
     "@primer/octicons": "^18.3.0",
     "@types/node": "^20.9.0",
     "@types/react": "^18.0.21",
+    "babel-plugin-add-import-extension": "^1.6.0",
     "camelcase": "^7.0.0",
     "cheerio": "^1.0.0-rc.12",
     "esbuild": "^0.15.11",

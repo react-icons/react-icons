@@ -4,6 +4,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { type IconDefinitionContent } from "./_types";
 import { glob } from "./glob";
+import { type IconManifestType } from "../src";
 
 export async function getIconFiles(content: IconDefinitionContent) {
   if (typeof content.files === "string") {
@@ -91,4 +92,24 @@ export async function copyRecursive(src, dest) {
 
 export async function rmDirRecursive(dest) {
   await fs.rm(dest, { recursive: true, force: true });
+}
+
+export function buildPackageExports(icons: IconManifestType[]) {
+  let exports = {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.js",
+      "default": "./index.mjs"
+    },
+  }
+
+  icons.forEach((icon) => {
+    exports[`./${icon.id}`] = {
+      "types": `./${icon.id}/index.d.ts`,
+      "require": `./${icon.id}/index.js`,
+      "default": `./${icon.id}/index.mjs`
+    }
+  });
+
+  return exports;
 }

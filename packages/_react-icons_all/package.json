@@ -21,5 +21,167 @@
   "homepage": "https://github.com/react-icons/react-icons#readme",
   "peerDependencies": {
     "react": "*"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.js",
+      "default": "./index.mjs"
+    },
+    "./ci": {
+      "types": "./ci/index.d.ts",
+      "require": "./ci/index.js",
+      "default": "./ci/index.mjs"
+    },
+    "./fa": {
+      "types": "./fa/index.d.ts",
+      "require": "./fa/index.js",
+      "default": "./fa/index.mjs"
+    },
+    "./fa6": {
+      "types": "./fa6/index.d.ts",
+      "require": "./fa6/index.js",
+      "default": "./fa6/index.mjs"
+    },
+    "./io": {
+      "types": "./io/index.d.ts",
+      "require": "./io/index.js",
+      "default": "./io/index.mjs"
+    },
+    "./io5": {
+      "types": "./io5/index.d.ts",
+      "require": "./io5/index.js",
+      "default": "./io5/index.mjs"
+    },
+    "./md": {
+      "types": "./md/index.d.ts",
+      "require": "./md/index.js",
+      "default": "./md/index.mjs"
+    },
+    "./ti": {
+      "types": "./ti/index.d.ts",
+      "require": "./ti/index.js",
+      "default": "./ti/index.mjs"
+    },
+    "./go": {
+      "types": "./go/index.d.ts",
+      "require": "./go/index.js",
+      "default": "./go/index.mjs"
+    },
+    "./fi": {
+      "types": "./fi/index.d.ts",
+      "require": "./fi/index.js",
+      "default": "./fi/index.mjs"
+    },
+    "./lu": {
+      "types": "./lu/index.d.ts",
+      "require": "./lu/index.js",
+      "default": "./lu/index.mjs"
+    },
+    "./gi": {
+      "types": "./gi/index.d.ts",
+      "require": "./gi/index.js",
+      "default": "./gi/index.mjs"
+    },
+    "./wi": {
+      "types": "./wi/index.d.ts",
+      "require": "./wi/index.js",
+      "default": "./wi/index.mjs"
+    },
+    "./di": {
+      "types": "./di/index.d.ts",
+      "require": "./di/index.js",
+      "default": "./di/index.mjs"
+    },
+    "./ai": {
+      "types": "./ai/index.d.ts",
+      "require": "./ai/index.js",
+      "default": "./ai/index.mjs"
+    },
+    "./bs": {
+      "types": "./bs/index.d.ts",
+      "require": "./bs/index.js",
+      "default": "./bs/index.mjs"
+    },
+    "./ri": {
+      "types": "./ri/index.d.ts",
+      "require": "./ri/index.js",
+      "default": "./ri/index.mjs"
+    },
+    "./fc": {
+      "types": "./fc/index.d.ts",
+      "require": "./fc/index.js",
+      "default": "./fc/index.mjs"
+    },
+    "./gr": {
+      "types": "./gr/index.d.ts",
+      "require": "./gr/index.js",
+      "default": "./gr/index.mjs"
+    },
+    "./hi": {
+      "types": "./hi/index.d.ts",
+      "require": "./hi/index.js",
+      "default": "./hi/index.mjs"
+    },
+    "./hi2": {
+      "types": "./hi2/index.d.ts",
+      "require": "./hi2/index.js",
+      "default": "./hi2/index.mjs"
+    },
+    "./si": {
+      "types": "./si/index.d.ts",
+      "require": "./si/index.js",
+      "default": "./si/index.mjs"
+    },
+    "./sl": {
+      "types": "./sl/index.d.ts",
+      "require": "./sl/index.js",
+      "default": "./sl/index.mjs"
+    },
+    "./im": {
+      "types": "./im/index.d.ts",
+      "require": "./im/index.js",
+      "default": "./im/index.mjs"
+    },
+    "./bi": {
+      "types": "./bi/index.d.ts",
+      "require": "./bi/index.js",
+      "default": "./bi/index.mjs"
+    },
+    "./cg": {
+      "types": "./cg/index.d.ts",
+      "require": "./cg/index.js",
+      "default": "./cg/index.mjs"
+    },
+    "./vsc": {
+      "types": "./vsc/index.d.ts",
+      "require": "./vsc/index.js",
+      "default": "./vsc/index.mjs"
+    },
+    "./tb": {
+      "types": "./tb/index.d.ts",
+      "require": "./tb/index.js",
+      "default": "./tb/index.mjs"
+    },
+    "./tfi": {
+      "types": "./tfi/index.d.ts",
+      "require": "./tfi/index.js",
+      "default": "./tfi/index.mjs"
+    },
+    "./rx": {
+      "types": "./rx/index.d.ts",
+      "require": "./rx/index.js",
+      "default": "./rx/index.mjs"
+    },
+    "./pi": {
+      "types": "./pi/index.d.ts",
+      "require": "./pi/index.js",
+      "default": "./pi/index.mjs"
+    },
+    "./lia": {
+      "types": "./lia/index.d.ts",
+      "require": "./lia/index.js",
+      "default": "./lia/index.mjs"
+    }
   }
 }

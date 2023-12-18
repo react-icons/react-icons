@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./build/lib/esm",
+    "outDir": "./build/lib",
+    "emitDeclarationOnly": true,
     "module": "es2015",
     "target": "es5",
     "lib": ["es2017", "dom"],

@@ -1,4 +1,4 @@
 {
-  "main": "./cjs/index.js",
-  "module": "./esm/index.js"
+  "main": "./index.js",
+  "module": "./index.mjs"
 }

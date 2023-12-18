@@ -1,5 +1,6 @@
 import path from "path";
 import { performance } from "perf_hooks";
+import { buildPackageExports } from "./logics";
 import { icons } from "../src/icons";
 import * as taskCommon from "./task_common";
 import * as taskAll from "./task_all";
@@ -30,7 +31,7 @@ async function main() {
       await taskCommon.writeEntryPoints(allOpt);
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
-      await taskCommon.writePackageJson({ name: "react-icons" }, allOpt);
+      await taskCommon.writePackageJson({ name: "react-icons", exports: buildPackageExports(icons) }, allOpt);
       await taskCommon.copyReadme(allOpt);
     });
     await task("@react-icons/all write icons", async () => {

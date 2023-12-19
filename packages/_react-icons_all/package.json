@@ -28,6 +28,11 @@
       "require": "./index.js",
       "default": "./index.mjs"
     },
+    "./lib": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.js",
+      "default": "./lib/index.mjs"
+    },
     "./ci": {
       "types": "./ci/index.d.ts",
       "require": "./ci/index.js",

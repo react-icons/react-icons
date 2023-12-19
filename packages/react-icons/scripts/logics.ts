@@ -114,6 +114,11 @@ export function buildPackageExports(icons: IconManifestType[]) {
       require: "./index.js",
       default: "./index.mjs",
     },
+    "./lib": {
+      types: "./lib/index.d.ts",
+      require: "./lib/index.js",
+      default: "./lib/index.mjs",
+    }
   };
 
   icons.forEach((icon) => {

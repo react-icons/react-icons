@@ -2899,7 +2899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@e1himself/react-icons@workspace:packages/_react-icons_all":
+"@e1himself/react-icons@^4.12.0, @e1himself/react-icons@workspace:packages/_react-icons_all":
   version: 0.0.0-use.local
   resolution: "@e1himself/react-icons@workspace:packages/_react-icons_all"
   peerDependencies:
@@ -9564,30 +9564,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"demo-all-files@workspace:packages/demo-all-files":
-  version: 0.0.0-use.local
-  resolution: "demo-all-files@workspace:packages/demo-all-files"
-  dependencies:
-    enzyme: ^3.11.0
-    enzyme-adapter-react-16: ^1.15.2
-    enzyme-to-json: ^3.4.3
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-icons: ^4.12.0
-    react-scripts: ^5.0.1
-  languageName: unknown
-  linkType: soft
-
 "demo@workspace:packages/demo":
   version: 0.0.0-use.local
   resolution: "demo@workspace:packages/demo"
   dependencies:
+    "@e1himself/react-icons": ^4.12.0
     enzyme: ^3.11.0
     enzyme-adapter-react-16: ^1.15.2
     enzyme-to-json: ^3.4.3
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-icons: ^4.12.0
     react-scripts: ^5.0.1
   languageName: unknown
   linkType: soft
@@ -20047,6 +20033,7 @@ __metadata:
   dependencies:
     "@astrojs/check": ^0.3.1
     "@astrojs/react": ^3.0.4
+    "@e1himself/react-icons": ^4.12.0
     "@nanostores/react": ^0.7.1
     astro: ^3.4.3
     basscss: ^8.1.0
@@ -20055,7 +20042,6 @@ __metadata:
     nanostores: ^0.9.5
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-icons: ^4.12.0
     sass: ^1.69.5
     tiny-skeleton-loader-react: ^1.2.1
     typescript: ^5.2.2
@@ -20519,15 +20505,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-icons@npm:^4.12.0":
-  version: 4.12.0
-  resolution: "react-icons@npm:4.12.0"
-  peerDependencies:
-    react: "*"
-  checksum: db82a141117edcd884ade4229f0294b2ce15d82f68e0533294db07765d6dce00b129cf504338ec7081ce364fe899b296cb7752554ea08665b1d6bad811134e79
-  languageName: node
-  linkType: hard
-
 "react-icons_builders@workspace:packages/react-icons":
   version: 0.0.0-use.local
   resolution: "react-icons_builders@workspace:packages/react-icons"
@@ -20682,13 +20659,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "react-ts-test@workspace:packages/ts-test"
   dependencies:
+    "@e1himself/react-icons": ^4.12.0
     "@types/jest": 29.1.2
     "@types/node": 18.8.5
     "@types/react": ^18.0.21
     "@types/react-dom": ^18.0.6
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-icons: ^4.12.0
     react-scripts: 5.0.1
     typescript: 4.8.4
   languageName: unknown
@@ -25091,7 +25068,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "webpack4-test@workspace:packages/webpack4-test"
   dependencies:
-    react-icons: ^4.12.0
+    "@e1himself/react-icons": ^4.12.0
     webpack: ^5.74.0
     webpack-cli: ^4.10.0
   languageName: unknown

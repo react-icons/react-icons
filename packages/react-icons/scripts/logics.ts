@@ -95,7 +95,7 @@ export async function rmDirRecursive(dest) {
 }
 
 export function buildPackageExports(icons: IconManifestType[]) {
-  let exports = {
+  const exports = {
     ".": {
       "types": "./index.d.ts",
       "require": "./index.js",

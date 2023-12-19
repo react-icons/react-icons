@@ -1,6 +1,6 @@
 {
   "packages": [
-    "packages/*"
+    "packages/_react-icons_all"
   ],
   "version": "4.12.0",
   "command": {

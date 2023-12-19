@@ -97,18 +97,18 @@ export async function rmDirRecursive(dest) {
 export function buildPackageExports(icons: IconManifestType[]) {
   const exports = {
     ".": {
-      "types": "./index.d.ts",
-      "require": "./index.js",
-      "default": "./index.mjs"
+      types: "./index.d.ts",
+      require: "./index.js",
+      default: "./index.mjs",
     },
-  }
+  };
 
   icons.forEach((icon) => {
     exports[`./${icon.id}`] = {
-      "types": `./${icon.id}/index.d.ts`,
-      "require": `./${icon.id}/index.js`,
-      "default": `./${icon.id}/index.mjs`
-    }
+      types: `./${icon.id}/index.d.ts`,
+      require: `./${icon.id}/index.js`,
+      default: `./${icon.id}/index.mjs`,
+    };
   });
 
   return exports;

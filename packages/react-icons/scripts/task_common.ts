@@ -183,8 +183,14 @@ export async function buildLib({ DIST, LIB, rootDir }) {
   };
   await Promise.all([
     exec("yarn tsc", execOpt),
-    exec("yarn babel --config-file ./babel.config.esm.json      --extensions=.ts,.tsx ./src --ignore '**/icons/*' --ignore '**/*.d.ts' --out-dir ./build/lib --out-file-extension .mjs", execOpt),
-    exec("yarn babel --config-file ./babel.config.commonjs.json --extensions=.ts,.tsx ./src --ignore '**/icons/*' --ignore '**/*.d.ts' --out-dir ./build/lib --out-file-extension .js ", execOpt),
+    exec(
+      "yarn babel --config-file ./babel.config.esm.json      --extensions=.ts,.tsx ./src --ignore '**/icons/*' --ignore '**/*.d.ts' --out-dir ./build/lib --out-file-extension .mjs",
+      execOpt,
+    ),
+    exec(
+      "yarn babel --config-file ./babel.config.commonjs.json --extensions=.ts,.tsx ./src --ignore '**/icons/*' --ignore '**/*.d.ts' --out-dir ./build/lib --out-file-extension .js ",
+      execOpt,
+    ),
   ]);
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchIconSet } from "./search-iconset";
-import { IconsManifest } from "react-icons/lib";
+import { IconsManifest } from "@e1himself/react-icons/lib";
 import { IconDetailModal } from "../icondetailmodal";
 import { useSearch } from "../../utils/usesearch";
 

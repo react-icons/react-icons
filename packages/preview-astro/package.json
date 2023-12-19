@@ -14,6 +14,7 @@
   "dependencies": {
     "@astrojs/check": "^0.3.1",
     "@astrojs/react": "^3.0.4",
+    "@e1himself/react-icons": "^4.12.0",
     "@nanostores/react": "^0.7.1",
     "astro": "^3.4.3",
     "basscss": "^8.1.0",
@@ -22,7 +23,6 @@
     "nanostores": "^0.9.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0",
     "sass": "^1.69.5",
     "tiny-skeleton-loader-react": "^1.2.1",
     "typescript": "^5.2.2"

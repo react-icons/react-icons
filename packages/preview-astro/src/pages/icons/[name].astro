@@ -3,7 +3,7 @@ import { Code } from "astro:components";
 import Container from "../../components/container.astro";
 import Layout from "../../layouts/Layout.astro";
 import { IconSetViewer } from "../../components/iconset-viewer.tsx";
-import { IconsManifest } from "react-icons";
+import { IconsManifest } from "@e1himself/react-icons";
 
 export async function getStaticPaths() {
   return Promise.all(
@@ -58,7 +58,7 @@ const { manifest } = Astro.props;
     <h2>Import</h2>
     <Code
       lang="jsx"
-      code={`import { IconName } from "react-icons/${manifest.id}";`}
+      code={`import { IconName } from "@e1himself/react-icons/${manifest.id}";`}
     />
 
     <IconSetViewer client:load iconSet={manifest.id} />

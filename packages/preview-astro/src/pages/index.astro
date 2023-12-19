@@ -5,16 +5,7 @@ import Container from "../components/container.astro";
 import { IconList } from "../components/iconlist";
 
 const HOME_USAGE = `
-import { FaBeer } from 'react-icons/fa';
-
-class Question extends React.Component {
-  render() {
-    return <h3> Lets go for a <FaBeer />? </h3>
-  }
-}`;
-
-const HOME_USAGE_ALL = `
-import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+import { FaBeer } from '@e1himself/react-icons/fa';
 
 class Question extends React.Component {
   render() {
@@ -57,17 +48,6 @@ class Question extends React.Component {
 
     <h3>Usage</h3>
     <Code lang="jsx" code={HOME_USAGE} />
-
-    <h2>Installation (for meteorjs, gatsbyjs, etc)</h2>
-    <p>
-      If your project grows in size, this option is available. This method has
-      the trade-off that it takes a long time to install the package. Suitable
-      for MeteorJS, Gatsbyjs etc.
-    </p>
-    <Code lang="bash" code={`npm install @react-icons/all-files --save`} />
-
-    <h3>Usage</h3>
-    <Code lang="jsx" code={HOME_USAGE_ALL} />
 
     <h2>More info</h2>
     <p>

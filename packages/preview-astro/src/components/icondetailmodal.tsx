@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegClipboard } from "react-icons/fa6";
+import { FaRegClipboard } from "@e1himself/react-icons/fa6";
 import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
 
@@ -61,7 +61,7 @@ export function IconDetailModal(
   props: IconDetailModalProps,
 ): React.ReactElement {
   const open = !!(props.iconSet && props.iconName);
-  const importCode = `import { ${props.iconName} } from "react-icons/${props.iconSet}";`;
+  const importCode = `import { ${props.iconName} } from "@e1himself/react-icons/${props.iconSet}";`;
   const useCode = `<${props.iconName} />`;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

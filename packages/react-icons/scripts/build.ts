@@ -31,7 +31,7 @@ async function main() {
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
       await taskCommon.writePackageJson(
-        { name: "react-icons", exports: buildPackageExports(icons) },
+        { name: "@e1himself/react-icons", exports: buildPackageExports(icons) },
         allOpt,
       );
       await taskCommon.copyReadme(allOpt);

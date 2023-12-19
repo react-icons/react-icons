@@ -1,3 +1,3 @@
-import { FaTimes } from "react-icons/fa";
+import { FaTimes } from "@e1himself/react-icons/fa";
 
 console.log(FaTimes);

@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import { IconContext } from "react-icons";
-import { FaFolder } from "react-icons/fa";
-import { MdAccessibility } from "react-icons/md";
-import { TiArrowDown } from "react-icons/ti";
-import { GrGrommet } from "react-icons/gr";
-import { LiaNode } from "react-icons/lia";
-import { TbPentagonNumber0 } from "react-icons/tb";
+import { IconContext } from "@e1himself/react-icons";
+import { FaFolder } from "@e1himself/react-icons/fa";
+import { MdAccessibility } from "@e1himself/react-icons/md";
+import { TiArrowDown } from "@e1himself/react-icons/ti";
+import { GrGrommet } from "@e1himself/react-icons/gr";
+import { LiaNode } from "@e1himself/react-icons/lia";
+import { TbPentagonNumber0 } from "@e1himself/react-icons/tb";
 
 class App extends Component {
   render() {

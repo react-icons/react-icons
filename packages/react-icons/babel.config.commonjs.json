@@ -16,9 +16,7 @@
     [
       "./plugin/defaultImportConverter",
       {
-        "keys": [
-          "React"
-        ]
+        "keys": ["React"]
       }
     ]
   ]

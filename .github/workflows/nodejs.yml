@@ -26,15 +26,15 @@ jobs:
         run: yarn lint
       - name: Build Packages
         run: BASE_PATH=/react-icons ./build-script.sh
-      - uses: actions/upload-artifact@v3
-        with:
-          path: packages/_react-icons_*/*.tgz
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/preview-astro/dist
-        if: github.ref == 'refs/heads/master'
+#      - uses: actions/upload-artifact@v3
+#        with:
+#          path: packages/_react-icons_*/*.tgz
+#      - name: Deploy
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./packages/preview-astro/dist
+#        if: github.ref == 'refs/heads/master'
       - name: Release
         uses: ncipollo/release-action@v1
         with:

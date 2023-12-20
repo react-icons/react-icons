@@ -112,11 +112,13 @@ export function buildPackageExports(icons: IconManifestType[]) {
     ".": {
       types: "./index.d.ts",
       require: "./index.js",
+      import: "./index.mjs",
       default: "./index.mjs",
     },
     "./lib": {
       types: "./lib/index.d.ts",
       require: "./lib/index.js",
+      import: "./lib/index.mjs",
       default: "./lib/index.mjs",
     }
   };
@@ -125,6 +127,7 @@ export function buildPackageExports(icons: IconManifestType[]) {
     exports[`./${icon.id}`] = {
       types: `./${icon.id}/index.d.ts`,
       require: `./${icon.id}/index.js`,
+      import: `./${icon.id}/index.mjs`,
       default: `./${icon.id}/index.mjs`,
     };
   });

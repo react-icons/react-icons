@@ -59,9 +59,7 @@ export async function writeEntryPoints({ DIST, LIB, rootDir }: TaskContext) {
     return `module.exports = require('./lib/index.js');`;
   };
   const generateEntryMjs = function (filename = "index.mjs") {
-    return `import * as m from './lib/${filename}'
-export default m
-    `;
+    return `export * from './lib/${filename}';`;
   };
   await fs.appendFile(
     path.resolve(DIST, "index.js"),

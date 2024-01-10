@@ -310,6 +310,7 @@ html:has(.modal-root.active) {
     height: 100%;
     transition: all;
     transition-duration: 250ms;
+    touch-action: none;
 
     & {
       background: rgba(0, 0, 0, 0.3);
@@ -357,6 +358,7 @@ html:has(.modal-root.active) {
       }
       .close {
         cursor: pointer;
+        touch-action: none;
         font-size: 1.5rem;
         border: none;
         background: initial;

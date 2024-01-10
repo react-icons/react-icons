@@ -1,0 +1,29 @@
+{
+  "targets": {
+    "esmodules": true
+  },
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/typescript",
+    "@babel/react"
+  ],
+  "plugins": [
+    [
+      "./plugin/defaultImportConverter",
+      {
+        "keys": ["React"]
+      }
+    ],
+    [
+      "babel-plugin-add-import-extension",
+      {
+        "extension": "mjs"
+      }
+    ]
+  ]
+}

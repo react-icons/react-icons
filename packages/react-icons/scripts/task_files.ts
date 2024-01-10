@@ -22,13 +22,11 @@ export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
   });
   await fs.mkdir(DIST, { recursive: true }).catch(ignore);
   await fs.mkdir(LIB).catch(ignore);
-  await fs.mkdir(path.resolve(LIB, "esm")).catch(ignore);
-  await fs.mkdir(path.resolve(LIB, "cjs")).catch(ignore);
 
   const write = (filePath: string[], str: string) =>
     fs.writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = ["index.d.ts", "index.esm.js", "index.js"];
+  const initFiles = ["index.d.ts", "index.mjs", "index.js"];
 
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
@@ -64,12 +62,12 @@ export async function writeIconModuleFiles(
       if (exists.has(name)) continue;
       exists.add(name);
 
-      // write like: module/fa/FaBeer.esm.js
+      // write like: module/fa/FaBeer.mjs
       const modRes = iconRowTemplate(icon, name, iconData, "module");
       const modHeader =
-        "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n";
+        "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib/index.mjs';\n";
       await fs.writeFile(
-        path.resolve(DIST, icon.id, `${name}.esm.js`),
+        path.resolve(DIST, icon.id, `${name}.mjs`),
         modHeader + modRes,
         "utf8",
       );
@@ -83,7 +81,7 @@ export async function writeIconModuleFiles(
       );
       const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
       const dtsHeader =
-        "// THIS FILE IS AUTO GENERATED\nimport { IconTree, IconType } from '../lib'\n";
+        "// THIS FILE IS AUTO GENERATED\nimport { IconTree, IconType } from '../lib/index.mjs'\n";
       await fs.writeFile(
         path.resolve(DIST, icon.id, `${name}.d.ts`),
         dtsHeader + dtsRes,

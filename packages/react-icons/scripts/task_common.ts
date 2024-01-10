@@ -20,22 +20,18 @@ export async function writeIconsManifest({ DIST, LIB, rootDir }: TaskContext) {
   }));
   const manifest = JSON.stringify(writeObj, null, 2);
   await fs.writeFile(
-    path.resolve(LIB, "esm", "iconsManifest.js"),
+    path.resolve(LIB, "iconsManifest.mjs"),
     `export var IconsManifest = ${manifest}`,
     "utf8",
   );
   await fs.writeFile(
-    path.resolve(LIB, "cjs", "iconsManifest.js"),
+    path.resolve(LIB, "iconsManifest.js"),
     `module.exports.IconsManifest = ${manifest}`,
     "utf8",
   );
   await fs.copyFile(
     "src/iconsManifest.d.ts",
-    path.resolve(LIB, "esm", "iconsManifest.d.ts"),
-  );
-  await fs.copyFile(
-    "src/iconsManifest.d.ts",
-    path.resolve(LIB, "cjs", "iconsManifest.d.ts"),
+    path.resolve(LIB, "iconsManifest.d.ts"),
   );
   await fs.copyFile("src/package.json", path.resolve(LIB, "package.json"));
 }
@@ -60,12 +56,10 @@ export async function writeLicense({ DIST, LIB, rootDir }: TaskContext) {
 
 export async function writeEntryPoints({ DIST, LIB, rootDir }: TaskContext) {
   const generateEntryCjs = function () {
-    return `module.exports = require('./lib/cjs/index.js');`;
+    return `module.exports = require('./lib/index.js');`;
   };
-  const generateEntryMjs = function (filename = "index.js") {
-    return `import * as m from './lib/esm/${filename}'
-export default m
-    `;
+  const generateEntryMjs = function (filename = "index.mjs") {
+    return `export * from './lib/${filename}';`;
   };
   await fs.appendFile(
     path.resolve(DIST, "index.js"),
@@ -73,7 +67,7 @@ export default m
     "utf8",
   );
   await fs.appendFile(
-    path.resolve(DIST, "index.esm.js"),
+    path.resolve(DIST, "index.mjs"),
     generateEntryMjs(),
     "utf8",
   );
@@ -191,8 +185,15 @@ export async function buildLib({ DIST, LIB, rootDir }: TaskContext) {
     cwd: rootDir,
   };
   await Promise.all([
-    exec("yarn tsc && yarn babel ./build/lib/esm -d ./build/lib/esm", execOpt),
-    exec("yarn tsc -p ./tsconfig.commonjs.json", execOpt),
+    exec("yarn tsc", execOpt),
+    exec(
+      "yarn babel --config-file ./babel.config.esm.json      --extensions=.ts,.tsx ./src --ignore '**/icons/*' --ignore '**/*.d.ts' --out-dir ./build/lib --out-file-extension .mjs",
+      execOpt,
+    ),
+    exec(
+      "yarn babel --config-file ./babel.config.commonjs.json --extensions=.ts,.tsx ./src --ignore '**/icons/*' --ignore '**/*.d.ts' --out-dir ./build/lib --out-file-extension .js ",
+      execOpt,
+    ),
   ]);
 }
 

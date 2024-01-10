@@ -108,7 +108,15 @@ export async function rmDirRecursive(dest: string) {
 }
 
 export function buildPackageExports(icons: IconManifestType[]) {
-  const exports = {
+  const exports: Record<
+    string,
+    {
+      types: string;
+      require: string;
+      import: string;
+      default: string;
+    }
+  > = {
     ".": {
       types: "./index.d.ts",
       require: "./index.js",
@@ -120,7 +128,7 @@ export function buildPackageExports(icons: IconManifestType[]) {
       require: "./lib/index.js",
       import: "./lib/index.mjs",
       default: "./lib/index.mjs",
-    }
+    },
   };
 
   icons.forEach((icon) => {

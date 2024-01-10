@@ -133,8 +133,6 @@ export function IconDetailModal(
   );
 }
 
-const TIME_IN_MS_TO_FINISH_CLOSE_ANIMATION = 250;
-
 type useModalAnimationProps = {
   onClose?(): void;
   isOpen?: boolean;
@@ -142,7 +140,7 @@ type useModalAnimationProps = {
 
 const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
   const [animationIsOpen, setAnimationIsOpen] = useState(isOpen);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleInitOpenAnimation = () => {
@@ -154,24 +152,35 @@ const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
     handleInitOpenAnimation();
   }, [isOpen]);
 
-  const handleCloseModal = () => {
-    setAnimationIsOpen(false);
-
-    timeoutRef.current = setTimeout(() => {
-      onClose?.();
-    }, TIME_IN_MS_TO_FINISH_CLOSE_ANIMATION);
-  };
 
   useEffect(() => {
-    return () => {
-      onClose?.();
-      clearTimeout(timeoutRef.current);
+    const modalElement = modalRef.current;
+  
+    const handleTransitionEnd = () => {
+      if (!animationIsOpen) {
+        onClose?.();
+      }
     };
-  }, []);
+  
+    if (modalElement) {
+      modalElement.addEventListener('transitionend', handleTransitionEnd);
+    }
+
+    return () => {
+      if (modalElement) {
+        modalElement.removeEventListener('transitionend', handleTransitionEnd);
+      }
+    };
+  }, [animationIsOpen, onClose]);
+
+  const handleCloseModal = () => {
+    setAnimationIsOpen(false);
+  };
 
   return {
     animationIsOpen,
     handleCloseModal,
+    modalRef
   };
 };
 
@@ -188,7 +197,7 @@ function Modal({
   isOpen,
   onClose,
 }: ModalProps): React.ReactElement {
-  const { animationIsOpen, handleCloseModal } = useModalAnimation({
+  const { animationIsOpen, handleCloseModal, modalRef } = useModalAnimation({
     onClose,
     isOpen,
   });
@@ -199,7 +208,7 @@ function Modal({
         className={`overlay ${animationIsOpen ? "" : "appearing"}`}
         onClick={() => handleCloseModal()}
       ></div>
-      <div className={`modal-body ${animationIsOpen ? "open" : "close"}`}>
+      <div className={`modal-body ${animationIsOpen ? "open" : "close"}`} ref={modalRef}>
         <div className="header">
           <h3 className="title">{title}</h3>
           <button

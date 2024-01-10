@@ -43,13 +43,14 @@
     "lucide-static": "^0.263.0",
     "p-queue": "^7.3.0",
     "prettier": "^2.7.1",
-    "svgo": "^1.3.2",
+    "svgo": "^3.0.3",
     "typescript": "^4.8.4"
   },
   "scripts": {
     "ts": "node -r esbuild-register",
     "build": "yarn ts ./scripts/build.ts",
     "fetch": "yarn ts ./scripts/fetcher.ts",
-    "check": "yarn ts ./scripts/check.ts"
+    "check": "yarn ts ./scripts/check.ts",
+    "type-check": "yarn tsc -p ./scripts/tsconfig.json"
   }
 }

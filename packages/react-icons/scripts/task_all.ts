@@ -4,12 +4,15 @@ import camelcase from "camelcase";
 import { icons } from "../src/icons";
 import { iconRowTemplate } from "./templates";
 import { getIconFiles, convertIconData, rmDirRecursive } from "./logics";
-import { svgo } from "./svgo";
+import { svgoConfig } from "./svgo";
+import { optimize as svgoOptimize } from "svgo";
+import { IconDefinition, TaskContext } from "./_types";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function dirInit({ DIST, LIB, rootDir }) {
-  const ignore = (err) => {
-    if (err.code === "EEXIST") return;
+export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const ignore = (err: any) => {
+    if (err?.code === "EEXIST") return;
     throw err;
   };
 
@@ -19,7 +22,7 @@ export async function dirInit({ DIST, LIB, rootDir }) {
   await fs.mkdir(path.resolve(LIB, "esm")).catch(ignore);
   await fs.mkdir(path.resolve(LIB, "cjs")).catch(ignore);
 
-  const write = (filePath, str) =>
+  const write = (filePath: string[], str: string) =>
     fs.writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
   const initFiles = ["index.d.ts", "index.esm.js", "index.js"];
@@ -57,7 +60,10 @@ export async function dirInit({ DIST, LIB, rootDir }) {
   }
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
+export async function writeIconModule(
+  icon: IconDefinition,
+  { DIST, LIB, rootDir }: TaskContext,
+) {
   const exists = new Set(); // for remove duplicate
   for (const content of icon.contents) {
     const files = await getIconFiles(content);
@@ -65,7 +71,7 @@ export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
     for (const file of files) {
       const svgStrRaw = await fs.readFile(file, "utf8");
       const svgStr = content.processWithSVGO
-        ? await svgo.optimize(svgStrRaw).then((result) => result.data)
+        ? svgoOptimize(svgStrRaw, svgoConfig).data
         : svgStrRaw;
 
       const iconData = await convertIconData(svgStr, content.multiColor);

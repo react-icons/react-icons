@@ -4,11 +4,12 @@ import { icons } from "../src/icons";
 import * as taskCommon from "./task_common";
 import * as taskAll from "./task_all";
 import * as taskFiles from "./task_files";
+import { TaskContext } from "./_types";
 
 // file path
 const _rootDir = path.resolve(__dirname, "../");
 
-async function task(name, fn) {
+async function task(name: string, fn: () => Promise<void> | void) {
   const start = performance.now();
   console.log(`================= ${name} =================`);
   await fn();
@@ -19,7 +20,7 @@ async function task(name, fn) {
 async function main() {
   try {
     // @react-icons/all
-    const allOpt = {
+    const allOpt: TaskContext = {
       rootDir: _rootDir,
       DIST: path.resolve(_rootDir, "../_react-icons_all"),
       LIB: path.resolve(_rootDir, "../_react-icons_all/lib"),
@@ -39,7 +40,7 @@ async function main() {
     });
 
     // @react-icons/all-files
-    const filesOpt = {
+    const filesOpt: TaskContext = {
       rootDir: _rootDir,
       DIST: path.resolve(_rootDir, "../_react-icons_all-files"),
       LIB: path.resolve(_rootDir, "../_react-icons_all-files/lib"),

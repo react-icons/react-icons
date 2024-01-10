@@ -10,15 +10,14 @@ export function iconRowTemplate(
   switch (type) {
     case "module":
       return (
-        `export function ${formattedName} (props) {\n` +
-        `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
-        `};\n`
+        `export const ${formattedName} = React.forwardRef((props, ref) =>
+          React.createElement(GenIcon, { ...props, ref, iconTree: ${JSON.stringify(iconData)} }));
+      \n`
       );
     case "common":
       return (
-        `module.exports.${formattedName} = function ${formattedName} (props) {\n` +
-        `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
-        `};\n`
+        `module.exports.${formattedName} = React.forwardRef((props, ref) =>
+          React.createElement(GenIcon, { ...props, ref, iconTree: ${JSON.stringify(iconData)} }));\n`
       );
     case "dts":
       return `export declare const ${formattedName}: IconType;\n`;

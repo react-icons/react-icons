@@ -20,14 +20,17 @@ function Tree2Element(tree: IconTree[]): React.ReactElement[] {
     )
   );
 }
-export function GenIcon(data: IconTree) {
-  // eslint-disable-next-line react/display-name
-  return (props: IconBaseProps) => (
-    <IconBase attr={{ ...data.attr }} {...props}>
-      {Tree2Element(data.child)}
+
+export const GenIcon = React.forwardRef<SVGSVGElement, IconBaseProps & { iconTree: IconTree }>((
+  props, ref): JSX.Element => {
+  const { iconTree, ...rest } = props;
+  return (
+    <IconBase ref={ref} attr={{ ...iconTree.attr }} {...rest}>
+      {Tree2Element(iconTree.child)}
     </IconBase>
   );
-}
+})
+GenIcon.displayName = "GenIcon";
 
 export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   children?: React.ReactNode;
@@ -37,9 +40,8 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
 }
 
 export type IconType = (props: IconBaseProps) => JSX.Element;
-export function IconBase(
-  props: IconBaseProps & { attr?: Record<string, string> }
-): JSX.Element {
+export const IconBase = React.forwardRef<SVGSVGElement, IconBaseProps & { attr?: Record<string, string> }>((
+  props, ref): JSX.Element => {
   const elem = (conf: IconContext) => {
     const { attr, size, title, ...svgProps } = props;
     const computedSize = size || conf.size || "1em";
@@ -50,6 +52,7 @@ export function IconBase(
 
     return (
       <svg
+        ref={ref}
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
@@ -79,4 +82,5 @@ export function IconBase(
   ) : (
     elem(DefaultContext)
   );
-}
+})
+IconBase.displayName = "IconBase";

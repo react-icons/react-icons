@@ -71,8 +71,10 @@ export async function convertIconData(
   function elementToTree(element: Cheerio<CheerioElement>): IconTree[] {
     return (
       element
-        // ignore style tag
-        .filter((_, e) => !!(e.tagName && !["style"].includes(e.tagName)))
+        // ignore style, title tag
+        .filter(
+          (_, e) => !!(e.tagName && !["style", "title"].includes(e.tagName)),
+        )
         // convert to AST recursively
         .map((_, e) => ({
           tag: e.tagName,

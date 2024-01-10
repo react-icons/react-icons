@@ -352,6 +352,8 @@ html:has(.modal-root.active) {
         margin: 0;
         padding: 0;
         font-size: 1.5rem;
+        max-width: 90%;
+        word-break: break-all;
       }
       .close {
         cursor: pointer;

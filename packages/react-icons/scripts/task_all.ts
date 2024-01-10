@@ -48,6 +48,15 @@ export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
         {
           sideEffects: false,
           module: "./index.esm.js",
+          types: "./index.d.ts",
+          exports: {
+            ".": {
+              types: "./index.d.ts",
+              import: "./index.esm.js",
+              require: "./index.js",
+            },
+            "./package.json": "./package.json",
+          },
         },
         null,
         2,

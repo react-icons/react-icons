@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaRegClipboard } from "react-icons/fa6";
 import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
+import { useKeydown } from '../utils/useKeydown'
 
 interface colorVariant {
   bg: string;
@@ -201,6 +202,12 @@ function Modal({
     onClose,
     isOpen,
   });
+
+  useKeydown((keyCode) => {
+    if(keyCode === 'Escape') {
+      handleCloseModal()
+    }
+  })
 
   return (
     <div className={`modal-root ${isOpen ? "" : "hidden"}`}>

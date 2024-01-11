@@ -11,13 +11,13 @@ export function iconRowTemplate(
     case "module":
       return (
         `export const ${formattedName} = React.forwardRef((props, ref) =>
-          React.createElement(GenIcon, { ...props, ref, iconTree: ${JSON.stringify(iconData)} }));
+          React.createElement(IconWithRef, { ...props, ref, iconTree: ${JSON.stringify(iconData)} }));
       \n`
       );
     case "common":
       return (
         `module.exports.${formattedName} = React.forwardRef((props, ref) =>
-          React.createElement(GenIcon, { ...props, ref, iconTree: ${JSON.stringify(iconData)} }));\n`
+          React.createElement(IconWithRef, { ...props, ref, iconTree: ${JSON.stringify(iconData)} }));\n`
       );
     case "dts":
       return `export declare const ${formattedName}: IconType;\n`;

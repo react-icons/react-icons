@@ -21,7 +21,17 @@ function Tree2Element(tree: IconTree[]): React.ReactElement[] {
   );
 }
 
-export const GenIcon = React.forwardRef<SVGSVGElement, IconBaseProps & { iconTree: IconTree }>((
+export function GenIcon(data: IconTree) {
+  return function GenIconBase(props: IconBaseProps) {
+    return (
+      <IconBase attr={{ ...data.attr }} {...props}>
+        {Tree2Element(data.child)}
+      </IconBase>
+    );
+  }
+}
+
+export const IconWithRef = React.forwardRef<SVGSVGElement, IconBaseProps & { iconTree: IconTree }>((
   props, ref): JSX.Element => {
   const { iconTree, ...rest } = props;
   return (
@@ -30,7 +40,7 @@ export const GenIcon = React.forwardRef<SVGSVGElement, IconBaseProps & { iconTre
     </IconBase>
   );
 })
-GenIcon.displayName = "GenIcon";
+IconWithRef.displayName = "GenIcon";
 
 export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   children?: React.ReactNode;

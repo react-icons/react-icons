@@ -18,7 +18,14 @@ export function SearchPageComponent() {
   }, []);
 
   if (!isFirstRender && query?.length > 2) {
-    const hightlightPattern = new RegExp(`(${query})`, "i");
+    const hightlightPattern = new RegExp(
+      `(${query
+        .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
+        .split(" ")
+        .filter((t) => !!t)
+        .join("|")})`,
+      "i",
+    );
     return (
       <>
         <IconDetailModal

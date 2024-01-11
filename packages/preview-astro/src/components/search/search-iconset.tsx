@@ -30,7 +30,13 @@ export function SearchIconSet({
 
   const found =
     icons &&
-    Object.keys(icons).filter((name) => name.toLowerCase().includes(query));
+    Object.keys(icons).filter((name) =>
+      query
+        .toLowerCase()
+        .split(" ")
+        .filter((t) => !!t)
+        .every((term) => name.toLowerCase().includes(term)),
+    );
   return (
     <>
       {found ? (

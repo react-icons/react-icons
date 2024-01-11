@@ -1,0 +1,77 @@
+---
+import { Code } from "astro:components";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import { IconList } from "../components/iconlist";
+
+const HOME_USAGE = `
+import { FaBeer } from 'react-icons/fa';
+
+class Question extends React.Component {
+  render() {
+    return <h3> Lets go for a <FaBeer />? </h3>
+  }
+}`;
+
+const HOME_USAGE_ALL = `
+import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+
+class Question extends React.Component {
+  render() {
+    return <h3> Lets go for a <FaBeer />? </h3>
+  }
+}`;
+---
+
+<Layout title="React Icons">
+  <Container title="React Icons">
+    <p>
+      <a href="https://www.npmjs.com/package/react-icons" rel="nofollow"
+        ><img
+          src="https://img.shields.io/npm/v/react-icons.svg"
+          alt="npm"
+          height="20"
+        /></a
+      >&emsp;<a
+        href="https://github.com/react-icons/react-icons/actions"
+        rel="nofollow"
+        ><img
+          src="https://github.com/react-icons/react-icons/actions/workflows/nodejs.yml/badge.svg"
+          alt="GitHub Actions build status"
+          height="20"
+        /></a
+      >
+    </p>
+
+    <p>
+      Include popular icons in your React projects easily with react-icons,
+      which utilizes ES6 imports that allows you to include only the icons that
+      your project is using.
+    </p>
+
+    <h2>Include icon sets</h2>
+    <IconList />
+
+    <h2>Installation (for standard modern project)</h2>
+    <Code lang="bash" code={`npm install react-icons --save`} />
+
+    <h3>Usage</h3>
+    <Code lang="jsx" code={HOME_USAGE} />
+
+    <h2>Installation (for meteorjs, gatsbyjs, etc)</h2>
+    <p>
+      If your project grows in size, this option is available. This method has
+      the trade-off that it takes a long time to install the package. Suitable
+      for MeteorJS, Gatsbyjs etc.
+    </p>
+    <Code lang="bash" code={`npm install @react-icons/all-files --save`} />
+
+    <h3>Usage</h3>
+    <Code lang="jsx" code={HOME_USAGE_ALL} />
+
+    <h2>More info</h2>
+    <p>
+      <a href="https://github.com/react-icons/react-icons">GitHub &#8599;</a>
+    </p>
+  </Container>
+</Layout>

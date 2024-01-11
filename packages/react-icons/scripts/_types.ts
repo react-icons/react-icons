@@ -24,3 +24,9 @@ export interface IconSetGitSource {
   branch: string;
   hash: string;
 }
+
+export interface TaskContext {
+  rootDir: string;
+  DIST: string;
+  LIB: string;
+}

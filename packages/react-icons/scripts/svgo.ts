@@ -1,116 +1,34 @@
-import SVGO from "svgo";
+import { Config } from "svgo";
 
-export const svgo = new SVGO({
+export const svgoConfig: Config = {
   plugins: [
     {
-      cleanupAttrs: true,
-    },
-    {
-      removeDoctype: true,
-    },
-    {
-      removeXMLProcInst: true,
-    },
-    {
-      removeComments: true,
-    },
-    {
-      removeMetadata: true,
-    },
-    {
-      removeTitle: true,
-    },
-    {
-      removeDesc: true,
-    },
-    {
-      removeUselessDefs: true,
-    },
-    {
-      removeEditorsNSData: true,
-    },
-    {
-      removeEmptyAttrs: true,
-    },
-    {
-      removeHiddenElems: true,
-    },
-    {
-      removeEmptyText: true,
-    },
-    {
-      removeEmptyContainers: true,
-    },
-    {
-      removeViewBox: false,
-    },
-    {
-      cleanupEnableBackground: true,
-    },
-    {
-      convertStyleToAttrs: true,
-    },
-    {
-      convertColors: {
-        currentColor: true,
+      name: "preset-default",
+      params: {
+        overrides: {
+          removeViewBox: false,
+          convertColors: {
+            currentColor: true,
+          },
+        },
       },
     },
     {
-      convertPathData: true,
+      name: "convertStyleToAttrs",
     },
     {
-      convertTransform: true,
+      name: "removeDimensions",
     },
     {
-      removeUnknownsAndDefaults: true,
-    },
-    {
-      removeNonInheritableGroupAttrs: true,
-    },
-    {
-      removeUselessStrokeAndFill: true,
-    },
-    {
-      removeUnusedNS: true,
-    },
-    {
-      cleanupIDs: true,
-    },
-    {
-      cleanupNumericValues: true,
-    },
-    {
-      moveElemsAttrsToGroup: true,
-    },
-    {
-      moveGroupAttrsToElems: true,
-    },
-    {
-      collapseGroups: true,
-    },
-    {
-      removeRasterImages: false,
-    },
-    {
-      mergePaths: true,
-    },
-    {
-      convertShapeToPath: true,
-    },
-    {
-      sortAttrs: true,
-    },
-    {
-      removeDimensions: true,
-    },
-    {
-      removeAttributesBySelector: {
+      name: "removeAttributesBySelector",
+      params: {
         selector: "*:not(svg)",
         attributes: ["stroke"],
       },
     },
     {
-      removeAttrs: { attrs: "data.*" },
+      name: "removeAttrs",
+      params: { attrs: "data.*" },
     },
   ],
-});
+};

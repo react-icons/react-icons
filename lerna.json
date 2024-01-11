@@ -2,7 +2,7 @@
   "packages": [
     "packages/*"
   ],
-  "version": "5.0.1-snapshot.0",
+  "version": "5.0.1",
   "command": {
     "version": {
       "push": true

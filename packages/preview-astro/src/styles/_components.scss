@@ -375,6 +375,7 @@ html:has(.modal-root.active) {
     padding: 25px;
   }
   pre {
+    overflow: auto;
     background-color: #24292e;
     color: #e1e4e8;
     padding: 10px;

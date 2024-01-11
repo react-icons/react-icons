@@ -619,7 +619,7 @@ export const icons: IconDefinition[] = [
       },
     ],
     projectUrl: "https://github.com/atisawd/boxicons",
-    license: "CC BY 4.0 License",
+    license: "MIT",
     licenseUrl: "https://github.com/atisawd/boxicons/blob/master/LICENSE",
     source: {
       type: "git",

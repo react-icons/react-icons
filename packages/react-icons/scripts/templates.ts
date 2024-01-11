@@ -1,7 +1,10 @@
+import type { IconTree } from "src";
+import type { IconDefinition } from "./_types";
+
 export function iconRowTemplate(
-  icon,
-  formattedName,
-  iconData,
+  icon: IconDefinition,
+  formattedName: string,
+  iconData: IconTree,
   type = "module",
 ) {
   switch (type) {

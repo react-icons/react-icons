@@ -1,3 +1,3 @@
 import { atom } from "nanostores";
 
-export const serachWord = atom<string>("");
+export const searchWord = atom<string>("");

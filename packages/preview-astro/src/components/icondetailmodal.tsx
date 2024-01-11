@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaRegClipboard } from "react-icons/fa6";
 import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
@@ -73,7 +73,7 @@ export function IconDetailModal(
     <Modal
       isOpen={open}
       title={`${props.iconSet}/${props.iconName}`}
-      onClose={() => props.onClose?.()}
+      onClose={props.onClose}
     >
       <div className="icon-detail-modal-content">
         <div
@@ -133,6 +133,57 @@ export function IconDetailModal(
   );
 }
 
+type useModalAnimationProps = {
+  onClose?(): void;
+  isOpen?: boolean;
+};
+
+const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
+  const [animationIsOpen, setAnimationIsOpen] = useState(isOpen);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleInitOpenAnimation = () => {
+      if (isOpen) {
+        setAnimationIsOpen(true);
+      }
+    };
+
+    handleInitOpenAnimation();
+  }, [isOpen]);
+
+
+  useEffect(() => {
+    const modalElement = modalRef.current;
+  
+    const handleTransitionEnd = () => {
+      if (!animationIsOpen) {
+        onClose?.();
+      }
+    };
+  
+    if (modalElement) {
+      modalElement.addEventListener('transitionend', handleTransitionEnd);
+    }
+
+    return () => {
+      if (modalElement) {
+        modalElement.removeEventListener('transitionend', handleTransitionEnd);
+      }
+    };
+  }, [animationIsOpen, onClose]);
+
+  const handleCloseModal = () => {
+    setAnimationIsOpen(false);
+  };
+
+  return {
+    animationIsOpen,
+    handleCloseModal,
+    modalRef
+  };
+};
+
 interface ModalProps {
   title: React.ReactNode;
   children: React.ReactNode;
@@ -146,17 +197,30 @@ function Modal({
   isOpen,
   onClose,
 }: ModalProps): React.ReactElement {
+  const { animationIsOpen, handleCloseModal, modalRef } = useModalAnimation({
+    onClose,
+    isOpen,
+  });
+
   return (
-    <div className={`modal-root${isOpen ? " active" : ""}`}>
-      <div className="overray" onClick={() => onClose?.()}></div>
-      <div className="modal-body">
+    <div className={`modal-root ${isOpen ? "" : "hidden"}`}>
+      <div
+        className={`overlay ${animationIsOpen ? "" : "appearing"}`}
+        onClick={() => handleCloseModal()}
+      ></div>
+      <div className={`modal-body ${animationIsOpen ? "open" : "close"}`} ref={modalRef}>
         <div className="header">
           <h3 className="title">{title}</h3>
-          <button className="close" onClick={() => onClose?.()}>
+          <button
+            type="button"
+            aria-label="Close modal"
+            className="close"
+            onClick={() => handleCloseModal()}
+          >
             x
           </button>
         </div>
-        <div className="content">{children}</div>
+        {isOpen ? <div className="content">{children}</div> : undefined}
       </div>
     </div>
   );

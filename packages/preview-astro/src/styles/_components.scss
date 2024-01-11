@@ -288,30 +288,47 @@ a {
 html:has(.modal-root.active) {
   overflow: hidden;
 }
+
 .modal-root {
+  transition: all;
+  animation-duration: 250ms;
+
   & {
-    display: none;
-  }
-  &.active {
     display: block;
   }
 
-  & > .overray {
+  &.hidden {
+    display: none;
+  }
+
+  & > .overlay {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    transition: all;
+    transition-duration: 250ms;
+    touch-action: none;
+
+    & {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    &.appearing {
+      background: rgba(0, 0, 0, 0.01);
+    }
   }
+
   & > .modal-body {
     // show content in right side
+    transition: all;
+    transition-duration: 250ms;
     position: fixed;
     top: 0;
-    right: 0;
     z-index: 1001;
-    width: 50%;
+    width: 100%;
     max-width: 600px;
     height: 100%;
     background: var(--color-gray-0);
@@ -319,20 +336,33 @@ html:has(.modal-root.active) {
     overflow-y: auto;
     overflow-x: hidden;
 
+    &.open {
+      right: 0;
+    }
+
+    &.close {
+      right: -600px;
+    }
+
     & > .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: var(--space-2);
       .title {
+        margin: 0;
+        padding: 0;
         font-size: 1.5rem;
+        max-width: 90%;
+        word-break: break-all;
       }
       .close {
         cursor: pointer;
+        touch-action: none;
         font-size: 1.5rem;
         border: none;
         background: initial;
-        padding: 0 10px;
+        padding: 10px 20px;
       }
     }
   }

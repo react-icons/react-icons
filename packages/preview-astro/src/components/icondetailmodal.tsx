@@ -67,7 +67,10 @@ export function IconDetailModal(
   const downloadSvg = () => {
     const iconElement = document.getElementsByClassName("icon")[0];
     if (iconElement === null) {
-      toast.error("Icon could not be retrieved.");
+      toast.error("Icon could not be retrieved.", {
+        position: "bottom-center",
+      });
+      return;
     }
     const icon = (iconElement?.firstChild as Element).outerHTML;
 
@@ -85,7 +88,7 @@ export function IconDetailModal(
     downloadLink.click();
     document.body.removeChild(downloadLink);
 
-    toast.success(`Download started`, { position: "bottom-center" });
+    toast.success("Download started", { position: "bottom-center" });
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

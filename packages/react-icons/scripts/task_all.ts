@@ -38,7 +38,7 @@ export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
     );
     await write(
       [icon.id, "index.d.ts"],
-      "// THIS FILE IS AUTO GENERATED\nimport { IconTree, IconType } from '../lib/index.mjs'\n",
+      "// THIS FILE IS AUTO GENERATED\nimport type { IconType } from '../lib/index'\n",
     );
     await write(
       [icon.id, "package.json"],

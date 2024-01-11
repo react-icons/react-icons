@@ -260,7 +260,7 @@ a {
         0 1px 2px 0 rgba(0, 0, 0, 0.06);
       transition: background-color 150ms ease;
       &:hover {
-        background: #f3f3f3;
+        background: var(--color-gray-2);
       }
 
       .name {
@@ -268,7 +268,8 @@ a {
       }
       .describe {
         font-size: 0.8rem;
-        color: var(--color-gray-4);
+        color: var(--color-black);
+        opacity: 0.5;
       }
       .samples {
         overflow: hidden;
@@ -333,6 +334,7 @@ html:has(.modal-root.active) {
         border: none;
         background: initial;
         padding: 0 10px;
+        color: var(--color-black);
       }
     }
   }
@@ -359,6 +361,7 @@ html:has(.modal-root.active) {
       button {
         border: none;
         background: var(--color-gray-2);
+        color: var(--color-black);
         padding: 5px 7px;
         border-radius: 5px;
         cursor: pointer;

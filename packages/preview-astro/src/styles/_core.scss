@@ -17,6 +17,18 @@
   --border-radius-md: 6px;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-black: #ffffff;
+    --color-white: #3f3f46;
+    --color-gray-0: #09090b;
+    --color-gray-1: #18181b;
+    --color-gray-2: #27272a;
+    --color-gray-3: #3f3f46;
+    --color-gray-4: #52525b;
+  }
+}
+
 html,
 body {
   margin: 0;

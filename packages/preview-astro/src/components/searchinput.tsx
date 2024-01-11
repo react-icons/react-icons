@@ -18,8 +18,9 @@ export function SearchInput() {
   const [inputQuery, setInputQuery] = React.useState("");
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
+    const sanitizedQuery = query.split(" ").join("");
     setInputQuery(query);
-    debouncedOnSearch(query);
+    debouncedOnSearch(sanitizedQuery);
   };
   return (
     <input

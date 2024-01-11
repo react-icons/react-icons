@@ -12,7 +12,7 @@ export interface SearchIconsProps {
   onSelect?(
     iconSet: string,
     icon: string,
-    component: React.ComponentType,
+    component: React.ComponentType
   ): void;
 }
 export function SearchIconSet({
@@ -28,9 +28,13 @@ export function SearchIconSet({
     getIcons(icon.id).then((icons) => setIcons(icons));
   }, []);
 
+  const lowerCaseQuery = query.toLowerCase();
   const found =
     icons &&
-    Object.keys(icons).filter((name) => name.toLowerCase().includes(query));
+    Object.keys(icons).filter((name) =>
+      name.toLowerCase().includes(lowerCaseQuery)
+    );
+
   return (
     <>
       {found ? (

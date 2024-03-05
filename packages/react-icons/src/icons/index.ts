@@ -1,5 +1,5 @@
-import path from "path";
 import camelcase from "camelcase";
+import path from "path";
 import { type IconDefinition } from "../../scripts/_types";
 import { glob } from "../../scripts/glob";
 
@@ -785,6 +785,27 @@ export const icons: IconDefinition[] = [
       url: "https://github.com/icons8/line-awesome.git",
       branch: "master",
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
+    },
+  },
+  {
+    id: "mni",
+    name: "Meistericons",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/meistericons/svg/*.svg"),
+        formatter: (name) => `Mni${name}`,
+      },
+    ],
+    projectUrl: "https://meistericons.com/",
+    license: "MIT",
+    licenseUrl: "https://github.com/rahulrajdahal/meistericons/blob/main/LICENSE.md",
+    source: {
+      type: "git",
+      localName: "meistericons",
+      remoteDir: "svg/",
+      url: "https://github.com/rahulrajdahal/meistericons.git",
+      branch: "main",
+      hash: "66a5257986ef78666ccf94aed7263141d6e3a429",
     },
   },
 ];

@@ -10,8 +10,8 @@ fi
 time (cd packages/react-icons/ && yarn fetch)
 time (cd packages/react-icons/ && yarn build)
 echo VERSIONS; cat packages/react-icons/VERSIONS
-(cd packages/_react-icons_all/ && npm pack |& tail)
-(cd packages/_react-icons_all-files/ && npm pack |& tail)
+(cd packages/_react-icons_all/ && npm pack 2>&1 | tail)
+(cd packages/_react-icons_all-files/ && npm pack 2>&1 | tail)
 
 (cd packages/preview-astro/ && yarn build)
 (cd packages/demo/ && CI=true yarn test && yarn build)

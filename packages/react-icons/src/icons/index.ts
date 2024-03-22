@@ -549,7 +549,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/simple-icons/simple-icons.git",
       branch: "develop",
-      hash: "f74f0e6b995aa099458455eebe2e2e89fe1a9f89",
+      hash: "7a6ca4f44e5306b32804ae269eef0d46b0f45936",
     },
   },
   {

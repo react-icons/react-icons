@@ -4583,6 +4583,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@meistericons/static@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@meistericons/static@npm:0.0.4"
+  checksum: b51c326008fa7e9230ba259a3116648f6560f6a1054ffb9c5a03ed3e74a1443defcbc5933d4e9dc8a6462700c2e62bc73727c443adb0f77429c06fbfc88db132
+  languageName: node
+  linkType: hard
+
 "@mrmlnc/readdir-enhanced@npm:^2.2.1":
   version: 2.2.1
   resolution: "@mrmlnc/readdir-enhanced@npm:2.2.1"
@@ -20561,6 +20568,7 @@ __metadata:
     "@babel/preset-env": ^7.23.6
     "@babel/preset-react": ^7.23.3
     "@babel/preset-typescript": ^7.23.3
+    "@meistericons/static": ^0.0.4
     "@primer/octicons": ^18.3.0
     "@types/node": ^20.9.0
     "@types/react": ^18.0.21

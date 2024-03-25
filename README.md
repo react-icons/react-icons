@@ -262,6 +262,7 @@ SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `
 ## Related Projects
 
 - [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)
+- [rn-icons](https://github.com/moonrailgun/rn-icons)
 
 ## Licence
 

@@ -792,8 +792,12 @@ export const icons: IconDefinition[] = [
     id: "mni",
     name: "Meistericons",
     contents: readdirSync(path.resolve(path.dirname(require.resolve("@meistericons/static")), '../../icons')).map(dir =>
-      ({ files: path.resolve(path.resolve(path.dirname(require.resolve("@meistericons/static")), `../../icons/${dir}/*.svg`)), formatter: (name: string) => `Mni${name}` })
+      ({
+         files: path.resolve(path.resolve(path.dirname(require.resolve("@meistericons/static")), `../../icons/${dir}/*.svg`)), 
+         formatter: (name: string) => `Mni${name}`,
+         multiColor: true, })
     ).flat(),
+
     projectUrl: "https://meistericons.com/",
     license: "MIT",
     licenseUrl: "https://github.com/rahulrajdahal/meistericons/blob/main/LICENSE.md",

@@ -23,5 +23,10 @@
     "version": "yarn install && git add .",
     "lerna": "lerna"
   },
-  "packageManager": "yarn@3.2.4"
+  "packageManager": "yarn@3.2.4",
+  "dependencies": {
+    "@react-icons/all-files": "workspace:^",
+    "react-icons": "workspace:^",
+    "react-scripts": "^5.0.1"
+  }
 }

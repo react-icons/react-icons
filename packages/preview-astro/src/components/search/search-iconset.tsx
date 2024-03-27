@@ -39,22 +39,24 @@ export function SearchIconSet({
     );
   return (
     <>
-      {found.length > 0 && <h3 className="icon-name">{icon.name}</h3>}
       {found ? (
-        found.map((name) => {
-          const Component = icons[name];
-          if (!Component) return null;
-          return (
-            <Icon
-              key={name}
-              component={Component}
-              iconSet={icon.id}
-              iconName={name}
-              highlightPattern={highlightPattern}
-              onSelect={(name) => onSelect?.(icon.id, name, Component)}
-            />
-          );
-        })
+        <>
+          {found.length > 0 && <h3 className="icon-name">{icon.name}</h3>}
+          {found.map((name) => {
+            const Component = icons[name];
+            if (!Component) return null;
+            return (
+              <Icon
+                key={name}
+                component={Component}
+                iconSet={icon.id}
+                iconName={name}
+                highlightPattern={highlightPattern}
+                onSelect={(name) => onSelect?.(icon.id, name, Component)}
+              />
+            );
+          })}
+        </>
       ) : (
         <SearchPageIconLoading />
       )}

@@ -801,6 +801,6 @@ export const icons: IconDefinition[] = [
 
     projectUrl: "https://meistericons.com/",
     license: "MIT",
-    licenseUrl: "https://github.com/rahulrajdahal/meistericons/blob/main/LICENSE.md",
+    licenseUrl: "https://github.com/meistericons/meistericons/blob/main/LICENSE.md",
   }
 ];

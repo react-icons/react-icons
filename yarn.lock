@@ -4877,7 +4877,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-icons/all-files@workspace:^, @react-icons/all-files@workspace:packages/_react-icons_all-files":
+"@react-icons/all-files@workspace:packages/_react-icons_all-files":
   version: 0.0.0-use.local
   resolution: "@react-icons/all-files@workspace:packages/_react-icons_all-files"
   peerDependencies:
@@ -20541,7 +20541,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "react-icons-root@workspace:."
   dependencies:
-    "@react-icons/all-files": "workspace:^"
     "@typescript-eslint/eslint-plugin": ^5.40.0
     "@typescript-eslint/parser": ^5.40.0
     eslint: ^8.25.0
@@ -20549,12 +20548,10 @@ __metadata:
     lerna: ^3.22.1
     prettier: ^3.0.3
     prettier-plugin-astro: ^0.12.1
-    react-icons: "workspace:^"
-    react-scripts: ^5.0.1
   languageName: unknown
   linkType: soft
 
-"react-icons@^5.0.1, react-icons@workspace:^, react-icons@workspace:packages/_react-icons_all":
+"react-icons@^5.0.1, react-icons@workspace:packages/_react-icons_all":
   version: 0.0.0-use.local
   resolution: "react-icons@workspace:packages/_react-icons_all"
   peerDependencies:

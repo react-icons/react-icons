@@ -107,12 +107,6 @@
       "import": "./wi/index.mjs",
       "default": "./wi/index.mjs"
     },
-    "./di": {
-      "types": "./di/index.d.ts",
-      "require": "./di/index.js",
-      "import": "./di/index.mjs",
-      "default": "./di/index.mjs"
-    },
     "./ai": {
       "types": "./ai/index.d.ts",
       "require": "./ai/index.js",

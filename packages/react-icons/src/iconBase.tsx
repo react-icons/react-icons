@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import {  IconContext,DefaultContext } from "./iconContext";
+import { DefaultContext, IconContext } from "./iconContext";
 
 export interface IconTree {
   tag: string;

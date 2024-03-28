@@ -1,6 +1,5 @@
 #!/bin/bash -eux
 
-
 if [[ -f package-lock.json ]]; then
   echo "[ERROR] package-lock.json exists!"
   exit 1

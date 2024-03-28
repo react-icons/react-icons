@@ -1,5 +1,6 @@
-import path from "path";
 import camelcase from "camelcase";
+import { readdirSync } from "fs";
+import path from "path";
 import { type IconDefinition } from "../../scripts/_types";
 import { glob } from "../../scripts/glob";
 
@@ -787,4 +788,19 @@ export const icons: IconDefinition[] = [
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
+  {
+    id: "mni",
+    name: "Meistericons",
+    contents: readdirSync(path.resolve(path.dirname(require.resolve("@meistericons/static")), '../../icons')).map(dir =>
+    ({
+      files: path.resolve(path.resolve(path.dirname(require.resolve("@meistericons/static")), `../../icons/${dir}/*.svg`)),
+      formatter: (name: string) => `Mni${name}`,
+      multiColor: true,
+    })
+    ).flat(),
+
+    projectUrl: "https://meistericons.com/",
+    license: "MIT",
+    licenseUrl: "https://github.com/meistericons/meistericons/blob/main/LICENSE",
+  }
 ];

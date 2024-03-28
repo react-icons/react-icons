@@ -29,6 +29,7 @@
     "@babel/preset-env": "^7.23.6",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@meistericons/static": "^0.0.4",
     "@primer/octicons": "^18.3.0",
     "@types/node": "^20.9.0",
     "@types/react": "^18.0.21",

@@ -1,8 +1,8 @@
-import camelcase from 'camelcase';
+import camelcase from "camelcase";
 import { readdirSync } from "fs";
 import path from "path";
 import { type IconDefinition } from "../../scripts/_types";
-import { glob } from '../../scripts/glob';
+import { glob } from "../../scripts/glob";
 
 export const icons: IconDefinition[] = [
   {

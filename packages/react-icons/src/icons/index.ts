@@ -518,6 +518,13 @@ export const icons: IconDefinition[] = [
         ),
         formatter: (name) => `HiMini${name}`,
       },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/heroicons-2/optimized/16/solid/*.svg",
+        ),
+        formatter: (name) => `HiMicro${name}`,
+      },
     ],
     projectUrl: "https://github.com/tailwindlabs/heroicons",
     license: "MIT",
@@ -528,7 +535,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "optimized/",
       url: "https://github.com/tailwindlabs/heroicons.git",
       branch: "master",
-      hash: "eee05eb77af6cdedfb97f128d1998773fc984b28",
+      hash: "01c786b0353c7e51b86bc903a329e81d7578333d",
     },
   },
   {

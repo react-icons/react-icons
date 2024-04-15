@@ -97,7 +97,7 @@ export function IconDetailModal(
             </button>
           ))}
         </div>
-        <h2>Codes</h2>
+        <h2>Code</h2>
         <pre>
           <code>{importCode}</code>
         </pre>

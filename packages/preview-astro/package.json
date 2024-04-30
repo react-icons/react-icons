@@ -12,10 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/react": "^3.0.4",
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/react": "^3.3.1",
     "@nanostores/react": "^0.7.2",
-    "astro": "^3.4.3",
+    "astro": "^4.7.0",
     "basscss": "^8.1.0",
     "cogo-toast": "^4.2.3",
     "copy-to-clipboard": "^3.3.3",

@@ -13,8 +13,8 @@
     "eslint-plugin-react": "^7.34.1",
     "globals": "^15.1.0",
     "lerna": "^8.1.2",
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.1",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
     "typescript-eslint": "^7.8.0"
   },
   "scripts": {

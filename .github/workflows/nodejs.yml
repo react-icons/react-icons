@@ -37,6 +37,8 @@ jobs:
         if: github.ref == 'refs/heads/master'
       - name: generate notes
         run: gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${{ env.GITHUB_REF_NAME }} --jq .body >> RELEASE_NOTES
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: contains(github.ref, 'tags/')
       - name: append versions
         run: |

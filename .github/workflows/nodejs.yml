@@ -2,7 +2,7 @@ name: Node.js CI
 
 "on":
   - push
-  - pull_request_target
+  - pull_request
 
 jobs:
   build:

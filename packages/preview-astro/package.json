@@ -1,7 +1,7 @@
 {
   "name": "preview-astro",
   "type": "module",
-  "version": "5.1.1-snapshot.0",
+  "version": "5.2.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -22,7 +22,7 @@
     "nanostores": "^0.10.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.1.1-snapshot.0",
+    "react-icons": "^5.2.0",
     "sass": "^1.69.5",
     "tiny-skeleton-loader-react": "^1.2.1",
     "typescript": "^5.4.5"

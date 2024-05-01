@@ -57,9 +57,9 @@ export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
     await write([file], "// THIS FILE IS AUTO GENERATED\n");
   }
 }
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function writeIconModule(
   icon: IconDefinition,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   { DIST, LIB, rootDir }: TaskContext,
 ) {
   const exists = new Set(); // for remove duplicate

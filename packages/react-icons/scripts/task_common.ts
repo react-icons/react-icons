@@ -146,8 +146,8 @@ export async function writeIconVersions({ DIST, LIB, rootDir }: TaskContext) {
   await fs.writeFile(path.resolve(rootDir, "VERSIONS"), versionsStr, "utf8");
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function writePackageJson(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   override: any,
   { DIST, LIB, rootDir }: TaskContext,
 ) {

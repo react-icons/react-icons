@@ -36,7 +36,7 @@ jobs:
           publish_dir: ./packages/preview-astro/dist
         if: github.ref == 'refs/heads/master'
       - name: generate notes
-        run: gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${{ env.GITHUB_REF_NAME }} --jq .body >> RELEASE_NOTES
+        run: gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${GITHUB_REF#tags/} --jq .body >> RELEASE_NOTES
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: contains(github.ref, 'tags/')
@@ -44,6 +44,9 @@ jobs:
         run: |
           echo >> RELEASE_NOTES
           cat packages/react-icons/VERSIONS >> RELEASE_NOTES
+        if: contains(github.ref, 'tags/')
+      - name: cat
+        run: cat RELEASE_NOTES
         if: contains(github.ref, 'tags/')
       - name: Release
         uses: ncipollo/release-action@v1

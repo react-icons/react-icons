@@ -35,11 +35,19 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./packages/preview-astro/dist
         if: github.ref == 'refs/heads/master'
+      - name: generate notes
+        run: gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${{ env.GITHUB_REF_NAME }} --jq .body >> RELEASE_NOTES
+        if: contains(github.ref, 'tags/')
+      - name: append versions
+        run: |
+          echo >> RELEASE_NOTES
+          cat packages/react-icons/VERSIONS >> RELEASE_NOTES
+        if: contains(github.ref, 'tags/')
       - name: Release
         uses: ncipollo/release-action@v1
         with:
           artifacts: "packages/_react-icons_*/*.tgz"
-          bodyFile: "packages/react-icons/VERSIONS"
+          bodyFile: "RELEASE_NOTES"
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: ${{ contains(github.ref, 'snapshot') }}
         if: contains(github.ref, 'tags/')

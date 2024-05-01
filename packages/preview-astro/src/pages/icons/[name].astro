@@ -26,7 +26,8 @@ const { manifest } = Astro.props;
   activeIconSet={manifest.id}
 >
   <Container title={manifest.name}>
-    <table class="iconset--info">
+    <!-- why not work? -->
+    <!-- <table class="iconset--info">
       <tbody>
         <tr>
           <th>License</th>
@@ -53,7 +54,21 @@ const { manifest } = Astro.props;
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
+    <dl class="iconset--info">
+      <dt>License</dt>
+      <dd>
+        <a href={manifest.licenseUrl} target="_blank" rel="noopener noreferrer">
+          {manifest.license}
+        </a>
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a href={manifest.projectUrl} target="_blank" rel="noopener noreferrer">
+          {manifest.projectUrl}
+        </a>
+      </dd>
+    </dl>
 
     <h2>Import</h2>
     <Code

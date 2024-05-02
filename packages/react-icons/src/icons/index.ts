@@ -685,7 +685,7 @@ export const icons: IconDefinition[] = [
           __dirname,
           "../../icons/tabler-icons/icons/filled/*.svg",
         ),
-        formatter: (name) => `Tb${name}`,
+        formatter: (name) => `Tb${name}Filled`,
       },
       {
         files: path.resolve(

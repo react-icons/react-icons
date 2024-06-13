@@ -240,7 +240,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("lucide-static")),
-          "../icons/*.svg",
+          "../../icons/*.svg",
         ),
         formatter: (name) => `Lu${name}`,
       },

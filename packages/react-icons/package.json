@@ -43,7 +43,7 @@
     "glob-promise": "^6.0.5",
     "ionicons": "^4.6.3",
     "ionicons-5": "npm:ionicons@5",
-    "lucide-static": "^0.263.0",
+    "lucide-static": "^0.394.0",
     "p-queue": "^8.0.1",
     "svgo": "^3.0.3",
     "typescript": "^5.4.5"

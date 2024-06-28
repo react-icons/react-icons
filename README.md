@@ -99,6 +99,7 @@ function Question() {
 | [Radix Icons](https://icons.radix-ui.com)                               | [MIT](https://github.com/radix-ui/icons/blob/master/LICENSE)                                      | @radix-ui/react-icons@1.3.0-1-g94b3fcf   |   318 |
 | [Phosphor Icons](https://github.com/phosphor-icons/core)                | [MIT](https://github.com/phosphor-icons/core/blob/main/LICENSE)                                   | 2.1.1                                    |  9072 |
 | [Icons8 Line Awesome](https://icons8.com/line-awesome)                  | [MIT](https://github.com/icons8/line-awesome/blob/master/LICENSE.md)                              | 1.3.1                                    |  1544 |
+| [MingCute icons](https://github.com/Richard9394/MingCute.git)           | [Apache License Version 2.0](https://github.com/Richard9394/MingCute/blob/main/LICENSE)           | v2.92                                    |  2926 |
 
 You can add more icons by submitting pull requests or creating issues.
 

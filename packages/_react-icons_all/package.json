@@ -220,6 +220,12 @@
       "require": "./lia/index.js",
       "import": "./lia/index.mjs",
       "default": "./lia/index.mjs"
+    },
+    "./mc": {
+      "types": "./mc/index.d.ts",
+      "require": "./mc/index.js",
+      "import": "./mc/index.mjs",
+      "default": "./mc/index.mjs"
     }
   }
 }

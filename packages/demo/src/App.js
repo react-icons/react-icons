@@ -9,6 +9,7 @@ import { TiArrowDown } from "react-icons/ti";
 import { GrGrommet } from "react-icons/gr";
 import { LiaNode } from "react-icons/lia";
 import { TbPentagonNumber0 } from "react-icons/tb";
+import { McHeartFill as MingCuteIcon } from "react-icons/mc";
 
 class App extends Component {
   render() {
@@ -40,6 +41,7 @@ class App extends Component {
           <GrGrommet />
           <LiaNode />
           <TbPentagonNumber0 />
+          <MingCuteIcon />
         </p>
       </div>
     );

@@ -26,6 +26,7 @@ export function SearchInput() {
       type="text"
       aria-label="search"
       className="px2 py1"
+      autoFocus={true}
       placeholder="🔍 Search Icons"
       autoComplete="off"
       autoCorrect="off"

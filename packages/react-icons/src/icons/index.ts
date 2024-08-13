@@ -389,7 +389,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/twbs/icons.git",
       branch: "main",
-      hash: "92b6aee4c53aec1b5227360e0c9c63490b4b90c5",
+      hash: "af0b3f82d129a90e8f2b0dcd7f0fef98dfcca18e",
     },
   },
   {
@@ -703,7 +703,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/tabler/tabler-icons.git",
       branch: "main",
-      hash: "4ec2a71d4faa6a9dab1228b97311391143324fb7",
+      hash: "94b458153d7bd86b4844fd67b442562f586b3c0b",
     },
   },
   {

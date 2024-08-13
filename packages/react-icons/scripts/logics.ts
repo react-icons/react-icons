@@ -59,6 +59,9 @@ export async function convertIconData(
             case "dataName":
               break;
             default:
+              if (name.startsWith("data")) {
+                break;
+              }
               obj[newName] = attribs[name];
               break;
           }

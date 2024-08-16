@@ -17,7 +17,7 @@ export function SearchPageComponent() {
     setIsFirstRender(false);
   }, []);
 
-  if (!isFirstRender && query?.length > 2) {
+  if (!isFirstRender && query?.length > 1) {
     const hightlightPattern = new RegExp(
       `(${query
         .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
@@ -54,5 +54,5 @@ export function SearchPageComponent() {
       </>
     );
   }
-  return <h2>Please enter at least 3 characters to search...</h2>;
+  return <h2>Please enter at least 2 characters to search...</h2>;
 }

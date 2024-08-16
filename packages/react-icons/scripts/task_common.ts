@@ -73,7 +73,7 @@ export async function writeEntryPoints({ DIST, LIB, rootDir }: TaskContext) {
   );
   await fs.appendFile(
     path.resolve(DIST, "index.d.ts"),
-    generateEntryMjs("index.d.ts"),
+    generateEntryMjs("index"),
     "utf8",
   );
 }

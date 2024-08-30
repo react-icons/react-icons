@@ -58,6 +58,8 @@ export interface IconDetailModalProps {
   component?: React.ComponentType | undefined;
   onClose?(): void;
 }
+
+
 export function IconDetailModal(
   props: IconDetailModalProps,
 ): React.ReactElement {
@@ -99,12 +101,26 @@ export function IconDetailModal(
           ))}
         </div>
         <h2>Code</h2>
-        <pre>
-          <code>{importCode}</code>
-        </pre>
-        <pre>
-          <code>{useCode}</code>
-        </pre>
+        {[
+          importCode,
+          useCode
+        ].map((text, i) => (
+          <pre
+            key={i}
+            className="pre-clipboard"
+          >
+            <FaRegClipboard className="clipboard-icon" onClick={()=> {
+              copy(text ?? "");
+
+              toast.success(`Copied '${text ?? ""}' to clipboard`, {
+                position: "bottom-center",
+              })
+            }}/>
+
+            <code> {text} </code>
+          </pre>
+        ))}
+
         <ul className="copy">
           {[
             props.iconSet,

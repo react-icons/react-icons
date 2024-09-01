@@ -72,7 +72,10 @@ const { manifest } = Astro.props;
     </dl>
 
     <h2>Import</h2>
-    <CopyTextWithIcon client:load text={`import ${`{ IconName }`} from "react-icons/${manifest.id}"`} />
+    <CopyTextWithIcon
+      client:load
+      text={`import ${`{ IconName }`} from "react-icons/${manifest.id}"`}
+    />
     <IconSetViewer client:load iconSet={manifest.id} />
   </Container>
 </Layout>

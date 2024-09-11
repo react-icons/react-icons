@@ -32,7 +32,10 @@ async function main() {
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
       await taskCommon.writePackageJson(
-        { name: "react-icons", exports: buildPackageExports(icons) },
+        {
+          name: "react-icons",
+          exports: buildPackageExports({ icons, addLibraryExport: true }),
+        },
         allOpt,
       );
       await taskCommon.copyReadme(allOpt);
@@ -62,7 +65,28 @@ async function main() {
     });
     await task("@react-icons/all-files write icons", async () => {
       await Promise.all(
-        icons.map((icon) => taskFiles.writeIconModuleFiles(icon, filesOpt)),
+        icons.map(async (icon) => {
+          taskAll.writeIconModule(icon, filesOpt, true);
+          taskFiles.writeIconModuleFiles(icon, filesOpt);
+          console.log(icon);
+          const iconPackageOpt = {
+            ...filesOpt,
+            DIST: `${filesOpt.DIST}/${icon.id}`,
+          };
+          // await taskCommon.writeEntryPoints(iconPackageOpt);
+          await taskCommon.writeIconsManifest(iconPackageOpt);
+          await taskCommon.writeLicense(iconPackageOpt);
+          await taskCommon.writePackageJson(
+            {
+              name: `@react-icons/${icon.id}`,
+              exports: buildPackageExports(),
+              main: "./index.js",
+              module: "./index.mjs",
+              types: "./index.d.ts",
+            },
+            iconPackageOpt,
+          );
+        }),
       );
     });
 

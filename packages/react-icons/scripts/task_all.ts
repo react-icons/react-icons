@@ -61,6 +61,7 @@ export async function writeIconModule(
   icon: IconDefinition,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   { DIST, LIB, rootDir }: TaskContext,
+  reExport: boolean = false
 ) {
   const exists = new Set(); // for remove duplicate
   for (const content of icon.contents) {
@@ -83,19 +84,19 @@ export async function writeIconModule(
       exists.add(name);
 
       // write like: module/fa/index.mjs
-      const modRes = iconRowTemplate(icon, name, iconData, "module");
+      const modRes = iconRowTemplate(icon, name, iconData, "module", reExport);
       await fs.appendFile(
         path.resolve(DIST, icon.id, "index.mjs"),
         modRes,
         "utf8",
       );
-      const comRes = iconRowTemplate(icon, name, iconData, "common");
+      const comRes = iconRowTemplate(icon, name, iconData, "common", reExport);
       await fs.appendFile(
         path.resolve(DIST, icon.id, "index.js"),
         comRes,
         "utf8",
       );
-      const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
+      const dtsRes = iconRowTemplate(icon, name, iconData, "dts", reExport);
       await fs.appendFile(
         path.resolve(DIST, icon.id, "index.d.ts"),
         dtsRes,

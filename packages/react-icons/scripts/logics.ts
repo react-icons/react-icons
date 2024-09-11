@@ -112,7 +112,8 @@ export async function rmDirRecursive(dest: string) {
   await fs.rm(dest, { recursive: true, force: true });
 }
 
-export function buildPackageExports(icons: IconManifestType[]) {
+export function buildPackageExports(options: { addLibraryExport?: boolean, icons?: IconManifestType[]} = {}) {
+  const { addLibraryExport, icons = [] } = options
   const exports: Record<
     string,
     {
@@ -128,12 +129,13 @@ export function buildPackageExports(icons: IconManifestType[]) {
       import: "./index.mjs",
       default: "./index.mjs",
     },
-    "./lib": {
-      types: "./lib/index.d.ts",
-      require: "./lib/index.js",
-      import: "./lib/index.mjs",
-      default: "./lib/index.mjs",
-    },
+  };
+
+  if (addLibraryExport) exports["./lib"] = {
+    types: "./lib/index.d.ts",
+    require: "./lib/index.js",
+    import: "./lib/index.mjs",
+    default: "./lib/index.mjs",
   };
 
   icons.forEach((icon) => {

@@ -34,7 +34,11 @@ async function main() {
       await taskCommon.writePackageJson(
         {
           name: "react-icons",
-          exports: buildPackageExports({ icons, addLibraryExport: true, addSubAllExport: true }),
+          exports: buildPackageExports({
+            icons,
+            addLibraryExport: true,
+            addSubAllExport: true,
+          }),
         },
         allOpt,
       );

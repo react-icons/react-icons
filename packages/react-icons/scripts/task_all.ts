@@ -28,14 +28,8 @@ export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
 
-    await write(
-      [icon.id, "index.js"],
-      "// THIS FILE IS AUTO GENERATED\n",
-    );
-    await write(
-      [icon.id, "index.mjs"],
-      "// THIS FILE IS AUTO GENERATED\n",
-    );
+    await write([icon.id, "index.js"], "// THIS FILE IS AUTO GENERATED\n");
+    await write([icon.id, "index.mjs"], "// THIS FILE IS AUTO GENERATED\n");
     await write(
       [icon.id, "index.d.ts"],
       "// THIS FILE IS AUTO GENERATED\nimport type { IconType } from '../lib/index'\n",
@@ -61,7 +55,7 @@ export async function writeIconModule(
   icon: IconDefinition,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   { DIST, LIB, rootDir }: TaskContext,
-  reExport: boolean = false
+  reExport: boolean = false,
 ) {
   const exists = new Set(); // for remove duplicate
   for (const content of icon.contents) {

@@ -19,9 +19,7 @@ export const iconRowTemplate: IconRowTemplateFunction = (
   switch (type) {
     case "module":
       if (reExport) {
-        return (
-          `export * from './${formattedName}';\n`
-        );
+        return `export * from './${formattedName}';\n`;
       }
       return (
         `export function ${formattedName} (props) {\n` +
@@ -45,4 +43,4 @@ export const iconRowTemplate: IconRowTemplateFunction = (
     default:
       throw new Error(`Unknown type: ${type}`);
   }
-}
+};

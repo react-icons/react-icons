@@ -120,7 +120,12 @@ export function buildPackageExports(
     icons?: IconManifestType[];
   } = {},
 ) {
-  const { addLibraryExport, addAllExport, addSubAllExport, icons = [] } = options;
+  const {
+    addLibraryExport,
+    addAllExport,
+    addSubAllExport,
+    icons = [],
+  } = options;
   const exports: Record<
     string,
     {

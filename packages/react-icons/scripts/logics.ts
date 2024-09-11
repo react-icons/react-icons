@@ -112,15 +112,22 @@ export async function rmDirRecursive(dest: string) {
   await fs.rm(dest, { recursive: true, force: true });
 }
 
-export function buildPackageExports(options: { addLibraryExport?: boolean, icons?: IconManifestType[]} = {}) {
-  const { addLibraryExport, icons = [] } = options
+export function buildPackageExports(
+  options: {
+    addLibraryExport?: boolean;
+    addAllExport?: boolean;
+    addSubAllExport?: boolean;
+    icons?: IconManifestType[];
+  } = {},
+) {
+  const { addLibraryExport, addAllExport, addSubAllExport, icons = [] } = options;
   const exports: Record<
     string,
     {
       types: string;
       require: string;
       import: string;
-      default: string;
+      default?: string;
     }
   > = {
     ".": {
@@ -131,12 +138,20 @@ export function buildPackageExports(options: { addLibraryExport?: boolean, icons
     },
   };
 
-  if (addLibraryExport) exports["./lib"] = {
-    types: "./lib/index.d.ts",
-    require: "./lib/index.js",
-    import: "./lib/index.mjs",
-    default: "./lib/index.mjs",
-  };
+  if (addLibraryExport)
+    exports["./lib"] = {
+      types: "./lib/index.d.ts",
+      require: "./lib/index.js",
+      import: "./lib/index.mjs",
+      default: "./lib/index.mjs",
+    };
+
+  if (addAllExport)
+    exports["./*"] = {
+      types: "./*.d.ts",
+      import: "./*.mjs",
+      require: "./*.js",
+    };
 
   icons.forEach((icon) => {
     exports[`./${icon.id}`] = {
@@ -145,6 +160,13 @@ export function buildPackageExports(options: { addLibraryExport?: boolean, icons
       import: `./${icon.id}/index.mjs`,
       default: `./${icon.id}/index.mjs`,
     };
+    if (addSubAllExport) {
+      exports[`./${icon.id}/*`] = {
+        types: `./${icon.id}/*.d.ts`,
+        import: `./${icon.id}/*.mjs`,
+        require: `./${icon.id}/*.js`,
+      };
+    }
   });
 
   return exports;

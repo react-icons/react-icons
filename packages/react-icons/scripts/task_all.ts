@@ -30,11 +30,11 @@ export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
 
     await write(
       [icon.id, "index.js"],
-      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n",
+      "// THIS FILE IS AUTO GENERATED\n",
     );
     await write(
       [icon.id, "index.mjs"],
-      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib/index.mjs';\n",
+      "// THIS FILE IS AUTO GENERATED\n",
     );
     await write(
       [icon.id, "index.d.ts"],

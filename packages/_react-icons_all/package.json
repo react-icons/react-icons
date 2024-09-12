@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "5.2.1",
+  "version": "5.3.0",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
@@ -41,11 +41,21 @@
       "import": "./ci/index.mjs",
       "default": "./ci/index.mjs"
     },
+    "./ci/*": {
+      "types": "./ci/*.d.ts",
+      "import": "./ci/*.mjs",
+      "require": "./ci/*.js"
+    },
     "./fa": {
       "types": "./fa/index.d.ts",
       "require": "./fa/index.js",
       "import": "./fa/index.mjs",
       "default": "./fa/index.mjs"
+    },
+    "./fa/*": {
+      "types": "./fa/*.d.ts",
+      "import": "./fa/*.mjs",
+      "require": "./fa/*.js"
     },
     "./fa6": {
       "types": "./fa6/index.d.ts",
@@ -53,11 +63,21 @@
       "import": "./fa6/index.mjs",
       "default": "./fa6/index.mjs"
     },
+    "./fa6/*": {
+      "types": "./fa6/*.d.ts",
+      "import": "./fa6/*.mjs",
+      "require": "./fa6/*.js"
+    },
     "./io": {
       "types": "./io/index.d.ts",
       "require": "./io/index.js",
       "import": "./io/index.mjs",
       "default": "./io/index.mjs"
+    },
+    "./io/*": {
+      "types": "./io/*.d.ts",
+      "import": "./io/*.mjs",
+      "require": "./io/*.js"
     },
     "./io5": {
       "types": "./io5/index.d.ts",
@@ -65,11 +85,21 @@
       "import": "./io5/index.mjs",
       "default": "./io5/index.mjs"
     },
+    "./io5/*": {
+      "types": "./io5/*.d.ts",
+      "import": "./io5/*.mjs",
+      "require": "./io5/*.js"
+    },
     "./md": {
       "types": "./md/index.d.ts",
       "require": "./md/index.js",
       "import": "./md/index.mjs",
       "default": "./md/index.mjs"
+    },
+    "./md/*": {
+      "types": "./md/*.d.ts",
+      "import": "./md/*.mjs",
+      "require": "./md/*.js"
     },
     "./ti": {
       "types": "./ti/index.d.ts",
@@ -77,11 +107,21 @@
       "import": "./ti/index.mjs",
       "default": "./ti/index.mjs"
     },
+    "./ti/*": {
+      "types": "./ti/*.d.ts",
+      "import": "./ti/*.mjs",
+      "require": "./ti/*.js"
+    },
     "./go": {
       "types": "./go/index.d.ts",
       "require": "./go/index.js",
       "import": "./go/index.mjs",
       "default": "./go/index.mjs"
+    },
+    "./go/*": {
+      "types": "./go/*.d.ts",
+      "import": "./go/*.mjs",
+      "require": "./go/*.js"
     },
     "./fi": {
       "types": "./fi/index.d.ts",
@@ -89,11 +129,21 @@
       "import": "./fi/index.mjs",
       "default": "./fi/index.mjs"
     },
+    "./fi/*": {
+      "types": "./fi/*.d.ts",
+      "import": "./fi/*.mjs",
+      "require": "./fi/*.js"
+    },
     "./lu": {
       "types": "./lu/index.d.ts",
       "require": "./lu/index.js",
       "import": "./lu/index.mjs",
       "default": "./lu/index.mjs"
+    },
+    "./lu/*": {
+      "types": "./lu/*.d.ts",
+      "import": "./lu/*.mjs",
+      "require": "./lu/*.js"
     },
     "./gi": {
       "types": "./gi/index.d.ts",
@@ -101,11 +151,21 @@
       "import": "./gi/index.mjs",
       "default": "./gi/index.mjs"
     },
+    "./gi/*": {
+      "types": "./gi/*.d.ts",
+      "import": "./gi/*.mjs",
+      "require": "./gi/*.js"
+    },
     "./wi": {
       "types": "./wi/index.d.ts",
       "require": "./wi/index.js",
       "import": "./wi/index.mjs",
       "default": "./wi/index.mjs"
+    },
+    "./wi/*": {
+      "types": "./wi/*.d.ts",
+      "import": "./wi/*.mjs",
+      "require": "./wi/*.js"
     },
     "./di": {
       "types": "./di/index.d.ts",
@@ -113,11 +173,21 @@
       "import": "./di/index.mjs",
       "default": "./di/index.mjs"
     },
+    "./di/*": {
+      "types": "./di/*.d.ts",
+      "import": "./di/*.mjs",
+      "require": "./di/*.js"
+    },
     "./ai": {
       "types": "./ai/index.d.ts",
       "require": "./ai/index.js",
       "import": "./ai/index.mjs",
       "default": "./ai/index.mjs"
+    },
+    "./ai/*": {
+      "types": "./ai/*.d.ts",
+      "import": "./ai/*.mjs",
+      "require": "./ai/*.js"
     },
     "./bs": {
       "types": "./bs/index.d.ts",
@@ -125,11 +195,21 @@
       "import": "./bs/index.mjs",
       "default": "./bs/index.mjs"
     },
+    "./bs/*": {
+      "types": "./bs/*.d.ts",
+      "import": "./bs/*.mjs",
+      "require": "./bs/*.js"
+    },
     "./ri": {
       "types": "./ri/index.d.ts",
       "require": "./ri/index.js",
       "import": "./ri/index.mjs",
       "default": "./ri/index.mjs"
+    },
+    "./ri/*": {
+      "types": "./ri/*.d.ts",
+      "import": "./ri/*.mjs",
+      "require": "./ri/*.js"
     },
     "./fc": {
       "types": "./fc/index.d.ts",
@@ -137,11 +217,21 @@
       "import": "./fc/index.mjs",
       "default": "./fc/index.mjs"
     },
+    "./fc/*": {
+      "types": "./fc/*.d.ts",
+      "import": "./fc/*.mjs",
+      "require": "./fc/*.js"
+    },
     "./gr": {
       "types": "./gr/index.d.ts",
       "require": "./gr/index.js",
       "import": "./gr/index.mjs",
       "default": "./gr/index.mjs"
+    },
+    "./gr/*": {
+      "types": "./gr/*.d.ts",
+      "import": "./gr/*.mjs",
+      "require": "./gr/*.js"
     },
     "./hi": {
       "types": "./hi/index.d.ts",
@@ -149,11 +239,21 @@
       "import": "./hi/index.mjs",
       "default": "./hi/index.mjs"
     },
+    "./hi/*": {
+      "types": "./hi/*.d.ts",
+      "import": "./hi/*.mjs",
+      "require": "./hi/*.js"
+    },
     "./hi2": {
       "types": "./hi2/index.d.ts",
       "require": "./hi2/index.js",
       "import": "./hi2/index.mjs",
       "default": "./hi2/index.mjs"
+    },
+    "./hi2/*": {
+      "types": "./hi2/*.d.ts",
+      "import": "./hi2/*.mjs",
+      "require": "./hi2/*.js"
     },
     "./si": {
       "types": "./si/index.d.ts",
@@ -161,11 +261,21 @@
       "import": "./si/index.mjs",
       "default": "./si/index.mjs"
     },
+    "./si/*": {
+      "types": "./si/*.d.ts",
+      "import": "./si/*.mjs",
+      "require": "./si/*.js"
+    },
     "./sl": {
       "types": "./sl/index.d.ts",
       "require": "./sl/index.js",
       "import": "./sl/index.mjs",
       "default": "./sl/index.mjs"
+    },
+    "./sl/*": {
+      "types": "./sl/*.d.ts",
+      "import": "./sl/*.mjs",
+      "require": "./sl/*.js"
     },
     "./im": {
       "types": "./im/index.d.ts",
@@ -173,11 +283,21 @@
       "import": "./im/index.mjs",
       "default": "./im/index.mjs"
     },
+    "./im/*": {
+      "types": "./im/*.d.ts",
+      "import": "./im/*.mjs",
+      "require": "./im/*.js"
+    },
     "./bi": {
       "types": "./bi/index.d.ts",
       "require": "./bi/index.js",
       "import": "./bi/index.mjs",
       "default": "./bi/index.mjs"
+    },
+    "./bi/*": {
+      "types": "./bi/*.d.ts",
+      "import": "./bi/*.mjs",
+      "require": "./bi/*.js"
     },
     "./cg": {
       "types": "./cg/index.d.ts",
@@ -185,11 +305,21 @@
       "import": "./cg/index.mjs",
       "default": "./cg/index.mjs"
     },
+    "./cg/*": {
+      "types": "./cg/*.d.ts",
+      "import": "./cg/*.mjs",
+      "require": "./cg/*.js"
+    },
     "./vsc": {
       "types": "./vsc/index.d.ts",
       "require": "./vsc/index.js",
       "import": "./vsc/index.mjs",
       "default": "./vsc/index.mjs"
+    },
+    "./vsc/*": {
+      "types": "./vsc/*.d.ts",
+      "import": "./vsc/*.mjs",
+      "require": "./vsc/*.js"
     },
     "./tb": {
       "types": "./tb/index.d.ts",
@@ -197,11 +327,21 @@
       "import": "./tb/index.mjs",
       "default": "./tb/index.mjs"
     },
+    "./tb/*": {
+      "types": "./tb/*.d.ts",
+      "import": "./tb/*.mjs",
+      "require": "./tb/*.js"
+    },
     "./tfi": {
       "types": "./tfi/index.d.ts",
       "require": "./tfi/index.js",
       "import": "./tfi/index.mjs",
       "default": "./tfi/index.mjs"
+    },
+    "./tfi/*": {
+      "types": "./tfi/*.d.ts",
+      "import": "./tfi/*.mjs",
+      "require": "./tfi/*.js"
     },
     "./rx": {
       "types": "./rx/index.d.ts",
@@ -209,17 +349,32 @@
       "import": "./rx/index.mjs",
       "default": "./rx/index.mjs"
     },
+    "./rx/*": {
+      "types": "./rx/*.d.ts",
+      "import": "./rx/*.mjs",
+      "require": "./rx/*.js"
+    },
     "./pi": {
       "types": "./pi/index.d.ts",
       "require": "./pi/index.js",
       "import": "./pi/index.mjs",
       "default": "./pi/index.mjs"
     },
+    "./pi/*": {
+      "types": "./pi/*.d.ts",
+      "import": "./pi/*.mjs",
+      "require": "./pi/*.js"
+    },
     "./lia": {
       "types": "./lia/index.d.ts",
       "require": "./lia/index.js",
       "import": "./lia/index.mjs",
       "default": "./lia/index.mjs"
+    },
+    "./lia/*": {
+      "types": "./lia/*.d.ts",
+      "import": "./lia/*.mjs",
+      "require": "./lia/*.js"
     }
   }
 }

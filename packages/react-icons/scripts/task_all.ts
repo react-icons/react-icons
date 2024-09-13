@@ -4,51 +4,52 @@ import camelcase from "camelcase";
 import { icons } from "../src/icons";
 import { iconRowTemplate } from "./templates";
 import { getIconFiles, convertIconData, rmDirRecursive } from "./logics";
-import { svgo } from "./svgo";
+import { svgoConfig } from "./svgo";
+import { optimize as svgoOptimize } from "svgo";
+import { IconDefinition, TaskContext } from "./_types";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function dirInit({ DIST, LIB, rootDir }) {
-  const ignore = (err) => {
-    if (err.code === "EEXIST") return;
+export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const ignore = (err: any) => {
+    if (err?.code === "EEXIST") return;
     throw err;
   };
 
   await rmDirRecursive(DIST);
   await fs.mkdir(DIST, { recursive: true }).catch(ignore);
   await fs.mkdir(LIB).catch(ignore);
-  await fs.mkdir(path.resolve(LIB, "esm")).catch(ignore);
-  await fs.mkdir(path.resolve(LIB, "cjs")).catch(ignore);
 
-  const write = (filePath, str) =>
+  const write = (filePath: string[], str: string) =>
     fs.writeFile(path.resolve(DIST, ...filePath), str, "utf8").catch(ignore);
 
-  const initFiles = ["index.d.ts", "index.esm.js", "index.js"];
+  const initFiles = ["index.d.ts", "index.mjs", "index.js"];
 
   for (const icon of icons) {
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
 
     await write(
       [icon.id, "index.js"],
-      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n"
+      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n",
     );
     await write(
-      [icon.id, "index.esm.js"],
-      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib';\n"
+      [icon.id, "index.mjs"],
+      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib/index.mjs';\n",
     );
     await write(
       [icon.id, "index.d.ts"],
-      "// THIS FILE IS AUTO GENERATED\nimport { IconTree, IconType } from '../lib'\n"
+      "// THIS FILE IS AUTO GENERATED\nimport type { IconType } from '../lib/index'\n",
     );
     await write(
       [icon.id, "package.json"],
       JSON.stringify(
         {
           sideEffects: false,
-          module: "./index.esm.js",
+          module: "./index.mjs",
         },
         null,
-        2
-      ) + "\n"
+        2,
+      ) + "\n",
     );
   }
 
@@ -56,8 +57,11 @@ export async function dirInit({ DIST, LIB, rootDir }) {
     await write([file], "// THIS FILE IS AUTO GENERATED\n");
   }
 }
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
+export async function writeIconModule(
+  icon: IconDefinition,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  { DIST, LIB, rootDir }: TaskContext,
+) {
   const exists = new Set(); // for remove duplicate
   for (const content of icon.contents) {
     const files = await getIconFiles(content);
@@ -65,7 +69,7 @@ export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
     for (const file of files) {
       const svgStrRaw = await fs.readFile(file, "utf8");
       const svgStr = content.processWithSVGO
-        ? await svgo.optimize(svgStrRaw).then((result) => result.data)
+        ? svgoOptimize(svgStrRaw, svgoConfig).data
         : svgStrRaw;
 
       const iconData = await convertIconData(svgStr, content.multiColor);
@@ -78,24 +82,24 @@ export async function writeIconModule(icon, { DIST, LIB, rootDir }) {
       if (exists.has(name)) continue;
       exists.add(name);
 
-      // write like: module/fa/index.esm.js
+      // write like: module/fa/index.mjs
       const modRes = iconRowTemplate(icon, name, iconData, "module");
       await fs.appendFile(
-        path.resolve(DIST, icon.id, "index.esm.js"),
+        path.resolve(DIST, icon.id, "index.mjs"),
         modRes,
-        "utf8"
+        "utf8",
       );
       const comRes = iconRowTemplate(icon, name, iconData, "common");
       await fs.appendFile(
         path.resolve(DIST, icon.id, "index.js"),
         comRes,
-        "utf8"
+        "utf8",
       );
       const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
       await fs.appendFile(
         path.resolve(DIST, icon.id, "index.d.ts"),
         dtsRes,
-        "utf8"
+        "utf8",
       );
 
       exists.add(file);

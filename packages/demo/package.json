@@ -1,11 +1,11 @@
 {
   "name": "demo",
-  "version": "4.11.1-snapshot.0",
+  "version": "5.2.1",
   "private": true,
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.11.1-snapshot.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
@@ -16,8 +16,11 @@
   },
   "devDependencies": {
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.3"
+    "enzyme-adapter-react-16": "^1.15.8",
+    "enzyme-to-json": "^3.6.2"
+  },
+  "resolutions": {
+    "@types/cheerio": "npm:empty-npm-package"
   },
   "jest": {
     "snapshotSerializers": [

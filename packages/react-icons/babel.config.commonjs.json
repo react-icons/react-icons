@@ -1,0 +1,23 @@
+{
+  "targets": {
+    "esmodules": false
+  },
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": "commonjs"
+      }
+    ],
+    "@babel/typescript",
+    "@babel/react"
+  ],
+  "plugins": [
+    [
+      "./plugin/defaultImportConverter",
+      {
+        "keys": ["React"]
+      }
+    ]
+  ]
+}

@@ -44,14 +44,14 @@ async function main() {
 
 async function gitCloneIcon(source: IconSetGitSource, ctx: Context) {
   console.log(
-    `start clone icon: ${source.url}/${source.remoteDir}@${source.branch}`
+    `start clone icon: ${source.url}/${source.remoteDir}@${source.branch}`,
   );
   await execFile(
     "git",
     ["clone", "--filter=tree:0", "--no-checkout", source.url, source.localName],
     {
       cwd: ctx.distBaseDir,
-    }
+    },
   );
 
   await execFile(
@@ -59,7 +59,7 @@ async function gitCloneIcon(source: IconSetGitSource, ctx: Context) {
     ["sparse-checkout", "set", "--cone", "--skip-checks", source.remoteDir],
     {
       cwd: ctx.iconDir(source.localName),
-    }
+    },
   );
 
   await execFile("git", ["checkout", source.hash], {

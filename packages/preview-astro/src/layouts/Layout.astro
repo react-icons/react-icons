@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  noindex?: boolean;
+  activeIconSet?: string;
+}
+
+const { title, noindex, activeIconSet } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+import { IconsManifest } from "react-icons";
+import BrandIcon from "./icon.astro";
+import { SearchInput } from "../components/searchinput";
+
+const sortedManifest = IconsManifest.sort((a, b) =>
+  a.name.localeCompare(b.name),
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="shortcut icon" href="/react-icons/favicon.png" />
+    <meta name="theme-color" content="#e91e63" />
+    <meta name="title" content="React Icons" />
+    <meta
+      name="description"
+      content="Include popular icons in your React projects easly with react-icons."
+    />
+    <meta name="keywords" content="React, Icons, Tree Shaking, SVG" />
+    <link rel="manifest" href="/react-icons/manifest.json" />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <ViewTransitions />
+  </head>
+  <body>
+    <div transition:name="sidebar" transition:persist class="sidebar pt3">
+      <!-- <Heading isOpen={isOpen} setIsOpen={setIsOpen} /> -->
+      <div class="brand">
+        <a href="/react-icons/">
+          <BrandIcon />
+          <span>react-icons</span>
+        </a>
+        <div class="brand--navmenu">
+          <!-- <button class={`menu ${isOpen && "active"}`} onClick={toggleMenu}> -->
+          <button class="menu">
+            <div>Menu</div>
+          </button>
+        </div>
+      </div>
+
+      <div class="search p2">
+        <SearchInput client:load />
+      </div>
+
+      <!-- if sidebar open apply 'active' class -->
+      <ul class="sidebar--links">
+        <li>
+          <!-- <ActiveLink href="/"> -->
+          <a class="rounded px2 py1" href="/react-icons/">Home</a>
+          <!-- </ActiveLink> -->
+        </li>
+        {
+          sortedManifest.map((icon) => (
+            <li>
+              <a
+                href={`/react-icons/icons/${icon.id}/`}
+                class={`rounded px2 py1${
+                  activeIconSet === icon.id ? " active" : ""
+                }`}
+              >
+                {icon.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <main class="container">
+      <slot />
+    </main>
+    <style is:global>
+      @import "../styles/global.scss";
+    </style>
+    <script is:inline>
+      function onButtonClick() {
+        const sidebar = document.querySelector("ul.sidebar--links");
+        sidebar.classList.toggle("active");
+
+        const button = document.querySelector("button.menu");
+        button.classList.toggle("active");
+      }
+      document
+        .querySelector("button.menu")
+        .addEventListener("click", onButtonClick);
+    </script>
+  </body>
+</html>

@@ -1,6 +1,12 @@
+plugins:
+  - prettier-plugin-astro
 overrides:
   - files:
       - "*.tsx"
       - "*.ts"
     options:
       parser: typescript
+  - files:
+      - "*.astro"
+    options:
+      parser: astro

@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2015",
+    "noEmit": true,
+    "emitDeclarationOnly": false,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["**/*.ts"]
+}

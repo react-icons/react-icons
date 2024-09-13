@@ -1,14 +1,16 @@
 import path from "path";
 import { performance } from "perf_hooks";
+import { buildPackageExports } from "./logics";
 import { icons } from "../src/icons";
 import * as taskCommon from "./task_common";
 import * as taskAll from "./task_all";
 import * as taskFiles from "./task_files";
+import { TaskContext } from "./_types";
 
 // file path
 const _rootDir = path.resolve(__dirname, "../");
 
-async function task(name, fn) {
+async function task(name: string, fn: () => Promise<void> | void) {
   const start = performance.now();
   console.log(`================= ${name} =================`);
   await fn();
@@ -19,7 +21,7 @@ async function task(name, fn) {
 async function main() {
   try {
     // @react-icons/all
-    const allOpt = {
+    const allOpt: TaskContext = {
       rootDir: _rootDir,
       DIST: path.resolve(_rootDir, "../_react-icons_all"),
       LIB: path.resolve(_rootDir, "../_react-icons_all/lib"),
@@ -29,17 +31,20 @@ async function main() {
       await taskCommon.writeEntryPoints(allOpt);
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
-      await taskCommon.writePackageJson({ name: "react-icons" }, allOpt);
+      await taskCommon.writePackageJson(
+        { name: "react-icons", exports: buildPackageExports(icons) },
+        allOpt,
+      );
       await taskCommon.copyReadme(allOpt);
     });
     await task("@react-icons/all write icons", async () => {
       await Promise.all(
-        icons.map((icon) => taskAll.writeIconModule(icon, allOpt))
+        icons.map((icon) => taskAll.writeIconModule(icon, allOpt)),
       );
     });
 
     // @react-icons/all-files
-    const filesOpt = {
+    const filesOpt: TaskContext = {
       rootDir: _rootDir,
       DIST: path.resolve(_rootDir, "../_react-icons_all-files"),
       LIB: path.resolve(_rootDir, "../_react-icons_all-files/lib"),
@@ -51,13 +56,13 @@ async function main() {
       await taskCommon.writeLicense(filesOpt);
       await taskCommon.writePackageJson(
         { name: "@react-icons/all-files" },
-        filesOpt
+        filesOpt,
       );
       await taskCommon.copyReadme(filesOpt);
     });
     await task("@react-icons/all-files write icons", async () => {
       await Promise.all(
-        icons.map((icon) => taskFiles.writeIconModuleFiles(icon, filesOpt))
+        icons.map((icon) => taskFiles.writeIconModuleFiles(icon, filesOpt)),
       );
     });
 

@@ -2,7 +2,7 @@ name: Node.js CI
 
 "on":
   - push
-  - pull_request_target
+  - pull_request
 
 jobs:
   build:
@@ -33,13 +33,26 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/preview/out
+          publish_dir: ./packages/preview-astro/dist
         if: github.ref == 'refs/heads/master'
+      - name: generate notes
+        run: gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${GITHUB_REF#tags/} --jq .body >> RELEASE_NOTES
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: contains(github.ref, 'tags/')
+      - name: append versions
+        run: |
+          echo >> RELEASE_NOTES
+          cat packages/react-icons/VERSIONS >> RELEASE_NOTES
+        if: contains(github.ref, 'tags/')
+      - name: cat
+        run: cat RELEASE_NOTES
+        if: contains(github.ref, 'tags/')
       - name: Release
         uses: ncipollo/release-action@v1
         with:
           artifacts: "packages/_react-icons_*/*.tgz"
-          bodyFile: "packages/react-icons/VERSIONS"
+          bodyFile: "RELEASE_NOTES"
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: ${{ contains(github.ref, 'snapshot') }}
         if: contains(github.ref, 'tags/')

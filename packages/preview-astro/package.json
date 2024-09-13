@@ -1,0 +1,30 @@
+{
+  "name": "preview-astro",
+  "type": "module",
+  "version": "5.2.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "NODE_OPTIONS=--max-old-space-size=32768 astro build",
+    "check": "astro check",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/react": "^3.3.1",
+    "@nanostores/react": "^0.7.2",
+    "astro": "^4.7.0",
+    "basscss": "^8.1.0",
+    "cogo-toast": "^4.2.3",
+    "copy-to-clipboard": "^3.3.3",
+    "nanostores": "^0.10.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "sass": "^1.69.5",
+    "tiny-skeleton-loader-react": "^1.2.1",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,81 @@
+---
+import { Code } from "astro:components";
+import Container from "../../components/container.astro";
+import Layout from "../../layouts/Layout.astro";
+import { IconSetViewer } from "../../components/iconset-viewer.tsx";
+import { IconsManifest } from "react-icons";
+
+export async function getStaticPaths() {
+  return Promise.all(
+    IconsManifest.map(async (manifest) => ({
+      params: { name: manifest.id },
+      props: {
+        manifest,
+      },
+    })),
+  );
+}
+
+const { manifest } = Astro.props;
+
+// console.log("IconsManifest", "", IconsManifest, lib["Fa500Px"]);
+---
+
+<Layout
+  title={`React icons preview for ${manifest.id}`}
+  activeIconSet={manifest.id}
+>
+  <Container title={manifest.name}>
+    <!-- why not work? -->
+    <!-- <table class="iconset--info">
+      <tbody>
+        <tr>
+          <th>License</th>
+          <td>
+            <a
+              href={manifest.licenseUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {manifest.license}
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th>Project</th>
+          <td>
+            <a
+              href={manifest.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {manifest.projectUrl}
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table> -->
+    <dl class="iconset--info">
+      <dt>License</dt>
+      <dd>
+        <a href={manifest.licenseUrl} target="_blank" rel="noopener noreferrer">
+          {manifest.license}
+        </a>
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a href={manifest.projectUrl} target="_blank" rel="noopener noreferrer">
+          {manifest.projectUrl}
+        </a>
+      </dd>
+    </dl>
+
+    <h2>Import</h2>
+    <Code
+      lang="jsx"
+      code={`import { IconName } from "react-icons/${manifest.id}";`}
+    />
+
+    <IconSetViewer client:load iconSet={manifest.id} />
+  </Container>
+</Layout>

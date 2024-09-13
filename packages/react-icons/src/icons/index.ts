@@ -23,7 +23,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/Klarr-Agency/Circum-Icons.git",
       branch: "main",
-      hash: "eeef6206df834e6957a45e36d2bfb7459ce6e799",
+      hash: "cec1364b5199f55e946a9a8360385a958b98cc60",
     },
   },
   {
@@ -33,14 +33,14 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/fontawesome/svgs/+(brands|solid)/*.svg"
+          "../../icons/fontawesome/svgs/+(brands|solid)/*.svg",
         ),
         formatter: (name) => `Fa${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/fontawesome/svgs/regular/*.svg"
+          "../../icons/fontawesome/svgs/regular/*.svg",
         ),
         formatter: (name) => `FaReg${name}`,
       },
@@ -64,14 +64,14 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/fontawesome-6/svgs/+(brands|solid)/*.svg"
+          "../../icons/fontawesome-6/svgs/+(brands|solid)/*.svg",
         ),
         formatter: (name) => `Fa${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/fontawesome-6/svgs/regular/*.svg"
+          "../../icons/fontawesome-6/svgs/regular/*.svg",
         ),
         formatter: (name) => `FaReg${name}`,
       },
@@ -85,7 +85,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "svgs/",
       url: "https://github.com/FortAwesome/Font-Awesome.git",
       branch: "6.x",
-      hash: "f0c25837a3fe0e03783b939559e088abcbfb3c4b",
+      hash: "c0f460dca7f7688761120415ff3c9cf7f73119be",
     },
   },
   {
@@ -95,7 +95,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("ionicons")),
-          "collection/icon/svg/*.svg"
+          "collection/icon/svg/*.svg",
         ),
         formatter: (name) => `Io${name}`,
       },
@@ -111,7 +111,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../../../node_modules/ionicons-5/dist/svg/*.svg"
+          "../../../../node_modules/ionicons-5/dist/svg/*.svg",
         ),
         formatter: (name) => `Io${name}`,
         processWithSVGO: true,
@@ -130,39 +130,39 @@ export const icons: IconDefinition[] = [
           const normal = await glob(
             path.resolve(
               __dirname,
-              "../../icons/material-design-icons/src/*/*/materialicons/24px.svg"
-            )
+              "../../icons/material-design-icons/src/*/*/materialicons/24px.svg",
+            ),
           );
 
           const twotone = await glob(
             path.resolve(
               __dirname,
-              "../../icons/material-design-icons/src/*/*/materialiconstwotone/24px.svg"
-            )
+              "../../icons/material-design-icons/src/*/*/materialiconstwotone/24px.svg",
+            ),
           );
           return [
             ...normal,
             ...twotone.filter(
-              (file) => !normal.includes(file.replace("twotone/", "/"))
+              (file) => !normal.includes(file.replace("twotone/", "/")),
             ),
           ];
         },
         formatter: (name, file) =>
           `Md${camelcase(
             file.replace(/^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i, "$1"),
-            { pascalCase: true }
+            { pascalCase: true },
           )}`,
         processWithSVGO: true,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/material-design-icons/src/*/*/materialiconsoutlined/24px.svg"
+          "../../icons/material-design-icons/src/*/*/materialiconsoutlined/24px.svg",
         ),
         formatter: (name, file) =>
           `MdOutline${camelcase(
             file.replace(/^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i, "$1"),
-            { pascalCase: true }
+            { pascalCase: true },
           )}`,
         processWithSVGO: true,
       },
@@ -177,7 +177,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/",
       url: "https://github.com/google/material-design-icons.git",
       branch: "master",
-      hash: "589092d9a7177a4b9e641f7e790d9cc60ce187a4",
+      hash: "9beae745bb758f3ad56654fb377ea5cf62be4915",
     },
   },
   {
@@ -208,7 +208,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("@primer/octicons")),
-          "build/svg/*-24.svg"
+          "build/svg/*-24.svg",
         ),
         formatter: (name) => `Go${name}`.replace("24", ""),
       },
@@ -224,7 +224,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("feather-icons")),
-          "icons/*.svg"
+          "icons/*.svg",
         ),
         formatter: (name) => `Fi${name}`,
       },
@@ -240,7 +240,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           path.dirname(require.resolve("lucide-static")),
-          "../icons/*.svg"
+          "../icons/*.svg",
         ),
         formatter: (name) => `Lu${name}`,
       },
@@ -256,7 +256,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/game-icons-inverted/all-icons/*.svg"
+          "../../icons/game-icons-inverted/all-icons/*.svg",
         ),
         formatter: (name) => `Gi${name}`,
       },
@@ -322,23 +322,24 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/ant-design-icons/packages/icons-svg/svg/filled/*.svg"
+          "../../icons/ant-design-icons/packages/icons-svg/svg/filled/*.svg",
         ),
         formatter: (name) => `AiFill${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/ant-design-icons/packages/icons-svg/svg/outlined/*.svg"
+          "../../icons/ant-design-icons/packages/icons-svg/svg/outlined/*.svg",
         ),
         formatter: (name) => `AiOutline${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/ant-design-icons/packages/icons-svg/svg/twotone/*.svg"
+          "../../icons/ant-design-icons/packages/icons-svg/svg/twotone/*.svg",
         ),
         formatter: (name) => `AiTwotone${name}`,
+        multiColor: true,
       },
     ],
     projectUrl: "https://github.com/ant-design/ant-design-icons",
@@ -350,7 +351,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "packages/icons-svg/svg/",
       url: "https://github.com/ant-design/ant-design-icons.git",
       branch: "master",
-      hash: "4ec2740272706da3f9d91c07d01fa5bdd2e5c2f6",
+      hash: "655d46ec72d78357d7c6c0ac1c623b8975bc4f76",
     },
   },
   {
@@ -360,21 +361,21 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/bootstrap/icons/*!(-reverse)-fill.svg"
+          "../../icons/bootstrap/icons/*!(-reverse)-fill.svg",
         ),
         formatter: (name) => `BsFill${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/bootstrap/icons/*-reverse!(-fill).svg"
+          "../../icons/bootstrap/icons/*-reverse!(-fill).svg",
         ),
         formatter: (name) => `BsReverse${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/bootstrap/icons/*!(-fill|-reverse|reverse-).svg"
+          "../../icons/bootstrap/icons/*!(-fill|-reverse|reverse-).svg",
         ),
         formatter: (name) => `Bs${name}`,
       },
@@ -388,7 +389,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/twbs/icons.git",
       branch: "main",
-      hash: "24e7f7d14967dff3d716575f8a5edeb572b5e10f",
+      hash: "af0b3f82d129a90e8f2b0dcd7f0fef98dfcca18e",
     },
   },
   {
@@ -409,7 +410,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/Remix-Design/RemixIcon.git",
       branch: "master",
-      hash: "3c4f3ff316c8ebe1b8838c211ecaf8348d203049",
+      hash: "e252d6eac05b33a01c80794ffa0c745ed5d0b20e",
     },
   },
   {
@@ -419,7 +420,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/flat-color-icons/svg/*.svg"
+          "../../icons/flat-color-icons/svg/*.svg",
         ),
         formatter: (name) => `Fc${name}`,
         multiColor: true,
@@ -444,7 +445,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/grommet-icons/public/img/*.svg"
+          "../../icons/grommet-icons/public/img/*.svg",
         ),
         formatter: (name) => `Gr${name}`,
       },
@@ -458,7 +459,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "public/img/",
       url: "https://github.com/grommet/grommet-icons.git",
       branch: "master",
-      hash: "3de62049fa7d06f355751a7335c9f7d3a1aea55e",
+      hash: "bfb635567739ba4303d72eefcc908f310eaec351",
     },
   },
   {
@@ -468,14 +469,14 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons/optimized/solid/*.svg"
+          "../../icons/heroicons/optimized/solid/*.svg",
         ),
         formatter: (name) => `Hi${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons/optimized/outline/*.svg"
+          "../../icons/heroicons/optimized/outline/*.svg",
         ),
         formatter: (name) => `HiOutline${name}`,
       },
@@ -499,21 +500,21 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons-2/optimized/24/solid/*.svg"
+          "../../icons/heroicons-2/optimized/24/solid/*.svg",
         ),
         formatter: (name) => `Hi${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons-2/optimized/24/outline/*.svg"
+          "../../icons/heroicons-2/optimized/24/outline/*.svg",
         ),
         formatter: (name) => `HiOutline${name}`,
       },
       {
         files: path.resolve(
           __dirname,
-          "../../icons/heroicons-2/optimized/20/solid/*.svg"
+          "../../icons/heroicons-2/optimized/20/solid/*.svg",
         ),
         formatter: (name) => `HiMini${name}`,
       },
@@ -527,7 +528,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "optimized/",
       url: "https://github.com/tailwindlabs/heroicons.git",
       branch: "master",
-      hash: "eee05eb77af6cdedfb97f128d1998773fc984b28",
+      hash: "9a17872e685bf48b83c047572c45617b6fd345e7",
     },
   },
   {
@@ -548,7 +549,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/simple-icons/simple-icons.git",
       branch: "develop",
-      hash: "ceca705b0a95917e7178cd4d4a34fda46b6cfd78",
+      hash: "32b07a5b798b84b97f2cbbb5b69ec7cb80472f73",
     },
   },
   {
@@ -558,7 +559,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/simple-line-icons/src/svgs/*.svg"
+          "../../icons/simple-line-icons/src/svgs/*.svg",
         ),
         formatter: (name) => `Sl${name}`,
       },
@@ -604,7 +605,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/boxicons/svg/regular/*.svg"
+          "../../icons/boxicons/svg/regular/*.svg",
         ),
         formatter: (name) => `Bi${name.replace("Bx", "")}`,
       },
@@ -618,7 +619,7 @@ export const icons: IconDefinition[] = [
       },
     ],
     projectUrl: "https://github.com/atisawd/boxicons",
-    license: "CC BY 4.0 License",
+    license: "MIT",
     licenseUrl: "https://github.com/atisawd/boxicons/blob/master/LICENSE",
     source: {
       type: "git",
@@ -647,7 +648,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/svg/",
       url: "https://github.com/astrit/css.gg.git",
       branch: "master",
-      hash: "fd750c9df1b1caa060b6321da9b28dfd32028d83",
+      hash: "deea4fa5f39a2980d7586aed18d65cdba6fd85e3",
     },
   },
   {
@@ -657,7 +658,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/vscode-icons/src/icons/*.svg"
+          "../../icons/vscode-icons/src/icons/*.svg",
         ),
         formatter: (name) => `Vsc${name}`,
       },
@@ -671,7 +672,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/icons/",
       url: "https://github.com/microsoft/vscode-codicons.git",
       branch: "main",
-      hash: "e0565f0728c0b7f9e495e82d7338fd1e86f009c8",
+      hash: "05f8886984a3f6ffa44e283928fae0e3c4cbe6c4",
     },
   },
   {
@@ -679,7 +680,17 @@ export const icons: IconDefinition[] = [
     name: "Tabler Icons",
     contents: [
       {
-        files: path.resolve(__dirname, "../../icons/tabler-icons/icons/*.svg"),
+        files: path.resolve(
+          __dirname,
+          "../../icons/tabler-icons/icons/filled/*.svg",
+        ),
+        formatter: (name) => `Tb${name}Filled`,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/tabler-icons/icons/outline/*.svg",
+        ),
         formatter: (name) => `Tb${name}`,
       },
     ],
@@ -691,8 +702,8 @@ export const icons: IconDefinition[] = [
       localName: "tabler-icons",
       remoteDir: "icons/",
       url: "https://github.com/tabler/tabler-icons.git",
-      branch: "master",
-      hash: "91b9997fd03fc2685280815fdf74efd243292c17",
+      branch: "main",
+      hash: "94b458153d7bd86b4844fd67b442562f586b3c0b",
     },
   },
   {
@@ -724,7 +735,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/radix-icons/packages/radix-icons/icons/*.svg"
+          "../../icons/radix-icons/packages/radix-icons/icons/*.svg",
         ),
         formatter: (name) => `Rx${camelcase(name, { pascalCase: true })}`,
       },
@@ -748,7 +759,7 @@ export const icons: IconDefinition[] = [
       {
         files: path.resolve(
           __dirname,
-          "../../icons/phosphor-icons/assets/*/*.svg"
+          "../../icons/phosphor-icons/assets/*/*.svg",
         ),
         formatter: (name) => `Pi${name}`,
       },
@@ -762,7 +773,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "assets/",
       url: "https://github.com/phosphor-icons/core.git",
       branch: "main",
-      hash: "c67d7a849f450be1bfe64fd5820471e4019e5ff0",
+      hash: "fe23e2534cdb7bec24bd8e6bd99b3676bcf0d54f",
     },
   },
   {

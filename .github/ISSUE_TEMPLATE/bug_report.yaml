@@ -26,7 +26,10 @@ body:
     id: repo-url
     attributes:
       label: Minimal sample repository URL
-      description: Gist/GitHub URL. If it's happening on the demo site, its URL.
+      description: |
+        Gist/GitHub URL.
+        Please provide a repository that includes only the minimal packages and code necessary to reproduce the issue.
+        If it's happening on the demo site, its URL.
       placeholder: "https://github.com/..."
     validations:
       required: true

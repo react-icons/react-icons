@@ -647,7 +647,7 @@ export const icons: IconDefinition[] = [
       localName: "css.gg",
       remoteDir: "icons/svg/",
       url: "https://github.com/astrit/css.gg.git",
-      branch: "master",
+      branch: "main",
       hash: "deea4fa5f39a2980d7586aed18d65cdba6fd85e3",
     },
   },
@@ -795,6 +795,27 @@ export const icons: IconDefinition[] = [
       url: "https://github.com/icons8/line-awesome.git",
       branch: "master",
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
+    },
+  },
+  {
+    id: "mk",
+    name: "Maki Icons",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/maki/icons/*.svg"),
+        formatter: (name) => `Mk${name}`,
+      },
+    ],
+    projectUrl: "https://labs.mapbox.com/maki-icons/",
+    license: "CC0 1.0 Universal",
+    licenseUrl: "https://github.com/mapbox/maki/blob/main/LICENSE.txt",
+    source: {
+      type: "git",
+      localName: "maki",
+      remoteDir: "icons/",
+      url: "https://github.com/mapbox/maki.git",
+      branch: "main",
+      hash: "7e8795288b529c3570230cde0a32bd40c0c284b8",
     },
   },
 ];

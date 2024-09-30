@@ -1,6 +1,6 @@
 {
   "name": "react-icons",
-  "version": "5.2.1",
+  "version": "5.3.0",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
@@ -220,6 +220,12 @@
       "require": "./lia/index.js",
       "import": "./lia/index.mjs",
       "default": "./lia/index.mjs"
+    },
+    "./mk": {
+      "types": "./mk/index.d.ts",
+      "require": "./mk/index.js",
+      "import": "./mk/index.mjs",
+      "default": "./mk/index.mjs"
     }
   }
 }

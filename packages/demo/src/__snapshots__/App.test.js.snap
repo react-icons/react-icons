@@ -52,6 +52,7 @@ exports[`snapshot test 1`] = `
     <GrGrommet />
     <LiaNode />
     <TbPentagonNumber0 />
+    <FiTable />
   </p>
 </div>
 `;

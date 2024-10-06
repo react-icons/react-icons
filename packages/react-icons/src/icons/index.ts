@@ -222,16 +222,21 @@ export const icons: IconDefinition[] = [
     name: "Feather",
     contents: [
       {
-        files: path.resolve(
-          path.dirname(require.resolve("feather-icons")),
-          "icons/*.svg",
-        ),
+        files: path.resolve(__dirname, "../../icons/feather/icons/*.svg"),
         formatter: (name) => `Fi${name}`,
       },
     ],
     projectUrl: "https://feathericons.com/",
     license: "MIT",
     licenseUrl: "https://github.com/feathericons/feather/blob/master/LICENSE",
+    source: {
+      type: "git",
+      localName: "feather",
+      remoteDir: "icons/",
+      url: "https://github.com/feathericons/feather.git",
+      branch: "main",
+      hash: "1b002399e8758fb2bccea4d07312dc9e0f43dcb8",
+    },
   },
   {
     id: "lu",

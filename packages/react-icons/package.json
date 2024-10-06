@@ -37,7 +37,6 @@
     "cheerio": "^1.0.0-rc.12",
     "esbuild": "^0.20.2",
     "esbuild-register": "^3.5.0",
-    "feather-icons": "^4.7.3",
     "find-package": "^1.0.0",
     "glob": "^8.1.0",
     "glob-promise": "^6.0.5",

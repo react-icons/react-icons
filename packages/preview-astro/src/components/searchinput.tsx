@@ -26,7 +26,6 @@ export function SearchInput() {
     }
 
     setInputQuery(query);
-
     debouncedOnSearch(query.trim());
   };
   return (

@@ -18,8 +18,16 @@ export function SearchInput() {
   const [inputQuery, setInputQuery] = React.useState("");
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
+
+    if (query.trim() === '' || query.startsWith(' ')) {
+      setInputQuery('');
+      debouncedOnSearch('');
+      return;
+    }
+
     setInputQuery(query);
-    debouncedOnSearch(query);
+
+    debouncedOnSearch(query.trim());
   };
   return (
     <input

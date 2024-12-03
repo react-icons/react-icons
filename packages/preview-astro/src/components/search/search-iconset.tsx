@@ -30,13 +30,18 @@ export function SearchIconSet({
 
   const found =
     icons &&
-    Object.keys(icons).filter((name) =>
-      query
-        .toLowerCase()
-        .split(" ")
-        .filter((t) => !!t)
-        .every((term) => name.toLowerCase().includes(term)),
-    );
+    Object.keys(icons)
+      .filter((name) => {
+        const rules = query
+          .toLowerCase()
+          .split(" ")
+          .filter((t) => !!t);
+        return rules.length == 0
+          ? false
+          : rules.every((term) => name.toLowerCase().includes(term));
+      })
+      .slice(0, 100); // show top 100 icons
+
   return (
     <>
       {found ? (

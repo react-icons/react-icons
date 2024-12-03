@@ -11075,13 +11075,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"feather-icons@npm:^4.7.3":
-  version: 4.29.1
-  resolution: "feather-icons@npm:4.29.1"
+"feather-icons@npm:^4.29.2":
+  version: 4.29.2
+  resolution: "feather-icons@npm:4.29.2"
   dependencies:
     classnames: ^2.2.5
     core-js: ^3.1.3
-  checksum: 87c7d1b2a5049e0be1dbae27bd5d287c5abd9f4d6bc81783fa8559b2946fbd1e885f658584d0cff1879cb7bdedafaeb68e7548e2d5fcde40b9fcc74368259b92
+  checksum: 14afc5a186ec9ba4647476532039190e7e7953bcd8668a68f192314a1265d3570058d687b604f7bb876022ef9e8448d36b38393a54433fe7ebe56c5e65a29bcd
   languageName: node
   linkType: hard
 
@@ -14868,10 +14868,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-static@npm:^0.263.0":
-  version: 0.263.0
-  resolution: "lucide-static@npm:0.263.0"
-  checksum: 62b07a917fac9ce37c492c2da16e84e4a6417034f7e114519194b3fe6d25a1e065c26e12bdf6ee1ce8a2dd0cc54adf6c3501902f32e95870d43b83216080ccbf
+"lucide-static@npm:^0.462.0":
+  version: 0.462.0
+  resolution: "lucide-static@npm:0.462.0"
+  checksum: 3fa8761bd8d24c0ef082c65262dae494dfc7d57e943370ee7a4a899c0c63990acbb5e55bdc7c85b88f068a07769274c6f64d65a5577fa78f50bb8e532187c4e6
   languageName: node
   linkType: hard
 
@@ -18620,13 +18620,13 @@ __metadata:
     cheerio: ^1.0.0-rc.12
     esbuild: ^0.20.2
     esbuild-register: ^3.5.0
-    feather-icons: ^4.7.3
+    feather-icons: ^4.29.2
     find-package: ^1.0.0
     glob: ^8.1.0
     glob-promise: ^6.0.5
     ionicons: ^4.6.3
     ionicons-5: "npm:ionicons@5"
-    lucide-static: ^0.263.0
+    lucide-static: ^0.462.0
     p-queue: ^8.0.1
     svgo: ^3.0.3
     typescript: ^5.4.5

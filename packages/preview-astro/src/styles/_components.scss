@@ -158,6 +158,12 @@ a {
   grid-row-gap: var(--space-2);
   text-align: center;
 
+  .icon-name {
+    margin-bottom: 0;
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
   .item {
     outline: none;
 

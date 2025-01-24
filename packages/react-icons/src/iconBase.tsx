@@ -59,7 +59,7 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   color?: string;
   title?: string;
   iconDataOverride?: Partial<IconTree>[];
-  stops: React.SVGProps<SVGStopElement>[],
+  stops?: React.SVGProps<SVGStopElement>[],
   startCoordinates?: StartCoordinates;
 }
 

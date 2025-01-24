@@ -8,18 +8,39 @@ export interface IconTree {
   child: IconTree[];
 }
 
-function Tree2Element(tree: IconTree[]): React.ReactElement[] {
-  return (
-    tree &&
-    tree.map((node, i) =>
-      React.createElement(
-        node.tag,
-        { key: i, ...node.attr },
-        Tree2Element(node.child),
-      ),
-    )
-  );
+function Tree2Element(tree: IconTree[], iconDataOverride: Partial<IconTree>[] = [], userGradient: boolean = false): React.ReactElement[] {
+  const res: React.ReactElement[] = [];
+
+  if (tree) {
+    const maxLength = Math.max(tree.length, iconDataOverride?.length || 0);
+
+    for (let i = 0; i < maxLength; i++) {
+      const node = tree[i];
+      const overrideNode = iconDataOverride?.[i];
+
+      if (overrideNode) {
+        res.push(
+          React.createElement(
+            overrideNode.tag || node.tag,
+            { key: i, ...node?.attr, ...overrideNode?.attr, ...(userGradient ? { fill: "url(#reactIconsGradient)" } : {}) },
+            Tree2Element(node?.child, overrideNode?.child, userGradient)
+          )
+        );
+      } else if (node) {
+        res.push(
+          React.createElement(
+            node.tag,
+            { key: i, ...node?.attr, ...(userGradient ? { fill: "url(#reactIconsGradient)" } : {}) },
+            Tree2Element(node?.child, [], userGradient)
+          )
+        );
+      }
+    }
+  }
+
+  return res;
 }
+
 export function GenIcon(data: IconTree) {
   return (props: IconBaseProps) => (
     <IconBase attr={{ ...data.attr }} {...props}>

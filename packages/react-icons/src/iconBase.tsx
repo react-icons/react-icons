@@ -58,6 +58,31 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   size?: string | number;
   color?: string;
   title?: string;
+  iconDataOverride?: Partial<IconTree>[];
+  stops: React.SVGProps<SVGStopElement>[],
+  startCoordinates?: StartCoordinates;
+}
+
+interface StartCoordinates {
+  top?: number,
+  right?: number,
+  down?: number,
+  left?: number,
+}
+
+export interface GradientBaseProps {
+  stops: React.SVGProps<SVGStopElement>[],
+  startCoordinates?: StartCoordinates;
+}
+function renderGradient({ stops, startCoordinates = {} }: GradientBaseProps): JSX.Element {
+  const { top = 0, right = 100, down = 0, left = 0 } = startCoordinates;
+  return (
+    <linearGradient id="reactIconsGradient" x1={`${left}%`} x2={`${right}%`} y1={`${top}%`} y2={`${down}%`}>
+      {stops.map((stopProp, index) => (
+        <stop key={index} {...stopProp} />
+      ))}
+    </linearGradient>
+  );
 }
 
 export type IconType = (props: IconBaseProps) => React.ReactNode;
@@ -65,7 +90,13 @@ export function IconBase(
   props: IconBaseProps & { attr?: Record<string, string> },
 ): JSX.Element {
   const elem = (conf: IconContext) => {
-    const { attr, size, title, ...svgProps } = props;
+    const {
+      attr,
+      size,
+      title,
+      stops,
+      startCoordinates = { top: 0, right: 100, down: 0, left: 0 },
+      ...svgProps } = props;
     const computedSize = size || conf.size || "1em";
     let className;
     if (conf.className) className = conf.className;
@@ -92,6 +123,7 @@ export function IconBase(
       >
         {title && <title>{title}</title>}
         {props.children}
+        {stops && renderGradient({ stops, startCoordinates })}
       </svg>
     );
   };

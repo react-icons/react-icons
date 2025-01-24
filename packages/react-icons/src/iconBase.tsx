@@ -42,11 +42,15 @@ function Tree2Element(tree: IconTree[], iconDataOverride: Partial<IconTree>[] = 
 }
 
 export function GenIcon(data: IconTree) {
-  return (props: IconBaseProps) => (
-    <IconBase attr={{ ...data.attr }} {...props}>
-      {Tree2Element(data.child)}
-    </IconBase>
-  );
+  return (props: IconBaseProps) => {
+    const { iconDataOverride, ...restProps } = props;
+
+    return (
+      <IconBase attr={{ ...data.attr }} {...restProps}>
+        {Tree2Element(data.child, iconDataOverride, !!props.stops)}
+      </IconBase>
+    )
+  }
 }
 
 export interface IconBaseProps extends React.SVGAttributes<SVGElement> {

@@ -75,7 +75,7 @@ export async function writeIconModule(
       const iconData = await convertIconData(svgStr, content.multiColor);
 
       const rawName = path.basename(file, path.extname(file));
-      const pascalName = camelcase(rawName.replace(/[^a-zA-Z0-9]/g, ""), {
+      const pascalName = camelcase(rawName.replace(/[^a-zA-Z0-9]/g, " "), {
         pascalCase: true,
       });
       const name =

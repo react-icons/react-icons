@@ -35,7 +35,7 @@
     "babel-plugin-add-import-extension": "^1.6.0",
     "camelcase": "^8.0.0",
     "cheerio": "^1.0.0-rc.12",
-    "esbuild": "^0.20.2",
+    "esbuild": "^0.25.0",
     "esbuild-register": "^3.5.0",
     "feather-icons": "^4.29.2",
     "find-package": "^1.0.0",

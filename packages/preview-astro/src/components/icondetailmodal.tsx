@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaRegClipboard } from "react-icons/fa6";
+import { FaDownload, FaRegClipboard } from "react-icons/fa6";
 import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
 import { useKeyDown } from "../utils/usekeydown";
@@ -65,6 +65,33 @@ export function IconDetailModal(
   const importCode = `import { ${props.iconName} } from "react-icons/${props.iconSet}";`;
   const useCode = `<${props.iconName} />`;
 
+  const downloadSvg = () => {
+    const iconElement = document.getElementsByClassName("icon")[0];
+    if (iconElement === null) {
+      toast.error("Icon could not be retrieved.", {
+        position: "bottom-center",
+      });
+      return;
+    }
+    const icon = (iconElement?.firstChild as Element).outerHTML;
+
+    const svgBlob = new Blob(
+      ['<?xml version="1.0" standalone="no"?>\r\n', icon],
+      { type: "image/svg+xml;charset=utf-8" },
+    );
+
+    const downloadLink = Object.assign(document.createElement("a"), {
+      href: URL.createObjectURL(svgBlob),
+      download: `${props.iconName}.svg`,
+    });
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+
+    toast.success("Download started", { position: "bottom-center" });
+  };
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const Component = props.component as React.ComponentType<any>;
   const [selectedColor, setSelectedColor] = React.useState<number>(0);
@@ -128,6 +155,12 @@ export function IconDetailModal(
               </button>
             </li>
           ))}
+          <li>
+            <button onClick={downloadSvg}>
+              <FaDownload />
+              <span className="text">Download SVG</span>
+            </button>
+          </li>
         </ul>
       </div>
     </Modal>
@@ -153,23 +186,22 @@ const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
     handleInitOpenAnimation();
   }, [isOpen]);
 
-
   useEffect(() => {
     const modalElement = modalRef.current;
-  
+
     const handleTransitionEnd = () => {
       if (!animationIsOpen) {
         onClose?.();
       }
     };
-  
+
     if (modalElement) {
-      modalElement.addEventListener('transitionend', handleTransitionEnd);
+      modalElement.addEventListener("transitionend", handleTransitionEnd);
     }
 
     return () => {
       if (modalElement) {
-        modalElement.removeEventListener('transitionend', handleTransitionEnd);
+        modalElement.removeEventListener("transitionend", handleTransitionEnd);
       }
     };
   }, [animationIsOpen, onClose]);
@@ -181,7 +213,7 @@ const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
   return {
     animationIsOpen,
     handleCloseModal,
-    modalRef
+    modalRef,
   };
 };
 
@@ -215,7 +247,10 @@ function Modal({
         className={`overlay ${animationIsOpen ? "" : "appearing"}`}
         onClick={() => handleCloseModal()}
       ></div>
-      <div className={`modal-body ${animationIsOpen ? "open" : "close"}`} ref={modalRef}>
+      <div
+        className={`modal-body ${animationIsOpen ? "open" : "close"}`}
+        ref={modalRef}
+      >
         <div className="header">
           <h3 className="title">{title}</h3>
           <button

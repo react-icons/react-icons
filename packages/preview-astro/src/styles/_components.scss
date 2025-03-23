@@ -380,7 +380,27 @@ html:has(.modal-root.active) {
     color: #e1e4e8;
     padding: 10px;
     border-radius: 5px;
+    flex: 1; /* Make sure pre tag takes the available space */
   }
+
+  .code-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the button and code */
+  }
+
+  .copy-button {
+    background: none;
+    border: none;
+    color: #e1e4e8;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .copy-button:hover {
+    color: #ffffff;
+  }
+
   ul.copy {
     list-style: none;
     padding: 0;

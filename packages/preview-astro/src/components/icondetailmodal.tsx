@@ -98,13 +98,42 @@ export function IconDetailModal(
             </button>
           ))}
         </div>
+
         <h2>Code</h2>
-        <pre>
-          <code>{importCode}</code>
-        </pre>
-        <pre>
-          <code>{useCode}</code>
-        </pre>
+        <div className="code-container">
+          <button
+            className="copy-button"
+            onClick={() => {
+              copy(importCode);
+              toast.success(`Copied '${importCode}' to clipboard`, {
+                position: "bottom-center",
+              });
+            }}
+          >
+            <FaRegClipboard />
+          </button>
+          <pre>
+            <code>{importCode}</code>
+          </pre>
+        </div>
+
+        <div className="code-container">
+          <button
+            className="copy-button"
+            onClick={() => {
+              copy(importCode);
+              toast.success(`Copied '${importCode}' to clipboard`, {
+                position: "bottom-center",
+              });
+            }}
+          >
+            <FaRegClipboard />
+          </button>
+          <pre>
+            <code>{useCode}</code>
+          </pre>
+        </div>
+
         <ul className="copy">
           {[
             props.iconSet,
@@ -153,23 +182,22 @@ const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
     handleInitOpenAnimation();
   }, [isOpen]);
 
-
   useEffect(() => {
     const modalElement = modalRef.current;
-  
+
     const handleTransitionEnd = () => {
       if (!animationIsOpen) {
         onClose?.();
       }
     };
-  
+
     if (modalElement) {
-      modalElement.addEventListener('transitionend', handleTransitionEnd);
+      modalElement.addEventListener("transitionend", handleTransitionEnd);
     }
 
     return () => {
       if (modalElement) {
-        modalElement.removeEventListener('transitionend', handleTransitionEnd);
+        modalElement.removeEventListener("transitionend", handleTransitionEnd);
       }
     };
   }, [animationIsOpen, onClose]);
@@ -181,7 +209,7 @@ const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
   return {
     animationIsOpen,
     handleCloseModal,
-    modalRef
+    modalRef,
   };
 };
 
@@ -215,7 +243,10 @@ function Modal({
         className={`overlay ${animationIsOpen ? "" : "appearing"}`}
         onClick={() => handleCloseModal()}
       ></div>
-      <div className={`modal-body ${animationIsOpen ? "open" : "close"}`} ref={modalRef}>
+      <div
+        className={`modal-body ${animationIsOpen ? "open" : "close"}`}
+        ref={modalRef}
+      >
         <div className="header">
           <h3 className="title">{title}</h3>
           <button

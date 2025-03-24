@@ -385,20 +385,23 @@ html:has(.modal-root.active) {
 
   .code-container {
     display: flex;
+    margin-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #24292e;
     align-items: center;
-    gap: 10px; /* Space between the button and code */
   }
 
   .copy-button {
-    background: none;
     border: none;
+    background-color: #24292e;
     color: #e1e4e8;
     cursor: pointer;
     font-size: 16px;
   }
 
   .copy-button:hover {
-    color: #ffffff;
+    color: #3fb950;
   }
 
   ul.copy {

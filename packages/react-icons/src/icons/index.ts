@@ -532,7 +532,7 @@ export const icons: IconDefinition[] = [
     },
   },
   {
-    id: 'hgi',
+    id: "hgi",
     name: "Hugeicons",
     contents: [
       {

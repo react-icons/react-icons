@@ -155,6 +155,12 @@
       "import": "./hi2/index.mjs",
       "default": "./hi2/index.mjs"
     },
+    "./hgi": {
+      "types": "./hgi/index.d.ts",
+      "require": "./hgi/index.js",
+      "import": "./hgi/index.mjs",
+      "default": "./hgi/index.mjs"
+    },
     "./si": {
       "types": "./si/index.d.ts",
       "require": "./si/index.js",

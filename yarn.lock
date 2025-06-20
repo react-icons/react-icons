@@ -4464,6 +4464,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-symbols/svg-400@npm:^0.31.8":
+  version: 0.31.8
+  resolution: "@material-symbols/svg-400@npm:0.31.8"
+  checksum: 1ab6f508974b5a5e9a71e5647f6a6c4d1156fed1318cf8a0b71c9a3ed27e89b82758ed6655669b643702f570bab50a8fb01b16e0b3a1e2c5a001bae1714c737a
+  languageName: node
+  linkType: hard
+
 "@nanostores/react@npm:^0.7.2":
   version: 0.7.2
   resolution: "@nanostores/react@npm:0.7.2"
@@ -19120,6 +19127,7 @@ __metadata:
   resolution: "react-icons-root@workspace:."
   dependencies:
     "@eslint/js": ^9.1.1
+    "@material-symbols/svg-400": ^0.31.8
     "@typescript-eslint/eslint-plugin": ^7.8.0
     "@typescript-eslint/parser": ^7.8.0
     eslint: ^9.1.1

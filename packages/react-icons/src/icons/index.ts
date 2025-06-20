@@ -181,6 +181,40 @@ export const icons: IconDefinition[] = [
     },
   },
   {
+    id: "mds",
+    name: "Material Design symbols",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../../../node_modules/@material-symbols/svg-400/rounded/!(*-fill*).svg",
+        ),
+        formatter: (name) => `Mds${name}Round`,
+        processWithSVGO: false,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../../../node_modules/@material-symbols/svg-400/sharp/!(*-fill*).svg",
+        ),
+        formatter: (name) => `Mds${name}Sharp`,
+        processWithSVGO: false,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../../../node_modules/@material-symbols/svg-400/outlined/!(*-fill*).svg",
+        ),
+        formatter: (name) => `Mds${name}Outlined`,
+        processWithSVGO: false,
+      },
+    ],
+    projectUrl: "http://google.github.io/material-design-icons/",
+    license: "Apache License Version 2.0",
+    licenseUrl:
+      "https://github.com/google/material-design-icons/blob/master/LICENSE",
+  },
+  {
     id: "ti",
     name: "Typicons",
     contents: [

@@ -71,6 +71,12 @@
       "import": "./md/index.mjs",
       "default": "./md/index.mjs"
     },
+    "./mds": {
+      "types": "./mds/index.d.ts",
+      "require": "./mds/index.js",
+      "import": "./mds/index.mjs",
+      "default": "./mds/index.mjs"
+    },
     "./ti": {
       "types": "./ti/index.d.ts",
       "require": "./ti/index.js",

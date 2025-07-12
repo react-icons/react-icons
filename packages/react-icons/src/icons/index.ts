@@ -797,4 +797,25 @@ export const icons: IconDefinition[] = [
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
+    {
+    id: "fgis",
+    name: "Font-GIS",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/font-gis/svg/compass/*.svg"),
+        formatter: (name) => `Fgis${name}`.replace('-',''),
+      },
+    ],
+    projectUrl: "https://github.com/Viglino/font-gis",
+    license: "CC BY 4.0 License",
+    licenseUrl: "https://github.com/Viglino/font-gis/blob/main/LICENSE.md",
+    source: {
+      type: "git",
+      localName: "font-gis",
+      remoteDir: "svg/",
+      url: "https://github.com/Viglino/font-gis.git",
+      branch: "main",
+      hash: "a764f0811064b6b4ef593a86085f6abda5c2218d",
+    },
+  },
 ];

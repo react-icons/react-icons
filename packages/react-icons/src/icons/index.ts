@@ -798,12 +798,12 @@ export const icons: IconDefinition[] = [
     },
   },
     {
-    id: "fgis",
+    id: "fg",
     name: "Font-GIS",
     contents: [
       {
-        files: path.resolve(__dirname, "../../icons/font-gis/svg/compass/*.svg"),
-        formatter: (name) => `Fgis${name}`.replace('-',''),
+        files: path.resolve(__dirname, "../../icons/font-gis/svg/*/*.svg"),
+        formatter: (name) => `Fg${name.slice(5)}`.replace('-',''),
       },
     ],
     projectUrl: "https://github.com/Viglino/font-gis",

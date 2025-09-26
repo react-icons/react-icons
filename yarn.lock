@@ -9790,9 +9790,9 @@ __metadata:
   linkType: hard
 
 "devalue@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "devalue@npm:5.0.0"
-  checksum: 63723e194f3f17567e3436e63acf41ea286c87f1dc8c51b2e0cd39ee895d84ea10a1c593c862596ae22af732e2ca76f5401ec66de2547e5dd0dbd889fad38c30
+  version: 5.3.2
+  resolution: "devalue@npm:5.3.2"
+  checksum: 626930c8baa9b435cf1a72ca715dd3c2fc4ef5be88ad729892474b0a4742849112c362b7b572de60745ed7ed00835fdaf0516a912635dc3772197a2912f8ed49
   languageName: node
   linkType: hard
 

@@ -3,15 +3,15 @@
   "version": "5.5.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "29.5.12",
-    "@types/node": "18.19.31",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@types/jest": "29.5.14",
+    "@types/node": "24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
-    "typescript": "5.4.5"
+    "typescript": "5.9.2"
   },
   "scripts": {
     "start": "react-scripts start",

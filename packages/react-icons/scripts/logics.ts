@@ -1,8 +1,5 @@
-import {
-  Cheerio,
-  load as cheerioLoad,
-  Element as CheerioElement,
-} from "cheerio";
+import { Cheerio, load as cheerioLoad } from "cheerio";
+import type { Element as CheerioElement } from "domhandler";
 import camelcase from "camelcase";
 import { promises as fs } from "fs";
 import path from "path";

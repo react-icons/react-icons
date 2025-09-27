@@ -31,7 +31,7 @@
     "@babel/preset-typescript": "^7.27.1",
     "@primer/octicons": "^18.3.0",
     "@types/node": "^24.5.2",
-    "@types/react": "^19.1.13",
+    "@types/react": "^19.1.14",
     "babel-plugin-add-import-extension": "^1.6.0",
     "camelcase": "^8.0.0",
     "cheerio": "^1.1.2",

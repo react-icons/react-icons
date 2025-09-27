@@ -12,7 +12,7 @@
     "eslint": "^9.36.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.4.0",
-    "lerna": "^8.2.4",
+    "lerna": "^9.0.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "typescript-eslint": "^8.44.1"

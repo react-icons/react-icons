@@ -6,16 +6,16 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "^9.1.1",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "eslint": "^9.1.1",
-    "eslint-plugin-react": "^7.34.1",
-    "globals": "^15.1.0",
-    "lerna": "^8.1.2",
-    "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0",
-    "typescript-eslint": "^7.8.0"
+    "@eslint/js": "^9.36.0",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0",
+    "lerna": "^9.0.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript-eslint": "^8.44.1"
   },
   "scripts": {
     "lint": "yarn eslint",

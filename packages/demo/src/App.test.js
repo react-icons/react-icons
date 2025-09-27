@@ -1,16 +1,11 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { shallow } from "enzyme";
-
+import { render } from "@testing-library/react";
 import App from "./App";
 
 it("renders without crashing", () => {
-  const div = document.createElement("div");
-  const root = createRoot(div);
-  root.render(<App />);
-  root.unmount();
+  render(<App />);
 });
 
 it("snapshot test", () => {
-  expect(shallow(<App />)).toMatchSnapshot();
+  const { container } = render(<App />);
+  expect(container.firstChild).toMatchSnapshot();
 });

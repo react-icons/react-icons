@@ -1,5 +1,5 @@
-@import "./utils";
-@import "./menu";
+@use "./utils" as utils;
+@use "./menu";
 
 h1.main {
   font-size: 2.2rem;
@@ -201,7 +201,7 @@ a {
   }
 }
 
-@include respond-below(sm) {
+@include utils.respond-below(sm) {
   .container,
   .sidebar {
     min-height: auto;

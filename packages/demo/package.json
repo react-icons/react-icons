@@ -15,17 +15,12 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.8",
-    "enzyme-to-json": "^3.6.2"
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.7.0",
+    "@testing-library/react": "^16.1.0"
   },
   "resolutions": {
     "@types/cheerio": "npm:empty-npm-package"
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
   },
   "browserslist": [
     ">0.2%",

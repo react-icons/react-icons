@@ -35,6 +35,47 @@ function Question() {
 
 For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
 
+## Installation (using scoped packages)
+
+The scoped packages approach offers better tree-shaking and more granular dependency management by allowing you to install only the icon sets you need.
+
+```bash
+# Install only the icon sets you need
+yarn add @react-icons/fa @react-icons/md
+# or
+npm install @react-icons/fa @react-icons/md --save
+```
+
+example usage
+
+```jsx
+// Import directly from the scoped package
+import { FaBeer } from "@react-icons/fa";
+import { MdAccessibility } from "@react-icons/md";
+
+function App() {
+  return (
+    <div>
+      <FaBeer />
+      <MdAccessibility />
+    </div>
+  );
+}
+```
+
+Each icon set is available as a scoped package:
+```bash
+@react-icons/[icon-set]  # e.g. @react-icons/fa, @react-icons/md
+```
+
+Where `[icon-set]` is any of: fa (Font Awesome 5), fa6 (Font Awesome 6), md (Material Design), ti (Typicons), go (Github Octicons), fi (Feather), gi (Game Icons), wi (Weather), di (Devicons), ai (Ant Design), bs (Bootstrap), ri (Remix), fc (Flat Color), gr (Grommet), hi/hi2 (Heroicons), si (Simple Icons), bi (BoxIcons), cg (css.gg), vsc (VS Code), tb (Tabler), and more.
+
+Benefits of using scoped packages:
+- 📦 Install only what you need
+- 🌳 Better tree-shaking
+- 🚀 Smaller bundle sizes
+- 📊 Clearer dependency management
+
 ## Installation (for meteorjs, gatsbyjs, etc)
 
 > **Note**

@@ -1,5 +1,5 @@
-import camelcase from "camelcase";
 import path from "path";
+import camelcase from "camelcase";
 import { type IconDefinition } from "../../scripts/_types";
 import { glob } from "../../scripts/glob";
 
@@ -703,7 +703,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/tabler/tabler-icons.git",
       branch: "main",
-      hash: "147130cd0e67a9cfc70538f8b3a14a48a695d90b",
+      hash: "01eb08a9bc8075f5bd6828ac30b0a3a038a9ef46",
     },
   },
   {

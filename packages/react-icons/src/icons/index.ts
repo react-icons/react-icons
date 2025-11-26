@@ -797,4 +797,25 @@ export const icons: IconDefinition[] = [
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
+  {
+    id: "mc",
+    name: "MingCute",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/MingCute/svg/**/*.svg"),
+        formatter: (name) => `Mc${camelcase(name, { pascalCase: true })}`,
+      },
+    ],
+    projectUrl: "https://www.mingcute.com/",
+    license: "Apache License 2.0",
+    licenseUrl: "https://github.com/Richard9394/MingCute/blob/main/LICENSE",
+    source: {
+      type: "git",
+      localName: "MingCute",
+      remoteDir: "svg/",
+      url: "https://github.com/Richard9394/MingCute.git",
+      branch: "main",
+      hash: "d307024449b8df885f656dab7f7bdba7116e1e89",
+    },
+  },
 ];

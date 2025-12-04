@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" transform="matrix(-1,0,0,1,0,0)">
+  <defs>
+    <pattern id="carbonFiber" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="3" fill="currentColor"/>
+      <path d="M0,0 L3,3 M3,0 L0,3" stroke="currentColor" stroke-width="0.5"/>
+    </pattern>
+
+    <linearGradient id="riserMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="30%" stop-color="#5a5a5a"/>
+      <stop offset="50%" stop-color="#6a6a6a"/>
+      <stop offset="70%" stop-color="#5a5a5a"/>
+      <stop offset="100%" stop-color="#3a3a3a"/>
+    </linearGradient>
+
+    <linearGradient id="limbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="50%" stop-color="#2d2d2d"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+
+    <radialGradient id="camGrad">
+      <stop offset="0%" stop-color="#4a4a4a"/>
+      <stop offset="50%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </radialGradient>
+
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="stringGlow">
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M12 12 Q14 10 16 9 Q18 8 20 7.5 Q22 7 24 7 L24 8 Q22 8.5 20 9 Q18 9.5 16 10.5 Q14 11.5 12.5 13 Z"
+          fill="url(#limbGrad)" stroke="currentColor" stroke-width="0.5"/>
+
+    <path d="M12 52 Q14 54 16 55 Q18 56 20 56.5 Q22 57 24 57 L24 56 Q22 55.5 20 55 Q18 54.5 16 53.5 Q14 52.5 12.5 51 Z"
+          fill="url(#limbGrad)" stroke="currentColor" stroke-width="0.5"/>
+
+    <path d="M10 24 L12 22 L12 18 L11 16 L11 13 L12 12 L13 12 L13.5 14 L13.5 18
+             L12.5 20 L12.5 22 L13 24 L13 26 L13 38 L13 40 L12.5 42 L12.5 44
+             L13.5 46 L13.5 50 L13 52 L12 52 L11 51 L11 48 L12 46 L12 42
+             L10 40 Z"
+          fill="url(#riserMetal)" stroke="currentColor" stroke-width="0.5"/>
+
+    <ellipse cx="11" cy="32" rx="2.5" ry="5" fill="currentColor" stroke="currentColor" stroke-width="0.5"/>
+
+    <circle cx="24" cy="7" r="2.5" fill="url(#camGrad)"/>
+    <circle cx="24" cy="57" r="2.5" fill="url(#camGrad)"/>
+
+    <line x1="24" y1="7" x2="24" y2="28" stroke="#d4c5a9" stroke-width="0.8" filter="url(#stringGlow)"/>
+    <line x1="24" y1="36" x2="24" y2="57" stroke="#d4c5a9" stroke-width="0.8" filter="url(#stringGlow)"/>
+  </g>
+</svg>

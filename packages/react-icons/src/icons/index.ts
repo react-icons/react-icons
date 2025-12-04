@@ -355,6 +355,47 @@ export const icons: IconDefinition[] = [
     },
   },
   {
+    id: "pre",
+    name: "PREM React Icons",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/react-icons/svg/*.svg"),
+        formatter: (name) => `Pre${name.replace(/-/g, "")}`,
+        processWithSVGO: true,
+      },
+    ],
+    projectUrl: "https://github.com/PREM015/react-icons",
+    license: "MIT",
+    licenseUrl: "https://opensource.org/licenses/MIT",
+    source: {
+      type: "git",
+      localName: "react-icons",
+      remoteDir: "svg/",
+      url: "https://github.com/PREM015/react-icons.git",
+      branch: "main",
+      hash: "HEAD",
+    },
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
     id: "bs",
     name: "Bootstrap Icons",
     contents: [
@@ -796,5 +837,6 @@ export const icons: IconDefinition[] = [
       branch: "master",
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
+    
   },
 ];

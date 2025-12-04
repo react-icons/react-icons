@@ -377,24 +377,6 @@ export const icons: IconDefinition[] = [
     },
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   {
     id: "bs",
     name: "Bootstrap Icons",
@@ -837,6 +819,5 @@ export const icons: IconDefinition[] = [
       branch: "master",
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
-    
   },
 ];

@@ -1,5 +1,5 @@
 import path from "path";
-import { IconDefinition } from "../../scripts/_types";
+import { IconDefinition } from "../../../scripts/_types";
 
 export const icons: IconDefinition[] = [
   {

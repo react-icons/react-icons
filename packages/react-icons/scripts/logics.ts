@@ -72,7 +72,8 @@ export async function convertIconData(
       element
         // ignore style, title tag
         .filter(
-          (_: number, e: any) => !!(e.tagName && !["style", "title"].includes(e.tagName)),
+          (_: number, e: any) =>
+            !!(e.tagName && !["style", "title"].includes(e.tagName)),
         )
         // convert to AST recursively
         .map((_: number, e: any) => ({

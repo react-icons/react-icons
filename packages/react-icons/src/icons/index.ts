@@ -1,7 +1,7 @@
-import * as fa from "./fa";
+// packages/react-icons/src/icons/index.ts
 
-export const icons = [
-  ...fa.icons, // Spread all icons from fa folder
-];
+import * as fa6 from "./fa6";
+
+export const icons = [...fa6.icons];
 
 export default icons;

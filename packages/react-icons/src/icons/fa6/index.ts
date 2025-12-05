@@ -3,7 +3,7 @@ import { IconDefinition } from "../../../scripts/_types";
 
 export const icons: IconDefinition[] = [
   {
-    id: "fa",
+    id: "fa6",
     name: "Font Awesome Custom",
     projectUrl: "https://github.com/PREM015/react-icons",
     license: "MIT",

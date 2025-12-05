@@ -35,11 +35,11 @@
       "import": "./lib/index.mjs",
       "default": "./lib/index.mjs"
     },
-    "./fa": {
-      "types": "./fa/index.d.ts",
-      "require": "./fa/index.js",
-      "import": "./fa/index.mjs",
-      "default": "./fa/index.mjs"
+    "./fa6": {
+      "types": "./fa6/index.d.ts",
+      "require": "./fa6/index.js",
+      "import": "./fa6/index.mjs",
+      "default": "./fa6/index.mjs"
     }
   }
 }

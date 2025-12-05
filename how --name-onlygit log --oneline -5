@@ -1,5 +1,0 @@
-[33mde97df62[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32madd-fa-bow-icon[m[33m, [m[1;31morigin/add-fa-bow-icon[m[33m)[m Fix import path for IconDefinition
-[33mfc1f30fb[m Remove package-lock.json - project uses yarn
-[33m28f1072c[m Fix formatting
-[33m2257de0a[m Add FA Bow icon and update related files
-[33m33d1c29e[m ok

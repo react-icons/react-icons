@@ -1,5 +1,4 @@
-import { Cheerio, load as cheerioLoad } from "cheerio";
-import type { Element as CheerioElement } from "domhandler";
+import { load as cheerioLoad } from "cheerio";
 import camelcase from "camelcase";
 import { promises as fs } from "fs";
 import path from "path";
@@ -68,22 +67,35 @@ export async function convertIconData(
       );
 
   // convert to [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
-  function elementToTree(element: Cheerio<CheerioElement>): IconTree[] {
+  function elementToTree(element: ReturnType<typeof $doc>): IconTree[] {
     return (
       element
         // ignore style, title tag
         .filter(
-          (_, e) => !!(e.tagName && !["style", "title"].includes(e.tagName)),
+          (_: number, e: unknown) =>
+            !!(
+              typeof e === "object" &&
+              e !== null &&
+              "tagName" in e &&
+              !["style", "title"].includes(String(e.tagName))
+            ),
         )
         // convert to AST recursively
-        .map((_, e) => ({
-          tag: e.tagName,
-          attr: attrConverter(e.attribs, e.tagName),
-          child:
-            e.children && e.children.length
-              ? elementToTree($doc(e.children) as Cheerio<CheerioElement>)
-              : [],
-        }))
+        .map((_: number, e: unknown) => {
+          const elem = e as {
+            tagName: string;
+            attribs: Record<string, string>;
+            children?: unknown[];
+          };
+          return {
+            tag: elem.tagName,
+            attr: attrConverter(elem.attribs, elem.tagName),
+            child:
+              elem.children && elem.children.length
+                ? elementToTree($doc(elem.children))
+                : [],
+          };
+        })
         .get()
     );
   }

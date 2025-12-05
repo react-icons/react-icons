@@ -72,18 +72,30 @@ export async function convertIconData(
       element
         // ignore style, title tag
         .filter(
-          (_: number, e: any) =>
-            !!(e.tagName && !["style", "title"].includes(e.tagName)),
+          (_: number, e: unknown) =>
+            !!(
+              typeof e === "object" &&
+              e !== null &&
+              "tagName" in e &&
+              !["style", "title"].includes(String(e.tagName))
+            ),
         )
         // convert to AST recursively
-        .map((_: number, e: any) => ({
-          tag: e.tagName,
-          attr: attrConverter(e.attribs, e.tagName),
-          child:
-            e.children && e.children.length
-              ? elementToTree($doc(e.children))
-              : [],
-        }))
+        .map((_: number, e: unknown) => {
+          const elem = e as {
+            tagName: string;
+            attribs: Record<string, string>;
+            children?: unknown[];
+          };
+          return {
+            tag: elem.tagName,
+            attr: attrConverter(elem.attribs, elem.tagName),
+            child:
+              elem.children && elem.children.length
+                ? elementToTree($doc(elem.children))
+                : [],
+          };
+        })
         .get()
     );
   }

@@ -163,6 +163,7 @@ a {
 
     .icon {
       min-height: 64px;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -173,6 +174,15 @@ a {
         0 1px 2px 0 rgba(0, 0, 0, 0.06);
       border: 2px solid transparent;
       font-size: 1.6em;
+
+      .download {
+        height: 16px;
+        color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        cursor: pointer;
+      }
     }
 
     &:hover {

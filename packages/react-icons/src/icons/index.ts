@@ -23,7 +23,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/Klarr-Agency/Circum-Icons.git",
       branch: "main",
-      hash: "cec1364b5199f55e946a9a8360385a958b98cc60",
+      hash: "c0f9b849c23dd9c3c9d98a7aec0f239f498ef0dc",
     },
   },
   {
@@ -389,7 +389,7 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/twbs/icons.git",
       branch: "main",
-      hash: "dfc7bdc1bf536ac631ec12c8592e4d7bcd1d0ee9",
+      hash: "ce0e49dd063243118a115f17ad1fe1fe7576d552",
     },
   },
   {

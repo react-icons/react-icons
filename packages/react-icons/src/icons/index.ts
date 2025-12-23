@@ -797,4 +797,29 @@ export const icons: IconDefinition[] = [
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
+  {
+    id: "stcs",
+    name: "Streamline: Core Solid",
+    contents: [
+      {
+        files: path.resolve(
+            __dirname,
+            "../../icons/streamline-core-solid/core/solid/**/*.svg"
+        ),
+        formatter: (name) => `StCS${name}`,
+        processWithSVGO: true,
+      },
+    ],
+    projectUrl: "https://www.streamlinehq.com",
+    license: "CC BY 4.0 License",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    source: {
+      type: "git",
+      localName: "streamline-core-solid",
+      remoteDir: "core/solid/",
+      url: "https://github.com/webalys-hq/streamline-vectors.git",
+      branch: "main",
+      hash: "4a2b4bae972606cdac5f0e03d96c9785ff566545",
+    },
+  },
 ];

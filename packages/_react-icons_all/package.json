@@ -53,6 +53,12 @@
       "import": "./fa6/index.mjs",
       "default": "./fa6/index.mjs"
     },
+    "./fa7": {
+      "types": "./fa7/index.d.ts",
+      "require": "./fa7/index.js",
+      "import": "./fa7/index.mjs",
+      "default": "./fa7/index.mjs"
+    },
     "./io": {
       "types": "./io/index.d.ts",
       "require": "./io/index.js",

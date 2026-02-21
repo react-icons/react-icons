@@ -25,6 +25,7 @@ export function useSearch(): UseSearchValue {
         ? "replace"
         : "push";
     navigate(`/react-icons/search/#q=${query}`, { history });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     searchWord.set(query);
   }, []);
 

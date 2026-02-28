@@ -532,6 +532,27 @@ export const icons: IconDefinition[] = [
     },
   },
   {
+    id: "hgi",
+    name: "Hugeicons",
+    contents: [
+      {
+        files: path.resolve(__dirname, "../../icons/hugeicons/icons/*.svg"),
+        formatter: (name) => `Hgi${name}`,
+      },
+    ],
+    projectUrl: "https://hugeicons.com",
+    license: "MIT",
+    licenseUrl: "https://opensource.org/licenses/MIT",
+    source: {
+      type: "git",
+      localName: "hugeicons",
+      remoteDir: "icons/",
+      url: "https://github.com/hugeicons/hugeicons-static.git",
+      branch: "master",
+      hash: "f9dbcca8d72cc2777a0ccd873c274d9bf7a153e6",
+    },
+  },
+  {
     id: "si",
     name: "Simple Icons",
     contents: [

@@ -89,6 +89,37 @@ export const icons: IconDefinition[] = [
     },
   },
   {
+    id: "fa7",
+    name: "Font Awesome 7",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/fontawesome-7/svgs/+(brands|solid)/*.svg",
+        ),
+        formatter: (name) => `Fa${name}`,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/fontawesome-7/svgs/regular/*.svg",
+        ),
+        formatter: (name) => `FaReg${name}`,
+      },
+    ],
+    projectUrl: "https://fontawesome.com/",
+    license: "CC BY 4.0 License",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    source: {
+      type: "git",
+      localName: "fontawesome-7",
+      remoteDir: "svgs/",
+      url: "https://github.com/FortAwesome/Font-Awesome.git",
+      branch: "7.x",
+      hash: "41cfe644047fc3a4c49c22acc721cacc3e1021fe",
+    },
+  },
+  {
     id: "io",
     name: "Ionicons 4",
     contents: [

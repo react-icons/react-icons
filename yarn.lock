@@ -6433,13 +6433,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trysound/sax@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@trysound/sax@npm:0.2.0"
-  checksum: 11226c39b52b391719a2a92e10183e4260d9651f86edced166da1d95f39a0a1eaa470e44d14ac685ccd6d3df7e2002433782872c0feeb260d61e80f21250e65c
-  languageName: node
-  linkType: hard
-
 "@tufjs/canonical-json@npm:2.0.0":
   version: 2.0.0
   resolution: "@tufjs/canonical-json@npm:2.0.0"
@@ -10422,7 +10415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-tree@npm:^2.2.1":
+"css-tree@npm:^2.3.1":
   version: 2.3.1
   resolution: "css-tree@npm:2.3.1"
   dependencies:
@@ -10550,21 +10543,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csso@npm:5.0.5, csso@npm:^5.0.5":
-  version: 5.0.5
-  resolution: "csso@npm:5.0.5"
-  dependencies:
-    css-tree: ~2.2.0
-  checksum: 0ad858d36bf5012ed243e9ec69962a867509061986d2ee07cc040a4b26e4d062c00d4c07e5ba8d430706ceb02dd87edd30a52b5937fd45b1b6f2119c4993d59a
-  languageName: node
-  linkType: hard
-
 "csso@npm:^4.0.2, csso@npm:^4.2.0":
   version: 4.2.0
   resolution: "csso@npm:4.2.0"
   dependencies:
     css-tree: ^1.1.2
   checksum: 380ba9663da3bcea58dee358a0d8c4468bb6539be3c439dc266ac41c047217f52fd698fb7e4b6b6ccdfb8cf53ef4ceed8cc8ceccb8dfca2aa628319826b5b998
+  languageName: node
+  linkType: hard
+
+"csso@npm:^5.0.5":
+  version: 5.0.5
+  resolution: "csso@npm:5.0.5"
+  dependencies:
+    css-tree: ~2.2.0
+  checksum: 0ad858d36bf5012ed243e9ec69962a867509061986d2ee07cc040a4b26e4d062c00d4c07e5ba8d430706ceb02dd87edd30a52b5937fd45b1b6f2119c4993d59a
   languageName: node
   linkType: hard
 
@@ -22300,10 +22293,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sax@npm:^1.4.1":
-  version: 1.4.4
-  resolution: "sax@npm:1.4.4"
-  checksum: a6082a153b4ab00968894b3751f6fdc431b0b7edc2d086da67ee162a06716f4bc7d0546e875993e950c757039c9e3838747ab77f50578a6ce579f970a6feadaf
+"sax@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "sax@npm:1.5.0"
+  checksum: e143cbeb6ca59345db142d97d1bbb620553beb8b166eda36ffeaba4b01af47dcf0423cd8781d0805b75feea69462cf80d0db7bf0a7e6dd87b711fda51b9153df
   languageName: node
   linkType: hard
 
@@ -23649,41 +23642,42 @@ __metadata:
   linkType: hard
 
 "svgo@npm:^2.7.0":
-  version: 2.8.0
-  resolution: "svgo@npm:2.8.0"
+  version: 2.8.2
+  resolution: "svgo@npm:2.8.2"
   dependencies:
-    "@trysound/sax": 0.2.0
     commander: ^7.2.0
     css-select: ^4.1.3
     css-tree: ^1.1.3
     csso: ^4.2.0
     picocolors: ^1.0.0
+    sax: ^1.5.0
     stable: ^0.1.8
   bin:
-    svgo: bin/svgo
-  checksum: b92f71a8541468ffd0b81b8cdb36b1e242eea320bf3c1a9b2c8809945853e9d8c80c19744267eb91cabf06ae9d5fff3592d677df85a31be4ed59ff78534fa420
+    svgo: ./bin/svgo
+  checksum: 6294a2a1cd7b324c5aa7a087d6eb91aa5a0c62ca604ef39271bf830c790cda3cc3bd97b7ada2e0ed2a5b3609367bb0739e1e799e8f777d6117601c30ed90bd22
   languageName: node
   linkType: hard
 
 "svgo@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "svgo@npm:3.0.3"
+  version: 3.3.3
+  resolution: "svgo@npm:3.3.3"
   dependencies:
-    "@trysound/sax": 0.2.0
     commander: ^7.2.0
     css-select: ^5.1.0
-    css-tree: ^2.2.1
-    csso: 5.0.5
+    css-tree: ^2.3.1
+    css-what: ^6.1.0
+    csso: ^5.0.5
     picocolors: ^1.0.0
+    sax: ^1.5.0
   bin:
     svgo: ./bin/svgo
-  checksum: 0e34c70b9ff429e6c6773a0607063c2893fa655fffe3d0c2ea236764e54f77c6eb0cfc510a05ae11f589e343b59aef5ad210022aa49cd81eb6ad16446e2e0388
+  checksum: ad9c27f19f1f8a6e45bae1b280eb68028da5449359c4daf2c539fc099ab6c76852335d96300a030af4e6866e500159fe80f43a732b8a2905ffa1bd4339da520c
   languageName: node
   linkType: hard
 
 "svgo@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "svgo@npm:4.0.0"
+  version: 4.0.1
+  resolution: "svgo@npm:4.0.1"
   dependencies:
     commander: ^11.1.0
     css-select: ^5.1.0
@@ -23691,10 +23685,10 @@ __metadata:
     css-what: ^6.1.0
     csso: ^5.0.5
     picocolors: ^1.1.1
-    sax: ^1.4.1
+    sax: ^1.5.0
   bin:
     svgo: ./bin/svgo.js
-  checksum: bddf57bda7b4e8252e5f8c5aa8555ec9810f963369bad17476cf21881e0b5fd3dfffcffddebd7b8b4c80b7e64b508589fad5be055d143d70b28ef0dee2583fcc
+  checksum: 9f3d1d44f7ca1fbb75ecf8bd01d4f0263e4175f84a1bc13459bc2b951c3a138a78d8bc80968c90c7e6aabae0c7ce0588c07ad8672257bdd4fb20048b3ba24c7d
   languageName: node
   linkType: hard
 

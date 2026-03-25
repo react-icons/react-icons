@@ -22903,9 +22903,9 @@ __metadata:
   linkType: hard
 
 "smol-toml@npm:^1.5.2, smol-toml@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "smol-toml@npm:1.6.0"
-  checksum: e731aff4c52ff6f5401bc35f78643c30804c6957087a530d0d841b95266e6650a588cc8e59662872312d021aafcea8026372fa230cf6ba8b32a9c8f4c1a51cdf
+  version: 1.6.1
+  resolution: "smol-toml@npm:1.6.1"
+  checksum: bb5fce0c0369426ae8ae71ba91b5754423037dce8a2907d659ba4e45f5d7af1baabf7efea8ddb46ce681737be77a3795163f06ce4d7d3953f10cf6533194ffdb
   languageName: node
   linkType: hard
 

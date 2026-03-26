@@ -79,10 +79,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:0.7.5":
-  version: 0.7.5
-  resolution: "@astrojs/internal-helpers@npm:0.7.5"
-  checksum: e483a6de5f379f2665cfda02bfe1ee2c05b9f639417cdb644a66a4e2ae48b35516c879ad9360cf72bfb149d75c03560f7db4a0e523a019b2b9d7e73d97f704fa
+"@astrojs/internal-helpers@npm:0.7.6":
+  version: 0.7.6
+  resolution: "@astrojs/internal-helpers@npm:0.7.6"
+  checksum: 8cb9c974f9dcdb429b6fa3160c376fe115a40a0baedbd61343cbd8db97a5985e579c9a1ed14d459f86cfa2ed841fa8764ccf07202e243b2cb264d6b85bb3a65d
   languageName: node
   linkType: hard
 
@@ -122,11 +122,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:6.3.10":
-  version: 6.3.10
-  resolution: "@astrojs/markdown-remark@npm:6.3.10"
+"@astrojs/markdown-remark@npm:6.3.11":
+  version: 6.3.11
+  resolution: "@astrojs/markdown-remark@npm:6.3.11"
   dependencies:
-    "@astrojs/internal-helpers": 0.7.5
+    "@astrojs/internal-helpers": 0.7.6
     "@astrojs/prism": 3.3.0
     github-slugger: ^2.0.0
     hast-util-from-html: ^2.0.3
@@ -140,14 +140,14 @@ __metadata:
     remark-parse: ^11.0.0
     remark-rehype: ^11.1.2
     remark-smartypants: ^3.0.2
-    shiki: ^3.19.0
-    smol-toml: ^1.5.2
+    shiki: ^3.21.0
+    smol-toml: ^1.6.0
     unified: ^11.0.5
     unist-util-remove-position: ^5.0.0
     unist-util-visit: ^5.0.0
     unist-util-visit-parents: ^6.0.2
     vfile: ^6.0.3
-  checksum: 5a72dd0b46dbf784291ba0ef15375fc12a07aac4e6ce9b53259dc1dfaf317672d2eed6fc69668f47ac14491fed5ff7f1b6698d3aaf1256c0f37565377e54427a
+  checksum: 31f4c03b2ccc6cc153e40e06a7601dea6dbe3389b3f508ba4fa6472cbd72573a7efb2871bea324c828f341169ff697ded311a943fcef45053aec492668386194
   languageName: node
   linkType: hard
 
@@ -8341,12 +8341,12 @@ __metadata:
   linkType: hard
 
 "astro@npm:^5.14.1":
-  version: 5.17.3
-  resolution: "astro@npm:5.17.3"
+  version: 5.18.1
+  resolution: "astro@npm:5.18.1"
   dependencies:
     "@astrojs/compiler": ^2.13.0
-    "@astrojs/internal-helpers": 0.7.5
-    "@astrojs/markdown-remark": 6.3.10
+    "@astrojs/internal-helpers": 0.7.6
+    "@astrojs/markdown-remark": 6.3.11
     "@astrojs/telemetry": 3.3.0
     "@capsizecss/unpack": ^4.0.0
     "@oslojs/encoding": ^1.1.0
@@ -8413,7 +8413,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: e869462fe6845ffa1f214b3c3a7cba710805552ffcca41b03f452c657fc4c536e0c03a90248e04417017accb7663b1334e8feebd23b98ae201dc845a1951706f
+  checksum: da2532a6b2408eee3d96732a7e325299a3c6ac0a2114c42ecdd76fd16513a6ebd5bd15a033f23c1b170786618da4cdc35cd4efb33d8c477804ba2c4bffc8970a
   languageName: node
   linkType: hard
 
@@ -22738,7 +22738,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:^3.19.0, shiki@npm:^3.21.0":
+"shiki@npm:^3.21.0":
   version: 3.22.0
   resolution: "shiki@npm:3.22.0"
   dependencies:
@@ -22902,7 +22902,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"smol-toml@npm:^1.5.2, smol-toml@npm:^1.6.0":
+"smol-toml@npm:^1.6.0":
   version: 1.6.0
   resolution: "smol-toml@npm:1.6.0"
   checksum: e731aff4c52ff6f5401bc35f78643c30804c6957087a530d0d841b95266e6650a588cc8e59662872312d021aafcea8026372fa230cf6ba8b32a9c8f4c1a51cdf

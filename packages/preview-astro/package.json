@@ -15,7 +15,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/react": "^4.4.0",
     "@nanostores/react": "^0.7.3",
-    "astro": "^5.14.1",
+    "astro": "^6.1.6",
     "basscss": "^8.1.0",
     "cogo-toast": "^4.2.3",
     "copy-to-clipboard": "^3.3.3",

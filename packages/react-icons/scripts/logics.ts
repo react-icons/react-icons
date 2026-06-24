@@ -76,8 +76,9 @@ export async function convertIconData(
     return (
       element
         // ignore style, title tag
-        .filter((_: number, e: AnyNode) =>
-          isSvgNode(e) && !["style", "title"].includes(e.tagName),
+        .filter(
+          (_: number, e: AnyNode) =>
+            isSvgNode(e) && !["style", "title"].includes(e.tagName),
         )
         // convert to AST recursively
         .map((_: number, e: AnyNode) => {

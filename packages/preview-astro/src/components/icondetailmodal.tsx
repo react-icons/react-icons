@@ -135,8 +135,8 @@ export function IconDetailModal(
 }
 
 type useModalAnimationProps = {
-  onClose?(): void;
-  isOpen?: boolean;
+  onClose?: (() => void) | undefined;
+  isOpen?: boolean | undefined;
 };
 
 const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
@@ -153,23 +153,22 @@ const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
     handleInitOpenAnimation();
   }, [isOpen]);
 
-
   useEffect(() => {
     const modalElement = modalRef.current;
-  
+
     const handleTransitionEnd = () => {
       if (!animationIsOpen) {
         onClose?.();
       }
     };
-  
+
     if (modalElement) {
-      modalElement.addEventListener('transitionend', handleTransitionEnd);
+      modalElement.addEventListener("transitionend", handleTransitionEnd);
     }
 
     return () => {
       if (modalElement) {
-        modalElement.removeEventListener('transitionend', handleTransitionEnd);
+        modalElement.removeEventListener("transitionend", handleTransitionEnd);
       }
     };
   }, [animationIsOpen, onClose]);
@@ -181,15 +180,15 @@ const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
   return {
     animationIsOpen,
     handleCloseModal,
-    modalRef
+    modalRef,
   };
 };
 
 interface ModalProps {
   title: React.ReactNode;
   children: React.ReactNode;
-  isOpen?: boolean;
-  onClose?(): void;
+  isOpen?: boolean | undefined;
+  onClose?: (() => void) | undefined;
 }
 
 function Modal({
@@ -215,7 +214,10 @@ function Modal({
         className={`overlay ${animationIsOpen ? "" : "appearing"}`}
         onClick={() => handleCloseModal()}
       ></div>
-      <div className={`modal-body ${animationIsOpen ? "open" : "close"}`} ref={modalRef}>
+      <div
+        className={`modal-body ${animationIsOpen ? "open" : "close"}`}
+        ref={modalRef}
+      >
         <div className="header">
           <h3 className="title">{title}</h3>
           <button

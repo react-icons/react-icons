@@ -11,13 +11,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+      - name: install corepack
+        run: npm install -g corepack@0.20.0
+      - name: enable corepack
+        run: corepack enable
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
-          cache: "yarn"
-      - name: corepack
-        run: corepack enable
       - name: Install dependencies
         run: yarn --immutable
       - name: Formatter

@@ -20,6 +20,9 @@ export async function convertIconData(
 ) {
   const $doc = cheerioLoad(svg, { xmlMode: true });
   const $svg = $doc("svg");
+  type SvgNode = cheerio.TagElement;
+  const isSvgNode = (element: cheerio.Element): element is SvgNode =>
+    "tagName" in element && "attribs" in element;
 
   // filter/convert attributes
   // 1. remove class attr
@@ -74,19 +77,25 @@ export async function convertIconData(
       element
         // ignore style, title tag
         .filter(
-          (_: any, e: any) =>
-            !!(e.tagName && !["style", "title"].includes(e.tagName)),
+          (_: number, e: cheerio.Element) =>
+            isSvgNode(e) && !["style", "title"].includes(e.tagName),
         )
         // convert to AST recursively
-        .map((_: any, e: any) => ({
-          tag: e.tagName,
-          attr: attrConverter(e.attribs, e.tagName),
-          child:
-            e.children && e.children.length
-              ? elementToTree($doc(e.children) as CheerioCollection)
-              : [],
-        }))
+        .map((_: number, e: cheerio.Element) => {
+          if (!isSvgNode(e)) {
+            return null;
+          }
+          return {
+            tag: e.tagName,
+            attr: attrConverter(e.attribs, e.tagName),
+            child:
+              e.children && e.children.length
+                ? elementToTree($doc(e.children) as CheerioCollection)
+                : [],
+          };
+        })
         .get()
+        .filter((tree): tree is IconTree => tree !== null)
     );
   }
 

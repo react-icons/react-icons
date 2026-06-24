@@ -10,7 +10,7 @@
     "build:edit-resolve": "webpack --config webpack.config.edit-resolve.js"
   },
   "devDependencies": {
-    "webpack": "^5.74.0",
+    "webpack": "^5.107.2",
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {

@@ -7,15 +7,15 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@typescript-eslint/eslint-plugin": "^8.56.1",
-    "@typescript-eslint/parser": "^8.56.1",
-    "eslint": "^10.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.62.0",
+    "@typescript-eslint/parser": "^8.62.0",
+    "eslint": "^10.5.0",
     "eslint-plugin-react": "^7.37.5",
-    "globals": "^16.4.0",
-    "lerna": "^9.0.0",
+    "globals": "^17.7.0",
+    "lerna": "^9.0.7",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript-eslint": "^8.56.1"
+    "typescript-eslint": "^8.62.0"
   },
   "scripts": {
     "lint": "yarn eslint",
@@ -26,5 +26,5 @@
     "version": "yarn install && git add .",
     "lerna": "lerna"
   },
-  "packageManager": "yarn@3.2.4"
+  "packageManager": "yarn@4.17.0"
 }

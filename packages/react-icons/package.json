@@ -45,7 +45,7 @@
     "lucide-static": "^0.462.0",
     "p-queue": "^8.1.1",
     "svgo": "^3.3.3",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "scripts": {
     "ts": "node -r esbuild-register",

@@ -4,7 +4,9 @@
     "target": "ES2015",
     "noEmit": true,
     "emitDeclarationOnly": false,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "..",
+    "ignoreDeprecations": "6.0"
   },
   "include": ["**/*.ts"]
 }

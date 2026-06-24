@@ -1,6 +1,7 @@
 import { load as cheerioLoad } from "cheerio";
 import camelcase from "camelcase";
 import { promises as fs } from "fs";
+import { type AnyNode, type Element as DomElement } from "domhandler";
 import path from "path";
 import { type IconDefinitionContent } from "./_types";
 import { glob } from "./glob";
@@ -20,8 +21,7 @@ export async function convertIconData(
 ) {
   const $doc = cheerioLoad(svg, { xmlMode: true });
   const $svg = $doc("svg");
-  type SvgNode = cheerio.TagElement;
-  const isSvgNode = (element: cheerio.Element): element is SvgNode =>
+  const isSvgNode = (element: AnyNode): element is DomElement =>
     "tagName" in element && "attribs" in element;
 
   // filter/convert attributes
@@ -76,12 +76,11 @@ export async function convertIconData(
     return (
       element
         // ignore style, title tag
-        .filter(
-          (_: number, e: cheerio.Element) =>
-            isSvgNode(e) && !["style", "title"].includes(e.tagName),
+        .filter((_: number, e: AnyNode) =>
+          isSvgNode(e) && !["style", "title"].includes(e.tagName),
         )
         // convert to AST recursively
-        .map((_: number, e: cheerio.Element) => {
+        .map((_: number, e: AnyNode) => {
           if (!isSvgNode(e)) {
             return null;
           }

@@ -5,8 +5,7 @@
     "noEmit": true,
     "emitDeclarationOnly": false,
     "allowSyntheticDefaultImports": true,
-    "rootDir": "..",
-    "ignoreDeprecations": "6.0"
+    "rootDir": ".."
   },
   "include": ["**/*.ts"]
 }

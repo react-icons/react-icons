@@ -1,4 +1,5 @@
 import React from "react";
+import { it } from "vitest";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 

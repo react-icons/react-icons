@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/react": "^4.4.2",
+    "@astrojs/react": "^5.0.7",
     "@nanostores/react": "^0.7.3",
     "astro": "^6.4.6",
     "basscss": "^8.1.0",

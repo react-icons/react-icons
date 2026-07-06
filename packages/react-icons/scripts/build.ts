@@ -5,6 +5,7 @@ import { icons } from "../src/icons";
 import * as taskCommon from "./task_common";
 import * as taskAll from "./task_all";
 import * as taskFiles from "./task_files";
+import { buildScopedPackages } from "./build-scoped";
 import { TaskContext } from "./_types";
 
 // file path
@@ -64,6 +65,18 @@ async function main() {
       await Promise.all(
         icons.map((icon) => taskFiles.writeIconModuleFiles(icon, filesOpt)),
       );
+    });
+
+    // @react-icons scoped packages
+    const scopedOpt: TaskContext & { version: string; baseScope: string } = {
+      rootDir: _rootDir,
+      DIST: path.resolve(_rootDir, "../_react-icons_scoped"),
+      LIB: path.resolve(_rootDir, "../_react-icons_scoped/lib"),
+      version: process.env.npm_package_version || "0.0.0",
+      baseScope: "@react-icons",
+    };
+    await task("@react-icons scoped packages", async () => {
+      await buildScopedPackages(scopedOpt);
     });
 
     // write to VERSIONS file

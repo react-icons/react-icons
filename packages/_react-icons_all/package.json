@@ -220,6 +220,12 @@
       "require": "./lia/index.js",
       "import": "./lia/index.mjs",
       "default": "./lia/index.mjs"
+    },
+    "./sax": {
+      "types": "./sax/index.d.ts",
+      "require": "./sax/index.js",
+      "import": "./sax/index.mjs",
+      "default": "./sax/index.mjs"
     }
   }
 }

@@ -18,13 +18,34 @@ export function IconSetViewer(props: IconSetViewerProps) {
   }, []);
   const [selected, setSelected] = React.useState<string | null>(null);
 
+  React.useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("icon")) {
+      setSelected(params.get("icon"));
+    }
+  }, [props.iconSet]);
+
+  const onIconSelect = (icon: string) => {
+    setSelected(icon);
+    const url = new URL(window.location.href);
+    url.searchParams.set("icon", icon);
+    window.history.replaceState(null, "", url.toString());
+  };
+
+  const onCloseModal = () => {
+    setSelected(null);
+    const url = new URL(window.location.href);
+    url.searchParams.delete("icon");
+    window.history.replaceState(null, "", url.toString());
+  };
+
   return (
     <>
       <IconDetailModal
         iconSet={props.iconSet}
         iconName={selected}
         component={selected ? icons?.[selected] : undefined}
-        onClose={() => setSelected(null)}
+        onClose={onCloseModal}
       />
       <h2>Icons</h2>
       {icons && (
@@ -40,7 +61,7 @@ export function IconSetViewer(props: IconSetViewerProps) {
                 iconSet={props.iconSet}
                 iconName={name}
                 component={Component}
-                onSelect={(icon) => setSelected(icon)}
+                onSelect={onIconSelect}
               />
             );
           })}

@@ -1,4 +1,4 @@
-import type { IconTree } from "src";
+import type { IconTree } from "../src";
 import type { IconDefinition } from "./_types";
 
 export function iconRowTemplate(

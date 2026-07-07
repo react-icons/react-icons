@@ -29,7 +29,19 @@ module.exports = [
       "@typescript-eslint/no-var-requires": 0,
       "react/prop-types": 0,
     },
-    files: ["**/*.{js,mjs,cjs,ts,tsx}"],
+    files: ["**/*.{js,mjs,ts,tsx}"],
+  },
+  {
+    files: ["**/*.cjs"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+      sourceType: "commonjs",
+    },
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
+    },
   },
   {
     ignores: [
@@ -46,6 +58,7 @@ module.exports = [
       "!packages/react-icons/icons/index.js",
       "packages/_react-icons_all/**/*",
       "packages/_react-icons_all-files/**/*",
+      "packages/preview-astro/.astro/**/*",
     ],
   },
 ];

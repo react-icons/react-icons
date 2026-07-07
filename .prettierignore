@@ -11,5 +11,7 @@ node_modules
 
 /packages/preview/.next
 /packages/preview/out/
+/packages/preview-astro/.astro
+/packages/*/build
 
 /lerna.json

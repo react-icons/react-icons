@@ -2,12 +2,12 @@
   "compilerOptions": {
     "outDir": "./build/lib",
     "emitDeclarationOnly": true,
+    "rootDir": "./src",
     "module": "es2015",
-    "target": "es5",
+    "target": "es2015",
     "lib": ["es2017", "dom"],
     "jsx": "react",
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    "moduleResolution": "bundler",
     "declaration": true,
     "strict": true,
     "noImplicitAny": true

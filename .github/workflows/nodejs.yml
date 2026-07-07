@@ -4,20 +4,26 @@ name: Node.js CI
   - push
   - pull_request
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: write # Required for GitHub Releases
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: "yarn"
-      - name: corepack
+      - name: install corepack
+        run: npm install -g corepack@0.35.0
+      - name: enable corepack
         run: corepack enable
+      - name: Use Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          package-manager-cache: ${{ !startsWith(github.ref, 'refs/tags/') }}
       - name: Install dependencies
         run: yarn --immutable
       - name: Formatter
@@ -26,28 +32,23 @@ jobs:
         run: yarn lint
       - name: Build Packages
         run: BASE_PATH=/react-icons ./build-script.sh
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           path: packages/_react-icons_*/*.tgz
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/preview-astro/dist
+          path: ./packages/preview-astro/dist
         if: github.ref == 'refs/heads/master'
-      - name: generate notes
-        run: gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${GITHUB_REF#tags/} --jq .body >> RELEASE_NOTES
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: contains(github.ref, 'tags/')
-      - name: append versions
+      - name: Generate release notes
         run: |
+          gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${GITHUB_REF#tags/} --jq .body >> RELEASE_NOTES
           echo >> RELEASE_NOTES
           cat packages/react-icons/VERSIONS >> RELEASE_NOTES
-        if: contains(github.ref, 'tags/')
-      - name: cat
-        run: cat RELEASE_NOTES
-        if: contains(github.ref, 'tags/')
+          cat RELEASE_NOTES
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: startsWith(github.ref, 'refs/tags/')
       - name: Release
         uses: ncipollo/release-action@v1
         with:
@@ -55,4 +56,23 @@ jobs:
           bodyFile: "RELEASE_NOTES"
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: ${{ contains(github.ref, 'snapshot') }}
-        if: contains(github.ref, 'tags/')
+        if: startsWith(github.ref, 'refs/tags/')
+      - name: Stage npm publish
+        run: npx -y npm@^11.18.0 stage publish
+        working-directory: packages/_react-icons_all
+        if: startsWith(github.ref, 'refs/tags/')
+
+  deploy-pages:
+    if: github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5

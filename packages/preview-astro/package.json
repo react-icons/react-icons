@@ -1,7 +1,7 @@
 {
   "name": "preview-astro",
   "type": "module",
-  "version": "5.5.0",
+  "version": "5.7.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -12,19 +12,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
-    "@astrojs/react": "^3.3.1",
-    "@nanostores/react": "^0.7.2",
-    "astro": "^4.7.0",
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/react": "^5.0.7",
+    "@nanostores/react": "^0.7.3",
+    "astro": "^6.4.6",
     "basscss": "^8.1.0",
     "cogo-toast": "^4.2.3",
     "copy-to-clipboard": "^3.3.3",
     "nanostores": "^0.10.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.5.0",
-    "sass": "^1.69.5",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "^5.7.0",
+    "sass": "^1.101.0",
     "tiny-skeleton-loader-react": "^1.2.1",
-    "typescript": "^5.4.5"
+    "typescript": "^6.0.3"
   }
 }

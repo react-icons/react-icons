@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import type { PluginOption } from "vite";
 import { IconsManifest } from "react-icons/lib";
 
 // https://astro.build/config
@@ -13,19 +12,19 @@ export default defineConfig({
   },
 });
 
-function reactIconsGetIconsPlugin(): PluginOption {
+function reactIconsGetIconsPlugin() {
   const virtualModuleId = "virtual:react-icons-get-icons";
   const resolvedVirtualModuleId = "\0" + virtualModuleId;
 
   return {
     name: "react-icons-get-icons-plugin",
-    resolveId(id) {
+    resolveId(id: string) {
       if (id === virtualModuleId) {
         return resolvedVirtualModuleId;
       }
       return undefined;
     },
-    load(id) {
+    load(id: string) {
       if (id === resolvedVirtualModuleId) {
         let codes = "export function getIcons (id) { switch (id) {";
         for (const icon of IconsManifest) {

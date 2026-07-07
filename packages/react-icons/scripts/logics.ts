@@ -1,10 +1,7 @@
-import {
-  Cheerio,
-  load as cheerioLoad,
-  Element as CheerioElement,
-} from "cheerio";
+import { load as cheerioLoad } from "cheerio";
 import camelcase from "camelcase";
 import { promises as fs } from "fs";
+import { type AnyNode, type Element as DomElement } from "domhandler";
 import path from "path";
 import { type IconDefinitionContent } from "./_types";
 import { glob } from "./glob";
@@ -24,6 +21,8 @@ export async function convertIconData(
 ) {
   const $doc = cheerioLoad(svg, { xmlMode: true });
   const $svg = $doc("svg");
+  const isSvgNode = (element: AnyNode): element is DomElement =>
+    "tagName" in element && "attribs" in element;
 
   // filter/convert attributes
   // 1. remove class attr
@@ -71,23 +70,32 @@ export async function convertIconData(
       );
 
   // convert to [ { tag: 'path', attr: { d: 'M436 160c6.6 ...', ... }, child: { ... } } ]
-  function elementToTree(element: Cheerio<CheerioElement>): IconTree[] {
+  type CheerioCollection = ReturnType<ReturnType<typeof cheerioLoad>>;
+
+  function elementToTree(element: CheerioCollection): IconTree[] {
     return (
       element
         // ignore style, title tag
         .filter(
-          (_, e) => !!(e.tagName && !["style", "title"].includes(e.tagName)),
+          (_: number, e: AnyNode) =>
+            isSvgNode(e) && !["style", "title"].includes(e.tagName),
         )
         // convert to AST recursively
-        .map((_, e) => ({
-          tag: e.tagName,
-          attr: attrConverter(e.attribs, e.tagName),
-          child:
-            e.children && e.children.length
-              ? elementToTree($doc(e.children) as Cheerio<CheerioElement>)
-              : [],
-        }))
+        .map((_: number, e: AnyNode) => {
+          if (!isSvgNode(e)) {
+            return null;
+          }
+          return {
+            tag: e.tagName,
+            attr: attrConverter(e.attribs, e.tagName),
+            child:
+              e.children && e.children.length
+                ? elementToTree($doc(e.children) as CheerioCollection)
+                : [],
+          };
+        })
         .get()
+        .filter((tree): tree is IconTree => tree !== null)
     );
   }
 

@@ -448,6 +448,7 @@ export const icons: IconDefinition[] = [
           "../../icons/grommet-icons/public/img/*.svg",
         ),
         formatter: (name) => `Gr${name}`,
+        multiColor: true,
       },
     ],
     projectUrl: "https://github.com/grommet/grommet-icons",

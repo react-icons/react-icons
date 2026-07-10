@@ -53,6 +53,23 @@ export async function writeLicense({ DIST, rootDir }: TaskContext) {
   await fs.appendFile(path.resolve(DIST, "LICENSE"), iconLicenses, "utf8");
 }
 
+export async function writeIconLicense(
+  icon: IconDefinition,
+  { DIST, rootDir }: TaskContext,
+) {
+  const iconLicense = [
+    `${icon.name} - ${icon.projectUrl}`,
+    `License: ${icon.license} ${icon.licenseUrl}`,
+    "",
+  ].join("\n");
+
+  await fs.copyFile(
+    path.resolve(rootDir, "LICENSE_HEADER"),
+    path.resolve(DIST, "LICENSE"),
+  );
+  await fs.appendFile(path.resolve(DIST, "LICENSE"), iconLicense, "utf8");
+}
+
 export async function writeEntryPoints({ DIST }: TaskContext) {
   const generateEntryCjs = function () {
     return `module.exports = require('./lib/index.js');`;

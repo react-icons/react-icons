@@ -13,6 +13,7 @@ import {
 import { svgoConfig } from "./svgo";
 import {
   writeEntryPoints,
+  writeIconLicense,
   writeIconsManifest,
   writePackageJson,
 } from "./task_common";
@@ -105,6 +106,8 @@ export async function writeGeneratedIconPackage(
   await rmDirRecursive(dist);
   await fs.mkdir(dist, { recursive: true });
 
+  await writeIconLicense(icon, { DIST: dist, LIB: dist, rootDir });
+
   const write = (filePath: string[], str: string) =>
     fs.writeFile(path.resolve(dist, ...filePath), str, "utf8");
 
@@ -161,7 +164,7 @@ export async function writeGeneratedIconPackage(
       main: "index.js",
       module: "index.mjs",
       types: "index.d.ts",
-      files: ["index.js", "index.mjs", "index.d.ts"],
+      files: ["index.js", "index.mjs", "index.d.ts", "LICENSE"],
       exports: packageExports(false),
       dependencies: {
         "@react-icons/core": version,

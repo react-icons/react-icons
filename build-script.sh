@@ -13,6 +13,10 @@ time yarn install --mode=skip-build
 echo VERSIONS; cat packages/react-icons/VERSIONS
 (cd packages/_react-icons_all/ && npm pack 2>&1 | tail)
 (cd packages/_react-icons_all-files/ && npm pack 2>&1 | tail)
+for package_json in generated-packages/*/package.json; do
+  package_dir=${package_json%/package.json}
+  (cd "$package_dir" && npm pack 2>&1 | tail)
+done
 
 (cd packages/preview-astro/ && yarn build)
 (cd packages/demo/ && CI=true yarn test && yarn build)

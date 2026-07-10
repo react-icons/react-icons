@@ -29,6 +29,10 @@ export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
   const initFiles = ["index.d.ts", "index.mjs", "index.js"];
 
   for (const icon of icons) {
+    await fs.rm(path.resolve(DIST, icon.id), {
+      recursive: true,
+      force: true,
+    });
     await fs.mkdir(path.resolve(DIST, icon.id)).catch(ignore);
   }
 
@@ -41,6 +45,7 @@ export async function writeIconModuleFiles(
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   { DIST, LIB, rootDir }: TaskContext,
 ) {
+  await fs.mkdir(path.resolve(DIST, icon.id), { recursive: true });
   const exists = new Set(); // for remove duplicate
 
   for (const content of icon.contents) {
@@ -66,6 +71,7 @@ export async function writeIconModuleFiles(
       const modRes = iconRowTemplate(icon, name, iconData, "module");
       const modHeader =
         "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '../lib/index.mjs';\n";
+      await fs.mkdir(path.resolve(DIST, icon.id), { recursive: true });
       await fs.writeFile(
         path.resolve(DIST, icon.id, `${name}.mjs`),
         modHeader + modRes,
@@ -74,6 +80,7 @@ export async function writeIconModuleFiles(
       const comRes = iconRowTemplate(icon, name, iconData, "common");
       const comHeader =
         "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('../lib').GenIcon\n";
+      await fs.mkdir(path.resolve(DIST, icon.id), { recursive: true });
       await fs.writeFile(
         path.resolve(DIST, icon.id, `${name}.js`),
         comHeader + comRes,
@@ -82,6 +89,7 @@ export async function writeIconModuleFiles(
       const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
       const dtsHeader =
         "// THIS FILE IS AUTO GENERATED\nimport { IconTree, IconType } from '../lib/index.mjs'\n";
+      await fs.mkdir(path.resolve(DIST, icon.id), { recursive: true });
       await fs.writeFile(
         path.resolve(DIST, icon.id, `${name}.d.ts`),
         dtsHeader + dtsRes,

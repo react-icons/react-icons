@@ -6,6 +6,7 @@ import { glob } from "../../scripts/glob";
 export const icons: IconDefinition[] = [
   {
     id: "ci",
+    packageName: "circum-icons",
     name: "Circum Icons",
     contents: [
       {
@@ -28,6 +29,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fa",
+    packageName: "fontawesome5",
     name: "Font Awesome 5",
     contents: [
       {
@@ -59,6 +61,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fa6",
+    packageName: "fontawesome6",
     name: "Font Awesome 6",
     contents: [
       {
@@ -90,6 +93,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "io",
+    packageName: "ionicons4",
     name: "Ionicons 4",
     contents: [
       {
@@ -106,6 +110,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "io5",
+    packageName: "ionicons5",
     name: "Ionicons 5",
     contents: [
       {
@@ -123,6 +128,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "md",
+    packageName: "material-design-icons",
     name: "Material Design icons",
     contents: [
       {
@@ -182,6 +188,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "ti",
+    packageName: "typicons",
     name: "Typicons",
     contents: [
       {
@@ -203,6 +210,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "go",
+    packageName: "github-octicons",
     name: "Github Octicons icons",
     contents: [
       {
@@ -219,6 +227,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fi",
+    packageName: "feather",
     name: "Feather",
     contents: [
       {
@@ -235,6 +244,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "lu",
+    packageName: "lucide",
     name: "Lucide",
     contents: [
       {
@@ -251,6 +261,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "gi",
+    packageName: "game-icons",
     name: "Game Icons",
     contents: [
       {
@@ -275,6 +286,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "wi",
+    packageName: "weather-icons",
     name: "Weather Icons",
     contents: [
       {
@@ -296,6 +308,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "di",
+    packageName: "devicons",
     name: "Devicons",
     contents: [
       {
@@ -317,6 +330,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "ai",
+    packageName: "ant-design-icons",
     name: "Ant Design Icons",
     contents: [
       {
@@ -356,6 +370,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "bs",
+    packageName: "bootstrap-icons",
     name: "Bootstrap Icons",
     contents: [
       {
@@ -394,6 +409,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "ri",
+    packageName: "remix-icon",
     name: "Remix Icon",
     contents: [
       {
@@ -415,6 +431,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fc",
+    packageName: "flat-color-icons",
     name: "Flat Color Icons",
     contents: [
       {
@@ -440,6 +457,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "gr",
+    packageName: "grommet-icons",
     name: "Grommet-Icons",
     contents: [
       {
@@ -464,6 +482,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "hi",
+    packageName: "heroicons",
     name: "Heroicons",
     contents: [
       {
@@ -495,6 +514,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "hi2",
+    packageName: "heroicons2",
     name: "Heroicons 2",
     contents: [
       {
@@ -533,6 +553,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "si",
+    packageName: "simple-icons",
     name: "Simple Icons",
     contents: [
       {
@@ -554,6 +575,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "sl",
+    packageName: "simple-line-icons",
     name: "Simple Line Icons",
     contents: [
       {
@@ -578,6 +600,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "im",
+    packageName: "icomoon-free",
     name: "IcoMoon Free",
     contents: [
       {
@@ -600,6 +623,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "bi",
+    packageName: "boxicons",
     name: "BoxIcons",
     contents: [
       {
@@ -632,6 +656,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "cg",
+    packageName: "css-gg",
     name: "css.gg",
     contents: [
       {
@@ -653,6 +678,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "vsc",
+    packageName: "vscode-icons",
     name: "VS Code Icons",
     contents: [
       {
@@ -677,6 +703,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "tb",
+    packageName: "tabler-icons",
     name: "Tabler Icons",
     contents: [
       {
@@ -708,6 +735,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "tfi",
+    packageName: "themify-icons",
     name: "Themify Icons",
     contents: [
       {
@@ -730,6 +758,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "rx",
+    packageName: "radix-icons",
     name: "Radix Icons",
     contents: [
       {
@@ -754,6 +783,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "pi",
+    packageName: "phosphor-icons",
     name: "Phosphor Icons",
     contents: [
       {
@@ -778,6 +808,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "lia",
+    packageName: "line-awesome",
     name: "Icons8 Line Awesome",
     contents: [
       {

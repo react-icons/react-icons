@@ -56,6 +56,7 @@ module.exports = [
       "packages/react-icons/build/**/*",
       "packages/react-icons/icons/**/*",
       "!packages/react-icons/icons/index.js",
+      "generated-packages/**/*",
       "packages/_react-icons_all/**/*",
       "packages/_react-icons_all-files/**/*",
       "packages/preview-astro/.astro/**/*",

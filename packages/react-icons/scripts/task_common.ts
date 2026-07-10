@@ -77,6 +77,30 @@ export async function writeEntryPoints({ DIST }: TaskContext) {
   );
 }
 
+export async function writeProxyEntryPoints({
+  DIST,
+  source,
+}: Pick<TaskContext, "DIST"> & { source: string }) {
+  const generateEntryCjs = () => `module.exports = require('${source}');`;
+  const generateEntryMjs = () => `export * from '${source}';`;
+
+  await fs.writeFile(
+    path.resolve(DIST, "index.js"),
+    `// THIS FILE IS AUTO GENERATED\n${generateEntryCjs()}`,
+    "utf8",
+  );
+  await fs.writeFile(
+    path.resolve(DIST, "index.mjs"),
+    `// THIS FILE IS AUTO GENERATED\n${generateEntryMjs()}`,
+    "utf8",
+  );
+  await fs.writeFile(
+    path.resolve(DIST, "index.d.ts"),
+    `// THIS FILE IS AUTO GENERATED\n${generateEntryMjs()}`,
+    "utf8",
+  );
+}
+
 interface IconsetVersion {
   icon: IconDefinition;
   version: string;

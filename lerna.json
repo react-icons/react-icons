@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "generated-packages/*"
   ],
   "version": "5.7.0",
   "command": {

@@ -2770,6 +2770,324 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@react-icons/ant-design-icons@npm:5.7.0, @react-icons/ant-design-icons@workspace:generated-packages/ant-design-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/ant-design-icons@workspace:generated-packages/ant-design-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/bootstrap-icons@npm:5.7.0, @react-icons/bootstrap-icons@workspace:generated-packages/bootstrap-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/bootstrap-icons@workspace:generated-packages/bootstrap-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/boxicons@npm:5.7.0, @react-icons/boxicons@workspace:generated-packages/boxicons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/boxicons@workspace:generated-packages/boxicons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/circum-icons@npm:5.7.0, @react-icons/circum-icons@workspace:generated-packages/circum-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/circum-icons@workspace:generated-packages/circum-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/core@npm:5.7.0, @react-icons/core@workspace:generated-packages/core":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/core@workspace:generated-packages/core"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/css-gg@npm:5.7.0, @react-icons/css-gg@workspace:generated-packages/css-gg":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/css-gg@workspace:generated-packages/css-gg"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/devicons@npm:5.7.0, @react-icons/devicons@workspace:generated-packages/devicons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/devicons@workspace:generated-packages/devicons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/feather@npm:5.7.0, @react-icons/feather@workspace:generated-packages/feather":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/feather@workspace:generated-packages/feather"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/flat-color-icons@npm:5.7.0, @react-icons/flat-color-icons@workspace:generated-packages/flat-color-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/flat-color-icons@workspace:generated-packages/flat-color-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/fontawesome5@npm:5.7.0, @react-icons/fontawesome5@workspace:generated-packages/fontawesome5":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/fontawesome5@workspace:generated-packages/fontawesome5"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/fontawesome6@npm:5.7.0, @react-icons/fontawesome6@workspace:generated-packages/fontawesome6":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/fontawesome6@workspace:generated-packages/fontawesome6"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/game-icons@npm:5.7.0, @react-icons/game-icons@workspace:generated-packages/game-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/game-icons@workspace:generated-packages/game-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/github-octicons@npm:5.7.0, @react-icons/github-octicons@workspace:generated-packages/github-octicons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/github-octicons@workspace:generated-packages/github-octicons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/grommet-icons@npm:5.7.0, @react-icons/grommet-icons@workspace:generated-packages/grommet-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/grommet-icons@workspace:generated-packages/grommet-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/heroicons2@npm:5.7.0, @react-icons/heroicons2@workspace:generated-packages/heroicons2":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/heroicons2@workspace:generated-packages/heroicons2"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/heroicons@npm:5.7.0, @react-icons/heroicons@workspace:generated-packages/heroicons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/heroicons@workspace:generated-packages/heroicons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/icomoon-free@npm:5.7.0, @react-icons/icomoon-free@workspace:generated-packages/icomoon-free":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/icomoon-free@workspace:generated-packages/icomoon-free"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/ionicons4@npm:5.7.0, @react-icons/ionicons4@workspace:generated-packages/ionicons4":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/ionicons4@workspace:generated-packages/ionicons4"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/ionicons5@npm:5.7.0, @react-icons/ionicons5@workspace:generated-packages/ionicons5":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/ionicons5@workspace:generated-packages/ionicons5"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/line-awesome@npm:5.7.0, @react-icons/line-awesome@workspace:generated-packages/line-awesome":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/line-awesome@workspace:generated-packages/line-awesome"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/lucide@npm:5.7.0, @react-icons/lucide@workspace:generated-packages/lucide":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/lucide@workspace:generated-packages/lucide"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/material-design-icons@npm:5.7.0, @react-icons/material-design-icons@workspace:generated-packages/material-design-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/material-design-icons@workspace:generated-packages/material-design-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/phosphor-icons@npm:5.7.0, @react-icons/phosphor-icons@workspace:generated-packages/phosphor-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/phosphor-icons@workspace:generated-packages/phosphor-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/radix-icons@npm:5.7.0, @react-icons/radix-icons@workspace:generated-packages/radix-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/radix-icons@workspace:generated-packages/radix-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/remix-icon@npm:5.7.0, @react-icons/remix-icon@workspace:generated-packages/remix-icon":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/remix-icon@workspace:generated-packages/remix-icon"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/simple-icons@npm:5.7.0, @react-icons/simple-icons@workspace:generated-packages/simple-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/simple-icons@workspace:generated-packages/simple-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/simple-line-icons@npm:5.7.0, @react-icons/simple-line-icons@workspace:generated-packages/simple-line-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/simple-line-icons@workspace:generated-packages/simple-line-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/tabler-icons@npm:5.7.0, @react-icons/tabler-icons@workspace:generated-packages/tabler-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/tabler-icons@workspace:generated-packages/tabler-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/themify-icons@npm:5.7.0, @react-icons/themify-icons@workspace:generated-packages/themify-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/themify-icons@workspace:generated-packages/themify-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/typicons@npm:5.7.0, @react-icons/typicons@workspace:generated-packages/typicons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/typicons@workspace:generated-packages/typicons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/vscode-icons@npm:5.7.0, @react-icons/vscode-icons@workspace:generated-packages/vscode-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/vscode-icons@workspace:generated-packages/vscode-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-icons/weather-icons@npm:5.7.0, @react-icons/weather-icons@workspace:generated-packages/weather-icons":
+  version: 0.0.0-use.local
+  resolution: "@react-icons/weather-icons@workspace:generated-packages/weather-icons"
+  dependencies:
+    "@react-icons/core": "npm:5.7.0"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@rolldown/binding-android-arm64@npm:1.1.4":
   version: 1.1.4
   resolution: "@rolldown/binding-android-arm64@npm:1.1.4"
@@ -9873,6 +10191,39 @@ __metadata:
 "react-icons@npm:^5.7.0, react-icons@workspace:packages/_react-icons_all":
   version: 0.0.0-use.local
   resolution: "react-icons@workspace:packages/_react-icons_all"
+  dependencies:
+    "@react-icons/ant-design-icons": "npm:5.7.0"
+    "@react-icons/bootstrap-icons": "npm:5.7.0"
+    "@react-icons/boxicons": "npm:5.7.0"
+    "@react-icons/circum-icons": "npm:5.7.0"
+    "@react-icons/core": "npm:5.7.0"
+    "@react-icons/css-gg": "npm:5.7.0"
+    "@react-icons/devicons": "npm:5.7.0"
+    "@react-icons/feather": "npm:5.7.0"
+    "@react-icons/flat-color-icons": "npm:5.7.0"
+    "@react-icons/fontawesome5": "npm:5.7.0"
+    "@react-icons/fontawesome6": "npm:5.7.0"
+    "@react-icons/game-icons": "npm:5.7.0"
+    "@react-icons/github-octicons": "npm:5.7.0"
+    "@react-icons/grommet-icons": "npm:5.7.0"
+    "@react-icons/heroicons": "npm:5.7.0"
+    "@react-icons/heroicons2": "npm:5.7.0"
+    "@react-icons/icomoon-free": "npm:5.7.0"
+    "@react-icons/ionicons4": "npm:5.7.0"
+    "@react-icons/ionicons5": "npm:5.7.0"
+    "@react-icons/line-awesome": "npm:5.7.0"
+    "@react-icons/lucide": "npm:5.7.0"
+    "@react-icons/material-design-icons": "npm:5.7.0"
+    "@react-icons/phosphor-icons": "npm:5.7.0"
+    "@react-icons/radix-icons": "npm:5.7.0"
+    "@react-icons/remix-icon": "npm:5.7.0"
+    "@react-icons/simple-icons": "npm:5.7.0"
+    "@react-icons/simple-line-icons": "npm:5.7.0"
+    "@react-icons/tabler-icons": "npm:5.7.0"
+    "@react-icons/themify-icons": "npm:5.7.0"
+    "@react-icons/typicons": "npm:5.7.0"
+    "@react-icons/vscode-icons": "npm:5.7.0"
+    "@react-icons/weather-icons": "npm:5.7.0"
   peerDependencies:
     react: "*"
   languageName: unknown

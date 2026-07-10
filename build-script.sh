@@ -9,6 +9,7 @@ fi
 (cd packages/react-icons/ && yarn type-check)
 time (cd packages/react-icons/ && yarn fetch)
 time (cd packages/react-icons/ && yarn build)
+time yarn install --mode=skip-build
 echo VERSIONS; cat packages/react-icons/VERSIONS
 (cd packages/_react-icons_all/ && npm pack 2>&1 | tail)
 (cd packages/_react-icons_all-files/ && npm pack 2>&1 | tail)

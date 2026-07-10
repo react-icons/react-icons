@@ -1,5 +1,6 @@
 export interface IconDefinition {
   id: string;
+  packageName: string;
   name: string;
   contents: IconDefinitionContent[];
   projectUrl: string;

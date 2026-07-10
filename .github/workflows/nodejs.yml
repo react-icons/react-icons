@@ -34,7 +34,9 @@ jobs:
         run: BASE_PATH=/react-icons ./build-script.sh
       - uses: actions/upload-artifact@v7
         with:
-          path: packages/_react-icons_*/*.tgz
+          path: |
+            packages/_react-icons_*/*.tgz
+            generated-packages/*/*.tgz
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
@@ -52,13 +54,27 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "packages/_react-icons_*/*.tgz"
+          artifacts: "packages/_react-icons_*/*.tgz,generated-packages/*/*.tgz"
           bodyFile: "RELEASE_NOTES"
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: ${{ contains(github.ref, 'snapshot') }}
         if: startsWith(github.ref, 'refs/tags/')
-      - name: Stage npm publish
-        run: npx -y npm@^11.18.0 stage publish
+      - name: Stage npm publish core package
+        run: npx -y npm@^11.18.0 stage publish --access public --provenance
+        working-directory: generated-packages/core
+        if: startsWith(github.ref, 'refs/tags/')
+      - name: Stage npm publish icon packages
+        run: |
+          for package_json in generated-packages/*/package.json; do
+            package_dir=${package_json%/package.json}
+            if [[ "$package_dir" == "generated-packages/core" ]]; then
+              continue
+            fi
+            (cd "$package_dir" && npx -y npm@^11.18.0 stage publish --access public --provenance)
+          done
+        if: startsWith(github.ref, 'refs/tags/')
+      - name: Stage npm publish react-icons
+        run: npx -y npm@^11.18.0 stage publish --provenance
         working-directory: packages/_react-icons_all
         if: startsWith(github.ref, 'refs/tags/')
 

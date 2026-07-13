@@ -222,9 +222,14 @@ First, check the discussion to see if anyone would like to add an icon set.
 
 https://github.com/react-icons/react-icons/discussions/categories/new-icon-set
 
-The SVG files to be fetched are managed in this file. Edit this file and run `yarn fetch && yarn check && yarn build`.
+The SVG files to be fetched are managed in this file, and their locked Git
+commits are stored in `packages/react-icons/src/icons/icons.lock`. Edit the
+definition and run `yarn fetch && yarn check && yarn build`.
 
 https://github.com/react-icons/react-icons/blob/master/packages/react-icons/src/icons/index.ts
+
+To update all locked commits to the latest fetched revisions, run
+`yarn fetch && yarn check --update`.
 
 ### Preview
 

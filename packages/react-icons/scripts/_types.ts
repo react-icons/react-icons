@@ -23,7 +23,6 @@ export interface IconSetGitSource {
   remoteDir: string;
   url: string;
   branch: string;
-  hash: string;
 }
 
 export interface TaskContext {

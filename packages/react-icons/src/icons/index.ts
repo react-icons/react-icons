@@ -6,6 +6,7 @@ import { glob } from "../../scripts/glob";
 export const icons: IconDefinition[] = [
   {
     id: "ci",
+    isIncludedInReactIcons: true,
     packageName: "circum-icons",
     name: "Circum Icons",
     contents: [
@@ -28,6 +29,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fa",
+    isIncludedInReactIcons: true,
     packageName: "fontawesome5",
     name: "Font Awesome 5",
     contents: [
@@ -59,6 +61,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fa6",
+    isIncludedInReactIcons: true,
     packageName: "fontawesome6",
     name: "Font Awesome 6",
     contents: [
@@ -90,6 +93,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "io",
+    isIncludedInReactIcons: true,
     packageName: "ionicons4",
     name: "Ionicons 4",
     contents: [
@@ -107,6 +111,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "io5",
+    isIncludedInReactIcons: true,
     packageName: "ionicons5",
     name: "Ionicons 5",
     contents: [
@@ -125,6 +130,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "md",
+    isIncludedInReactIcons: true,
     packageName: "material-design-icons",
     name: "Material Design icons",
     contents: [
@@ -184,6 +190,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "ti",
+    isIncludedInReactIcons: true,
     packageName: "typicons",
     name: "Typicons",
     contents: [
@@ -205,6 +212,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "go",
+    isIncludedInReactIcons: true,
     packageName: "github-octicons",
     name: "Github Octicons icons",
     contents: [
@@ -222,6 +230,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fi",
+    isIncludedInReactIcons: true,
     packageName: "feather",
     name: "Feather",
     contents: [
@@ -239,6 +248,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "lu",
+    isIncludedInReactIcons: true,
     packageName: "lucide",
     name: "Lucide",
     contents: [
@@ -256,6 +266,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "gi",
+    isIncludedInReactIcons: true,
     packageName: "game-icons",
     name: "Game Icons",
     contents: [
@@ -280,6 +291,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "wi",
+    isIncludedInReactIcons: true,
     packageName: "weather-icons",
     name: "Weather Icons",
     contents: [
@@ -301,6 +313,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "di",
+    isIncludedInReactIcons: true,
     packageName: "devicons",
     name: "Devicons",
     contents: [
@@ -322,6 +335,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "ai",
+    isIncludedInReactIcons: true,
     packageName: "ant-design-icons",
     name: "Ant Design Icons",
     contents: [
@@ -361,6 +375,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "bs",
+    isIncludedInReactIcons: true,
     packageName: "bootstrap-icons",
     name: "Bootstrap Icons",
     contents: [
@@ -399,6 +414,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "ri",
+    isIncludedInReactIcons: true,
     packageName: "remix-icon",
     name: "Remix Icon",
     contents: [
@@ -420,6 +436,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fc",
+    isIncludedInReactIcons: true,
     packageName: "flat-color-icons",
     name: "Flat Color Icons",
     contents: [
@@ -445,6 +462,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "gr",
+    isIncludedInReactIcons: true,
     packageName: "grommet-icons",
     name: "Grommet-Icons",
     contents: [
@@ -469,6 +487,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "hi",
+    isIncludedInReactIcons: true,
     packageName: "heroicons",
     name: "Heroicons",
     contents: [
@@ -500,6 +519,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "hi2",
+    isIncludedInReactIcons: true,
     packageName: "heroicons2",
     name: "Heroicons 2",
     contents: [
@@ -538,6 +558,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "si",
+    isIncludedInReactIcons: true,
     packageName: "simple-icons",
     name: "Simple Icons",
     contents: [
@@ -559,6 +580,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "sl",
+    isIncludedInReactIcons: true,
     packageName: "simple-line-icons",
     name: "Simple Line Icons",
     contents: [
@@ -583,6 +605,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "im",
+    isIncludedInReactIcons: true,
     packageName: "icomoon-free",
     name: "IcoMoon Free",
     contents: [
@@ -605,6 +628,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "bi",
+    isIncludedInReactIcons: true,
     packageName: "boxicons",
     name: "BoxIcons",
     contents: [
@@ -637,6 +661,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "cg",
+    isIncludedInReactIcons: true,
     packageName: "css-gg",
     name: "css.gg",
     contents: [
@@ -658,6 +683,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "vsc",
+    isIncludedInReactIcons: true,
     packageName: "vscode-icons",
     name: "VS Code Icons",
     contents: [
@@ -682,6 +708,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "tb",
+    isIncludedInReactIcons: true,
     packageName: "tabler-icons",
     name: "Tabler Icons",
     contents: [
@@ -713,6 +740,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "tfi",
+    isIncludedInReactIcons: true,
     packageName: "themify-icons",
     name: "Themify Icons",
     contents: [
@@ -735,6 +763,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "rx",
+    isIncludedInReactIcons: true,
     packageName: "radix-icons",
     name: "Radix Icons",
     contents: [
@@ -759,6 +788,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "pi",
+    isIncludedInReactIcons: true,
     packageName: "phosphor-icons",
     name: "Phosphor Icons",
     contents: [
@@ -783,6 +813,7 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "lia",
+    isIncludedInReactIcons: true,
     packageName: "line-awesome",
     name: "Icons8 Line Awesome",
     contents: [

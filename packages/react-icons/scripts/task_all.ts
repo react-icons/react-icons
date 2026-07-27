@@ -6,8 +6,7 @@ import { writeProxyEntryPoints } from "./task_common";
 import { TaskContext } from "./_types";
 import { getGeneratedPackageName } from "./task_packages";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
+export async function dirInit({ DIST, LIB }: TaskContext, iconSet = icons) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ignore = (err: any) => {
     if (err?.code === "EEXIST") return;
@@ -23,7 +22,7 @@ export async function dirInit({ DIST, LIB, rootDir }: TaskContext) {
 
   const initFiles = ["index.d.ts", "index.mjs", "index.js"];
 
-  for (const icon of icons) {
+  for (const icon of iconSet) {
     await fs.rm(path.resolve(DIST, icon.id), {
       recursive: true,
       force: true,

@@ -1,5 +1,5 @@
 import React from "react";
-import { IconsManifest } from "react-icons";
+import { IconsManifest } from "@react-icons/core";
 import { getIcons } from "virtual:react-icons-get-icons";
 
 const icons = [...IconsManifest].sort((a, b) => a.name.localeCompare(b.name));

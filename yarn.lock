@@ -3027,7 +3027,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-icons/core@npm:5.7.0, @react-icons/core@workspace:generated-packages/core":
+"@react-icons/core@npm:5.7.0, @react-icons/core@npm:^5.7.0, @react-icons/core@workspace:generated-packages/core":
   version: 0.0.0-use.local
   resolution: "@react-icons/core@workspace:generated-packages/core"
   peerDependencies:
@@ -3085,7 +3085,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-icons/fontawesome6@npm:5.7.0, @react-icons/fontawesome6@workspace:generated-packages/fontawesome6":
+"@react-icons/fontawesome6@npm:5.7.0, @react-icons/fontawesome6@npm:^5.7.0, @react-icons/fontawesome6@workspace:generated-packages/fontawesome6":
   version: 0.0.0-use.local
   resolution: "@react-icons/fontawesome6@workspace:generated-packages/fontawesome6"
   dependencies:
@@ -9817,6 +9817,8 @@ __metadata:
     "@astrojs/check": "npm:^0.9.9"
     "@astrojs/react": "npm:^5.0.7"
     "@nanostores/react": "npm:^0.7.3"
+    "@react-icons/core": "npm:^5.7.0"
+    "@react-icons/fontawesome6": "npm:^5.7.0"
     astro: "npm:^7.1.0"
     basscss: "npm:^8.1.0"
     cogo-toast: "npm:^4.2.3"

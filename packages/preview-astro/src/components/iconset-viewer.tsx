@@ -2,9 +2,11 @@ import React from "react";
 import { getIcons } from "virtual:react-icons-get-icons";
 import Icon from "./icon";
 import { IconDetailModal } from "./icondetailmodal";
+import type { IconManifestType } from "@react-icons/core";
 
 export interface IconSetViewerProps {
   iconSet: string;
+  manifest: IconManifestType;
 }
 
 export function IconSetViewer(props: IconSetViewerProps) {
@@ -24,6 +26,7 @@ export function IconSetViewer(props: IconSetViewerProps) {
         iconSet={props.iconSet}
         iconName={selected}
         component={selected ? icons?.[selected] : undefined}
+        manifest={props.manifest}
         onClose={() => setSelected(null)}
       />
       <h2>Icons</h2>

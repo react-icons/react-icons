@@ -3,7 +3,8 @@ import { Code } from "astro:components";
 import Container from "../../components/container.astro";
 import Layout from "../../layouts/Layout.astro";
 import { IconSetViewer } from "../../components/iconset-viewer.tsx";
-import { IconsManifest } from "react-icons";
+import { IconsManifest } from "@react-icons/core";
+import { getImportStyles } from "../../utils/importstyles";
 
 export async function getStaticPaths() {
   return Promise.all(
@@ -71,11 +72,30 @@ const { manifest } = Astro.props;
     </dl>
 
     <h2>Import</h2>
-    <Code
-      lang="jsx"
-      code={`import { IconName } from "react-icons/${manifest.id}";`}
-    />
+    {
+      getImportStyles(manifest).map((style) => (
+        <div>
+          {style.kind === "default" ? (
+            <>
+              <h3>Installation</h3>
+              <Code lang="bash" code={`npm install ${style.packageName}`} />
+              <h3>Usage</h3>
+            </>
+          ) : (
+            <>
+              <h3>Install a single icon set (v6.0.0+)</h3>
+              <p>Install only this icon set with its scoped package.</p>
+              <Code lang="bash" code={`npm install ${style.packageName}`} />
+            </>
+          )}
+          <Code
+            lang="jsx"
+            code={`import { IconName } from "${style.importPath}";`}
+          />
+        </div>
+      ))
+    }
 
-    <IconSetViewer client:load iconSet={manifest.id} />
+    <IconSetViewer client:load iconSet={manifest.id} manifest={manifest} />
   </Container>
 </Layout>

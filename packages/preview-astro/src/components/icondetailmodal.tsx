@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaRegClipboard } from "react-icons/fa6";
+import { FaRegClipboard } from "@react-icons/fontawesome6";
 import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
 import { useKeyDown } from "../utils/usekeydown";
+import type { IconManifestType } from "@react-icons/core";
+import { getImportStyles } from "../utils/importstyles";
 
 interface colorVariant {
   bg: string;
@@ -57,12 +59,18 @@ export interface IconDetailModalProps {
   iconName?: string | null;
   component?: React.ComponentType | undefined;
   onClose?(): void;
+  manifest?: IconManifestType | undefined;
 }
 export function IconDetailModal(
   props: IconDetailModalProps,
 ): React.ReactElement {
   const open = !!(props.iconSet && props.iconName);
-  const importCode = `import { ${props.iconName} } from "react-icons/${props.iconSet}";`;
+  const styles = props.manifest ? getImportStyles(props.manifest) : [];
+  const importCodes = styles.length
+    ? styles.map(
+        (style) => `import { ${props.iconName} } from "${style.importPath}";`,
+      )
+    : [`import { ${props.iconName} } from "react-icons/${props.iconSet}";`];
   const useCode = `<${props.iconName} />`;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -98,10 +106,27 @@ export function IconDetailModal(
             </button>
           ))}
         </div>
-        <h2>Code</h2>
-        <pre>
-          <code>{importCode}</code>
-        </pre>
+        {styles.map((style) => {
+          const code = `import { ${props.iconName} } from "${style.importPath}";`;
+          return (
+            <React.Fragment key={style.importPath}>
+              <h2>
+                {style.kind === "default"
+                  ? "Installation"
+                  : "Install a single icon set (v6.0.0+)"}
+              </h2>
+              {style.kind === "scoped" && (
+                <p>Install only this icon set with its scoped package.</p>
+              )}
+              <pre>
+                <code>{`npm install ${style.packageName}`}</code>
+              </pre>
+              <pre>
+                <code>{code}</code>
+              </pre>
+            </React.Fragment>
+          );
+        })}
         <pre>
           <code>{useCode}</code>
         </pre>
@@ -110,7 +135,7 @@ export function IconDetailModal(
             props.iconSet,
             props.iconName,
             `${props.iconSet}/${props.iconName}`,
-            importCode,
+            ...importCodes,
             useCode,
           ].map((text, i) => (
             <li key={i}>

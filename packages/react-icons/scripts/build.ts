@@ -38,6 +38,7 @@ async function task(name: string, fn: () => Promise<void> | void) {
 async function main() {
   try {
     const version = await getPackageVersion();
+    const reactIconsIcons = icons.filter((icon) => icon.isIncludedInReactIcons);
 
     // @react-icons/all
     const allOpt: TaskContext = {
@@ -46,13 +47,13 @@ async function main() {
       LIB: path.resolve(_rootDir, "../_react-icons_all/lib"),
     };
     await task("@react-icons/all initialize", async () => {
-      await taskAll.dirInit(allOpt);
+      await taskAll.dirInit(allOpt, reactIconsIcons);
       await taskCommon.writeProxyEntryPoints({
         DIST: allOpt.DIST,
         source: "@react-icons/core",
       });
-      await taskCommon.writeIconsManifest(allOpt);
-      await taskCommon.writeLicense(allOpt);
+      await taskCommon.writeIconsManifest(allOpt, reactIconsIcons);
+      await taskCommon.writeLicense(allOpt, reactIconsIcons);
       await taskCommon.writePackageJson(
         {
           name: "react-icons",
@@ -64,13 +65,13 @@ async function main() {
             "index.mjs",
             "index.d.ts",
             "lib",
-            ...icons.map((icon) => icon.id),
+            ...reactIconsIcons.map((icon) => icon.id),
           ],
-          exports: buildPackageExports(icons),
+          exports: buildPackageExports(reactIconsIcons),
           dependencies: {
             "@react-icons/core": version,
             ...Object.fromEntries(
-              icons.map((icon) => [
+              reactIconsIcons.map((icon) => [
                 `@react-icons/${getGeneratedPackageName(icon)}`,
                 version,
               ]),
@@ -83,7 +84,7 @@ async function main() {
     });
     await task("@react-icons/all write icons", async () => {
       await Promise.all(
-        icons.map((icon) => taskAll.writeIconModule(icon, allOpt)),
+        reactIconsIcons.map((icon) => taskAll.writeIconModule(icon, allOpt)),
       );
     });
 

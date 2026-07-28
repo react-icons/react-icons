@@ -156,8 +156,8 @@ export function IconDetailModal(
 }
 
 type useModalAnimationProps = {
-  onClose?(): void;
-  isOpen?: boolean;
+  onClose?: (() => void) | undefined;
+  isOpen?: boolean | undefined;
 };
 
 const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
@@ -208,8 +208,8 @@ const useModalAnimation = ({ onClose, isOpen }: useModalAnimationProps) => {
 interface ModalProps {
   title: React.ReactNode;
   children: React.ReactNode;
-  isOpen?: boolean;
-  onClose?(): void;
+  isOpen?: boolean | undefined;
+  onClose?: (() => void) | undefined;
 }
 
 function Modal({

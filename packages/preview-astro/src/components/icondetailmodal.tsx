@@ -3,6 +3,7 @@ import { FaRegClipboard } from "react-icons/fa6";
 import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
 import { useKeyDown } from "../utils/usekeydown";
+import { FiCheck, FiCopy } from "react-icons/fi";
 
 interface colorVariant {
   bg: string;
@@ -68,13 +69,15 @@ export function IconDetailModal(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const Component = props.component as React.ComponentType<any>;
   const [selectedColor, setSelectedColor] = React.useState<number>(0);
+  const [importCodecopied, setImportCodeCopied] = useState(false);
+  const [useCodeCopied, setUseCodeCoiped] = useState(false);
   const colorVariant = colorVariants[selectedColor];
 
   return (
     <Modal
       isOpen={open}
       title={`${props.iconSet}/${props.iconName}`}
-      onClose={props.onClose}
+      onClose={props.onClose ?? (() => {})}
     >
       <div className="icon-detail-modal-content">
         <div
@@ -101,9 +104,27 @@ export function IconDetailModal(
         <h2>Code</h2>
         <pre>
           <code>{importCode}</code>
+          <button
+            onClick={async () => {
+              await navigator.clipboard.writeText(importCode);
+              setImportCodeCopied(true);
+              setTimeout(() => setImportCodeCopied(false), 1500);
+            }}
+          >
+            {importCodecopied ? <FiCheck /> : <FiCopy />}
+          </button>
         </pre>
         <pre>
           <code>{useCode}</code>
+          <button
+            onClick={async () => {
+              await navigator.clipboard.writeText(useCode);
+              setUseCodeCoiped(true);
+              setTimeout(() => setUseCodeCoiped(false), 1500);
+            }}
+          >
+            {useCodeCopied ? <FiCheck /> : <FiCopy />}
+          </button>
         </pre>
         <ul className="copy">
           {[
@@ -198,8 +219,8 @@ function Modal({
   onClose,
 }: ModalProps): React.ReactElement {
   const { animationIsOpen, handleCloseModal, modalRef } = useModalAnimation({
-    onClose,
-    isOpen,
+    onClose: onClose ?? (() => {}),
+    isOpen: isOpen ?? false,
   });
 
   useKeyDown((keyCode) => {

@@ -380,6 +380,8 @@ html:has(.modal-root.active) {
     color: #e1e4e8;
     padding: 10px;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
   }
   ul.copy {
     list-style: none;
@@ -426,4 +428,14 @@ html:has(.modal-root.active) {
       }
     }
   }
+  button{
+    background-color: #24292e;
+    color: #e1e4e8;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
 }

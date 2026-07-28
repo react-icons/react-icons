@@ -4,7 +4,7 @@ import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
 import { useKeyDown } from "../utils/usekeydown";
 import type { IconManifestType } from "@react-icons/core";
-import { getImportStyles } from "../utils/importstyles";
+import { getIconImportPath, getImportStyles } from "../utils/importstyles";
 
 interface colorVariant {
   bg: string;
@@ -68,7 +68,11 @@ export function IconDetailModal(
   const styles = props.manifest ? getImportStyles(props.manifest) : [];
   const importCodes = styles.length
     ? styles.map(
-        (style) => `import { ${props.iconName} } from "${style.importPath}";`,
+        (style) =>
+          `import { ${props.iconName} } from "${getIconImportPath(
+            style,
+            props.iconName ?? "",
+          )}";`,
       )
     : [`import { ${props.iconName} } from "react-icons/${props.iconSet}";`];
   const useCode = `<${props.iconName} />`;
@@ -107,16 +111,25 @@ export function IconDetailModal(
           ))}
         </div>
         {styles.map((style) => {
-          const code = `import { ${props.iconName} } from "${style.importPath}";`;
+          const importPath = getIconImportPath(style, props.iconName ?? "");
+          const code = `import { ${props.iconName} } from "${importPath}";`;
           return (
-            <React.Fragment key={style.importPath}>
+            <React.Fragment key={importPath}>
               <h2>
                 {style.kind === "default"
                   ? "Installation"
-                  : "Install a single icon set (v6.0.0+)"}
+                  : style.kind === "scoped"
+                    ? "Install a single icon set (v6.0.0+)"
+                    : "Install individual icon files (v6.0.0+)"}
               </h2>
               {style.kind === "scoped" && (
                 <p>Install only this icon set with its scoped package.</p>
+              )}
+              {style.kind === "files" && (
+                <p>
+                  Import individual icon modules. The package root cannot be
+                  imported.
+                </p>
               )}
               <pre>
                 <code>{`npm install ${style.packageName}`}</code>

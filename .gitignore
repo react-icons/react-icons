@@ -15,3 +15,6 @@ module
 generated-packages/*/*
 !generated-packages/*/package.json
 !generated-packages/*/LICENSE
+generated-packages-files/*/*
+!generated-packages-files/*/package.json
+!generated-packages-files/*/LICENSE

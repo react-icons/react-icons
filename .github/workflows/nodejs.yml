@@ -37,6 +37,7 @@ jobs:
           path: |
             packages/_react-icons_*/*.tgz
             generated-packages/*/*.tgz
+            generated-packages-files/*/*.tgz
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
@@ -54,7 +55,7 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "packages/_react-icons_*/*.tgz,generated-packages/*/*.tgz"
+          artifacts: "packages/_react-icons_*/*.tgz,generated-packages/*/*.tgz,generated-packages-files/*/*.tgz"
           bodyFile: "RELEASE_NOTES"
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: ${{ contains(github.ref, 'snapshot') }}
@@ -70,6 +71,13 @@ jobs:
             if [[ "$package_dir" == "generated-packages/core" ]]; then
               continue
             fi
+            (cd "$package_dir" && npx -y npm@^11.18.0 stage publish --access public --provenance)
+          done
+        if: startsWith(github.ref, 'refs/tags/')
+      - name: Stage npm publish icon files packages
+        run: |
+          for package_json in generated-packages-files/*/package.json; do
+            package_dir=${package_json%/package.json}
             (cd "$package_dir" && npx -y npm@^11.18.0 stage publish --access public --provenance)
           done
         if: startsWith(github.ref, 'refs/tags/')

@@ -4,7 +4,7 @@ import Container from "../../components/container.astro";
 import Layout from "../../layouts/Layout.astro";
 import { IconSetViewer } from "../../components/iconset-viewer.tsx";
 import { IconsManifest } from "@react-icons/core";
-import { getImportStyles } from "../../utils/importstyles";
+import { getIconImportPath, getImportStyles } from "../../utils/importstyles";
 
 export async function getStaticPaths() {
   return Promise.all(
@@ -83,14 +83,25 @@ const { manifest } = Astro.props;
             </>
           ) : (
             <>
-              <h3>Install a single icon set (v6.0.0+)</h3>
-              <p>Install only this icon set with its scoped package.</p>
+              <h3>
+                {style.kind === "scoped"
+                  ? "Install a single icon set (v6.0.0+)"
+                  : "Install individual icon files (v6.0.0+)"}
+              </h3>
+              <p>
+                {style.kind === "scoped"
+                  ? "Install only this icon set with its scoped package."
+                  : "Import individual icon modules. The package root cannot be imported."}
+              </p>
               <Code lang="bash" code={`npm install ${style.packageName}`} />
             </>
           )}
           <Code
             lang="jsx"
-            code={`import { IconName } from "${style.importPath}";`}
+            code={`import { IconName } from "${getIconImportPath(
+              style,
+              "IconName",
+            )}";`}
           />
         </div>
       ))

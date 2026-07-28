@@ -56,6 +56,48 @@ function packageExports(hasLib = false) {
   return exports;
 }
 
+function filesPackageExports() {
+  return {
+    "./*": {
+      types: "./*.d.ts",
+      require: "./*.js",
+      import: "./*.mjs",
+      default: "./*.mjs",
+    },
+  };
+}
+
+async function forEachIcon(
+  icon: (typeof icons)[number],
+  callback: (
+    name: string,
+    iconData: Awaited<ReturnType<typeof convertIconData>>,
+  ) => Promise<void>,
+) {
+  const exists = new Set<string>();
+  for (const content of icon.contents) {
+    const files = await getIconFiles(content);
+    for (const file of files) {
+      const svgStrRaw = await fs.readFile(file, "utf8");
+      const svgStr = content.processWithSVGO
+        ? svgoOptimize(svgStrRaw, svgoConfig).data
+        : svgStrRaw;
+
+      const iconData = await convertIconData(svgStr, content.multiColor);
+
+      const rawName = path.basename(file, path.extname(file));
+      const pascalName = camelcase(rawName, { pascalCase: true });
+      const name =
+        (content.formatter && content.formatter(pascalName, file)) ||
+        pascalName;
+      if (exists.has(name)) continue;
+      exists.add(name);
+
+      await callback(name, iconData);
+    }
+  }
+}
+
 export async function writeCorePackage(
   dist: string,
   rootDir: string,
@@ -124,37 +166,16 @@ export async function writeGeneratedIconPackage(
     "// THIS FILE IS AUTO GENERATED\nimport type { IconType } from '@react-icons/core'\n",
   );
 
-  const exists = new Set<string>();
-  for (const content of icon.contents) {
-    const files = await getIconFiles(content);
-    for (const file of files) {
-      const svgStrRaw = await fs.readFile(file, "utf8");
-      const svgStr = content.processWithSVGO
-        ? svgoOptimize(svgStrRaw, svgoConfig).data
-        : svgStrRaw;
+  await forEachIcon(icon, async (name, iconData) => {
+    const modRes = iconRowTemplate(icon, name, iconData, "module");
+    await fs.appendFile(path.resolve(dist, "index.mjs"), modRes, "utf8");
 
-      const iconData = await convertIconData(svgStr, content.multiColor);
+    const comRes = iconRowTemplate(icon, name, iconData, "common");
+    await fs.appendFile(path.resolve(dist, "index.js"), comRes, "utf8");
 
-      const rawName = path.basename(file, path.extname(file));
-      const pascalName = camelcase(rawName, { pascalCase: true });
-      const name =
-        (content.formatter && content.formatter(pascalName, file)) ||
-        pascalName;
-      if (exists.has(name)) continue;
-      exists.add(name);
-
-      const modRes = iconRowTemplate(icon, name, iconData, "module");
-      await fs.appendFile(path.resolve(dist, "index.mjs"), modRes, "utf8");
-
-      const comRes = iconRowTemplate(icon, name, iconData, "common");
-      await fs.appendFile(path.resolve(dist, "index.js"), comRes, "utf8");
-
-      const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
-      await fs.appendFile(path.resolve(dist, "index.d.ts"), dtsRes, "utf8");
-
-      exists.add(file);
-    }
-  }
+    const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
+    await fs.appendFile(path.resolve(dist, "index.d.ts"), dtsRes, "utf8");
+  });
 
   await writePackageJson(
     {
@@ -166,6 +187,62 @@ export async function writeGeneratedIconPackage(
       types: "index.d.ts",
       files: ["index.js", "index.mjs", "index.d.ts", "LICENSE"],
       exports: packageExports(false),
+      dependencies: {
+        "@react-icons/core": version,
+      },
+    },
+    { DIST: dist, LIB: dist, rootDir },
+  );
+}
+
+export async function writeGeneratedIconFilesPackage(
+  icon: (typeof icons)[number],
+  dist: string,
+  rootDir: string,
+  version: string,
+) {
+  const packageName = `@react-icons/${getGeneratedPackageName(icon)}_files`;
+
+  await rmDirRecursive(dist);
+  await fs.mkdir(dist, { recursive: true });
+
+  await writeIconLicense(icon, { DIST: dist, LIB: dist, rootDir });
+
+  await forEachIcon(icon, async (name, iconData) => {
+    const modHeader =
+      "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '@react-icons/core';\n";
+    const comHeader =
+      "// THIS FILE IS AUTO GENERATED\nvar GenIcon = require('@react-icons/core').GenIcon\n";
+    const dtsHeader =
+      "// THIS FILE IS AUTO GENERATED\nimport type { IconType } from '@react-icons/core'\n";
+
+    await fs.writeFile(
+      path.resolve(dist, `${name}.mjs`),
+      modHeader + iconRowTemplate(icon, name, iconData, "module"),
+      "utf8",
+    );
+    await fs.writeFile(
+      path.resolve(dist, `${name}.js`),
+      comHeader + iconRowTemplate(icon, name, iconData, "common"),
+      "utf8",
+    );
+    await fs.writeFile(
+      path.resolve(dist, `${name}.d.ts`),
+      dtsHeader + iconRowTemplate(icon, name, iconData, "dts"),
+      "utf8",
+    );
+  });
+
+  await writePackageJson(
+    {
+      name: packageName,
+      version,
+      sideEffects: false,
+      main: undefined,
+      module: undefined,
+      types: undefined,
+      files: ["*.js", "*.mjs", "*.d.ts", "LICENSE"],
+      exports: filesPackageExports(),
       dependencies: {
         "@react-icons/core": version,
       },

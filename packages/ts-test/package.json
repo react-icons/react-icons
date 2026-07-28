@@ -3,6 +3,7 @@
   "version": "5.7.0",
   "private": true,
   "dependencies": {
+    "@react-icons/fontawesome6_files": "^5.7.0",
     "@types/jest": "30.0.0",
     "@types/node": "24.13.2",
     "@types/react": "^19.2.17",

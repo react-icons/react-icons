@@ -1,7 +1,7 @@
 import type { IconManifestType } from "@react-icons/core";
 
 export type ImportStyle = {
-  kind: "default" | "scoped";
+  kind: "default" | "scoped" | "files";
   packageName: string;
   importPath: string;
 };
@@ -13,6 +13,11 @@ export function getImportStyles(manifest: IconManifestType) {
       packageName: `@react-icons/${manifest.packageName}`,
       importPath: `@react-icons/${manifest.packageName}`,
     },
+    {
+      kind: "files",
+      packageName: `@react-icons/${manifest.packageName}_files`,
+      importPath: `@react-icons/${manifest.packageName}_files`,
+    },
   ];
   if (manifest.isIncludedInReactIcons) {
     styles.unshift({
@@ -22,4 +27,10 @@ export function getImportStyles(manifest: IconManifestType) {
     });
   }
   return styles;
+}
+
+export function getIconImportPath(style: ImportStyle, iconName: string) {
+  return style.kind === "files"
+    ? `${style.importPath}/${iconName}`
+    : style.importPath;
 }

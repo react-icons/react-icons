@@ -5,11 +5,11 @@ import { buildPackageExports } from "./logics";
 import { icons } from "../src/icons";
 import * as taskCommon from "./task_common";
 import * as taskAll from "./task_all";
-import * as taskFiles from "./task_files";
 import { TaskContext } from "./_types";
 import {
   getGeneratedPackageName,
   writeCorePackage,
+  writeGeneratedIconFilesPackage,
   writeGeneratedIconPackage,
 } from "./task_packages";
 
@@ -18,6 +18,10 @@ const _rootDir = path.resolve(__dirname, "../");
 const _generatedPackagesDir = path.resolve(
   _rootDir,
   "../../generated-packages",
+);
+const _generatedPackagesFilesDir = path.resolve(
+  _rootDir,
+  "../../generated-packages-files",
 );
 
 async function getPackageVersion() {
@@ -68,15 +72,15 @@ async function main() {
             ...reactIconsIcons.map((icon) => icon.id),
           ],
           exports: buildPackageExports(reactIconsIcons),
-          dependencies: {
-            "@react-icons/core": version,
-            ...Object.fromEntries(
-              reactIconsIcons.map((icon) => [
+          dependencies: Object.fromEntries(
+            [
+              ["@react-icons/core", version],
+              ...reactIconsIcons.map((icon) => [
                 `@react-icons/${getGeneratedPackageName(icon)}`,
                 version,
               ]),
-            ),
-          },
+            ].sort(([left], [right]) => left.localeCompare(right)),
+          ),
         },
         allOpt,
       );
@@ -88,39 +92,15 @@ async function main() {
       );
     });
 
-    // @react-icons/all-files
-    const filesOpt: TaskContext = {
-      rootDir: _rootDir,
-      DIST: path.resolve(_rootDir, "../_react-icons_all-files"),
-      LIB: path.resolve(_rootDir, "../_react-icons_all-files/lib"),
-    };
-    await task("@react-icons/all-files initialize", async () => {
-      await taskFiles.dirInit(filesOpt);
-      await taskCommon.writeEntryPoints(filesOpt);
-      await taskCommon.writeIconsManifest(filesOpt);
-      await taskCommon.writeLicense(filesOpt);
-      await taskCommon.writePackageJson(
-        { name: "@react-icons/all-files" },
-        filesOpt,
-      );
-      await taskCommon.copyReadme(filesOpt);
-    });
-    await task("@react-icons/all-files write icons", async () => {
-      await Promise.all(
-        icons.map((icon) => taskFiles.writeIconModuleFiles(icon, filesOpt)),
-      );
-    });
-
     // write to VERSIONS file
     await task("react-icons_builders write icon versions", async () => {
-      await taskCommon.writeIconVersions(filesOpt);
+      await taskCommon.writeIconVersions(allOpt);
     });
 
     // write to d.ts files
     await task("react-icons_builders build common library", async () => {
-      await taskCommon.buildLib(filesOpt);
+      await taskCommon.buildLib(allOpt);
       await taskCommon.copyLib(allOpt);
-      await taskCommon.copyLib(filesOpt);
     });
 
     await task("react-icons_builders generate scoped packages", async () => {
@@ -138,6 +118,15 @@ async function main() {
         await writeGeneratedIconPackage(
           icon,
           path.resolve(_generatedPackagesDir, getGeneratedPackageName(icon)),
+          _rootDir,
+          version,
+        );
+        await writeGeneratedIconFilesPackage(
+          icon,
+          path.resolve(
+            _generatedPackagesFilesDir,
+            `${getGeneratedPackageName(icon)}_files`,
+          ),
           _rootDir,
           version,
         );

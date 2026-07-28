@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "generated-packages/*"
+    "generated-packages/*",
+    "generated-packages-files/*"
   ],
   "license": "MIT",
   "devDependencies": {

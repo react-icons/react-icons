@@ -4,7 +4,12 @@ import fs from "fs";
 import path from "path";
 import { type IconSetGitSource } from "./_types";
 import { icons } from "../src/icons";
-import { readIconLock, writeIconLock } from "./icon-lock";
+import {
+  getIconLockHash,
+  readIconLock,
+  validateIconLock,
+  writeIconLock,
+} from "./icon-lock";
 import PQueue from "p-queue";
 const execFile = util.promisify(rawExecFile);
 
@@ -14,6 +19,7 @@ interface Context {
 }
 
 async function main() {
+  const update = process.argv.slice(2).includes("--update");
   const distBaseDir = path.join(__dirname, "../icons");
   const ctx: Context = {
     distBaseDir,
@@ -22,6 +28,10 @@ async function main() {
     },
   };
   const lock = readIconLock();
+  const sourceIds = icons.filter((icon) => icon.source).map((icon) => icon.id);
+  if (!update) {
+    validateIconLock(lock, sourceIds);
+  }
   const sources: {
     id: string;
     source: IconSetGitSource;
@@ -32,7 +42,7 @@ async function main() {
       sources.push({
         id: icon.id,
         source: icon.source,
-        hash: lock.get(icon.id),
+        hash: update ? undefined : getIconLockHash(lock, icon.id),
       });
     }
   }
@@ -47,22 +57,17 @@ async function main() {
   });
 
   const queue = new PQueue({ concurrency: 10 });
-  const newLockEntries = new Map<string, string>();
+  const fetchedLock = new Map<string, string>();
   const tasks = sources.map(({ id, source, hash }) =>
     queue.add(async () => {
       const fetchedHash = await gitCloneIcon(source, hash, ctx);
-      if (!hash) {
-        newLockEntries.set(id, fetchedHash);
-      }
+      fetchedLock.set(id, fetchedHash);
     }),
   );
   await Promise.all(tasks);
 
-  for (const [id, hash] of newLockEntries) {
-    lock.set(id, hash);
-  }
-  if (newLockEntries.size > 0) {
-    writeIconLock(lock);
+  if (update) {
+    writeIconLock(fetchedLock);
   }
 }
 

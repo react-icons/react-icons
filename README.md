@@ -267,12 +267,14 @@ https://github.com/react-icons/react-icons/discussions/categories/new-icon-set
 
 The SVG files to be fetched are managed in this file, and their locked Git
 commits are stored in `packages/react-icons/src/icons/icons.lock`. Edit the
-definition and run `yarn fetch && yarn check && yarn build`.
+definition and run `yarn fetch --update`, review the lock-file changes, and then
+run `yarn check && yarn build`.
 
 https://github.com/react-icons/react-icons/blob/master/packages/react-icons/src/icons/index.ts
 
-To update all locked commits to the latest fetched revisions, run
-`yarn fetch && yarn check --update`.
+To fetch the currently locked revisions without changing the lock file, run
+`yarn fetch`. To update all locked commits to the latest revisions, run
+`yarn fetch --update`.
 
 ### Preview
 

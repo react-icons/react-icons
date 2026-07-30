@@ -6,7 +6,7 @@
   "contributors": [
     "kamijin_fanta <kamijin@live.jp>"
   ],
-  "license": "MIT",
+  "license": "CC0 1.0 Universal",
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -22,8 +22,7 @@
   "files": [
     "*.js",
     "*.mjs",
-    "*.d.ts",
-    "LICENSE"
+    "*.d.ts"
   ],
   "exports": {
     "./*": {

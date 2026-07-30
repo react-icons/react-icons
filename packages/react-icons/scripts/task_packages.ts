@@ -13,10 +13,14 @@ import {
 import { svgoConfig } from "./svgo";
 import {
   writeEntryPoints,
-  writeIconLicense,
   writeIconsManifest,
   writePackageJson,
 } from "./task_common";
+
+export type GeneratedIcon = {
+  name: string;
+  iconData: Awaited<ReturnType<typeof convertIconData>>;
+};
 
 export function getGeneratedPackageName(icon: (typeof icons)[number]): string {
   const packageName = icon.packageName;
@@ -67,14 +71,11 @@ function filesPackageExports() {
   };
 }
 
-async function forEachIcon(
+export async function readGeneratedIcons(
   icon: (typeof icons)[number],
-  callback: (
-    name: string,
-    iconData: Awaited<ReturnType<typeof convertIconData>>,
-  ) => Promise<void>,
-) {
+): Promise<GeneratedIcon[]> {
   const exists = new Set<string>();
+  const generatedIcons: GeneratedIcon[] = [];
   for (const content of icon.contents) {
     const files = await getIconFiles(content);
     for (const file of files) {
@@ -93,9 +94,10 @@ async function forEachIcon(
       if (exists.has(name)) continue;
       exists.add(name);
 
-      await callback(name, iconData);
+      generatedIcons.push({ name, iconData });
     }
   }
+  return generatedIcons;
 }
 
 export async function writeCorePackage(
@@ -106,6 +108,10 @@ export async function writeCorePackage(
   await rmDirRecursive(dist);
   await fs.mkdir(dist, { recursive: true });
   await fs.mkdir(path.resolve(dist, "lib"), { recursive: true });
+  await fs.copyFile(
+    path.resolve(rootDir, "LICENSE_HEADER"),
+    path.resolve(dist, "LICENSE"),
+  );
 
   await copyRecursive(
     path.resolve(rootDir, "build/lib"),
@@ -130,7 +136,7 @@ export async function writeCorePackage(
       main: "index.js",
       module: "index.mjs",
       types: "index.d.ts",
-      files: ["index.js", "index.mjs", "index.d.ts", "lib"],
+      files: ["index.js", "index.mjs", "index.d.ts", "lib", "LICENSE"],
       exports: packageExports(true),
     },
     { DIST: dist, LIB: path.resolve(dist, "lib"), rootDir },
@@ -142,13 +148,13 @@ export async function writeGeneratedIconPackage(
   dist: string,
   rootDir: string,
   version: string,
+  generatedIcons?: GeneratedIcon[],
 ) {
   const packageName = `@react-icons/${getGeneratedPackageName(icon)}`;
+  const iconsToWrite = generatedIcons ?? (await readGeneratedIcons(icon));
 
   await rmDirRecursive(dist);
   await fs.mkdir(dist, { recursive: true });
-
-  await writeIconLicense(icon, { DIST: dist, LIB: dist, rootDir });
 
   const write = (filePath: string[], str: string) =>
     fs.writeFile(path.resolve(dist, ...filePath), str, "utf8");
@@ -166,7 +172,7 @@ export async function writeGeneratedIconPackage(
     "// THIS FILE IS AUTO GENERATED\nimport type { IconType } from '@react-icons/core'\n",
   );
 
-  await forEachIcon(icon, async (name, iconData) => {
+  for (const { name, iconData } of iconsToWrite) {
     const modRes = iconRowTemplate(icon, name, iconData, "module");
     await fs.appendFile(path.resolve(dist, "index.mjs"), modRes, "utf8");
 
@@ -175,17 +181,18 @@ export async function writeGeneratedIconPackage(
 
     const dtsRes = iconRowTemplate(icon, name, iconData, "dts");
     await fs.appendFile(path.resolve(dist, "index.d.ts"), dtsRes, "utf8");
-  });
+  }
 
   await writePackageJson(
     {
       name: packageName,
       version,
+      license: icon.license,
       sideEffects: false,
       main: "index.js",
       module: "index.mjs",
       types: "index.d.ts",
-      files: ["index.js", "index.mjs", "index.d.ts", "LICENSE"],
+      files: ["index.js", "index.mjs", "index.d.ts"],
       exports: packageExports(false),
       dependencies: {
         "@react-icons/core": version,
@@ -200,15 +207,15 @@ export async function writeGeneratedIconFilesPackage(
   dist: string,
   rootDir: string,
   version: string,
+  generatedIcons?: GeneratedIcon[],
 ) {
   const packageName = `@react-icons/${getGeneratedPackageName(icon)}_files`;
+  const iconsToWrite = generatedIcons ?? (await readGeneratedIcons(icon));
 
   await rmDirRecursive(dist);
   await fs.mkdir(dist, { recursive: true });
 
-  await writeIconLicense(icon, { DIST: dist, LIB: dist, rootDir });
-
-  await forEachIcon(icon, async (name, iconData) => {
+  for (const { name, iconData } of iconsToWrite) {
     const modHeader =
       "// THIS FILE IS AUTO GENERATED\nimport { GenIcon } from '@react-icons/core';\n";
     const comHeader =
@@ -231,17 +238,18 @@ export async function writeGeneratedIconFilesPackage(
       dtsHeader + iconRowTemplate(icon, name, iconData, "dts"),
       "utf8",
     );
-  });
+  }
 
   await writePackageJson(
     {
       name: packageName,
       version,
+      license: icon.license,
       sideEffects: false,
       main: undefined,
       module: undefined,
       types: undefined,
-      files: ["*.js", "*.mjs", "*.d.ts", "LICENSE"],
+      files: ["*.js", "*.mjs", "*.d.ts"],
       exports: filesPackageExports(),
       dependencies: {
         "@react-icons/core": version,

@@ -9,6 +9,15 @@ import { getIconFiles, copyRecursive, rmDirRecursive } from "./logics";
 import { IconDefinition, TaskContext } from "./_types";
 import type { IconManifestType } from "../src";
 
+const ICON_LICENSE_NOTICE = [
+  "",
+  "---",
+  "Icons are taken from the other projects",
+  "so please check each project licences accordingly.",
+  "",
+  "",
+].join("\n");
+
 export async function writeIconsManifest(
   { LIB }: TaskContext,
   iconSet = icons,
@@ -58,24 +67,11 @@ export async function writeLicense(
     path.resolve(rootDir, "LICENSE_HEADER"),
     path.resolve(DIST, "LICENSE"),
   );
-  await fs.appendFile(path.resolve(DIST, "LICENSE"), iconLicenses, "utf8");
-}
-
-export async function writeIconLicense(
-  icon: IconDefinition,
-  { DIST, rootDir }: TaskContext,
-) {
-  const iconLicense = [
-    `${icon.name} - ${icon.projectUrl}`,
-    `License: ${icon.license} ${icon.licenseUrl}`,
-    "",
-  ].join("\n");
-
-  await fs.copyFile(
-    path.resolve(rootDir, "LICENSE_HEADER"),
+  await fs.appendFile(
     path.resolve(DIST, "LICENSE"),
+    ICON_LICENSE_NOTICE + iconLicenses,
+    "utf8",
   );
-  await fs.appendFile(path.resolve(DIST, "LICENSE"), iconLicense, "utf8");
 }
 
 export async function writeEntryPoints({ DIST }: TaskContext) {

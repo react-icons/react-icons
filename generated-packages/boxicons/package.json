@@ -25,8 +25,7 @@
   "files": [
     "index.js",
     "index.mjs",
-    "index.d.ts",
-    "LICENSE"
+    "index.d.ts"
   ],
   "exports": {
     ".": {

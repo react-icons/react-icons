@@ -6,11 +6,12 @@ is a tab-separated `id<TAB>commit hash`, sorted by `id`.
 After adding or changing an icon set, run the normal workflow:
 
 ```sh
-yarn fetch
+yarn fetch --update
+# Review icons.lock before continuing.
 yarn check
 yarn build
 ```
 
-`yarn fetch` automatically adds a missing lock entry from the configured remote
-branch. To replace all lock entries with the latest fetched revisions, run
-`yarn check --update` after `yarn fetch`.
+`yarn fetch` only fetches revisions already present in `icons.lock` and fails if
+entries are missing or no longer used. `yarn fetch --update` explicitly replaces
+the lock file with the latest revisions from the configured remote branches.

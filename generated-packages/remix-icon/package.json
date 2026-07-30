@@ -6,7 +6,7 @@
   "contributors": [
     "kamijin_fanta <kamijin@live.jp>"
   ],
-  "license": "MIT",
+  "license": "Apache License Version 2.0",
   "main": "index.js",
   "module": "index.mjs",
   "types": "index.d.ts",
@@ -25,8 +25,7 @@
   "files": [
     "index.js",
     "index.mjs",
-    "index.d.ts",
-    "LICENSE"
+    "index.d.ts"
   ],
   "exports": {
     ".": {

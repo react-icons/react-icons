@@ -6,8 +6,10 @@ import { icons } from "../src/icons";
 import * as taskCommon from "./task_common";
 import * as taskAll from "./task_all";
 import { TaskContext } from "./_types";
+import PQueue from "p-queue";
 import {
   getGeneratedPackageName,
+  readGeneratedIcons,
   writeCorePackage,
   writeGeneratedIconFilesPackage,
   writeGeneratedIconPackage,
@@ -114,23 +116,36 @@ async function main() {
         source: "@react-icons/core",
       });
 
-      for (const icon of icons) {
-        await writeGeneratedIconPackage(
-          icon,
-          path.resolve(_generatedPackagesDir, getGeneratedPackageName(icon)),
-          _rootDir,
-          version,
-        );
-        await writeGeneratedIconFilesPackage(
-          icon,
-          path.resolve(
-            _generatedPackagesFilesDir,
-            `${getGeneratedPackageName(icon)}_files`,
-          ),
-          _rootDir,
-          version,
-        );
-      }
+      const queue = new PQueue({ concurrency: 4 });
+      await Promise.all(
+        icons.map((icon) =>
+          queue.add(async () => {
+            const generatedIcons = await readGeneratedIcons(icon);
+            await Promise.all([
+              writeGeneratedIconPackage(
+                icon,
+                path.resolve(
+                  _generatedPackagesDir,
+                  getGeneratedPackageName(icon),
+                ),
+                _rootDir,
+                version,
+                generatedIcons,
+              ),
+              writeGeneratedIconFilesPackage(
+                icon,
+                path.resolve(
+                  _generatedPackagesFilesDir,
+                  `${getGeneratedPackageName(icon)}_files`,
+                ),
+                _rootDir,
+                version,
+                generatedIcons,
+              ),
+            ]);
+          }),
+        ),
+      );
     });
 
     console.log("done");

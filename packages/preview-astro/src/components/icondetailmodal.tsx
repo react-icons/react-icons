@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaRegClipboard } from "react-icons/fa6";
+import { FaDownload, FaRegClipboard } from "react-icons/fa6";
 import copy from "copy-to-clipboard";
 import toast from "cogo-toast";
 import { useKeyDown } from "../utils/usekeydown";
+import ReactDOMServer from 'react-dom/server';
 
 interface colorVariant {
   bg: string;
@@ -70,6 +71,8 @@ export function IconDetailModal(
   const [selectedColor, setSelectedColor] = React.useState<number>(0);
   const colorVariant = colorVariants[selectedColor];
 
+  const svgText = Component && ReactDOMServer.renderToString(<Component />);
+
   return (
     <Modal
       isOpen={open}
@@ -105,6 +108,9 @@ export function IconDetailModal(
         <pre>
           <code>{useCode}</code>
         </pre>
+        <pre>
+          <code>{svgText}</code>
+        </pre>
         <ul className="copy">
           {[
             props.iconSet,
@@ -128,6 +134,46 @@ export function IconDetailModal(
               </button>
             </li>
           ))}
+          <li key={"copy-svg"}>
+            <button
+              onClick={() => {
+                copy(svgText ?? "");
+
+                toast.success(`Copied SVG to clipboard`, {
+                  position: "bottom-center",
+                });
+              }}
+            >
+              <FaRegClipboard />
+              <span className="text">{svgText}</span>
+            </button>
+          </li>
+        </ul>
+        <ul className="actions">
+          <li key={"download-svg"}>
+            <button
+              onClick={() => {
+                const parts = (props.iconName ? props.iconName : "").split(
+                  /(?=[A-Z])/,
+                );
+                const filename = parts.join("-").toLowerCase();
+                const blob = new Blob(
+                  [ReactDOMServer.renderToString(<Component />)],
+                  { type: "image/svg+xml;charset=utf-8" },
+                );
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.download = filename;
+                a.href = url;
+                a.click();
+                URL.revokeObjectURL(url);
+                a.remove();
+              }}
+            >
+              <FaDownload />
+              <span className="text">Download SVG</span>
+            </button>
+          </li>
         </ul>
       </div>
     </Modal>

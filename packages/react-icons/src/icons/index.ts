@@ -797,4 +797,68 @@ export const icons: IconDefinition[] = [
       hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
+  {
+    id: "sax",
+    name: "Iconsax",
+    contents: [
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/iconsax/static/Iconsax/Svg/All/bold/*.svg",
+        ),
+        formatter: (name) => `SaxBold${name}`,
+        processWithSVGO: true,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/iconsax/static/Iconsax/Svg/All/broken/*.svg",
+        ),
+        formatter: (name) => `SaxBroken${name}`,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/iconsax/static/Iconsax/Svg/All/bulk/*.svg",
+        ),
+        formatter: (name) => `SaxBulk${name}`,
+        processWithSVGO: true,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/iconsax/static/Iconsax/Svg/All/linear/*.svg",
+        ),
+        formatter: (name) => `SaxLinear${name}`,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/iconsax/static/Iconsax/Svg/All/outline/*.svg",
+        ),
+        formatter: (name) => `SaxOutline${name}`,
+        processWithSVGO: true,
+      },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/iconsax/static/Iconsax/Svg/All/twotone/*.svg",
+        ),
+        formatter: (name) => `SaxTwoTone${name}`,
+        multiColor: true,
+        processWithSVGO: true,
+      },
+    ],
+    projectUrl: "https://iconsax.io/",
+    license: "MIT",
+    licenseUrl: "https://iconsax.io/#license",
+    source: {
+      type: "git",
+      localName: "iconsax",
+      remoteDir: "static/Iconsax/Svg/All/",
+      url: "https://github.com/lusaxweb/iconsax.git",
+      branch: "master",
+      hash: "e5dba15361f69d34d0f3f3f35408a28fe74c5727",
+    },
+  },
 ];

@@ -98,13 +98,42 @@ export function IconDetailModal(
             </button>
           ))}
         </div>
+
         <h2>Code</h2>
-        <pre>
-          <code>{importCode}</code>
-        </pre>
-        <pre>
-          <code>{useCode}</code>
-        </pre>
+        <div className="code-container">
+          <button
+            className="copy-button"
+            onClick={() => {
+              copy(importCode);
+              toast.success(`Copied '${importCode}' to clipboard`, {
+                position: "bottom-center",
+              });
+            }}
+          >
+            <FaRegClipboard />
+          </button>
+          <pre>
+            <code>{importCode}</code>
+          </pre>
+        </div>
+
+        <div className="code-container">
+          <button
+            className="copy-button"
+            onClick={() => {
+              copy(importCode);
+              toast.success(`Copied '${importCode}' to clipboard`, {
+                position: "bottom-center",
+              });
+            }}
+          >
+            <FaRegClipboard />
+          </button>
+          <pre>
+            <code>{useCode}</code>
+          </pre>
+        </div>
+
         <ul className="copy">
           {[
             props.iconSet,

@@ -4,6 +4,7 @@ lib
 module
 *.log
 *.tgz
+.idea
 
 .pnp.*
 .yarn/*

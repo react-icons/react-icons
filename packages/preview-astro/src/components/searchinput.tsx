@@ -4,6 +4,7 @@ import { useSearch } from "../utils/usesearch";
 
 export function SearchInput() {
   const search = useSearch();
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   const debouncedOnSearch = React.useCallback(
     debounce((query: string) => {
@@ -13,6 +14,22 @@ export function SearchInput() {
   );
   React.useEffect(() => {
     setInputQuery(search.query);
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const isInputFocused = document.activeElement?.tagName === "INPUT"
+      const isSlashPressed = e.key === "/" && !isInputFocused;
+
+      if (isSlashPressed) {
+        e.preventDefault();
+        inputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const [inputQuery, setInputQuery] = React.useState("");
@@ -23,6 +40,7 @@ export function SearchInput() {
   };
   return (
     <input
+      ref={inputRef}
       type="text"
       aria-label="search"
       className="px2 py1"

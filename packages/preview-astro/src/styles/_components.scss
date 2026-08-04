@@ -368,6 +368,22 @@ html:has(.modal-root.active) {
   }
 }
 
+.pre-clipboard {
+  overflow: auto;
+  background-color: #24292e;
+  color: #e1e4e8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+
+  .clipboard-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+}
+
 .icon-detail-modal-content {
   .icon {
     text-align: center;
@@ -381,6 +397,7 @@ html:has(.modal-root.active) {
     padding: 10px;
     border-radius: 5px;
   }
+
   ul.copy {
     list-style: none;
     padding: 0;

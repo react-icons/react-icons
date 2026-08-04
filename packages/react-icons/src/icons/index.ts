@@ -166,6 +166,18 @@ export const icons: IconDefinition[] = [
           )}`,
         processWithSVGO: true,
       },
+      {
+        files: path.resolve(
+          __dirname,
+          "../../icons/material-design-icons/src/*/*/materialiconsround/24px.svg",
+        ),
+        formatter: (name, file) =>
+          `MdRound${camelcase(
+            file.replace(/^.*\/([^/]+)\/materialicons[^/]*\/24px.svg$/i, "$1"),
+            { pascalCase: true },
+          )}`,
+        processWithSVGO: true,
+      },
     ],
     projectUrl: "http://google.github.io/material-design-icons/",
     license: "Apache License Version 2.0",

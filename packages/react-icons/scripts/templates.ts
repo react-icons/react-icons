@@ -7,17 +7,18 @@ export function iconRowTemplate(
   iconData: IconTree,
   type = "module",
 ) {
+  const {name, license, licenseUrl, projectUrl, ...iconDefinition} = icon;
   switch (type) {
     case "module":
       return (
         `export function ${formattedName} (props) {\n` +
-        `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
+        `  return GenIcon(${JSON.stringify({name, license, licenseUrl, projectUrl})}, ${JSON.stringify(iconData)})(props);\n` +
         `};\n`
       );
     case "common":
       return (
         `module.exports.${formattedName} = function ${formattedName} (props) {\n` +
-        `  return GenIcon(${JSON.stringify(iconData)})(props);\n` +
+        `  return GenIcon(${JSON.stringify({name, license, licenseUrl, projectUrl})}, ${JSON.stringify(iconData)})(props);\n` +
         `};\n`
       );
     case "dts":

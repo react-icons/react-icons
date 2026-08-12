@@ -1,6 +1,6 @@
 {
   "name": "@react-icons/ant-design-icons_files",
-  "version": "5.7.0",
+  "version": "6.0.0-beta.0",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
@@ -33,6 +33,6 @@
     }
   },
   "dependencies": {
-    "@react-icons/core": "5.7.0"
+    "@react-icons/core": "^6.0.0-beta.0"
   }
 }

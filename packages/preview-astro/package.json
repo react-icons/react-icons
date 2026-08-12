@@ -1,7 +1,7 @@
 {
   "name": "preview-astro",
   "type": "module",
-  "version": "5.7.0",
+  "version": "6.0.0-beta.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -15,8 +15,8 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/react": "^5.0.7",
     "@nanostores/react": "^0.7.3",
-    "@react-icons/core": "^5.7.0",
-    "@react-icons/fontawesome6": "^5.7.0",
+    "@react-icons/core": "^6.0.0-beta.0",
+    "@react-icons/fontawesome6": "^6.0.0-beta.0",
     "astro": "^7.1.0",
     "basscss": "^8.1.0",
     "cogo-toast": "^4.2.3",
@@ -24,7 +24,7 @@
     "nanostores": "^0.10.3",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-icons": "^5.7.0",
+    "react-icons": "^6.0.0-beta.0",
     "sass": "^1.101.0",
     "tiny-skeleton-loader-react": "^1.2.1",
     "typescript": "^6.0.3"

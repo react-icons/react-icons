@@ -1,10 +1,13 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "generated-packages/*",
+    "generated-packages-files/*"
   ],
-  "version": "5.7.0",
+  "version": "6.0.0-beta.0",
   "command": {
     "version": {
+      "exact": true,
       "push": true
     }
   }

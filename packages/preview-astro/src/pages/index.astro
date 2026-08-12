@@ -4,21 +4,30 @@ import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 import { IconList } from "../components/iconlist";
 
-const HOME_USAGE = `
-import { FaBeer } from 'react-icons/fa';
+const HOME_USAGE_REACT = `
+import { FaBeerMugEmpty } from 'react-icons/fa6';
 
 class Question extends React.Component {
   render() {
-    return <h3> Lets go for a <FaBeer />? </h3>
+    return <h3> Lets go for a <FaBeerMugEmpty />? </h3>
   }
 }`;
 
-const HOME_USAGE_ALL = `
-import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+const HOME_USAGE_SCOPED = `
+import { FaBeerMugEmpty } from '@react-icons/fontawesome6';
 
 class Question extends React.Component {
   render() {
-    return <h3> Lets go for a <FaBeer />? </h3>
+    return <h3> Lets go for a <FaBeerMugEmpty />? </h3>
+  }
+}`;
+
+const HOME_USAGE_FILES = `
+import { FaBeerMugEmpty } from "@react-icons/fontawesome6_files/FaBeerMugEmpty";
+
+class Question extends React.Component {
+  render() {
+    return <h3> Lets go for a <FaBeerMugEmpty />? </h3>
   }
 }`;
 ---
@@ -52,22 +61,26 @@ class Question extends React.Component {
     <h2>Include icon sets</h2>
     <IconList />
 
-    <h2>Installation (for standard modern project)</h2>
-    <Code lang="bash" code={`npm install react-icons --save`} />
+    <h2>Installation</h2>
+    <Code lang="bash" code={`npm install react-icons`} />
 
     <h3>Usage</h3>
-    <Code lang="jsx" code={HOME_USAGE} />
+    <Code lang="jsx" code={HOME_USAGE_REACT} />
 
-    <h2>Installation (for meteorjs, gatsbyjs, etc)</h2>
+    <h2>Install a single icon set (v6.0.0+)</h2>
+    <p>Install only the icon set you need with its scoped package.</p>
+    <Code lang="bash" code={`npm install @react-icons/fontawesome6`} />
+    <Code lang="jsx" code={HOME_USAGE_SCOPED} />
+
+    <h2>Install individual icon files (v6.0.0+)</h2>
     <p>
-      If your project grows in size, this option is available. This method has
-      the trade-off that it takes a long time to install the package. Suitable
-      for MeteorJS, Gatsbyjs etc.
+      Install the files package when your environment requires each icon to have
+      its own module. The package root cannot be imported.
     </p>
-    <Code lang="bash" code={`npm install @react-icons/all-files --save`} />
+    <Code lang="bash" code={`npm install @react-icons/fontawesome6_files`} />
 
     <h3>Usage</h3>
-    <Code lang="jsx" code={HOME_USAGE_ALL} />
+    <Code lang="jsx" code={HOME_USAGE_FILES} />
 
     <h2>More info</h2>
     <p>

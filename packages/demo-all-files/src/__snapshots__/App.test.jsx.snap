@@ -27,10 +27,13 @@ exports[`snapshot test 1`] = `
     </code>
      and save to reload.
     <svg
+      class="global-class-name"
       fill="currentColor"
+      focusable="false"
       height="1em"
       stroke="currentColor"
       stroke-width="0"
+      style="color: blue;"
       viewBox="0 0 24 24"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +47,10 @@ exports[`snapshot test 1`] = `
       />
     </svg>
     <svg
-      class="additional-class-name"
+      class="global-class-name additional-class-name"
       color="red"
       fill="currentColor"
+      focusable="false"
       height="1em"
       stroke="currentColor"
       stroke-width="0"

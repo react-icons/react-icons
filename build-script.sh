@@ -9,11 +9,20 @@ fi
 (cd packages/react-icons/ && yarn type-check)
 time (cd packages/react-icons/ && yarn fetch)
 time (cd packages/react-icons/ && yarn build)
+time yarn install --mode=skip-build
 echo VERSIONS; cat packages/react-icons/VERSIONS
 (cd packages/_react-icons_all/ && npm pack 2>&1 | tail)
-(cd packages/_react-icons_all-files/ && npm pack 2>&1 | tail)
+for package_json in generated-packages/*/package.json; do
+  package_dir=${package_json%/package.json}
+  (cd "$package_dir" && npm pack 2>&1 | tail)
+done
+for package_json in generated-packages-files/*/package.json; do
+  package_dir=${package_json%/package.json}
+  (cd "$package_dir" && npm pack 2>&1 | tail)
+done
 
 (cd packages/preview-astro/ && yarn build)
 (cd packages/demo/ && CI=true yarn test && yarn build)
+(cd packages/demo-all-files/ && CI=true yarn test && yarn build)
 (cd packages/webpack4-test/ && CI=true yarn test)
 (cd packages/ts-test/ && SKIP_PREFLIGHT_CHECK=true yarn build)

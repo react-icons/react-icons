@@ -2,7 +2,9 @@
   "name": "react-icons-root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "generated-packages/*",
+    "generated-packages-files/*"
   ],
   "license": "MIT",
   "devDependencies": {

@@ -1,11 +1,15 @@
 {
   "name": "demo-all-files",
-  "version": "5.7.0",
+  "version": "6.0.0-beta.0",
   "private": true,
   "dependencies": {
+    "@react-icons/core": "^6.0.0-beta.0",
+    "@react-icons/fontawesome5_files": "^6.0.0-beta.0",
+    "@react-icons/grommet-icons_files": "^6.0.0-beta.0",
+    "@react-icons/material-design-icons_files": "^6.0.0-beta.0",
+    "@react-icons/typicons_files": "^6.0.0-beta.0",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7",
-    "react-icons": "^5.7.0"
+    "react-dom": "^19.2.7"
   },
   "scripts": {
     "start": "vite",

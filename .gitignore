@@ -12,3 +12,8 @@ module
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+generated-packages/*/*
+!generated-packages/*/package.json
+!generated-packages/core/LICENSE
+generated-packages-files/*/*
+!generated-packages-files/*/package.json

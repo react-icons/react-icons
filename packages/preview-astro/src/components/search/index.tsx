@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchIconSet } from "./search-iconset";
-import { IconsManifest } from "react-icons/lib";
+import { IconsManifest } from "@react-icons/core/lib";
 import { IconDetailModal } from "../icondetailmodal";
 import { useSearch } from "../../utils/usesearch";
 
@@ -32,6 +32,7 @@ export function SearchPageComponent() {
           iconSet={selected?.[0]}
           iconName={selected?.[1] ?? null}
           component={selected?.[2]}
+          manifest={IconsManifest.find((icon) => icon.id === selected?.[0])}
           onClose={() => setSelected(null)}
         />
         <h2>

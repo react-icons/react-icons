@@ -9,9 +9,23 @@ import { getIconFiles, copyRecursive, rmDirRecursive } from "./logics";
 import { IconDefinition, TaskContext } from "./_types";
 import type { IconManifestType } from "../src";
 
-export async function writeIconsManifest({ LIB }: TaskContext) {
-  const writeObj: IconManifestType[] = icons.map((icon) => ({
+const ICON_LICENSE_NOTICE = [
+  "",
+  "---",
+  "Icons are taken from the other projects",
+  "so please check each project licences accordingly.",
+  "",
+  "",
+].join("\n");
+
+export async function writeIconsManifest(
+  { LIB }: TaskContext,
+  iconSet = icons,
+) {
+  const writeObj: IconManifestType[] = iconSet.map((icon) => ({
     id: icon.id,
+    packageName: icon.packageName,
+    isIncludedInReactIcons: icon.isIncludedInReactIcons,
     name: icon.name,
     projectUrl: icon.projectUrl,
     license: icon.license,
@@ -35,9 +49,12 @@ export async function writeIconsManifest({ LIB }: TaskContext) {
   await fs.copyFile("src/package.json", path.resolve(LIB, "package.json"));
 }
 
-export async function writeLicense({ DIST, rootDir }: TaskContext) {
+export async function writeLicense(
+  { DIST, rootDir }: TaskContext,
+  iconSet = icons,
+) {
   const iconLicenses =
-    icons
+    iconSet
       .map((icon) =>
         [
           `${icon.name} - ${icon.projectUrl}`,
@@ -50,7 +67,11 @@ export async function writeLicense({ DIST, rootDir }: TaskContext) {
     path.resolve(rootDir, "LICENSE_HEADER"),
     path.resolve(DIST, "LICENSE"),
   );
-  await fs.appendFile(path.resolve(DIST, "LICENSE"), iconLicenses, "utf8");
+  await fs.appendFile(
+    path.resolve(DIST, "LICENSE"),
+    ICON_LICENSE_NOTICE + iconLicenses,
+    "utf8",
+  );
 }
 
 export async function writeEntryPoints({ DIST }: TaskContext) {
@@ -73,6 +94,30 @@ export async function writeEntryPoints({ DIST }: TaskContext) {
   await fs.appendFile(
     path.resolve(DIST, "index.d.ts"),
     generateEntryMjs("index"),
+    "utf8",
+  );
+}
+
+export async function writeProxyEntryPoints({
+  DIST,
+  source,
+}: Pick<TaskContext, "DIST"> & { source: string }) {
+  const generateEntryCjs = () => `module.exports = require('${source}');`;
+  const generateEntryMjs = () => `export * from '${source}';`;
+
+  await fs.writeFile(
+    path.resolve(DIST, "index.js"),
+    `// THIS FILE IS AUTO GENERATED\n${generateEntryCjs()}`,
+    "utf8",
+  );
+  await fs.writeFile(
+    path.resolve(DIST, "index.mjs"),
+    `// THIS FILE IS AUTO GENERATED\n${generateEntryMjs()}`,
+    "utf8",
+  );
+  await fs.writeFile(
+    path.resolve(DIST, "index.d.ts"),
+    `// THIS FILE IS AUTO GENERATED\n${generateEntryMjs()}`,
     "utf8",
   );
 }

@@ -1,5 +1,7 @@
 export interface IconDefinition {
   id: string;
+  packageName: string;
+  isIncludedInReactIcons: boolean;
   name: string;
   contents: IconDefinitionContent[];
   projectUrl: string;
@@ -22,7 +24,6 @@ export interface IconSetGitSource {
   remoteDir: string;
   url: string;
   branch: string;
-  hash: string;
 }
 
 export interface TaskContext {

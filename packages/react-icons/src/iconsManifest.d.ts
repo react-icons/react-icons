@@ -1,5 +1,7 @@
 export interface IconManifestType {
   id: string;
+  packageName: string;
+  isIncludedInReactIcons: boolean;
   name: string;
   projectUrl: string;
   license: string;

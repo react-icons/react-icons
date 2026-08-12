@@ -3,6 +3,7 @@ import { execFile as rawExecFile } from "node:child_process";
 import path from "path";
 import { type IconSetGitSource } from "./_types";
 import { icons } from "../src/icons";
+import { getIconLockHash, readIconLock, writeIconLock } from "./icon-lock";
 const execFile = util.promisify(rawExecFile);
 
 interface Context {
@@ -12,6 +13,7 @@ interface Context {
 
 // Check icon packages version
 async function main() {
+  const update = process.argv.slice(2).includes("--update");
   const distBaseDir = path.join(__dirname, "../icons");
   const ctx: Context = {
     distBaseDir,
@@ -22,12 +24,15 @@ async function main() {
 
   const diffs: { id: string; name: string; diffs: number; current: string }[] =
     [];
+  const lock = readIconLock();
+  const updatedLock = new Map<string, string>();
   for (const icon of icons) {
     if (!icon.source) {
       continue;
     }
     console.log(`checking ${icon.name}...`);
-    const diff = await gitDiffCount(icon.source, ctx);
+    const hash = update ? lock.get(icon.id) : getIconLockHash(lock, icon.id);
+    const diff = await gitDiffCount(icon.source, hash, ctx);
     console.log("diff ", icon.name, diff.diffs, diff.current);
     diffs.push({
       id: icon.id,
@@ -35,12 +40,17 @@ async function main() {
       diffs: diff.diffs,
       current: diff.current,
     });
+    updatedLock.set(icon.id, diff.current);
   }
   console.table(diffs);
+  if (update) {
+    writeIconLock(updatedLock);
+  }
 }
 
 async function gitDiffCount(
   source: IconSetGitSource,
+  hash: string | undefined,
   ctx: Context,
 ): Promise<{ current: string; diffs: number }> {
   const hashRes = await execFile(
@@ -52,9 +62,13 @@ async function gitDiffCount(
   );
   const currentHash = hashRes.stdout.trim();
 
+  if (!hash) {
+    return { current: currentHash, diffs: 0 };
+  }
+
   const count = await execFile(
     "git",
-    ["rev-list", "--count", `${source.hash}..${currentHash}`],
+    ["rev-list", "--count", `${hash}..${currentHash}`],
     {
       cwd: ctx.iconDir(source.localName),
     },

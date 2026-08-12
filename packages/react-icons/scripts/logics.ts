@@ -117,7 +117,12 @@ export async function copyRecursive(src: string, dest: string) {
 }
 
 export async function rmDirRecursive(dest: string) {
-  await fs.rm(dest, { recursive: true, force: true });
+  await fs.rm(dest, {
+    recursive: true,
+    force: true,
+    maxRetries: 5,
+    retryDelay: 100,
+  });
 }
 
 export function buildPackageExports(icons: IconManifestType[]) {

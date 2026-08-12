@@ -6,6 +6,8 @@ import { glob } from "../../scripts/glob";
 export const icons: IconDefinition[] = [
   {
     id: "ci",
+    isIncludedInReactIcons: true,
+    packageName: "circum-icons",
     name: "Circum Icons",
     contents: [
       {
@@ -23,11 +25,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/Klarr-Agency/Circum-Icons.git",
       branch: "main",
-      hash: "cec1364b5199f55e946a9a8360385a958b98cc60",
     },
   },
   {
     id: "fa",
+    isIncludedInReactIcons: true,
+    packageName: "fontawesome5",
     name: "Font Awesome 5",
     contents: [
       {
@@ -54,11 +57,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "svgs/",
       url: "https://github.com/FortAwesome/Font-Awesome.git",
       branch: "5.x",
-      hash: "afecf2af5d897b763e5e8e28d46aad2f710ccad6",
     },
   },
   {
     id: "fa6",
+    isIncludedInReactIcons: true,
+    packageName: "fontawesome6",
     name: "Font Awesome 6",
     contents: [
       {
@@ -85,11 +89,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "svgs/",
       url: "https://github.com/FortAwesome/Font-Awesome.git",
       branch: "6.x",
-      hash: "840c215f894f429b26b8c1402a65da835dc5a450",
     },
   },
   {
     id: "io",
+    isIncludedInReactIcons: true,
+    packageName: "ionicons4",
     name: "Ionicons 4",
     contents: [
       {
@@ -106,6 +111,8 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "io5",
+    isIncludedInReactIcons: true,
+    packageName: "ionicons5",
     name: "Ionicons 5",
     contents: [
       {
@@ -123,6 +130,8 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "md",
+    isIncludedInReactIcons: true,
+    packageName: "material-design-icons",
     name: "Material Design icons",
     contents: [
       {
@@ -177,11 +186,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/",
       url: "https://github.com/google/material-design-icons.git",
       branch: "master",
-      hash: "f3fb4442b2a9afbedfe68bfa1ed80f178ca4f10d",
     },
   },
   {
     id: "ti",
+    isIncludedInReactIcons: true,
+    packageName: "typicons",
     name: "Typicons",
     contents: [
       {
@@ -198,11 +208,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/svg/",
       url: "https://github.com/stephenhutchings/typicons.font.git",
       branch: "master",
-      hash: "0aa64f6ce8b892a83aeeafa42c74fb9c1f22ec84",
     },
   },
   {
     id: "go",
+    isIncludedInReactIcons: true,
+    packageName: "github-octicons",
     name: "Github Octicons icons",
     contents: [
       {
@@ -219,6 +230,8 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "fi",
+    isIncludedInReactIcons: true,
+    packageName: "feather",
     name: "Feather",
     contents: [
       {
@@ -235,6 +248,8 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "lu",
+    isIncludedInReactIcons: true,
+    packageName: "lucide",
     name: "Lucide",
     contents: [
       {
@@ -251,6 +266,8 @@ export const icons: IconDefinition[] = [
   },
   {
     id: "gi",
+    isIncludedInReactIcons: true,
+    packageName: "game-icons",
     name: "Game Icons",
     contents: [
       {
@@ -270,11 +287,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "all-icons/",
       url: "https://github.com/delacannon/game-icons-inverted.git",
       branch: "master",
-      hash: "12920d6565588f0512542a3cb0cdfd36a497f910",
     },
   },
   {
     id: "wi",
+    isIncludedInReactIcons: true,
+    packageName: "weather-icons",
     name: "Weather Icons",
     contents: [
       {
@@ -291,11 +309,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/erikflowers/weather-icons.git",
       branch: "master",
-      hash: "bb80982bf1f43f2d57f9dd753e7413bf88beb9ed",
     },
   },
   {
     id: "di",
+    isIncludedInReactIcons: true,
+    packageName: "devicons",
     name: "Devicons",
     contents: [
       {
@@ -312,11 +331,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "!SVG/",
       url: "https://github.com/vorillaz/devicons.git",
       branch: "master",
-      hash: "ba75593fdf8d66496676a90cbf127d721f73e961",
     },
   },
   {
     id: "ai",
+    isIncludedInReactIcons: true,
+    packageName: "ant-design-icons",
     name: "Ant Design Icons",
     contents: [
       {
@@ -351,11 +371,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "packages/icons-svg/svg/",
       url: "https://github.com/ant-design/ant-design-icons.git",
       branch: "master",
-      hash: "74e514ef000262527ecbe0344ff5cc59d37d359a",
     },
   },
   {
     id: "bs",
+    isIncludedInReactIcons: true,
+    packageName: "bootstrap-icons",
     name: "Bootstrap Icons",
     contents: [
       {
@@ -389,11 +410,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/twbs/icons.git",
       branch: "main",
-      hash: "66fd192fe2085a8255a11b58710f2d9e7f481d02",
     },
   },
   {
     id: "ri",
+    isIncludedInReactIcons: true,
+    packageName: "remix-icon",
     name: "Remix Icon",
     contents: [
       {
@@ -410,11 +432,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/Remix-Design/RemixIcon.git",
       branch: "master",
-      hash: "9fb7967c0a4c09910161192bde99efd3df09f5eb",
     },
   },
   {
     id: "fc",
+    isIncludedInReactIcons: true,
+    packageName: "flat-color-icons",
     name: "Flat Color Icons",
     contents: [
       {
@@ -435,11 +458,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/icons8/flat-color-icons.git",
       branch: "master",
-      hash: "8eccbbbd8b2af1d2c9593e7cfba5ecb0d68ee378",
     },
   },
   {
     id: "gr",
+    isIncludedInReactIcons: true,
+    packageName: "grommet-icons",
     name: "Grommet-Icons",
     contents: [
       {
@@ -459,11 +483,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "public/img/",
       url: "https://github.com/grommet/grommet-icons.git",
       branch: "master",
-      hash: "27ab49949fb663095cccc1a623c872e559ed0642",
     },
   },
   {
     id: "hi",
+    isIncludedInReactIcons: true,
+    packageName: "heroicons",
     name: "Heroicons",
     contents: [
       {
@@ -490,11 +515,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "optimized/",
       url: "https://github.com/tailwindlabs/heroicons.git",
       branch: "v1",
-      hash: "b6de5792d3d53ff81c71b1b8283463aad622e0e3",
     },
   },
   {
     id: "hi2",
+    isIncludedInReactIcons: true,
+    packageName: "heroicons2",
     name: "Heroicons 2",
     contents: [
       {
@@ -528,11 +554,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "optimized/",
       url: "https://github.com/tailwindlabs/heroicons.git",
       branch: "master",
-      hash: "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
     },
   },
   {
     id: "si",
+    isIncludedInReactIcons: true,
+    packageName: "simple-icons",
     name: "Simple Icons",
     contents: [
       {
@@ -549,11 +576,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/simple-icons/simple-icons.git",
       branch: "develop",
-      hash: "3fb0fb241107a0a2839893902db3043882d26bd9",
     },
   },
   {
     id: "sl",
+    isIncludedInReactIcons: true,
+    packageName: "simple-line-icons",
     name: "Simple Line Icons",
     contents: [
       {
@@ -573,11 +601,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/svgs/",
       url: "https://github.com/thesabbir/simple-line-icons.git",
       branch: "master",
-      hash: "f3ed94dd797bdcab52d6f27ba589aea4bb6f3e4d",
     },
   },
   {
     id: "im",
+    isIncludedInReactIcons: true,
+    packageName: "icomoon-free",
     name: "IcoMoon Free",
     contents: [
       {
@@ -595,11 +624,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "SVG/",
       url: "https://github.com/Keyamoon/IcoMoon-Free.git",
       branch: "master",
-      hash: "d006795ede82361e1bac1ee76f215cf1dc51e4ca",
     },
   },
   {
     id: "bi",
+    isIncludedInReactIcons: true,
+    packageName: "boxicons",
     name: "BoxIcons",
     contents: [
       {
@@ -627,11 +657,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/atisawd/boxicons.git",
       branch: "master",
-      hash: "9ffa9136e8681886bb7bd2145cd4098717ce1c11",
     },
   },
   {
     id: "cg",
+    isIncludedInReactIcons: true,
+    packageName: "css-gg",
     name: "css.gg",
     contents: [
       {
@@ -648,11 +679,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/svg/",
       url: "https://github.com/astrit/css.gg.git",
       branch: "main",
-      hash: "ad0428df5491082b29a81d64dbdc59b9602cc059",
     },
   },
   {
     id: "vsc",
+    isIncludedInReactIcons: true,
+    packageName: "vscode-icons",
     name: "VS Code Icons",
     contents: [
       {
@@ -672,11 +704,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "src/icons/",
       url: "https://github.com/microsoft/vscode-codicons.git",
       branch: "main",
-      hash: "902299ed46b10a53ca869a4b15824e5f5fb29067",
     },
   },
   {
     id: "tb",
+    isIncludedInReactIcons: true,
+    packageName: "tabler-icons",
     name: "Tabler Icons",
     contents: [
       {
@@ -703,11 +736,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "icons/",
       url: "https://github.com/tabler/tabler-icons.git",
       branch: "main",
-      hash: "6d128ed935d4546607b1e4d5d08c8b27bdbe7758",
     },
   },
   {
     id: "tfi",
+    isIncludedInReactIcons: true,
+    packageName: "themify-icons",
     name: "Themify Icons",
     contents: [
       {
@@ -725,11 +759,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "SVG/",
       url: "https://github.com/lykmapipo/themify-icons.git",
       branch: "master",
-      hash: "9600186b24a7242f0e1e0a186983e6253301bb5d",
     },
   },
   {
     id: "rx",
+    isIncludedInReactIcons: true,
+    packageName: "radix-icons",
     name: "Radix Icons",
     contents: [
       {
@@ -749,11 +784,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "packages/radix-icons/icons/",
       url: "https://github.com/radix-ui/icons.git",
       branch: "main",
-      hash: "112af91ad275a63c3a29b0da2588342af74ef9bf",
     },
   },
   {
     id: "pi",
+    isIncludedInReactIcons: true,
+    packageName: "phosphor-icons",
     name: "Phosphor Icons",
     contents: [
       {
@@ -773,11 +809,12 @@ export const icons: IconDefinition[] = [
       remoteDir: "assets/",
       url: "https://github.com/phosphor-icons/core.git",
       branch: "main",
-      hash: "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
     },
   },
   {
     id: "lia",
+    isIncludedInReactIcons: true,
+    packageName: "line-awesome",
     name: "Icons8 Line Awesome",
     contents: [
       {
@@ -794,7 +831,6 @@ export const icons: IconDefinition[] = [
       remoteDir: "svg/",
       url: "https://github.com/icons8/line-awesome.git",
       branch: "master",
-      hash: "78a101217707c9b1c4dcf2a821be75684e36307f",
     },
   },
 ];

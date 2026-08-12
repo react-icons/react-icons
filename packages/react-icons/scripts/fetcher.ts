@@ -4,6 +4,12 @@ import fs from "fs";
 import path from "path";
 import { type IconSetGitSource } from "./_types";
 import { icons } from "../src/icons";
+import {
+  getIconLockHash,
+  readIconLock,
+  validateIconLock,
+  writeIconLock,
+} from "./icon-lock";
 import PQueue from "p-queue";
 const execFile = util.promisify(rawExecFile);
 
@@ -13,6 +19,7 @@ interface Context {
 }
 
 async function main() {
+  const update = process.argv.slice(2).includes("--update");
   const distBaseDir = path.join(__dirname, "../icons");
   const ctx: Context = {
     distBaseDir,
@@ -20,6 +27,25 @@ async function main() {
       return path.join(distBaseDir, name);
     },
   };
+  const lock = readIconLock();
+  const sourceIds = icons.filter((icon) => icon.source).map((icon) => icon.id);
+  if (!update) {
+    validateIconLock(lock, sourceIds);
+  }
+  const sources: {
+    id: string;
+    source: IconSetGitSource;
+    hash: string | undefined;
+  }[] = [];
+  for (const icon of icons) {
+    if (icon.source) {
+      sources.push({
+        id: icon.id,
+        source: icon.source,
+        hash: update ? undefined : getIconLockHash(lock, icon.id),
+      });
+    }
+  }
 
   // rm all icons and mkdir dist
   await fs.promises.rm(distBaseDir, {
@@ -31,18 +57,25 @@ async function main() {
   });
 
   const queue = new PQueue({ concurrency: 10 });
-  for (const icon of icons) {
-    if (!icon.source) {
-      continue;
-    }
-    const { source } = icon;
-    queue.add(() => gitCloneIcon(source, ctx));
-  }
+  const fetchedLock = new Map<string, string>();
+  const tasks = sources.map(({ id, source, hash }) =>
+    queue.add(async () => {
+      const fetchedHash = await gitCloneIcon(source, hash, ctx);
+      fetchedLock.set(id, fetchedHash);
+    }),
+  );
+  await Promise.all(tasks);
 
-  await queue.onIdle();
+  if (update) {
+    writeIconLock(fetchedLock);
+  }
 }
 
-async function gitCloneIcon(source: IconSetGitSource, ctx: Context) {
+async function gitCloneIcon(
+  source: IconSetGitSource,
+  hash: string | undefined,
+  ctx: Context,
+): Promise<string> {
   console.log(
     `start clone icon: ${source.url}/${source.remoteDir}@${source.branch}`,
   );
@@ -62,9 +95,14 @@ async function gitCloneIcon(source: IconSetGitSource, ctx: Context) {
     },
   );
 
-  await execFile("git", ["checkout", source.hash], {
+  await execFile("git", ["checkout", hash ?? `origin/${source.branch}`], {
     cwd: ctx.iconDir(source.localName),
   });
+
+  const hashRes = await execFile("git", ["rev-parse", "HEAD"], {
+    cwd: ctx.iconDir(source.localName),
+  });
+  return hashRes.stdout.trim();
 }
 
 main().catch((err) => {

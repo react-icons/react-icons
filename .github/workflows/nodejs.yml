@@ -27,6 +27,46 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Use npm 11.18.0
         run: npm install --global npm@11.18.0
+      - name: Check npm authentication for new packages
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          : > .npm-new-packages
+
+          for package_json in \
+            generated-packages/*/package.json \
+            generated-packages-files/*/package.json \
+            packages/_react-icons_all/package.json; do
+            package_name=$(node -e 'console.log(require(`./${process.argv[1]}`).name)' "$package_json")
+            encoded_name=$(node -e 'process.stdout.write(encodeURIComponent(process.argv[1]))' "$package_name")
+            status=$(curl --silent --show-error --location --retry 3 --output /dev/null --write-out '%{http_code}' \
+              "https://registry.npmjs.org/$encoded_name")
+
+            case "$status" in
+              200) ;;
+              404) echo "$package_name" >> .npm-new-packages ;;
+              *)
+                echo "::error title=npm registry lookup failed::$package_name returned HTTP $status"
+                exit 1
+                ;;
+            esac
+          done
+
+          if [[ -s .npm-new-packages ]]; then
+            echo "New npm packages requiring NPM_TOKEN:"
+            cat .npm-new-packages
+
+            if [[ -z "$NPM_TOKEN" ]]; then
+              echo "::error title=NPM_TOKEN required::A new package must be published with a granular access token. Add or renew the NPM_TOKEN repository secret."
+              exit 1
+            fi
+
+            if ! NODE_AUTH_TOKEN="$NPM_TOKEN" npm whoami --registry https://registry.npmjs.org/; then
+              echo "::error title=Invalid NPM_TOKEN::NPM_TOKEN is invalid or expired. Renew the token before publishing new packages."
+              exit 1
+            fi
+          fi
       - name: Install dependencies
         run: yarn --immutable
       - name: Formatter
@@ -76,35 +116,63 @@ jobs:
           prerelease: ${{ steps.release_channel.outputs.prerelease == 'true' }}
           allowUpdates: true
         if: startsWith(github.ref, 'refs/tags/')
-      - name: npm publish core package
-        run: npm publish generated-packages/core/*.tgz --access public --provenance --tag "${{ steps.release_channel.outputs.npm-tag }}"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish npm packages
         if: startsWith(github.ref, 'refs/tags/')
-      - name: npm publish icon packages
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_DIST_TAG: ${{ steps.release_channel.outputs.npm-tag }}
         run: |
-          for package_tgz in generated-packages/*/*.tgz; do
-            if [[ "$package_tgz" == generated-packages/core/* ]]; then
-              continue
+          publish_package() {
+            package_dir=$1
+            package_json="$package_dir/package.json"
+            package_name=$(node -e 'console.log(require(`./${process.argv[1]}`).name)' "$package_json")
+            package_version=$(node -e 'console.log(require(`./${process.argv[1]}`).version)' "$package_json")
+            encoded_name=$(node -e 'process.stdout.write(encodeURIComponent(process.argv[1]))' "$package_name")
+            encoded_version=$(node -e 'process.stdout.write(encodeURIComponent(process.argv[1]))' "$package_version")
+            status=$(curl --silent --show-error --location --retry 3 --output /dev/null --write-out '%{http_code}' \
+              "https://registry.npmjs.org/$encoded_name/$encoded_version")
+
+            case "$status" in
+              200)
+                echo "Skipping $package_name@$package_version: already published"
+                return
+                ;;
+              404) ;;
+              *)
+                echo "::error title=npm registry lookup failed::$package_name@$package_version returned HTTP $status"
+                exit 1
+                ;;
+            esac
+
+            package_tgz=$(find "$package_dir" -maxdepth 1 -name '*.tgz' -print -quit)
+            if [[ -z "$package_tgz" ]]; then
+              echo "::error title=Package artifact missing::No tarball found for $package_name@$package_version"
+              exit 1
             fi
-            npm publish "$package_tgz" --access public --provenance --tag "${{ steps.release_channel.outputs.npm-tag }}"
+
+            if grep --fixed-strings --line-regexp --quiet "$package_name" .npm-new-packages; then
+              echo "Publishing new package $package_name@$package_version with NPM_TOKEN"
+              NODE_AUTH_TOKEN="$NPM_TOKEN" npm publish "$package_tgz" --access public --provenance --tag "$NPM_DIST_TAG"
+            else
+              echo "Publishing existing package $package_name@$package_version with OIDC"
+              env --unset=NODE_AUTH_TOKEN npm publish "$package_tgz" --access public --provenance --tag "$NPM_DIST_TAG"
+            fi
+          }
+
+          publish_package generated-packages/core
+
+          for package_json in generated-packages/*/package.json; do
+            package_dir=${package_json%/package.json}
+            if [[ "$package_dir" != generated-packages/core ]]; then
+              publish_package "$package_dir"
+            fi
           done
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: startsWith(github.ref, 'refs/tags/')
-      - name: npm publish icon files packages
-        run: |
-          for package_tgz in generated-packages-files/*/*.tgz; do
-            npm publish "$package_tgz" --access public --provenance --tag "${{ steps.release_channel.outputs.npm-tag }}"
+
+          for package_json in generated-packages-files/*/package.json; do
+            publish_package "${package_json%/package.json}"
           done
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: startsWith(github.ref, 'refs/tags/')
-      - name: npm publish react-icons
-        run: npm publish packages/_react-icons_all/*.tgz --access public --provenance --tag "${{ steps.release_channel.outputs.npm-tag }}"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: startsWith(github.ref, 'refs/tags/')
+
+          publish_package packages/_react-icons_all
 
   deploy-pages:
     if: github.ref == 'refs/heads/master'

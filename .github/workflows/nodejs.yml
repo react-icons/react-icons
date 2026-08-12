@@ -178,8 +178,8 @@ jobs:
               NODE_AUTH_TOKEN="$NPM_TOKEN" npm publish "$package_tgz" --access public --provenance --tag "$NPM_DIST_TAG"
               remove_prerelease_latest_tag "$package_name" "$package_version"
             else
-              echo "Publishing existing package $package_name@$package_version with OIDC"
-              env --unset=NODE_AUTH_TOKEN npm publish "$package_tgz" --access public --provenance --tag "$NPM_DIST_TAG"
+              echo "Staging existing package $package_name@$package_version with OIDC"
+              env --unset=NODE_AUTH_TOKEN npm stage publish "$package_tgz" --access public --provenance --tag "$NPM_DIST_TAG"
             fi
           }
 

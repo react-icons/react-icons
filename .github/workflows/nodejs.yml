@@ -47,12 +47,24 @@ jobs:
         if: github.ref == 'refs/heads/master'
       - name: Generate release notes
         run: |
-          gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${GITHUB_REF#tags/} --jq .body >> RELEASE_NOTES
+          gh api /repos/react-icons/react-icons/releases/generate-notes -f tag_name=${GITHUB_REF#refs/tags/} --jq .body >> RELEASE_NOTES
           echo >> RELEASE_NOTES
           cat packages/react-icons/VERSIONS >> RELEASE_NOTES
           cat RELEASE_NOTES
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: startsWith(github.ref, 'refs/tags/')
+      - name: Determine release channel
+        id: release_channel
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+          if [[ "$tag" =~ ^v?[0-9]+\.[0-9]+\.[0-9]+-([0-9A-Za-z-]+)(\.[0-9A-Za-z-]+)*$ ]]; then
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+            echo "npm-tag=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
+          else
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+            echo "npm-tag=latest" >> "$GITHUB_OUTPUT"
+          fi
         if: startsWith(github.ref, 'refs/tags/')
       - name: Release
         uses: ncipollo/release-action@v1
@@ -60,10 +72,10 @@ jobs:
           artifacts: "packages/_react-icons_*/*.tgz,generated-packages/*/*.tgz,generated-packages-files/*/*.tgz"
           bodyFile: "RELEASE_NOTES"
           token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: ${{ contains(github.ref, 'snapshot') }}
+          prerelease: ${{ steps.release_channel.outputs.prerelease == 'true' }}
         if: startsWith(github.ref, 'refs/tags/')
       - name: Stage npm publish core package
-        run: npm stage publish generated-packages/core/*.tgz --access public --provenance
+        run: npm stage publish generated-packages/core/*.tgz --access public --provenance --tag "${{ steps.release_channel.outputs.npm-tag }}"
         if: startsWith(github.ref, 'refs/tags/')
       - name: Stage npm publish icon packages
         run: |
@@ -71,17 +83,17 @@ jobs:
             if [[ "$package_tgz" == generated-packages/core/* ]]; then
               continue
             fi
-            npm stage publish "$package_tgz" --access public --provenance
+            npm stage publish "$package_tgz" --access public --provenance --tag "${{ steps.release_channel.outputs.npm-tag }}"
           done
         if: startsWith(github.ref, 'refs/tags/')
       - name: Stage npm publish icon files packages
         run: |
           for package_tgz in generated-packages-files/*/*.tgz; do
-            npm stage publish "$package_tgz" --access public --provenance
+            npm stage publish "$package_tgz" --access public --provenance --tag "${{ steps.release_channel.outputs.npm-tag }}"
           done
         if: startsWith(github.ref, 'refs/tags/')
       - name: Stage npm publish react-icons
-        run: npm stage publish packages/_react-icons_all/*.tgz --provenance
+        run: npm stage publish packages/_react-icons_all/*.tgz --provenance --tag "${{ steps.release_channel.outputs.npm-tag }}"
         if: startsWith(github.ref, 'refs/tags/')
 
   deploy-pages:

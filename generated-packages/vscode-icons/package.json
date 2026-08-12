@@ -36,6 +36,6 @@
     }
   },
   "dependencies": {
-    "@react-icons/core": "^6.0.0-beta.0"
+    "@react-icons/core": "6.0.0-beta.0"
   }
 }

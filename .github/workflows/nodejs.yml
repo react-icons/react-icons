@@ -122,28 +122,6 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_DIST_TAG: ${{ steps.release_channel.outputs.npm-tag }}
         run: |
-          remove_prerelease_latest_tag() {
-            package_name=$1
-            package_version=$2
-
-            if [[ "$NPM_DIST_TAG" == latest ]]; then
-              return
-            fi
-
-            latest_version=$(npm view "$package_name" dist-tags.latest --registry https://registry.npmjs.org/ 2>/dev/null || true)
-            if [[ "$latest_version" != "$package_version" ]]; then
-              return
-            fi
-
-            if [[ -z "$NPM_TOKEN" ]]; then
-              echo "::error title=NPM_TOKEN required::npm assigned latest to the first prerelease of $package_name. NPM_TOKEN is required to remove that dist-tag."
-              exit 1
-            fi
-
-            echo "Removing unintended latest tag from prerelease $package_name@$package_version"
-            NODE_AUTH_TOKEN="$NPM_TOKEN" npm dist-tag rm "$package_name" latest --registry https://registry.npmjs.org/
-          }
-
           publish_package() {
             package_dir=$1
             package_json="$package_dir/package.json"
@@ -157,7 +135,6 @@ jobs:
             case "$status" in
               200)
                 echo "Skipping $package_name@$package_version: already published"
-                remove_prerelease_latest_tag "$package_name" "$package_version"
                 return
                 ;;
               404) ;;
@@ -176,7 +153,6 @@ jobs:
             if grep --fixed-strings --line-regexp --quiet "$package_name" .npm-new-packages; then
               echo "Publishing new package $package_name@$package_version with NPM_TOKEN"
               NODE_AUTH_TOKEN="$NPM_TOKEN" npm publish "$package_tgz" --access public --provenance --tag "$NPM_DIST_TAG"
-              remove_prerelease_latest_tag "$package_name" "$package_version"
             else
               echo "Staging existing package $package_name@$package_version with OIDC"
               env --unset=NODE_AUTH_TOKEN npm stage publish "$package_tgz" --access public --provenance --tag "$NPM_DIST_TAG"
